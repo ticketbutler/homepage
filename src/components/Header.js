@@ -512,41 +512,40 @@ const state = {
 
 
 
-let liElements = document.getElementsByTagName("li");
+// let liElements = document.getElementsByTagName("li");
 
-const liHandler = () => {
-  console.log(liElements)
-}
+// liHandler = () => {
+//   console.log(liElements)
+// }
   
 
-const navbarEffect = () => {
+// const navbarEffect = () => {
 
-  let nav_Bars = document.getElementById("bars");
-  let ulElement = document.getElementById("ulNav");  
-  let backDiv = document.getElementById("navActive_back");
+//   let nav_Bars = document.getElementById("bars");
+//   let ulElement = document.getElementById("ulNav");  
+//   let backDiv = document.getElementById("navActive_back");
 
-  nav_Bars.classList.toggle("clicked");
+//   nav_Bars.classList.toggle("clicked");
   
   
-  if(nav_Bars.classList.contains("clicked")){
-    ulElement.classList.remove("!active");
-    ulElement.classList.add("active");
+//   if(nav_Bars.classList.contains("clicked")){
+//     ulElement.classList.remove("!active");
+//     ulElement.classList.add("active");
 
     
-    backDiv.classList.add("NavbarClicked-background");
+//     backDiv.classList.add("NavbarClicked-background");
 
     
     
-  }else {
-    ulElement.classList.add("!active");
-    ulElement.classList.remove("active");
+//   }else {
+//     ulElement.classList.add("!active");
+//     ulElement.classList.remove("active");
 
-    backDiv.classList.remove("NavbarClicked-background");
+//     backDiv.classList.remove("NavbarClicked-background");
     
 
-  }
-}
-
+//   }
+// }
 
 const Header = () => (
 
@@ -558,7 +557,7 @@ const Header = () => (
       <Logo className="logo"><span>ticketbutler</span></Logo>
                
         <Nav>
-          <NavBars onClick={navbarEffect} id="bars"/*className="clicked"*/>
+          <NavBars /*onClick={navbarEffect}*/ id="bars"/*className="clicked"*/>
             <div className="bar1"></div>
             <div className="bar2"></div>
             <div className="bar3"></div>
