@@ -9,18 +9,18 @@ const Section = styled.section`
     padding-right:0;
     position: relative;
     @media (max-width: 1080px) {
-        padding: 110px;
+        padding: 110px 0;
     }
     @media (max-width: 768px) { 
-        padding: 80px;
+        padding: 80px 0;
     }
 
     @media (max-width: 600px) { 
-        padding: 40px;
+        padding: 40px 0;
     }
 
     @media (max-width: 370px) { 
-        padding: 50px 20px;
+        padding: 50px 0;
     }
 `;
 
@@ -87,17 +87,18 @@ const LeftBox = styled.div`
 
         > h3 {
             width: 100%;
-            font-size: 50px;
-            line-height: 50px;
+            font-size: 55px;
+            line-height: 60px;
             text-align: center;
 
             
         }
 
         > p {
-            width: 100%;
-            font-size: 24px;	
-            line-height: 36px;
+            width: 80%;
+           margin-left: 10%;
+            font-size: 22px;	
+            line-height: 32px;
             text-align: center;
             
         }
@@ -110,10 +111,13 @@ const LeftBox = styled.div`
         // padding: 0 70px;
 
         > h3 {
-            font-size: 40px;  
+            font-size: 45px;
+            line-hight: 50px;  
         }
 
         > p {
+            width: 90%;
+            margin-left: 5%;
             font-size: 20px;	 
         }
     }
@@ -121,33 +125,37 @@ const LeftBox = styled.div`
     @media (max-width: 600px) { 
 
         padding: 0 40px;
-        margin-top: 20px;
 
         > h3 {
-            font-size: 36px;  
+        margin-top: 20px;
+            font-size: 35px; 
+            margin-bottom: 10px; 
         }
 
         > p {
-            font-size: 18px;	 
+            width: 100%;
+            margin-left: 0%;
+            font-size: 16px;
+            line-height: 25px;	 
         }
     }
 
     @media (max-width: 370px) { 
 
         padding: 0 20px;
-        margin-top: 0px;
         
 
 
         > h3 {
-            font-size: 30px; 
-            line-height: 40px;	 
+             margin-top: 10px;
+            font-size: 25px; 
+            line-height: 32px;	 
              
         }
 
         > p {
-            font-size: 15px;
-            line-height: 30px;	 
+            font-size: 14px;
+            line-height: 20px;	 
         }   
 
     }
@@ -171,7 +179,6 @@ const RightBox = styled.div`
         right: 0px;
         z-index: 2;
     }
-    >div.shapes {
         > div.first-box.green {
             position: absolute;
             height: 427px;	
@@ -191,7 +198,6 @@ const RightBox = styled.div`
             -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
             clip-path: polygon(0 0, 0% 100%, 100% 100%);
         }
-        }
     
 
     > div.clear-fix{
@@ -202,7 +208,6 @@ const RightBox = styled.div`
 
     
     @media (max-width: 1400px) {
-        >div.shapes {
             > div.first-box.green {
                 top: 10px;
                 right: 40px;	
@@ -215,7 +220,7 @@ const RightBox = styled.div`
                 height: 350px;
                 width: 320px;
             }
-        }
+        
         > img {
             height: 380px;
             width: 500px;
@@ -224,7 +229,7 @@ const RightBox = styled.div`
     }
 
     @media (max-width: 1160px) {
-        >div.shapes {
+    
             > div.first-box.green {
                 top: 15px;
                 right: 55px;	
@@ -238,7 +243,7 @@ const RightBox = styled.div`
                 height: 320px;
                 width: 320px;
             }
-        }
+       
         > img {
             height: 355px;
             width: 475px;
@@ -249,41 +254,27 @@ const RightBox = styled.div`
     @media (max-width: 1080px) { 
         display: block;
         width: 100%;
-        >div.shapes {
-            display:block;
-            width; 100%;
-            height: 80px;
-            position: relative;
-            margin-top: -20px;
+
+   
             > div.first-box.green {
-                width: 500px;            
-                height: 60px;
-                top: 0px;
+               top: -50px;
+               height: 400px;
                 left: 50%;
-                border-radius: 0 0px 10px 10px;
                 transform: translateX(-50%);
-                // -webkit-clip-path: polygon(0 0, 100% 0, 100% 30%, 50% 100%, 0 30%);
-                // clip-path: polygon(0 0, 100% 0, 100% 30%, 50% 100%, 0 30%);
-                right: 85px;
-            
+                width: 760px;
             }
         
             > div.second-box.blue{
-                top: 0px;
-                right: 220px;
-                height: 40px;
-                width: 450px;
+                top: -50px;
+               height: 400px;
                 left: 50%;
-                border-radius: 0 0px 10px 10px;                
                 transform: translateX(-50%);
-                // -webkit-clip-path: polygon(0 0, 100% 0, 100% 30%, 50% 100%, 0 30%);
-                // clip-path: polygon(0 0, 100% 0, 100% 30%, 50% 100%, 0 30%);
-                -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                width: 760px;
         
-            }
-        }
+           }
+        
         > img {
+          
             position: relative;
             height: 425px;
             width: 600px;
@@ -297,31 +288,35 @@ const RightBox = styled.div`
         }
     }
 
-    @media (max-width: 650px) { 
-
+    @media (max-width: 600px) { 
+        margin-top: 50px;
         height: auto;
-        >div.shapes {
-            > div.first-box.green {
-                // display: none;
-                width: 80%;
-                top: 0%;
-                
-
+        > div.first-box.green {
+            // display: none;
+            width: 100%;
+            height: 117%;
+            // left: 0;
+            top: -10%;
             
-            }
+
         
-            > div.second-box.blue{
-                // display: none;
-                top: 0px;
-                width: 70%;
-                
-        
-            }
         }
+    
+        > div.second-box.blue{
+            // display: none;
+            top: -10%;
+            // left: 0;                
+            width: 100%;
+            height: 117%;
+            
+            
+    
+        }
+
     
         > img {
             height: auto;
-            width: 100%;
+            width: 90%;
             left: 50%;
             transform: translateX(-50%);
             top:0px;
@@ -332,38 +327,6 @@ const RightBox = styled.div`
         }
         
     }
-
-    @media (max-width: 420px) { 
-
-        height: auto;
-        >div.shapes {
-            > div.first-box.green {
-                height: 50px;
-                // display: none;
-                width: 100%;
-                top: 0%;
-            }
-        
-            > div.second-box.blue{
-                height: 50px;
-                top: -10px;
-                width: 90%;
-            }
-    }
-        > img {
-            height: auto;
-            width: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            top:0px;
-            right: 0px;
-            box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.20);
-            border-radius: 0px;
-            
-        }
-        
-    }
-
 `;
 const Section2 = () => (
 
@@ -371,12 +334,8 @@ const Section2 = () => (
 
             <RightBox>
                 <img src={require('../img/img-7.jpg')}></img>
-
-                <div className="shapes">
-                    <div className="first-box green"></div>
-                    <div className="second-box blue"></div>
-                </div>
-
+                <div className="first-box green"></div>
+                <div className="second-box blue"></div>
                 <div className="clear"></div>
             </RightBox>
       
