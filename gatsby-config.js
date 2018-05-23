@@ -6,7 +6,9 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'styled-jsx/babel',
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-netlify-cms`
     // `gatsby-plugin-google-fonts`,
-  ],
+    'gatsby-plugin-netlify-cms',
+
+    ],
+    
 }

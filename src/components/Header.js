@@ -614,7 +614,10 @@ const Header = () => (
       <Logo className="logo"><span>ticketbutler</span></Logo>
                
         <Nav>
-          <NavBars onClick={navbarEffect} id="bars"/*className="clicked"*/>
+
+        { /*onClick={navbarEffect}*/}
+          
+          <NavBars  id="bars" /*className="clicked"*/>
             <div className="bar1"></div>
             <div className="bar2"></div>
             <div className="bar3"></div>
