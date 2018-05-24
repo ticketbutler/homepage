@@ -3,30 +3,30 @@ import Link from 'gatsby-link'
 import styled from "styled-components";
 
 const Section = styled.section`
-    width:100%;
-    position: relative;
-    padding: 110px;
-    padding-right: 0;
+    padding: 110px;    
 
+    padding-right:0;
+    position: relative;
     @media (max-width: 1080px) {
-        padding: 110px;
+        padding: 110px 0;
     }
     @media (max-width: 768px) { 
-        padding: 80px;
+        padding: 80px 0;
     }
 
     @media (max-width: 600px) { 
-        margin-top: 20px;
-        padding: 40px;
+        padding: 40px 0;
     }
 
-    @media (max-width: 370px) { 
-        padding: 50px 20px;
+    @media (max-width: 376px) { 
+        padding: 50px 0;
     }
 `;
+
+
 const LeftBox = styled.div`
     display: inline-block;
-
+    margin-top: 110px;
     width: 50%;
     float:left;
     position: relative; 
@@ -40,7 +40,6 @@ const LeftBox = styled.div`
         font-size: 60px;	
         font-weight: bold;	
         line-height: 70px;
-        margin-top: 40px;
     }
 
     > p {	
@@ -55,7 +54,6 @@ const LeftBox = styled.div`
 
     @media (max-width: 1400px) {
         > h3 {
-            m
             font-size: 50px;
             line-height: 60px;
       
@@ -83,23 +81,25 @@ const LeftBox = styled.div`
     @media (max-width: 1080px) { 
         display: block;
         width: 100%;
-        // padding: 0 100px;
+        padding: 0 0px;
         margin-top: 40px;    
 
         > h3 {
-            width: 100%;
-            font-size: 50px;
-            line-height: 50px;
+            width: 80%;
+            font-size: 55px;
+            line-height: 60px;
             text-align: center;
-            margin-top: 0px;
-
+            margin-left: 50%;
+            transform: translateX(-50%);
             
         }
 
         > p {
-            width: 100%;
-            font-size: 24px;	
-            line-height: 36px;
+            width: 70%;
+           margin-left: 50%;
+           transform: translateX(-50%);
+            font-size: 22px;	
+            line-height: 32px;
             text-align: center;
             
         }
@@ -109,13 +109,16 @@ const LeftBox = styled.div`
     @media (max-width: 768px) { 
         margin-top: 40px;
 
-        // padding: 0 70px;
 
         > h3 {
-            font-size: 40px;  
+            width: 90%;
+            font-size: 45px;
+            line-hight: 50px;  
         }
 
         > p {
+            width: 80%;
+        
             font-size: 20px;	 
         }
     }
@@ -123,37 +126,43 @@ const LeftBox = styled.div`
     @media (max-width: 600px) { 
 
         padding: 0 40px;
-        margin-top: 20px;
 
         > h3 {
-            font-size: 36px;  
+            width: 100%;
+            
+            margin-top: 0px;
+            font-size: 35px; 
+            margin-bottom: 10px; 
         }
 
         > p {
-            font-size: 18px;	 
+            width: 100%;
+            font-size: 16px;
+            line-height: 25px;	 
         }
     }
 
-    @media (max-width: 370px) { 
+    @media (max-width: 376px) { 
 
         padding: 0 20px;
-        margin-top: 0px;
         
 
 
         > h3 {
-            font-size: 30px; 
-            line-height: 40px;	 
+            margin-top: -10px;
+            font-size: 25px; 
+            line-height: 32px;	 
              
         }
 
         > p {
-            font-size: 15px;
-            line-height: 30px;	 
+            font-size: 14px;
+            line-height: 20px;	 
         }   
 
     }
 `;
+
 const RightBox = styled.div`
     float: right;
     width: 50%;
@@ -171,7 +180,7 @@ const RightBox = styled.div`
         right: -130px;
         z-index: 2;
     }
-    >div.shapes {
+
         > div.first-box.blue {
             position: absolute;
             height: 380px;	
@@ -192,7 +201,7 @@ const RightBox = styled.div`
             -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
             clip-path: polygon(0 0, 0% 100%, 100% 100%);
         }
-        }
+    
     
 
     > div.clear-fix{
@@ -203,7 +212,7 @@ const RightBox = styled.div`
 
     
     @media (max-width: 1400px) {
-        >div.shapes {
+
             > div.first-box.blue {
                 width: 530px;
                 height: 350px;
@@ -216,7 +225,7 @@ const RightBox = styled.div`
                 top: 150px;
                 
             }
-        }
+   
         > img {
             right: -90px;
             
@@ -228,7 +237,7 @@ const RightBox = styled.div`
     }
 
     @media (max-width: 1160px) {
-        >div.shapes {
+     
             > div.first-box.blue {
                 width: 490px;
                 height: 320px;
@@ -241,131 +250,90 @@ const RightBox = styled.div`
                 top: 120px;
                 
             }
-        }
+        
         > img {
             right: -90px;
             height: 380px;
             max-width: 610px;
             
         }
-
     }
+   
 
-    @media (max-width: 1080px) { 
-        display: block;
-        width: 100%;
-        >div.shapes {
-            display:block;
-            width; 100%;
-            height: 80px;
-            position: relative;
-            margin-top: -20px;
-            > div.first-box.blue {
-                width: 500px;            
-                height: 60px;
-                top: 0px;
-                left: 50%;
-                border-radius: 0 0px 10px 10px;
-                transform: translateX(-50%);
-                // -webkit-clip-path: polygon(0 0, 100% 0, 100% 30%, 50% 100%, 0 30%);
-                // clip-path: polygon(0 0, 100% 0, 100% 30%, 50% 100%, 0 30%);
-                right: 85px;
-            
-            }
-        
-            > div.second-box.green{
-                top: 0px;
-                right: 220px;
-                height: 40px;
-                width: 450px;
-                left: 50%;
-                border-radius: 0 0px 10px 10px;                
-                transform: translateX(-50%);
-                // -webkit-clip-path: polygon(0 0, 100% 0, 100% 30%, 50% 100%, 0 30%);
-                // clip-path: polygon(0 0, 100% 0, 100% 30%, 50% 100%, 0 30%);
-                -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        
-            }
-        }
-        > img {
-            position: relative;
-            height: 350px;
-            width: 600px;
-            left: 50%;
-            transform: translateX(-50%);
-            top:0px;
-            right: 0px;
-            border-radius: 3px;
-            margin-bottom: 0;
-        }
-    }
-
-    @media (max-width: 650px) { 
-
-        height: auto;
-        >div.shapes {
-            > div.first-box.blue {
-                // display: none;
-                width: 80%;
-                top: 0%;
-                
-
-            
-            }
-        
-            > div.second-box.green{
-                // display: none;
-                top: 0px;
-                width: 70%;
-                
-        
-            }
-        }
-    
-        > img {
-            height: auto;
-            width: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            top:0px;
-            right: 0px;
-    
-            border-radius: 0px;
-            
-        }
-        
-    }
-
-    @media (max-width: 370px) { 
-
-        height: auto;
-        >div.shapes {
-            > div.first-box.blue {
-                height: 50px;
-                // display: none;
+        @media (max-width: 1080px) { 
+                display: block;
                 width: 100%;
-                top: 0%;
-            }
-        }
         
-            > div.second-box.green{
-                height: 50px;
-                top: -10px;
-                width: 90%;
+           
+                    > div.first-box.blue {
+                       top: -50px;
+                       height: 400px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 760px;
+                    }
+                
+                    > div.second-box.green{
+                        top: -50px;
+                       height: 400px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 760px;
+                
+                   }
+                
+                > img {
+                  
+                    position: relative;
+                    height: 425px;
+                    width: 600px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top:0px;
+                    right: 0px;
+          
+                    border-radius: 3px;
+                    margin-bottom: 0;
+                }
             }
-        > img {
-            height: auto;
-            width: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            top:0px;
-            right: 0px;
-            border-radius: 0px;
+        
+            @media (max-width: 600px) { 
+                margin-top: 50px;
+                height: auto;
+                padding: 0 20px;
+                
+                > div.first-box.blue {
+                    // display: none;
+                    width: 100%;
+                    height: 100%;
+                    // left: 0;
+                    top: -15%;
+                    
+        
+                
+                }
             
-        }
-        
-    }
+                > div.second-box.green{
+                    // display: none;
+                    top: -15%;
+                    // left: 0;                
+                    width: 100%;
+                    height: 100%;
+                }
+                > img {
+                    
+                    height: auto;
+                    width: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top:0px;
+                    right: 0px;
+             
+                    border-radius: 0px;
+                    
+                }
+                
+            }
 
 `;
 const Section5 = () => (
@@ -373,12 +341,8 @@ const Section5 = () => (
     <Section >
         <RightBox>
                 <img src={require('../img/mac_lap.png')}></img>
-
-                <div className="shapes">
                     <div className="first-box blue"></div>
                     <div className="second-box green"></div>
-                </div>
-                
                 <div className="clear-fix"></div>
             </RightBox>
         <LeftBox>

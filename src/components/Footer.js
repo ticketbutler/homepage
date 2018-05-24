@@ -9,18 +9,22 @@ const FooterTag = styled.footer`
     padding: 60px 110px;
 
     @media (max-width: 1080px) {
-        padding: 110px;
+        padding: 45px;
     }
     @media (max-width: 768px) { 
-        padding: 80px;
+        padding: 42px;
     }
 
     @media (max-width: 600px) { 
         padding: 40px;
     }
 
-    @media (max-width: 370px) { 
-        padding: 50px 20px;
+    @media (max-width: 540px) { 
+        padding: 30px;
+    }
+
+    @media (max-width: 376px) { 
+        padding: 30px 20px;
     }
    
 `;
@@ -52,18 +56,37 @@ const LeftDiv = styled.div`
 
     @media (max-width: 1080px) { 
         > a {	
-            font-size: 15px;
+            font-size: 13px;
             display:block;
+            
             &.second-child {
                 margin-left: 0px;
             }
         }
     }
-
-    @media (max-width: 600px) { 
-        display: block;
-        width: 100%;
+    @media (max-width: 768px) { 
+       
         margin-bottom: 20px;
+        >a {
+            font-size: 11px;
+            
+        }
+    }
+    
+    @media (max-width: 600px) {       
+        >a {
+            font-size: 10px;
+            
+        }
+    }
+
+    @media (max-width: 376px) { 
+   
+        margin-bottom: 20px;
+        >a {
+            font-size: 8px;
+            
+        }
     }
 `;
 
@@ -77,6 +100,7 @@ const RightDiv = styled.div`
         font-family: Montserrat;	
         font-size: 15px;	
         letter-spacing: 1.15px;	
+        width: 100%;
         
         &#from{
             margin-left: 50px;
@@ -86,27 +110,31 @@ const RightDiv = styled.div`
         > span {
             color: #333F52;	
             font-family: Montserrat;	
-            font-size: 15px;
-            display:block;
+            font-size: 13px;
+            display:inline-block;
             &#from{
                 margin-left: 0px;
             }	  
         }
     }
-    @media (max-width: 780px) { 
-        font-size: 14px;	
-        
+    @media (max-width: 768px) { 
+        > span {
+        font-size: 11px;	
+        }
     }
     @media (max-width: 600px) { 
-        display: block;
-        width: 100%;
-        ont-size: 13px;	
+
         margin-bottom: 20px;
-        
-        
-    }@media (max-width: 370px) { 
-        font-size: 12px;	
-        
+        > span {
+            font-size: 10px;	
+
+        }
+        }
+    @media (max-width: 376px) {
+        > span {
+            font-size: 8px;	
+
+        }
     }
 
 `;

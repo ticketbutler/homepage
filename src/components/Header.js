@@ -10,9 +10,13 @@ const HeaderTag = styled.header`
     min-height: 100vh;
     width: 100%;	
     color: #FFF;
-    background-image: linear-gradient(to right, rgba(50, 109, 233, .85) , rgba(126, 82, 232, .85)), url("http://hdblackwallpaper.com/wallpaper/2015/09/black-hd-wallpaper-1920x1080-1-hd-wallpaper.jpg");
+    background: linear-gradient(to right, rgba(50, 109, 233, .85) , rgba(126, 82, 232, .85)), url("http://hdblackwallpaper.com/wallpaper/2015/09/black-hd-wallpaper-1920x1080-1-hd-wallpaper.jpg") no-repeat center center ;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
     // @media (max-width: 1080px) {
     //   padding-top: 0;
@@ -439,6 +443,9 @@ const HeaderContent = styled.div`
     }
 
     > a{
+      width: 300px;
+      height: 60px;
+      line-height: 60px;
       text-decoration:none;   
       color: #FFFFFF;	
       font-family: Montserrat;	
@@ -448,12 +455,20 @@ const HeaderContent = styled.div`
       text-align: center;
       display: inline-block;
       border-radius: 50px;
-      padding: 20px 50px;
+      
       background: linear-gradient(to right, rgba(40, 216, 167, 1),rgba(29, 201, 202, 1));
+      position: relative
       transition: all .3s;
       &:hover {
-        transform: scale(1.05);
-        box-shadow: 0px 3px 20px -6px rgba(0,0,0,0.75);
+        // transform: scale(1.05);
+        box-shadow: 0px 3px 20px -6px rgba(0,0,0,0.30);
+       > span {
+        margin-right: 20px;
+        &::after {
+          opacity: 1;
+          right: 25px;
+        }
+        }
       }
 
       
@@ -463,6 +478,22 @@ const HeaderContent = styled.div`
         font-size: 18px;
         font-weight: bold;	
         text-align: center;
+      transition: all .3s;
+        
+        &::after {
+          content: '\00BB';
+          position: absolute;
+          opacity: 1;
+          line-height: 55px;
+          margin: 0;
+          padding: 0;
+          font-size: 25px;
+          opacity: 0;
+          right: 40px;
+          z-index: 10;
+          color: #FFF;
+          transition: 0.3s;
+        }
       }
     }
 
@@ -489,7 +520,7 @@ const HeaderContent = styled.div`
           
         }
         > a{
-          padding: 17px 40px;
+          padding: 0;
             
             > span {
               font-size: 16px;
@@ -511,8 +542,7 @@ const HeaderContent = styled.div`
       }
 
       > a{
-        padding: 15px 30px;
-          
+
           > span {
             font-size: 15px;
           }
@@ -534,10 +564,16 @@ const HeaderContent = styled.div`
       }
 
       > a{
-        padding: 10px 25px;
+        width: 250px;
+        height: 50px;
+        line-height: 50px;
           
           > span {
-            font-size: 12px;
+            font-size: 14px;
+            &::after{
+              font-size: 20px;
+              line-height: 48px;
+            }
           }
         }
     } 
@@ -557,10 +593,16 @@ const HeaderContent = styled.div`
       }
 
       > a{
-        padding: 8px 15px;
+        width: 220px;
+        height: 50px;
+        line-height: 50px;
           
           > span {
-            font-size: 10px;
+            font-size: 12px;
+            &::after{
+              font-size: 16px;
+              line-height: 49px;
+            }
           }
         }
     }    

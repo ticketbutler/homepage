@@ -19,7 +19,7 @@ const Section = styled.section`
         padding: 40px 0;
     }
 
-    @media (max-width: 370px) { 
+    @media (max-width: 376px) { 
         padding: 50px 0;
     }
 `;
@@ -82,21 +82,23 @@ const LeftBox = styled.div`
     @media (max-width: 1080px) { 
         display: block;
         width: 100%;
-        // padding: 0 100px;
+        padding: 0 0px;
         margin-top: 40px;    
 
         > h3 {
-            width: 100%;
+            width: 80%;
             font-size: 55px;
             line-height: 60px;
             text-align: center;
-
+            margin-left: 50%;
+            transform: translateX(-50%);
             
         }
 
         > p {
-            width: 80%;
-           margin-left: 10%;
+            width: 70%;
+           margin-left: 50%;
+           transform: translateX(-50%);
             font-size: 22px;	
             line-height: 32px;
             text-align: center;
@@ -108,16 +110,16 @@ const LeftBox = styled.div`
     @media (max-width: 768px) { 
         margin-top: 40px;
 
-        // padding: 0 70px;
 
         > h3 {
+            width: 90%;
             font-size: 45px;
             line-hight: 50px;  
         }
 
         > p {
-            width: 90%;
-            margin-left: 5%;
+            width: 80%;
+        
             font-size: 20px;	 
         }
     }
@@ -127,27 +129,28 @@ const LeftBox = styled.div`
         padding: 0 40px;
 
         > h3 {
-        margin-top: 20px;
+            width: 100%;
+            
+            margin-top: 0px;
             font-size: 35px; 
             margin-bottom: 10px; 
         }
 
         > p {
             width: 100%;
-            margin-left: 0%;
             font-size: 16px;
             line-height: 25px;	 
         }
     }
 
-    @media (max-width: 370px) { 
+    @media (max-width: 376px) { 
 
         padding: 0 20px;
         
 
 
         > h3 {
-             margin-top: 10px;
+            margin-top: -10px;
             font-size: 25px; 
             line-height: 32px;	 
              
@@ -291,12 +294,14 @@ const RightBox = styled.div`
     @media (max-width: 600px) { 
         margin-top: 50px;
         height: auto;
+        padding: 0 20px;
+        
         > div.first-box.green {
             // display: none;
             width: 100%;
-            height: 117%;
+            height: 100%;
             // left: 0;
-            top: -10%;
+            top: -15%;
             
 
         
@@ -304,10 +309,10 @@ const RightBox = styled.div`
     
         > div.second-box.blue{
             // display: none;
-            top: -10%;
+            top: -15%;
             // left: 0;                
             width: 100%;
-            height: 117%;
+            height: 100%;
             
             
     
@@ -315,8 +320,9 @@ const RightBox = styled.div`
 
     
         > img {
+            
             height: auto;
-            width: 90%;
+            width: 100%;
             left: 50%;
             transform: translateX(-50%);
             top:0px;

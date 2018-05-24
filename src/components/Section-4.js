@@ -15,7 +15,7 @@ const Section = styled.section`
         padding: 40px;
     }
 
-    @media (max-width: 370px) { 
+    @media (max-width: 376px) { 
         padding: 50px 20px;
     }
   
@@ -81,20 +81,54 @@ const Content = styled.div`
         display: blocK;
         text-align: center;
         text-decoration: none;
+        position:relative;
+        line-height: 60px;
         transition: all .3s;
         &:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 3px 20px -6px rgba(0,0,0,0.75);
+             
+            box-shadow: 0px 3px 20px -6px rgba(0,0,0,0.30);
+           > span {
+            margin-right: 20px;
+            &::after {
+              opacity: 1;
+              right: 25px;
+            }
         }
-        >span {
-            height: 60px;	
-            width: 173px;	
+        }
+    
+          
+          > span {
             color: #FFFFFF;	
             font-family: Montserrat;	
-            font-size: 18px;	
+            font-size: 18px;
             font-weight: bold;	
-            line-height: 60px;	
             text-align: center;
+          transition: all .3s;
+            &::after {
+              content: '\00BB';
+              position: absolute;
+              opacity: 1;
+              line-height: 55px;
+              margin: 0;
+              padding: 0;
+              font-size: 25px;
+              opacity: 0;
+              right: 40px;
+              z-index: 10;
+              color: #FFF;
+              transition: 0.3s;
+            }
+          }
+    }
+
+    @media (max-width: 1080px) { 
+    
+    > a{
+        padding: 0;
+          
+          > span {
+            font-size: 16px;
+          }
         }
     }
 
@@ -102,13 +136,19 @@ const Content = styled.div`
         > h3 {
             
             width: 100%;
-            font-size: 30px;  
+            font-size: 45px;
+            line-hight: 50px;  
         }
         > p {
             width: 100%;
-            
             font-size: 20px;	 
         }
+        > a{
+
+            > span {
+              font-size: 15px;
+            }
+          }
     }
 
     @media (max-width: 600px) { 
@@ -121,36 +161,48 @@ const Content = styled.div`
         > p {
             font-size: 18px;	 
         }
+        > a{
+            width: 250px;
+            height: 50px;
+            line-height: 50px;
+              
+              > span {
+                font-size: 14px;
+                &::after{
+                  font-size: 20px;
+                  line-height: 48px;
+                }
+              }
+            }
     }
 
 
-    @media (max-width: 370px) { 
+    @media (max-width: 376px) { 
       
         
         > h3 {  
             margin-top: 10px;	
-            font-size: 30px; 
-            line-height: 40px;	     
+            font-size: 25px; 
+            line-height: 32px;	     
         }
         > p {
-            font-size: 15px;
-            line-height: 30px;	 
+            font-size: 14px;
+            line-height: 20px;	 
         }   
 
         > a{
-            height: 55px;	
-            width: 240px;
-            margin-top: 30px;	
-            >span {
-                height: 60px;	
-                width: 173px;	
-                color: #FFFFFF;	
-                font-family: Montserrat;	
-                font-size: 16px;	
-                font-weight: bold;	
-                line-height: 55px;	
+            width: 180px;
+            height: 50px;
+            line-height: 50px;
+              
+              > span {
+                font-size: 12px;
+                &::after{
+                  font-size: 16px;
+                  line-height: 49px;
+                }
+              }
             }
-        }
 
     }
 `;
