@@ -46,6 +46,9 @@ const SectionImage = styled.div`
         z-index: 2;
         width: 70%;
         top: -230px;
+        &:hover {
+            z-index: 4;
+        }
     }
 
     
@@ -62,9 +65,7 @@ const SectionImage = styled.div`
             transform: translateX(-50%);
             width: 70%;
             transition: .3s;
-            &:hover {
-                z-index: 4;
-            }
+           
         }
         
     }
