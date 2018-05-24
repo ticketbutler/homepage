@@ -8,7 +8,7 @@ const Section = styled.section `
     position: relative;
     padding: 110px 0;
     padding-left: 0;
-    z-index: -2;
+    z-index: 1;
     margin-top: 330px;
     
     background: linear-gradient(311.59deg, #28D8A7 0%, #1DC9CA 100%);
@@ -39,11 +39,11 @@ const Section = styled.section `
 
 const SectionImage = styled.div`
         width: 100%;
-        z-index: 100;
+        // z-index: 2;
 
     > img {
         position:absolute; 
-        z-index: 1;
+        z-index: 2;
         width: 70%;
         top: -230px;
     }
@@ -61,7 +61,10 @@ const SectionImage = styled.div`
             left: 50%;
             transform: translateX(-50%);
             width: 70%;
-            
+            transition: .3s;
+            &:hover {
+                z-index: 4;
+            }
         }
         
     }
@@ -80,23 +83,31 @@ const SectionImage = styled.div`
         position: absolute;
         top:-140px;    
     }
-}
-
-@media (max-width: 470px) {
-    > img {
-    position: absolute;
-    top:-110px;    
-}
-}
-
-
+    }
     @media (max-width: 500px) {
         > img {
         position: absolute;
         top:-100px;    
-      
+    
     }
 }
+
+    @media (max-width: 470px) {
+        > img {
+        position: absolute;
+        top:-110px;    
+    }
+    }
+
+
+       
+        @media (max-width: 320px) {
+            > img {
+            position: absolute;
+            top:-80px;    
+        
+        }
+    }
 `;
 
 const SectionContent = styled.div`
@@ -129,46 +140,48 @@ const SectionContent = styled.div`
         line-height: 38px;
     }
 
-    > a {
-        margin-top: 30px;
-        height: 60px;	
-        width: 230px;	
-        border-radius: 29px;	
+    > a{
+        height: 60px;
+        width: 230px;
+        display: block;
+        float:left;
+        border-radius: 29px;
+        // margin-right: 50%;
+        // transform: translateX(50%);	
+
+        margin: 0 auto;
         background: linear-gradient(90deg, #28D8A7 0%, #1DC9CA 100%);
-        display: inline-block;
+        text-decoration:none;
         text-align: center;
+        line-height: 56px;
         position: relative;
-        line-height: 60px;
         transition: all .3s;
         &:hover {
+            // transform: scale(1.05);
             box-shadow: 0px 3px 20px -6px rgba(0,0,0,0.30);
            > span {
-            margin-right: 20px;
-                &::after {
-                opacity: 1;
-                right: 25px;
-                }
+            &::after {
+              opacity: 1;
+              margin-left: 10px;
             }
-        }
+            }
+          }
     
           
-        > span {
+          > span {
             color: #FFFFFF;	
             font-family: Montserrat;	
             font-size: 18px;
             font-weight: bold;	
             text-align: center;
           transition: all .3s;
+            
             &::after {
               content: '\00BB';
-              position: absolute;
               opacity: 1;
-              line-height: 55px;
-              margin: 0;
-              padding: 0;
               font-size: 25px;
               opacity: 0;
-              right: 40px;
+              margin-left: -8px;
               z-index: 10;
               color: #FFF;
               transition: 0.3s;
@@ -233,12 +246,15 @@ const SectionContent = styled.div`
             
         }
 
-        > a{	
-            margin: 0 auto;
-            margin-top: 35px;            
-            display:block;
-
-
+        > a {
+            margin-left: 50%;
+            transform: translateX(-50%) !important;
+            display: block;
+           
+            > span {
+            font-size: 16px;
+            }
+                
         }
 
     }
@@ -255,6 +271,12 @@ const SectionContent = styled.div`
             font-size: 20px;
             line-height: 32px;	 
         }
+        > a{
+
+            > span {
+              font-size: 15px;
+            }
+          }
     }
 
     @media (max-width: 690px) { 
@@ -279,16 +301,18 @@ const SectionContent = styled.div`
         }
 
         > a{
-            margin-top: 20px;
-            height: 50px;	
-            width: 180px;	
-
-            > span {
-                font-size: 14px;	
-                line-height: 50px;	
-
+            width: 180px;
+            height: 50px;
+            line-height: 47px;
+              
+              > span {
+                font-size: 14px;
+                &::after{
+                  font-size: 20px;
+                  line-height: 48px;
+                }
+              }
             }
-        }
     }
 
     @media (max-width: 460px) { 
@@ -316,18 +340,14 @@ const SectionContent = styled.div`
         }  
         
         > a{
-            width: 170px;
-            height: 50px;
-            line-height: 50px;
-              
-              > span {
-                font-size: 12px;
-                &::after{
-                  font-size: 16px;
-                  line-height: 49px;
-                }
+            > span {
+              font-size: 12px;
+              &::after{
+                font-size: 16px;
+                line-height: 49px;
               }
             }
+          } 
 
     }   
 `;
@@ -379,8 +399,8 @@ const DivShape = styled.div `
     }        
 
     @media (max-width: 768px) {
-        top: 2%;
-        right: 1%;
+        top: 5%;
+        right: 5%;
         > div.shape {
             width: 50px;
             height: 50px;
@@ -464,10 +484,6 @@ const Section6 = () => (
 
         div.clear-fix {
             clear: both;
-        }
-
-        .content_image:hover{
-            display: none;
         }
         `}</style>
     </Section>

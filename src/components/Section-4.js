@@ -75,26 +75,25 @@ const Content = styled.div`
         margin: 50px auto;
         margin-bottom: 0;
         height: 60px;	
-        width: 284px;	
+        width: 260px;	
         border-radius: 29px;	
         background: linear-gradient(90deg, #28D8A7 0%, #1DC9CA 100%);
         display: blocK;
         text-align: center;
         text-decoration: none;
         position:relative;
-        line-height: 60px;
+        line-height: 56px;
         transition: all .3s;
         &:hover {
-             
+            // transform: scale(1.05);
             box-shadow: 0px 3px 20px -6px rgba(0,0,0,0.30);
            > span {
-            margin-right: 20px;
             &::after {
               opacity: 1;
-              right: 25px;
+              margin-left: 10px;
             }
-        }
-        }
+            }
+          }
     
           
           > span {
@@ -104,16 +103,13 @@ const Content = styled.div`
             font-weight: bold;	
             text-align: center;
           transition: all .3s;
+            
             &::after {
               content: '\00BB';
-              position: absolute;
               opacity: 1;
-              line-height: 55px;
-              margin: 0;
-              padding: 0;
               font-size: 25px;
               opacity: 0;
-              right: 40px;
+              margin-left: -8px;
               z-index: 10;
               color: #FFF;
               transition: 0.3s;
@@ -162,7 +158,7 @@ const Content = styled.div`
             font-size: 18px;	 
         }
         > a{
-            width: 250px;
+            width: 220px;
             height: 50px;
             line-height: 50px;
               

@@ -144,20 +144,19 @@ const RightBox = styled.div`
             background: linear-gradient(90deg, #28D8A7 0%, #1DC9CA 100%);
             text-decoration:none;
             text-align: center;
-            line-height: 60px;
+            line-height: 56px;
             position: relative;
             transition: all .3s;
             &:hover {
-             
+                // transform: scale(1.05);
                 box-shadow: 0px 3px 20px -6px rgba(0,0,0,0.30);
                > span {
-                margin-right: 20px;
                 &::after {
                   opacity: 1;
-                  right: 25px;
+                  margin-left: 10px;
                 }
-            }
-            }
+                }
+              }
         
               
               > span {
@@ -167,22 +166,18 @@ const RightBox = styled.div`
                 font-weight: bold;	
                 text-align: center;
               transition: all .3s;
+                
                 &::after {
                   content: '\00BB';
-                  position: absolute;
                   opacity: 1;
-                  line-height: 55px;
-                  margin: 0;
-                  padding: 0;
                   font-size: 25px;
                   opacity: 0;
-                  right: 40px;
+                  margin-left: -8px;
                   z-index: 10;
                   color: #FFF;
                   transition: 0.3s;
                 }
               }
-            
         }
     
     
@@ -236,7 +231,6 @@ const RightBox = styled.div`
             margin-right: 50%;
             transform: translateX(50%) !important;
             display: block;
-            // margin: 0 auto;
            
             > span {
             font-size: 16px;
@@ -284,9 +278,9 @@ const RightBox = styled.div`
             line-height: 25px;	 
         }
         > a{
-            width: 210px;
+            width: 180px;
             height: 50px;
-            line-height: 50px;
+            line-height: 47px;
               
               > span {
                 font-size: 14px;
@@ -317,10 +311,7 @@ const RightBox = styled.div`
             margin-bottom: 25px; 
         }
         > a{
-            width: 170px;
-            height: 50px;
-            line-height: 50px;
-              
+
               > span {
                 font-size: 12px;
                 &::after{

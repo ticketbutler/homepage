@@ -445,7 +445,7 @@ const HeaderContent = styled.div`
     > a{
       width: 300px;
       height: 60px;
-      line-height: 60px;
+      line-height: 58px;
       text-decoration:none;   
       color: #FFFFFF;	
       font-family: Montserrat;	
@@ -455,7 +455,7 @@ const HeaderContent = styled.div`
       text-align: center;
       display: inline-block;
       border-radius: 50px;
-      
+      padding: 0px;
       background: linear-gradient(to right, rgba(40, 216, 167, 1),rgba(29, 201, 202, 1));
       position: relative
       transition: all .3s;
@@ -463,10 +463,9 @@ const HeaderContent = styled.div`
         // transform: scale(1.05);
         box-shadow: 0px 3px 20px -6px rgba(0,0,0,0.30);
        > span {
-        margin-right: 20px;
         &::after {
           opacity: 1;
-          right: 25px;
+          margin-left: 10px;
         }
         }
       }
@@ -482,14 +481,10 @@ const HeaderContent = styled.div`
         
         &::after {
           content: '\00BB';
-          position: absolute;
           opacity: 1;
-          line-height: 55px;
-          margin: 0;
-          padding: 0;
           font-size: 25px;
           opacity: 0;
-          right: 40px;
+          margin-left: -8px;
           z-index: 10;
           color: #FFF;
           transition: 0.3s;
@@ -521,7 +516,6 @@ const HeaderContent = styled.div`
         }
         > a{
           padding: 0;
-            
             > span {
               font-size: 16px;
             }
@@ -566,13 +560,12 @@ const HeaderContent = styled.div`
       > a{
         width: 250px;
         height: 50px;
-        line-height: 50px;
+        line-height: 48px;
           
           > span {
             font-size: 14px;
             &::after{
               font-size: 20px;
-              line-height: 48px;
             }
           }
         }
@@ -593,15 +586,13 @@ const HeaderContent = styled.div`
       }
 
       > a{
-        width: 220px;
+        width: 210px;
         height: 50px;
-        line-height: 50px;
           
           > span {
             font-size: 12px;
             &::after{
               font-size: 16px;
-              line-height: 49px;
             }
           }
         }
