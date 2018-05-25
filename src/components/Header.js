@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from "styled-components";
 
-// import { styled } from 'emotion'
+// import items from '../js/main';
 
 
 const HeaderTag = styled.header`
@@ -67,7 +67,7 @@ const Logo = styled.div`
     width: auto;
     margin-left: 0px;
     font-size: 18px;    
-}
+ }
 `;
 
 const Navbar = styled.div`
@@ -104,6 +104,13 @@ const Nav = styled.nav`
       letter-spacing: 1.15px;	
       text-align: center;
       
+      div#lang {
+        display:none;
+        img {
+          width: 24px;
+          height: 15px;
+        }
+      }
       >li{
         list-style:none;
         display:inline-block;
@@ -154,7 +161,20 @@ const Nav = styled.nav`
         display: block;
         transform: translateX(0px);
         transition: transform .3s;
-       
+        div#lang {
+          position: absolute;
+          right: 25px;
+          bottom: -55px;
+          img{
+            margin-left: 10px;
+            opacity: .7;
+          transition: all .1s ease;            
+            &:hover{
+            opacity: 1;
+            transform: scale(1.1);
+            }
+          }
+        }
           &.active {
           width: 280px;
           background: #fff;
@@ -195,7 +215,7 @@ const Nav = styled.nav`
         &.active > li {
           transition: all .3s;
           padding 0 30px;
-          
+          border-bottom: 1px solid rgba(238,238,238, .5);
           &:hover {
             background-color: rgba(238,238,238, .5);
             transition-delay: 0s;
@@ -443,6 +463,7 @@ const HeaderContent = styled.div`
     }
 
     > a{
+      z-index: 0;
       width: 300px;
       height: 60px;
       line-height: 58px;
@@ -457,7 +478,7 @@ const HeaderContent = styled.div`
       border-radius: 50px;
       padding: 0px;
       background: linear-gradient(to right, rgba(40, 216, 167, 1),rgba(29, 201, 202, 1));
-      position: relative
+      position: relative;
       transition: all .3s;
       &:hover {
         // transform: scale(1.05);
@@ -571,7 +592,7 @@ const HeaderContent = styled.div`
         }
     } 
 
-    @media (max-width: 375px) {
+    @media (max-width: 376px) {
       margin-top: 50px;
       padding: 30px 20px;
       > h1 {
@@ -614,32 +635,36 @@ const HeaderContent = styled.div`
 // }
   
 
-// const navbarEffect = () => {
+const navbarEffect = () => {
 
-//   let nav_Bars = document.getElementById("bars");
-//   let ulElement = document.getElementById("ulNav");  
-//   let backDiv = document.getElementById("navActive_back");
+  let nav_Bars = document.getElementById("bars");
+  let ulElement = document.getElementById("ulNav");  
+  let backDiv = document.getElementById("navActive_back");
 
-//   nav_Bars.classList.toggle("clicked");
+  nav_Bars.classList.toggle("clicked");
   
   
-//   if(nav_Bars.classList.contains("clicked")){
-//     ulElement.classList.remove("!active");
-//     ulElement.classList.add("active");
+  if(nav_Bars.classList.contains("clicked")){
+    ulElement.classList.remove("!active");
+    ulElement.classList.add("active");
 
     
-//     backDiv.classList.add("NavbarClicked-background");
+    backDiv.classList.add("NavbarClicked-background");
 
+    document.getElementById("lang").style.display = "inline";
     
+  }else  {
+    ulElement.classList.add("!active");
+    ulElement.classList.remove("active");
+
+    backDiv.classList.remove("NavbarClicked-background");
+
+    document.getElementById("lang").style.display = "none";
     
-//   }else  {
-//     ulElement.classList.add("!active");
-//     ulElement.classList.remove("active");
+  }
+}
 
-//     backDiv.classList.remove("NavbarClicked-background");
-//   }
-// }
-
+// let headerEffects = new items();
 const Header = () => (
 
   <HeaderTag>
@@ -648,9 +673,9 @@ const Header = () => (
                
         <Nav>
 
-        { /*onClick={navbarEffect}*/}
+        
           
-          <NavBars  id="bars" /*className="clicked"*/>
+          <NavBars onClick={navbarEffect} id="bars" /*className="clicked"*/>
             <div className="bar1"></div>
             <div className="bar2"></div>
             <div className="bar3"></div>
@@ -661,14 +686,18 @@ const Header = () => (
               <li><a href="#">Pricing</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact</a></li> 
+              <li><a href="#">Contact</a></li>
+              <div id="lang">
+                <img id="dk_flag" src={require('../img/dk.jpg')}></img>
+                <img id="en_flag" src={require('../img/en.png')}></img>
+              </div>
             </ul>
             {/* <div className="clear-fix"></div>  */}
         </Nav>
         <LoginBtn id="navbar_login_btn"><a href="#"><span>Login</span></a></LoginBtn>  
     </Navbar>
 
-          {/* <div id="navActive_back" ></div> */}
+          <div id="navActive_back" ></div>
 
     <HeaderContent className="header_content">
       <h1 id="header">A single platform to manage and grow your event</h1>
@@ -697,6 +726,7 @@ const Header = () => (
             width: 100%;
             position:fixed;
             background-color: rgba(0,0,0,.75);
+            z-index: 10;
           }
           @media (max-width: 1100px) {
             div.NavbarClicked-background {

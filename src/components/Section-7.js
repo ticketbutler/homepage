@@ -23,25 +23,31 @@ const Section = styled.section`
         margin-bottom: 60px;
     }
 
-    > a {
-        height: 60px;	
-        width: 260px;
-        border-radius: 49px;	
-        background: linear-gradient(90deg, #326DE9 0%, #7E52E8 100%);
+    > a{
+        height: 60px;
+        width: 230px;
         display: block;
-        text-align: center;
-        position: relative;
-        line-height: 60px;
+        border-radius: 29px;
+        margin-left: 50%;
+        // transform: translateX(50%);	
+        float:none;
+        
+
         margin: 0 auto;
+        margin-top: 40px;
+        background: linear-gradient(to right, rgba(50, 109, 233, .85) , rgba(126, 82, 232, .85));
+        text-decoration:none;
+        text-align: center;
+        line-height: 54px;
+        position: relative;
         transition: all .3s;
         &:hover {
             // transform: scale(1.05);
             box-shadow: 0px 3px 20px -6px rgba(0,0,0,0.30);
            > span {
-            margin-right: 20px;
             &::after {
               opacity: 1;
-              right: 25px;
+              margin-left: 10px;
             }
             }
           }
@@ -57,20 +63,16 @@ const Section = styled.section`
             
             &::after {
               content: '\00BB';
-              position: absolute;
               opacity: 1;
-              line-height: 55px;
-              margin: 0;
-              padding: 0;
               font-size: 25px;
               opacity: 0;
-              right: 40px;
+              margin-left: -8px;
               z-index: 10;
               color: #FFF;
               transition: 0.3s;
             }
           }
-        }
+    }
 
     @media (max-width: 1080px) {   
         
@@ -125,7 +127,7 @@ const Section = styled.section`
     }
 
     @media (max-width: 600px) { 
-        padding: 80px 40px;
+        padding: 70px 40px;
 
         > h3 {
             width: 100%;
@@ -156,7 +158,7 @@ const Section = styled.section`
     }
 
     @media (max-width: 376px) { 
-        padding: 80px 20px;
+        padding: 60px 20px;
         
         > h3 {
             margin-top: -10px;
@@ -178,7 +180,7 @@ const Section = styled.section`
                 font-size: 12px;
                 &::after{
                   font-size: 16px;
-                  line-height: 49px;
+                  line-height: 48px;
                 }
               }
             }

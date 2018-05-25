@@ -46,8 +46,12 @@ const SectionImage = styled.div`
         z-index: 2;
         width: 70%;
         top: -230px;
+        transition: .3s;
+        
         &:hover {
             z-index: 4;
+            box-shadow: 5px 5px 10px -4px rgba(0,0,0,0.35);
+            
         }
     }
 
@@ -64,7 +68,6 @@ const SectionImage = styled.div`
             left: 50%;
             transform: translateX(-50%);
             width: 70%;
-            transition: .3s;
            
         }
         
@@ -91,7 +94,7 @@ const SectionImage = styled.div`
         top:-100px;    
     
     }
-}
+ }
 
     @media (max-width: 470px) {
         > img {

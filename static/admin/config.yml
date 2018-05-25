@@ -1,7 +1,7 @@
 backend:
-  name: 
-    github repo:
-    Daryan98/TicketBulter
+  name: test-repo
+  repo: Daryan98/TicketBulter
+    
 
 media_folder: static/assets
 public_folder: assets
