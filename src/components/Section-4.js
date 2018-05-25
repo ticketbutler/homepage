@@ -207,7 +207,7 @@ const SquareShape = styled.div`
     position: absolute;
     top: 25%;
     right: 10%;
-   
+   z-index: -1;
    > div.shape {
         width: 60px;
         height: 60px;
@@ -261,7 +261,7 @@ const SquareShape = styled.div`
     }
 
     @media (max-width: 600px) {
-        top: 40%;
+        top: 30%;
     right: 3%;
         
         > div.shape {
@@ -275,6 +275,7 @@ const SquareShape = styled.div`
     }
 
     @media (max-width: 370px) {
+        top: 35%;
         
         > div.shape {
            

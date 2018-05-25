@@ -387,7 +387,7 @@ const SquareShape_1 = styled.div`
         }
     }
     @media (max-width: 370px) {
-        top: 40%;
+        top: 48%;
         right: 10%;
         > div.shape {
             width: 36px;
@@ -463,7 +463,7 @@ const SquareShape_2 = styled.div`
         }
     }
     @media (max-width: 370px) {
-        top: 34%;
+        top: 44%;
         > div.shape {
             width: 36px;
             height: 36px;

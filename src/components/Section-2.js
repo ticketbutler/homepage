@@ -8,8 +8,11 @@ const Section = styled.section`
 
     padding-right:0;
     position: relative;
+    margin-bottom: 100px;
     @media (max-width: 1080px) {
         padding: 110px 0;
+    margin-bottom: 0px;
+        
     }
     @media (max-width: 768px) { 
         padding: 80px 0;

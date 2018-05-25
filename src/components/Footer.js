@@ -21,6 +21,7 @@ const FooterTag = styled.footer`
 
     @media (max-width: 540px) { 
         padding: 30px;
+        height: auto;
     }
 
     @media (max-width: 376px) { 
@@ -84,7 +85,7 @@ const LeftDiv = styled.div`
    
         margin-bottom: 20px;
         >a {
-            font-size: 8px;
+            font-size: 9.5px;
             
         }
     }
@@ -132,7 +133,7 @@ const RightDiv = styled.div`
         }
     @media (max-width: 376px) {
         > span {
-            font-size: 8px;	
+            font-size: 9.5px;	
 
         }
     }
@@ -152,7 +153,15 @@ const Footer = () => (
             <span id="from">2018 ticketButler IVS | CVR: 38404687</span>
         </RightDiv>
         
+        <div className="clear-fix"></div>
+        <style jsx>{`
+    .clear-fix {
+        clear: both;
+    }
+    `}</style>
     </FooterTag>
+
+    
   
 )
 

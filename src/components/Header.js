@@ -117,6 +117,7 @@ const Nav = styled.nav`
         margin: 0 20px;
         line-height: 100px;
         font-family: Montserrat;
+
         
         > a {
           text-decoration:none;
@@ -147,21 +148,23 @@ const Nav = styled.nav`
     @media (max-width: 1080px) {
       float: right;
       width: 114px;
-      height: 500px;
       position: absolute;
       right: 30px;
+
+      
 
       > div.clear-fix {
         clear:both;
       }
       > ul{
-        
+ 
+        height: 60px;
         text-align: left;
         margin-top: 60px;
         display: block;
         transform: translateX(0px);
         transition: transform .3s;
-        div#lang {
+        > div#lang {
           position: absolute;
           right: 25px;
           bottom: -55px;
@@ -177,6 +180,8 @@ const Nav = styled.nav`
         }
           &.active {
           width: 280px;
+          height: 500px;
+          
           background: #fff;
           transform: translateX(-135px);
           height: 450px;
@@ -266,10 +271,6 @@ const NavBars = styled.div`
     &:hover {
       cursor: pointer;
       opacity: .85;
-      
-      // > div {
-      //   background: rgba(51, 63, 82, .8);
-      // }
     }
    
     > div {
@@ -278,11 +279,11 @@ const NavBars = styled.div`
       background: #fff;
       margin: 5px 0;
       border-radius: 2px;
-      transition: background .3s;
+      // transition: background .3s;
+
       transition: all .1s;
     }
     &.clicked{
-      transition: all .3s;
       > div.bar2 {
         display:none;
       }
@@ -630,9 +631,12 @@ const HeaderContent = styled.div`
 
 // let liElements = document.getElementsByTagName("li");
 
-// liHandler = () => {
-//   console.log(liElements)
-// }
+
+//   liElements.addEventListener("click", () => {
+//     console.log(liElements)
+
+//   })
+
   
 
 const navbarEffect = () => {
@@ -705,8 +709,8 @@ const Header = () => (
       <a href="#"><span>Get started, it's free!</span></a>
     </HeaderContent>
   
-        <style jsx>{`
-        @import url("https://fonts.googleapis.com/css?family=Hind:400,500,600,700|Montserrat:300,400,500,600,700,800,900");
+    <style jsx>{`
+          @import url("https://fonts.googleapis.com/css?family=Hind:400,500,600,700|Montserrat:300,400,500,600,700,800,900");
 
           * {
             margin: 0;
@@ -735,7 +739,7 @@ const Header = () => (
 
           }
 
-        // media queries
+          // media queries
 
 
       
@@ -745,3 +749,19 @@ const Header = () => (
 )
 
 export default Header
+
+
+  // export const pageQuery = graphql`
+  //   query IndexQuery {
+  //     allMarkdownRemark(limit: 10) {
+  //       edges{
+  //         node {
+  //           id
+  //           frontmatter {
+  //             title
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `
