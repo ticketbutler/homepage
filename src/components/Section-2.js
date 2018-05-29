@@ -337,44 +337,48 @@ const RightBox = styled.div`
         
     }
 `;
-const Section2 = () => (
+const Section2 = ({data}) => {
+    console.log(data);
 
-    <Section>
+    return (
+        <Section>
 
-            <RightBox>
-                <img src={require('../img/img-7.jpg')}></img>
-                <div className="first-box green"></div>
-                <div className="second-box blue"></div>
-                <div className="clear"></div>
-            </RightBox>
-      
-            <LeftBox>
-                <h3>Lorem Ipsum sit amet</h3>
-                <p>Bacon ipsum dolor amet rump beef check, tri-tip sausage brisket leberkas porchetta hamburger tenderloin short</p>
-            </LeftBox>
+                <RightBox>
+                    <img src={require('../img/img-7.jpg')}></img>
+                    <div className="first-box green"></div>
+                    <div className="second-box blue"></div>
+                    <div className="clear"></div>
+                </RightBox>
+        
+                <LeftBox>
+                    <h3>Lorem Ipsum sit amet</h3>
+                    <p>Bacon ipsum dolor amet rump beef check, tri-tip sausage brisket leberkas porchetta hamburger tenderloin short</p>
+                </LeftBox>
 
+                
             
-        
-        <div className="clear-fix"></div>
-        <style jsx>{`
-        * {
-        margin: 0;
-        padding:0;
-        box-sizing: border-box;
-        
-         }
+            <div className="clear-fix"></div>
+            <style jsx>{`
+            * {
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+            
+            }
 
-         div.clear-fix{
-             clear:both;
-         }
-         
-         div.clear{
-            clear:both;
-        }
+            div.clear-fix{
+                clear:both;
+            }
+            
+            div.clear{
+                clear:both;
+            }
 
-        `}</style>
-    </Section>
+            `}</style>
+        </Section>
   
-)
-
+    )
+}
 export default Section2
+
+

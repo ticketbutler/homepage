@@ -1,8 +1,8 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import Helemt from 'react-helmet';
+import Link from 'gatsby-link';
 import styled from "styled-components";
-
-// import items from '../js/main';
+import navbarEffect from '../js/navbarEffect';
 
 
 const HeaderTag = styled.header`
@@ -158,6 +158,7 @@ const Nav = styled.nav`
       }
       > ul{
  
+        
         height: 60px;
         text-align: left;
         margin-top: 60px;
@@ -622,146 +623,113 @@ const HeaderContent = styled.div`
 `;
 
 
+   const Header = ({data}) => {
+     console.log(data)
 
-// const state = {
-//   class: "active"
-// };
+  const { markdownRemark: post} = data;
 
+    return (
+      <HeaderTag id="header">
+        <Navbar className="navbar">
+          <Logo className="logo"><span>{post.frontmatter.title}</span></Logo>
+                  
+            <Nav>
+              <NavBars onClick={navbarEffect} id="bars" /*className="clicked"*/>
+                <div className="bar1"></div>
+                <div className="bar2"></div>
+                <div className="bar3"></div>
+              </NavBars>
+                <ul id="ulNav">
+                  <li className="active"><a href="#" >Home</a></li>            
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">Pricing</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <div id="lang">
+                    <img id="dk_flag" src={require('../img/dk.jpg')}></img>
+                    <img id="en_flag" src={require('../img/en.png')}></img>
+                  </div>
+                </ul>
+                {/* <div className="clear-fix"></div>  */}
+            </Nav>
+            <LoginBtn id="navbar_login_btn"><a href="#"><span>Login</span></a></LoginBtn>  
+        </Navbar>
 
+              <div id="navActive_back" ></div>
 
-// let liElements = document.getElementsByTagName("li");
-
-
-//   liElements.addEventListener("click", () => {
-//     console.log(liElements)
-
-//   })
-
-  
-
-const navbarEffect = () => {
-
-  let nav_Bars = document.getElementById("bars");
-  let ulElement = document.getElementById("ulNav");  
-  let backDiv = document.getElementById("navActive_back");
-
-  nav_Bars.classList.toggle("clicked");
-  
-  
-  if(nav_Bars.classList.contains("clicked")){
-    ulElement.classList.remove("!active");
-    ulElement.classList.add("active");
-
-    
-    backDiv.classList.add("NavbarClicked-background");
-
-    document.getElementById("lang").style.display = "inline";
-    
-  }else  {
-    ulElement.classList.add("!active");
-    ulElement.classList.remove("active");
-
-    backDiv.classList.remove("NavbarClicked-background");
-
-    document.getElementById("lang").style.display = "none";
-    
-  }
-}
-
-// let headerEffects = new items();
-const Header = () => (
-
-  <HeaderTag>
-    <Navbar className="navbar">
-      <Logo className="logo"><span>ticketbutler</span></Logo>
-               
-        <Nav>
-
-        
-          
-          <NavBars onClick={navbarEffect} id="bars" /*className="clicked"*/>
-            <div className="bar1"></div>
-            <div className="bar2"></div>
-            <div className="bar3"></div>
-          </NavBars>
-            <ul id="ulNav">
-              <li className="active"><a href="#" >Home</a></li>            
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact</a></li>
-              <div id="lang">
-                <img id="dk_flag" src={require('../img/dk.jpg')}></img>
-                <img id="en_flag" src={require('../img/en.png')}></img>
-              </div>
-            </ul>
-            {/* <div className="clear-fix"></div>  */}
-        </Nav>
-        <LoginBtn id="navbar_login_btn"><a href="#"><span>Login</span></a></LoginBtn>  
-    </Navbar>
-
-          <div id="navActive_back" ></div>
-
-    <HeaderContent className="header_content">
-      <h1 id="header">A single platform to manage and grow your event</h1>
-      <p id="description">We need some more text here, just a punch line</p>
-      <a href="#"><span>Get started, it's free!</span></a>
-    </HeaderContent>
-  
-    <style jsx>{`
-          @import url("https://fonts.googleapis.com/css?family=Hind:400,500,600,700|Montserrat:300,400,500,600,700,800,900");
-
-          * {
-            margin: 0;
-            padding:0;
-            box-sizing: border-box;
-            
-          }
-       
-  
-          div.NavbarClicked-background {
-            display: none;
-            
-            position: absolute;
-            top: 0;
-            left:0;
-            height: 100%;
-            width: 100%;
-            position:fixed;
-            background-color: rgba(0,0,0,.75);
-            z-index: 10;
-          }
-          @media (max-width: 1100px) {
-            div.NavbarClicked-background {
-              display: block;
-            }
-
-          }
-
-          // media queries
-
-
+        <HeaderContent className="header_content">
+          <h1 id="header">A single platform to manage and grow your event</h1>
+          <p id="description">We need some more text here, just a punch line</p>
+          <a href="#"><span>Get started, it's free!</span></a>
+        </HeaderContent>
       
-    `}</style>
-  </HeaderTag>
+        <style jsx>{`
+              @import url("https://fonts.googleapis.com/css?family=Hind:400,500,600,700|Montserrat:300,400,500,600,700,800,900");
+
+              * {
+                margin: 0;
+                padding:0;
+                box-sizing: border-box;
+                
+              }
+          
+      
+              div.NavbarClicked-background {
+                display: none;
+                
+                position: absolute;
+                top: 0;
+                left:0;
+                height: 100%;
+                width: 100%;
+                position:fixed;
+                background-color: rgba(0,0,0,.75);
+                z-index: 10;
+              }
+              @media (max-width: 1100px) {
+                div.NavbarClicked-background {
+                  display: block;
+                }
+
+              }
+
+              // media queries
+
+
+          
+        `}</style>
+      </HeaderTag>
   
-)
+    )
+
+  }
+
+
+// const AboutPage = ({ data }) => {
+//   console.log(data);
+//   console.log("hello");
+  
+//   const { markdownRemark: post } = data
+
+//   return (
+//     <Header
+//       title={post.frontmatter.title}
+//     />
+//   )
+// }
 
 export default Header
 
-
-  // export const pageQuery = graphql`
-  //   query IndexQuery {
-  //     allMarkdownRemark(limit: 10) {
-  //       edges{
-  //         node {
-  //           id
-  //           frontmatter {
-  //             title
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `
+export const postQuery = graphql`
+  query BlogPostByPath($path: String!) {
+    markdownRemark(frontmatter: {path: {eq: $path}}) {
+      html
+      id
+      frontmatter {
+        path
+        title
+      }
+    }
+  }
+`
