@@ -1,30 +1,35 @@
 backend:
-  name: test-repo
-  repo: Daryan98/TicketBulter
+  name: github
+  repo: ticketbutler/homepage
     
-
 media_folder: static/assets
 public_folder: assets
 
 collections:
-    - name: "pages"
-    label: "Pages"
-    files:
-      - file: "src/pages/about/index.md"
-        label: "About"
-        name: "about"
+  - name: pages
+    label: Pages
+    folder: pages
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: title, label: Title }
+      - { name: meta-description, label: Meta Description, required: false }
+      - name: section
+        label: Section
+        widget: list
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "Header"}
-          - {label: "Title", name: "title", widget: "string"}
-    - name: "pages"
-    label: "Pages"
-    files:
-      - file: "src/pages/about/index2.md"
-        label: "sec"
-        name: "sec"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "Header"}
-          - {label: "Title", name: "title", widget: "string"}
+          - name: component 
+            label: Component
+            widget: select
+            options: 
+              - { label: Hero, value: hero }
+              - { label: Image Left, value: image-left }
+              - { label: Image right, value: image-right }
+          - { name: heading, label: Heading }
+          - { name: text, label: Text, required: false }
+          - { name: image, label: Image, widget: image, required: false  }
+          - { name: button-text, label: Button Text, required: false }
+          - { name: button-link, label: Button Link, required: false }
           
-          
-  
+            
+    
