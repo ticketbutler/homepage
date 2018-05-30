@@ -12,11 +12,12 @@ const CmsPage = ({ pathContext }) => (
   <Layout>
     <div>
       asdas
-      {pathContext.sections.map(section => {
-        const Component = components.find(({ id }) => id === section.type)
-          .Component;
-        return <Component {...section} />;
-      })}
+      {pathContext.sections &&
+        pathContext.sections.map(section => {
+          const Component = components.find(({ id }) => id === section.type)
+            .Component;
+          return <Component {...section} />;
+        })}
     </div>
   </Layout>
 );
