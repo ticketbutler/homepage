@@ -624,15 +624,9 @@ const HeaderContent = styled.div`
 
 
    const Header = ({data}) => {
-     console.log(data)
-
-  const { markdownRemark: post} = data;
-
     return (
       <HeaderTag id="header">
         <Navbar className="navbar">
-          <Logo className="logo"><span>{post.frontmatter.title}</span></Logo>
-                  
             <Nav>
               <NavBars onClick={navbarEffect} id="bars" /*className="clicked"*/>
                 <div className="bar1"></div>
