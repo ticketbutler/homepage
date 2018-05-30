@@ -17,6 +17,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                   sections {
                     type
                     heading
+                    text
+                    image
                   }
                 }
               }
