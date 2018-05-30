@@ -13,23 +13,20 @@ collections:
     fields:
       - { name: path, label: Path }
       - { name: title, label: Title }
-      - { name: meta-description, label: Meta Description, required: false }
-      - name: section
-        label: Section
+      - { name: meta_description, label: Meta Description, required: false }
+      - name: sections
+        label: Sections
         widget: list
         fields:
-          - name: component 
-            label: Component
+          - name: type
+            label: Type
             widget: select
             options: 
               - { label: Hero, value: hero }
-              - { label: Image Left, value: image-left }
-              - { label: Image right, value: image-right }
+              - { label: Image Left, value: image_left }
+              - { label: Image right, value: image_right }
           - { name: heading, label: Heading }
           - { name: text, label: Text, required: false }
           - { name: image, label: Image, widget: image, required: false  }
-          - { name: button-text, label: Button Text, required: false }
-          - { name: button-link, label: Button Link, required: false }
-          
-            
-    
+          - { name: button_text, label: Button Text, required: false }
+          - { name: button_link, label: Button Link, required: false }
