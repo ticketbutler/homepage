@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: BilletFix/tb-homepage
+  repo: ticketbutler/homepage
     
 media_folder: static/assets
 public_folder: assets
