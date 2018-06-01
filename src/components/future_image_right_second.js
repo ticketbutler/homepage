@@ -169,8 +169,8 @@ const RightBox = styled.div`
     display: inline-block;                
     position: relative;
 
-    transform: translateX(800px);
-    opacity: 0;
+    // transform: translateX(800px);
+    // opacity: 0;
     transition: all .3s ease-out;
 
     > div.clear-fix{

@@ -53,8 +53,8 @@ const HeaderContent = styled.div`
       line-height: 70px;	
       text-align: center;
       z-index: -1;
-      transform: translateX(800px);
-      opacity: 0;
+      // transform: translateX(800px);
+      // opacity: 0;
       transition: all .3s;
 
 
@@ -70,8 +70,8 @@ const HeaderContent = styled.div`
       font-size: 25px;	
       line-height: 30px;	
       text-align: center;
-      transform: translateX(-800px);
-      opacity: 0;
+      // transform: translateX(-800px);
+      // opacity: 0;
       
       transition: all .3s;
       
@@ -94,8 +94,8 @@ const HeaderContent = styled.div`
       padding: 0px;
       background: linear-gradient(to right, rgba(40, 216, 167, 1),rgba(29, 201, 202, 1));
       position: relative;
-      transform: translateX(-800px);
-      opacity: 0;
+      // transform: translateX(-800px);
+      // opacity: 0;
       
       transition: all .3s;
       &:hover {

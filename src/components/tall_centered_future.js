@@ -70,8 +70,8 @@ const Content = styled.div`
         margin-top: 40px;
 
         width: 100%;
-        transform: scale(.2);
-        opacity: 0;
+        // transform: scale(.2);
+        // opacity: 0;
         transition: all .5s ease;
     }
 

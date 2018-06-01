@@ -40,13 +40,12 @@ const Section = styled.section `
 
 const SectionImage = styled.div`
         width: 100%;
-        // z-index: 2;
-
     > img {
+        width: 60%;
+        left: 20%;
         position:absolute; 
         z-index: 2;
-        width: 70%;
-        top: -230px;
+        top: -200px;
         transition: .3s;
         
         &:hover {
@@ -55,8 +54,11 @@ const SectionImage = styled.div`
             
         }
     }
-
-    
+    @media (max-width: 1440px) {
+        > img {
+left: 0;
+        } 
+    }
 
     @media (max-width: 1080px) {
         width: 100%;
@@ -87,25 +89,24 @@ const SectionImage = styled.div`
         > img {
         position: absolute;
         top:-140px;    
-    }
+      }
     }
     @media (max-width: 500px) {
         > img {
         position: absolute;
         top:-100px;    
     
+        }
     }
- }
 
     @media (max-width: 470px) {
         > img {
         position: absolute;
         top:-110px;    
-    }
+     }
     }
 
 
-       
         @media (max-width: 320px) {
             > img {
             position: absolute;
@@ -116,17 +117,17 @@ const SectionImage = styled.div`
 `;
 
 const SectionContent = styled.div`
-    height: 611px;	
-    width: 60%;	
+    min-height: 611px;	
+    width: 50%;	
     background-color: #FFFFFF;
     box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.35);
-    margin-right: 110px;
+    margin-right: 8%
     position: relative;
     z-index: 3;
     float: right;
     padding: 95px 86px;
-    transform: translateX(900px);
-    opacity: 0;
+    // transform: translateX(900px);
+    // opacity: 0;
     transition: all .3s ease-out;
     > h3 {
         
@@ -146,6 +147,7 @@ const SectionContent = styled.div`
         font-size: 27px;	
         letter-spacing: -0.22px;	
         line-height: 38px;
+        margin-bottom: 50px;
     }
 
     > a{
@@ -197,8 +199,12 @@ const SectionContent = styled.div`
           }
     }
    
-    @media (max-width: 1400px) {
+    @media (min-width: 1440px) {
         padding: 80px;
+        margin-right: 10%
+        width: 40%;	
+        height: auto;
+        
         > h3 {
             
             font-size: 55px;
@@ -212,8 +218,8 @@ const SectionContent = styled.div`
         }
     }
 
-    @media (max-width: 1160px) {
-        width: 650px;	
+    @media (max-width: 1120px) {
+            height: auto;
         
         > h3 {
             font-size: 50px;
