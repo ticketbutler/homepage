@@ -42,7 +42,7 @@ const SectionImage = styled.div`
         width: 100%;
     > img {
         width: 60%;
-        left: 20%;
+        left: 0%;
         position:absolute; 
         z-index: 2;
         top: -200px;
@@ -118,7 +118,7 @@ left: 0;
 
 const SectionContent = styled.div`
     min-height: 611px;	
-    width: 50%;	
+    width: 55%;	
     background-color: #FFFFFF;
     box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.35);
     margin-right: 8%
@@ -199,24 +199,24 @@ const SectionContent = styled.div`
           }
     }
    
-    @media (min-width: 1440px) {
-        padding: 80px;
-        margin-right: 10%
-        width: 40%;	
-        height: auto;
+    // @media (min-width: 1440px) {
+    //     padding: 80px;
+    //     margin-right: 10%
+    //     width: 40%;	
+    //     height: auto;
         
-        > h3 {
+    //     > h3 {
             
-            font-size: 55px;
-            line-height: 60px;
+    //         font-size: 55px;
+    //         line-height: 60px;
       
-        }
+    //     }
 
-        > p {
-            font-size: 25px;	
-            line-height: 33px;
-        }
-    }
+    //     > p {
+    //         font-size: 25px;	
+    //         line-height: 33px;
+    //     }
+    // }
 
     @media (max-width: 1120px) {
             height: auto;

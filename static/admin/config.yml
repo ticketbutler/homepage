@@ -22,11 +22,33 @@ collections:
             label: Type
             widget: select
             options: 
-              - { label: Hero, value: hero }
-              - { label: Image Left, value: image_left }
-              - { label: Image right, value: image_right }
+              - { label: Navbar, value: navbar }              
+              - { label: Header, value: header }
+              - { label: Image right, value: future_image_right }
+              - { label: Image left, value: uture_image_left }
+              - { label: Centerd Image Tall, value: tall_centered_future }
+              - { label: Image Right Second Style, value: future_image_right_second }
+              - { label: Contact Page, value: contact }
+              - { label: Footer, value: footer }
           - { name: heading, label: Heading, required: false }
           - { name: text, label: Text, required: false }
           - { name: image, label: Image, widget: image, required: false  }
           - { name: button_text, label: Button Text, required: false }
           - { name: button_link, label: Button Link, required: false }
+          - { name: item1, label: Navbar Item, required: false }
+          # - { name: item2, label: Navbar Item, required: false }
+          # - { name: item3, label: Navbar Item, required: false }
+          # - { name: item4, label: Navbar Item, required: false }
+          # - { name: item5, label: Navbar Item, required: false }
+          # - { name: item6, label: Navbar Item, required: false }
+
+# # Footer
+#           - { name: PrivatePolicy, label: , required: false }
+#           - { name: item1, label: Navbar Item, required: false }
+#           - { name: item1, label: Navbar Item, required: false }
+#           - { name: item1, label: Navbar Item, required: false }
+          
+                    
+
+          
+          

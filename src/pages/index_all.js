@@ -12,7 +12,7 @@ import FutureLayers from '../components/future_layers'
 import Contact from '../components/Contact'
 // import Footer from '../components/Footer'
 
-require('../js/main');
+// require('../js/main');
 
 
 const IndexPage = () => (

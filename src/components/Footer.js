@@ -155,10 +155,10 @@ const Footer = () => (
         
         <div className="clear-fix"></div>
         <style jsx>{`
-    .clear-fix {
-        clear: both;
-    }
-    `}</style>
+            .clear-fix {
+                clear: both;
+            }
+        `}</style>
     </FooterTag>
 
     

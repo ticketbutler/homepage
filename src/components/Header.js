@@ -5,8 +5,6 @@ import styled from "styled-components";
 import navbarEffect from '../js/navbarEffect';
 import $ from 'jquery'; 
 
-import Navbar from "../components/navbar"
-
 const HeaderTag = styled.header`
     padding: 48px 0;
     min-height: 100vh;
@@ -246,15 +244,14 @@ const HeaderContent = styled.div`
   //   })
   // })
     
-   const Header = () => {
+   const Header = ({heading, text, button_text}) => {
     return (
       <HeaderTag id="header">
-      <Navbar />
           <div id="navActive_back" ></div>
         <HeaderContent className="header_content">
-          <h1 id="title">A single platform to manage and grow your event</h1>
-          <p id="description">We need some more text here, just a punch line</p>
-          <a href="#" id="header-btn"><span>Get started, it's free!</span></a>
+          <h1 id="title">{heading}</h1>
+          <p id="description">{text}</p>
+          <a href="#" id="header-btn"><span>{button_text}</span></a>
         </HeaderContent>
       
         <style jsx>{`

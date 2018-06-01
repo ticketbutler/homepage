@@ -1,6 +1,22 @@
 ---
 path: /
+title: Ticketbutler
+
 sections:
+
+  - type: navbar
+    item1: Home
+    item2: Futures
+    item3: Pricing
+    item4: About
+    item5: Blog
+    item6: contact
+    
+  - type: header
+    heading: A single platform to manage and grow your event
+    text: We need some more text here, just a punch line
+    button_text: Get started, it's free!
+
   - type: future_image_right
     heading: Lorem Ipsum sit amet
     text: Bacon ipsum dolor amet rump beef check, tri-tip sausage brisket leberkas porchetta hamburger tenderloin short
@@ -32,4 +48,7 @@ sections:
   - type: contact
     heading: Some nice thing to say here
     button_text: Do something here
+
+  - type: footer
+    
 ---

@@ -20,6 +20,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                     text
                     image
                     button_text
+                    item1
+                 
                   }
                 }
               }

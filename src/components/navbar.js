@@ -5,32 +5,6 @@ import styled from "styled-components";
 import navbarEffect from '../js/navbarEffect';
 import Scrollchor from 'react-scrollchor';
 
-
-const HeaderTag = styled.header`
-    padding: 48px 0;
-    min-height: 100vh;
-    width: 100%;	
-    color: #FFF;
-    background: linear-gradient(to right, rgba(50, 109, 233, .85) , rgba(126, 82, 232, .85)), url("http://hdblackwallpaper.com/wallpaper/2015/09/black-hd-wallpaper-1920x1080-1-hd-wallpaper.jpg") no-repeat center center ;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
-    // @media (max-width: 1080px) {
-    //   padding-top: 0;
-
-    //   > Logo {
-    //     color: #333F52;
-
-    //   }
-    // }
-
-    
-`;
-
 const Logo = styled.div`
     width: 20%;
     color: #FFFFFF;	
@@ -74,8 +48,9 @@ const Logo = styled.div`
 const Navbar = styled.div`
   width: 100%;
   height: 60px;      
-  padding 0 50px;
-  position: relative;
+  padding 40px 50px;
+  position: absolute;
+  z-index: 1000;
 
   @media (max-width: 1080px) {
     background-color: #326DE9;;
@@ -428,7 +403,7 @@ const LoginBtn = styled.div`
     
   }
 `;
-   const NavbarSec = () => {
+   const NavbarSec = ({item1, item2,item3,item4,item5, item6}) => {
     return (
         <Navbar className="navbar">
             <Logo><span>ticketbutler</span> </Logo>
@@ -440,12 +415,12 @@ const LoginBtn = styled.div`
                 <div className="bar3"></div>
               </NavBars>
                 <ul id="ulNav">
-                  <li className="active"><a href="#" >Home</a></li>            
-                  <li><Scrollchor to="" className="nav-link">Home</Scrollchor></li>
-                  <li><Scrollchor to="" className="nav-link">Home</Scrollchor></li>
-                  <li><Scrollchor to="" className="nav-link">Home</Scrollchor></li>
-                  <li><Scrollchor to="" className="nav-link">Home</Scrollchor></li>
-                  <li><Scrollchor animate={{offset: 20, duration: 600}} to="#contact" className="nav-link">Contact</Scrollchor></li>
+                  <li  className="active"><Scrollchor to="" className="nav-link">{item1}</Scrollchor></li>
+                  <li><Scrollchor to="" className="nav-link">{item2}</Scrollchor></li>
+                  <li><Scrollchor to="" className="nav-link">{item3}</Scrollchor></li>
+                  <li><Scrollchor to="" className="nav-link">{item4}</Scrollchor></li>
+                  <li><Scrollchor to="" className="nav-link">{item5}</Scrollchor></li>
+                  <li><Scrollchor animate={{offset: 20, duration: 600}} to="#contact" className="nav-link">{item6}</Scrollchor></li>
                   <div id="lang">
                     <img id="dk_flag" src={require('../img/dk.jpg')}></img>
                     <img id="en_flag" src={require('../img/en.png')}></img>

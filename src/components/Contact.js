@@ -220,7 +220,7 @@ const Contact = () => (
         <div className="container">
             <LeftBox className="left-box contact">
                 <h3>Contact US!</h3>
-                <form class="contact-form">
+                <form className="contact-form">
                     <ul>
                         <li>
                             <input type="text" name="name-field" id="align-left" placeholder="Name" />
