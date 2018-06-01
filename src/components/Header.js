@@ -239,12 +239,12 @@ const HeaderContent = styled.div`
 `;
  
 
-  $(document).ready(()=> {
-    $("h1#title, p#description, a#header-btn").css({
-      "transform": "translateX(0)",
-      "opacity": "1",
-    })
-  })
+  // $(document).ready(()=> {
+  //   $("h1#title, p#description, a#header-btn").css({
+  //     "transform": "translateX(0)",
+  //     "opacity": "1",
+  //   })
+  // })
     
    const Header = () => {
     return (

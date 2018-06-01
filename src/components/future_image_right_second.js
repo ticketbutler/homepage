@@ -339,12 +339,12 @@ const RightBox = styled.div`
 `;
 
 
-$(document).ready(()=> {
-    $("#right-box-2").css({
-      "transform": "translateX(0)",
-      "opacity": "1",
-    })
-  })
+// $(document).ready(()=> {
+//     $("#right-box-2").css({
+//       "transform": "translateX(0)",
+//       "opacity": "1",
+//     })
+//   })
 
 const FutureImageRightSecond = () => (
     <Section >

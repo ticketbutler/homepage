@@ -454,12 +454,12 @@ const DivShape = styled.div `
 `;  
 
 
-$(document).ready(()=> {
-    $("#section-content").css({
-      "transform": "translateX(0)",
-      "opacity": "1",
-    })
-  })
+// $(document).ready(()=> {
+//     $("#section-content").css({
+//       "transform": "translateX(0)",
+//       "opacity": "1",
+//     })
+//   })
 
 const FutureLayers = ({heading, text, button_text, image}) => (
     

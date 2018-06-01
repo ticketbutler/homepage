@@ -340,12 +340,12 @@ const RightBox = styled.div`
     }
 `;
 
-$(document).ready(()=> {
-    $("#right-box").css({
-      "transform": "translateX(0)",
-      "opacity": "1",
-    })
-  })
+// $(document).ready(()=> {
+//     $("#right-box").css({
+//       "transform": "translateX(0)",
+//       "opacity": "1",
+//     })
+//   })
 const FutureImageRight = ({heading, text, image}) => {
     return (
         <Section>

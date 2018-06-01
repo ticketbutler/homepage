@@ -559,12 +559,12 @@ const CircleShape = styled.div`
     } 
 `;
 
-$(document).ready(()=> {
-    $("img").css({
-      "transform": "scale(1)",
-      "opacity": "1",
-    })
-  })
+// $(document).ready(()=> {
+//     $("img").css({
+//       "transform": "scale(1)",
+//       "opacity": "1",
+//     })
+//   })
 
 const FutureImageIeft = ({heading, text, button_text, image}) => (
 
