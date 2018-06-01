@@ -30,6 +30,8 @@ collections:
               - { label: Image Right Second Style, value: future_image_right_second }
               - { label: Contact Page, value: contact }
               - { label: Footer, value: footer }
+              
+              - { label: Footer, value: footer }
           - { name: heading, label: Heading, required: false }
           - { name: text, label: Text, required: false }
           - { name: image, label: Image, widget: image, required: false  }

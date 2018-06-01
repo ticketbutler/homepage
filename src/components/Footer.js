@@ -140,17 +140,17 @@ const RightDiv = styled.div`
 
 `;
 
-const Footer = () => (
+const Footer = ({item1, item2, item3, item4}) => (
 
     <FooterTag>
         <LeftDiv>
-            <a href="#" className="first-child"><span>Privacy policy</span></a>
-            <a href="#" className="second-child"><span>Tearms of service</span></a>
+            <a href="#" className="first-child"><span>{item1}</span></a>
+            <a href="#" className="second-child"><span>{item2}</span></a>
         </LeftDiv>
 
         <RightDiv>
-            <span id="email">hello@ticketButler.io</span>
-            <span id="from">2018 ticketButler IVS | CVR: 38404687</span>
+            <span id="email">{item3}</span>
+            <span id="from">{item4}</span>
         </RightDiv>
         
         <div className="clear-fix"></div>

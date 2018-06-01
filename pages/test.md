@@ -53,5 +53,9 @@ sections:
     
 
   - type: footer
+    item1: Privacy policy
+    item2: Tearms of service
+    item3: hello@ticketButler.io
+    item4: "2018 ticketButler IVS | CVR: 38404687"
     
 ---
