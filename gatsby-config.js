@@ -4,7 +4,6 @@ module.exports = {
     "gatsby-plugin-catch-links",
     "styled-jsx/babel",
     `gatsby-plugin-styled-components`,
-    // `gatsby-plugin-google-fonts`,
     "gatsby-plugin-netlify-cms",
     `gatsby-plugin-sharp`,
     "gatsby-transformer-sharp",

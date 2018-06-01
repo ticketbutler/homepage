@@ -214,7 +214,7 @@ const RightBox = styled.div`
     }
 `;
 
-const Contact = ({heading, item1, item2, item3}) => (
+const Contact_page = ({heading, item1, item2, item3}) => (
     
     <Section id="contact">
         <div className="container">
@@ -251,19 +251,19 @@ const Contact = ({heading, item1, item2, item3}) => (
         <div className="clear-fix"></div>
 
          <style jsx>{`
-        * {
-        margin: 0;
-        padding:0;
-        box-sizing: border-box;
-        }
+            * {
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+            }
 
-        .clear-fix {
-            clear:both;
-        }
+            .clear-fix {
+                clear:both;
+            }
         
         `}</style>
     </Section>
 
 )
 
-export default Contact
+export default Contact_page
