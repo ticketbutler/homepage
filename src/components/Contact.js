@@ -214,7 +214,7 @@ const RightBox = styled.div`
     }
 `;
 
-const Contact = () => (
+const Contact = ({heading, item1, item2, item3}) => (
     
     <Section id="contact">
         <div className="container">
@@ -240,10 +240,10 @@ const Contact = () => (
             </LeftBox>
             <RightBox >
                 <div className="content">
-                    <h3>More Info !</h3>
-                    <span id="address">Address</span>
-                    <span id="phone">Phone</span>
-                    <span id="support">Gerenal Support</span>
+                    <h3>{heading}</h3>
+                    <span id="address">{item1}</span>
+                    <span id="phone">{item2}</span>
+                    <span id="support">{item3}</span>
                 </div>
             </RightBox>
             

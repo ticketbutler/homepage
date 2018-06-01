@@ -56,9 +56,9 @@ const SectionImage = styled.div`
     }
     @media (max-width: 1440px) {
         > img {
-left: 0;
-        } 
-    }
+    left: 0;
+            } 
+        }
 
     @media (max-width: 1080px) {
         width: 100%;

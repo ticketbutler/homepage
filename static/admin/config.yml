@@ -36,11 +36,11 @@ collections:
           - { name: button_text, label: Button Text, required: false }
           - { name: button_link, label: Button Link, required: false }
           - { name: item1, label: Navbar Item, required: false }
-          # - { name: item2, label: Navbar Item, required: false }
-          # - { name: item3, label: Navbar Item, required: false }
-          # - { name: item4, label: Navbar Item, required: false }
-          # - { name: item5, label: Navbar Item, required: false }
-          # - { name: item6, label: Navbar Item, required: false }
+          - { name: item2, label: Navbar Item, required: false }
+          - { name: item3, label: Navbar Item, required: false }
+          - { name: item4, label: Navbar Item, required: false }
+          - { name: item5, label: Navbar Item, required: false }
+          - { name: item6, label: Navbar Item, required: false }
 
 # # Footer
 #           - { name: PrivatePolicy, label: , required: false }

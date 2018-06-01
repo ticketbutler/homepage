@@ -4,7 +4,7 @@ import * as React from "react";
 import Navbar from "../components/navbar";
 import Header from "../components/header";
 import FutureImageRight from "../components/future_image_right";
-import FutureImageIeft from  "../components/future_image_left";
+import FutureImageIeft from "../components/future_image_left";
 import TallCenteredFuture from "../components/tall_centered_future";
 import FutureImageRightSecond from "../components/future_image_right_second";
 import FutureLayers from "../components/future_layers";
@@ -23,19 +23,17 @@ const components = [
   { Component: Contact, id: "contact" },
   { Component: Footer, id: "footer" },
   
-  
-  
 ];
 
 const CmsPage = ({ pathContext }) => (
-    <div>
-      {pathContext.sections &&
-        pathContext.sections.map(section => {
-          const Component = components.find(({ id }) => id === section.type)
-            .Component;
-          return <Component {...section} />;
-        })}
-    </div>
+  <div>
+    {pathContext.sections &&
+      pathContext.sections.map(section => {
+        const Component = components.find(({ id }) => id === section.type)
+          .Component;
+        return <Component {...section} />;
+      })}
+  </div>
 );
 
 export default CmsPage;

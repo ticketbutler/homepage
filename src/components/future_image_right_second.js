@@ -346,17 +346,17 @@ const RightBox = styled.div`
 //     })
 //   })
 
-const FutureImageRightSecond = () => (
+const FutureImageRightSecond = ({heading, text, image}) => (
     <Section >
         <RightBox id="right-box-2">
-                <img src={require('../img/mac_lap.png')}></img>
+                <img src={image}></img>
                     <div className="first-box blue"></div>
                     <div className="second-box green"></div>
                 <div className="clear-fix"></div>
             </RightBox>
         <LeftBox>
-            <h3>A better understanding of your event</h3>
-            <p>Access, analize and manage your data from everywhere. Understand your atteendees and keep them coming back</p>
+            <h3>{heading}</h3>
+            <p>{text}</p>
         </LeftBox>
     
        <div className="clear-fix"></div>

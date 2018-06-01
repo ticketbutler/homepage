@@ -46,8 +46,11 @@ sections:
     button_text: Create an event
 
   - type: contact
-    heading: Some nice thing to say here
-    button_text: Do something here
+    heading: More Info!
+    item1: Address
+    item2: Phone
+    item3: General Support
+    
 
   - type: footer
     
