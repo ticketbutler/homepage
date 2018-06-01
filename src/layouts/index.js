@@ -7,9 +7,9 @@ import Footer from "../components/footer";
 
 const Layout = ({ children }) => (
   <div>
-    <Navbar/>
+    {/* <Navbar/> */}
     {typeof children === "function" ? children() : children}
-    <Footer />
+    {/* <Footer /> */}
   </div>
 );
 
