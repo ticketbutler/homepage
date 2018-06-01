@@ -5761,6 +5761,10 @@ jpeg-js@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.2.0.tgz#53e448ec9d263e683266467e9442d2c5a2ef5482"
 
+jquery@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
+
 js-base64@^2.1.9:
   version "2.4.5"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.4.5.tgz#e293cd3c7c82f070d700fc7a1ca0a2e69f101f92"
@@ -8381,6 +8385,12 @@ radium@^0.24.0:
     inline-style-prefixer "^4.0.0"
     prop-types "^15.5.8"
 
+raf@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/raf/-/raf-3.4.0.tgz#a28876881b4bc2ca9117d4138163ddb80f781575"
+  dependencies:
+    performance-now "^2.1.0"
+
 randomatic@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/randomatic/-/randomatic-3.0.0.tgz#d35490030eb4f7578de292ce6dfb04a91a128923"
@@ -8656,6 +8666,12 @@ react-router@^4.1.1, react-router@^4.2.0:
 react-scroll-sync@^0.4.0:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/react-scroll-sync/-/react-scroll-sync-0.4.1.tgz#f2749f90c7a10c2acb9ce83a2a998cbb88770e2c"
+
+react-scrollchor@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/react-scrollchor/-/react-scrollchor-5.0.2.tgz#cc28ca711332d0fef3f46706bd16c918898c0ac2"
+  dependencies:
+    requestanimationframe-timer "1.x.x"
 
 react-side-effect@^1.1.0:
   version "1.1.5"
@@ -9261,6 +9277,12 @@ request@^2.58.0, request@^2.65.0, request@^2.67.0, request@^2.74.0, request@^2.8
     tough-cookie "~2.3.3"
     tunnel-agent "^0.6.0"
     uuid "^3.1.0"
+
+requestanimationframe-timer@1.x.x:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/requestanimationframe-timer/-/requestanimationframe-timer-1.0.4.tgz#3b48fe55f4359f07c54745caec7437e2532f89d8"
+  dependencies:
+    raf "^3.4.0"
 
 require-directory@^2.1.1:
   version "2.1.1"
