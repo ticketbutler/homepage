@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from "styled-components";
+import $ from 'jquery'; 
 
 const Section = styled.section`
     padding: 110px;    
@@ -22,8 +23,6 @@ const Section = styled.section`
         padding: 50px 0;
     }
 `;
-
-
 const LeftBox = styled.div`
     display: inline-block;
     margin-top: 110px;
@@ -170,6 +169,10 @@ const RightBox = styled.div`
     display: inline-block;                
     position: relative;
 
+    transform: translateX(800px);
+    opacity: 0;
+    transition: all .3s ease-out;
+
     > div.clear-fix{
         clear:both;
     }
@@ -201,8 +204,6 @@ const RightBox = styled.div`
             -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
             clip-path: polygon(0 0, 0% 100%, 100% 100%);
         }
-    
-    
 
     > div.clear-fix{
         clear:both;
@@ -260,86 +261,94 @@ const RightBox = styled.div`
     }
    
 
-        @media (max-width: 1080px) { 
-                display: block;
-                width: 100%;
-        
-           
-                    > div.first-box.blue {
-                       top: -50px;
-                       height: 400px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        width: 760px;
-                    }
-                
-                    > div.second-box.green{
-                        top: -50px;
-                       height: 400px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        width: 760px;
-                
-                   }
-                
-                > img {
-                  
-                    position: relative;
-                    height: 425px;
-                    width: 600px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    top:0px;
-                    right: 0px;
-          
-                    border-radius: 3px;
-                    margin-bottom: 0;
-                }
+    @media (max-width: 1080px) { 
+        display: block;
+        width: 100%;
+
+    
+            > div.first-box.blue {
+                top: -50px;
+                height: 400px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 760px;
             }
         
-            @media (max-width: 600px) { 
-                margin-top: 50px;
-                height: auto;
-                padding: 0 20px;
-                
-                > div.first-box.blue {
-                    // display: none;
-                    width: 100%;
-                    height: 100%;
-                    // left: 0;
-                    top: -15%;
-                    
+            > div.second-box.green{
+                top: -50px;
+                height: 400px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 760px;
         
-                
-                }
+            }
+        
+        > img {
             
-                > div.second-box.green{
-                    // display: none;
-                    top: -15%;
-                    // left: 0;                
-                    width: 100%;
-                    height: 100%;
-                }
-                > img {
-                    
-                    height: auto;
-                    width: 100%;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    top:0px;
-                    right: 0px;
-             
-                    border-radius: 0px;
-                    
-                }
-                
-            }
+            position: relative;
+            height: 425px;
+            width: 600px;
+            left: 50%;
+            transform: translateX(-50%);
+            top:0px;
+            right: 0px;
+    
+            border-radius: 3px;
+            margin-bottom: 0;
+        }
+    }
+        
+    @media (max-width: 600px) { 
+        margin-top: 50px;
+        height: auto;
+        padding: 0 20px;
+        
+        > div.first-box.blue {
+            // display: none;
+            width: 100%;
+            height: 100%;
+            // left: 0;
+            top: -15%;
+            
+
+        
+        }
+    
+        > div.second-box.green{
+            // display: none;
+            top: -15%;
+            // left: 0;                
+            width: 100%;
+            height: 100%;
+        }
+        > img {
+            
+            height: auto;
+            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            top:0px;
+            right: 0px;
+        
+            border-radius: 0px;
+            
+        }
+        
+    }
 
 `;
-const Section5 = () => (
 
+
+$(document).ready(()=> {
+    $("#right-box-2").css({
+      "transform": "translateX(0)",
+      "opacity": "1",
+    })
+  })
+
+const FutureImageRightSecond = () => (
     <Section >
-        <RightBox>
+        <RightBox id="right-box-2">
                 <img src={require('../img/mac_lap.png')}></img>
                     <div className="first-box blue"></div>
                     <div className="second-box green"></div>
@@ -371,4 +380,4 @@ const Section5 = () => (
   
 )
 
-export default Section5
+export default FutureImageRightSecond

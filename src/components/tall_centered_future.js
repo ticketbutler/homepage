@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from "styled-components";
+import $ from 'jquery'; 
 
 const Section = styled.section`
     width: 100%;	
@@ -69,6 +70,9 @@ const Content = styled.div`
         margin-top: 40px;
 
         width: 100%;
+        transform: scale(.2);
+        opacity: 0;
+        transition: all .5s ease;
     }
 
     > a{
@@ -376,15 +380,16 @@ const TriangleShape = styled.div`
             
 
 `;
-const Section4 = () => (
+const TallCenteredFuture = ({heading, text, button_text, image}) => (
 
     <Section className="section-4">
         <BlueBackground></BlueBackground>
         <Content>
-            <h3>Easy to get going easy to use</h3>
-            <p>Picanha capicola pancetta ball tip prosciutto buffalo salami ribeye hamburger swine</p>
-            <img src={require('../img/img-3.jpg')}/>
-            <a href="#"><span>Do somthing now</span></a>
+            
+            <h3>{heading}</h3>
+            <p>{text}</p>
+            <img src={image}/>
+            <a href="#"><span>{button_text}</span></a>
         </Content>
 
             <SquareShape>
@@ -421,4 +426,4 @@ const Section4 = () => (
   
 )
 
-export default Section4
+export default TallCenteredFuture

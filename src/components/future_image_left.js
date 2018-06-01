@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from "styled-components";
+import $ from 'jquery'; 
 
 const Section = styled.section`
     padding: 110px;
@@ -29,7 +30,9 @@ const LeftBox = styled.div`
     float:left;
     width:50%;
     position:relative;
-    
+    transform: translateX(-800px);
+    opacity: 0;
+    transition: all .3s ease-out;
     > figure {
         width: 100%;
         z-index: -4;
@@ -556,22 +559,27 @@ const CircleShape = styled.div`
     } 
 `;
 
-const Section3 = () => (
+$(document).ready(()=> {
+    $("img").css({
+      "transform": "scale(1)",
+      "opacity": "1",
+    })
+  })
+
+const FutureImageIeft = ({heading, text, button_text, image}) => (
 
     <Section className="section-3 container">
-        <LeftBox>
+        <LeftBox id="left-box">
             <figure>
-                <img className="device" src={require('../img/mac.png')}/>
+                <img className="device" src={image}/>
                 {/* <img className="content" src={require('../img/img-7.jpg')}/>   */}
             </figure>
 
         </LeftBox>
         <RightBox>
-          
-                <h3>Pork chop capicola shoulder doner ball</h3>
-                <p>Picanha capicola pancetta ball tip prosciutto buffalo salami ribeye hamburger swine. pig landjaeger swine corned beef fliet mignon drumstick flank capicola</p>
-                <a href="#"><span>Create an event</span></a>
-            
+            <h3>{heading}</h3>
+            <p>{text}</p>
+            <a href="#"><span>{button_text}</span></a>
             <SquareShape_1>
                 <div className="shape">
                     <span id="first"></span>
@@ -613,4 +621,4 @@ const Section3 = () => (
   
 )
 
-export default Section3
+export default FutureImageIeft

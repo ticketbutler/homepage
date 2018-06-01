@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from "styled-components";
+import $ from 'jquery'; 
 
 const Section = styled.section `
     width:100%;
@@ -124,6 +125,9 @@ const SectionContent = styled.div`
     z-index: 3;
     float: right;
     padding: 95px 86px;
+    transform: translateX(900px);
+    opacity: 0;
+    transition: all .3s ease-out;
     > h3 {
         
         width: 100%;	
@@ -450,19 +454,26 @@ const DivShape = styled.div `
 `;  
 
 
-const Section6 = () => (
+$(document).ready(()=> {
+    $("#section-content").css({
+      "transform": "translateX(0)",
+      "opacity": "1",
+    })
+  })
+
+const FutureLayers = ({heading, text, button_text, image}) => (
     
 
     <Section className="section-6">
 
             <SectionImage className="image">
-                <img className="content_image" src={require("../img/img-6.jpg")} />
+                <img className="content_image" src={image} />
             </SectionImage>
 
-            <SectionContent>
-                <h3>Pork chop capicola shoulder doner ball</h3>
-                <p>Picanha capicola pancette ball tip prosciutto buffalo salami ribeye hamburger swine corned beef filet mignon drumstick flank capicola</p>
-                <a><span>Create an event</span></a>
+            <SectionContent id="section-content">
+                <h3>{heading}</h3>
+                <p>{text}</p>
+                <a><span>{button_text}</span></a>
 
                 <DivShape>
                     <div className="shape">
@@ -494,4 +505,4 @@ const Section6 = () => (
   
 )
 
-export default Section6
+export default FutureLayers

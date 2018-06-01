@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from "styled-components";
-
+import $ from 'jquery'; 
 
 const Section = styled.section`
     padding: 110px;    
@@ -173,7 +173,9 @@ const RightBox = styled.div`
     // height: auto;
     display: inline-block;                
     position: relative;
-
+    transform: translateX(800px);
+    opacity: 0;
+    transition: all .3s ease-out;
     > div.clear-fix{
         clear:both;
     }
@@ -337,26 +339,29 @@ const RightBox = styled.div`
         
     }
 `;
-const Section2 = ({data}) => {
-    console.log(data);
 
+$(document).ready(()=> {
+    $("#right-box").css({
+      "transform": "translateX(0)",
+      "opacity": "1",
+    })
+  })
+const FutureImageRight = ({heading, text, image}) => {
     return (
         <Section>
 
-                <RightBox>
-                    <img src={require('../img/img-7.jpg')}></img>
+                <RightBox id="right-box">
+                    <img src={image}></img>
                     <div className="first-box green"></div>
                     <div className="second-box blue"></div>
                     <div className="clear"></div>
                 </RightBox>
         
                 <LeftBox>
-                    <h3>Lorem Ipsum sit amet</h3>
-                    <p>Bacon ipsum dolor amet rump beef check, tri-tip sausage brisket leberkas porchetta hamburger tenderloin short</p>
+                    <h3>{heading}</h3>
+                    <p>{text}</p>
                 </LeftBox>
 
-                
-            
             <div className="clear-fix"></div>
             <style jsx>{`
             * {
@@ -379,6 +384,6 @@ const Section2 = ({data}) => {
   
     )
 }
-export default Section2
+export default FutureImageRight
 
 

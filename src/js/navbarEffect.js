@@ -1,3 +1,4 @@
+// Bars Click ON Small Screen
 export default () => {    
     let nav_Bars = document.getElementById("bars");
     let ulElement = document.getElementById("ulNav");  

@@ -19,6 +19,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                     heading
                     text
                     image
+                    button_text
                   }
                 }
               }
