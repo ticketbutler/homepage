@@ -1,6 +1,5 @@
 ---
 path: /
-title: Test Page
 sections:
   - type: future_image_right
     heading: Lorem Ipsum sit amet

@@ -2,12 +2,12 @@ import * as React from "react";
 import Layout from "../layouts";
 
 // import Hero from "../components/Hero";
-import FutureImageRight from "../components/future_image_right"
+import FutureImageRight from "../components/future_image_right";
 import FutureImageIeft from  "../components/future_image_left";
-import TallCenteredFuture from "../components/tall_centered_future"
+import TallCenteredFuture from "../components/tall_centered_future";
 import FutureImageRightSecond from "../components/future_image_right_second";
-import FutureLayers from "../components/future_layers"
-import Contact from "../components/Contact"
+import FutureLayers from "../components/future_layers";
+import Contact from "../components/Contact";
 
 const components = [
   // { Component: Hero, id: "hero" },
@@ -24,7 +24,6 @@ const components = [
 const CmsPage = ({ pathContext }) => (
   <Layout>
     <div>
-
       {pathContext.sections &&
         pathContext.sections.map(section => {
           const Component = components.find(({ id }) => id === section.type)

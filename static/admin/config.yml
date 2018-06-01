@@ -2,7 +2,7 @@ backend:
   name: github
   repo: ticketbutler/homepage
     
-media_folder: src/img
+media_folder: static/img
 public_folder: img
 
 collections:
