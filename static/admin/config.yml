@@ -28,10 +28,10 @@ collections:
               - { label: Image left, value: uture_image_left }
               - { label: Centerd Image Tall, value: tall_centered_future }
               - { label: Image Right Second Style, value: future_image_right_second }
+              - { label: Layer Image, value: future_layers }
               - { label: Contact Page, value: contact }
               - { label: Footer, value: footer }
               
-              - { label: Footer, value: footer }
           - { name: heading, label: Heading, required: false }
           - { name: text, label: Text, required: false }
           - { name: image, label: Image, widget: image, required: false  }
