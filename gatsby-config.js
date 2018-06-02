@@ -3,15 +3,15 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-catch-links",
     "styled-jsx/babel",
-    `gatsby-plugin-styled-components`,
+    "gatsby-plugin-styled-components",
     "gatsby-plugin-netlify-cms",
-    `gatsby-plugin-sharp`,
+    "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
         path: __dirname + "/pages",
-        name: `pages`
+        name: "pages"
       }
     },
     {
@@ -20,7 +20,7 @@ module.exports = {
         plugins: [
           "gatsby-remark-copy-linked-files",
           {
-            resolve: `gatsby-remark-images`,
+            resolve: "gatsby-remark-images",
             options: {
               maxWidth: 800,
               linkImagesToOriginal: false
