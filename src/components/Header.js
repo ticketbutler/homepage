@@ -255,7 +255,7 @@ const HeaderContent = styled.div`
         </HeaderContent>
       
         <style jsx>{`
-              @import url("https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700|Montserrat:300,400,500,600,700");
+              // @import url("https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700|Montserrat:300,400,500,600,700");
 
               * {
                 margin: 0;
