@@ -30,7 +30,7 @@ collections:
       - name: items
         label: Items
         widget: list
-        options:
+        fields:
           - { name: label, label: Label }
           - { name: path, label: Path }
 
