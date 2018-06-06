@@ -392,7 +392,7 @@ const Login_Lang = styled.div`
   @media (max-width: 600px) {
     width: 50px;
     
-    margin-right: 40px;
+    margin-right: 90px;
     >a {
       font-size: 10px;
       

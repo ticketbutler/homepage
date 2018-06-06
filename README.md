@@ -1,26 +1,14 @@
 # gatsby-starter-default
-The default Gatsby starter.
+    Ticket Butler
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
+<!-- for running the app  -->
 
-## Install
+    Gatsby develop  
 
-Make sure that you have the Gatsby CLI program installed:
-```sh
-npm install --global gatsby-cli
-```
+<!-- go ro you browser and copy this in to it  -->
 
-And run from your CLI:
-```sh
-gatsby new gatsby-example-site
-```
+    localhost:8000
 
-Then you can run it by:
-```sh
-cd gatsby-example-site
-npm run develop
-```
+<!-- For building the app -->
 
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Daryan98/TicketBulter)
+    gatsby build or npm run build
