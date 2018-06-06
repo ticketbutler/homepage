@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Layout } from "../layouts/";
 import Header from "../components/Header";
 import FutureImageRight from "../components/future_image_right";
 import FutureImageIeft from "../components/future_image_left";
@@ -18,14 +19,14 @@ const components = [
 ];
 
 const CmsPage = ({ pathContext }) => (
-  <div>
+  <Layout {...pathContext.layout}>
     {pathContext.sections &&
       pathContext.sections.map(section => {
         const Component = components.find(({ id }) => id === section.type)
           .Component;
         return <Component {...section} />;
       })}
-  </div>
+  </Layout>
 );
 
 export default CmsPage;

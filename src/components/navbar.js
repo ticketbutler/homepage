@@ -407,7 +407,7 @@ const Login_Lang = styled.div`
     
   }
 `;
-   const NavbarSec = ({item1, item2,item3,item4,item5, item6}) => {
+   const NavbarSec = ({items}) => {
     return (
         <Navbar className="navbar">
             <Logo><span>ticketbutler</span> </Logo>
@@ -419,12 +419,12 @@ const Login_Lang = styled.div`
                 <div className="bar3"></div>
               </NavBars>
                 <ul id="ulNav">
-                  <li  className="active"><Scrollchor to="" className="nav-link">{item1}</Scrollchor></li>
-                  <li><Scrollchor to="" className="nav-link">{item2}</Scrollchor></li>
-                  <li><Scrollchor to="" className="nav-link">{item3}</Scrollchor></li>
-                  <li><Scrollchor to="" className="nav-link">{item4}</Scrollchor></li>
-                  <li><Scrollchor to="" className="nav-link">{item5}</Scrollchor></li>
-                  <li><Scrollchor animate={{offset: 20, duration: 600}} to="#contact" className="nav-link">{item6}</Scrollchor></li>
+                  <li  className="active"><Scrollchor to="" className="nav-link">{items[1]}</Scrollchor></li>
+                  <li><Scrollchor to="" className="nav-link">{items[2]}</Scrollchor></li>
+                  <li><Scrollchor to="" className="nav-link">{items[3]}</Scrollchor></li>
+                  <li><Scrollchor to="" className="nav-link">{items[4]}</Scrollchor></li>
+                  <li><Scrollchor to="" className="nav-link">{items[5]}</Scrollchor></li>
+                  <li><Scrollchor animate={{offset: 20, duration: 600}} to="#contact" className="nav-link">{items[6]}</Scrollchor></li>
                 </ul>
             </Nav>
             <Login_Lang id="navbar_login_btn">

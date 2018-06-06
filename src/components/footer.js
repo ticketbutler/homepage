@@ -140,17 +140,17 @@ const RightDiv = styled.div`
 
 `;
 
-const Footer = ({item1, item2, item3, item4}) => (
+const Footer = ({items}) => (
 
     <FooterTag>
      <LeftDiv>
-            <a href="#" className="first-child"><span>{item1}</span></a>
-            <a href="#" className="second-child"><span>{item2}</span></a>
+            <a href="#" className="first-child"><span>{items[1]}</span></a>
+            <a href="#" className="second-child"><span>{items[2]}</span></a>
         </LeftDiv>
 
         <RightDiv>
-            <span id="email">{item3}</span>
-            <span id="from">{item4}</span>
+            <span id="email">{items[3]}</span>
+            <span id="from">{items[4]}</span>
         </RightDiv> 
         
         <div className="clear-fix"></div>

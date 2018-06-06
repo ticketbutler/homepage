@@ -2,7 +2,7 @@
 title: Main
 path: main
 items:
-  - label: Home
-    path: /
+  - label: Contact
+    path: contact
 ---
 
