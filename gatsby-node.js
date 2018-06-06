@@ -67,8 +67,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             context: {
               sections: node.frontmatter.sections,
               layout: {
-                TopMenu: TopMenu.edges,
-                FooterMenu: FooterMenu.edges
+                TopMenu: TopMenu.edges[0].node.frontmatter.items,
+                FooterMenu: FooterMenu.edges[0].node.frontmatter.items
               }
             }
           });
