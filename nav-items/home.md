@@ -1,5 +1,5 @@
 ---
-label: Home
+title: Home
 path: /
 ---
 

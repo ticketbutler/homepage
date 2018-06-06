@@ -12,7 +12,7 @@ collections:
     create: true
     filter: {field: type, value: nav}
     fields:
-      - { name: label, label: Label }
+      - { name: title, label: Title }
       - { name: path, label: Path }
 
   - name: footer-items
