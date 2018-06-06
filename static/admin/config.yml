@@ -14,7 +14,6 @@ collections:
     fields:
       - { name: title, label: Title }
       - { name: path, label: Path }
-
   - name: footer-items
     label: Footer Items
     folder: footer-items
@@ -23,7 +22,6 @@ collections:
     fields:
       - { name: title, label: Title }
       - { name: path, label: Path }
-
   - name: pages
     label: Pages
     folder: pages
