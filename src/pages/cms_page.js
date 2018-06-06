@@ -2,7 +2,7 @@ import * as React from "react";
 // import Layout from "../layouts";
 
 
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar";
 import Header from "../components/Header";
 import FutureImageRight from "../components/future_image_right";
 import FutureImageIeft from "../components/future_image_left";
