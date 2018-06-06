@@ -407,7 +407,7 @@ const Login_Lang = styled.div`
     
   }
 `;
-   const NavbarSec = ({items}) => {
+   const NavbarSec = ({ items }) => {
     return (
         <Navbar className="navbar">
             <Logo><span>ticketbutler</span> </Logo>
@@ -419,13 +419,7 @@ const Login_Lang = styled.div`
                 <div className="bar3"></div>
               </NavBars>
                 <ul id="ulNav">
-                  {items.map(item => <li><Scrollchor href={item.path} className="nav-link">{item.label}</Scrollchor> </li>)}
-                  {/* {items.map(item => <li><Scrollchor href={item.path} className="nav-link">{item.label}</Scrollchor></li>)}  */}
-                  {/* <li>{items.map(item => <Scrollchor href={item.path} className="nav-link">{item.label}</Scrollchor>)}</li>
-                  <li>{items.map(item => <Scrollchor href={item.path} className="nav-link">{item.label}</Scrollchor>)}</li>
-                  <li>{items.map(item => <Scrollchor href={item.path} className="nav-link">{item.label}</Scrollchor>)}</li>  */}
-                  {/* <li>{items.map(item => <Scrollchor href={item.path} className="nav-link" animate={{offset: 20, duration: 600}} to="#contact">{item.label}</Scrollchor>)}</li> */}
-
+                  {items.map(item => <li><a href={item.path} className="nav-link" animate={{offset: 20, duration: 600}} >{item.label}</a> </li>)}
                 </ul>
             </Nav>
             <Login_Lang id="navbar_login_btn">

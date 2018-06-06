@@ -54,23 +54,43 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             }
           }
         }
+        Contact: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/contact/"}}) {
+          edges {
+            node {
+              frontmatter {
+                title
+                path
+                items {  
+                  adress
+                  phone
+                  support
+                  
+                }
+              }
+            }
+          }
+        }
       }
       `).then(res => {
         if (res.errors || res.messages) {
           reject(res.errors + " " + res.messages);
         }
-        let { Pages, TopMenu, FooterMenu } = res.data;
+        let { Pages, TopMenu, FooterMenu, Contact } = res.data;
         Pages.edges.forEach(({ node }) => {
           createPage({
             path: node.frontmatter.path,
             component: Component,
             layout: null,
+            
             context: {
               sections: node.frontmatter.sections,
+              items: node.frontmatter.items,
+              
               layout: {
                 TopMenu: TopMenu.edges[0].node.frontmatter.items,
-                FooterMenu: FooterMenu.edges[0].node.frontmatter.items
+                FooterMenu: FooterMenu.edges[0].node.frontmatter.items,
               }
+              
             }
           });
         });

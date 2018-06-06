@@ -26,6 +26,12 @@ const CmsPage = ({ pathContext }) => (
           .Component;
         return <Component {...section} />;
       })}
+      {pathContext.items &&
+      pathContext.items.map(section => {
+        const Component = components.find(({ id }) => id === "contact")
+          .Component;
+        return <Component {...items} />;
+      })}
   </Layout>
 );
 

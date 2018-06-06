@@ -12,7 +12,7 @@ items:
   - label: More
     path: /
   - label: Contact
-    path: /
+    path: '#contact'
 
 ---
 

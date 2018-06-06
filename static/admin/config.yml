@@ -19,6 +19,7 @@ collections:
         fields:
           - { name: label, label: Label }
           - { name: path, label: Path }
+          
   - name: footer-menu
     label: Footer Menu
     folder: content/footer-menu
@@ -33,6 +34,22 @@ collections:
           - { name: label, label: Label }
           - { name: path, label: Path }
 
+  - name: contact
+    label: Contact
+    folder: content/contact
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: path, label: Path }
+      - name: items
+        label: Items
+        widget: list
+        fields:
+          - { name: adress, label: Adress }
+          - { name: phone, label: phone Number }
+          - { name: support, label: General Support }
+          
+        
   - name: pages
     label: Pages
     folder: content/pages

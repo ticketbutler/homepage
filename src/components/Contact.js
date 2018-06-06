@@ -329,7 +329,7 @@ const RightBox = styled.div`
     }
 `;
 
-const Contact_page = ({ item1, item2, item3}) => (
+const Contact_page = ({adress, phone, support}) => (
     
     <Section id="contact">
         <div className="container">
@@ -359,18 +359,19 @@ const Contact_page = ({ item1, item2, item3}) => (
                         <li>
                             <i className="fa fa-map-marker"></i>
                             <span>Address</span>
-                            <span id="address"> {item1}</span></li>
+                            <span id="address"> {adress}</span>
+                            </li>
                         <li>
                             <i className="fa fa-phone"></i>
                             <span>Phone</span>
-                            <span id="phone">{item2}</span>
+                            <span id="phone">{phone}</span>
       
 
                         </li>
                         <li>
                             <i className="fa fa-envelope"></i>
                             <span>General soppurt</span>
-                            <span id="support">{item3}</span>
+                            <span id="support">{support}</span>
 
                         </li>
                         

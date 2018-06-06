@@ -57,7 +57,7 @@ const Footer = ({items}) => (
 
     <FooterTag>
         <ContentDiv>
-            {items.map(item => <a href={item.path}><span>{item.label}</span></a>)}
+            {items.map(item => <a href={item.path}><span>{item.label}</span></a>)};
         </ContentDiv>
         
         <div className="clear-fix"></div>
