@@ -6,9 +6,39 @@ media_folder: static/img
 public_folder: img
 
 collections:
+  - name: top-menu
+    label: Top Menu
+    folder: content/top-menu
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: path, label: Path }
+      - name: items
+        label: Items
+        widget: list
+        fields:
+          - { name: label, label: Label }
+          - { name: path, label: Path }
+        
+
+  - name: footer-menu
+    label: Footer Menu
+    folder: content/footer-menu
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: path, label: Path }
+      - name: items
+        label: Items
+        widget: list
+        fields:
+          - { name: label, label: Label }
+          - { name: path, label: Path }
+  
+
   - name: pages
     label: Pages
-    folder: pages
+    folder: content/pages
     create: true
     fields:
       - { name: path, label: Path }
@@ -21,8 +51,7 @@ collections:
           - name: type
             label: Type
             widget: select
-            options: 
-              - { label: Navbar, value: navbar }              
+            options:        
               - { label: Header, value: header }
               - { label: Image right, value: future_image_right }
               - { label: Image left, value: uture_image_left }
@@ -30,26 +59,13 @@ collections:
               - { label: Image Right Second Style, value: future_image_right_second }
               - { label: Layer Image, value: future_layers }
               - { label: Contact Page, value: contact }
-              - { label: Footer, value: footer }
-              
+
+
           - { name: heading, label: Heading, required: false }
           - { name: text, label: Text, required: false }
-          - { name: image, label: Image, widget: image, required: false  }
+          - { name: image, label: Image, widget: image, required: false }
           - { name: button_text, label: Button Text, required: false }
           - { name: button_link, label: Button Link, required: false }
-          - { name: item1, label: Navbar Item, required: false }
-          - { name: item2, label: Navbar Item, required: false }
-          - { name: item3, label: Navbar Item, required: false }
-          - { name: item4, label: Navbar Item, required: false }
-          - { name: item5, label: Navbar Item, required: false }
-          - { name: item6, label: Navbar Item, required: false }
-
-# # Footer
-#           - { name: PrivatePolicy, label: , required: false }
-#           - { name: item1, label: Navbar Item, required: false }
-#           - { name: item1, label: Navbar Item, required: false }
-#           - { name: item1, label: Navbar Item, required: false }
-          
                     
 
           

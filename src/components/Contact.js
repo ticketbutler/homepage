@@ -329,7 +329,7 @@ const RightBox = styled.div`
     }
 `;
 
-const Contact_page = ({heading, item1, item2, item3}) => (
+const Contact_page = ({ item1, item2, item3}) => (
     
     <Section id="contact">
         <div className="container">

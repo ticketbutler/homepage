@@ -7,42 +7,69 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     let Component = path.resolve("./src/pages/cms_page.js");
     resolve(
       graphql(`
-        {
-          allMarkdownRemark {
-            edges {
-              node {
-                frontmatter {
-                  title
-                  path
-                  sections {
-                    type
-                    heading
-                    text
-                    image
-                    button_text
-                    item1
-                    item2
-                    item3
-                    item4
-                    item5
-                    item6
-
-                  }
+      query IndexQuery {
+        Pages: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/pages/"}}) {
+          edges {
+            node {
+              frontmatter {
+                title
+                path
+                sections {
+                  type
+                  heading
+                  text
+                  image
+                  button_text
                 }
               }
             }
           }
         }
+        TopMenu: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/top-menu/"}}) {
+          edges {
+            node {
+              frontmatter {
+                title
+                path
+                items {
+                  path
+                  label
+                }
+              }
+            }
+          }
+        }
+        FooterMenu: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/footer-menu/"}}) {
+          edges {
+            node {
+              frontmatter {
+                title
+                path
+                items {
+                  path
+                  label
+                }
+              }
+            }
+          }
+        }
+      }
       `).then(res => {
         if (res.errors || res.messages) {
           reject(res.errors + " " + res.messages);
         }
-        res.data.allMarkdownRemark.edges.forEach(({ node }) => {
+        let { Pages, TopMenu, FooterMenu } = res.data;
+        Pages.edges.forEach(({ node }) => {
           createPage({
             path: node.frontmatter.path,
             component: Component,
+            layout: null,
             context: {
-              sections: node.frontmatter.sections
+              sections: node.frontmatter.sections,
+              layout: {
+                TopMenu: TopMenu.edges[0].node.frontmatter.items,
+                FooterMenu: FooterMenu.edges[0].node.frontmatter.items
+              }
             }
           });
         });

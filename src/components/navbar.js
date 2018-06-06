@@ -407,7 +407,7 @@ const Login_Lang = styled.div`
     
   }
 `;
-   const NavbarSec = ({item1, item2,item3,item4,item5, item6}) => {
+   const NavbarSec = ({items}) => {
     return (
         <Navbar className="navbar">
             <Logo><span>ticketbutler</span> </Logo>
@@ -419,12 +419,12 @@ const Login_Lang = styled.div`
                 <div className="bar3"></div>
               </NavBars>
                 <ul id="ulNav">
-                  <li  className="active"><Scrollchor to="" className="nav-link">{item1}</Scrollchor></li>
-                  <li><Scrollchor to="" className="nav-link">{item2}</Scrollchor></li>
-                  <li><Scrollchor to="" className="nav-link">{item3}</Scrollchor></li>
-                  <li><Scrollchor to="" className="nav-link">{item4}</Scrollchor></li>
-                  <li><Scrollchor to="" className="nav-link">{item5}</Scrollchor></li>
-                  <li><Scrollchor animate={{offset: 20, duration: 600}} to="#contact" className="nav-link">{item6}</Scrollchor></li>
+                  {items.map(item => <li><Scrollchor href={item.path} className="nav-link">{item.label}</Scrollchor> </li>)}
+                  {/* {items.map(item => <li><Scrollchor href={item.path} className="nav-link">{item.label}</Scrollchor></li>)}  */}
+                  {/* <li>{items.map(item => <Scrollchor href={item.path} className="nav-link">{item.label}</Scrollchor>)}</li>
+                  <li>{items.map(item => <Scrollchor href={item.path} className="nav-link">{item.label}</Scrollchor>)}</li>
+                  <li>{items.map(item => <Scrollchor href={item.path} className="nav-link">{item.label}</Scrollchor>)}</li>  */}
+                  {/* <li>{items.map(item => <Scrollchor href={item.path} className="nav-link" animate={{offset: 20, duration: 600}} to="#contact">{item.label}</Scrollchor>)}</li> */}
                 </ul>
             </Nav>
             <Login_Lang id="navbar_login_btn">
@@ -438,36 +438,36 @@ const Login_Lang = styled.div`
             </Login_Lang>  
             <div className="clear-fix"></div> 
             
-        <style jsx>{`
+          <style jsx>{`
 
-              * {
-                margin: 0;
-                padding:0;
-                box-sizing: border-box;
-                
-              }
-          
-      
-              div.NavbarClicked-background {
-                display: none;
-                
-                position: absolute;
-                top: 0;
-                left:0;
-                height: 100%;
-                width: 100%;
-                position:fixed;
-                background-color: rgba(0,0,0,.75);
-                z-index: 10;
-              }
-              @media (max-width: 1100px) {
+                * {
+                  margin: 0;
+                  padding:0;
+                  box-sizing: border-box;
+                  
+                }
+            
+        
                 div.NavbarClicked-background {
-                  display: block;
+                  display: none;
+                  
+                  position: absolute;
+                  top: 0;
+                  left:0;
+                  height: 100%;
+                  width: 100%;
+                  position:fixed;
+                  background-color: rgba(0,0,0,.75);
+                  z-index: 10;
+                }
+                @media (max-width: 1100px) {
+                  div.NavbarClicked-background {
+                    display: block;
+                  }
+
                 }
 
-              }
-
-        `}</style>
+          `}</style>
         </Navbar>
   
     )

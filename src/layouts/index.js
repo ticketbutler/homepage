@@ -1,16 +1,15 @@
 import React from "react";
-
+import Navbar from '../components/navbar';
+import Footer from "../components/footer";
 import "./index.css";
 
-// import Navbar from '../components/navbar';
-// import Footer from "../components/footer";
-
-const Layout = ({ children }) => (
+export const Layout = ({ children, TopMenu, FooterMenu }) => (
   <div>
-    {/* <Navbar/> */}
+    <Navbar items={TopMenu} />
     {typeof children === "function" ? children() : children}
-    {/* <Footer /> */}
+    <Footer items={FooterMenu}/>
   </div>
 );
 
-export default Layout;
+// Dummy layout
+export default ({children}) => children();

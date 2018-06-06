@@ -30,128 +30,36 @@ const FooterTag = styled.footer`
    
 `;
 
-const LeftDiv = styled.div`
-    display: inline-block;
-    width: 50%;
-    float: left;
- 
-    > a.second-child {
-        margin-left: 50px;
-    }
-    > a {
+const ContentDiv = styled.div`
+    width: 100%;
+    height: 100%;
 
-        text-decoration; none;
-        font-family: Montserrat;	
-        font-size: 15px;	
-        font-weight: bold;	
-        letter-spacing: 1.15px;	
+    a {
+        width: 25%;
+        height: auto;
+        display: inline-block;
+        text-align: center;
         text-decoration: none;
-        transition: all .3s;
-        > span {
-            color: #333F52;	
-            &:hover {
-                opacity: .8;
-            }
-        }
-    }
-
-    @media (max-width: 1080px) { 
-        > a {	
-            font-size: 13px;
-            display:block;
-            
-            &.second-child {
-                margin-left: 0px;
-            }
-        }
-    }
-    @media (max-width: 768px) { 
-       
-        margin-bottom: 20px;
-        >a {
-            font-size: 11px;
-            
-        }
-    }
-    
-    @media (max-width: 600px) {       
-        >a {
-            font-size: 10px;
-            
-        }
-    }
-
-    @media (max-width: 376px) { 
-   
-        margin-bottom: 20px;
-        >a {
-            font-size: 9.5px;
-            
-        }
-    }
-`;
-
-const RightDiv = styled.div`
-    display: inline-block;
-    width: 50%;
-    float: left;
-
-    > span {
-        color: #333F52;	
-        font-family: Montserrat;	
-        font-size: 15px;	
-        letter-spacing: 1.15px;	
-        width: 100%;
         
-        &#from{
-            margin-left: 50px;
+        span {
+            color: #333F52;
+            font-family: Hind;
+            letter-spacing: .5px;
+            &:hover {
+                opacity: .85;
+            }
+           
         }
     }
-    @media (max-width: 1080px) { 
-        > span {
-            color: #333F52;	
-            font-family: Montserrat;	
-            font-size: 13px;
-            display:inline-block;
-            &#from{
-                margin-left: 0px;
-            }	  
-        }
-    }
-    @media (max-width: 768px) { 
-        > span {
-        font-size: 11px;	
-        }
-    }
-    @media (max-width: 600px) { 
-
-        margin-bottom: 20px;
-        > span {
-            font-size: 10px;	
-
-        }
-        }
-    @media (max-width: 376px) {
-        > span {
-            font-size: 9.5px;	
-
-        }
-    }
-
 `;
 
-const Footer = ({item1, item2, item3, item4}) => (
+const Footer = ({items}) => (
 
     <FooterTag>
-     <LeftDiv>
-            <a href="#" className="first-child"><span>{item1}</span></a>
-            <a href="#" className="second-child"><span>{item2}</span></a>
-        </LeftDiv>
-
-        <RightDiv>
-            <span id="email">{item3}</span>
-            <span id="from">{item4}</span>
-        </RightDiv> 
+        <ContentDiv>
+            {items.map(item => <a href={item.path}><span>{item.label}</span></a>)}
+        </ContentDiv>
+        
         
         <div className="clear-fix"></div>
         <style jsx>{`

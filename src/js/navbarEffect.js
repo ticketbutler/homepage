@@ -14,7 +14,7 @@ export default () => {
       
       backDiv.classList.add("NavbarClicked-background");
   
-      document.getElementById("lang").style.display = "inline";
+      // document.getElementById("lang").style.display = "inline";
 
 
     let liElement = document.querySelectorAll("li");
@@ -32,7 +32,7 @@ export default () => {
   
       backDiv.classList.remove("NavbarClicked-background");
   
-      document.getElementById("lang").style.display = "none";
+      // document.getElementById("lang").style.display = "none";
       
     }
   }
