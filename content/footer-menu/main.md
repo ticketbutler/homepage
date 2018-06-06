@@ -12,6 +12,5 @@ items:
   - label: Made With Love In Denamrk
     path: /
 
-    
 ---
 

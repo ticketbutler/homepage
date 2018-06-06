@@ -19,8 +19,6 @@ collections:
         fields:
           - { name: label, label: Label }
           - { name: path, label: Path }
-        
-
   - name: footer-menu
     label: Footer Menu
     folder: content/footer-menu
@@ -34,7 +32,6 @@ collections:
         fields:
           - { name: label, label: Label }
           - { name: path, label: Path }
-  
 
   - name: pages
     label: Pages
@@ -60,12 +57,12 @@ collections:
               - { label: Layer Image, value: future_layers }
               - { label: Contact Page, value: contact }
 
-
           - { name: heading, label: Heading, required: false }
           - { name: text, label: Text, required: false }
           - { name: image, label: Image, widget: image, required: false }
           - { name: button_text, label: Button Text, required: false }
           - { name: button_link, label: Button Link, required: false }
+
                     
 
           

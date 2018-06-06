@@ -60,7 +60,6 @@ const Footer = ({items}) => (
             {items.map(item => <a href={item.path}><span>{item.label}</span></a>)}
         </ContentDiv>
         
-        
         <div className="clear-fix"></div>
         <style jsx>{`
             .clear-fix {

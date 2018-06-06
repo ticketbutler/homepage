@@ -425,6 +425,7 @@ const Login_Lang = styled.div`
                   <li>{items.map(item => <Scrollchor href={item.path} className="nav-link">{item.label}</Scrollchor>)}</li>
                   <li>{items.map(item => <Scrollchor href={item.path} className="nav-link">{item.label}</Scrollchor>)}</li>  */}
                   {/* <li>{items.map(item => <Scrollchor href={item.path} className="nav-link" animate={{offset: 20, duration: 600}} to="#contact">{item.label}</Scrollchor>)}</li> */}
+
                 </ul>
             </Nav>
             <Login_Lang id="navbar_login_btn">
