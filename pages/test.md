@@ -47,9 +47,9 @@ sections:
 
   - type: contact
     heading: More Info!
-    item1: Address
-    item2: Phone
-    item3: General Support
+    item1: Porcelænshaven 26, 2000 Frederiksberg
+    item2: ++ 45 89 80 12 80
+    item3: daryan@ticketbutler.io
     
 
   - type: footer
