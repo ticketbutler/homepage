@@ -41,9 +41,6 @@ sections:
       hamburger swine corned beef filet mignon drumstick flank capicola
     type: future_layers
   - heading: More Info!
-    item1: 'Porcelænshaven 26, 2000 Frederiksberg'
-    item2: ++ 45 89 80 12 80
-    item3: daryan@ticketbutler.io
     type: contact
 ---
 
