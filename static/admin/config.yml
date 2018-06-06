@@ -22,15 +22,15 @@ collections:
             label: Type
             widget: select
             options: 
-              - { label: Pages Navbar, value: navbar }              
-              - { label:  Pages Header, value: header }
+              - { label: Navbar, value: navbar }              
+              - { label: Header, value: header }
               - { label: Image right, value: future_image_right }
               - { label: Image left, value: uture_image_left }
               - { label: Centerd Image Tall, value: tall_centered_future }
               - { label: Image Right Second Style, value: future_image_right_second }
               - { label: Layer Image, value: future_layers }
               - { label: Contact Page, value: contact }
-              - { label: Pages Footer, value: footer }
+              - { label: Footer, value: footer }
               
           - { name: heading, label: Heading, required: false }
           - { name: text, label: Text, required: false }
