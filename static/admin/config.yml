@@ -13,7 +13,7 @@ collections:
     filter: {field: type, value: nav}
     fields:
       - { name: label, label: Label }
-      - { name: link, label: Link }
+      - { name: path, label: Path }
 
   - name: footer-items
     label: Footer Items
