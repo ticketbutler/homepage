@@ -2,15 +2,15 @@ import * as React from "react";
 // import Layout from "../layouts";
 
 
-import Navbar from "../components/navbar";
-import Header from "../components/header";
+import Navbar from "../components/Navbar";
+import Header from "../components/Header";
 import FutureImageRight from "../components/future_image_right";
 import FutureImageIeft from "../components/future_image_left";
 import TallCenteredFuture from "../components/tall_centered_future";
 import FutureImageRightSecond from "../components/future_image_right_second";
 import FutureLayers from "../components/future_layers";
-import Contact from "../components/contact";
-import Footer from "../components/footer";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 
 const components = [
