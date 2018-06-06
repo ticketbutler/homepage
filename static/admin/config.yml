@@ -10,7 +10,6 @@ collections:
     label: Navigation Items
     folder: nav-items
     create: true
-    filter: {field: type, value: nav}
     fields:
       - { name: title, label: Title }
       - { name: path, label: Path }
@@ -18,7 +17,6 @@ collections:
     label: Footer Items
     folder: footer-items
     create: true
-    filter: {field: type, value: footer}
     fields:
       - { name: title, label: Title }
       - { name: path, label: Path }
@@ -26,7 +24,6 @@ collections:
     label: Pages
     folder: pages
     create: true
-    filter: {field: type, value: pages}
     fields:
       - { name: path, label: Path }
       - { name: title, label: Title }
