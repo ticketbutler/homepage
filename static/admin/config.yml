@@ -21,8 +21,8 @@ collections:
     create: true
     filter: {field: type, value: footer}
     fields:
-      - { name: label, label: Label }
-      - { name: link, label: Link }
+      - { name: title, label: Title }
+      - { name: path, label: Path }
 
   - name: pages
     label: Pages
