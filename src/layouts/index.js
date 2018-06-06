@@ -2,8 +2,8 @@ import React from "react";
 
 import "./index.css";
 
-import Navbar from '../components/navbar';
-import Footer from "../components/Footer";
+// import Navbar from '../components/navbar';
+// import Footer from "../components/footer";
 
 const Layout = ({ children }) => (
   <div>

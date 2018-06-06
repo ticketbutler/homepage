@@ -3,7 +3,6 @@ path: /
 title: Ticketbutler
 
 sections:
-
   - type: navbar
     item1: Home
     item2: Futures
@@ -57,5 +56,4 @@ sections:
     item2: Tearms of service
     item3: hello@ticketButler.io
     item4: "2018 ticketButler IVS | CVR: 38404687"
-    
 ---

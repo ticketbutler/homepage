@@ -143,7 +143,7 @@ const RightDiv = styled.div`
 const Footer = ({item1, item2, item3, item4}) => (
 
     <FooterTag>
-        <LeftDiv>
+     <LeftDiv>
             <a href="#" className="first-child"><span>{item1}</span></a>
             <a href="#" className="second-child"><span>{item2}</span></a>
         </LeftDiv>
@@ -151,7 +151,7 @@ const Footer = ({item1, item2, item3, item4}) => (
         <RightDiv>
             <span id="email">{item3}</span>
             <span id="from">{item4}</span>
-        </RightDiv>
+        </RightDiv> 
         
         <div className="clear-fix"></div>
         <style jsx>{`
