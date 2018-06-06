@@ -30,7 +30,7 @@ const Logo = styled.div`
       float:left;
       width: 127px;
       margin-left: 40px;
-      line-height: 60px;
+      line-height: 80px;
       font-size: 20px;
       
       
@@ -57,6 +57,8 @@ const Navbar = styled.div`
     position: absolute;
     top: 0;  
     z-index: 100;
+    height: 80px;
+    padding: 0px;
   }
 
   @media (max-width: 350px) {
@@ -137,7 +139,7 @@ const Nav = styled.nav`
         
         height: 60px;
         text-align: left;
-        margin-top: 60px;
+        margin-top: 80px;
         display: block;
         transform: translateX(0px);
         transition: transform .3s;
@@ -244,7 +246,7 @@ const NavBars = styled.div`
     padding:5px 7px;
     border-radius: 25px;
     position: relative;
-    margin-top: 11px;
+    margin-top: 21px;
     &:hover {
       cursor: pointer;
       opacity: .85;
@@ -289,7 +291,7 @@ const NavBars = styled.div`
   }
 `;
 
-const LoginBtn = styled.div`
+const Login_Lang = styled.div`
     width: 20%;
     display: inline-block;
     text-align: center;
@@ -299,7 +301,9 @@ const LoginBtn = styled.div`
     text-align: center;
     margin-top: 28px;
     margin-right: 0px;
- 
+    div.language{
+      display:none;
+    }
     > a {
       text-decoration:none;   
       color: #FFFFFF;	
@@ -346,12 +350,12 @@ const LoginBtn = styled.div`
   @media (max-width: 1080px) {
     margin-top: 0px;
     width: 100px;
-    margin-right: 30px;
+    margin-right: 80px;
     float: right;
         > a {
           border: none;
           color: #fff;
-          margin-top: 15px;
+          margin-top: 25px;
           height: 30px;
           width: auto;	
           margin-right: 25px;
@@ -421,14 +425,19 @@ const LoginBtn = styled.div`
                   <li><Scrollchor to="" className="nav-link">{item4}</Scrollchor></li>
                   <li><Scrollchor to="" className="nav-link">{item5}</Scrollchor></li>
                   <li><Scrollchor animate={{offset: 20, duration: 600}} to="#contact" className="nav-link">{item6}</Scrollchor></li>
-                  <div id="lang">
-                    <img id="dk_flag" src={require('../img/dk.jpg')}></img>
-                    <img id="en_flag" src={require('../img/en.png')}></img>
-                  </div>
                 </ul>
-                <div className="clear-fix"></div> 
             </Nav>
-            <LoginBtn id="navbar_login_btn"><a href="#"><span>Login</span></a></LoginBtn>  
+            <Login_Lang id="navbar_login_btn">
+              <div className="language">
+                <span id="Lang">Danish</span>
+                <ul>
+                  <li><span>English</span></li>
+                </ul>
+              </div>
+              <a href="#"><span>Login</span></a>
+            </Login_Lang>  
+            <div className="clear-fix"></div> 
+            
         <style jsx>{`
 
               * {
