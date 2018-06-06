@@ -1,5 +1,0 @@
----
-title: Somewhere
-path: /
----
-
