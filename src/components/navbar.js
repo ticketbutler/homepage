@@ -420,7 +420,7 @@ const Login_Lang = styled.div`
                 <div className="bar3"></div>
               </NavBars>
                 <ul id="ulNav">
-                  {/* {items.map(item => <li><a href={item.path} className="nav-link" animate={{offset: 20, duration: 600}} >{item.label}</a> </li>)} */}
+                  {items.map(item => <li><a href={item.path} className="nav-link" animate={{offset: 20, duration: 600}} >{item.label}</a> </li>)}
                 </ul>
             </Nav>
             <Login_Lang id="navbar_login_btn">
