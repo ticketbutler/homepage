@@ -48,7 +48,6 @@ collections:
           - { name: adress, label: Adress }
           - { name: phone, label: phone Number }
           - { name: support, label: General Support }
-          
         
   - name: pages
     label: Pages

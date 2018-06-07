@@ -1,78 +1,76 @@
 
 const path = require("path");
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
-
-  return new Promise((resolve, reject) => {
-    let Component = path.resolve("./src/pages/cms_page.js");
-    resolve(
-      graphql(`
-      query IndexQuery {
-        Pages: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/pages/"}}) {
-          edges {
-            node {
-              frontmatter {
-                title
-                path
-                sections {
-                  type
-                  heading
-                  text
-                  image
-                  button_text
-                }
-              }
-            }
-          }
-        }
-        TopMenu: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/top-menu/"}}) {
-          edges {
-            node {
-              frontmatter {
-                title
-                path
-                items {
-                  path
-                  label
-                }
-              }
-            }
-          }
-        }
-        FooterMenu: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/footer-menu/"}}) {
-          edges {
-            node {
-              frontmatter {
-                title
-                path
-                items {
-                  path
-                  label
-                }
-              }
-            }
-          }
-        }
-        Contact: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/contact/"}}) {
-          edges {
-            node {
-              frontmatter {
-                title
-                path
-                items {  
-                  adress
-                  phone
-                  support
-                  
-                }
-              }
-            }
+const query = `query IndexQuery {
+  Pages: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/pages/"}}) {
+    edges {
+      node {
+        frontmatter {
+          title
+          path
+          sections {
+            type
+            heading
+            text
+            image
+            button_text
           }
         }
       }
-      `).then(res => {
-        if (res.errors || res.messages) {
+    }
+  }
+  TopMenu: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/top-menu/"}}) {
+    edges {
+      node {
+        frontmatter {
+          title
+          path
+          items {
+            path
+            label
+          }
+        }
+      }
+    }
+  }
+  FooterMenu: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/footer-menu/"}}) {
+    edges {
+      node {
+        frontmatter {
+          title
+          path
+          items {
+            path
+            label
+          }
+        }
+      }
+    }
+  }
+  Contact: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/contact/"}}) {
+    edges {
+      node {
+        frontmatter {
+          title
+          path
+          items {  
+            adress
+            phone
+            support
+          }
+        }
+      }
+    }
+  }
+}`;
+
+exports.createPages = ({ boundActionCreators, graphql }) => {
+  const { createPage } = boundActionCreators;
+  return new Promise((resolve, reject) => {
+    let Component = path.resolve("./src/pages/cms_page.js");
+    resolve(
+      graphql(query).then(res => {
+        if (res.errors || res.messages) { 
           reject(res.errors + " " + res.messages);
         }
         let { Pages, TopMenu, FooterMenu, Contact } = res.data;
@@ -89,6 +87,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               layout: {
                 TopMenu: TopMenu.edges[0].node.frontmatter.items,
                 FooterMenu: FooterMenu.edges[0].node.frontmatter.items,
+                Contact: Contact.edges[0].node.frontmatter,
               }
               
             }
