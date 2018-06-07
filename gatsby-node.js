@@ -79,11 +79,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             path: node.frontmatter.path,
             component: Component,
             layout: null,
-            
             context: {
               sections: node.frontmatter.sections,
-              
-              layout:{
+              layout: {
                 TopMenu: TopMenu.edges[0].node.frontmatter.items,
                 FooterMenu: FooterMenu.edges[0].node.frontmatter.items,
                 Contact: Contact.edges[0].node.frontmatter.items,
