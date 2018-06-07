@@ -1,4 +1,3 @@
-
 const path = require("path");
 
 const query = `query IndexQuery {
@@ -53,11 +52,9 @@ const query = `query IndexQuery {
         frontmatter {
           title
           path
-          items {  
-            address
-            phone
-            support
-          }
+          address
+          phone
+          support
         }
       }
     }
@@ -70,7 +67,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     let Component = path.resolve("./src/pages/cms_page.js");
     resolve(
       graphql(query).then(res => {
-        if (res.errors || res.messages) { 
+        if (res.errors || res.messages) {
           reject(res.errors + " " + res.messages);
         }
         let { Pages, TopMenu, FooterMenu, Contact } = res.data;
@@ -84,7 +81,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               layout: {
                 TopMenu: TopMenu.edges[0].node.frontmatter.items,
                 FooterMenu: FooterMenu.edges[0].node.frontmatter.items,
-                Contact: Contact.edges[0].node.frontmatter.items,
+                Contact: Contact.edges[0].node.frontmatter.items
               }
             }
           });
