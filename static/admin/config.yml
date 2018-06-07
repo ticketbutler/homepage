@@ -41,13 +41,9 @@ collections:
     fields:
       - { name: title, label: Title }
       - { name: path, label: Path }
-      - name: items
-        label: Items
-        widget: list
-        fields:
-          - { name: address, label: Address }
-          - { name: phone, label: phone Number }
-          - { name: support, label: General Support }
+      - { name: address, label: Address }
+      - { name: phone, label: phone Number }
+      - { name: support, label: General Support }
         
   - name: pages
     label: Pages
