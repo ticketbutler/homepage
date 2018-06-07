@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/navbar";
-import Contact_page from "../components/Contact";
+import Contact_page from "../components/contact";
 import Footer from "../components/footer";
 import "./index.css";
 
