@@ -2,8 +2,8 @@
 title: contact
 path: contact
 items: 
-  - phone: Home
-  - adress: Home
+  - address: Lundevej 20
+  - phone: +45 2134567
   - support: Something
 ---
 

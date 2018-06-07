@@ -6,6 +6,7 @@ import "./index.css";
 export const Layout = ({ children, TopMenu, FooterMenu }) => (
   <div>
     <Navbar items={TopMenu} />
+    {console.log(TopMenu)}
     {typeof children === "function" ? children() : children}
 
     <Footer items={FooterMenu}/>

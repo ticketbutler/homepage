@@ -1,5 +1,4 @@
 ---
-
 title: Navbar
 path: main
 items: 
@@ -13,6 +12,5 @@ items:
     path: /
   - label: Contact
     path: '#contact'
-
 ---
 

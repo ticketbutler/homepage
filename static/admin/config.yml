@@ -45,7 +45,7 @@ collections:
         label: Items
         widget: list
         fields:
-          - { name: adress, label: Adress }
+          - { name: address, label: Address }
           - { name: phone, label: phone Number }
           - { name: support, label: General Support }
         

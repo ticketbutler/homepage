@@ -54,7 +54,7 @@ const query = `query IndexQuery {
           title
           path
           items {  
-            adress
+            address
             phone
             support
           }
@@ -82,14 +82,12 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             
             context: {
               sections: node.frontmatter.sections,
-              items: node.frontmatter.items,
               
-              layout: {
+              layout:{
                 TopMenu: TopMenu.edges[0].node.frontmatter.items,
                 FooterMenu: FooterMenu.edges[0].node.frontmatter.items,
-                Contact: Contact.edges[0].node.frontmatter,
+                Contact: Contact.edges[0].node.frontmatter.items,
               }
-              
             }
           });
         });
