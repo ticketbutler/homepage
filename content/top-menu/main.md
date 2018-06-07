@@ -2,7 +2,7 @@
 title: Navbar
 path: main
 items:
-  - label: Hi
+  - label: HOME
     path: /
   - label: I
     path: /
