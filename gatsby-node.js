@@ -81,7 +81,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               layout: {
                 TopMenu: TopMenu.edges[0].node.frontmatter.items,
                 FooterMenu: FooterMenu.edges[0].node.frontmatter.items,
-                Contact: Contact.edges[0].node.frontmatter.items
+                Contact: Contact.edges[0].node.frontmatter
               }
             }
           });

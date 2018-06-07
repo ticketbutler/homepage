@@ -1,8 +1,8 @@
 ---
 title: contact
 path: contact
-address: Lundevej 20
-phone: +45 2134567
-support: Something
+address: Porcelænshaven 26, 2000 Frederiksberg
+phone: +45 89 80 12 80
+support: Support@ticketbutler.io
 ---
 

@@ -39,11 +39,11 @@ collections:
     folder: content/contact
     create: true
     fields:
-      - { name: title, label: Title }
-      - { name: path, label: Path }
-      - { name: address, label: Address }
-      - { name: phone, label: phone Number }
-      - { name: support, label: General Support }
+      - { name: title, label: Title, required: false }
+      - { name: path, label: Path, required: false }
+      - { name: address, label: Address, required: false }
+      - { name: phone, label: phone Number, required: false }
+      - { name: support, label: General Support, required: false }
         
   - name: pages
     label: Pages
@@ -67,7 +67,6 @@ collections:
               - { label: Centerd Image Tall, value: tall_centered_future }
               - { label: Image Right Second Style, value: future_image_right_second }
               - { label: Layer Image, value: future_layers }
-              - { label: Contact Page, value: contact }
 
           - { name: heading, label: Heading, required: false }
           - { name: text, label: Text, required: false }

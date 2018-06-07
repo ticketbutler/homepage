@@ -329,9 +329,10 @@ const RightBox = styled.div`
     }
 `;
 
-const Contact_page = ({ items, address,phone, support }) => (
+const Contact_page = ({items}) => (
     
     <Section id="contact">
+
         <div className="container">
             <LeftBox className="left-box contact">
                 <h3>Contact US!</h3>
@@ -360,18 +361,18 @@ const Contact_page = ({ items, address,phone, support }) => (
                         <li>
                             <i className="fa fa-map-marker"></i>
                             <span>Address</span>
-                            <span id="address"> {address}</span>
+                            <span id="address"> {items.address}</span>
                             </li>
                         <li>
                             <i className="fa fa-phone"></i>
                             <span>Phone</span>
-                            <span id="phone">{phone}</span>
+                            <span id="phone">{items.phone}</span>
     
                         </li>
                         <li>
                             <i className="fa fa-envelope"></i>
                             <span>General soppurt</span>
-                            <span id="support">{support}</span>
+                            <span id="support">{items.support}</span>
                         </li>
                     </ul>
                 </div>
