@@ -1,16 +1,16 @@
 ---
 title: Navbar
 path: main
-items: 
-  - label: Home
+items:
+  - label: Hi
     path: /
-  - label: About
+  - label: I
     path: /
-  - label: Future
+  - label: am
     path: /
-  - label: More
+  - label: Done
     path: /
-  - label: Contact
+  - label: Hora
     path: '#contact'
 ---
 
