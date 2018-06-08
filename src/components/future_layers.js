@@ -100,7 +100,7 @@ const SectionImage = styled.div`
   @media (max-width: 320px) {
     > img {
       position: absolute;
-      top: -80px;
+      top: -70px;
     }
   }
 `;
@@ -118,7 +118,7 @@ const SectionContent = styled.div`
     // transform: translateX(900px);
     // opacity: 0;
     transition: all .3s ease-out;
-    > h3 {
+    > h1 {
         
         width: 100%;	
         color: #333F52;	
@@ -128,7 +128,7 @@ const SectionContent = styled.div`
         line-height: 70px;
     }
 
-    > p {
+    > h3 {
     
         width: 100%;	
         color: #6C7582;	
@@ -136,6 +136,7 @@ const SectionContent = styled.div`
         font-size: 27px;	
         letter-spacing: -0.22px;	
         line-height: 38px;
+        font-weight: 500;
         margin-bottom: 50px;
     }
 
@@ -152,7 +153,7 @@ const SectionContent = styled.div`
         background: linear-gradient(90deg, #28D8A7 0%, #1DC9CA 100%);
         text-decoration:none;
         text-align: center;
-        line-height: 56px;
+        line-height: 55px;
         position: relative;
         transition: all .3s;
         &:hover {
@@ -178,7 +179,7 @@ const SectionContent = styled.div`
             &::after {
               content: '\00BB';
               opacity: 1;
-              font-size: 25px;
+              font-size: 24px;
               opacity: 0;
               margin-left: -8px;
               z-index: 10;
@@ -194,14 +195,14 @@ const SectionContent = styled.div`
     //     width: 40%;	
     //     height: auto;
         
-    //     > h3 {
+    //     > h1 {
             
     //         font-size: 55px;
     //         line-height: 60px;
       
     //     }
 
-    //     > p {
+    //     > h3 {
     //         font-size: 25px;	
     //         line-height: 33px;
     //     }
@@ -210,13 +211,13 @@ const SectionContent = styled.div`
     @media (max-width: 1120px) {
             height: auto;
         
-        > h3 {
+        > h1 {
             font-size: 50px;
             line-height: 50px;
             
         }
 
-        > p {
+        > h3 {
             font-size: 22px;	
             line-height: 30px;
         }
@@ -231,7 +232,7 @@ const SectionContent = styled.div`
         margin-left: 50%;
         transform: translateX(-50%);
        
-        > h3 {
+        > h1 {
             width: 100%;
             font-size: 55px;
             line-height: 50px;
@@ -241,7 +242,7 @@ const SectionContent = styled.div`
             
         }
 
-        > p {
+        > h3 {
             width: 100%;
             font-size: 22px;	
             line-height: 34px;
@@ -266,11 +267,11 @@ const SectionContent = styled.div`
 
         padding: 80px;
 
-        > h3 {
+        > h1 {
             font-size: 45px;  
         }
 
-        > p {
+        > h3 {
             font-size: 20px;
             line-height: 32px;	 
         }
@@ -291,13 +292,13 @@ const SectionContent = styled.div`
 
         padding:60px 50px;
 
-        > h3 {
+        > h1 {
             font-size: 34px;
             line-height: 38px;	 
               
         }
 
-        > p {
+        > h3 {
             font-size: 17px;
             line-height: 33px;	 
             	 
@@ -331,23 +332,26 @@ const SectionContent = styled.div`
         
 
 
-        > h3 {
+        > h1 {
             font-size: 25px; 
             line-height: 32px;	 
              
         }
 
-        > p {
+        > h3 {
             font-size: 14px;
             line-height: 20px;	 
         }  
         
         > a{
+          width: 170px;
+          height: 45px;
+          line-height: 42px;
             > span {
               font-size: 12px;
               &::after{
                 font-size: 16px;
-                line-height: 49px;
+                line-height: 42px;
               }
             }
           } 
@@ -446,16 +450,16 @@ const DivShape = styled.div`
 //     })
 //   })
 
-const FutureLayers = ({ heading, text, button_text, image }) => (
+const FutureLayers = ({ heading, text, button_text, image, button_link }) => (
   <Section className="section-6">
     <SectionImage className="image">
       <img className="content_image" src={image} />
     </SectionImage>
 
     <SectionContent id="section-content">
-      <h3>{heading}</h3>
-      <p>{text}</p>
-      <a>
+      <h1>{heading}</h1>
+      <h3>{text}</h3>
+      <a href={button_link}>
         <span>{button_text}</span>
       </a>
 

@@ -4,7 +4,7 @@ import React from "react";
 import styled from "styled-components";
 import navbarEffect from "../js/navbarEffect";
 // import Scrollchor from "react-scrollchor";
-import "../js/navItems_smallScreent"
+import "../js/navItems_smallScreent";
 
 const Logo = styled.div`
   width: 20%;
@@ -40,7 +40,6 @@ const Logo = styled.div`
     font-size: 18px;
   }
 
-  
   @media (max-width: 350px) {
     width: auto;
     margin-left: 0px;
@@ -422,15 +421,26 @@ const NavbarSection = ({ items }) => {
           <div className="bar3" />
         </NavBars>
         <ul id="ulNav">
+      
           {items.map(item => (
-            <li >
+            <li onClick={() => {
+              document.getElementById("ulNav").classList.remove("active");
+              document.getElementById("navActive_back").classList.remove("NavbarClicked-background");
+              document.getElementById("bars").classList.toggle("clicked");
+
+              // if(item.path == "#contact"){
+              //   document.getElementsByTagName("a").animate({offset: 200, duration: 2000 })
+              // }
+              
+            }
+            } >
               <a
                 href={item.path}
                 className="nav-link"
                 animate={{ offset: 20, duration: 600 }}
               >
                 {item.label}
-              </a>{" "}
+              </a>
             </li>
           ))}
         </ul>

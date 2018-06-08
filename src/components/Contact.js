@@ -16,10 +16,12 @@ const LeftBox = styled.div`
     float: left;
     padding: 110px;
 
-    h3 {
+    h1 {
         float: left;
         margin-left: 0px;
         margin-bottom: 50px;
+        font-size: 50px;
+
     }
     > form {
         max-width: 100%;
@@ -96,13 +98,19 @@ const LeftBox = styled.div`
         }
     }
     @media (max-width: 1080px) {
+        
         padding: 110px 40px;
+        h1 {
+           
+            font-size: 40px;
+        }
     }
     @media (max-width: 768px) { 
         display: block;
         width: 100%;
-        h3 {
+        h1 {
             float: none;
+            font-size: 40px;
         }
         > form {
             >ul {
@@ -148,25 +156,18 @@ const LeftBox = styled.div`
 `;
 
 const Button = styled.button`
-width: 40%;
-margin-top: 60px;
+margin-top: 40px;
 float: left;
-margin-left: 0%;
-transform: translateX(0%);
-
-height: 45px;
+height: 50px;
 width: 200px;
 display: block;
 float:left;
 border-radius: 29px;
-margin-right: 50%;
-transform: translateX(50%);	
+
 border: 0;
-// margin: 0 auto;
 background: linear-gradient(90deg, #326DE9 0%, #7E52E8 100%);
 text-decoration:none;
 text-align: center;
-line-height: 41px;
 position: relative;
 transition: all .3s;
     &:hover {
@@ -198,6 +199,46 @@ transition: all .3s;
         color: #FFF;
         transition: 0.3s;
         }
+    }
+
+    @media (max-width: 920px) { 
+        margin-left: 50%;
+        transform:translateX(-50%);
+        
+    }
+    @media (max-width: 768px) { 
+        width: 190px;
+        >span {
+            font-size: 15px;
+            line-height: 40px;
+            &::after {
+                font-size: 18px;
+                line-height: 39px;
+        }
+        }
+    }
+    @media (max-width: 600px) { 
+        >span {
+            font-size: 14px;
+            line-height: 40px;
+            &::after {
+                font-size: 18px;
+                line-height: 39px;
+        }
+        
+    }
+    @media (max-width: 376px) { 
+        width: 180px;
+
+       height: 45px;
+       >span {
+        font-size: 12px;
+        line-height: 40px;
+        &::after {
+            font-size: 16px;
+            line-height: 39px;
+    }
+        
     }
 `;
 
@@ -256,6 +297,7 @@ const RightBox = styled.div`
         padding: 110px 40px;
     }
     @media (max-width: 768px) { 
+        height: auto;
         display: block;
         width: 100%;   
         height: 550px;
@@ -276,7 +318,7 @@ const RightBox = styled.div`
             }
             i {
                float:left;
-               font-size: 16px;
+               font-size: 15px;
                width: 40px;
                height: 30px;
                width: 20%;
@@ -285,10 +327,10 @@ const RightBox = styled.div`
             }
             span {
                 width: 80%
-                font-size: 16px;
+                font-size: 14px;
                 
                 &#address,&#phone, &#support{
-                    font-size: 13px;
+                    font-size: 12px;
                 }
                 }	
             }
@@ -302,8 +344,14 @@ const Contact_page = ({ items }) => (
   <Section id="contact">
     <div className="container">
       <LeftBox className="left-box contact">
-        <h3>Contact US!</h3>
-        <form className="contact-form" name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+        <h1>Contact US!</h1>
+        <form
+          className="contact-form"
+          name="contact-form"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
           <ul>
             <li>
               <input
@@ -320,7 +368,7 @@ const Contact_page = ({ items }) => (
               />
             </li>
             <li id="message-field">
-              <textarea name="message-field" placeholder="Message" />
+              <textarea name="message" placeholder="Message" />
             </li>
           </ul>
           <Button>

@@ -39,7 +39,7 @@ const ContentDiv = styled.div`
         text-align: center;
         text-decoration: none;
         
-        span {
+        > span {
             color: #333F52;
             font-family: Hind;
             letter-spacing: .5px;
@@ -49,6 +49,18 @@ const ContentDiv = styled.div`
                 opacity: .85;
             }
            
+        }
+        &:last-child{
+            
+        > span {
+            color: rgba(0,0,0,.5);
+            font-family: Hind;
+            letter-spacing: .5px;
+            font-size: 10px;
+            line-height: 0px;
+           
+           
+        }
         }
     }
     @media (max-width: 1200px) { 
@@ -99,7 +111,7 @@ const Footer = ({ items }) => (
   <FooterTag>
     <ContentDiv>
       {items.map(item => (
-        <a key="item" href={item.path}>
+        <a href={item.path}>
           <span>{item.label}</span>
         </a>
       ))}

@@ -2,10 +2,13 @@
 path: /
 title: Ticketbutler
 sections:
-  - button_text: 'Get started, it''s free!'
+  - type: header 
     heading: A single platform to manage and grow your event
     text: 'We need some more text here, just a punch line'
-    type: header
+    button_text: 'Get started, it''s free!'
+    button_link: '/'
+
+
 
   - heading: Lorem Ipsum sit amet
     image: img/img-7.jpg
@@ -15,6 +18,7 @@ sections:
     type: future_image_right
 
   - button_text: Create an event
+    button_link: '/'
     heading: Pork chop capicola shoulder doner ball
     image: img/mac.png
     text: >-
@@ -24,6 +28,7 @@ sections:
     type: future_image_left
 
   - button_text: Do Somthing Now
+    button_link: '/'
     heading: Easy to get going easy to use
     image: img/img-3.jpg
     text: >-
@@ -39,6 +44,7 @@ sections:
     type: future_image_right_second
 
   - button_text: Create an event
+    button_link: '/'
     heading: Pork chop capicola shoulder doner ball
     image: img/img-6.jpg
     text: >-

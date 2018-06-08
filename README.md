@@ -2,24 +2,22 @@
     Ticket Butler
 
 <!-- for running the app  -->
-# for Running the website you should fist have the code in your computer then with commendLine or git går to the folder and run this command.
-
+# in cmd for running the app, you can also see in gatsby-node.js scripts start
     Gatsby develop  
 
 <!-- go ro you browser and copy this in to it  -->
-# when you done fist step then copy this command and past it to you brower url, haha you did it :)))))))))))
+# Open In your Browser
     localhost:8000
 
 <!-- For building the app -->
 # this is not so important, but for building you have to use these command
+
     gatsby build or npm run build
 
-__________________________________________________________________________________________________________
 
 ## Marketing
 
-#for edditing the webpage run this in you browser url
-
+#for edditing the webpage run this in you browser urlss
 # for Published version
     websitename/admin/
 

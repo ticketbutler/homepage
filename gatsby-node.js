@@ -13,6 +13,7 @@ const query = `query IndexQuery {
             text
             image
             button_text
+            button_link
           }
         }
       }

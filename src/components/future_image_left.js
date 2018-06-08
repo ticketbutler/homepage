@@ -103,7 +103,7 @@ const RightBox = styled.div`
   float: right;
   padding-right: 0px;
 
-  > h3 {
+  > h1 {
     // width: 600px;
     padding-left: 25px;
     color: #333f52;
@@ -117,8 +117,9 @@ const RightBox = styled.div`
     // float: right;
     z-index: 2;
   }
-  > p {
+  > h3 {
     color: #6c7582;
+    font-weight: 500;
     font-family: Montserrat;
     font-size: 27px;
     letter-spacing: -0.22px;
@@ -144,7 +145,7 @@ const RightBox = styled.div`
     background: linear-gradient(90deg, #28d8a7 0%, #1dc9ca 100%);
     text-decoration: none;
     text-align: center;
-    line-height: 56px;
+    line-height: 55px;
     position: relative;
     transition: all 0.3s;
     &:hover {
@@ -180,22 +181,22 @@ const RightBox = styled.div`
   }
 
   @media (max-width: 1400px) {
-    > h3 {
+    > h1 {
       font-size: 50px;
       line-height: 60px;
     }
-    > p {
+    > h3 {
       font-size: 22px;
       line-height: 33px;
     }
   }
 
   @media (max-width: 1160px) {
-    > h3 {
+    > h1 {
       font-size: 40px;
       line-height: 50px;
     }
-    > p {
+    > h3 {
       font-size: 20px;
       line-height: 30px;
     }
@@ -204,7 +205,7 @@ const RightBox = styled.div`
   @media (max-width: 1080px) {
     display: block;
     width: 100%;
-    > h3 {
+    > h1 {
       display: block;
       font-size: 55px;
       line-height: 60px;
@@ -214,7 +215,7 @@ const RightBox = styled.div`
       margin-left: 50%;
       transform: translateX(-50%);
     }
-    > p {
+    > h3 {
       width: 70%;
       padding-left: 0;
       font-size: 22px;
@@ -238,12 +239,12 @@ const RightBox = styled.div`
   @media (max-width: 768px) {
     margin-top: 40px;
 
-    > h3 {
+    > h1 {
       font-size: 45px;
       line-hight: 50px;
     }
 
-    > p {
+    > h3 {
       width: 90%;
 
       font-size: 20px;
@@ -258,28 +259,28 @@ const RightBox = styled.div`
   @media (max-width: 600px) {
     padding: 0 40px;
 
-    > h3 {
+    > h1 {
       width: 100%;
       margin-top: 0px;
       font-size: 35px;
       margin-bottom: 10px;
     }
 
-    > p {
+    > h3 {
       width: 100%;
       font-size: 16px;
       line-height: 25px;
     }
     > a {
-      width: 180px;
+      width: 200px;
       height: 50px;
-      line-height: 47px;
+      line-height: 45px;
 
       > span {
         font-size: 14px;
         &::after {
           font-size: 20px;
-          line-height: 48px;
+          line-height: 45px;
         }
       }
     }
@@ -289,23 +290,26 @@ const RightBox = styled.div`
     padding: 0 20px;
     margin-top: 0;
 
-    > h3 {
+    > h1 {
       margin-top: -10px;
       font-size: 25px;
       line-height: 32px;
     }
 
-    > p {
+    > h3 {
       font-size: 14px;
       line-height: 20px;
       margin-bottom: 25px;
     }
     > a {
+      width: 190px;
+      height: 45px;
+      line-height: 42px;
       > span {
         font-size: 12px;
         &::after {
           font-size: 16px;
-          line-height: 49px;
+          line-height: 42px;
         }
       }
     }
@@ -538,7 +542,13 @@ const CircleShape = styled.div`
 //     })
 //   })
 
-const FutureImageIeft = ({ heading, text, button_text, image }) => (
+const FutureImageIeft = ({
+  heading,
+  text,
+  button_text,
+  image,
+  button_link
+}) => (
   <Section className="section-3 container">
     <LeftBox id="left-box">
       <figure>
@@ -547,9 +557,9 @@ const FutureImageIeft = ({ heading, text, button_text, image }) => (
       </figure>
     </LeftBox>
     <RightBox>
-      <h3>{heading}</h3>
-      <p>{text}</p>
-      <a href="#">
+      <h1>{heading}</h1>
+      <h3>{text}</h3>
+      <a href={button_link}>
         <span>{button_text}</span>
       </a>
       <SquareShape_1>

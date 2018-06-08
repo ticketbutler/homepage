@@ -9,8 +9,7 @@ items:
     path: /
   - label: hello@ticketbutler.io
     path: /
-  - label: Made With Love In Denamrk
+  - label: '2018 TicketButler | VS CVR: 384046870'
     path: /
 
 ---
-

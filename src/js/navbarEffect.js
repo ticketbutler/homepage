@@ -8,22 +8,12 @@ export default () => {
 
   // if nav bars chlicked do these
   if (nav_Bars.classList.contains("clicked")) {
-
     ulElement.classList.remove("!active");
     ulElement.classList.add("active");
 
     // Add dark background to the page
     backDiv.classList.add("NavbarClicked-background");
 
-    let liELement = document.querySelectorAll("li");
-    console.log(liELement);
-    liELement.forEach(item => {
-      console.log(item);
-        item.addEventListener("Click", () => {
-          console.log(liELement);
-        })
-    });
-    
 
     // other whise do these
   } else {
@@ -34,4 +24,3 @@ export default () => {
     backDiv.classList.remove("NavbarClicked-background");
   }
 };
-

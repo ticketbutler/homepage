@@ -35,7 +35,7 @@ const BlueBackground = styled.div`
 `;
 
 const Content = styled.div`
-  > h3 {
+  > h1 {
     width: 566px;
     display: block;
     margin: 0 auto;
@@ -49,7 +49,7 @@ const Content = styled.div`
     margin-bottom: 20px;
   }
 
-  > p {
+  > h3 {
     width: 514px;
     display: block;
     margin: 0 auto;
@@ -58,6 +58,7 @@ const Content = styled.div`
     font-size: 27px;
     letter-spacing: -0.22px;
     line-height: 38px;
+    font-weight: 500;
     text-align: center;
   }
 
@@ -83,7 +84,7 @@ const Content = styled.div`
     text-align: center;
     text-decoration: none;
     position: relative;
-    line-height: 56px;
+    line-height: 55px;
     transition: all 0.3s;
     &:hover {
       // transform: scale(1.05);
@@ -128,12 +129,12 @@ const Content = styled.div`
   }
 
   @media (max-width: 768px) {
-    > h3 {
+    > h1 {
       width: 100%;
       font-size: 45px;
       line-hight: 50px;
     }
-    > p {
+    > h3 {
       width: 100%;
       font-size: 20px;
     }
@@ -145,12 +146,12 @@ const Content = styled.div`
   }
 
   @media (max-width: 600px) {
-    > h3 {
+    > h1 {
       margin-top: 20px;
 
       font-size: 36px;
     }
-    > p {
+    > h3 {
       font-size: 18px;
     }
     > a {
@@ -169,26 +170,26 @@ const Content = styled.div`
   }
 
   @media (max-width: 376px) {
-    > h3 {
+    > h1 {
       margin-top: 10px;
       font-size: 25px;
       line-height: 32px;
     }
-    > p {
+    > h3 {
       font-size: 14px;
       line-height: 20px;
     }
 
     > a {
-      width: 180px;
-      height: 50px;
-      line-height: 50px;
-
+      width: 190px;
+      height: 45px;
+      line-height: 43px;
+      margin-top: 35px;
       > span {
         font-size: 12px;
         &::after {
           font-size: 16px;
-          line-height: 49px;
+          line-height: 42px;
         }
       }
     }
@@ -353,14 +354,20 @@ const TriangleShape = styled.div`
     }
   }
 `;
-const TallCenteredFuture = ({ heading, text, button_text, image }) => (
+const TallCenteredFuture = ({
+  heading,
+  text,
+  button_text,
+  image,
+  button_link
+}) => (
   <Section className="section-4">
     <BlueBackground />
     <Content>
-      <h3>{heading}</h3>
-      <p>{text}</p>
+      <h1>{heading}</h1>
+      <h3>{text}</h3>
       <img src={image} />
-      <a href="#">
+      <a href={button_link}>
         <span>{button_text}</span>
       </a>
     </Content>

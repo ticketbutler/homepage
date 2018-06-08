@@ -34,7 +34,7 @@ const LeftBox = styled.div`
   position: relative;
   padding-right: 30px;
 
-  > h3 {
+  > h1 {
     width: 400px;
     color: #333f52;
     font-family: Hind;
@@ -43,9 +43,10 @@ const LeftBox = styled.div`
     line-height: 70px;
   }
 
-  > p {
+  > h3 {
     width: 90%;
     color: #6c7582;
+    font-weight: 500;
     font-family: Montserrat;
     font-size: 27px;
     line-height: 38px;
@@ -54,24 +55,24 @@ const LeftBox = styled.div`
   }
 
   @media (max-width: 1400px) {
-    > h3 {
+    > h1 {
       font-size: 50px;
       line-height: 60px;
     }
 
-    > p {
+    > h3 {
       font-size: 22px;
       line-height: 33px;
     }
   }
 
   @media (max-width: 1160px) {
-    > h3 {
+    > h1 {
       font-size: 40px;
       line-height: 50px;
     }
 
-    > p {
+    > h3 {
       font-size: 20px;
       line-height: 30px;
     }
@@ -83,7 +84,7 @@ const LeftBox = styled.div`
     padding: 0 0px;
     margin-top: 40px;
 
-    > h3 {
+    > h1 {
       width: 80%;
       font-size: 55px;
       line-height: 60px;
@@ -92,7 +93,7 @@ const LeftBox = styled.div`
       transform: translateX(-50%);
     }
 
-    > p {
+    > h3 {
       width: 70%;
       margin-left: 50%;
       transform: translateX(-50%);
@@ -105,13 +106,13 @@ const LeftBox = styled.div`
   @media (max-width: 768px) {
     margin-top: 40px;
 
-    > h3 {
+    > h1 {
       width: 90%;
       font-size: 45px;
       line-hight: 50px;
     }
 
-    > p {
+    > h3 {
       width: 80%;
 
       font-size: 20px;
@@ -121,7 +122,7 @@ const LeftBox = styled.div`
   @media (max-width: 600px) {
     padding: 0 40px;
 
-    > h3 {
+    > h1 {
       width: 100%;
 
       margin-top: 0px;
@@ -129,7 +130,7 @@ const LeftBox = styled.div`
       margin-bottom: 10px;
     }
 
-    > p {
+    > h3 {
       width: 100%;
       font-size: 16px;
       line-height: 25px;
@@ -139,13 +140,13 @@ const LeftBox = styled.div`
   @media (max-width: 376px) {
     padding: 0 20px;
 
-    > h3 {
+    > h1 {
       margin-top: -10px;
       font-size: 25px;
       line-height: 32px;
     }
 
-    > p {
+    > h3 {
       font-size: 14px;
       line-height: 20px;
     }
@@ -322,8 +323,8 @@ const FutureImageRight = ({ heading, text, image }) => {
       </RightBox>
 
       <LeftBox>
-        <h3>{heading}</h3>
-        <p>{text}</p>
+        <h1>{heading}</h1>
+        <h3>{text}</h3>
       </LeftBox>
 
       <div className="clear-fix" />

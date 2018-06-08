@@ -88,7 +88,7 @@ const HeaderContent = styled.div`
     z-index: 0;
     width: 300px;
     height: 60px;
-    line-height: 58px;
+    line-height: 55px;
     text-decoration: none;
     color: #ffffff;
     font-family: Montserrat;
@@ -226,13 +226,14 @@ const HeaderContent = styled.div`
     }
 
     > a#header-btn {
-      width: 210px;
-      height: 50px;
+      width: 190px;
+      line-height: 42px;
+      height: 45px;
 
       > span {
-        font-size: 12px;
+        font-size: 11px;
         &::after {
-          font-size: 16px;
+          font-size: 14px;
         }
       }
     }
@@ -246,14 +247,14 @@ const HeaderContent = styled.div`
 //   })
 // })
 
-const Header = ({ heading, text, button_text }) => {
+const Header = ({ heading, text, button_text, button_link }) => {
   return (
     <HeaderTag id="header">
       <div id="navActive_back" />
       <HeaderContent className="header_content">
         <h1 id="title">{heading}</h1>
         <p id="description">{text}</p>
-        <a href="#" id="header-btn">
+        <a href={button_link} id="header-btn">
           <span>{button_text}</span>
         </a>
       </HeaderContent>
