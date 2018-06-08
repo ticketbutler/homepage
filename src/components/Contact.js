@@ -40,42 +40,60 @@ const LeftBox = styled.div`
                 min-height: 35px;
                 display: block;
                 width: 100%;
-                margin-bottom: 0px;
                 float:left;
                 margin-left: 50%;
                 transform: translateX(-50%);
-                > input {
-                    width: 400px;
-                    display: block;
-                    padding: 4px 10px;
-                    margin-bottom: 20px;
-                    border: 1px solid #CCC;
-                    border-radius: 4px;
-                    &::placeholder {
+                position: relative;
+
+                >label{
+                    padding-top: 15px;
+                    > input {
+                        width: 400px;
+                        display: block;
+                        padding: 0 15px;
+                        height: 40px;
+                        border: 1px solid #CCC;
+                        border-radius: 4px;
+                        position: relative;
+                        
+                        
+                    }
+                    input:focus ~ span.floating-label{
+                        font-size: 10px;
+                      
+                    }
+                    > span.floating-label {
+                        position: absolute;
+                        line-height: 40px;
+                        z-index: 100;
+                   
+                        left: 15px;
                         font-family: Montserrat;
                         font-size: 14px;
-                    }
+                        opacity: .85;
+                    
 
+                    }
                 }
+                
                 &#message-field {
                     display: block;
                     float: left;
                     width: 100%;
                     margin-left: 50%;
                     transform: translateX(-50%);
-                    > textarea{
-                        width: 400px;
-                        display:inline;
-                        float: left;
-                        height: 120px;
-                        padding: 4px 10px;
-                        border: 1px solid #CCC;
-                        border-radius: 4px;
-                        &::placeholder {
-                            font-family: Montserrat;
-                            font-size: 14px;
+                    >label{
+                        > textarea{
+                            width: 400px;
+                            display:inline;
+                            float: left;
+                            height: 120px;
+                            padding: 4px 15px;
+                            border: 1px solid #CCC;
+                            border-radius: 4px;
                         }
                     }
+                   
                 }
               
             }
@@ -85,14 +103,19 @@ const LeftBox = styled.div`
         > form {
             >ul {
                 > li {
+                    >label{
                     > input {
                         width: 100%;
                     }
+                }
                     &#message-field {
+                >label{
+
                         > textarea{
                             width: 100%;
                         }
                     }
+                }
                 }
             }
         }
@@ -116,14 +139,18 @@ const LeftBox = styled.div`
             >ul {
                 > li {
                     width: 400px;
+                    >label{
                     > input {
                         width: 400px;
                     }
+                }
                     &#message-field {
-                        width: 400px;                        
+                        width: 400px;   
+                        >label{                     
                         > textarea{
                             width: 400px;
                         }
+                    }
                     }
 
             }
@@ -133,21 +160,27 @@ const LeftBox = styled.div`
 
      @media (max-width: 500px) { 
         padding: 110px 30px;
-         
+        h1 {
+            float: none;
+            font-size: 30px;
+        }
         > form {
             >ul {
                 > li {
                     width: 100%;
+                >label{
                     
                     > input {
                         width: 100%;
-                    }
+                    }}
+                    
                     &#message-field {
                         width: 100%;
+                >label{
                         
                         > textarea{
                             width: 100%;
-                        }
+                        }}
                     }
                 }
             }
@@ -354,21 +387,29 @@ const Contact_page = ({ items }) => (
         >
           <ul>
             <li>
-              <input
-                type="text"
-                name="name"
-                id="align-left"
-                placeholder="Name"
-              />
+                <label>
+                <span className="floating-label">Your Name</span>
+                    <input
+                        type="text"
+                        name="name"
+                        id="align-left"
+                    />
+              </label>
+            </li>
+            <li>
+              <label>
+            <span className="floating-label">Your Email</span>
               <input
                 type="email"
                 name="email"
                 id="align-right"
-                placeholder="Email"
               />
+              </label>
             </li>
             <li id="message-field">
-              <textarea name="message" placeholder="Message" />
+             <label><span className="floating-label">Message</span>
+                 <textarea name="message" />
+              </label>
             </li>
           </ul>
           <Button>
