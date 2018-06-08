@@ -75,63 +75,7 @@ const LeftBox = styled.div`
                         }
                     }
                 }
-                
-
-                &#contact-btn{
-                    width: 40%;
-                    margin-top: 60px;
-                    float: left;
-                    margin-left: 0%;
-                    transform: translateX(0%);
-                        > a{
-                            height: 45px;
-                            width: 200px;
-                            display: block;
-                            float:left;
-                            border-radius: 29px;
-                            // margin-right: 50%;
-                            // transform: translateX(50%);	
-
-                            margin: 0 auto;
-                            background: linear-gradient(90deg, #326DE9 0%, #7E52E8 100%);
-                            text-decoration:none;
-                            text-align: center;
-                            line-height: 41px;
-                            position: relative;
-                            transition: all .3s;
-                            &:hover {
-                                // transform: scale(1.05);
-                                box-shadow: 0px 3px 20px -6px rgba(0,0,0,0.30);
-                            > span {
-                                &::after {
-                                opacity: 1;
-                                margin-left: 10px;
-                                }
-                                }
-                            }
-                        
-                            
-                            > span {
-                                color: #FFFFFF;	
-                                font-family: Montserrat;	
-                                font-size: 16px;
-                                font-weight: bold;	
-                                text-align: center;
-                            transition: all .3s;
-                                
-                                &::after {
-                                content: '\00BB';
-                                opacity: 1;
-                                font-size: 20px;
-                                opacity: 0;
-                                margin-left: -8px;
-                                z-index: 10;
-                                color: #FFF;
-                                transition: 0.3s;
-                                }
-                            }
-                        }
-                }
+              
             }
         }
     }
@@ -173,12 +117,7 @@ const LeftBox = styled.div`
                             width: 400px;
                         }
                     }
-                    &#contact-btn{
-                        width: auto;
-                        margin-top: 45px;
-                        margin-left: 50%;
-                        transform: translateX(-50%);
-                }
+
             }
         }
         
@@ -202,31 +141,64 @@ const LeftBox = styled.div`
                             width: 100%;
                         }
                     }
-                    &#contact-btn{
-                        width: auto;
-                        margin-top: 40px;
-                        float: left;
-                        margin-left: 50%;
-                        transform: translateX(-50%);
-                        > a{
-                            height: 42px;
-                            width: 165px;
-                            line-height: 38px;
-                            > span {
-                                font-size: 14px;
-                                &::after {
-                                font-size: 18px;
-                                }
-                            }
-                        }
-                    }
                 }
             }
         }  
  }
+`;
 
+const Button = styled.button`
+width: 40%;
+margin-top: 60px;
+float: left;
+margin-left: 0%;
+transform: translateX(0%);
 
- 
+height: 45px;
+width: 200px;
+display: block;
+float:left;
+border-radius: 29px;
+margin-right: 50%;
+transform: translateX(50%);	
+border: 0;
+// margin: 0 auto;
+background: linear-gradient(90deg, #326DE9 0%, #7E52E8 100%);
+text-decoration:none;
+text-align: center;
+line-height: 41px;
+position: relative;
+transition: all .3s;
+    &:hover {
+        box-shadow: 0px 3px 20px -6px rgba(0,0,0,0.30);
+    > span {
+            &::after {
+                opacity: 1;
+                margin-left: 10px;
+            }
+        }
+    }
+    
+        
+    > span {
+    color: #FFFFFF;	
+    font-family: Montserrat;	
+    font-size: 16px;
+    font-weight: bold;	
+    text-align: center;
+    transition: all .3s;
+
+        &::after {
+        content: '\00BB';
+        opacity: 1;
+        font-size: 20px;
+        opacity: 0;
+        margin-left: -8px;
+        z-index: 10;
+        color: #FFF;
+        transition: 0.3s;
+        }
+    }
 `;
 
 const RightBox = styled.div`
@@ -331,7 +303,6 @@ const Contact_page = ({ items }) => (
     <div className="container">
       <LeftBox className="left-box contact">
         <h3>Contact US!</h3>
-        {/* <h1>{items.map(item => item)}</h1> */}
         <form className="contact-form" name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
           <ul>
             <li>
@@ -351,12 +322,10 @@ const Contact_page = ({ items }) => (
             <li id="message-field">
               <textarea name="message-field" placeholder="Message" />
             </li>
-            <li id="contact-btn">
-              <a>
-                <span>Send Message</span>
-              </a>
-            </li>
           </ul>
+          <Button>
+            <span>Send Message</span>
+          </Button>
           <div className="clear-fix" />
         </form>
       </LeftBox>
