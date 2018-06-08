@@ -13,7 +13,7 @@ const components = [
   { Component: FutureImageIeft, id: "future_image_left" },
   { Component: TallCenteredFuture, id: "tall_centered_future" },
   { Component: FutureImageRightSecond, id: "future_image_right_second" },
-  { Component: FutureLayers, id: "future_layers" },
+  { Component: FutureLayers, id: "future_layers" }
 ];
 
 const CmsPage = ({ pathContext }) => (

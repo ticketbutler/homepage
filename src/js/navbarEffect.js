@@ -1,38 +1,37 @@
 // Bars Click ON Small Screen
-export default () => {    
-    let nav_Bars = document.getElementById("bars");
-    let ulElement = document.getElementById("ulNav");  
-    let backDiv = document.getElementById("navActive_back");
-  
-    nav_Bars.classList.toggle("clicked");
+export default () => {
+  let nav_Bars = document.getElementById("bars");
+  let ulElement = document.getElementById("ulNav");
+  let backDiv = document.getElementById("navActive_back");
+
+  nav_Bars.classList.toggle("clicked");
+
+  // if nav bars chlicked do these
+  if (nav_Bars.classList.contains("clicked")) {
+
+    ulElement.classList.remove("!active");
+    ulElement.classList.add("active");
+
+    // Add dark background to the page
+    backDiv.classList.add("NavbarClicked-background");
+
+    let liELement = document.querySelectorAll("li");
+    console.log(liELement);
+    liELement.forEach(item => {
+      console.log(item);
+        item.addEventListener("Click", () => {
+          console.log(liELement);
+        })
+    });
     
-    
-    if(nav_Bars.classList.contains("clicked")){
-      ulElement.classList.remove("!active");
-      ulElement.classList.add("active");
-  
-      
-      backDiv.classList.add("NavbarClicked-background");
-  
-      // document.getElementById("lang").style.display = "inline";
 
+    // other whise do these
+  } else {
+    ulElement.classList.add("!active");
+    ulElement.classList.remove("active");
 
-    let liElement = document.querySelectorAll("li");
-
-    console.log(liElement);
-
-    liElement[0].addEventListener("click", ()=> {
-      console.log(liElement)
-  })
-      
-    }
-    else {
-      ulElement.classList.add("!active");
-      ulElement.classList.remove("active");
-  
-      backDiv.classList.remove("NavbarClicked-background");
-  
-      // document.getElementById("lang").style.display = "none";
-      
-    }
+    // remove dark background to the page
+    backDiv.classList.remove("NavbarClicked-background");
   }
+};
+

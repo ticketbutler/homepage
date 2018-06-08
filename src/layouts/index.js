@@ -4,11 +4,16 @@ import Contact_page from "../components/Contact";
 import Footer from "../components/footer";
 import "./index.css";
 
-export const Layout = ({ children, TopMenu = [], FooterMenu = [], Contact= [], }) => (
+export const Layout = ({
+  children,
+  TopMenu = [],
+  FooterMenu = [],
+  Contact = []
+}) => (
   <div>
     <Navbar items={TopMenu} />
     {typeof children === "function" ? children() : children}
-    <Contact_page items={Contact}/>
+    <Contact_page items={Contact} />
 
     <Footer items={FooterMenu} />
   </div>

@@ -1,33 +1,31 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from "react";
 import styled from "styled-components";
 
 const FooterTag = styled.footer`
-    height: 140px;	
-    width: 100%;	
-    background-color: #F9FAFC;
-    padding: 0px 110px;
+  height: 140px;
+  width: 100%;
+  background-color: #f9fafc;
+  padding: 0px 110px;
 
-    @media (max-width: 1080px) {
-        padding: 0 45px;
-    }
-    @media (max-width: 768px) { 
-        padding:0 42px;
-    }
+  @media (max-width: 1080px) {
+    padding: 0 45px;
+  }
+  @media (max-width: 768px) {
+    padding: 0 42px;
+  }
 
-    @media (max-width: 600px) { 
-        padding:0 40px;
-    }
+  @media (max-width: 600px) {
+    padding: 0 40px;
+  }
 
-    @media (max-width: 540px) { 
-        padding:0 30px;
-        height: auto;
-    }
+  @media (max-width: 540px) {
+    padding: 0 30px;
+    height: auto;
+  }
 
-    @media (max-width: 376px) { 
-        padding:0 30px 20px;
-    }
-   
+  @media (max-width: 376px) {
+    padding: 0 30px 20px;
+  }
 `;
 
 const ContentDiv = styled.div`
@@ -97,23 +95,23 @@ const ContentDiv = styled.div`
         
 }`;
 
-const Footer = ({items}) => (
+const Footer = ({ items }) => (
+  <FooterTag>
+    <ContentDiv>
+      {items.map(item => (
+        <a key="item" href={item.path}>
+          <span>{item.label}</span>
+        </a>
+      ))}
+    </ContentDiv>
 
-    <FooterTag>
-        <ContentDiv>
-            {items.map(item => <a href={item.path}><span>{item.label}</span></a>)}
-        </ContentDiv>
-        
-        <div className="clear-fix"></div>
-        <style jsx>{`
-            .clear-fix {
-                clear: both;
-            }
-        `}</style>
-    </FooterTag>
+    <div className="clear-fix" />
+    <style jsx>{`
+      .clear-fix {
+        clear: both;
+      }
+    `}</style>
+  </FooterTag>
+);
 
-    
-  
-)
-
-export default Footer
+export default Footer;

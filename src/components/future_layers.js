@@ -1,119 +1,108 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from "react";
+// import Link from "gatsby-link";
 import styled from "styled-components";
-import $ from 'jquery'; 
+// import $ from "jquery";
 
-const Section = styled.section `
-    width:100%;
-    // height: 970px;
-    position: relative;
+const Section = styled.section`
+  width: 100%;
+  // height: 970px;
+  position: relative;
+  padding: 110px 0;
+  padding-left: 0;
+  z-index: 1;
+  margin-top: 330px;
+
+  background: linear-gradient(311.59deg, #28d8a7 0%, #1dc9ca 100%);
+
+  // margin-top: 200px;
+  @media (max-width: 1080px) {
     padding: 110px 0;
-    padding-left: 0;
-    z-index: 1;
-    margin-top: 330px;
-    
-    background: linear-gradient(311.59deg, #28D8A7 0%, #1DC9CA 100%);
-    
-    // margin-top: 200px;
-    @media (max-width: 1080px) {
-        padding: 110px 0;
-        margin-top: 250px;
-    }
-    @media (max-width: 768px) { 
-        padding: 80px 0;
-    }
+    margin-top: 250px;
+  }
+  @media (max-width: 768px) {
+    padding: 80px 0;
+  }
 
-    @media (max-width: 600px) { 
+  @media (max-width: 600px) {
     margin-top: 200px;
-        
-        padding: 60px 0;
-    }
 
-    @media (max-width: 376px) { 
+    padding: 60px 0;
+  }
+
+  @media (max-width: 376px) {
     margin-top: 150px;
-        
-        padding: 30px 0;
-    }
 
+    padding: 30px 0;
+  }
 `;
 
-
 const SectionImage = styled.div`
-        width: 100%;
+  width: 100%;
+  > img {
+    width: 60%;
+    left: 0%;
+    position: absolute;
+    z-index: 2;
+    top: -200px;
+    transition: 0.3s;
+
+    &:hover {
+      z-index: 4;
+      box-shadow: 5px 5px 10px -4px rgba(0, 0, 0, 0.35);
+    }
+  }
+  @media (max-width: 1440px) {
     > img {
-        width: 60%;
-        left: 0%;
-        position:absolute; 
-        z-index: 2;
-        top: -200px;
-        transition: .3s;
-        
-        &:hover {
-            z-index: 4;
-            box-shadow: 5px 5px 10px -4px rgba(0,0,0,0.35);
-            
-        }
+      left: 0;
     }
-    @media (max-width: 1440px) {
-        > img {
-    left: 0;
-            } 
-        }
+  }
 
-    @media (max-width: 1080px) {
-        width: 100%;
-       
-            > img {
-            position: absolute;
-            top:-220px;
-            margin: 0;
-            float: left;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 70%;
-           
-        }
-        
+  @media (max-width: 1080px) {
+    width: 100%;
+
+    > img {
+      position: absolute;
+      top: -220px;
+      margin: 0;
+      float: left;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
     }
+  }
 
- 
-
-    @media (max-width: 750px) {
-            > img {
-                top:-180px;
-   
-        }
+  @media (max-width: 750px) {
+    > img {
+      top: -180px;
     }
+  }
 
-    @media (max-width: 600px) {
-        > img {
-        position: absolute;
-        top:-140px;    
-      }
+  @media (max-width: 600px) {
+    > img {
+      position: absolute;
+      top: -140px;
     }
-    @media (max-width: 500px) {
-        > img {
-        position: absolute;
-        top:-100px;    
-    
-        }
+  }
+  @media (max-width: 500px) {
+    > img {
+      position: absolute;
+      top: -100px;
     }
+  }
 
-    @media (max-width: 470px) {
-        > img {
-        position: absolute;
-        top:-110px;    
-     }
+  @media (max-width: 470px) {
+    > img {
+      position: absolute;
+      top: -110px;
     }
+  }
 
-
-        @media (max-width: 320px) {
-            > img {
-            position: absolute;
-            top:-80px;    
-        
-        }
+  @media (max-width: 320px) {
+    > img {
+      position: absolute;
+      top: -80px;
     }
+  }
 `;
 
 const SectionContent = styled.div`
@@ -366,99 +355,89 @@ const SectionContent = styled.div`
     }   
 `;
 
-const DivShape = styled.div `
-    position: absolute;
-   
-    top: 30px;
-    right: 60px;
+const DivShape = styled.div`
+  position: absolute;
+
+  top: 30px;
+  right: 60px;
+  z-index: 10;
+
+  > div.shape {
+    width: 50px;
+    height: 50px;
+    margin: 1px;
+    position: relative;
     z-index: 10;
 
+    > span {
+      color: transparent;
+      font-size: 55px;
+    }
+
+    > span#first {
+      -webkit-text-stroke: 5px #7e52e8;
+      position: absolute;
+      z-index: 10;
+      left: 0;
+      top: 0;
+    }
+    > span#second {
+      -webkit-text-stroke: 5px #dd52e8;
+      position: absolute;
+      left: 0;
+      top: 35%;
+    }
+  }
+  @media (max-width: 1080px) {
+    top: 2%;
+    right: 1%;
+    > span {
+      opacity: 0.9;
+    }
+  }
+
+  @media (max-width: 768px) {
+    top: 5%;
+    right: 5%;
     > div.shape {
-        width: 50px;
-        height: 50px;
-        margin: 1px;
-        position:relative;
-        z-index: 10;
-    
-        > span {
-            color: transparent;
-            font-size: 55px;
+      width: 50px;
+      height: 50px;
+      > span {
+        opacity: 0.7;
 
-
-        }
-
-        > span#first {
-            -webkit-text-stroke: 5px #7E52E8;            
-            position: absolute;   
-            z-index: 10;         
-            left:0;
-            top: 0;
-
-            
-        }
-        > span#second {
-            -webkit-text-stroke: 5px #DD52E8; 
-            position: absolute;   
-            left:0;     
-            top: 35%;
-        }
+        font-size: 60px;
+      }
     }
-    @media (max-width: 1080px) {
-        top: 2%;
-        right: 1%;
-        > span {
-            opacity: .9;
-        }
+  }
 
-    }        
+  @media (max-width: 600px) {
+    top: 2%;
+    right: 1%;
+    > div.shape {
+      width: 63px;
+      height: 63px;
+      > span {
+        opacity: 0.5;
 
-    @media (max-width: 768px) {
-        top: 5%;
-        right: 5%;
-        > div.shape {
-            width: 50px;
-            height: 50px;
-            > span {
-                opacity: .7;
-
-                font-size: 60px;
-            
-            }
-        }
+        font-size: 50px;
+      }
     }
+  }
 
-    @media (max-width: 600px) {
-        top: 2%;
-        right: 1%;
-        > div.shape {
-            width: 63px;
-            height: 63px;
-            > span {
-                opacity: .5;
-    
-                font-size: 50px;
-            
-            }
-        }
+  @media (max-width: 370px) {
+    top: 2%;
+    right: 1%;
+    > div.shape {
+      width: 50px;
+      height: 50px;
+      > span {
+        opacity: 0.4;
+
+        font-size: 40px;
+      }
     }
-
-    @media (max-width: 370px) {
-        top: 2%;
-        right: 1%;
-        > div.shape {
-            width: 50px;
-            height: 50px;
-            > span {
-                opacity: .4;
-        
-                font-size: 40px;
-            
-            }
-        }
-    }
-
-`;  
-
+  }
+`;
 
 // $(document).ready(()=> {
 //     $("#section-content").css({
@@ -467,48 +446,45 @@ const DivShape = styled.div `
 //     })
 //   })
 
-const FutureLayers = ({heading, text, button_text, image}) => (
-    
+const FutureLayers = ({ heading, text, button_text, image }) => (
+  <Section className="section-6">
+    <SectionImage className="image">
+      <img className="content_image" src={image} />
+    </SectionImage>
 
-    <Section className="section-6">
+    <SectionContent id="section-content">
+      <h3>{heading}</h3>
+      <p>{text}</p>
+      <a>
+        <span>{button_text}</span>
+      </a>
 
-            <SectionImage className="image">
-                <img className="content_image" src={image} />
-            </SectionImage>
+      <DivShape>
+        <div className="shape">
+          <span id="first">&#x25BC;</span>
+          <span id="second">&#x25BC;</span>
+        </div>
+      </DivShape>
+    </SectionContent>
 
-            <SectionContent id="section-content">
-                <h3>{heading}</h3>
-                <p>{text}</p>
-                <a><span>{button_text}</span></a>
+    <div className="clear-fix" />
 
-                <DivShape>
-                    <div className="shape">
-                        <span id="first">&#x25BC;</span>
-                        <span id="second">&#x25BC;</span>
-                    </div>
-                </DivShape>
-            </SectionContent>
-
-            <div className="clear-fix"></div>
-
-        <style jsx>{`
-        * {
+    <style jsx>{`
+      * {
         margin: 0;
-        padding:0;
+        padding: 0;
         box-sizing: border-box;
-        
-        }
+      }
 
-        body{
-            overflow: hidden;
-        }
+      body {
+        overflow: hidden;
+      }
 
-        div.clear-fix {
-            clear: both;
-        }
-        `}</style>
-    </Section>
-  
-)
+      div.clear-fix {
+        clear: both;
+      }
+    `}</style>
+  </Section>
+);
 
-export default FutureLayers
+export default FutureLayers;

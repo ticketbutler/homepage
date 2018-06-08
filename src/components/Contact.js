@@ -1,15 +1,12 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from "react";
 import styled from "styled-components";
-import 'font-awesome/css/font-awesome.min.css';
+import "font-awesome/css/font-awesome.min.css";
 
 const Section = styled.section`
-
-    padding: 0;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 0px;
-
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0px;
 `;
 
 const LeftBox = styled.div`
@@ -329,72 +326,76 @@ const RightBox = styled.div`
     }
 `;
 
-const Contact_page = ({items}) => (
-    
-    <Section id="contact">
-
-        <div className="container">
-            <LeftBox className="left-box contact">
-                <h3>Contact US!</h3>
-                {/* <h1>{items.map(item => item)}</h1> */}
-                <form className="contact-form">
-                    <ul>
-                        <li>
-                            <input type="text" name="name-field" id="align-left" placeholder="Name" />
-                            <input type="email" name="email-field" id="align-right" placeholder="Email" />
-
-                        </li>
-                        <li id="message-field">
-                            <textarea name="message-field" placeholder="Message"/>
-                        </li>
-                        <li id="contact-btn">
-                            <a><span>Send Message</span></a>
-                        </li>
-                    </ul>
-                    <div className="clear-fix"></div>
-                    
-                </form>
-            </LeftBox>
-            <RightBox >
-                <div className="content">
-                    <ul>
-                        <li>
-                            <i className="fa fa-map-marker"></i>
-                            <span>Address</span>
-                            <span id="address"> {items.address}</span>
-                            </li>
-                        <li>
-                            <i className="fa fa-phone"></i>
-                            <span>Phone</span>
-                            <span id="phone">{items.phone}</span>
-    
-                        </li>
-                        <li>
-                            <i className="fa fa-envelope"></i>
-                            <span>General soppurt</span>
-                            <span id="support">{items.support}</span>
-                        </li>
-                    </ul>
-                </div>
-            </RightBox>
-            
+const Contact_page = ({ items }) => (
+  <Section id="contact">
+    <div className="container">
+      <LeftBox className="left-box contact">
+        <h3>Contact US!</h3>
+        {/* <h1>{items.map(item => item)}</h1> */}
+        <form className="contact-form" name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+          <ul>
+            <li>
+              <input
+                type="text"
+                name="name"
+                id="align-left"
+                placeholder="Name"
+              />
+              <input
+                type="email"
+                name="email"
+                id="align-right"
+                placeholder="Email"
+              />
+            </li>
+            <li id="message-field">
+              <textarea name="message-field" placeholder="Message" />
+            </li>
+            <li id="contact-btn">
+              <a>
+                <span>Send Message</span>
+              </a>
+            </li>
+          </ul>
+          <div className="clear-fix" />
+        </form>
+      </LeftBox>
+      <RightBox>
+        <div className="content">
+          <ul>
+            <li>
+              <i className="fa fa-map-marker" />
+              <span>Address</span>
+              <span id="address"> {items.address}</span>
+            </li>
+            <li>
+              <i className="fa fa-phone" />
+              <span>Phone</span>
+              <span id="phone">{items.phone}</span>
+            </li>
+            <li>
+              <i className="fa fa-envelope" />
+              <span>General soppurt</span>
+              <span id="support">{items.support}</span>
+            </li>
+          </ul>
         </div>
-        <div className="clear-fix"></div>
+      </RightBox>
+    </div>
+    <div className="clear-fix" />
 
-         <style jsx>{`
-            * {
-            margin: 0;
-            padding:0;
-            box-sizing: border-box;
-            }
+    <style jsx>{`
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-            .clear-fix {
-                clear:both;
-            }
-        
-        `}</style>
-    </Section>
+      .clear-fix {
+        clear: both;
+      }
+    `}</style>
+  </Section>
+);
 
-)
-
-export default Contact_page
+export default Contact_page;
