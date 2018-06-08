@@ -106,7 +106,7 @@ const SectionImage = styled.div`
 `;
 
 const SectionContent = styled.div`
-    min-height: 611px;	
+    height: auto;	
     width: 55%;	
     background-color: #FFFFFF;
     box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.35);
@@ -264,7 +264,6 @@ const SectionContent = styled.div`
     }
 
     @media (max-width: 768px) { 
-
         padding: 80px;
 
         > h1 {
