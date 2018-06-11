@@ -16,17 +16,6 @@ sections:
       købsoplevelse.
     type: future_image_right
   - button_link: /
-    button_text: Opret dit første arrangement
-    heading: Sælg billetter direkte fra din hjemmeside
-    image: img/mac.png
-    text: >-
-      Alle besøgende på din hjemmeside er din mulighed for at sælge billetter
-      eller hvad du ellers tilbyder. Gå ikke glip af besøgende ved at integrere
-      billetsalget på din hjemmeside. Integrationen kræver ikke mere end et
-      copy/paste og er designet til at matche dit brand. Foretrækker du at holde
-      siderne adskilt, stiller vi også separate eventsider til rådighed.
-    type: uture_image_left
-  - button_link: /
     button_text: Opret dit event event her!
     heading: Dit billetsystem. Din identitet
     image: img/img-3.jpg
@@ -51,16 +40,6 @@ sections:
       billetkøb fra smartphone, ingen brugeroprettelse og betaling med
       betalingskort eller MobilePay giver friktionsfri købsoplevelse.
     type: future_layers
-  - button_link: /
-    button_text: Opret gratis bruger her!
-    heading: Lær din gæster at kende
-    text: >-
-      Jo bedre du kender dine kunder, desto bedre en oplevelse kan du give dem,
-      og jo flere billetter kan du sælge. Skræddersy spørgsmål til dine gæster,
-      optimér Facebook annoncer med Facebook Pixel, analysér dine kunder gennem
-      Google Analytics og se sammenhængen mellem antallet af billetter solgt og
-      din marketingstrategi. 
-    type: uture_image_left
   - button_link: /
     button_text: Lad os komme igang!
     heading: Kom nemt i gang
