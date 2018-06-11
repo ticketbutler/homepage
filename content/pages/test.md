@@ -8,7 +8,7 @@ sections:
     text: Din data. Dit brand. Din succes
     type: header
   - heading: Din succes er vores succes
-    image: img/img-7.jpg
+    image: /img/knuckles5.png
     text: >-
       Ticketbutler er et online billetsystem pakket med features, som er
       udviklet til at gøre livet som arrangør nemmere. Dit brand er i fokus, du
