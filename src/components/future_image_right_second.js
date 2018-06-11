@@ -259,7 +259,7 @@ const RightBox = styled.div`
 
     > img {
       position: relative;
-      height: 425px;
+      height: auto;
       width: 600px;
       left: 50%;
       transform: translateX(-50%);
