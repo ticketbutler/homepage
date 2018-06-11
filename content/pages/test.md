@@ -35,19 +35,21 @@ sections:
       hjemmeside-integration og eventside, til e-mails og billetter, og selv ned
       til bankudskriften. Det handler om dig og dine gæster, ikke os.
     type: tall_centered_future
-  - heading: A better understanding of your event
+  - heading: Byg din fanbase op
     image: img/mac_lap.png
     text: >-
-      Access, analize and manage your data from everywhere. Understand your
-      atteendees and keep them coming back
+      Mon ikke dine gæster også er interesserede i dine kommende begivenheder?
+      Vi spørger altid dine gæster om de vil skrive sig op til dit nyhedsbrev,
+      så du hurtigt kan bygge en fanbase op. Du fortjener det!
     type: future_image_right_second
   - button_link: /
-    button_text: Create an event
-    heading: Pork chop capicola shoulder doner ball
+    button_text: Start dit event her!
+    heading: Nemt for dine gæster
     image: img/img-6.jpg
     text: >-
-      Picanha capicola pancette ball tip prosciutto buffalo salami ribeye
-      hamburger swine corned beef filet mignon drumstick flank capicola
+      Det tager kun et øjeblik for dine gæster at købe billetter. Designet til
+      billetkøb fra smartphone, ingen brugeroprettelse og betaling med
+      betalingskort eller MobilePay giver friktionsfri købsoplevelse.
     type: future_layers
   - heading: TEST!
     text: Jeg er en dum test
