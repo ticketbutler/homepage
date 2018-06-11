@@ -63,7 +63,7 @@ collections:
             options:        
               - { label: Header, value: header }
               - { label: Image right, value: future_image_right }
-              - { label: Image left, value: uture_image_left }
+              - { label: Image left, value: future_image_left }
               - { label: Centerd Image Tall, value: tall_centered_future }
               - { label: Image Right Second Style, value: future_image_right_second }
               - { label: Layer Image, value: future_layers }
