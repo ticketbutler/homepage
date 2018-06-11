@@ -2,7 +2,7 @@
 path: /
 title: Ticketbutler
 sections:
-  - button_link: /
+  - button_link: '#contact'
     button_text: Kontakt os!
     heading: Dit skræddersyede billetsystem
     image: /img/splash.png
