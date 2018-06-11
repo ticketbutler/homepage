@@ -16,7 +16,7 @@ sections:
       får gratis adgang til værdifuld data og dine gæster får en let og hurtig
       købsoplevelse.
     type: future_image_right
-  - button_link: /
+  - button_link: '#contact'
     button_text: Kontakt os!
     heading: Sælg billetter direkte fra din hjemmeside
     image: /img/billetsystem-integration.png
@@ -27,7 +27,7 @@ sections:
       copy/paste og er designet til at matche dit brand. Foretrækker du at holde
       siderne adskilt, stiller vi også separate eventsider til rådighed.
     type: future_image_left
-  - button_link: /
+  - button_link: '#contact'
     button_text: Kontakt os!
     heading: Dit billetsystem. Din identitet
     image: /img/billetsystem-med-eget-design.png
@@ -43,7 +43,7 @@ sections:
       Vi spørger altid dine gæster om de vil skrive sig op til dit nyhedsbrev,
       så du hurtigt kan bygge en fanbase op. Du fortjener det!
     type: future_image_right_second
-  - button_link: /
+  - button_link: '#contact'
     button_text: Kontakt os!
     heading: Nemt for dine gæster
     image: /img/simpel-billetservice.png
@@ -52,7 +52,7 @@ sections:
       billetkøb fra smartphone, ingen brugeroprettelse og betaling med
       betalingskort eller MobilePay giver friktionsfri købsoplevelse.
     type: future_layers
-  - button_link: /
+  - button_link: '#contact'
     button_text: Kontakt os!
     heading: Lær din gæster at kende
     image: /img/google-analytics-og-facebook-pixel-i-billetsystem.png
@@ -63,7 +63,7 @@ sections:
       Google Analytics og se sammenhængen mellem antallet af billetter solgt og
       din marketingstrategi. 
     type: future_image_left
-  - button_link: /
+  - button_link: '#contact'
     button_text: Kontakt os!
     heading: Kom nemt i gang
     image: /img/simpelt-billetsystem.png
@@ -71,7 +71,7 @@ sections:
       Giv os dit logo og brandfarver og du har dit eget billetsystem inden for
       et par dage. Vi designer systemet, så det ser lækkert ud til dit brand.
     type: future_image_right
-  - button_link: /
+  - button_link: '#contact'
     button_text: Kontakt os!
     heading: Priser for alle
     image: /img/pricing_table.png
