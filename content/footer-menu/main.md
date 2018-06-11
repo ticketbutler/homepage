@@ -10,7 +10,5 @@ items:
     path: /
   - label: '2018 TicketButler IVS CVR: 384046870'
     path: /
-  - label: Priser
-    path: /test
 ---
 
