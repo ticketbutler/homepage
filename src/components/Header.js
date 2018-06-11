@@ -240,15 +240,12 @@ const HeaderContent = styled.div`
   }
 `;
 
-// $(document).ready(()=> {
-//   $("h1#title, p#description, a#header-btn").css({
-//     "transform": "translateX(0)",
-//     "opacity": "1",
-//   })
-// })
+
+
 
 const Header = ({ heading, text, button_text, button_link }) => {
   return (
+
     <HeaderTag id="header">
       <div id="navActive_back" />
       <HeaderContent className="header_content">
@@ -270,5 +267,13 @@ const Header = ({ heading, text, button_text, button_link }) => {
       `}</style>
     </HeaderTag>
   );
+  // {
+  //     (function(a,l,b,c,r,s){
+  //     _nQc=c,r=a.createElement(l),s=a.getElementsByTagName(l)[0];
+  //     r.async=1;
+  //     r.src=l.src=("https:"==a.location.protocol?"https://":"http://")+b;
+  //     s.parentNode.insertBefore(r,s);})
+  //     (document,"script","serve.albacross.com/track.js","89331168");
+  // }
 };
 export default Header;

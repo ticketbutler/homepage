@@ -446,7 +446,7 @@ const NavbarSection = ({ items }) => {
               <a
                 href={item.path}
                 className="nav-link"
-                animate={{ offset: 20, duration: 600 }}
+                // animate={{ offset: 20, duration: 600 }}
               >
                 {item.label}
               </a>
