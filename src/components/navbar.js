@@ -179,7 +179,7 @@ const Nav = styled.nav`
           line-height: 60px;
           transform: rotate(10deg);
           transform-origin: 0% 0%;
-          padding: 0 20px;
+          padding: 0;
           opacity: 0;
           visibility: hidden;
 
@@ -191,13 +191,15 @@ const Nav = styled.nav`
            > a {
             color: #333F52;
             border:none;
-            padding: 0;
+            padding: 0 20px;
             display:block;
             width: 100%;
             height: 100%;
             
             &:hover {
-              border:none;padding: 0;
+              border:none;
+              padding: 0;
+  
             }
            }
 
@@ -207,13 +209,14 @@ const Nav = styled.nav`
 
         &.active > li {
           transition: all .3s;
-          padding 0 30px;
+          padding 0 0px;
           border-bottom: 1px solid rgba(238,238,238, .5);
           &:hover {
             background-color: rgba(238,238,238, .5);
             transition-delay: 0s;
             > a {
-              margin-left: 8px;
+              padding-left: 28px;
+              padding-right: 12px;
             }
           }
 
