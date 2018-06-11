@@ -3,7 +3,7 @@ path: /
 title: Ticketbutler
 sections:
   - button_link: /
-    button_text: Opret gratis bruger her!
+    button_text: Kontakt os!
     heading: Dit skræddersyede billetsystem
     image: /img/splash.png
     text: Din data. Dit brand. Din succes
@@ -17,7 +17,7 @@ sections:
       købsoplevelse.
     type: future_image_right
   - button_link: /
-    button_text: Opret dit første arrangement
+    button_text: Kontakt os!
     heading: Sælg billetter direkte fra din hjemmeside
     image: /img/billetsystem-integration.png
     text: >-
@@ -28,7 +28,7 @@ sections:
       siderne adskilt, stiller vi også separate eventsider til rådighed.
     type: future_image_left
   - button_link: /
-    button_text: Opret dit event event her!
+    button_text: Kontakt os!
     heading: Dit billetsystem. Din identitet
     image: /img/billetsystem-med-eget-design.png
     text: >-
@@ -44,7 +44,7 @@ sections:
       så du hurtigt kan bygge en fanbase op. Du fortjener det!
     type: future_image_right_second
   - button_link: /
-    button_text: Start dit event her!
+    button_text: Kontakt os!
     heading: Nemt for dine gæster
     image: /img/simpel-billetservice.png
     text: >-
@@ -53,7 +53,7 @@ sections:
       betalingskort eller MobilePay giver friktionsfri købsoplevelse.
     type: future_layers
   - button_link: /
-    button_text: Opret gratis bruger her!
+    button_text: Kontakt os!
     heading: Lær din gæster at kende
     image: /img/google-analytics-og-facebook-pixel-i-billetsystem.png
     text: >-
@@ -64,14 +64,16 @@ sections:
       din marketingstrategi. 
     type: future_image_left
   - button_link: /
-    button_text: Lad os komme igang!
+    button_text: Kontakt os!
     heading: Kom nemt i gang
     image: /img/simpelt-billetsystem.png
     text: >-
       Giv os dit logo og brandfarver og du har dit eget billetsystem inden for
       et par dage. Vi designer systemet, så det ser lækkert ud til dit brand.
     type: future_image_right
-  - heading: Priser for alle
+  - button_link: /
+    button_text: Kontakt os!
+    heading: Priser for alle
     image: /img/pricing_table.png
     text: >-
       Om du repræsenterer et stort firma, et startup eller en énmandshær, står
