@@ -3,9 +3,9 @@ path: /
 title: Ticketbutler
 sections:
   - button_link: /
-    button_text: 'Get started, it''s free!'
+    button_text: Opret gratis bruger her!
     heading: A single platform to manage and grow your event
-    text: 'We need some more text here, just a punch line'
+    text: Din data. Dit brand. Din succes
     type: header
   - heading: Lorem Ipsum sit amet
     image: img/img-7.jpg
