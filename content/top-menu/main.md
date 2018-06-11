@@ -6,5 +6,7 @@ items:
     path: /
   - label: KONTAKT
     path: '#contact'
+  - label: Test
+    path: /test
 ---
 
