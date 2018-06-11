@@ -2,15 +2,9 @@
 title: Navbar
 path: main
 items:
-  - label: HOME
+  - label: HJEM
     path: /
-  - label: I
-    path: /
-  - label: am
-    path: /
-  - label: Done
-    path: /
-  - label: Hora
+  - label: KONTAKT
     path: '#contact'
 ---
 
