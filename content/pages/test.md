@@ -51,5 +51,15 @@ sections:
       billetkøb fra smartphone, ingen brugeroprettelse og betaling med
       betalingskort eller MobilePay giver friktionsfri købsoplevelse.
     type: future_layers
+  - button_link: /
+    button_text: Opret gratis bruger her!
+    heading: Lær din gæster at kende
+    text: >-
+      Jo bedre du kender dine kunder, desto bedre en oplevelse kan du give dem,
+      og jo flere billetter kan du sælge. Skræddersy spørgsmål til dine gæster,
+      optimér Facebook annoncer med Facebook Pixel, analysér dine kunder gennem
+      Google Analytics og se sammenhængen mellem antallet af billetter solgt og
+      din marketingstrategi. 
+    type: uture_image_left
 ---
 
