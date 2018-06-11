@@ -18,6 +18,7 @@ sections:
   - button_link: /
     button_text: Opret dit første arrangement
     heading: Sælg billetter direkte fra din hjemmeside
+    image: /img/integration-mockup2.png
     text: >-
       Alle besøgende på din hjemmeside er din mulighed for at sælge billetter
       eller hvad du ellers tilbyder. Gå ikke glip af besøgende ved at integrere
