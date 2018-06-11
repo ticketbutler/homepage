@@ -9,7 +9,7 @@ items:
     path: /
   - label: hello@ticketbutler.io
     path: /
-  - label: '2018 TicketButler | VS CVR: 384046870'
+  - label: '2018 TicketButler IVS CVR: 384046870'
     path: /
 
 ---
