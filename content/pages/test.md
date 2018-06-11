@@ -61,5 +61,18 @@ sections:
       Google Analytics og se sammenhængen mellem antallet af billetter solgt og
       din marketingstrategi. 
     type: uture_image_left
+  - button_link: /
+    button_text: Lad os komme igang!
+    heading: Kom nemt i gang
+    text: >-
+      Giv os dit logo og brandfarver og du har dit eget billetsystem inden for
+      et par dage. Vi designer systemet, så det ser lækkert ud til dit brand.
+    type: future_image_right
+  - heading: Priser for alle
+    text: >-
+      Om du repræsenterer et stort firma, et startup eller en énmandshær, står
+      vi klar til at imødekomme dine behov, uanset om du bruger vores gratis
+      løsning eller en skræddersyet løsning.
+    type: tall_centered_future
 ---
 
