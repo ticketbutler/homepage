@@ -16,21 +16,24 @@ sections:
       købsoplevelse.
     type: future_image_right
   - button_link: /
-    button_text: Create an event
-    heading: Pork chop capicola shoulder doner ball
+    button_text: Opret dit første arrangement
+    heading: Sælg billetter direkte fra din hjemmeside
     image: img/mac.png
     text: >-
-      Picanha capicola pancetta ball tip prosciutto buffalo salami ribeye
-      hamburger swine. pig landjaeger swine cornedbeef fliet mignon drumstick
-      flank capicola
-    type: future_image_left
+      Alle besøgende på din hjemmeside er din mulighed for at sælge billetter
+      eller hvad du ellers tilbyder. Gå ikke glip af besøgende ved at integrere
+      billetsalget på din hjemmeside. Integrationen kræver ikke mere end et
+      copy/paste og er designet til at matche dit brand. Foretrækker du at holde
+      siderne adskilt, stiller vi også separate eventsider til rådighed.
+    type: uture_image_left
   - button_link: /
-    button_text: Do Somthing Now
-    heading: Easy to get going easy to use
+    button_text: Opret dit event event her!
+    heading: Dit billetsystem. Din identitet
     image: img/img-3.jpg
     text: >-
-      Picanha capicola pancetta ball tip prosciutto buffalo salami ribeye
-      hamburger swine
+      Hele købsoplevelsen designes og tilpasses dit brand. Lige fra
+      hjemmeside-integration og eventside, til e-mails og billetter, og selv ned
+      til bankudskriften. Det handler om dig og dine gæster, ikke os.
     type: tall_centered_future
   - heading: A better understanding of your event
     image: img/mac_lap.png
