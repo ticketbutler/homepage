@@ -1,15 +1,14 @@
 ---
 title: Footer
 path: main
-
 items:
-  - label: Private Policy
+  - label: Private policy
     path: /
-  - label: Tearm Of Service
+  - label: Terms of service
     path: /
   - label: hello@ticketbutler.io
     path: /
   - label: '2018 TicketButler IVS CVR: 384046870'
     path: /
-
 ---
+
