@@ -1,8 +1,8 @@
 ---
-title: contact
-path: contact
-address: Porcelænshaven 26, 2000 Frederiksberg
+title: Kontakt
+path: Kontakt
+address: 'Porcelænshaven 26, 2000 Frederiksberg'
 phone: +45 89 80 12 80
-support: Support@ticketbutler.io
+support: support@ticketbutler.io
 ---
 
