@@ -4,14 +4,16 @@ title: Ticketbutler
 sections:
   - button_link: /
     button_text: Opret gratis bruger her!
-    heading: A single platform to manage and grow your event
+    heading: Dit skræddersyede billetsystem
     text: Din data. Dit brand. Din succes
     type: header
-  - heading: Lorem Ipsum sit amet
+  - heading: Din succes er vores succes
     image: img/img-7.jpg
     text: >-
-      Bacon ipsum dolor amet rump beef check, tri-tip sausage brisket leberkas
-      porchetta hamburger tenderloin short
+      Ticketbutler er et online billetsystem pakket med features, som er
+      udviklet til at gøre livet som arrangør nemmere. Dit brand er i fokus, du
+      får gratis adgang til værdifuld data og dine gæster får en let og hurtig
+      købsoplevelse.
     type: future_image_right
   - button_link: /
     button_text: Create an event
