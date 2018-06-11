@@ -170,6 +170,7 @@ const Nav = styled.nav`
           border-radius: 0 0 0 4px;
           li {
             visibility: visible;
+             
             }
         }
         > li {
@@ -190,9 +191,13 @@ const Nav = styled.nav`
            > a {
             color: #333F52;
             border:none;
-            padding: 0px 0;
+            padding: 0;
+            display:block;
+            width: 100%;
+            height: 100%;
+            
             &:hover {
-              border:none;
+              border:none;padding: 0;
             }
            }
 
@@ -421,19 +426,20 @@ const NavbarSection = ({ items }) => {
           <div className="bar3" />
         </NavBars>
         <ul id="ulNav">
-      
           {items.map(item => (
-            <li onClick={() => {
-              document.getElementById("ulNav").classList.remove("active");
-              document.getElementById("navActive_back").classList.remove("NavbarClicked-background");
-              document.getElementById("bars").classList.toggle("clicked");
+            <li
+              onClick={() => {
+                document.getElementById("ulNav").classList.remove("active");
+                document
+                  .getElementById("navActive_back")
+                  .classList.remove("NavbarClicked-background");
+                document.getElementById("bars").classList.toggle("clicked");
 
-              // if(item.path == "#contact"){
-              //   document.getElementsByTagName("a").animate({offset: 200, duration: 2000 })
-              // }
-              
-            }
-            } >
+                // if(item.path == "#contact"){
+                //   document.getElementsByTagName("a").animate({offset: 200, duration: 2000 })
+                // }
+              }}
+            >
               <a
                 href={item.path}
                 className="nav-link"

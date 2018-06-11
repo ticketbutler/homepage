@@ -315,6 +315,7 @@ const RightBox = styled.div`
             font-family: Montserrat;
             font-size: 20px;
             font-weight: 500;
+            text-decuration: none;
             &:nth-child(2){
                 margin-bottom: 10px;
             }
@@ -387,28 +388,21 @@ const Contact_page = ({ items }) => (
         >
           <ul>
             <li>
-                <label>
+              <label>
                 <span className="floating-label">Your Name</span>
-                    <input
-                        type="text"
-                        name="name"
-                        id="align-left"
-                    />
+                <input type="text" name="name" id="align-left" />
               </label>
             </li>
             <li>
               <label>
-            <span className="floating-label">Your Email</span>
-              <input
-                type="email"
-                name="email"
-                id="align-right"
-              />
+                <span className="floating-label">Your Email</span>
+                <input type="email" name="email" id="align-right" />
               </label>
             </li>
             <li id="message-field">
-             <label><span className="floating-label">Message</span>
-                 <textarea name="message" />
+              <label>
+                <span className="floating-label">Message</span>
+                <textarea name="message" />
               </label>
             </li>
           </ul>

@@ -14,7 +14,6 @@ export default () => {
     // Add dark background to the page
     backDiv.classList.add("NavbarClicked-background");
 
-
     // other whise do these
   } else {
     ulElement.classList.add("!active");
