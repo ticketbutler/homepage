@@ -51,8 +51,5 @@ sections:
       billetkøb fra smartphone, ingen brugeroprettelse og betaling med
       betalingskort eller MobilePay giver friktionsfri købsoplevelse.
     type: future_layers
-  - heading: TEST!
-    text: Jeg er en dum test
-    type: future_layers
 ---
 
