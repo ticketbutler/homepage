@@ -315,7 +315,7 @@ const RightBox = styled.div`
             font-family: Montserrat;
             font-size: 20px;
             font-weight: 500;
-            text-decuration: none;
+            text-decoration: none;
             &:nth-child(2){
                 margin-bottom: 10px;
             }
