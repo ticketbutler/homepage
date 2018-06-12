@@ -6,7 +6,7 @@ items:
     path: /
   - label: KONTAKT
     path: '#contact'
-  - label: Test
-    path: /test
+  - label: PRIS
+    path: /pris
 ---
 
