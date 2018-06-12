@@ -20,6 +20,8 @@ sections:
     button_text: Kontakt os!
     heading: Sælg billetter direkte fra din hjemmeside
     image: /img/billetsystem-integration.png
+    image_alt: "Splash"
+
     text: >-
       Alle besøgende på din hjemmeside er din mulighed for at sælge billetter
       eller hvad du ellers tilbyder. Gå ikke glip af besøgende ved at integrere
@@ -31,6 +33,8 @@ sections:
     button_text: Kontakt os!
     heading: Dit billetsystem. Din identitet
     image: /img/billetsystem-med-eget-design.png
+    image_alt: "Splash"
+
     text: >-
       Hele købsoplevelsen designes og tilpasses dit brand. Lige fra
       hjemmeside-integration og eventside, til e-mails og billetter, og selv ned
@@ -38,6 +42,8 @@ sections:
     type: tall_centered_future
   - heading: Byg din fanbase op
     image: /img/billetsystem-til-koncerter.png
+    image_alt: "Splash"
+
     text: >-
       Mon ikke dine gæster også er interesserede i dine kommende begivenheder?
       Vi spørger altid dine gæster om de vil skrive sig op til dit nyhedsbrev,
@@ -47,6 +53,8 @@ sections:
     button_text: Kontakt os!
     heading: Nemt for dine gæster
     image: /img/simpel-billetservice.png
+    image_alt: "Splash"
+
     text: >-
       Det tager kun et øjeblik for dine gæster at købe billetter. Designet til
       billetkøb fra smartphone, ingen brugeroprettelse og betaling med
@@ -56,6 +64,8 @@ sections:
     button_text: Kontakt os!
     heading: Lær din gæster at kende
     image: /img/google-analytics-og-facebook-pixel-i-billetsystem.png
+    image_alt: "Splash"
+
     text: >-
       Jo bedre du kender dine kunder, desto bedre en oplevelse kan du give dem,
       og jo flere billetter kan du sælge. Skræddersy spørgsmål til dine gæster,
@@ -67,6 +77,8 @@ sections:
     button_text: Kontakt os!
     heading: Kom nemt i gang
     image: /img/simpelt-billetsystem.png
+    image_alt: "Splash"
+
     text: >-
       Giv os dit logo og brandfarver og du har dit eget billetsystem inden for
       et par dage. Vi designer systemet, så det ser lækkert ud til dit brand.
@@ -75,6 +87,8 @@ sections:
     button_text: Kontakt os!
     heading: Priser for alle
     image: /img/pricing_table.png
+    image_alt: "Splash"
+
     text: >-
       Om du repræsenterer et stort firma, et startup eller en énmandshær, står
       vi klar til at imødekomme dine behov, uanset om du bruger vores gratis

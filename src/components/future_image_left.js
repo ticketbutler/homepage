@@ -318,8 +318,8 @@ const RightBox = styled.div`
 
 const SquareShape_1 = styled.div`
   position: absolute;
-  top: 12%;
-  right: 7%;
+  top: 10%;
+  right: 10%;
 
   > div.shape {
     width: 42px;
@@ -373,9 +373,14 @@ const SquareShape_1 = styled.div`
       }
     }
   }
-  @media (max-width: 370px) {
-    top: 48%;
-    right: 10%;
+  @media (max-width: 540px) {
+    top: 45%;
+    right: -1%;
+  }
+
+  @media (max-width: 376px) {
+    top: 45%;
+    right: 0%;
     > div.shape {
       width: 36px;
       height: 36px;
@@ -384,12 +389,19 @@ const SquareShape_1 = styled.div`
       }
     }
   }
+  @media (max-width: 332px) {
+    top: 39%;
+    right: -1%;
+  }
+  @media (max-width: 294px) {
+    top: 38%;
+  }
 `;
 
 const SquareShape_2 = styled.div`
   position: absolute;
   top: 55%;
-  right: 49%;
+  right: 52%;
 
   > div.shape {
     width: 42px;
@@ -418,9 +430,14 @@ const SquareShape_2 = styled.div`
     border: 4px solid #dd52e8;
   }
 
+  @media (max-width: 1380px) {
+    top: 28%;
+    right: 50%;
+  }
+
   @media (max-width: 1080px) {
-    top: 65%;
-    left: 15%;
+    top: 40%;
+    left: 8%;
     > div.shape {
       > span {
         opacity: 0.8;
@@ -435,7 +452,9 @@ const SquareShape_2 = styled.div`
     }
   }
   @media (max-width: 600px) {
-    left: 8%;
+    top: 39%;
+
+    left: 7%;
 
     > div.shape {
       width: 40px;
@@ -445,8 +464,12 @@ const SquareShape_2 = styled.div`
       }
     }
   }
+  @media (max-width: 450px) {
+    top: 35%;
+    left: 0;
+  }
   @media (max-width: 370px) {
-    top: 44%;
+    top: 35%;
     > div.shape {
       width: 36px;
       height: 36px;
@@ -459,8 +482,8 @@ const SquareShape_2 = styled.div`
 
 const CircleShape = styled.div`
   position: absolute;
-  bottom: 15%;
-  right: 10%;
+  bottom: 20%;
+  right: 20%;
 
   > div.shape {
     width: 55px;
@@ -496,7 +519,18 @@ const CircleShape = styled.div`
     left: 20%;
   }
 
+  @media (max-width: 1650px) {
+    bottom: 15%;
+    right: 35%;
+  }
+
+  @media (max-width: 1200px) {
+    bottom: 20%;
+    right: 35%;
+  }
+
   @media (max-width: 1080px) {
+    top: 90%;
     right: 20%;
     > div.shape {
       > span {
@@ -512,8 +546,8 @@ const CircleShape = styled.div`
     }
   }
   @media (max-width: 600px) {
-    top: 83%;
-    right: 25%;
+    top: 90%;
+    right: 12%;
 
     > div.shape {
       width: 40px;
@@ -524,7 +558,8 @@ const CircleShape = styled.div`
     }
   }
   @media (max-width: 370px) {
-    top: 80%;
+    top: 93%;
+    left: 8%;
     > div.shape {
       width: 36px;
       height: 36px;
@@ -547,12 +582,13 @@ const FutureImageIeft = ({
   text,
   button_text,
   image,
+  image_alt,
   button_link
 }) => (
   <Section className="section-3 container">
     <LeftBox id="left-box">
       <figure>
-        <img className="device" src={image} />
+        <img className="device" alt={image_alt} src={image} />
         {/* <img className="content" src={require('../img/img-7.jpg')}/>   */}
       </figure>
     </LeftBox>

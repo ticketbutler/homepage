@@ -378,7 +378,7 @@ const Contact_page = ({ items }) => (
   <Section id="contact">
     <div className="container">
       <LeftBox className="left-box contact">
-        <h1>Contact US!</h1>
+        <h1>Kontakt</h1>
         <form
           className="contact-form"
           name="contact-form"
@@ -389,25 +389,25 @@ const Contact_page = ({ items }) => (
           <ul>
             <li>
               <label>
-                <span className="floating-label">Your Name</span>
+                <span className="floating-label">Dit navn</span>
                 <input type="text" name="name" id="align-left" />
               </label>
             </li>
             <li>
               <label>
-                <span className="floating-label">Your Email</span>
+                <span className="floating-label">Din email</span>
                 <input type="email" name="email" id="align-right" />
               </label>
             </li>
             <li id="message-field">
               <label>
-                <span className="floating-label">Message</span>
+                <span className="floating-label">Besked</span>
                 <textarea name="message" />
               </label>
             </li>
           </ul>
           <Button>
-            <span>Send Message</span>
+            <span>Send besked</span>
           </Button>
           <div className="clear-fix" />
         </form>
@@ -417,17 +417,17 @@ const Contact_page = ({ items }) => (
           <ul>
             <li>
               <i className="fa fa-map-marker" />
-              <span>Address</span>
+              <span>Adresse </span>
               <span id="address"> {items.address}</span>
             </li>
             <li>
               <i className="fa fa-phone" />
-              <span>Phone</span>
+              <span>Telefon</span>
               <span id="phone">{items.phone}</span>
             </li>
             <li>
               <i className="fa fa-envelope" />
-              <span>General soppurt</span>
+              <span>Generel support</span>
               <span id="support">{items.support}</span>
             </li>
           </ul>

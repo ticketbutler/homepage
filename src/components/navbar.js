@@ -463,8 +463,8 @@ const NavbarSection = ({ items }) => {
             </li>
           </ul>
         </div>
-        <a href="#">
-          <span>Login</span>
+        <a href="#contact">
+          <span>Kontakt</span>
         </a>
       </Login_Lang>
       <div className="clear-fix" />

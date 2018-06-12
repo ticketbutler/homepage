@@ -45,11 +45,7 @@ const SectionImage = styled.div`
     z-index: 2;
     top: -200px;
     transition: 0.3s;
-
-    &:hover {
-      z-index: 4;
-      box-shadow: 5px 5px 10px -4px rgba(0, 0, 0, 0.35);
-    }
+    box-shadow: 5px 5px 10px -4px rgba(0, 0, 0, 0.15);
   }
   @media (max-width: 1440px) {
     > img {
@@ -449,10 +445,17 @@ const DivShape = styled.div`
 //     })
 //   })
 
-const FutureLayers = ({ heading, text, button_text, image, button_link }) => (
+const FutureLayers = ({
+  heading,
+  text,
+  button_text,
+  image,
+  image_alt,
+  button_link
+}) => (
   <Section className="section-6">
     <SectionImage className="image">
-      <img className="content_image" src={image} />
+      <img alt={image_alt} className="content_image" src={image} />
     </SectionImage>
 
     <SectionContent id="section-content">

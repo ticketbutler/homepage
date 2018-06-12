@@ -240,12 +240,8 @@ const HeaderContent = styled.div`
   }
 `;
 
-
-
-
 const Header = ({ heading, text, button_text, button_link }) => {
   return (
-
     <HeaderTag id="header">
       <div id="navActive_back" />
       <HeaderContent className="header_content">

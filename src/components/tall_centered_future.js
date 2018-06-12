@@ -36,7 +36,7 @@ const BlueBackground = styled.div`
 
 const Content = styled.div`
   > h1 {
-    width: 566px;
+    width: 70%;
     display: block;
     margin: 0 auto;
     margin-top: 0px;
@@ -50,7 +50,7 @@ const Content = styled.div`
   }
 
   > h3 {
-    width: 514px;
+    width: 65%;
     display: block;
     margin: 0 auto;
     color: #ffffff;
@@ -60,6 +60,7 @@ const Content = styled.div`
     line-height: 38px;
     font-weight: 500;
     text-align: center;
+    margin-bottom: 80px;
   }
 
   > img {
@@ -240,6 +241,8 @@ const SquareShape = styled.div`
   }
 
   @media (max-width: 768px) {
+    top: 42%;
+
     > div.shape {
       width: 50px;
       height: 50px;
@@ -250,8 +253,8 @@ const SquareShape = styled.div`
   }
 
   @media (max-width: 600px) {
-    top: 30%;
-    right: 3%;
+    top: 50%;
+    right: 6%;
 
     > div.shape {
       width: 45px;
@@ -262,8 +265,8 @@ const SquareShape = styled.div`
     }
   }
 
-  @media (max-width: 370px) {
-    top: 35%;
+  @media (max-width: 376px) {
+    top: 45%;
 
     > div.shape {
       > span {
@@ -327,8 +330,8 @@ const TriangleShape = styled.div`
   }
 
   @media (max-width: 600px) {
-    top: 20%;
-    left: 12%;
+    top: 6%;
+    left: -2%;
     > div.shape {
       width: 63px;
       height: 63px;
@@ -340,9 +343,9 @@ const TriangleShape = styled.div`
     }
   }
 
-  @media (max-width: 370px) {
-    top: 17%;
-    left: 10%;
+  @media (max-width: 376px) {
+    top: 15%;
+    left: 4%;
     > div.shape {
       width: 50px;
       height: 50px;
@@ -359,6 +362,7 @@ const TallCenteredFuture = ({
   text,
   button_text,
   image,
+  image_alt,
   button_link
 }) => (
   <Section className="section-4">
@@ -366,7 +370,7 @@ const TallCenteredFuture = ({
     <Content>
       <h1>{heading}</h1>
       <h3>{text}</h3>
-      <img src={image} />
+      <img alt={image_alt} src={image} />
       <a href={button_link}>
         <span>{button_text}</span>
       </a>

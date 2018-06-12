@@ -164,10 +164,11 @@ const RightBox = styled.div`
     clear: both;
   }
   > img {
+    max-width: 524px;
     height: 425px;
-    max-width: 850px;
+    object-fit: cover;
     position: absolute;
-    right: -130px;
+    right: 0px;
     z-index: 2;
   }
 
@@ -304,6 +305,247 @@ const RightBox = styled.div`
   }
 `;
 
+const SquareShape_1 = styled.div`
+  position: absolute;
+  top: -30%;
+  left: 10%;
+
+  > div.shape {
+    width: 42px;
+    height: 42px;
+    margin: 1px;
+    position: relative;
+    > span {
+      display: inline-block;
+      width: 80%;
+      height: 80%;
+      // background-color: #FFF;
+      position: absolute;
+      transform: scaleY(-1);
+    }
+  }
+
+  > div.shape span#first {
+    top: 0;
+    right: 0;
+    border: 4px solid #7e52e8;
+    z-index: -1;
+  }
+  > div.shape span#second {
+    bottom: 0;
+    border: 4px solid #28d8a7;
+    left: 0;
+    z-index: -2;
+  }
+
+  @media (max-width: 1080px) {
+    top: -20%;
+    left: 8%;
+    > div.shape {
+      > span {
+        opacity: 0.8;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    top: -15%;
+
+    > div.shape {
+      > span {
+        opacity: 0.7;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    > div.shape {
+      width: 40px;
+      height: 40px;
+      > span {
+        opacity: 0.5;
+      }
+    }
+  }
+  @media (max-width: 370px) {
+    top: -25%;
+    right: 8%;
+    > div.shape {
+      width: 36px;
+      height: 36px;
+      > span {
+        opacity: 0.4;
+      }
+    }
+  }
+`;
+
+const SquareShape_2 = styled.div`
+  position: absolute;
+  top: 40%;
+  right: 0%;
+
+  > div.shape {
+    width: 42px;
+    height: 42px;
+    margin: 1px;
+    position: relative;
+    > span {
+      display: inline-block;
+      width: 80%;
+      height: 80%;
+      position: absolute;
+      transform: scaleY(-1);
+    }
+  }
+
+  > .shape span#first {
+    top: 0;
+    right: 0;
+    z-index: -1;
+    border: 4px solid #7e52e8;
+  }
+  > .shape span#second {
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+    border: 4px solid #dd52e8;
+  }
+
+  @media (max-width: 1380px) {
+    top: 25%;
+    right: 40%;
+  }
+
+  @media (max-width: 1160px) {
+    top: 20%;
+    right: 20%;
+  }
+
+  @media (max-width: 1080px) {
+    top: 62%;
+    right: -1%;
+    > div.shape {
+      > span {
+        opacity: 0.8;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    > div.shape {
+      > span {
+        opacity: 0.7;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    > div.shape {
+      width: 40px;
+      height: 40px;
+      > span {
+        opacity: 0.5;
+      }
+    }
+  }
+  @media (max-width: 370px) {
+    top: 35%;
+    > div.shape {
+      width: 36px;
+      height: 36px;
+      > span {
+        opacity: 0.4;
+      }
+    }
+  }
+`;
+
+const CircleShape = styled.div`
+  position: absolute;
+  top: 105%;
+  left: 70%;
+
+  > div.shape {
+    width: 55px;
+    height: 55px;
+    margin: 1px;
+    position: relative;
+    > span {
+      display: inline-block;
+      width: 80%;
+      height: 80%;
+      position: absolute;
+      transform: scaleY(-1);
+    }
+  }
+
+  > .shape span#first {
+    top: 0;
+    z-index: -1;
+    background-color: #dd52e8;
+    border: none;
+    border-radius: 50%;
+    left: 0;
+    // opacity: .85;
+  }
+  > .shape span#second {
+    bottom: 0;
+    z-index: -2;
+
+    background-color: #326de9;
+    border: none;
+    border-radius: 50%;
+    // opacity: .6;
+    left: 20%;
+  }
+
+  @media (max-width: 1650px) {
+    bottom: 15%;
+    left: 35%;
+  }
+
+  @media (max-width: 1200px) {
+    bottom: 20%;
+    right: 35%;
+  }
+
+  @media (max-width: 1080px) {
+    top: 90%;
+    right: 20%;
+    > div.shape {
+      > span {
+        opacity: 0.8;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    > div.shape {
+      > span {
+        opacity: 0.7;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    top: 90%;
+    right: 12%;
+
+    > div.shape {
+      width: 40px;
+      height: 40px;
+      > span {
+        opacity: 0.5;
+      }
+    }
+  }
+  @media (max-width: 370px) {
+    top: 93%;
+    left: 8%;
+    > div.shape {
+      width: 36px;
+      height: 36px;
+      > span {
+        opacity: 0.4;
+      }
+    }
+  }
+`;
 // $(document).ready(()=> {
 //     $("#right-box-2").css({
 //       "transform": "translateX(0)",
@@ -311,10 +553,10 @@ const RightBox = styled.div`
 //     })
 //   })
 
-const FutureImageRightSecond = ({ heading, text, image }) => (
+const FutureImageRightSecond = ({ heading, text, image, image_alt }) => (
   <Section>
     <RightBox id="right-box-2">
-      <img src={image} />
+      <img alt={image_alt} src={image} />
       <div className="first-box blue" />
       <div className="second-box green" />
       <div className="clear-fix" />
@@ -322,6 +564,24 @@ const FutureImageRightSecond = ({ heading, text, image }) => (
     <LeftBox>
       <h1>{heading}</h1>
       <h3>{text}</h3>
+      <SquareShape_1>
+        <div className="shape">
+          <span id="first" />
+          <span id="second" />
+        </div>
+      </SquareShape_1>
+      <SquareShape_2>
+        <div className="shape">
+          <span id="first" />
+          <span id="second" />
+        </div>
+      </SquareShape_2>
+      <CircleShape>
+        <div className="shape">
+          <span id="first" />
+          <span id="second" />
+        </div>
+      </CircleShape>
     </LeftBox>
 
     <div className="clear-fix" />

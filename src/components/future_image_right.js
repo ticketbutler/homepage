@@ -169,6 +169,7 @@ const RightBox = styled.div`
     height: 425px;
     width: 624px;
     position: absolute;
+    object-fit: cover;
     top: 50px;
     right: 0px;
     z-index: 2;
@@ -312,11 +313,11 @@ const RightBox = styled.div`
 //       "opacity": "1",
 //     })
 //   })
-const FutureImageRight = ({ heading, text, image }) => {
+const FutureImageRight = ({ heading, text, image, image_alt }) => {
   return (
     <Section>
       <RightBox id="right-box">
-        <img src={image} />
+        <img alt={image_alt} src={image} />
         <div className="first-box green" />
         <div className="second-box blue" />
         <div className="clear" />
