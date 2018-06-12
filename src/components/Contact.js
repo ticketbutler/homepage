@@ -55,25 +55,16 @@ const LeftBox = styled.div`
                         border: 1px solid #CCC;
                         border-radius: 4px;
                         position: relative;
-                        
+                        &::placeholder{
+                            font-size: 15px;
+                        }
                         
                     }
                     input:focus ~ span.floating-label{
                         font-size: 10px;
                       
                     }
-                    > span.floating-label {
-                        position: absolute;
-                        line-height: 40px;
-                        z-index: 100;
-                   
-                        left: 15px;
-                        font-family: Montserrat;
-                        font-size: 14px;
-                        opacity: .85;
-                    
 
-                    }
                 }
                 
                 &#message-field {
@@ -91,6 +82,9 @@ const LeftBox = styled.div`
                             padding: 4px 15px;
                             border: 1px solid #CCC;
                             border-radius: 4px;
+                            &::placeholder{
+                                font-size: 15px;
+                            }
                         }
                     }
                    
@@ -191,7 +185,7 @@ const LeftBox = styled.div`
 const Button = styled.button`
 margin-top: 40px;
 float: left;
-height: 50px;
+height: 55px;
 width: 200px;
 display: block;
 float:left;
@@ -323,7 +317,7 @@ const RightBox = styled.div`
                 opacity: .5;
                 font-size: 16px;
             }
-            }	
+        }	
         }
     }
 
@@ -389,20 +383,17 @@ const Contact_page = ({ items }) => (
           <ul>
             <li>
               <label>
-                <span className="floating-label">Dit navn</span>
-                <input type="text" name="name" id="align-left" />
+                <input type="text" name="name" id="align-left" placeholder="Dit navn"/>
               </label>
             </li>
             <li>
               <label>
-                <span className="floating-label">Din email</span>
-                <input type="email" name="email" id="align-right" />
+                <input type="email" name="email" id="align-right" placeholder="Din email" />
               </label>
             </li>
             <li id="message-field">
               <label>
-                <span className="floating-label">Besked</span>
-                <textarea name="message" />
+                <textarea name="message" placeholder="Besked"/>
               </label>
             </li>
           </ul>

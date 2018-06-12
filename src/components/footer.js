@@ -28,8 +28,6 @@ const FooterTag = styled.footer`
   }
 `;
 
-
-
 const ContentDiv = styled.div`
     width: 100%;
     height: 140px;
@@ -97,168 +95,161 @@ const ContentDiv = styled.div`
 }`;
 
 const TopFooter = styled.div`
-    width: 100%;
-    height: 500px;
-    dislpay:block;
-    padding: 100px 0px;
-    padding-bottom: 20px;
+  width: 100%;
+  height: 500px;
+  dislpay: block;
+  padding: 100px 0px;
+  padding-bottom: 20px;
 
+  > div#footer_logo {
+    width: 25%;
+    display: inline;
+    float: left;
+
+    > h1 {
+      height: 51px;
+      font-family: Hind;
+      font-size: 32px;
+      font-weight: bold;
+      letter-spacing: -0.8px;
+      line-height: 51px;
+      background: linear-gradient(to right, #326de9, #7e52e8);
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+    > span {
+      height: 38px;
+      color: #868e99;
+      font-family: Montserrat;
+      font-size: 15px;
+      letter-spacing: 1.15px;
+      line-height: 19px;
+    }
+  }
+
+  > ul {
+    width: 25%;
+    margin: 0;
+    height: 100%;
+    display: inlnie;
+    float: left;
+
+    h3 {
+      height: 19px;
+
+      color: #356be9;
+      font-family: Montserrat;
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: 1.15px;
+      line-height: 19px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 12em;
+    }
+    li {
+      list-style: none;
+      height: 19px;
+      font-family: Montserrat;
+      font-size: 15px;
+      font-weight: 300;
+      letter-spacing: 1.15px;
+      line-height: 19px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 12em;
+      transition: all 0.3s ease;
+
+      a {
+        text-decoration: none;
+        color: #868e99;
+        &:hover {
+          text-decoration: none;
+          color: #333f52;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 812px) {
     > div#footer_logo {
-        width: 25%;
-        display:inline;
-        float:left;
-       
-
-        > h1{
-            height: 51px;		
-            font-family: Hind;	
-            font-size: 32px;	
-            font-weight: bold;	
-            letter-spacing: -0.8px;	
-            line-height: 51px;
-            background: linear-gradient(to right, #326DE9, #7E52E8);
-            color:transparent;
-            -webkit-background-clip: text;
-            background-clip: text;
-        }
-        >span {
-            height: 38px;	
-            color: #868E99;	
-            font-family: Montserrat;	
-            font-size: 15px;	
-            letter-spacing: 1.15px;	
-            line-height: 19px;
-        }
+      width: 50%;
+      padding-left: 5%;
+      > h1 {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      > span {
+      }
     }
-
     > ul {
-        width: 25%;
-        margin: 0;
-        height: 100%;
-        display:inlnie; 
-        float: left;
-       
-        h3{
-            height: 19px;	
-   	
-            color: #356BE9;	
-            font-family: Montserrat;	
-            font-size: 15px;	
-            font-weight: bold;	
-            letter-spacing: 1.15px;	
-            line-height: 19px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 12em;
-        }
-        li{
-            list-style: none;	
-            height: 19px;		
-            font-family: Montserrat;	
-            font-size: 15px;	
-            font-weight: 300;	
-            letter-spacing: 1.15px;	
-            line-height: 19px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 12em;
-            transition: all .3s ease;
+      width: 50%;
+      height: auto;
 
-            a{
-                text-decoration:none;
-                color: #868E99;	
-              &:hover {
-                  text-decoration:none;
-                  color:  #333F52;
-                  cursor: pointer;
-              }
-            }
-            
-        }
+      margin-bottom: 40px;
     }
+  }
 
-    @media (max-width: 812px) {
-        > div#footer_logo{
-            width: 50%; 
-            padding-left: 5%;
-           > h1 {
-                margin-left: auto;
-                margin-right: auto;
-                
-                
-            }
-           > span{
-            }
-        }
-        > ul {
-            width: 50%;
-            height: auto;
-            
-                margin-bottom: 40px;
-
-            
-        }
+  @media (max-width: 462px) {
+    > div#footer_logo {
+      width: 100%;
+      padding-left: 0%;
+      > h1 {
+        text-align: center;
+      }
+      > span {
+        text-align: center;
+        display: block;
+        margin-bottom: 50px;
+      }
     }
+    > ul {
+      width: 100%;
+      text-align: center;
 
-    @media (max-width: 462px) {
-        > div#footer_logo{
-            width: 100%; 
-            padding-left: 0%;
-           > h1 {
-               text-align:center;   
-            }
-           > span{
-                 text-align:center;
-                 display:block;
-                 margin-bottom: 50px;
-
-            }
-        }
-        > ul {
-            width: 100%;
-            text-align: center;
-            
-                margin-bottom: 40px;
-
-            
-        }
+      margin-bottom: 40px;
     }
+  }
 `;
 
 const Footer = ({ features, integration, company, items }) => (
   <FooterTag>
-      <TopFooter>
-          <div id="footer_logo">
-            <h1>tickerbutler</h1>
-            <span>2018 TicketButler IVS <br/> CVR: 38404687</span>
-          </div>
+    <TopFooter>
+      <div id="footer_logo">
+        <h1>tickerbutler</h1>
+        <span>
+          2018 TicketButler IVS <br /> CVR: 38404687
+        </span>
+      </div>
 
-          <ul className="Future footer_ul">
-            <h3>Furtures</h3>
-            {features.map(item => (
-                <li>
-                    <a href={item.path}>{item.label}</a>
-                </li>
-            ))}
-          </ul>
-          <ul className="Integration footer_ul">
-            <h3>Integration</h3>
+      <ul className="Future footer_ul">
+        <h3>Furtures</h3>
+        {features.map(item => (
+          <li>
+            <a href={item.path}>{item.label}</a>
+          </li>
+        ))}
+      </ul>
+      <ul className="Integration footer_ul">
+        <h3>Integration</h3>
 
-              {integration.map(item => (
-                <li>
-                    <a href={item.path}>{item.label}</a>
-                </li>
-            ))}
-          </ul>
-          <ul className="Company footer_ul">
-            <h3>Company</h3>
-            {company.map(item => (
-                <li>
-                    <a href={item.path}>{item.label}</a>
-                </li>
-            ))}
-          </ul>
-      </TopFooter>
+        {integration.map(item => (
+          <li>
+            <a href={item.path}>{item.label}</a>
+          </li>
+        ))}
+      </ul>
+      <ul className="Company footer_ul">
+        <h3>Company</h3>
+        {company.map(item => (
+          <li>
+            <a href={item.path}>{item.label}</a>
+          </li>
+        ))}
+      </ul>
+    </TopFooter>
     <ContentDiv>
       {items.map(item => (
         <a href={item.path}>

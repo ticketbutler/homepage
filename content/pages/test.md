@@ -94,5 +94,14 @@ sections:
       vi klar til at imødekomme dine behov, uanset om du bruger vores gratis
       løsning eller en skræddersyet løsning.
     type: tall_centered_future
+  - heading: Byg din fanbase op
+    image: /img/billetsystem-til-koncerter.png
+    image_alt: "Splash"
+
+    text: >-
+      Mon ikke dine gæster også er interesserede i dine kommende begivenheder?
+      Vi spørger altid dine gæster om de vil skrive sig op til dit nyhedsbrev,
+      så du hurtigt kan bygge en fanbase op. Du fortjener det!
+    type: future_image_right_new
 ---
 

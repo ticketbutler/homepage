@@ -25,7 +25,7 @@ const Section = styled.section`
 `;
 const LeftBox = styled.div`
   display: inline-block;
-  margin-top: 110px;
+  margin-top: 50px;
   width: 50%;
   float: left;
   position: relative;
@@ -164,7 +164,7 @@ const RightBox = styled.div`
     clear: both;
   }
   > img {
-    max-width: 524px;
+    max-width: 480px;
     height: 425px;
     object-fit: cover;
     position: absolute;
@@ -181,17 +181,6 @@ const RightBox = styled.div`
     background-color: #326de9;
   }
 
-  > div.second-box.green {
-    position: absolute;
-    top: 135px;
-    right: 160px;
-    height: 340px;
-    width: 448px;
-    z-index: 1;
-    background-color: #1dc9cc;
-    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
-    clip-path: polygon(0 0, 0% 100%, 100% 100%);
-  }
 
   > div.clear-fix {
     clear: both;
@@ -224,13 +213,6 @@ const RightBox = styled.div`
       height: 320px;
     }
 
-    > div.second-box.green {
-      right: 150px;
-      width: 390px;
-      height: 300px;
-      top: 120px;
-    }
-
     > img {
       right: -90px;
       height: 380px;
@@ -243,14 +225,6 @@ const RightBox = styled.div`
     width: 100%;
 
     > div.first-box.blue {
-      top: -50px;
-      height: 400px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 760px;
-    }
-
-    > div.second-box.green {
       top: -50px;
       height: 400px;
       left: 50%;
@@ -284,14 +258,6 @@ const RightBox = styled.div`
       // left: 0;
       top: -15%;
     }
-
-    > div.second-box.green {
-      // display: none;
-      top: -15%;
-      // left: 0;
-      width: 100%;
-      height: 100%;
-    }
     > img {
       height: auto;
       width: 100%;
@@ -305,7 +271,7 @@ const RightBox = styled.div`
   }
 `;
 
-const SquareShape_1 = styled.div`
+const SquareShape = styled.div`
   position: absolute;
   top: -30%;
   left: 10%;
@@ -378,85 +344,6 @@ const SquareShape_1 = styled.div`
   }
 `;
 
-const SquareShape_2 = styled.div`
-  position: absolute;
-  top: 40%;
-  right: 0%;
-
-  > div.shape {
-    width: 42px;
-    height: 42px;
-    margin: 1px;
-    position: relative;
-    > span {
-      display: inline-block;
-      width: 80%;
-      height: 80%;
-      position: absolute;
-      transform: scaleY(-1);
-    }
-  }
-
-  > .shape span#first {
-    top: 0;
-    right: 0;
-    z-index: -1;
-    border: 4px solid #7e52e8;
-  }
-  > .shape span#second {
-    bottom: 0;
-    left: 0;
-    z-index: -2;
-    border: 4px solid #dd52e8;
-  }
-
-  @media (max-width: 1380px) {
-    top: 25%;
-    right: 40%;
-  }
-
-  @media (max-width: 1160px) {
-    top: 20%;
-    right: 20%;
-  }
-
-  @media (max-width: 1080px) {
-    top: 62%;
-    right: -1%;
-    > div.shape {
-      > span {
-        opacity: 0.8;
-      }
-    }
-  }
-  @media (max-width: 768px) {
-    > div.shape {
-      > span {
-        opacity: 0.7;
-      }
-    }
-  }
-  @media (max-width: 600px) {
-    > div.shape {
-      width: 40px;
-      height: 40px;
-      > span {
-        opacity: 0.5;
-      }
-    }
-  }
-  @media (max-width: 370px) {
-    top: 35%;
-    > div.shape {
-      width: 36px;
-      height: 36px;
-      > span {
-        opacity: 0.4;
-      }
-    }
-  }
-`;
-
 const CircleShape = styled.div`
   position: absolute;
   top: 105%;
@@ -489,7 +376,7 @@ const CircleShape = styled.div`
     bottom: 0;
     z-index: -2;
 
-    background-color: #326de9;
+    background-color: #326DE9;
     border: none;
     border-radius: 50%;
     opacity: 0.54;
@@ -546,36 +433,88 @@ const CircleShape = styled.div`
     }
   }
 `;
-// $(document).ready(()=> {
-//     $("#right-box-2").css({
-//       "transform": "translateX(0)",
-//       "opacity": "1",
-//     })
-//   })
+const TriangleShape = styled.div`
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  right: 30%;
+  > div.shape {
+    width: 200px;
+    height: 200px;
+    margin: 1px;
+    position: relative;
+    transform: rotate(-40deg);
+    > span {
+      opacity: 0.9;
+      color: transparent;
+      font-size: 200px;
+    }
+    > span#first {
+      -webkit-text-stroke: 20px #28d8a7;
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      top: 0;
+    }
+    > span#second {
+      -webkit-text-stroke: 20px #7E52E8;
+      position: absolute;
+      z-index: 1;
 
-const FutureImageRightSecond = ({ heading, text, image, image_alt }) => (
+      left: 0;
+      top: 35%;
+    }
+  }
+
+  @media (max-width: 1080px) {
+    top: 20%;
+    right: 15%;
+    > div.shape {
+        transform: rotate(40deg);
+    }
+  }
+
+  @media (max-width: 650px) {
+    top: 10%;
+    right: 5%;
+    > div.shape {
+        width: 100px;
+        height: 100px;
+        transform: rotate(40deg);
+        > span {
+          font-size: 100px;
+        }
+        > span#first {
+          -webkit-text-stroke: 10px #28d8a7;
+        }
+        > span#second {
+          -webkit-text-stroke: 10px #7E52E8;
+        }
+    }
+  }
+
+  @media (max-width: 300px) {
+    top: 15%;
+  }
+
+`;
+
+const FutureImageRightNew = ({ heading, text, image, image_alt }) => (
   <Section>
     <RightBox id="right-box-2">
       <img alt={image_alt} src={image} />
       <div className="first-box blue" />
-      <div className="second-box green" />
       <div className="clear-fix" />
     </RightBox>
     <LeftBox>
       <h1>{heading}</h1>
       <h3>{text}</h3>
-      <SquareShape_1>
+      <SquareShape>
         <div className="shape">
           <span id="first" />
           <span id="second" />
         </div>
-      </SquareShape_1>
-      <SquareShape_2>
-        <div className="shape">
-          <span id="first" />
-          <span id="second" />
-        </div>
-      </SquareShape_2>
+      </SquareShape>
       <CircleShape>
         <div className="shape">
           <span id="first" />
@@ -583,6 +522,13 @@ const FutureImageRightSecond = ({ heading, text, image, image_alt }) => (
         </div>
       </CircleShape>
     </LeftBox>
+
+     <TriangleShape>
+      <div className="shape">
+        <span id="first">&#x25BC;</span>
+        <span id="second">&#x25BC;</span>
+      </div>
+    </TriangleShape>
 
     <div className="clear-fix" />
 
@@ -600,4 +546,4 @@ const FutureImageRightSecond = ({ heading, text, image, image_alt }) => (
   </Section>
 );
 
-export default FutureImageRightSecond;
+export default FutureImageRightNew;
