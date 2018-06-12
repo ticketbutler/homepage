@@ -8,6 +8,20 @@ const Section = styled.section`
   position: relative;
   bacground: #ccc;
   padding: 110px;
+  margin-top:180px;
+  @media (max-width: 1500px) {
+     margin-top: 140px;
+
+  }
+  @media (max-width: 1250px) {
+    margin-top:120px;
+    
+  }
+  @media (max-width: 1080px) {
+     margin-top:100px;
+
+    padding: 80px;
+  }
   @media (max-width: 768px) {
     padding: 80px;
   }
@@ -37,10 +51,6 @@ const BlueBackground = styled.div`
     
   }
 
-  @media (max-width: 400px) {
-    height: 90%;
-    
-  }
 `;
 
 const Content = styled.div`
