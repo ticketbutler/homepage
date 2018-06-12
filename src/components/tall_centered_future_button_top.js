@@ -8,17 +8,17 @@ const Section = styled.section`
   position: relative;
   bacground: #ccc;
   padding: 110px;
-  margin-top:180px;
+  margin-top:140px;
   @media (max-width: 1500px) {
      margin-top: 140px;
 
   }
   @media (max-width: 1250px) {
-    margin-top:120px;
+    margin-top:100px;
     
   }
   @media (max-width: 1080px) {
-     margin-top:100px;
+     margin-top:70px;
 
     padding: 80px;
   }

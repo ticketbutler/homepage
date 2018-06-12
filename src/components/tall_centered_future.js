@@ -32,6 +32,7 @@ const BlueBackground = styled.div`
   background: linear-gradient(295.21deg, #326de9 0%, #7e52e8 100%);
   background-size: cover;
   text-align: center;
+  margin-top: 50px;
 `;
 
 const Content = styled.div`
