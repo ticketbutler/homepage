@@ -2,6 +2,8 @@
 path: /pris
 title: pris
 sections:
+  - heading: Priser for alle
+    type: header
   - heading: Gratis for betalte arrangementer
     text: >-
       Det er helt gratis at sælge billetter på Ticketbutler – kun et lavt
