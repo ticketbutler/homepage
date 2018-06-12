@@ -8,6 +8,9 @@ export const Layout = ({
   children,
   TopMenu = [],
   FooterMenu = [],
+  Features = [],
+  Integration = [],
+  Company = [],
   Contact = []
 }) => (
   <div>
@@ -15,7 +18,7 @@ export const Layout = ({
     {typeof children === "function" ? children() : children}
     <Contact_page items={Contact} />
 
-    <Footer items={FooterMenu} />
+    <Footer items={FooterMenu} features={Features} integration={Integration} company={Company}/>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-70000511-3"

@@ -33,6 +33,29 @@ collections:
         fields:
           - { name: label, label: Label }
           - { name: path, label: Path }
+          
+      - name: features
+        label: Features
+        widget: list
+        fields:
+          - { name: label, label: Label }
+          - { name: path, label: Path }
+
+      - name: integration
+        label: Integration
+        widget: list
+        fields:
+          - { name: label, label: Label }
+          - { name: path, label: Path }
+
+      - name: company
+        label: Company
+        widget: list
+        fields:
+          - { name: label, label: Label }
+          - { name: path, label: Path }
+
+
 
   - name: contact
     label: Contact

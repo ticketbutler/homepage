@@ -1,6 +1,25 @@
 ---
 title: Footer
 path: main
+
+features: 
+  - label: Hello
+    path: /
+  - label: Did
+    path: /
+
+integration:
+  - label: Hello there
+    path: /
+  - label: Did !
+    path: /
+
+company: 
+  - label: About us
+    path: /
+  - label: contact
+    path: /
+
 items:
   - label: Private policy
     path: /
@@ -8,7 +27,7 @@ items:
     path: /
   - label: hello@ticketbutler.io
     path: /
-  - label: '2018 TicketButler IVS CVR: 384046870'
+  - label: Made WIth Love in Denamrk
     path: /
 ---
 

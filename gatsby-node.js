@@ -44,6 +44,21 @@ const query = `query IndexQuery {
             path
             label
           }
+
+          features {
+            path
+            label
+          }
+
+          integration {
+            path
+            label
+          }
+
+          company {
+            path
+            label
+          }
         }
       }
     }
@@ -83,7 +98,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               layout: {
                 TopMenu: TopMenu.edges[0].node.frontmatter.items,
                 FooterMenu: FooterMenu.edges[0].node.frontmatter.items,
-                Contact: Contact.edges[0].node.frontmatter
+                Features: FooterMenu.edges[0].node.frontmatter.features,
+                Integration: FooterMenu.edges[0].node.frontmatter.integration,
+                Company: FooterMenu.edges[0].node.frontmatter.company,
+                Contact: Contact.edges[0].node.frontmatter,
               }
             }
           });
