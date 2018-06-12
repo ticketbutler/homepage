@@ -70,15 +70,6 @@ sections:
     type: future_image_left
   - button_link: '#contact'
     button_text: Kontakt os!
-    heading: Kom nemt i gang
-    image: /img/simpelt-billetsystem.png
-    image_alt: Splash
-    text: >-
-      Giv os dit logo og brandfarver og du har dit eget billetsystem inden for
-      et par dage. Vi designer systemet, så det ser lækkert ud til dit brand.
-    type: future_image_right
-  - button_link: '#contact'
-    button_text: Kontakt os!
     heading: Priser for alle
     image: /img/pricing_table.png
     image_alt: Splash
@@ -86,6 +77,15 @@ sections:
       Om du repræsenterer et stort firma, et startup eller en énmandshær, står
       vi klar til at imødekomme dine behov, uanset om du bruger vores gratis
       løsning eller en skræddersyet løsning.
-    type: tall_centered_future
+    type: future_image_right
+  - button_link: '#contact'
+    button_text: Kontakt os!
+    heading: Kom nemt i gang
+    image: /img/simpelt-billetsystem.png
+    image_alt: Splash
+    text: >-
+      Giv os dit logo og brandfarver og du har dit eget billetsystem inden for
+      et par dage. Vi designer systemet, så det ser lækkert ud til dit brand.
+    type: tall_centered_future_button_top
 ---
 
