@@ -2,11 +2,11 @@
 title: Navbar
 path: main
 items:
-  - label: HJEM
+  - label: Hjem
     path: /
-  - label: KONTAKT
-    path: '#contact'
-  - label: PRIS
+  - label: Pris
     path: /pris
+  - label: Kontakt
+    path: '#contact'
 ---
 
