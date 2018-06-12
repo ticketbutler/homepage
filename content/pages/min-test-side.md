@@ -28,7 +28,7 @@ sections:
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: 'Hvilken pakke passer dig? '
-    image: /img/pricing_table.png
+    image: /img/pricing-table-2.0.png
     type: tall_centered_future
 ---
 
