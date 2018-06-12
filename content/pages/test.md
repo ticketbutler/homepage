@@ -56,8 +56,8 @@ sections:
       billetkøb fra smartphone, ingen brugeroprettelse og betaling med
       betalingskort eller MobilePay giver friktionsfri købsoplevelse.
     type: future_layers
-  - button_link: '#contact'
-    button_text: Kontakt os!
+  - button_link: ''
+    button_text: ''
     heading: Lær din gæster at kende
     image: /img/google-analytics-og-facebook-pixel-i-billetsystem.png
     image_alt: Splash
@@ -67,9 +67,9 @@ sections:
       optimér Facebook annoncer med Facebook Pixel, analysér dine kunder gennem
       Google Analytics og se sammenhængen mellem antallet af billetter solgt og
       din marketingstrategi. 
-    type: future_image_left
-  - button_link: '#contact'
-    button_text: Kontakt os!
+    type: future_image_right
+  - button_link: /pris
+    button_text: Se priser
     heading: Priser for alle
     image: /img/gratis-billetservice.png
     image_alt: Splash
@@ -77,7 +77,7 @@ sections:
       Om du repræsenterer et stort firma, et startup eller en énmandshær, står
       vi klar til at imødekomme dine behov, uanset om du bruger vores gratis
       løsning eller en skræddersyet løsning.
-    type: future_image_right
+    type: future_image_left
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: Kom nemt i gang
