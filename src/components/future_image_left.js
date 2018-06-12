@@ -502,7 +502,7 @@ const CircleShape = styled.div`
   > .shape span#first {
     top: 0;
     z-index: -1;
-    background-color: #DD52E8;
+    background-color: #dd52e8;
     border: none;
     border-radius: 50%;
     left: 0;

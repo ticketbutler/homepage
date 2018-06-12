@@ -181,7 +181,6 @@ const RightBox = styled.div`
     background-color: #326de9;
   }
 
-
   > div.clear-fix {
     clear: both;
   }
@@ -376,7 +375,7 @@ const CircleShape = styled.div`
     bottom: 0;
     z-index: -2;
 
-    background-color: #326DE9;
+    background-color: #326de9;
     border: none;
     border-radius: 50%;
     opacity: 0.54;
@@ -457,7 +456,7 @@ const TriangleShape = styled.div`
       top: 0;
     }
     > span#second {
-      -webkit-text-stroke: 20px #7E52E8;
+      -webkit-text-stroke: 20px #7e52e8;
       position: absolute;
       z-index: 1;
 
@@ -470,7 +469,7 @@ const TriangleShape = styled.div`
     top: 20%;
     right: 15%;
     > div.shape {
-        transform: rotate(40deg);
+      transform: rotate(40deg);
     }
   }
 
@@ -478,25 +477,24 @@ const TriangleShape = styled.div`
     top: 10%;
     right: 5%;
     > div.shape {
-        width: 100px;
-        height: 100px;
-        transform: rotate(40deg);
-        > span {
-          font-size: 100px;
-        }
-        > span#first {
-          -webkit-text-stroke: 10px #28d8a7;
-        }
-        > span#second {
-          -webkit-text-stroke: 10px #7E52E8;
-        }
+      width: 100px;
+      height: 100px;
+      transform: rotate(40deg);
+      > span {
+        font-size: 100px;
+      }
+      > span#first {
+        -webkit-text-stroke: 10px #28d8a7;
+      }
+      > span#second {
+        -webkit-text-stroke: 10px #7e52e8;
+      }
     }
   }
 
   @media (max-width: 300px) {
     top: 15%;
   }
-
 `;
 
 const FutureImageRightNew = ({ heading, text, image, image_alt }) => (
@@ -523,7 +521,7 @@ const FutureImageRightNew = ({ heading, text, image, image_alt }) => (
       </CircleShape>
     </LeftBox>
 
-     <TriangleShape>
+    <TriangleShape>
       <div className="shape">
         <span id="first">&#x25BC;</span>
         <span id="second">&#x25BC;</span>

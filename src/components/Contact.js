@@ -383,17 +383,27 @@ const Contact_page = ({ items }) => (
           <ul>
             <li>
               <label>
-                <input type="text" name="name" id="align-left" placeholder="Dit navn"/>
+                <input
+                  type="text"
+                  name="name"
+                  id="align-left"
+                  placeholder="Dit navn"
+                />
               </label>
             </li>
             <li>
               <label>
-                <input type="email" name="email" id="align-right" placeholder="Din email" />
+                <input
+                  type="email"
+                  name="email"
+                  id="align-right"
+                  placeholder="Din email"
+                />
               </label>
             </li>
             <li id="message-field">
               <label>
-                <textarea name="message" placeholder="Besked"/>
+                <textarea name="message" placeholder="Besked" />
               </label>
             </li>
           </ul>

@@ -18,7 +18,7 @@ export const Layout = ({
     <Navbar items={TopMenu} />
     {typeof children === "function" ? children() : children}
     <Contact_page items={Contact} />
-    <NewsLetter_Page/>
+    <NewsLetter_Page />
     <Footer
       items={FooterMenu}
       features={Features}

@@ -88,6 +88,7 @@ collections:
               - { label: Image right, value: future_image_right }
               - { label: Image left, value: future_image_left }
               - { label: Centerd Image Tall, value: tall_centered_future }
+              - { label: Centerd Image Tall Button Top, value: tall_centered_future_button_top}
               - { label: Image Right Second Style, value: future_image_right_second }
               - { label: Image Right New, value: future_image_right_new }
 

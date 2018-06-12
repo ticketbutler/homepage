@@ -25,55 +25,55 @@ const Section = styled.section`
 `;
 
 const Content = styled.div`
-    width: 100%;
-        > h1 {
-            display: block;
-            height: 140px;	
-            width: 566px;	
-            color: #333F52;	
-            font-family: Hind;	
-            font-size: 55px;	
-            font-weight: bold;	
-            line-height: 70px;	
-            text-align: center;
-            margin: auto;
-            margin-bottom: 50px;
-        }
+  width: 100%;
+  > h1 {
+    display: block;
+    height: 140px;
+    width: 566px;
+    color: #333f52;
+    font-family: Hind;
+    font-size: 55px;
+    font-weight: bold;
+    line-height: 70px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 50px;
+  }
 
-    > form {
-        display: inline-block;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        
-        label {
-            height: 60px;	
-            width: 350px;	
-            display:inline;
-            float:left;
-            position: relative;
-            input {
-                width: 100%;
-                height: 100%;
-                border: 1px solid #979797;
-                border-radius: 49px;
-                display: inline;
-                padding-left: 20px;
-            }
-        }
-        > button {
-            height: 60px;
-            width: 200px;
-            border-radius: 30px;
-            border: 0;
-            margin-left: 30px;
-            color: #fff;
-            background: linear-gradient(90deg, #326DE9 0%, #7E52E8 100%);
-            text-decoration: none;
-            &:hover {
-                text-decoration: none;
-            }
-        }
+  > form {
+    display: inline-block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    label {
+      height: 60px;
+      width: 350px;
+      display: inline;
+      float: left;
+      position: relative;
+      input {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #979797;
+        border-radius: 49px;
+        display: inline;
+        padding-left: 20px;
+      }
     }
+    > button {
+      height: 60px;
+      width: 200px;
+      border-radius: 30px;
+      border: 0;
+      margin-left: 30px;
+      color: #fff;
+      background: linear-gradient(90deg, #326de9 0%, #7e52e8 100%);
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 `;
 
 const Button = styled.button`
@@ -163,27 +163,31 @@ transition: all .3s;
 `;
 
 const Newsletter_Page = () => {
-    return (
-        <Section className="section-3 container">
-            <Content>
-                <h1>Join Ticketbutler newsletter</h1>
-                <form
-                 className="newsletter"
-                 name="newsletter"
-                 method="post"
-                 data-netlify="true"
-                 data-netlify-honeypot="bot-field"
-                >
-                    <label>
-                        <input name="email" type="email" placeholder="Din email here &#128522;"/>
-                    </label>
-                    <Button><span>Subscribe</span></Button>
-                </form>
-            </Content>
-            
-        </Section>
-    );
+  return (
+    <Section className="section-3 container">
+      <Content>
+        <h1>Join Ticketbutler newsletter</h1>
+        <form
+          className="newsletter"
+          name="newsletter"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
+          <label>
+            <input
+              name="email"
+              type="email"
+              placeholder="Din email here &#128522;"
+            />
+          </label>
+          <Button>
+            <span>Subscribe</span>
+          </Button>
+        </form>
+      </Content>
+    </Section>
+  );
 };
-
 
 export default Newsletter_Page;
