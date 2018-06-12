@@ -1,6 +1,6 @@
 ---
 path: /pris
-title: pris
+title: Pris
 sections:
   - heading: Priser for alle
     type: header
