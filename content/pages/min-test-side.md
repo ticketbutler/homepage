@@ -10,7 +10,7 @@ sections:
       hjælpe dig.
     type: header
   - heading: Gratis for betalte arrangementer
-    image: /img/confetti.jpg
+    image: /img/confetti.png
     text: >-
       Det er helt gratis at sælge billetter på Ticketbutler – kun et lavt
       billetgebyr lægges ovenpå billetprisen. Ingen kortgebyr. Ingen MobilePay
@@ -18,6 +18,7 @@ sections:
     type: future_image_right_second
   - button_text: Kontakt os!
     heading: Gratis events
+    image: /img/business-happy.png
     text: >-
       Nogensinde undret dig over hvorfor andre online billetsystemer er gratis
       til gratis arrangementer? Du betaler med værdien af data, branding og
