@@ -71,7 +71,7 @@ sections:
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: Priser for alle
-    image: /img/pricing_table.png
+    image: /img/gratis-billetservice.png
     image_alt: Splash
     text: >-
       Om du repræsenterer et stort firma, et startup eller en énmandshær, står
