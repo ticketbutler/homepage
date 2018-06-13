@@ -23,8 +23,8 @@ integration:
   - label: FAQ (på vej!)
     path: /
 company:
-  - label: Om Ticketbutler (på vej!)
-    path: /
+  - label: Om Ticketbutler
+    path: /about
   - label: Kontakt
     path: '#contact'
 ---
