@@ -15,11 +15,11 @@ const Section = styled.section`
   }
 
   @media (max-width: 600px) {
-    padding: 100px 0;
+    padding: 70px 0;
   }
 
   @media (max-width: 376px) {
-    padding: 80px 0px;
+    padding: 40px 0px;
   }
 `;
 
@@ -41,6 +41,7 @@ const Content = styled.div`
 
   > form {
     width: 600px;
+    height: auto;
     display: inline-block;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -65,52 +66,77 @@ const Content = styled.div`
         }
       }
     }
-    > button {
-      float: right;
-      height: 60px;
-      width: 200px;
-      border-radius: 30px;
-      border: 0;
-      margin-left: 30px;
-      color: #fff;
-      background: linear-gradient(90deg, #326de9 0%, #7e52e8 100%);
-      text-decoration: none;
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
 
-  @media (max-width: 922px) {
-    >form {
-      > button {
-        position: absolute;
-        right: -16%;
-      }
-    }
   }
 
   @media (max-width: 768px) {
+    > h1{
+      padding:0 30px;
+      height: auto;
+      font-size: 50px;
+      line-height: 55px;
+    }
     >form {
       width: 520px;
       label {
         height: 55px;
         width: 300px;
-        display: inline;
-        float: left;
-        position: relative;
-        input {
-          width: 100%;
-          height: 100%;
-          border: 1px solid #979797;
-          border-radius: 49px;
-          display: inline;
-          padding-left: 20px;
-        }
       }
-      > button {
-        width: 180px;
-        height: 55px;
+    }
+  }
+
+  
+  @media (max-width: 600px) {
+    > h1{
+      padding:0 30px;
+      height: auto;
+      font-size: 38px;
+      line-height: 40px;
+    }
+    >form {
+      width:100%;
+      margin-left: 0%;
+      transform: translateX(0%);
+      padding: 0 30px;
+      label {
+        height: 50px;
+        width: 270px;
+      }
+    }
+  }
+    
+  @media (max-width: 530px) {
+    >form {
+      width:100%;
+      margin-left: 0%;
+      transform: translateX(0%);
+      padding: 0 50px;
+      label {
+        width: 100%;
+        display:block;
+        margin-bottom: 25px;
+
+      }
+    }
+  }
+
+
+
+  @media (max-width: 376px) {
+    > h1{
+      width: 100%;
+      font-size: 28px;
+      line-height: 35px;
+    }
+    >form {
+      width:100%;
+      margin-left: 0%;
+      transform: translateX(0%);
+      padding: 0 20px;
+      label {
+        height: 50px;
+        width: 100%;
+
       }
     }
   }
@@ -118,11 +144,10 @@ const Content = styled.div`
 `;
 
 const Button = styled.button`
-float: left;
-height: 50px;
+height: 60px;
 width: 200px;
-display: block;
-float:left;
+display: inline;
+float:right;
 border-radius: 29px;
 
 border: 0;
@@ -161,44 +186,20 @@ transition: all .3s;
         transition: 0.3s;
         }
     }
-
-    @media (max-width: 920px) { 
-        margin-left: 50%;
-        transform:translateX(-50%);
-        
-    }
     @media (max-width: 768px) { 
         width: 190px;
-        >span {
-            font-size: 15px;
-            line-height: 40px;
-            &::after {
-                font-size: 18px;
-                line-height: 39px;
-        }
-        }
+        height: 55px;
     }
     @media (max-width: 600px) { 
-        >span {
-            font-size: 14px;
-            line-height: 40px;
-            &::after {
-                font-size: 18px;
-                line-height: 39px;
-        }
+      width: 180px;
+      height: 50px;
+      margin-left: 50%;
+      transform: translateX(-50%);
         
     }
-    @media (max-width: 376px) { 
-        width: 180px;
-
-       height: 45px;
-       >span {
-        font-size: 12px;
-        line-height: 40px;
-        &::after {
-            font-size: 16px;
-            line-height: 39px;
-    }
+    @media (max-width: 530px) { 
+        display:block;
+        float: none;
         
     }
 `;

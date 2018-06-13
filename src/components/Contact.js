@@ -180,6 +180,10 @@ const LeftBox = styled.div`
             }
         }  
  }
+ @media (max-width: 500px) { 
+    padding: 70px 20px;
+ 
+}
 `;
 
 const Button = styled.button`

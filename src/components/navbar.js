@@ -366,7 +366,7 @@ const Login_Lang = styled.div`
   @media (max-width: 1080px) {
     margin-top: 0px;
     width: 100px;
-    margin-right: 80px;
+    margin-right: 90px;
     float: right;
     > a {
       border: none;
@@ -404,14 +404,14 @@ const Login_Lang = styled.div`
   @media (max-width: 600px) {
     width: 50px;
 
-    margin-right: 90px;
+    margin-right: 100px;
     > a {
       font-size: 10px;
     }
   }
 
   @media (max-width: 350px) {
-    margin-right: 45px;
+    margin-right: 60px;
   }
 `;
 
