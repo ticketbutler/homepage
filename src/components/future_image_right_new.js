@@ -164,12 +164,11 @@ const RightBox = styled.div`
     clear: both;
   }
   > img {
-    max-width: 480px;
-    height: 425px;
-    object-fit: cover;
-    position: absolute;
-    right: 0px;
-    z-index: 2;
+      width: 510px;
+      height: 420px;
+      object-fit: cover;
+      float:right;
+      z-index: 2;
   }
 
   > div.first-box.blue {
@@ -179,6 +178,8 @@ const RightBox = styled.div`
     right: 0px;
     top: 80px;
     background-color: #326de9;
+    z-index: -2;
+
   }
 
   > div.clear-fix {
@@ -199,10 +200,8 @@ const RightBox = styled.div`
     }
 
     > img {
-      right: -90px;
-
-      height: 400px;
-      max-width: 650px;
+      width: 490px;
+      height: 390px;
     }
   }
 
@@ -213,9 +212,8 @@ const RightBox = styled.div`
     }
 
     > img {
-      right: -90px;
-      height: 380px;
-      max-width: 610px;
+      width: 450px;
+      height: 370px;
     }
   }
 
@@ -233,15 +231,12 @@ const RightBox = styled.div`
 
     > img {
       position: relative;
-      height: auto;
       width: 600px;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 0px;
-      right: 0px;
-
       border-radius: 3px;
-      margin-bottom: 0;
+      right: 0;
+      margin-right: 50%;
+      transform: translateX(50%);
+
     }
   }
 
@@ -258,13 +253,10 @@ const RightBox = styled.div`
       top: -15%;
     }
     > img {
-      height: auto;
       width: 100%;
-      left: 50%;
-      transform: translateX(-50%);
+      height: auto;
       top: 0px;
       right: 0px;
-
       border-radius: 0px;
     }
   }

@@ -40,7 +40,7 @@ const Content = styled.div`
     width: 70%;
     display: block;
     margin: 0 auto;
-    margin-top: 0px;
+    margin-top: 50px;
     color: #ffffff;
     font-family: Hind;
     font-size: 60px;
@@ -149,8 +149,7 @@ const Content = styled.div`
 
   @media (max-width: 600px) {
     > h1 {
-      margin-top: 20px;
-
+      margin-top: 50px;
       font-size: 36px;
     }
     > h3 {
@@ -173,7 +172,7 @@ const Content = styled.div`
 
   @media (max-width: 376px) {
     > h1 {
-      margin-top: 10px;
+      
       font-size: 25px;
       line-height: 32px;
     }

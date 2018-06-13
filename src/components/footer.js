@@ -96,7 +96,7 @@ const ContentDiv = styled.div`
 
 const TopFooter = styled.div`
   width: 100%;
-  height: 500px;
+  height: 380px;
   dislpay: block;
   padding: 100px 0px;
   padding-bottom: 20px;

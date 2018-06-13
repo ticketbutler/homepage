@@ -37,7 +37,7 @@ const LeftBox = styled.div`
         z-index: -4;
         > img.device {	
             width: 773px;
-            transform: translateX(-4%);
+            // transform: translateX(-4%);
             margin:0;
             z-index: -4;
             position: relative;
@@ -111,9 +111,10 @@ const RightBox = styled.div`
     font-size: 60px;
     font-weight: bold;
     line-height: 70px;
-    display: inline-block;
-    text-align: right;
+    display: block;
     margin-right: 0;
+    text-align: right;
+
     // float: right;
     z-index: 2;
   }

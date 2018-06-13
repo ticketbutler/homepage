@@ -28,14 +28,14 @@ const Section = styled.section`
 
 const LeftBox = styled.div`
   display: inline-block;
-  margin-top: 110px;
+  margin-top: 60px;
   width: 50%;
   float: left;
   position: relative;
   padding-right: 30px;
 
   > h1 {
-    width: 400px;
+    width: 500px;
     color: #333f52;
     font-family: Hind;
     font-size: 60px;

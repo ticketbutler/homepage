@@ -32,7 +32,7 @@ const LeftBox = styled.div`
   padding-right: 30px;
 
   > h1 {
-    width: 400px;
+    width: 600px;
     color: #333f52;
     font-family: Hind;
     font-size: 60px;
@@ -54,6 +54,8 @@ const LeftBox = styled.div`
     > h1 {
       font-size: 50px;
       line-height: 60px;
+      width: 100%;
+
     }
 
     > h3 {
@@ -66,6 +68,7 @@ const LeftBox = styled.div`
     > h1 {
       font-size: 40px;
       line-height: 50px;
+      width: 100%;
     }
 
     > h3 {
@@ -152,23 +155,18 @@ const LeftBox = styled.div`
 const RightBox = styled.div`
   float: right;
   width: 50%;
-  // height: auto;
   display: inline-block;
   position: relative;
 
-  // transform: translateX(800px);
-  // opacity: 0;
   transition: all 0.3s ease-out;
-
   > div.clear-fix {
     clear: both;
   }
   > img {
-    max-width: 524px;
-    height: 425px;
+    width: 524px;
+    height: 420px;
     object-fit: cover;
-    position: absolute;
-    right: 0px;
+    float:right;
     z-index: 2;
   }
 
@@ -179,6 +177,7 @@ const RightBox = styled.div`
     right: 0px;
     top: 80px;
     background-color: #326de9;
+    z-index: -2;
   }
 
   > div.second-box.green {
@@ -187,10 +186,11 @@ const RightBox = styled.div`
     right: 160px;
     height: 340px;
     width: 448px;
-    z-index: 1;
+    z-index: -1;
     background-color: #1dc9cc;
     -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
     clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    
   }
 
   > div.clear-fix {
@@ -214,7 +214,7 @@ const RightBox = styled.div`
       right: -90px;
 
       height: 400px;
-      max-width: 650px;
+      width: 500px;
     }
   }
 
@@ -234,7 +234,7 @@ const RightBox = styled.div`
     > img {
       right: -90px;
       height: 380px;
-      max-width: 610px;
+      width: 450px;
     }
   }
 
@@ -260,15 +260,12 @@ const RightBox = styled.div`
 
     > img {
       position: relative;
-      height: auto;
       width: 600px;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 0px;
-      right: 0px;
-
       border-radius: 3px;
-      margin-bottom: 0;
+      right: 0;
+      margin-right: 50%;
+      transform: translateX(50%);
+
     }
   }
 
@@ -293,14 +290,17 @@ const RightBox = styled.div`
       height: 100%;
     }
     > img {
-      height: auto;
       width: 100%;
-      left: 50%;
-      transform: translateX(-50%);
       top: 0px;
       right: 0px;
 
       border-radius: 0px;
+    }
+  }
+  
+  @media (max-width: 300px) {
+    > img {
+      height: auto;
     }
   }
 `;

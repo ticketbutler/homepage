@@ -3,8 +3,7 @@ import styled from "styled-components";
 // import $ from "jquery";
 
 const Section = styled.section`
-  padding: 110px;
-  padding-left: 0;
+  padding: 110px 0;
   width: 100%;
   position: relative;
 
@@ -41,10 +40,12 @@ const Content = styled.div`
   }
 
   > form {
+    width: 600px;
     display: inline-block;
     margin-left: 50%;
     transform: translateX(-50%);
-
+    position: relative;
+    margin-bottom: 0;
     label {
       height: 60px;
       width: 350px;
@@ -58,9 +59,14 @@ const Content = styled.div`
         border-radius: 49px;
         display: inline;
         padding-left: 20px;
+        &::placeholder{
+          font-size: 15px;
+          font-family: Montserrat;
+        }
       }
     }
     > button {
+      float: right;
       height: 60px;
       width: 200px;
       border-radius: 30px;
@@ -74,6 +80,41 @@ const Content = styled.div`
       }
     }
   }
+
+  @media (max-width: 922px) {
+    >form {
+      > button {
+        position: absolute;
+        right: -16%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    >form {
+      width: 520px;
+      label {
+        height: 55px;
+        width: 300px;
+        display: inline;
+        float: left;
+        position: relative;
+        input {
+          width: 100%;
+          height: 100%;
+          border: 1px solid #979797;
+          border-radius: 49px;
+          display: inline;
+          padding-left: 20px;
+        }
+      }
+      > button {
+        width: 180px;
+        height: 55px;
+      }
+    }
+  }
+
 `;
 
 const Button = styled.button`
@@ -166,7 +207,7 @@ const Newsletter_Page = () => {
   return (
     <Section className="section-3 container">
       <Content>
-        <h1>Join Ticketbutler newsletter</h1>
+        <h1>Tilmeld Ticketbutler Nyhedsbrev</h1>
         <form
           className="newsletter"
           name="newsletter"
@@ -178,11 +219,11 @@ const Newsletter_Page = () => {
             <input
               name="email"
               type="email"
-              placeholder="Din email here &#128522;"
+              placeholder="Din email her"
             />
           </label>
           <Button>
-            <span>Subscribe</span>
+            <span>Tilmeld</span>
           </Button>
         </form>
       </Content>
