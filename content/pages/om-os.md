@@ -9,6 +9,7 @@ sections:
     type: header
   - button_text: Kontakt os
     heading: Hvem er Ticketbutler?
+    image: /img/ticketbutler_logo.png
     text: >-
       Du kender sikkert Eventbrite, Billetto, Ticketmaster eller et af de andre
       store billetsystemer. Og ved du hvorfor? Fordi deres brand bliver smasket
