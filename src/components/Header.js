@@ -12,10 +12,10 @@ const HeaderTag = styled.header`
   color: #fff;
   background: linear-gradient(
       to right,
-      rgba(50, 109, 233, 0.85),
-      rgba(126, 82, 232, 0.85)
+      rgba(50, 109, 233, .9),
+      rgba(126, 82, 232, .9)
     ),
-    url("http://hdblackwallpaper.com/wallpaper/2015/09/black-hd-wallpaper-1920x1080-1-hd-wallpaper.jpg")
+    url("../img/splash-new.png");
       no-repeat center center;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
