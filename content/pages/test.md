@@ -59,7 +59,7 @@ sections:
   - button_link: ''
     button_text: ''
     heading: Lær din gæster at kende
-    image: /img/google-analytics-og-facebook-pixel-i-billetsystem.png
+    image: /img/data-analytics.png
     image_alt: Splash
     text: >-
       Jo bedre du kender dine kunder, desto bedre en oplevelse kan du give dem,
