@@ -11,21 +11,21 @@ items:
   - label: "Made wIth ❤️, \U0001F355, and ☕ in Copenhagen"
     path: /
 features:
-  - label: Sælg flere billetter (kommer snart!)
+  - label: Sælg flere billetter (på vej!)
     path: /
-  - label: Giv dine gæster en bedre oplevelse (kommer snart!)
+  - label: Bedre oplevelse for dine gæster (på vej!)
     path: /
-  - label: Lær dine gæster at kende (kommer snart!)
-  - label: Få kontrol over hele billetforløbet (kommer snart!)
+  - label: Lær dine gæster at kende (på vej!)
+  - label: Få kontrol over hele billetforløbet (på vej!)
 integration:
-  - label: Hvorfor vælger Ticketbutler? (kommer snart!)
+  - label: Hvorfor vælger Ticketbutler? (på vej!)
     path: /
-  - label: FAQ (kommer snart!)
+  - label: FAQ (på vej!)
     path: /
 company:
-  - label: About us (coming soon!)
+  - label: Om Ticketbutler (på vej!)
     path: /
-  - label: contact
+  - label: Kontakt
     path: '#contact'
 ---
 
