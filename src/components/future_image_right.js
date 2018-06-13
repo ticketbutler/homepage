@@ -267,7 +267,6 @@ const RightBox = styled.div`
       transform: translateX(-50%);
       top: 0px;
       right: 0px;
-      box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
       border-radius: 3px;
       margin-bottom: 0;
     }
@@ -301,7 +300,6 @@ const RightBox = styled.div`
       transform: translateX(-50%);
       top: 0px;
       right: 0px;
-      box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
       border-radius: 0px;
     }
   }
