@@ -8,7 +8,7 @@ items:
     path: /
   - label: hello@ticketbutler.io
     path: /
-  - label: "Made wIth ❤️, \U0001F355, and ☕ in Copenhagen"
+  - label: "Made wIth ❤️in Copenhagen"
     path: /
 features:
   - label: Sælg flere billetter (kommer snart!)

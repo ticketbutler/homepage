@@ -38,7 +38,7 @@ const ContentDiv = styled.div`
         display: inline-block;
         text-align: center;
         text-decoration: none;
-        
+
         > span {
             color: #333F52;
             font-family: Hind;
@@ -53,7 +53,7 @@ const ContentDiv = styled.div`
     @media (max-width: 1200px) { 
         a {
             span {
-                 font-size: 17px;
+                 font-size: 15px;
             }
         }
     }
@@ -61,7 +61,7 @@ const ContentDiv = styled.div`
     @media (max-width: 970px) { 
         a {
             span {
-                 font-size: 15px;
+                 font-size: 10px;
             }
         }
     }
@@ -69,7 +69,7 @@ const ContentDiv = styled.div`
     @media (max-width: 874px) { 
         a {
             span {
-                 font-size: 12px;
+                 font-size: 10px;
             }
         }
     }
@@ -96,7 +96,7 @@ const ContentDiv = styled.div`
 
 const TopFooter = styled.div`
   width: 100%;
-  height: 380px;
+  height: 500px;
   dislpay: block;
   padding: 100px 0px;
   padding-bottom: 20px;
@@ -130,7 +130,7 @@ const TopFooter = styled.div`
 
   > ul {
     width: 25%;
-    margin: 0;
+    margin: auto;
     height: 100%;
     display: inlnie;
     float: left;
@@ -150,7 +150,6 @@ const TopFooter = styled.div`
     }
     li {
       list-style: none;
-      height: 19px;
       font-family: Montserrat;
       font-size: 15px;
       font-weight: 300;
@@ -174,8 +173,10 @@ const TopFooter = styled.div`
   }
 
   @media (max-width: 812px) {
+    height: 650px;
     > div#footer_logo {
       width: 50%;
+      
       padding-left: 5%;
       > h1 {
         margin-left: auto;
