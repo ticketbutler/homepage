@@ -88,6 +88,7 @@ const Content = styled.div`
   
   @media (max-width: 600px) {
     > h1{
+      width: 100%;
       padding:0 30px;
       height: auto;
       font-size: 38px;
@@ -110,7 +111,7 @@ const Content = styled.div`
       width:100%;
       margin-left: 0%;
       transform: translateX(0%);
-      padding: 0 50px;
+      padding: 0 20px;
       label {
         width: 100%;
         display:block;
@@ -193,13 +194,15 @@ transition: all .3s;
     @media (max-width: 600px) { 
       width: 180px;
       height: 50px;
-      margin-left: 50%;
-      transform: translateX(-50%);
+    
         
     }
     @media (max-width: 530px) { 
+       
         display:block;
         float: none;
+        margin-left: 50%;
+        transform: translateX(-50%);
         
     }
 `;
