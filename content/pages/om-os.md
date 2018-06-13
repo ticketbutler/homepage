@@ -5,19 +5,18 @@ sections:
   - button_link: '#tall_centered_future_button_top'
     button_text: Læs om vores mission
     heading: Om Ticketbutler
-    text: Hvorfor har verden brug for Ticketbutler?
+    text: ''
     type: header
   - button_text: Kontakt os
-    heading: Om Ticketbutler
+    heading: Hvorfor har arrangører brug for Ticketbutler?
     text: >-
-      Horsens teater omkring kl 12:37 20 98 66 41  Inden vi går ind i juli  Du
-      kender sikkert Eventbrite, Billetto, Ticketmaster eller et af de andre
+      Du kender sikkert Eventbrite, Billetto, Ticketmaster eller et af de andre
       store billetsystemer. Og ved du hvorfor? Fordi deres brand bliver smasket
       op i hovedet på dig, når du køber en billet. Hvis du som billetkøber
       skriver dig op på nyhedsbrevet, er det billetsystemets nyhedsbrev, du
       skriver dig op til. Billetsystemet bruger din data. Det er virksomhederne
       bag de store billetsystemers behov der tilfredsstilles i stedet for den
-      bagvedliggende arrangørs behov. Ticketbutler er et alternativtil de store
+      bagvedliggende arrangørs behov. Ticketbutler er et alternativ til de store
       billetsystemer og vi vil tilfredsstille jeres behov. Jeres brand sættes i
       centrum. Dataen er jeres. Det er altså jeres behov, der tilfredsstilles
       og er i centrum. Vores egne danske udviklere benytter de mest stabile og
