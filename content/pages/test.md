@@ -59,7 +59,7 @@ sections:
   - button_link: ''
     button_text: ''
     heading: Lær din gæster at kende
-    image: /img/data-analytics.png
+    image: /img/data-analytics2.png
     image_alt: Splash
     text: >-
       Jo bedre du kender dine kunder, desto bedre en oplevelse kan du give dem,
