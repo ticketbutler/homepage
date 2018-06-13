@@ -205,6 +205,12 @@ transition: all .3s;
         transform: translateX(-50%);
         
     }
+    @media (max-width: 376px) { 
+       
+      > span {	
+        font-size: 13px;}
+      
+  }
 `;
 
 const Newsletter_Page = () => {
