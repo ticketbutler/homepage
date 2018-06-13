@@ -275,8 +275,9 @@ const RightBox = styled.div`
     padding: 110px;
     float:right;
     display:inline-block;
-    background: linear-gradient(to right, rgba(50, 109, 233, .85) , rgba(126, 82, 232, .85)), url("../img/kontaktmin.png") no-repeat center center ;
+    background: linear-gradient(to right, rgba(50, 109, 233, .85) , rgba(126, 82, 232, .85)), url("../img/kontaktmin.png") no-repeat center center;
     color: #FFF;
+    background-size: cover;
     
     > div.content {
         ul{
