@@ -67,7 +67,7 @@ sections:
       optimér Facebook annoncer med Facebook Pixel, analysér dine kunder gennem
       Google Analytics og se sammenhængen mellem antallet af billetter solgt og
       din marketingstrategi. 
-    type: future_image_right
+    type: future_image_right_second
   - button_link: /pris
     button_text: Se priser
     heading: Priser for alle
