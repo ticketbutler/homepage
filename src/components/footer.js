@@ -225,7 +225,7 @@ const Footer = ({ features, integration, company, items }) => (
       </div>
 
       <ul className="Future footer_ul">
-        <h3>Furtures</h3>
+        <h3>Features</h3>
         {features.map(item => (
           <li>
             <a href={item.path}>{item.label}</a>
@@ -233,7 +233,7 @@ const Footer = ({ features, integration, company, items }) => (
         ))}
       </ul>
       <ul className="Integration footer_ul">
-        <h3>Integration</h3>
+        <h3>Hjælpecenter</h3>
 
         {integration.map(item => (
           <li>
@@ -242,7 +242,7 @@ const Footer = ({ features, integration, company, items }) => (
         ))}
       </ul>
       <ul className="Company footer_ul">
-        <h3>Company</h3>
+        <h3>Om os</h3>
         {company.map(item => (
           <li>
             <a href={item.path}>{item.label}</a>
