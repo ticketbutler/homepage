@@ -271,6 +271,7 @@ const RightBox = styled.div`
       margin-bottom: 0;
     }
   }
+ 
 
   @media (max-width: 600px) {
     margin-top: 50px;
@@ -305,12 +306,6 @@ const RightBox = styled.div`
   }
 `;
 
-// $(document).ready(()=> {
-//     $("#right-box").css({
-//       "transform": "translateX(0)",
-//       "opacity": "1",
-//     })
-//   })
 const FutureImageRight = ({ heading, text, image, image_alt }) => {
   return (
     <Section>
@@ -332,6 +327,7 @@ const FutureImageRight = ({ heading, text, image, image_alt }) => {
           margin: 0;
           padding: 0;
           box-sizing: border-box;
+          overflow: none;
         }
 
         div.clear-fix {

@@ -269,6 +269,10 @@ const RightBox = styled.div`
     }
   }
 
+  @media (max-width: 768px) {
+    padding: 0 30px;
+  }
+
   @media (max-width: 600px) {
     margin-top: 50px;
     height: auto;
@@ -291,6 +295,8 @@ const RightBox = styled.div`
     }
     > img {
       width: 100%;
+    height: auto;
+
       top: 0px;
       right: 0px;
 
