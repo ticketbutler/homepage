@@ -18,7 +18,7 @@ features:
   - label: Lær dine gæster at kende (på vej!)
   - label: Få kontrol over hele billetforløbet (på vej!)
 integration:
-  - label: Hvorfor vælger Ticketbutler? (på vej!)
+  - label: Hvorfor vælge Ticketbutler? (på vej!)
     path: /
   - label: FAQ (på vej!)
     path: /
