@@ -30,5 +30,19 @@ sections:
       og fremtidige events. Tiltræk nye kunder og hold fast i de gamle. Dataen
       er din! 
     type: future_image_right_second
+  - heading: Optimér dit salg på Facebook
+    text: >-
+      Hvorfor ikke nøjes med at investere i Facebook-annoncer som virker?
+      Facebook Pixel fortæller dig om dine Facebook-annoncer virker, og
+      automatisk optimerer dine annoncer så du sælger flere billetter. Altså får
+      du mere for pengene i dine Facebook-kampagner.
+    type: future_image_left
+  - heading: Brug rabatkoder i din markedsføring
+    text: >-
+      Med Ticketbutler kan du oprette rabatkoder, hvilket er et stærkt
+      marketing-værktøj: Opret en rabatkode til et af dine events og track
+      gennem Ticketbutler, hvor mange gange koden er blevet brugt i dit online
+      billetsalg. På den måde kan du måle hvor effektiv din kampagne har været. 
+    type: future_image_right
 ---
 
