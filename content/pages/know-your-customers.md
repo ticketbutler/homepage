@@ -2,6 +2,8 @@
 path: /kend-dine-gæster
 title: 'Kend dine gæster '
 sections:
+  - heading: Kend dine gæster
+    type: header
   - heading: Lær dine gæster at kende
     text: >-
       Vil du stille dine gæster spørgsmål inden dit event? Definer specifikke
