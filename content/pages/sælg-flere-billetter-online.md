@@ -17,6 +17,7 @@ sections:
     type: future_image_right
   - heading: Øg din brand awareness
     image: /img/john-schnobrich-520023-unsplash.png
+    image_alt: brand-awareness
     text: >-
       Hele billet-oplevelsen er designet til at matche dit univers, så du øger
       din brand awareness. Fra eventside og integrationen på din hjemmeside, i
@@ -24,6 +25,7 @@ sections:
       brand.
     type: future_image_left
   - heading: Sælg mere med e-mail marketing
+    image: /img/billetsystem-integration.png
     text: >-
       Skal du arrangere flere events? Sælger din virksomhed andet end billetter?
       Dine gæster er interesseret i det du gør, og vi giver dem mulighed for at
