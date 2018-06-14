@@ -1,6 +1,6 @@
 ---
-path: Provide-better-customer-experience
-title: Provide better customer experience
+path: /en-bedre-oplevelse
+title: 'En bedre oplevelse for dig og dine kunder '
 sections:
   - type: header
   - heading: 'Gør det nemt for dine gæster '
