@@ -47,7 +47,7 @@ sections:
       du mere for pengene i dine Facebook-kampagner.
     type: future_image_left
   - heading: Brug rabatkoder i din markedsføring
-    image: /img/kuppontb.png
+    image: /img/couponticketbutler.png
     text: >-
       Med Ticketbutler kan du oprette rabatkoder, hvilket er et stærkt
       marketing-værktøj: Opret en rabatkode til et af dine events og track
