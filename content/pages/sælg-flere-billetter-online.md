@@ -11,6 +11,6 @@ sections:
       tilbyder. Det kræver ingen nørder at integrere – det er blot en
       copy/paste. Vil du hellere have siderne adskilt tilbyder vi også separate
       eventsider. Integration med billet API? Kontakt os!
-    type: future_image_right
+    type: header
 ---
 
