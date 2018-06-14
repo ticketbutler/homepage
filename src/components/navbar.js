@@ -15,35 +15,41 @@ const Logo = styled.div`
   display: inline;
   float: left;
   line-height: 100px;
-  > span {
-    font-family: Hind;
-    display: block;
-    text-align: center;
+  > a {
+    img{
+        width: 170px;
+        margin-bottom: 0;
+        line-height: 100px;
+    }
   }
 
   @media (max-width: 1200px) {
-    font-size: 22px;
+    
   }
 
   @media (max-width: 1080px) {
-    color: #fff;
     float: left;
-    width: 127px;
+    width: 120px;
     margin-left: 40px;
     line-height: 80px;
-    font-size: 20px;
+
   }
 
   @media (max-width: 600px) {
-    width: auto;
-    // margin-left: 0px;
-    font-size: 18px;
+
+    
   }
 
   @media (max-width: 350px) {
-    width: auto;
+
     margin-left: 0px;
-    font-size: 18px;
+    > a {
+      img{
+          width: 100px;
+          margin-bottom: 4px;
+      }
+    }
+
   }
 `;
 //#endregion
@@ -419,7 +425,7 @@ const NavbarSection = ({ items }) => {
   return (
     <Navbar className="navbar">
       <Logo>
-        <span>ticketbutler</span>{" "}
+        <a href="/"><img src={"../img/logo_white.png"}/></a>
       </Logo>
 
       <Nav>

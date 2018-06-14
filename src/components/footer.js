@@ -106,17 +106,14 @@ const TopFooter = styled.div`
     display: inline;
     float: left;
 
-    > h1 {
-      height: 51px;
-      font-family: Hind;
-      font-size: 32px;
-      font-weight: bold;
-      letter-spacing: -0.8px;
-      line-height: 51px;
-      background: linear-gradient(to right, #326de9, #7e52e8);
-      color: transparent;
-      -webkit-background-clip: text;
-      background-clip: text;
+    > a {
+      width: 100%;
+      display:block;
+      img{
+          width: 170px;
+          margin-bottom: 0;
+          line-height: 100px;
+      }
     }
     > span {
       height: 38px;
@@ -172,7 +169,7 @@ const TopFooter = styled.div`
     }
   }
 
-  @media (max-width: 812px) {
+  @media (max-width: 900px) {
     height: 650px;
     > div#footer_logo {
       width: 50%;
@@ -193,12 +190,16 @@ const TopFooter = styled.div`
     }
   }
 
-  @media (max-width: 462px) {
+  @media (max-width: 500px) {
     > div#footer_logo {
       width: 100%;
       padding-left: 0%;
-      > h1 {
-        text-align: center;
+      > a {
+        img{
+          display: block;
+          margin: 10px auto;
+
+        }
       }
       > span {
         text-align: center;
@@ -219,7 +220,8 @@ const Footer = ({ features, integration, company, items }) => (
   <FooterTag>
     <TopFooter>
       <div id="footer_logo">
-        <h1>tickerbutler</h1>
+        <a href="/"><img src={"../img/logo_blue.png"}/></a>
+        
         <span>
           2018 TicketButler IVS <br /> CVR: 38404687
         </span>

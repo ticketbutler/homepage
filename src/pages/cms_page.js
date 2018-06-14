@@ -26,7 +26,7 @@ const CmsPage = ({ pathContext }) => (
       pathContext.sections.map(section => {
         const Component = components.find(({ id }) => id === section.type)
           .Component;
-        return <Component key={section + "1"} {...section} />;
+        return <Component {...section} />;
       })}
   </Layout>
   

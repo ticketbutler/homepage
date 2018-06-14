@@ -1,6 +1,6 @@
 import React from "react";
 import {Helmet} from "react-helmet";
-import FreshChat from 'react-freshchat';
+
 import Navbar from "../components/navbar";
 import Contact_page from "../components/Contact";
 import NewsLetter_Page from "../components/newsletter_page";
@@ -59,16 +59,15 @@ export const Layout = ({
     }}
     />
 
-    <FreshChat
-          token= "caada681-1687-44bf-b803-7e061a49883e"
-          host= "https://wchat.freshchat.com"
-          onInit={widget => {
-           
-            widget.config= {
-              disableEvents: true,
-            }
-          }}
-    />
+    <script
+      async
+      dangerouslySetInnerHTML={{
+          __html: `window.fcWidget.init({
+              token: "caada681-1687-44bf-b803-7e061a49883e",
+              host: "https://wchat.freshchat.com",
+            });`
+      }}
+    ></script>
     
   </div>
 );
