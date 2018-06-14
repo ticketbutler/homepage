@@ -33,7 +33,7 @@ sections:
       et et værdifuldt værktøj, som du kan bruge til at promovere din virksomhed
       og fremtidige events. Tiltræk nye kunder og hold fast i de gamle. Dataen
       er din! 
-    type: future_image_right_second
+    type: future_image_right
   - heading: Optimér dit salg på Facebook
     text: >-
       Hvorfor ikke nøjes med at investere i Facebook-annoncer som virker?
