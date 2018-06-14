@@ -1,6 +1,9 @@
 ---
 path: /en-bedre-oplevelse
 title: 'En bedre oplevelse for dig og dine kunder '
+meta_description: >-
+  Start dit event hos Ticketbutler: Et online billetsystem pakket med features
+  og fordele, som kommer dig og dine gæster til gode! 
 sections:
   - heading: 'En bedre oplevelse for dig og dine kunder '
     type: header
