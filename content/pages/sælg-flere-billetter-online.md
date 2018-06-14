@@ -26,6 +26,7 @@ sections:
     type: future_image_left
   - heading: Sælg mere med e-mail marketing
     image: /img/billetsystem-integration.png
+    image_alt: email-marketing-billetsystem
     text: >-
       Skal du arrangere flere events? Sælger din virksomhed andet end billetter?
       Dine gæster er interesseret i det du gør, og vi giver dem mulighed for at
