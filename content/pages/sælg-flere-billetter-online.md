@@ -2,6 +2,8 @@
 path: Saelg-flere-billetter-online
 title: Sælg flere billetter online
 sections:
+  - heading: 'Sælg mere online '
+    type: header
   - heading: 'Øg dit online billetsalg og andre services '
     image: /img/stocksnap_pob2y8a2nu.png
     text: >-
