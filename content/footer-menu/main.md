@@ -2,9 +2,9 @@
 title: Footer
 path: main
 items:
-  - label: Private policy
+  - label: ' '
     path: /
-  - label: Terms of service
+  - label: ' '
     path: /
   - label: hello@ticketbutler.io
     path: /
