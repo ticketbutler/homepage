@@ -36,7 +36,7 @@ sections:
       er din! 
     type: future_image_right
   - heading: Optimér dit salg på Facebook
-    image: ''
+    image: /img/fbpixelticketbutler.png
     text: >-
       Hvorfor ikke nøjes med at investere i Facebook-annoncer som virker?
       Facebook Pixel fortæller dig om dine Facebook-annoncer virker, og
@@ -44,7 +44,7 @@ sections:
       du mere for pengene i dine Facebook-kampagner.
     type: future_image_left
   - heading: Brug rabatkoder i din markedsføring
-    image: /img/fbpixelticketbutler.png
+    image: /img/kuppontb.png
     text: >-
       Med Ticketbutler kan du oprette rabatkoder, hvilket er et stærkt
       marketing-værktøj: Opret en rabatkode til et af dine events og track
