@@ -1,6 +1,6 @@
 ---
-path: Know-your-customers
-title: Know your customers
+path: /kend-dine-gæster
+title: 'Kend dine gæster '
 sections:
   - heading: Lær dine gæster at kende
     text: >-
