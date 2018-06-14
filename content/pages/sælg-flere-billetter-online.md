@@ -25,7 +25,7 @@ sections:
       brand.
     type: future_image_left
   - heading: Sælg mere med e-mail marketing
-    image: /img/billetsystem-integration.png
+    image: /img/crew-56835-unsplash.png
     image_alt: email-marketing-billetsystem
     text: >-
       Skal du arrangere flere events? Sælger din virksomhed andet end billetter?
