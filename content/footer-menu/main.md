@@ -7,7 +7,7 @@ items:
   - label: ' '
     path: /
   - label: hello@ticketbutler.io
-    path: /
+    path: 'mailto:hello@ticketbutler.io'
   - label: Made with ❤️ in Copenhagen
     path: /
 features:
