@@ -1,5 +1,5 @@
 ---
-path: /billeter-billettyper
+path: /billetter-billettyper
 title: Få kontrol over hele billetforløbet
 sections:
   - type: header
