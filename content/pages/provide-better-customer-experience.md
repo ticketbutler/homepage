@@ -2,7 +2,8 @@
 path: /en-bedre-oplevelse
 title: 'En bedre oplevelse for dig og dine kunder '
 sections:
-  - type: header
+  - heading: 'En bedre oplevelse for dig og dine kunder '
+    type: header
   - heading: 'Gør det nemt for dine gæster '
     text: >-
       Med billetsystemet integreret på din hjemmeside kan dine gæster købe sine
