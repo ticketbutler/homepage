@@ -16,6 +16,7 @@ sections:
       eventsider. Integration med billet API? Kontakt os!
     type: future_image_right
   - heading: Øg din brand awareness
+    image: /img/john-schnobrich-520023-unsplash.png
     text: >-
       Hele billet-oplevelsen er designet til at matche dit univers, så du øger
       din brand awareness. Fra eventside og integrationen på din hjemmeside, i
