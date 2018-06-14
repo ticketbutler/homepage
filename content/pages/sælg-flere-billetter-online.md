@@ -1,6 +1,9 @@
 ---
 path: Saelg-flere-billetter-online
 title: Sælg flere billetter online
+meta_description: >-
+  Arrangerer du events, og mangler du tips og tricks til at øge dit billetsalg?
+  Ticketbutler er et online billetsystem, som hjælper dig på vejen mod succes
 sections:
   - heading: 'Sælg mere online '
     type: header
