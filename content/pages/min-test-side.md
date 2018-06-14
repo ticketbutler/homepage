@@ -29,6 +29,9 @@ sections:
     button_text: Kontakt os!
     heading: 'Hvilken pakke passer dig? '
     image: /img/pricing-table2.png
+    text: >-
+      Er du en énmandshær, fra et startup eller stor virksomhed, kan vi hjælpe
+      dig.
     type: tall_centered_future
 ---
 
