@@ -1,6 +1,9 @@
 ---
 path: /
-title: Ticketbutler
+title: Ticketbutler – Dit skræddersyede billetsystem
+meta_description: >-
+  Tiltræk flere kunder og sælg billetter med dit helt eget full scale
+  billetsystem. 
 sections:
   - button_link: '#contact'
     button_text: Kontakt os!
