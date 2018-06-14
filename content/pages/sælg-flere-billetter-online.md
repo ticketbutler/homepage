@@ -5,7 +5,8 @@ sections:
   - heading: 'Sælg mere online '
     type: header
   - heading: 'Øg dit online billetsalg og andre services '
-    image: /img/stocksnap_pob2y8a2nu.png
+    image: /img/ticketbutler-on-laptop.png
+    image_alt: Sælg-billetter
     text: >-
       Du kender din målgruppe bedst og er den bedste til at sælge dit produkt og
       dine services. Ved at integrere billetsalg på din hjemmeside sikrer du dig
