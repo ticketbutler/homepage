@@ -5,7 +5,7 @@ import styled from "styled-components";
 import navbarEffect from "../js/navbarEffect";
 // import Scrollchor from "react-scrollchor";
 import "../js/navItems_smallScreent";
-
+//#region
 const Logo = styled.div`
   width: 20%;
   color: #ffffff;
@@ -46,7 +46,7 @@ const Logo = styled.div`
     font-size: 18px;
   }
 `;
-
+//#endregion
 const Navbar = styled.div`
   width: 100%;
   height: 60px;      
