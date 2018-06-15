@@ -11,13 +11,8 @@ items:
   - label: Made with ❤️ in Copenhagen
     path: /
 features:
-  - label: Sælg flere billetter (på vej!)
+  - label: Sælg flere billetter
     path: /da/Saelg-flere-billetter-online
-  - label: Bedre oplevelse for dine gæster (på vej!)
-    path: /da/billetter-billettyper
-  - label: Lær dine gæster at kende (på vej!)
-    path: /da/kend-dine-gæster
-  - label: Få kontrol over hele billetforløbet (på vej!)
 integration:
   - label: Hvorfor vælge Ticketbutler? (på vej!)
     path: /
