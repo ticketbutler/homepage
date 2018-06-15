@@ -1,6 +1,9 @@
 ---
 path: /about
-title: Om os
+title: Ticketbutler – Dit skræddersyede billetsystem
+meta_description: >-
+  Ticketbutler er et online billetsystem, som let kan integreres på din egen
+  hjemmeside. 
 sections:
   - button_link: '#tall_centered_future_button_top'
     button_text: Læs om vores mission
