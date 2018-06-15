@@ -1,5 +1,5 @@
 ---
-path: /about
+path: /om-os
 title: Ticketbutler – Dit skræddersyede billetsystem
 meta_description: >-
   Ticketbutler er et online billetsystem, som let kan integreres på din egen
