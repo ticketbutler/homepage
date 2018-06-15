@@ -1,5 +1,5 @@
 ---
-path: /da/Saelg-flere-billetter-online
+path: /da/saelg-flere-billetter-online
 title: Sælg flere billetter online
 meta_description: >-
   Arrangerer du events, og mangler du tips og tricks til at øge dit billetsalg?
