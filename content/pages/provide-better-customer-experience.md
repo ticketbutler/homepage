@@ -1,6 +1,6 @@
 ---
 path: /dit-billetsystem
-title: 'Dit billetsystem, din data, din succes - start dit event hos Ticketbutler'
+title: 'Dit billetsystem, din data, din succes – start dit event hos Ticketbutler'
 meta_description: >-
   Start dit event hos Ticketbutler: Et online billetsystem pakket med features
   og fordele, som kommer dig og dine gæster til gode.
