@@ -1,5 +1,5 @@
 ---
-path: /billigt-billetsystem
+path: /da/billigt-billetsystem
 title: Et enkelt og billigt billetsystem
 meta_description: >-
   Ticketbutler leverer et enkelt og billigt billetsystem med dit brand i fokus.
