@@ -1,5 +1,5 @@
 ---
-path: /billetter-billettyper
+path: /da/billetter-billettyper
 title: Har du brug for flere billettyper til samme event?
 meta_description: >-
   Med Ticketbutler kan du stille dine gæster specifikke spørgsmål, når du sælger
