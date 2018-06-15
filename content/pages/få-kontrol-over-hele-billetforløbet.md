@@ -1,6 +1,9 @@
 ---
 path: /billetter-billettyper
-title: Få kontrol over hele billetforløbet
+title: Har du brug for flere billettyper til samme event?
+meta_description: >-
+  Med Ticketbutler kan du stille dine gæster specifikke spørgsmål, når du sælger
+  billetter online, og oprette flere billettyper til samme event. 
 sections:
   - type: header
   - heading: Check dine gæster ind til eventet
