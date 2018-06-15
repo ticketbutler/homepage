@@ -12,10 +12,11 @@ items:
     path: /
 features:
   - label: Sælg flere billetter (på vej!)
-    path: /
+    path: /da/Saelg-flere-billetter-online
   - label: Bedre oplevelse for dine gæster (på vej!)
-    path: /
+    path: /da/billetter-billettyper
   - label: Lær dine gæster at kende (på vej!)
+    path: /da/kend-dine-gæster
   - label: Få kontrol over hele billetforløbet (på vej!)
 integration:
   - label: Hvorfor vælge Ticketbutler? (på vej!)
@@ -24,7 +25,7 @@ integration:
     path: /
 company:
   - label: Om Ticketbutler
-    path: /about
+    path: /da/om-os
   - label: Kontakt
     path: '#contact'
 ---
