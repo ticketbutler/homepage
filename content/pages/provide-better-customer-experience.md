@@ -1,5 +1,5 @@
 ---
-path: /dit-billetsystem
+path: /da/dit-billetsystem
 title: 'Dit billetsystem, din data, din succes – start dit event hos Ticketbutler'
 meta_description: >-
   Start dit event hos Ticketbutler: Et online billetsystem pakket med features
