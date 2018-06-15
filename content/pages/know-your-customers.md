@@ -1,6 +1,9 @@
 ---
 path: /kend-dine-gæster
-title: 'Kend dine gæster '
+title: Kend dine gæster – og sælg flere billetter online med Ticketbutler
+meta_description: >-
+  Ticketbutler giver dig mulighed for, at stille dine gæster specifikke
+  spørgsmål når du sælger billetter online. Skyd dit event i gang i dag. 
 sections:
   - heading: Kend dine gæster
     type: header
