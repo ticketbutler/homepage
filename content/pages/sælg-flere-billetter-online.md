@@ -5,7 +5,10 @@ meta_description: >-
   Arrangerer du events, og mangler du tips og tricks til at øge dit billetsalg?
   Ticketbutler er et online billetsystem, som hjælper dig på vejen mod succes
 sections:
-  - heading: 'Sælg mere online '
+  - button_link: '#contact'
+    button_text: Kontakt os!
+    heading: 'Sælg mere online '
+    text: "Ticketbutler hjælper dig ikke kun at sælge billetter –\_systemet understøtter også din forretning og forståelse af din målgruppe, så du øge din omsætning på tværs af virksomheden. Læs mere på siden her om hvordan."
     type: header
   - heading: 'Øg dit online billetsalg og andre services '
     image: /img/ticketbutler-on-laptop.png
