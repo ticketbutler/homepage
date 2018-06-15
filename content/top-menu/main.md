@@ -5,7 +5,7 @@ items:
   - label: Hjem
     path: /
   - label: Pris
-    path: /pris
+    path: /da/billigt-billetsystem
   - label: Kontakt
     path: '#contact'
 ---
