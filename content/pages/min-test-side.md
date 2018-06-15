@@ -1,7 +1,9 @@
 ---
 path: /billigt-billetsystem
 title: Et enkelt og billigt billetsystem
-meta_description: 'Ticketbutler leverer et enkelt og billigt billetsystem med dit brand i fokus. '
+meta_description: >-
+  Ticketbutler leverer et enkelt og billigt billetsystem med dit brand i fokus.
+  Start dit event og sælg flere billetter. 
 sections:
   - button_link: '#contact'
     button_text: Kontakt os!
