@@ -1,5 +1,5 @@
 ---
-path: /
+path: /da
 title: Ticketbutler – Dit skræddersyede billetsystem
 meta_description: >-
   Tiltræk flere kunder og sælg billetter med et full scale billetsystem, som
