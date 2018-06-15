@@ -12,7 +12,7 @@ items:
     path: /
 features:
   - label: Sælg flere billetter
-    path: /da/Saelg-flere-billetter-online
+    path: /da/saelg-flere-billetter-online
 integration:
   - label: Hvorfor vælge Ticketbutler? (på vej!)
     path: /
