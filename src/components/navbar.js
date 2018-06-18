@@ -35,17 +35,14 @@ const Logo = styled.div`
 
   }
 
-  @media (max-width: 600px) {
-
-    
-  }
 
   @media (max-width: 350px) {
+    width: 90px;
 
     margin-left: 0px;
     > a {
       img{
-          width: 100px;
+          width: 85px;
           margin-bottom: 4px;
       }
     }
@@ -371,7 +368,7 @@ const Login_Lang = styled.div`
 
   @media (max-width: 1080px) {
     margin-top: 0px;
-    width: 100px;
+    width: 135px;
     margin-right: 90px;
     float: right;
     > a {
@@ -402,22 +399,31 @@ const Login_Lang = styled.div`
 
       > span {
         line-height: 30px;
-        padding: 10px;
+        padding: 25px;
       }
     }
   }
 
   @media (max-width: 600px) {
     width: 50px;
-
-    margin-right: 100px;
-    > a {
-      font-size: 10px;
+    margin-right: 135px;
+    >a {
+      > span {
+        line-height: 30px;
+        padding-right: 18px;
+      }
     }
   }
 
   @media (max-width: 350px) {
-    margin-right: 60px;
+    margin-right: 85px;
+    >a {
+      > span {
+        line-height: 30px;
+        padding-right: 15px;
+      }
+    }
+   
   }
 `;
 
