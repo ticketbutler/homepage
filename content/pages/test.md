@@ -72,7 +72,7 @@ sections:
       Google Analytics og se sammenhængen mellem antallet af billetter solgt og
       din marketingstrategi. 
     type: future_image_right_second
-  - button_link: /pris
+  - button_link: /da/pris
     button_text: Se priser
     heading: Priser for alle
     image: /img/gratis-billetservice.png
@@ -91,13 +91,5 @@ sections:
       Giv os dit logo og brandfarver og du har dit eget billetsystem inden for
       et par dage. Vi designer systemet, så det ser lækkert ud til dit brand.
     type: tall_centered_future_button_top
-
-integrations:
-  heading: Ticketbutler integrates with you favorits CMS
-  items:
-    - image:  /img/WP.png
-    - image:  /img/wix.png
-    - image:  /img/SQ.png
-
 ---
 
