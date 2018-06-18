@@ -72,7 +72,7 @@ sections:
       Google Analytics og se sammenhængen mellem antallet af billetter solgt og
       din marketingstrategi. 
     type: future_image_right_second
-  - button_link: /da/pris
+  - button_link: /da/billigt-billetsystem/
     button_text: Se priser
     heading: Priser for alle
     image: /img/gratis-billetservice.png
