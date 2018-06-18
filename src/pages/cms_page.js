@@ -33,10 +33,8 @@ const CmsPage = ({ pathContext }) => (
           .Component;
         return <Component {...section} />
       })
-    
     }
-    <LogoSection items={pathContext.layout.LogosSection}/>
-  
+    <LogoSection all_items={pathContext.integrations.items} heading={pathContext.integrations.heading}/>
   </Layout>
   
 );

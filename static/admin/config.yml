@@ -86,28 +86,6 @@ collections:
 
 
   # *************************
-  #  Logo Section 
-  # ************************
-  - name: logo-section
-    label: Logo Section
-    folder: content/logo-section
-    create: true
-    fields:
-      - { name: title, label: Title }
-      - { name: path, label: Path }
-      - name: items
-        label: Items
-        widget: list
-        fields:
-          - { name: image, label: Image }
-          - { name: path, label: Path }
-
-          options:        
-              - { label: Logo Section, value: logos_section }
-
-
-
-  # *************************
   #  All secion
   # ************************
 
@@ -136,6 +114,8 @@ collections:
               - { label: Image Right New, value: future_image_right_new }
               - { label: Layer Image, value: future_layers }
 
+          
+
           - { name: heading, label: Heading, required: false }
           - { name: text, label: Text, required: false }
           - { name: image, label: Image, widget: image, required: false }
@@ -143,7 +123,19 @@ collections:
           - { name: button_text, label: Button Text, required: false }
           - { name: button_link, label: Button Link, required: false }
 
-                    
+      - name: integrations
+        label: Integrations
+        widget: list
+        fields:
+        - { name: heading, label: Heading } 
+        
+        - name: items
+          label: Items
+          widget: list
+          fields:
+            - { name: image, label: Image } 
+
+     
 
           
           

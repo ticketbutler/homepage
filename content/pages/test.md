@@ -91,5 +91,13 @@ sections:
       Giv os dit logo og brandfarver og du har dit eget billetsystem inden for
       et par dage. Vi designer systemet, så det ser lækkert ud til dit brand.
     type: tall_centered_future_button_top
+
+integrations:
+  heading: Ticketbutler integrates with you favorits CMS
+  items:
+    - image:  /img/WP.png
+    - image:  /img/wix.png
+    - image:  /img/SQ.png
+
 ---
 

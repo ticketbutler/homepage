@@ -16,24 +16,17 @@ const query = `query IndexQuery {
             button_text
             button_link
           }
+          integrations{
+            heading
+            items{
+              image
+            }
+          }       
         }
       }
     }
   }
-  LogosSection: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/logo-section/"}}) {
-    edges {
-      node {
-        frontmatter {
-          title
-          path
-          items {
-            image
-            path
-          }
-        }
-      }
-    }
-  }
+
   TopMenu: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/top-menu/"}}) {
     edges {
       node {
@@ -103,7 +96,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         if (res.errors || res.messages) {
           reject(res.errors + " " + res.messages);
         }
-        let { Pages, TopMenu, FooterMenu, Contact, LogosSection } = res.data;
+        let { Pages, TopMenu, FooterMenu, Contact } = res.data;
         Pages.edges.forEach(({ node }) => {
           createPage({
             path: node.frontmatter.path,
@@ -112,6 +105,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
          
             context: {
               sections: node.frontmatter.sections,
+              integrations: node.frontmatter.integrations,
 
               layout: {
                 TopMenu: TopMenu.edges[0].node.frontmatter.items,
@@ -120,7 +114,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                 Integration: FooterMenu.edges[0].node.frontmatter.integration,
                 Company: FooterMenu.edges[0].node.frontmatter.company,
                 Contact: Contact.edges[0].node.frontmatter,
-                LogosSection: LogosSection.edges[0].node.frontmatter.items
+         
 
               },
             
