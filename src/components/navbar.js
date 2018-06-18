@@ -4,7 +4,7 @@ import React from "react";
 import styled from "styled-components";
 import navbarEffect from "../js/navbarEffect";
 // import Scrollchor from "react-scrollchor";
-import "../js/navItems_smallScreent";
+// import "../js/navItems_smallScreent";
 //#region
 const Logo = styled.div`
   width: 20%;
@@ -429,7 +429,7 @@ const NavbarSection = ({ items }) => {
       </Logo>
 
       <Nav>
-        <NavBars onClick={navbarEffect} id="bars" /*className="clicked"*/>
+        <NavBars onClick={navbarEffect} id="bars">
           <div className="bar1" />
           <div className="bar2" />
           <div className="bar3" />

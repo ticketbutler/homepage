@@ -1,8 +1,8 @@
 // Bars Click ON Small Screen
 export default () => {
-  let nav_Bars = document.getElementById("bars");
-  let ulElement = document.getElementById("ulNav");
-  let backDiv = document.getElementById("navActive_back");
+  const nav_Bars = document.getElementById("bars");
+  const ulElement = document.getElementById("ulNav");
+  const backDiv = document.getElementById("navActive_back");
 
   nav_Bars.classList.toggle("clicked");
 
