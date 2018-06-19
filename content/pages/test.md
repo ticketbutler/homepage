@@ -72,7 +72,7 @@ sections:
       Google Analytics og se sammenhængen mellem antallet af billetter solgt og
       din marketingstrategi. 
     type: future_image_right_second
-  - button_link: /da/billigt-billetsystem/
+  - button_link: /pris
     button_text: Se priser
     heading: Priser for alle
     image: /img/gratis-billetservice.png
@@ -105,13 +105,12 @@ integrations:
 testimonials:
   - text: Vi benyttede Ticketbutler til vores nye innovationsevent. De var utroligt venlige og responderede hurtigt                    fleksibeltpå vores henvendelsr
     image: /img/face.jpg
-    logo: RAINMAKING
+    logo: /img/text_logo.png
     about: Marius Cortsen, TexhSprint organizer
   
   - text:  Vi benyttede Ticketbutler til vores nye innovationsevent. De var utroligt venlige og responderede hurtigt                    fleksibeltpå vores henvendelsr
     image: /img/face.jpg
-    logo: RAINMAKING2
+    logo:  /img/text_logo.png
     about: Marius Cortsen, TexhSprint organizer
 
 ---
-
