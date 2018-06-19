@@ -108,11 +108,11 @@ const TopFooter = styled.div`
 
     > a {
       width: 100%;
-      display:block;
-      img{
-          width: 170px;
-          margin-bottom: 0;
-          line-height: 100px;
+      display: block;
+      img {
+        width: 170px;
+        margin-bottom: 0;
+        line-height: 100px;
       }
     }
     > span {
@@ -173,7 +173,7 @@ const TopFooter = styled.div`
     height: 650px;
     > div#footer_logo {
       width: 50%;
-      
+
       padding-left: 5%;
       > h1 {
         margin-left: auto;
@@ -195,10 +195,9 @@ const TopFooter = styled.div`
       width: 100%;
       padding-left: 0%;
       > a {
-        img{
+        img {
           display: block;
           margin: 10px auto;
-
         }
       }
       > span {
@@ -220,8 +219,10 @@ const Footer = ({ features, integration, company, items }) => (
   <FooterTag>
     <TopFooter>
       <div id="footer_logo">
-        <a href="/"><img src={"../img/logo_blue.png"}/></a>
-        
+        <a href="/">
+          <img src={"../img/logo_blue.png"} />
+        </a>
+
         <span>
           2018 TicketButler IVS <br /> CVR: 38404687
         </span>
