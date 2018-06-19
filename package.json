@@ -54,29 +54,11 @@
     "heroku-postbuild": "gatsby build",
     "start": "serve public/",
     "format": "prettier --write 'src/**/*.js'",
-    "test": "jest src/"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "babel-jest": "^23.0.1",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.8.2",
-    "jest": "^23.1.0",
-    "prettier": "1.13.4",
-    "react-test-renderer": "^16.4.1"
-  },
-  "babel": {
-    "presets": [
-      "babel-preset-env",
-      "babel-preset-react",
-      "babel-preset-flow"
-    ]
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "\\.(css|less|sass|scss)$": "<rootDir>/src/__mocks__/style_mock.js",
-      "\\.(gif|ttf|eot|svg)$": "<rootDir>/src/__mocks__/file_mock.js"
-    }
+    "prettier": "1.13.4"
   }
 }

@@ -72,7 +72,7 @@ sections:
       Google Analytics og se sammenhængen mellem antallet af billetter solgt og
       din marketingstrategi. 
     type: future_image_right_second
-  - button_link: /da/billigt-billetsystem/
+  - button_link: /pris
     button_text: Se priser
     heading: Priser for alle
     image: /img/gratis-billetservice.png
@@ -91,8 +91,6 @@ sections:
       Giv os dit logo og brandfarver og du har dit eget billetsystem inden for
       et par dage. Vi designer systemet, så det ser lækkert ud til dit brand.
     type: tall_centered_future_button_top
-<<<<<<< HEAD
-=======
 
 integrations:
   heading: Ticketbutler integrates with you favorits CMS
@@ -107,14 +105,13 @@ integrations:
 testimonials:
   - text: Vi benyttede Ticketbutler til vores nye innovationsevent. De var utroligt venlige og responderede hurtigt                    fleksibeltpå vores henvendelsr
     image: /img/face.jpg
-    logo: RAINMAKING
+    logo: /img/text_logo.png
     about: Marius Cortsen, TexhSprint organizer
   
   - text:  Vi benyttede Ticketbutler til vores nye innovationsevent. De var utroligt venlige og responderede hurtigt                    fleksibeltpå vores henvendelsr
     image: /img/face.jpg
-    logo: RAINMAKING2
+    logo:  /img/text_logo.png
     about: Marius Cortsen, TexhSprint organizer
 
->>>>>>> c1ce3ad70baa83d5a4b164b5d0951f5478eadc71
 ---
 
