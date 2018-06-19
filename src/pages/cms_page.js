@@ -16,6 +16,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const components = [
   { Component: Header, id: "header" },
+
   { Component: FutureImageRight, id: "future_image_right" },
   { Component: FutureImageIeft, id: "future_image_left" },
   { Component: TallCenteredFuture, id: "tall_centered_future" },
@@ -31,16 +32,16 @@ const components = [
 const CmsPage = ({ pathContext }) => (
   <Layout {...pathContext.layout}>
     {pathContext.sections &&
-      pathContext.sections.map(section => {
+      pathContext.sections.map((section, i) => {
         const Component = components.find(({ id }) => id === section.type)
           .Component;
-        return <Component {...section} />;
+        return <Component key={i} {...section} />;
       })}
     <LogoSection
-      all_items={ pathContext.integrations.items }
-      heading={ pathContext.integrations.heading }
+      all_items={pathContext.integrations.items}
+      heading={pathContext.integrations.heading}
     />
-    <SliderSection items={ pathContext.testimonials } />
+    <SliderSection items={pathContext.testimonials} />
   </Layout>
 );
 
