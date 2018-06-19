@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-
+import { Carousel } from 'react-responsive-carousel';
 import "../js/jquery_slider";
-import $ from "jquery";
 
 const Section = styled.section`
   padding: 100px 0;
@@ -30,13 +29,14 @@ const Section = styled.section`
 const Content = styled.div`
   width: 100%;
   div{
-      div{
-        div{
+      div.slider{
+        div.item{
             display:block;
             float: left;
             width: 100%;
             position: relative;
             padding: 50px 0;
+            background-color: #efefef;
   
           div {
                 position:absolute;
@@ -98,20 +98,20 @@ const Slider_section = ({ items }) => {
     <Section className="container">
       <Content>
         <div className="slider_wrap">
-          <span id="prev">&#8249;</span>
-          <span id="next">&#8250;</span>
           <div className="slider">
-            {/* {items.map(item => (
-              <div>
+           <Carousel showArrows="true" useKeyboardArrows="true" Responsive >
+            {items.map(item => (
+              <div className="item">
                 <div>
                   <span id="quote">&#8220;</span>
                 </div>
-                <img src={item.image} />
+                 <img src={item.image} />
                 <p>{item.text}</p>
                 <span id="about">{item.about}</span>
                 <span id="logo">{item.logo}</span>
               </div>
-            ))} */}
+            ))}
+          </Carousel>
           </div>
         </div>
       </Content>

@@ -12,6 +12,8 @@ import FutureLayers from "../components/future_layers";
 import LogoSection from "../components/integrations_section";
 import SliderSection from "../components/slider_section";
 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 const components = [
   { Component: Header, id: "header" },
   { Component: FutureImageRight, id: "future_image_right" },
