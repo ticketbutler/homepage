@@ -8,17 +8,15 @@ const Section = styled.section`
   position: relative;
   bacground: #ccc;
   padding: 110px;
-  margin-top:140px;
+  margin-top: 140px;
   @media (max-width: 1500px) {
-     margin-top: 140px;
-
+    margin-top: 140px;
   }
   @media (max-width: 1250px) {
-    margin-top:100px;
-    
+    margin-top: 100px;
   }
   @media (max-width: 1080px) {
-     margin-top:70px;
+    margin-top: 70px;
 
     padding: 80px;
   }
@@ -48,14 +46,12 @@ const BlueBackground = styled.div`
   text-align: center;
   @media (max-width: 768px) {
     height: 80%;
-    
   }
-
 `;
 
 const Content = styled.div`
   width: 100%;
-  text-align:center;
+  text-align: center;
 
   > h1 {
     width: 70%;
@@ -151,7 +147,6 @@ const Content = styled.div`
   }
 
   @media (max-width: 768px) {
-      
     > h1 {
       width: 100%;
       font-size: 45px;
@@ -197,7 +192,6 @@ const Content = styled.div`
       font-size: 25px;
       line-height: 30px;
       margin-bottom: 35px;
-
     }
     > h3 {
       font-size: 14px;
@@ -398,7 +392,6 @@ const TallCenteredFutureButtonTop = ({
         <span>{button_text}</span>
       </a>
       <img alt={image_alt} src={image} />
-
     </Content>
 
     <SquareShape>

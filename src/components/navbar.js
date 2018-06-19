@@ -16,15 +16,14 @@ const Logo = styled.div`
   float: left;
   line-height: 100px;
   > a {
-    img{
-        width: 170px;
-        margin-bottom: 0;
-        line-height: 100px;
+    img {
+      width: 170px;
+      margin-bottom: 0;
+      line-height: 100px;
     }
   }
 
   @media (max-width: 1200px) {
-    
   }
 
   @media (max-width: 1080px) {
@@ -32,21 +31,18 @@ const Logo = styled.div`
     width: 120px;
     margin-left: 40px;
     line-height: 80px;
-
   }
-
 
   @media (max-width: 350px) {
     width: 90px;
 
     margin-left: 0px;
     > a {
-      img{
-          width: 85px;
-          margin-bottom: 4px;
+      img {
+        width: 85px;
+        margin-bottom: 4px;
       }
     }
-
   }
 `;
 //#endregion
@@ -407,7 +403,7 @@ const Login_Lang = styled.div`
   @media (max-width: 600px) {
     width: 50px;
     margin-right: 135px;
-    >a {
+    > a {
       > span {
         line-height: 30px;
         padding-right: 18px;
@@ -417,13 +413,12 @@ const Login_Lang = styled.div`
 
   @media (max-width: 350px) {
     margin-right: 85px;
-    >a {
+    > a {
       > span {
         line-height: 30px;
         padding-right: 15px;
       }
     }
-   
   }
 `;
 
@@ -431,7 +426,9 @@ const NavbarSection = ({ items }) => {
   return (
     <Navbar className="navbar">
       <Logo>
-        <a href="/"><img src={"../img/logo_white.png"}/></a>
+        <a href="/">
+          <img src={"../img/logo_white.png"} />
+        </a>
       </Logo>
 
       <Nav>

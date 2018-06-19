@@ -271,7 +271,6 @@ const RightBox = styled.div`
       margin-bottom: 0;
     }
   }
- 
 
   @media (max-width: 600px) {
     margin-top: 50px;
