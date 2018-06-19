@@ -127,13 +127,37 @@ collections:
         label: Integrations
         widget: list
         fields:
-        - { name: heading, label: Heading } 
-        
-        - name: items
-          label: Items
-          widget: list
-          fields:
-            - { name: image, label: Image } 
+          - name: type
+            label: Type
+            widget: select
+            options:        
+              - { label: Logo Section, value: integrations_section }
+
+          - { name: heading, label: Heading } 
+
+          - name: items
+            label: Items
+            widget: list
+            fields:
+              - { name: image, label: Image } 
+
+
+      - name: testimonials
+        label: Testimonials
+        widget: list
+        fields:
+          - name: type
+            label: Type
+            widget: select
+            options:        
+              - { label: Slider Section, value: slider_section }
+
+          - { name: image, label: Image } 
+          - { name: text, label: Text } 
+          - { name: about, label: About } 
+          - { name: logo, label: Logo } 
+
+
 
      
 

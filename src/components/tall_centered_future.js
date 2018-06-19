@@ -172,7 +172,6 @@ const Content = styled.div`
 
   @media (max-width: 376px) {
     > h1 {
-      
       font-size: 25px;
       line-height: 32px;
     }

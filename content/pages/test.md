@@ -96,8 +96,22 @@ integrations:
   heading: Ticketbutler integrates with you favorits CMS
   items:
     - image:  /img/WP.png
+      alt: image 1
     - image:  /img/wix.png
+      alt: image 1
     - image:  /img/SQ.png
+      alt: image 1
+
+testimonials:
+  - text: Vi benyttede Ticketbutler til vores nye innovationsevent. De var utroligt venlige og responderede hurtigt                    fleksibeltpå vores henvendelsr
+    image: /img/face.jpg
+    logo: RAINMAKING
+    about: Marius Cortsen, TexhSprint organizer
+  
+  - text:  Vi benyttede Ticketbutler til vores nye innovationsevent. De var utroligt venlige og responderede hurtigt                    fleksibeltpå vores henvendelsr
+    image: /img/face.jpg
+    logo: RAINMAKING2
+    about: Marius Cortsen, TexhSprint organizer
 
 ---
 

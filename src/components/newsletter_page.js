@@ -60,23 +60,22 @@ const Content = styled.div`
         border-radius: 49px;
         display: inline;
         padding-left: 20px;
-        &::placeholder{
+        &::placeholder {
           font-size: 15px;
           font-family: Montserrat;
         }
       }
     }
-
   }
 
   @media (max-width: 768px) {
-    > h1{
-      padding:0 30px;
+    > h1 {
+      padding: 0 30px;
       height: auto;
       font-size: 50px;
       line-height: 55px;
     }
-    >form {
+    > form {
       width: 520px;
       label {
         height: 55px;
@@ -85,17 +84,16 @@ const Content = styled.div`
     }
   }
 
-  
   @media (max-width: 600px) {
-    > h1{
+    > h1 {
       width: 100%;
-      padding:0 30px;
+      padding: 0 30px;
       height: auto;
       font-size: 38px;
       line-height: 40px;
     }
-    >form {
-      width:100%;
+    > form {
+      width: 100%;
       margin-left: 0%;
       transform: translateX(0%);
       padding: 0 30px;
@@ -105,111 +103,100 @@ const Content = styled.div`
       }
     }
   }
-    
+
   @media (max-width: 530px) {
-    >form {
-      width:100%;
+    > form {
+      width: 100%;
       margin-left: 0%;
       transform: translateX(0%);
       padding: 0 20px;
       label {
         width: 100%;
-        display:block;
+        display: block;
         margin-bottom: 25px;
-
       }
     }
   }
 
-
-
   @media (max-width: 376px) {
-    > h1{
+    > h1 {
       width: 100%;
       font-size: 28px;
       line-height: 35px;
     }
-    >form {
-      width:100%;
+    > form {
+      width: 100%;
       margin-left: 0%;
       transform: translateX(0%);
       padding: 0 20px;
       label {
         height: 50px;
         width: 100%;
+      }
+    }
+  }
+`;
 
+const Button = styled.button`
+  height: 60px;
+  width: 200px;
+  display: inline;
+  float: right;
+  border-radius: 29px;
+
+  border: 0;
+  background: linear-gradient(90deg, #326de9 0%, #7e52e8 100%);
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s;
+  &:hover {
+    box-shadow: 0px 3px 20px -6px rgba(0, 0, 0, 0.3);
+    > span {
+      &::after {
+        opacity: 1;
+        margin-left: 10px;
       }
     }
   }
 
-`;
-
-const Button = styled.button`
-height: 60px;
-width: 200px;
-display: inline;
-float:right;
-border-radius: 29px;
-
-border: 0;
-background: linear-gradient(90deg, #326DE9 0%, #7E52E8 100%);
-text-decoration:none;
-text-align: center;
-position: relative;
-transition: all .3s;
-    &:hover {
-        box-shadow: 0px 3px 20px -6px rgba(0,0,0,0.30);
-    > span {
-            &::after {
-                opacity: 1;
-                margin-left: 10px;
-            }
-        }
-    }
-    
-        
-    > span {
-    color: #FFFFFF;	
-    font-family: Montserrat;	
+  > span {
+    color: #ffffff;
+    font-family: Montserrat;
     font-size: 16px;
-    font-weight: bold;	
+    font-weight: bold;
     text-align: center;
-    transition: all .3s;
+    transition: all 0.3s;
 
-        &::after {
-        content: '\00BB';
-        opacity: 1;
-        font-size: 20px;
-        opacity: 0;
-        margin-left: -8px;
-        z-index: 10;
-        color: #FFF;
-        transition: 0.3s;
-        }
+    &::after {
+      content: "\00BB";
+      opacity: 1;
+      font-size: 20px;
+      opacity: 0;
+      margin-left: -8px;
+      z-index: 10;
+      color: #fff;
+      transition: 0.3s;
     }
-    @media (max-width: 768px) { 
-        width: 190px;
-        height: 55px;
+  }
+  @media (max-width: 768px) {
+    width: 190px;
+    height: 55px;
+  }
+  @media (max-width: 600px) {
+    width: 180px;
+    height: 50px;
+  }
+  @media (max-width: 530px) {
+    display: block;
+    float: none;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  @media (max-width: 376px) {
+    > span {
+      font-size: 13px;
     }
-    @media (max-width: 600px) { 
-      width: 180px;
-      height: 50px;
-    
-        
-    }
-    @media (max-width: 530px) { 
-       
-        display:block;
-        float: none;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        
-    }
-    @media (max-width: 376px) { 
-       
-      > span {	
-        font-size: 13px;}
-      
   }
 `;
 
@@ -226,11 +213,7 @@ const Newsletter_Page = () => {
           data-netlify-honeypot="bot-field"
         >
           <label>
-            <input
-              name="email"
-              type="email"
-              placeholder="Din email her"
-            />
+            <input name="email" type="email" placeholder="Din email her" />
           </label>
           <Button>
             <span>Tilmeld</span>

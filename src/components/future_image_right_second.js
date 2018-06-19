@@ -55,7 +55,6 @@ const LeftBox = styled.div`
       font-size: 50px;
       line-height: 60px;
       width: 100%;
-
     }
 
     > h3 {
@@ -166,7 +165,7 @@ const RightBox = styled.div`
     width: 524px;
     height: 420px;
     object-fit: cover;
-    float:right;
+    float: right;
     z-index: 2;
   }
 
@@ -190,7 +189,6 @@ const RightBox = styled.div`
     background-color: #1dc9cc;
     -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
     clip-path: polygon(0 0, 0% 100%, 100% 100%);
-    
   }
 
   > div.clear-fix {
@@ -265,7 +263,6 @@ const RightBox = styled.div`
       right: 0;
       margin-right: 50%;
       transform: translateX(50%);
-
     }
   }
 
@@ -295,7 +292,7 @@ const RightBox = styled.div`
     }
     > img {
       width: 100%;
-    height: auto;
+      height: auto;
 
       top: 0px;
       right: 0px;
@@ -303,7 +300,7 @@ const RightBox = styled.div`
       border-radius: 0px;
     }
   }
-  
+
   @media (max-width: 300px) {
     > img {
       height: auto;

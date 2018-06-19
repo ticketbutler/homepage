@@ -20,8 +20,16 @@ const query = `query IndexQuery {
             heading
             items{
               image
+              alt
             }
-          }       
+          }  
+
+          testimonials{
+            text
+            image
+            logo
+            about
+          } 
         }
       }
     }
@@ -106,6 +114,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             context: {
               sections: node.frontmatter.sections,
               integrations: node.frontmatter.integrations,
+              testimonials:node.frontmatter.testimonials,
 
               layout: {
                 TopMenu: TopMenu.edges[0].node.frontmatter.items,
