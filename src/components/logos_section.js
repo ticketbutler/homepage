@@ -21,26 +21,20 @@ const Section = styled.section`
     padding: 40px 0px;
   }
 `;
-const Content = styled.div`
+const Content = styled.div``;
 
-`;
-
-const Company_logos = ({items}) => {
-
+const Company_logos = ({ items }) => {
   return (
-   
     <Section className="section-3 container">
-
-    <Content>
+      <Content>
         {items.map(item => (
-            <li>
-              <a href={item.path}>
-                <img src={item.image}/>
-              </a>
-            </li>
-          ))}
-    </Content>
-     
+          <li>
+            <a href={item.path}>
+              <img src={item.image} />
+            </a>
+          </li>
+        ))}
+      </Content>
     </Section>
   );
 };

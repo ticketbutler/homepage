@@ -164,11 +164,11 @@ const RightBox = styled.div`
     clear: both;
   }
   > img {
-      width: 510px;
-      height: 420px;
-      object-fit: cover;
-      float:right;
-      z-index: 2;
+    width: 510px;
+    height: 420px;
+    object-fit: cover;
+    float: right;
+    z-index: 2;
   }
 
   > div.first-box.blue {
@@ -179,7 +179,6 @@ const RightBox = styled.div`
     top: 80px;
     background-color: #326de9;
     z-index: -2;
-
   }
 
   > div.clear-fix {
@@ -236,7 +235,6 @@ const RightBox = styled.div`
       right: 0;
       margin-right: 50%;
       transform: translateX(50%);
-
     }
   }
 

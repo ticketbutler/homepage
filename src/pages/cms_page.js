@@ -13,32 +13,29 @@ import LogoSection from "../components/logos_section";
 
 const components = [
   { Component: Header, id: "header" },
+
   { Component: FutureImageRight, id: "future_image_right" },
   { Component: FutureImageIeft, id: "future_image_left" },
   { Component: TallCenteredFuture, id: "tall_centered_future" },
-  { Component: TallCenteredFutureButtonTop, id: "tall_centered_future_button_top" },
+  {
+    Component: TallCenteredFutureButtonTop,
+    id: "tall_centered_future_button_top"
+  },
   { Component: FutureImageRightSecond, id: "future_image_right_second" },
   { Component: FutureImageRightNew, id: "future_image_right_new" },
-  { Component: FutureLayers, id: "future_layers" },
-
+  { Component: FutureLayers, id: "future_layers" }
 ];
 
 const CmsPage = ({ pathContext }) => (
-
   <Layout {...pathContext.layout}>
-  
     {pathContext.sections &&
       pathContext.sections.map(section => {
         const Component = components.find(({ id }) => id === section.type)
           .Component;
-        return <Component {...section} />
-      })
-    
-    }
-    <LogoSection items={pathContext.layout.LogosSection}/>
-  
+        return <Component {...section} />;
+      })}
+    <LogoSection items={pathContext.layout.LogosSection} />
   </Layout>
-  
 );
 
 export default CmsPage;
