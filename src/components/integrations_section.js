@@ -55,7 +55,9 @@ const Company_logos = ({ all_items, heading }) => {
       <Content>
         <h2>{heading}</h2>
 
-        <div>{all_items.map(item => <img src={item.image} alt={item.alt} />)}</div>
+        <div>
+          {all_items.map(item => <img src={item.image} alt={item.alt} />)}
+        </div>
       </Content>
     </Section>
   );

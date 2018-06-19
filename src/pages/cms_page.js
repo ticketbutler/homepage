@@ -37,10 +37,10 @@ const CmsPage = ({ pathContext }) => (
         return <Component {...section} />;
       })}
     <LogoSection
-      all_items={ pathContext.integrations.items }
-      heading={ pathContext.integrations.heading }
+      all_items={pathContext.integrations.items}
+      heading={pathContext.integrations.heading}
     />
-    <SliderSection items={ pathContext.testimonials } />
+    <SliderSection items={pathContext.testimonials} />
   </Layout>
 );
 
