@@ -123,8 +123,8 @@ collections:
           - { name: button_text, label: Button Text, required: false }
           - { name: button_link, label: Button Link, required: false }
 
-      - name: integrations
-        label: Integrations
+      - name: logo_section
+        label: LogoSection
         widget: list
         fields:
           - name: type
@@ -140,6 +140,8 @@ collections:
             widget: list
             fields:
               - { name: image, label: Image } 
+              - { name: alt, label: Alt } 
+
 
 
       - name: testimonials

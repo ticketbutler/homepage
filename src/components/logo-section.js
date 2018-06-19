@@ -49,14 +49,14 @@ const Content = styled.div`
   }
 `;
 
-const Company_logos = ({ all_items, heading }) => {
+const Company_logos = ({ items, heading }) => {
   return (
     <Section className="section-3 container">
       <Content>
         <h2>{heading}</h2>
 
         <div>
-          {all_items.map(item => <img src={item.image} alt={item.alt} />)}
+          {items.map(item => <img src={item.image} alt={item.alt} ></img>)}
         </div>
       </Content>
     </Section>

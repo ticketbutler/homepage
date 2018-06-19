@@ -16,7 +16,7 @@ const query = `query IndexQuery {
             button_text
             button_link
           }
-          integrations{
+          logo_section{
             heading
             items{
               image
@@ -113,7 +113,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
          
             context: {
               sections: node.frontmatter.sections,
-              integrations: node.frontmatter.integrations,
+              logo_section: node.frontmatter.logo_section,
               testimonials:node.frontmatter.testimonials,
 
               layout: {
@@ -123,10 +123,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                 Integration: FooterMenu.edges[0].node.frontmatter.integration,
                 Company: FooterMenu.edges[0].node.frontmatter.company,
                 Contact: Contact.edges[0].node.frontmatter,
-         
-
               },
-            
             }
           });
         });

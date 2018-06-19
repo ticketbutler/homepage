@@ -9,7 +9,7 @@ import FutureImageRightSecond from "../components/future_image_right_second";
 import FutureImageRightNew from "../components/future_image_right_new";
 import FutureLayers from "../components/future_layers";
 
-import LogoSection from "../components/integrations_section";
+import LogoSection from "../components/logo-section";
 import SliderSection from "../components/slider_section";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -36,11 +36,12 @@ const CmsPage = ({ pathContext }) => (
           .Component;
         return <Component {...section} />;
       })}
+
     <LogoSection
-      all_items={pathContext.integrations.items}
-      heading={pathContext.integrations.heading}
-    />
-    <SliderSection items={pathContext.testimonials} />
+      items={ pathContext.logo_section.items }
+      heading={ pathContext.logo_section.heading }
+    ></LogoSection>
+    <SliderSection items={pathContext.testimonials} ></SliderSection>
   </Layout>
 );
 
