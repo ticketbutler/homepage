@@ -57,22 +57,12 @@ const Content = styled.div`
     }
     @media (max-width: 768px) {
       right: 30px;
-      &::before{
-        font-size: 50px;
-      
-            }
     }
     @media (max-width: 500px) {
       right: 10px;
-      &::before{
-        font-size: 30px;
-      }
     }
     @media (max-width: 400px) {
       right: -5px;
-      &::before{
-        font-size: 25px;
-      }
     }
 
   }
@@ -88,31 +78,33 @@ const Content = styled.div`
     }
     @media (max-width: 768px) {
       left: 30px;
-      &::before{
-     font-size: 50px;
-
-      }
     }
     @media (max-width: 500px) {
       left: 10px;
-      &::before{
-        font-size: 30px;
-      }
     }
     @media (max-width: 400px) {
       left: -5px;
-      &::before{
-        font-size: 25px;
-      }
     }
 
   }
 
+
 .carousel .control-arrow.control-prev::before, .carousel.carousel-slider .control-arrow.control-prev::before{
+  color: #C5D0DE;
   content: "<";
   font-size: 60px;
-
-}
+  z-index: 1001;
+  border:none;
+  @media (max-width: 768px) {
+    font-size: 50px;
+ }
+ @media (max-width: 500px) {
+     font-size: 30px;
+ }
+ @media (max-width: 400px) {
+     font-size: 25px;
+ }
+ }
 
 .carousel .control-arrow::before, .carousel.carousel-slider .control-arrow::before{
     color: #C5D0DE;
@@ -120,6 +112,15 @@ const Content = styled.div`
     font-size: 60px;
     z-index: 1001;
     border:none;
+    @media (max-width: 768px) {
+      font-size: 50px;
+   }
+   @media (max-width: 500px) {
+       font-size: 30px;
+   }
+   @media (max-width: 400px) {
+       font-size: 25px;
+   }
    }
 
    .carousel .control-dots .dot {
@@ -128,8 +129,8 @@ const Content = styled.div`
    }
   div{
       div.slider{
-        width: 100%;
-        height: 100%;
+        // width: 100%;
+        // height: 100%;
         img.quote{
           position: absolute;
           width: 500px;
