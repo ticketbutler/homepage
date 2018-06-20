@@ -16,14 +16,13 @@ const query = `query IndexQuery {
             button_text
             button_link
           }
-          integrations{
+          logo_section{
             heading
             items{
               image
               alt
             }
           }  
-
           testimonials{
             text
             image
@@ -119,8 +118,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                 FooterMenu: FooterMenu.edges[0].node.frontmatter.items,
                 Features: FooterMenu.edges[0].node.frontmatter.features,
                 Company: FooterMenu.edges[0].node.frontmatter.company,
-                Contact: Contact.edges[0].node.frontmatter,
-                LogosSection: LogosSection.edges[0].node.frontmatter.items
+                Contact: Contact.edges[0].node.frontmatter
               }
             }
           });
