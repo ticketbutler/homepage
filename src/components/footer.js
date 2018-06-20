@@ -224,7 +224,7 @@ const Footer = ({ features, integration, company, items }) => (
         </a>
 
         <span>
-          2018 TicketButler IVS <br /> CVR: 38404687
+          2018 Ticketbutler IVS <br /> CVR: 38404687
         </span>
       </div>
 
