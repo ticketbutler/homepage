@@ -144,11 +144,11 @@ collections:
             label: Testimonials
             widget: list
             fields:
-              - name: type
-                label: Type
-                widget: select
-                options:        
-                  - { label: Slider Section, value: slider_section }
+              # - name: type
+              #   label: Type
+              #   widget: select
+              #   options:        
+              #     - { label: Slider Section, value: slider_section }
 
               - { name: image, label: Image, widget: image, required: false } 
               - { name: text, label: Text, required: false } 
