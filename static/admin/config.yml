@@ -86,27 +86,6 @@ collections:
 
 
   # *************************
-  #  Logo Section 
-  # ************************
-  - name: logo-section
-    label: Logo Section
-    folder: content/logo-section
-    create: true
-    fields:
-      - { name: title, label: Title }
-      - { name: path, label: Path }
-      - name: items
-        label: Items
-        widget: list
-        fields:
-          - { name: image, label: Image }
-          - { name: path, label: Path }
-        options:        
-            - { label: Logo Section, value: logos_section }
-
-
-
-  # *************************
   #  All secion
   # ************************
 
@@ -134,6 +113,9 @@ collections:
               - { label: Image Right Second Style, value: future_image_right_second }
               - { label: Image Right New, value: future_image_right_new }
               - { label: Layer Image, value: future_layers }
+              - { label: Logo Section, value: integrations_section }
+
+          
 
           - { name: heading, label: Heading, required: false }
           - { name: text, label: Text, required: false }
@@ -141,8 +123,41 @@ collections:
           - { name: image_alt, label: Image Alt, required: false }
           - { name: button_text, label: Button Text, required: false }
           - { name: button_link, label: Button Link, required: false }
+          
+          - name: logo_section
+            label: LogoSection
+            widget: list
+            fields:
+            
+              - { name: heading, label: Heading } 
 
-                    
+              - name: items
+                label: Items
+                widget: list
+                fields:
+                  - { name: image, label: Image, widget: image, required: false } 
+                  - { name: alt, label: Alt, required: false } 
+
+
+
+          - name: testimonials
+            label: Testimonials
+            widget: list
+            fields:
+              # - name: type
+              #   label: Type
+              #   widget: select
+              #   options:        
+              #     - { label: Slider Section, value: slider_section }
+
+              - { name: image, label: Image, widget: image, required: false } 
+              - { name: text, label: Text, required: false } 
+              - { name: about, label: About, required: false } 
+              - { name: logo, label: Logo, widget: image, required: false } 
+
+
+
+     
 
           
           

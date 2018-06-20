@@ -16,24 +16,24 @@ const query = `query IndexQuery {
             button_text
             button_link
           }
-        }
-      }
-    }
-  }
-  LogosSection: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/logo-section/"}}) {
-    edges {
-      node {
-        frontmatter {
-          title
-          path
-          items {
+          logo_section{
+            heading
+            items{
+              image
+              alt
+            }
+          }  
+          testimonials{
+            text
             image
-            path
-          }
+            logo
+            about
+          } 
         }
       }
     }
   }
+
   TopMenu: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/top-menu/"}}) {
     edges {
       node {
@@ -103,7 +103,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         if (res.errors || res.messages) {
           reject(res.errors + " " + res.messages);
         }
-        let { Pages, TopMenu, FooterMenu, Contact, LogosSection } = res.data;
+        let { Pages, TopMenu, FooterMenu, Contact } = res.data;
         Pages.edges.forEach(({ node }) => {
           createPage({
             path: node.frontmatter.path,
@@ -111,14 +111,15 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             layout: null,
             context: {
               sections: node.frontmatter.sections,
+              logo_section: node.frontmatter.logo_section,
+              testimonials: node.frontmatter.testimonials,
               layout: {
                 TopMenu: TopMenu.edges[0].node.frontmatter.items,
                 FooterMenu: FooterMenu.edges[0].node.frontmatter.items,
                 Features: FooterMenu.edges[0].node.frontmatter.features,
                 Integration: FooterMenu.edges[0].node.frontmatter.integration,
                 Company: FooterMenu.edges[0].node.frontmatter.company,
-                Contact: Contact.edges[0].node.frontmatter,
-                LogosSection: LogosSection.edges[0].node.frontmatter.items
+                Contact: Contact.edges[0].node.frontmatter
               }
             }
           });

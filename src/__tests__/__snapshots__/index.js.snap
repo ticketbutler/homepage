@@ -1,0 +1,349 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the Layout component renders 1`] = `
+<div>
+  <div
+    className="navbar sc-bwzfXH fjLUux"
+  >
+    <div
+      className="sc-bdVaJa tzrCz"
+    >
+      <a
+        href="/"
+      >
+        <img
+          src="../img/logo_white.png"
+        />
+      </a>
+    </div>
+    <nav
+      className="sc-htpNat jRffzg"
+    >
+      <div
+        className="sc-bxivhb djlsVW"
+        id="bars"
+        onClick={[Function]}
+      >
+        <div
+          className="bar1"
+        />
+        <div
+          className="bar2"
+        />
+        <div
+          className="bar3"
+        />
+      </div>
+      <ul
+        id="ulNav"
+      />
+    </nav>
+    <div
+      className="sc-ifAKCX jrFtnc"
+      id="navbar_login_btn"
+    >
+      <div
+        className="language"
+      >
+        <span
+          id="Lang"
+        >
+          Danish
+        </span>
+        <ul>
+          <li>
+            <span>
+              English
+            </span>
+          </li>
+        </ul>
+      </div>
+      <a
+        href="#contact"
+      >
+        <span>
+          Kontakt
+        </span>
+      </a>
+    </div>
+    <div
+      className="clear-fix"
+    />
+    <style
+      jsx={true}
+    >
+      
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        div.NavbarClicked-background {
+          display: none;
+
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          position: fixed;
+          background-color: rgba(0, 0, 0, 0.75);
+          z-index: 10;
+        }
+        @media (max-width: 1100px) {
+          div.NavbarClicked-background {
+            display: block;
+          }
+        }
+      
+    </style>
+  </div>
+  <div />
+  <section
+    className="section-3 container sc-dnqmqq kFdrSy"
+  >
+    <div
+      className="sc-iwsKbI kKovyN"
+    >
+      <h1>
+        Tilmeld Ticketbutler Nyhedsbrev
+      </h1>
+      <form
+        className="newsletter"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        method="post"
+        name="newsletter"
+      >
+        <label>
+          <input
+            name="email"
+            placeholder="Din email her"
+            type="email"
+          />
+        </label>
+        <button
+          className="sc-gZMcBi dCSWDN"
+        >
+          <span>
+            Tilmeld
+          </span>
+        </button>
+      </form>
+    </div>
+  </section>
+  <section
+    className="sc-EHOje cpGZhq"
+    id="contact"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="left-box contact sc-bZQynM kJZFQC"
+      >
+        <h1>
+          Kontakt
+        </h1>
+        <form
+          className="contact-form"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          method="post"
+          name="contact-form"
+        >
+          <ul>
+            <li>
+              <label>
+                <input
+                  id="align-left"
+                  name="name"
+                  placeholder="Dit navn"
+                  type="text"
+                />
+              </label>
+            </li>
+            <li>
+              <label>
+                <input
+                  id="align-right"
+                  name="email"
+                  placeholder="Din email"
+                  type="email"
+                />
+              </label>
+            </li>
+            <li
+              id="message-field"
+            >
+              <label>
+                <textarea
+                  name="message"
+                  placeholder="Besked"
+                />
+              </label>
+            </li>
+          </ul>
+          <button
+            className="sc-gzVnrw ccFcpY"
+          >
+            <span>
+              Send besked
+            </span>
+          </button>
+          <div
+            className="clear-fix"
+          />
+        </form>
+      </div>
+      <div
+        className="sc-htoDjs cclWUx"
+      >
+        <div
+          className="content"
+        >
+          <ul>
+            <li>
+              <i
+                className="fa fa-map-marker"
+              />
+              <span>
+                Adresse 
+              </span>
+              <span
+                id="address"
+              >
+                 
+              </span>
+            </li>
+            <li>
+              <i
+                className="fa fa-phone"
+              />
+              <span>
+                Telefon
+              </span>
+              <span
+                id="phone"
+              />
+            </li>
+            <li>
+              <i
+                className="fa fa-envelope"
+              />
+              <span>
+                Generel support
+              </span>
+              <span
+                id="support"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      className="clear-fix"
+    />
+    <style
+      jsx={true}
+    >
+      
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .clear-fix {
+        clear: both;
+      }
+    
+    </style>
+  </section>
+  <footer
+    className="sc-gqjmRU cFMjrA"
+  >
+    <div
+      className="sc-jTzLTM bmmyJV"
+    >
+      <div
+        id="footer_logo"
+      >
+        <a
+          href="/"
+        >
+          <img
+            src="../img/logo_blue.png"
+          />
+        </a>
+        <span>
+          2018 TicketButler IVS 
+          <br />
+           CVR: 38404687
+        </span>
+      </div>
+      <ul
+        className="Future footer_ul"
+      >
+        <h3>
+          Features
+        </h3>
+      </ul>
+      <ul
+        className="Integration footer_ul"
+      >
+        <h3>
+          Hjælpecenter
+        </h3>
+      </ul>
+      <ul
+        className="Company footer_ul"
+      >
+        <h3>
+          Om os
+        </h3>
+      </ul>
+    </div>
+    <div
+      className="sc-VigVT byYTMr"
+    />
+    <div
+      className="clear-fix"
+    />
+    <style
+      jsx={true}
+    >
+      
+      .clear-fix {
+        clear: both;
+      }
+    
+    </style>
+  </footer>
+  <script
+    async={true}
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "
+        window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)}
+      gtag('js', new Date());
+      gtag('config', 'UA-70000511-3');",
+      }
+    }
+  />
+  <script
+    async={true}
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "window.fcWidget.init({
+              token: \\"caada681-1687-44bf-b803-7e061a49883e\\",
+              host: \\"https://wchat.freshchat.com\\",
+            });",
+      }
+    }
+  />
+</div>
+`;
