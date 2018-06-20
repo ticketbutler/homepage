@@ -37,9 +37,7 @@ const CmsPage = ({ pathContext }) => (
           .Component;
         return <Component key={i} {...section} />;
       })}
-
     <LogoSection
-      // pathContext.layout ? pathContext.layout.LogosSection : []
       items={pathContext.logo_section ? pathContext.logo_section.items : []}
       heading={pathContext.logo_section ? pathContext.logo_section.heading : []}
     />
