@@ -1,9 +1,24 @@
 import React from "react";
 
 const NotFoundPage = () => (
-  <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+  <div
+    style={{
+      minHeight: "85vh",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center"
+    }}
+  >
+    <img
+      src={"../img/ticketbutler_logo.png"}
+      width={170}
+      style={{ margin: "50px 0" }}
+    />
+    <h1>Sorry, there's nothing here</h1>
+    <p>
+      <a href="/">Go back home</a>.
+    </p>
   </div>
 );
 
