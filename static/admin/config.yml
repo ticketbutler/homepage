@@ -101,9 +101,8 @@ collections:
         fields:
           - { name: image, label: Image }
           - { name: path, label: Path }
-
-          options:        
-              - { label: Logo Section, value: logos_section }
+        options:        
+            - { label: Logo Section, value: logos_section }
 
 
 
