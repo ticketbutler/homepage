@@ -51,7 +51,7 @@ const Content = styled.div`
 
 const Company_logos = ({ items, heading }) => {
   return (
-    <Section className="section-3 container">
+    <Section className="container">
       <Content>
         <h2>{heading}</h2>
 

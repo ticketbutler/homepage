@@ -453,7 +453,7 @@ const FutureLayers = ({
   image_alt,
   button_link
 }) => (
-  <Section className="section-6">
+  <Section>
     <SectionImage className="image">
       <img alt={image_alt} className="content_image" src={image} />
     </SectionImage>

@@ -586,7 +586,7 @@ const FutureImageIeft = ({
   image_alt,
   button_link
 }) => (
-  <Section className="section-3 container">
+  <Section className="container">
     <LeftBox id="left-box">
       <figure>
         <img className="device" alt={image_alt} src={image} />

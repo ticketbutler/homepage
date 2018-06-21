@@ -202,7 +202,7 @@ const Button = styled.button`
 
 const Newsletter_Page = () => {
   return (
-    <Section className="section-3 container">
+    <Section className="container">
       <Content>
         <h1>Tilmeld Ticketbutler Nyhedsbrev</h1>
         <form

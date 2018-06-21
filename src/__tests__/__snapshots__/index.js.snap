@@ -6,7 +6,7 @@ exports[`the Layout component renders 1`] = `
     className="navbar sc-bwzfXH fjLUux"
   >
     <div
-      className="sc-bdVaJa tzrCz"
+      className="sc-bdVaJa fAbyfU"
     >
       <a
         href="/"
@@ -39,7 +39,7 @@ exports[`the Layout component renders 1`] = `
       />
     </nav>
     <div
-      className="sc-ifAKCX jrFtnc"
+      className="sc-ifAKCX ivLGOd"
       id="navbar_login_btn"
     >
       <div
@@ -104,7 +104,7 @@ exports[`the Layout component renders 1`] = `
     className="section-3 container sc-dnqmqq kFdrSy"
   >
     <div
-      className="sc-iwsKbI kKovyN"
+      className="sc-iwsKbI gJoEqD"
     >
       <h1>
         Tilmeld Ticketbutler Nyhedsbrev
@@ -124,7 +124,7 @@ exports[`the Layout component renders 1`] = `
           />
         </label>
         <button
-          className="sc-gZMcBi dCSWDN"
+          className="sc-gZMcBi koKiOp"
         >
           <span>
             Tilmeld
@@ -266,7 +266,7 @@ exports[`the Layout component renders 1`] = `
     className="sc-gqjmRU cFMjrA"
   >
     <div
-      className="sc-jTzLTM bmmyJV"
+      className="sc-jTzLTM klFWpO"
     >
       <div
         id="footer_logo"
@@ -279,7 +279,7 @@ exports[`the Layout component renders 1`] = `
           />
         </a>
         <span>
-          2018 TicketButler IVS 
+          2018 Ticketbutler IVS 
           <br />
            CVR: 38404687
         </span>
