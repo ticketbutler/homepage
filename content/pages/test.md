@@ -25,15 +25,7 @@ sections:
     heading: Sælg billetter direkte fra din hjemmeside
     image: /img/billetsystem-integration.png
     image_alt: Saelg-billetter-online
-    logo_section:
-      - heading: 'Vi kan blandt andre integrere med:'
-        items:
-          - alt: online billetsystem integration med squarespace
-            image: /img/squarespace-logo.png
-          - alt: online billetsystem integration med wix
-            image: /img/wix.com_logo.png
-          - alt: online billetsystem integration med wordpress plugin
-            image: /img/wordpress-logotype-standard.png
+    logo_section: []
     text: >-
       Alle besøgende på din hjemmeside er din mulighed for at sælge billetter
       eller hvad du ellers tilbyder. Gå ikke glip af besøgende ved at integrere
