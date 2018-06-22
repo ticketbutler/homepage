@@ -16,20 +16,20 @@ const query = `query IndexQuery {
             button_text
             button_link
           }
-          logo_section{
+          // logo_section{
             
-            heading
-            items{
-              image
-              alt
-            }
-          }  
-          testimonials{
-            text
-            image
-            logo
-            about
-          } 
+          //   heading
+          //   items{
+          //     image
+          //     alt
+          //   }
+          // }  
+          // testimonials{
+          //   text
+          //   image
+          //   logo
+          //   about
+          // } 
         }
       }
     }
