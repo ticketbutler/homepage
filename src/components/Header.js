@@ -242,26 +242,28 @@ const HeaderContent = styled.div`
 
 const Header = ({ heading, text, button_text, button_link }) => {
   return (
-    <HeaderTag id="header">
-      <div id="navActive_back" />
-      <HeaderContent className="header_content">
-        <h1 id="title">{heading}</h1>
-        <p id="description">{text}</p>
-        <a href={button_link} id="header-btn">
-          <span>{button_text}</span>
-        </a>
-      </HeaderContent>
+    <div>
+      <HeaderTag id="header">
+        <div id="navActive_back" />
+        <HeaderContent className="header_content">
+          <h1 id="title">{heading}</h1>
+          <p id="description">{text}</p>
+          <a href={button_link} id="header-btn">
+            <span>{button_text}</span>
+          </a>
+        </HeaderContent>
 
-      <style jsx>{`
-        // @import url("https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700|Montserrat:300,400,500,600,700");
+        <style jsx>{`
+          // @import url("https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700|Montserrat:300,400,500,600,700");
 
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-      `}</style>
-    </HeaderTag>
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+        `}</style>
+      </HeaderTag>
+    </div>
   );
   // {
   //     (function(a,l,b,c,r,s){

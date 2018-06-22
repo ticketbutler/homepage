@@ -17,7 +17,7 @@ const NotFoundPage = () => (
     />
     <h1>Sorry, there's nothing here</h1>
     <p>
-      <a href="/">Go back home</a>.
+      <a href="/da/">Go back home</a>.
     </p>
   </div>
 );

@@ -17,6 +17,7 @@ const query = `query IndexQuery {
             button_link
           }
           logo_section{
+            
             heading
             items{
               image
@@ -111,8 +112,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             layout: null,
             context: {
               sections: node.frontmatter.sections,
-              logo_section: node.frontmatter.logo_section,
-              testimonials: node.frontmatter.testimonials,
+              // logo_section: node.frontmatter.logo_section,
+              // testimonials: node.frontmatter.testimonials,
               layout: {
                 TopMenu: TopMenu.edges[0].node.frontmatter.items,
                 FooterMenu: FooterMenu.edges[0].node.frontmatter.items,
