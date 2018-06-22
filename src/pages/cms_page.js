@@ -9,9 +9,6 @@ import FutureImageRightSecond from "../components/future_image_right_second";
 import FutureImageRightNew from "../components/future_image_right_new";
 import FutureLayers from "../components/future_layers";
 
-// import LogoSection from "../components/logo-section";
-// import SliderSection from "../components/slider_section";
-
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const components = [
@@ -37,13 +34,6 @@ const CmsPage = ({ pathContext }) => (
           .Component;
         return <Component key={i} {...section} />;
       })}
-    {/* <LogoSection
-      items={pathContext.logo_section ? pathContext.logo_section.items : []}
-      heading={pathContext.logo_section ? pathContext.logo_section.heading : []}
-    />
-    <SliderSection
-      items={pathContext.testimonials ? pathContext.testimonials : []}
-    /> */}
   </Layout>
 );
 

@@ -15,19 +15,6 @@ const query = `query IndexQuery {
             image_alt
             button_text
             button_link
-          }
-          logo_section{
-            heading
-            items{
-              image
-              alt
-            }
-          }  
-          testimonials{
-            text
-            image
-            logo
-            about
           } 
         }
       }
@@ -111,8 +98,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             layout: null,
             context: {
               sections: node.frontmatter.sections,
-              logo_section: node.frontmatter.logo_section,
-              testimonials: node.frontmatter.testimonials,
               layout: {
                 TopMenu: TopMenu.edges[0].node.frontmatter.items,
                 FooterMenu: FooterMenu.edges[0].node.frontmatter.items,
