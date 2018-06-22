@@ -9,8 +9,8 @@ import FutureImageRightSecond from "../components/future_image_right_second";
 import FutureImageRightNew from "../components/future_image_right_new";
 import FutureLayers from "../components/future_layers";
 
-// import LogoSection from "../components/logo-section";
-// import SliderSection from "../components/slider_section";
+import LogoSection from "../components/logo-section";
+import SliderSection from "../components/slider_section";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
