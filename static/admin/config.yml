@@ -113,9 +113,7 @@ collections:
               - { label: Image Right Second Style, value: future_image_right_second }
               - { label: Image Right New, value: future_image_right_new }
               - { label: Layer Image, value: future_layers }
-              # - { label: Logo Section, value: integrations_section}
-              # - { label: Slider Section, value: slider_section }
-
+              - { label: Logo Section, value: integrations_section }
 
           
 
@@ -125,14 +123,12 @@ collections:
           - { name: image_alt, label: Image Alt, required: false }
           - { name: button_text, label: Button Text, required: false }
           - { name: button_link, label: Button Link, required: false }
-              
+          
       - name: logo_section
         label: LogoSection
         widget: list
         fields:
-              
           - { name: heading, label: Heading } 
-
           - name: items
             label: Items
             widget: list

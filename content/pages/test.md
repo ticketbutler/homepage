@@ -25,15 +25,7 @@ sections:
     heading: Sælg billetter direkte fra din hjemmeside
     image: /img/billetsystem-integration.png
     image_alt: Saelg-billetter-online
-    logo_section:
-      - heading: 'Vi kan blandt andre integrere med:'
-        items:
-          - alt: online billetsystem integration med squarespace
-            image: /img/squarespace-logo.png
-          - alt: online billetsystem integration med wix
-            image: /img/wix.com_logo.png
-          - alt: online billetsystem integration med wordpress plugin
-            image: /img/wordpress-logotype-standard.png
+    logo_section: []
     text: >-
       Alle besøgende på din hjemmeside er din mulighed for at sælge billetter
       eller hvad du ellers tilbyder. Gå ikke glip af besøgende ved at integrere
@@ -81,7 +73,7 @@ sections:
       Google Analytics og se sammenhængen mellem antallet af billetter solgt og
       din marketingstrategi. 
     type: future_image_right_second
-  - button_link: /pris
+  - button_link: /da/billigt-billetsystem
     button_text: Se priser
     heading: Priser for alle
     image: /img/gratis-billetservice.png
@@ -100,7 +92,6 @@ sections:
       Giv os dit logo og brandfarver og du har dit eget billetsystem inden for
       et par dage. Vi designer systemet, så det ser lækkert ud til dit brand.
     type: tall_centered_future_button_top
-
 
 logo_section:
   heading: Ticketbutler integrates with you favorits CMS
@@ -122,5 +113,4 @@ testimonials:
     image: /img/face.jpg
     logo:  /img/text_logo.png
     about: Marius Cortsen, TexhSprint organizer
-
 ---

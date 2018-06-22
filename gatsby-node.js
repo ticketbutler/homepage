@@ -17,7 +17,6 @@ const query = `query IndexQuery {
             button_link
           }
           logo_section{
-            
             heading
             items{
               image
