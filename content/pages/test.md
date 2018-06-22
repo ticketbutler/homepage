@@ -102,25 +102,25 @@ sections:
     type: tall_centered_future_button_top
 
 
-logo_section:
-  heading: Ticketbutler integrates with you favorits CMS
-  items:
-    - image: /img/WP.png
-      alt: image1
-    - image: /img/wix.png
-      alt: image2
-    - image: /img/SQ.png
-      alt: image3
+# logo_section:
+#   heading: Ticketbutler integrates with you favorits CMS
+#   items:
+#     - image: /img/WP.png
+#       alt: image1
+#     - image: /img/wix.png
+#       alt: image2
+#     - image: /img/SQ.png
+#       alt: image3
 
-testimonials:
-  - text: Vi benyttede Ticketbutler til vores nye innovationsevent. De var utroligt venlige og responderede hurtigt                    fleksibeltpå vores henvendelsr
-    image: /img/face.jpg
-    logo: /img/text_logo.png
-    about: Marius Cortsen, TexhSprint organizer
+# testimonials:
+#   - text: Vi benyttede Ticketbutler til vores nye innovationsevent. De var utroligt venlige og responderede hurtigt                    fleksibeltpå vores henvendelsr
+#     image: /img/face.jpg
+#     logo: /img/text_logo.png
+#     about: Marius Cortsen, TexhSprint organizer
   
-  - text: Vi benyttede Ticketbutler til vores nye innovationsevent. De var utroligt venlige og responderede hurtigt                    fleksibeltpå vores henvendelsr
-    image: /img/face.jpg
-    logo:  /img/text_logo.png
-    about: Marius Cortsen, TexhSprint organizer
+#   - text: Vi benyttede Ticketbutler til vores nye innovationsevent. De var utroligt venlige og responderede hurtigt                    fleksibeltpå vores henvendelsr
+#     image: /img/face.jpg
+#     logo:  /img/text_logo.png
+#     about: Marius Cortsen, TexhSprint organizer
 
 ---
