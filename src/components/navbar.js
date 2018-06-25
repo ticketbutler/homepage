@@ -1,11 +1,8 @@
 import React from "react";
-// import Helemt from "react-helmet";
-// import Link from "gatsby-link";
 import styled from "styled-components";
 import navbarEffect from "../js/navbarEffect";
-// import Scrollchor from "react-scrollchor";
-// import "../js/navItems_smallScreent";
-//#region
+import { stripTrailingSlash } from "history/PathUtils";
+
 const Logo = styled.div`
   width: 20%;
   color: #ffffff;
@@ -422,7 +419,14 @@ const Login_Lang = styled.div`
   }
 `;
 
+// const toggle = () => {
+//   this.setState({addClass: !this.state.addClass});
+// }
 const NavbarSection = ({ items }) => {
+  let state = {
+    openNav: "not-clicked"
+  };
+
   return (
     <Navbar className="navbar">
       <Logo>
@@ -432,7 +436,33 @@ const NavbarSection = ({ items }) => {
       </Logo>
 
       <Nav>
-        <NavBars onClick={navbarEffect} id="bars">
+        <NavBars
+          id="nav_bars"
+          className={state.openNav}
+          onClick={element => {
+            const ulElement = document.getElementById("ulNav");
+            const backDiv = document.getElementById("navActive_back");
+            const nav_bars = document.getElementById("navb");
+            // if nav bars chlicked do these
+            if (state.openNav === "not-clicked") {
+              state.openNav = "clicked";
+
+              nav_bars.classList.add("clicked");
+              ulElement.classList.add("active");
+
+              // Add dark background to the page
+              backDiv.classList.add("NavbarClicked-background");
+            } else {
+              ulElement.classList.remove("active");
+              state.openNav = "not-clicked";
+
+              nav_bars.classList.remove("clicked");
+
+              // remove dark background to the page
+              backDiv.classList.remove("NavbarClicked-background");
+            }
+          }}
+        >
           <div className="bar1" />
           <div className="bar2" />
           <div className="bar3" />
@@ -446,17 +476,9 @@ const NavbarSection = ({ items }) => {
                   .getElementById("navActive_back")
                   .classList.remove("NavbarClicked-background");
                 document.getElementById("bars").classList.toggle("clicked");
-
-                // if(item.path == "#contact"){
-                //   document.getElementsByTagName("a").animate({offset: 200, duration: 2000 })
-                // }
               }}
             >
-              <a
-                href={item.path}
-                className="nav-link"
-                // animate={{ offset: 20, duration: 600 }}
-              >
+              <a href={item.path} className="nav-link">
                 {item.label}
               </a>
             </li>
