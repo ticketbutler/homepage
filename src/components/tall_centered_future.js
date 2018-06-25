@@ -364,7 +364,7 @@ const TallCenteredFuture = ({
   image_alt,
   button_link
 }) => (
-  <Section >
+  <Section>
     <BlueBackground />
     <Content>
       <h1>{heading}</h1>
