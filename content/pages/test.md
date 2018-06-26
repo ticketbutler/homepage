@@ -22,7 +22,7 @@ sections:
     type: future_image_right_new
   - button_link: '#contact'
     button_text: Kontakt os!
-    heading: Sælg billetter direkte fra din hjemmeside
+    heading: 'Sælg billetter direkte fra din hjemmeside '
     image: /img/iframe-screens.png
     image_alt: Saelg-billetter-online
     text: >-
