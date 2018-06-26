@@ -23,9 +23,8 @@ sections:
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: Sælg billetter direkte fra din hjemmeside
-    image: /img/billetsystem-integration.png
+    image: /img/iframe-screens.png
     image_alt: Saelg-billetter-online
-    logo_section: []
     text: >-
       Alle besøgende på din hjemmeside er din mulighed for at sælge billetter
       eller hvad du ellers tilbyder. Gå ikke glip af besøgende ved at integrere
@@ -92,5 +91,5 @@ sections:
       Giv os dit logo og brandfarver og du har dit eget billetsystem inden for
       et par dage. Vi designer systemet, så det ser lækkert ud til dit brand.
     type: tall_centered_future_button_top
-
 ---
+
