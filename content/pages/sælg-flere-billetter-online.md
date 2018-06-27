@@ -10,7 +10,9 @@ sections:
     heading: 'Sælg mere online '
     text: "Ticketbutler hjælper dig ikke kun at sælge billetter –\_systemet understøtter også din forretning og forståelse af din målgruppe, så du øge din omsætning på tværs af virksomheden. Læs mere på siden her om hvordan."
     type: header
-  - heading: Øg din brand awareness
+  - button_link: '#contact'
+    button_text: Kontakt os!
+    heading: Øg din brand awareness
     image: /img/brugerrejse-i-et-online-billetsystem.png
     image_alt: brand-awareness
     text: >-
