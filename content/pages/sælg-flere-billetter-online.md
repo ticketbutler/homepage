@@ -10,6 +10,15 @@ sections:
     heading: 'Sælg mere online '
     text: "Ticketbutler hjælper dig ikke kun at sælge billetter –\_systemet understøtter også din forretning og forståelse af din målgruppe, så du øge din omsætning på tværs af virksomheden. Læs mere på siden her om hvordan."
     type: header
+  - heading: Øg din brand awareness
+    image: /img/brugerrejse-i-et-online-billetsystem.png
+    image_alt: brand-awareness
+    text: >-
+      Hele billet-oplevelsen er designet til at matche dit univers, så du øger
+      din brand awareness. Fra eventside og integrationen på din hjemmeside, i
+      udsendte e-mails og billetter, og selv på bankudskriften fremstår dit
+      brand.
+    type: future_image_left
   - heading: 'Øg dit online billetsalg og andre services '
     image: /img/billetsystem-integration.png
     image_alt: Sælg-billetter
@@ -21,15 +30,6 @@ sections:
       copy/paste. Vil du hellere have siderne adskilt tilbyder vi også separate
       eventsider. Integration med billet API? Kontakt os!
     type: future_image_right_second
-  - heading: Øg din brand awareness
-    image: /img/john-schnobrich-520023-unsplash.png
-    image_alt: brand-awareness
-    text: >-
-      Hele billet-oplevelsen er designet til at matche dit univers, så du øger
-      din brand awareness. Fra eventside og integrationen på din hjemmeside, i
-      udsendte e-mails og billetter, og selv på bankudskriften fremstår dit
-      brand.
-    type: future_image_left
   - heading: Sælg mere med e-mail marketing
     image: /img/crew-56835-unsplash.png
     image_alt: email-marketing-billetsystem
