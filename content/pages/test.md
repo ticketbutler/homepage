@@ -63,7 +63,7 @@ sections:
   - button_link: ''
     button_text: ''
     heading: Lær din gæster at kende
-    image: /img/online-billetsystem.png
+    image: /img/online-billetsystem2.png
     image_alt: billetservice+online-data
     text: >-
       Jo bedre du kender dine kunder, desto bedre en oplevelse kan du give dem,
