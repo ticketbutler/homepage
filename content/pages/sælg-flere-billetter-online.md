@@ -31,7 +31,7 @@ sections:
       tilbyder. Det kræver ingen nørder at integrere – det er blot en
       copy/paste. Vil du hellere have siderne adskilt tilbyder vi også separate
       eventsider. Integration med billet API? Kontakt os!
-    type: future_image_right_second
+    type: future_layers
   - heading: Sælg mere med e-mail marketing
     image: /img/crew-56835-unsplash.png
     image_alt: email-marketing-billetsystem
