@@ -20,7 +20,7 @@ sections:
       tilbyder. Det kræver ingen nørder at integrere – det er blot en
       copy/paste. Vil du hellere have siderne adskilt tilbyder vi også separate
       eventsider. Integration med billet API? Kontakt os!
-    type: future_image_right
+    type: future_image_right_second
   - heading: Øg din brand awareness
     image: /img/john-schnobrich-520023-unsplash.png
     image_alt: brand-awareness
