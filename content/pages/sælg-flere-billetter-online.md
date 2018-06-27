@@ -11,7 +11,7 @@ sections:
     text: "Ticketbutler hjælper dig ikke kun at sælge billetter –\_systemet understøtter også din forretning og forståelse af din målgruppe, så du øge din omsætning på tværs af virksomheden. Læs mere på siden her om hvordan."
     type: header
   - heading: 'Øg dit online billetsalg og andre services '
-    image: /img/ticketbutler-on-laptop.png
+    image: /img/billetsystem-integration.png
     image_alt: Sælg-billetter
     text: >-
       Du kender din målgruppe bedst og er den bedste til at sælge dit produkt og
