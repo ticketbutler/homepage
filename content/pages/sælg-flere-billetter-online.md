@@ -31,8 +31,10 @@ sections:
       tilbyder. Det kræver ingen nørder at integrere – det er blot en
       copy/paste. Vil du hellere have siderne adskilt tilbyder vi også separate
       eventsider. Integration med billet API? Kontakt os!
-    type: future_layers
-  - heading: Sælg mere med e-mail marketing
+    type: future_image_right_new
+  - button_link: '#contact'
+    button_text: Kontakt os!
+    heading: Sælg mere med e-mail marketing
     image: /img/crew-56835-unsplash.png
     image_alt: email-marketing-billetsystem
     text: >-
@@ -42,8 +44,10 @@ sections:
       et et værdifuldt værktøj, som du kan bruge til at promovere din virksomhed
       og fremtidige events. Tiltræk nye kunder og hold fast i de gamle. Dataen
       er din! 
-    type: future_image_right
-  - heading: Optimér dit salg på Facebook
+    type: future_layers
+  - button_link: '#contact'
+    button_text: Kontakt os!
+    heading: Optimér dit salg på Facebook
     image: /img/fbpixelticketbutler.png
     text: >-
       Hvorfor ikke nøjes med at investere i Facebook-annoncer som virker?
