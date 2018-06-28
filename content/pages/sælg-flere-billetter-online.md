@@ -8,7 +8,7 @@ sections:
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: 'Sælg mere online '
-    text: "Ticketbutler hjælper dig ikke kun at sælge billetter –\_systemet understøtter også din forretning og forståelse af din målgruppe, så du øge din omsætning på tværs af virksomheden. Læs mere på siden her om hvordan."
+    text: "Ticketbutler hjælper dig ikke kun at sælge billetter –\_systemet understøtter også din forretning og forståelse af din målgruppe, så du øger din omsætning på tværs af virksomheden. Læs mere på siden her om hvordan."
     type: header
   - button_link: '#contact'
     button_text: Kontakt os!
