@@ -34,7 +34,9 @@ sections:
       og fremtidige events. Tiltræk nye kunder og hold fast i de gamle. Dataen
       er din! 
     type: future_image_right_second
-  - heading: 'Øg dit online billetsalg og andre services '
+  - button_link: '#contact'
+    button_text: Kontakt os!
+    heading: 'Øg dit online billetsalg og andre services '
     image: /img/promote-event-simple.png
     image_alt: Sælg-billetter
     text: >-
@@ -55,7 +57,9 @@ sections:
       automatisk optimerer dine annoncer så du sælger flere billetter. Altså får
       du mere for pengene i dine Facebook-kampagner.
     type: future_image_left
-  - heading: Brug rabatkoder i din markedsføring
+  - button_link: '#contact'
+    button_text: Kontakt os!
+    heading: Brug rabatkoder i din markedsføring
     image: /img/couponticketbutler.png
     text: >-
       Med Ticketbutler kan du oprette rabatkoder, hvilket er et stærkt
