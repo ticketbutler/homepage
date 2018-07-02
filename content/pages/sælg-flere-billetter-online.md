@@ -21,17 +21,6 @@ sections:
       udsendte e-mails og billetter, og selv på bankudskriften fremstår dit
       brand.
     type: future_image_left
-  - heading: 'Øg dit online billetsalg og andre services '
-    image: /img/promote-event-simple.png
-    image_alt: Sælg-billetter
-    text: >-
-      Du kender din målgruppe bedst og er den bedste til at sælge dit produkt og
-      dine services. Ved at integrere billetsalg på din hjemmeside sikrer du dig
-      besøgende, som ikke kun er interesserede i et enkelt event, men alt du
-      tilbyder. Det kræver ingen nørder at integrere – det er blot en
-      copy/paste. Vil du hellere have siderne adskilt tilbyder vi også separate
-      eventsider. Integration med billet API? Kontakt os!
-    type: future_image_right_second
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: Sælg mere med e-mail marketing
@@ -44,7 +33,18 @@ sections:
       et et værdifuldt værktøj, som du kan bruge til at promovere din virksomhed
       og fremtidige events. Tiltræk nye kunder og hold fast i de gamle. Dataen
       er din! 
-    type: future_layers
+    type: future_image_right_second
+  - heading: 'Øg dit online billetsalg og andre services '
+    image: /img/promote-event-simple.png
+    image_alt: Sælg-billetter
+    text: >-
+      Du kender din målgruppe bedst og er den bedste til at sælge dit produkt og
+      dine services. Ved at integrere billetsalg på din hjemmeside sikrer du dig
+      besøgende, som ikke kun er interesserede i et enkelt event, men alt du
+      tilbyder. Det kræver ingen nørder at integrere – det er blot en
+      copy/paste. Vil du hellere have siderne adskilt tilbyder vi også separate
+      eventsider. Integration med billet API? Kontakt os!
+    type: tall_centered_future
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: Optimér dit salg på Facebook
@@ -62,6 +62,6 @@ sections:
       marketing-værktøj: Opret en rabatkode til et af dine events og track
       gennem Ticketbutler, hvor mange gange koden er blevet brugt i dit online
       billetsalg. På den måde kan du måle hvor effektiv din kampagne har været. 
-    type: future_image_right
+    type: future_layers
 ---
 
