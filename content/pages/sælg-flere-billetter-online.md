@@ -48,7 +48,7 @@ sections:
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: Optimér dit salg på Facebook
-    image: /img/william-iven-19844-unsplash.png
+    image: /img/facebook-pixel-billetsystem.png
     text: >-
       Hvorfor ikke nøjes med at investere i Facebook-annoncer som virker?
       Facebook Pixel fortæller dig om dine Facebook-annoncer virker, og
