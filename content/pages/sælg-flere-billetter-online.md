@@ -22,7 +22,7 @@ sections:
       brand.
     type: future_image_left
   - heading: 'Øg dit online billetsalg og andre services '
-    image: /img/billetsystem-integration.png
+    image: /img/promote-event-simple.png
     image_alt: Sælg-billetter
     text: >-
       Du kender din målgruppe bedst og er den bedste til at sælge dit produkt og
