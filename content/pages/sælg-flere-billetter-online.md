@@ -35,7 +35,7 @@ sections:
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: Sælg mere med e-mail marketing
-    image: /img/crew-56835-unsplash.png
+    image: /img/john-schnobrich-520023-unsplash.png
     image_alt: email-marketing-billetsystem
     text: >-
       Skal du arrangere flere events? Sælger din virksomhed andet end billetter?
@@ -48,7 +48,7 @@ sections:
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: Optimér dit salg på Facebook
-    image: /img/fbpixelticketbutler.png
+    image: /img/william-iven-19844-unsplash.png
     text: >-
       Hvorfor ikke nøjes med at investere i Facebook-annoncer som virker?
       Facebook Pixel fortæller dig om dine Facebook-annoncer virker, og
