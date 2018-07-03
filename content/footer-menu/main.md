@@ -21,11 +21,11 @@ integration:
 company:
   - label: Om Ticketbutler
     path: /da/om-os
-  - label: Kontakt
-    path: '#contact'
   - label: Find os på Facebook
     path: 'https://www.facebook.com/ticketbutler/'
   - label: Find os på LinkedIn
     path: 'https://www.linkedin.com/company/ticketbutler/'
+  - label: Kontakt
+    path: '#contact'
 ---
 
