@@ -6,18 +6,19 @@ meta_description: >-
   billetter online, og oprette flere billettyper til samme event. 
 sections:
   - type: header
-  - heading: Check dine gæster ind til eventet
-    text: >-
-      Når du har downloadet Ticketbutlers app til din smartphone kan du følge
-      dit online billetsalg, checke gæster ind med et enkelt swipe eller scanne
-      QR-koden på dine gæsters billetter til eventet.
-    type: future_image_left
   - heading: 'Bevar overblikket '
     text: >-
       Dit Ticketbutler dashboard hjælper dig med at bevare overblikket over hvor
       mange billetter du har solgt over tid, hvem der har købt billetter og den
       øvrige data som gæsterne har tastet ind. 
     type: future_image_right
+  - heading: Check dine gæster ind til eventet
+    image: /img/ticketbutler-app-med-qr-kode.png
+    text: >-
+      Når du har downloadet Ticketbutlers app til din smartphone kan du følge
+      dit online billetsalg, checke gæster ind med et enkelt swipe eller scanne
+      QR-koden på dine gæsters billetter til eventet.
+    type: tall_centered_future
   - heading: Medlemsbilletter
     text: >-
       Har du medlemmer, som får gratis eller billigere billetter? Opret
