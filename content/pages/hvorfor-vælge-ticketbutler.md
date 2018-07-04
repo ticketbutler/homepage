@@ -11,7 +11,24 @@ sections:
       lettere. Du får et billetsystem pakket med features, der kan hjælpe dig
       med at skabe rammerne for et vellykket, gennemført event.
     type: header
-  - text: ''
+  - heading: ''
+    text: >-
+      Du skal vælge Ticketbutler, hvis du:  Er interesseret i værdifuld data,
+      som kan optimere dine events. Vil have et billetsystem, som matcher din
+      virksomhed. Vil tilbyde dine gæster let adgang til at købe deres billetter
     type: future_image_right
+  - text: >-
+      Hver gang der købes billetter online, efterlader kunderne digitale
+      fodspor. Imens virksomheder som Eventbrite, Billetto og Ticketmaster
+      bruger denne data til, at promovere deres egen virksomhed mener vi, at det
+      er dig som event-arrangør, der har krav på den værdifulde data. På den
+      måde kan du se sammenhængen mellem dine marketingstrategier og antallet af
+      solgte billetter.   Uanset om du vil have en separat salgsside eller sælge
+      billetter direkte fra din hjemmeside, sørger vi for, at gøre det i
+      overensstemmelse med din identitet og dit brand. Når vi har dine
+      brandfarver og logo, designes købsprocessen til din virksomhed.  
+      Ticketbutler er designet så det er nemt at købe billetter direkte fra en
+      smartphone. Dine gæster kan benytte både betalingskort og MobilePay, og vi
+      kræver ingen brugeroprettelse. Hvorfor ikke gøre købsprocessen enkelt?
 ---
 
