@@ -10,9 +10,9 @@ sections:
     type: header
   - heading: ''
     text: >-
-      Du skal vælge Ticketbutler, hvis du:  Er interesseret i værdifuld data,
-      som kan optimere dine events. Vil have et billetsystem, som matcher din
-      virksomhed. Vil tilbyde dine gæster let adgang til at købe deres billetter
+      Ticketbutler er udviklet med henblik på, at gøre livet som event-arrangør
+      lettere. Du får et billetsystem pakket med features, der kan hjælpe dig
+      med at skabe rammerne for et vellykket, gennemført event.
     type: future_image_right
   - text: >-
       Hver gang der købes billetter online, efterlader kunderne digitale
