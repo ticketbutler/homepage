@@ -6,7 +6,12 @@ meta_description: >-
   lettere
 sections:
   - heading: 'Hvorfor vælge Ticketbutler? '
+    text: >-
+      Ticketbutler er udviklet med henblik på, at gøre livet som event-arrangør
+      lettere. Du får et billetsystem pakket med features, der kan hjælpe dig
+      med at skabe rammerne for et vellykket, gennemført event.
     type: header
-  - {}
+  - text: ''
+    type: future_image_right
 ---
 
