@@ -15,6 +15,12 @@ sections:
       med at skabe rammerne for et vellykket, gennemført event.
     type: future_image_right
   - text: >-
+      Du skal vælge Ticketbutler, hvis du:   ·      Er interesseret i værdifuld
+      data, som kan optimere dine events ·      Vil have et billetsystem, som
+      matcher din virksomhed ·      Vil tilbyde dine gæster let adgang til at
+      købe deres billetter
+    type: header
+  - text: >-
       Hver gang der købes billetter online, efterlader kunderne digitale
       fodspor. Imens virksomheder som Eventbrite, Billetto og Ticketmaster
       bruger denne data til, at promovere deres egen virksomhed mener vi, at det
@@ -27,5 +33,6 @@ sections:
       Ticketbutler er designet så det er nemt at købe billetter direkte fra en
       smartphone. Dine gæster kan benytte både betalingskort og MobilePay, og vi
       kræver ingen brugeroprettelse. Hvorfor ikke gøre købsprocessen enkelt?
+    type: future_image_right
 ---
 
