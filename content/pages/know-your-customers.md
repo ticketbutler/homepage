@@ -25,6 +25,7 @@ sections:
       data. 
     type: future_image_left
   - heading: Lær fra din salgshistorik
+    image: /img/online-billetsalg-overblik.png
     text: >-
       Ved at sammenligne din salgshistorik med dine kampagner kan du se, hvilke
       tiltag der har virket og hvilke der ikke har. Samtidig vil du kunne spore
