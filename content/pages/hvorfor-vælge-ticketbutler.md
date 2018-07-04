@@ -10,12 +10,9 @@ sections:
     type: header
   - text: >-
       Ticketbutler er udviklet med henblik på, at gøre livet som event-arrangør
-      lettere. Du får et billetsystem pakket med features, der kan hjælpe dig
-      med at skabe rammerne for et vellykket, gennemført event.
-    type: header
-  - text: 'Du skal vælge Ticketbutler, hvis du:'
-    type: header
-  - text: 'Er interesseret i værdifuld data, som kan optimere dine events'
-    type: header
+      lettere. Du sikrer dig et robust billetsystem pakket med features, der kan
+      hjælpe dig med at skabe rammerne for et vellykket, gennemført event.
+    type: future_image_right
+  - {}
 ---
 
