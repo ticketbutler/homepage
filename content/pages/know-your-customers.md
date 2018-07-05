@@ -12,16 +12,8 @@ sections:
       Ticketbutler hjælper dig med at indsamle data på dine gæster, så du lærer
       din målgruppe bedre at kende.
     type: header
-  - heading: Lær dine gæster at kende
-    image: /img/fbpixelticketbutler.png
-    text: >-
-      Vil du stille dine gæster spørgsmål inden dit event? Definer specifikke
-      spørgsmål i købsprocessen, som dine gæster skal svare på. Ud fra svarene
-      kan du lære dine gæster bedre at kende, så du kan give dem en bedre
-      oplevelse til eventet.
-    type: future_image_right
   - button_link: 'https://www.google.com/analytics/'
-    button_text: 'Lær mere om Google Analytics '
+    button_text: 'Mere om Google Analytics '
     heading: Forstå dine gæster med Google Analytics
     image: /img/google-analytics-i-billetsystem.png
     text: >-
@@ -31,6 +23,14 @@ sections:
       Få svar på endnu flere spørgsmål ved at dykke ned i din Google Analytics
       data. 
     type: future_image_left
+  - heading: Lær dine gæster at kende
+    image: /img/fbpixelticketbutler.png
+    text: >-
+      Vil du stille dine gæster spørgsmål inden dit event? Definer specifikke
+      spørgsmål i købsprocessen, som dine gæster skal svare på. Ud fra svarene
+      kan du lære dine gæster bedre at kende, så du kan give dem en bedre
+      oplevelse til eventet.
+    type: future_layers
   - heading: Lær fra din salgshistorik
     image: /img/online-billetsalg-overblik.png
     text: >-
@@ -38,6 +38,6 @@ sections:
       tiltag der har virket og hvilke der ikke har. Samtidig vil du kunne spore
       dine kunders adfærdsmønster, og optimere din salgsstrategi bedst
       derefter. 
-    type: future_image_right
+    type: future_image_right_new
 ---
 
