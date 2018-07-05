@@ -14,6 +14,8 @@ features:
   - label: Sælg flere billetter
     path: /da/saelg-flere-billetter-online
 integration:
+  - label: Priser
+    path: /da/billigt-billetsystem
   - label: Hvorfor vælge Ticketbutler? (på vej!)
     path: /
   - label: FAQ (på vej!)
