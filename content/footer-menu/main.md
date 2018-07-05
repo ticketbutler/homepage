@@ -18,10 +18,6 @@ features:
 integration:
   - label: Priser
     path: /da/billigt-billetsystem
-  - label: Hvorfor vælge Ticketbutler? (på vej!)
-    path: /
-  - label: FAQ (på vej!)
-    path: /
 company:
   - label: Om Ticketbutler
     path: /da/om-os
