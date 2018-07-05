@@ -5,9 +5,15 @@ meta_description: >-
   Ticketbutler giver dig mulighed for, at stille dine gæster specifikke
   spørgsmål når du sælger billetter online. Skyd dit event i gang i dag. 
 sections:
-  - heading: Kend dine gæster
+  - button_link: '#contact'
+    button_text: Læs mere
+    heading: Kend dine gæster
+    text: >-
+      Ticketbutler hjælper dig med at indsamle data på dine gæster, så du lærer
+      din målgruppe bedre at kende.
     type: header
   - heading: Lær dine gæster at kende
+    image: /img/fbpixelticketbutler.png
     text: >-
       Vil du stille dine gæster spørgsmål inden dit event? Definer specifikke
       spørgsmål i købsprocessen, som dine gæster skal svare på. Ud fra svarene
