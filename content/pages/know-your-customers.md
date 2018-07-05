@@ -16,7 +16,7 @@ sections:
     type: future_image_right
   - button_link: 'https://www.google.com/analytics/'
     button_text: 'Lær mere om Google Analytics '
-    heading: 'Forstå dine gæster med Google Analytics '
+    heading: Forstå dine gæster med Google Analytics
     image: /img/google-analytics-i-billetsystem.png
     text: >-
       Google Analytics er integreret i Ticketbutler og giver dig adgang til
