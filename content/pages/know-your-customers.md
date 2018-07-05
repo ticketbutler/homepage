@@ -30,7 +30,7 @@ sections:
       spørgsmål i købsprocessen, som dine gæster skal svare på. Ud fra svarene
       kan du lære dine gæster bedre at kende, så du kan give dem en bedre
       oplevelse til eventet.
-    type: future_layers
+    type: future_image_right_new
   - heading: Lær fra din salgshistorik
     image: /img/online-billetsalg-overblik.png
     text: >-
@@ -38,6 +38,6 @@ sections:
       tiltag der har virket og hvilke der ikke har. Samtidig vil du kunne spore
       dine kunders adfærdsmønster, og optimere din salgsstrategi bedst
       derefter. 
-    type: future_image_right_new
+    type: future_image_left
 ---
 
