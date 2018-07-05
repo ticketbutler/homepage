@@ -13,6 +13,8 @@ items:
 features:
   - label: Sælg flere billetter
     path: /da/saelg-flere-billetter-online
+  - label: Kend dine gæster
+    path: /da/kend-dine-gæster
 integration:
   - label: Priser
     path: /da/billigt-billetsystem
