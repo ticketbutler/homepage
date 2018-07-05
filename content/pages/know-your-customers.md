@@ -13,7 +13,7 @@ sections:
       din målgruppe bedre at kende.
     type: header
   - button_link: 'https://www.google.com/analytics/'
-    button_text: 'Mere om Google Analytics '
+    button_text: 'Om Google Analytics '
     heading: Forstå dine gæster med Google Analytics
     image: /img/google-analytics-i-billetsystem.png
     text: >-
