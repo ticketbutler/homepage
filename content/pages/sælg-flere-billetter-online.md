@@ -66,6 +66,6 @@ sections:
       marketing-værktøj: Opret en rabatkode til et af dine events og track
       gennem Ticketbutler, hvor mange gange koden er blevet brugt i dit online
       billetsalg. På den måde kan du måle hvor effektiv din kampagne har været. 
-    type: future_layers
+    type: future_image_right_new
 ---
 
