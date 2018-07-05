@@ -1,4 +1,6 @@
 import * as React from "react";
+import Helemt from "react-helmet";
+
 import { Layout } from "../layouts/";
 import Header from "../components/Header";
 import FutureImageRight from "../components/future_image_right";

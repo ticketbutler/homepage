@@ -446,10 +446,6 @@ const NavbarSection = ({ items }) => {
                   .getElementById("navActive_back")
                   .classList.remove("NavbarClicked-background");
                 document.getElementById("bars").classList.toggle("clicked");
-
-                // if(item.path == "#contact"){
-                //   document.getElementsByTagName("a").animate({offset: 200, duration: 2000 })
-                // }
               }}
             >
               <a
