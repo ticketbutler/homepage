@@ -7,7 +7,9 @@ meta_description: >-
 sections:
   - heading: 'En bedre oplevelse for dig og dine kunder '
     type: header
-  - heading: 'Gør det nemt for dine gæster '
+  - button_link: '#contact'
+    button_text: Kontakt os!
+    heading: 'Gør det nemt for dine gæster '
     image: /img/user-journey-with-mobilepay.png
     text: >-
       Med billetsystemet integreret på din hjemmeside kan dine gæster købe sine
