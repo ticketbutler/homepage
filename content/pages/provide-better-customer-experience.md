@@ -18,11 +18,13 @@ sections:
       gæsterne kan købe sine billetter med betalingskort eller MobilePay. 
     type: future_image_left
   - heading: Brug for en eventside?
+    image: /img/event-page-tb.png
     text: >-
       Ønsker du ikke at integrere Ticketbutler direkte på din hjemmeside,
       opretter vi automatisk en separat eventside i dit design.
     type: future_image_right
   - heading: 'En naturlig udvidelse af dit brand '
+    image: /img/brugerrejse-i-et-online-billetsystem.png
     text: >-
       Hele billetoplevelsen designes i dit brand så dine gæster forbliver i dit
       univers – intet mix med Ticketbutler branding, ingen eksterne
