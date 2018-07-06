@@ -8,6 +8,7 @@ sections:
   - heading: 'En bedre oplevelse for dig og dine kunder '
     type: header
   - heading: 'Gør det nemt for dine gæster '
+    image: /img/user-journey-with-mobilepay.png
     text: >-
       Med billetsystemet integreret på din hjemmeside kan dine gæster købe sine
       billetter på få klik og du tvinger dem ikke til at forlade din hjemmeside.
