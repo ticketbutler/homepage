@@ -38,6 +38,7 @@ sections:
       – måske de lokker sine venner med?
     type: future_image_right
   - heading: Automatisk justering af sprog
+    image: /img/gratis-billetservice.png
     text: >-
       Ticketbutler taler både dansk og engelsk. Sproget justeres automatisk alt
       efter sproget på den enhed dine gæster benytter. 
