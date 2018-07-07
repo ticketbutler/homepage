@@ -31,6 +31,7 @@ sections:
       event-tilbud, ingen forstyrrelser – kun dig og dit brand. 
     type: future_image_left
   - heading: 'SMS, e-mails og påmindelser '
+    image: /img/send-sms-emails-og-påmindelser-i-billetsystem.jpg
     text: >-
       Hold dine gæster opdaterede gennem din foretrukne kanal. Send en besked på
       SMS, e-mail eller gennem vores automatiske påmindelser, så dine gæster er
