@@ -7,7 +7,7 @@ meta_description: >-
 sections:
   - button_link: '#contact'
     button_text: Kontakt os!
-    heading: Vær i kontrol over dit event.
+    heading: Vær i kontrol over dit event
     image: /img/simpelt-billetsystem.png
     text: >-
       Få kontrol over eventet ved at opsætte dine billetter så de matcher dine
@@ -36,7 +36,7 @@ sections:
       Har du medlemmer, som får gratis eller billigere billetter? Opret
       medlemsbilletter så medlemmet skal skrive sin medlemskode ind for at få
       adgang til at købe billetten.
-    type: future_image_right
+    type: future_image_right_new
   - heading: Hjælp dine kunder
     image: /img/refunder-billetter-i-online-billetsystem.png
     text: >-
