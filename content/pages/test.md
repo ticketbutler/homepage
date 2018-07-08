@@ -81,7 +81,7 @@ sections:
       Om du repræsenterer et stort firma, et startup eller en énmandshær, står
       vi klar til at imødekomme dine behov, uanset om du bruger vores gratis
       løsning eller en skræddersyet løsning.
-    type: future_image_right_second
+    type: future_image_right
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: Kom nemt i gang
