@@ -5,7 +5,16 @@ meta_description: >-
   Med Ticketbutler kan du stille dine gæster specifikke spørgsmål, når du sælger
   billetter online, og oprette flere billettyper til samme event. 
 sections:
-  - type: header
+  - button_link: '#contact'
+    button_text: Kontakt os!
+    heading: >-
+      Tag kontrollen over dit event med værktøjer der giver dig styr på dine
+      gæster.
+    image: /img/simpelt-billetsystem.png
+    text: >-
+      Opsæt dine billetter så de matcher dine gæster, hold kontrol over
+      billetsalget og check dine gæster ind med Ticketbutler app'en
+    type: header
   - heading: 'Bevar overblikket '
     text: >-
       Dit Ticketbutler dashboard hjælper dig med at bevare overblikket over hvor
