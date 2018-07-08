@@ -5,7 +5,10 @@ meta_description: >-
   Start dit event hos Ticketbutler: Et online billetsystem pakket med features
   og fordele, som kommer dig og dine gæster til gode.
 sections:
-  - heading: 'En bedre oplevelse for dig og dine kunder '
+  - button_link: '#contact'
+    button_text: Kontakt os!
+    heading: 'En bedre oplevelse for dig og dine kunder '
+    text: Gør alle glade ved at gøre det nemt for både dig selv og dine gæster
     type: header
   - button_link: '#contact'
     button_text: Kontakt os!
