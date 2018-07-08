@@ -15,7 +15,7 @@ features:
     path: /da/saelg-flere-billetter-online
   - label: Kend dine gæster
     path: /da/kend-dine-gæster
-  - label: Bedre bruger-oplevelse
+  - label: Bedre oplevelse
     path: /da/dit-billetsystem
 integration:
   - label: Priser
