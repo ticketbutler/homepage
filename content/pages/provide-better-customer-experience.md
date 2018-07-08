@@ -37,7 +37,9 @@ sections:
       Ønsker du ikke at integrere Ticketbutler direkte på din hjemmeside,
       opretter vi automatisk en separat eventside i dit design.
     type: tall_centered_future
-  - heading: 'En naturlig udvidelse af dit brand '
+  - button_link: '#contact'
+    button_text: Kontakt os!
+    heading: 'En naturlig udvidelse af dit brand '
     image: /img/brugerrejse-i-et-online-billetsystem.png
     text: >-
       Hele billetoplevelsen designes i dit brand så dine gæster forbliver i dit
