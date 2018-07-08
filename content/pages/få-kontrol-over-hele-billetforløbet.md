@@ -32,6 +32,7 @@ sections:
       blevet væk – det kræver kun ét klik.  
     type: future_image_right
   - heading: Billetter til ethvert behov
+    image: /img/billetsystem-med-billettyper.png
     text: >-
       Med Ticketbutler kan du definere og oprette flere typer billetter til
       samme event efter behov – giv dem forskellige navne, priser,
