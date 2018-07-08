@@ -17,6 +17,8 @@ features:
     path: /da/kend-dine-gæster
   - label: En bedre oplevelse
     path: /da/dit-billetsystem
+  - label: Vær i kontrol
+    path: /da/billetter-billettyper
 integration:
   - label: Priser
     path: /da/billigt-billetsystem
