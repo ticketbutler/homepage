@@ -20,7 +20,7 @@ sections:
       Dit Ticketbutler dashboard hjælper dig med at bevare overblikket over hvor
       mange billetter du har solgt over tid, hvem der har købt billetter og den
       øvrige data som gæsterne har tastet ind. 
-    type: future_image_right_second
+    type: future_layers
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: Check dine gæster ind til eventet
@@ -43,7 +43,7 @@ sections:
       Gør dine kunder glade og støt dem når de har brug for hjælp. Refundér
       deres billetter eller gensend deres billet (kommer snart!), hvis den er
       blevet væk – det kræver kun ét klik.  
-    type: future_image_right_new
+    type: future_image_left
   - heading: Billetter til ethvert behov
     image: /img/billetsystem-med-billettyper.png
     text: >-
