@@ -60,8 +60,8 @@ sections:
       billetkøb fra smartphone, ingen brugeroprettelse og betaling med
       betalingskort eller MobilePay giver friktionsfri købsoplevelse.
     type: future_layers
-  - button_link: ''
-    button_text: ''
+  - button_link: '#contact'
+    button_text: Kontakt os!
     heading: Lær din gæster at kende
     image: /img/online-billetsystem2.png
     image_alt: billetservice+online-data
@@ -81,7 +81,7 @@ sections:
       Om du repræsenterer et stort firma, et startup eller en énmandshær, står
       vi klar til at imødekomme dine behov, uanset om du bruger vores gratis
       løsning eller en skræddersyet løsning.
-    type: future_image_right_new
+    type: future_image_right_second
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: Kom nemt i gang
