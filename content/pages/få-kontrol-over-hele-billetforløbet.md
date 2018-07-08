@@ -35,6 +35,7 @@ sections:
       adgang til at købe billetten.
     type: future_image_left
   - heading: Hjælp dine kunder
+    image: /img/refunder-billetter-i-online-billetsystem.png
     text: >-
       Gør dine kunder glade og støt dem når de har brug for hjælp. Refundér
       deres billetter eller gensend deres billet (kommer snart!), hvis den er
