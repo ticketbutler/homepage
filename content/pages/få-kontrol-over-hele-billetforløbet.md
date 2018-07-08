@@ -21,7 +21,9 @@ sections:
       mange billetter du har solgt over tid, hvem der har købt billetter og den
       øvrige data som gæsterne har tastet ind. 
     type: future_image_right_second
-  - heading: Check dine gæster ind til eventet
+  - button_link: '#contact'
+    button_text: Kontakt os!
+    heading: Check dine gæster ind til eventet
     image: /img/ticketbutler-app-med-qr-kode.png
     text: >-
       Når du har downloadet Ticketbutlers app til din smartphone kan du følge
