@@ -8,6 +8,7 @@ sections:
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: 'En bedre oplevelse for dig og dine kunder '
+    image: /img/billetsystem-til-koncerter.png
     text: Gør alle glade ved at gøre det nemt for både dig selv og dine gæster
     type: header
   - button_link: '#contact'
@@ -20,7 +21,17 @@ sections:
       Vi kræver ingen brugeroprettelse og har kun brug for få informationer før
       gæsterne kan købe sine billetter med betalingskort eller MobilePay. 
     type: future_image_left
-  - heading: Brug for en eventside?
+  - heading: 'SMS, e-mails og påmindelser '
+    image: /img/send-sms-emails-og-påmindelser-i-billetsystem.jpg
+    text: >-
+      Hold dine gæster opdaterede gennem din foretrukne kanal. Send en besked på
+      SMS, e-mail eller gennem vores automatiske påmindelser, så dine gæster er
+      informerede om praktiske forhold og om, hvor meget de har at glæde sig til
+      – måske de lokker sine venner med?
+    type: future_image_right
+  - button_link: '#contact'
+    button_text: Kontakt os!
+    heading: Brug for en eventside?
     image: /img/event-page-tb.png
     text: >-
       Ønsker du ikke at integrere Ticketbutler direkte på din hjemmeside,
@@ -33,14 +44,6 @@ sections:
       univers – intet mix med Ticketbutler branding, ingen eksterne
       event-tilbud, ingen forstyrrelser – kun dig og dit brand. 
     type: future_image_left
-  - heading: 'SMS, e-mails og påmindelser '
-    image: /img/send-sms-emails-og-påmindelser-i-billetsystem.jpg
-    text: >-
-      Hold dine gæster opdaterede gennem din foretrukne kanal. Send en besked på
-      SMS, e-mail eller gennem vores automatiske påmindelser, så dine gæster er
-      informerede om praktiske forhold og om, hvor meget de har at glæde sig til
-      – måske de lokker sine venner med?
-    type: future_image_right
   - heading: Automatisk justering af sprog
     image: /img/gratis-billetservice.png
     text: >-
