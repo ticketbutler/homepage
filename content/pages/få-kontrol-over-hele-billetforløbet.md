@@ -30,6 +30,7 @@ sections:
       QR-koden på dine gæsters billetter til eventet.
     type: tall_centered_future
   - heading: Medlemsbilletter
+    image: /img/billetsystem-med-medlemsskab-til-medlemmer.jpg
     text: >-
       Har du medlemmer, som får gratis eller billigere billetter? Opret
       medlemsbilletter så medlemmet skal skrive sin medlemskode ind for at få
