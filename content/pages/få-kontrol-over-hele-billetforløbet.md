@@ -20,7 +20,7 @@ sections:
       Dit Ticketbutler dashboard hjælper dig med at bevare overblikket over hvor
       mange billetter du har solgt over tid, hvem der har købt billetter og den
       øvrige data som gæsterne har tastet ind. 
-    type: future_image_right
+    type: future_image_right_second
   - heading: Check dine gæster ind til eventet
     image: /img/ticketbutler-app-med-qr-kode.png
     text: >-
@@ -34,14 +34,14 @@ sections:
       Har du medlemmer, som får gratis eller billigere billetter? Opret
       medlemsbilletter så medlemmet skal skrive sin medlemskode ind for at få
       adgang til at købe billetten.
-    type: future_image_left
+    type: future_image_right
   - heading: Hjælp dine kunder
     image: /img/refunder-billetter-i-online-billetsystem.png
     text: >-
       Gør dine kunder glade og støt dem når de har brug for hjælp. Refundér
       deres billetter eller gensend deres billet (kommer snart!), hvis den er
       blevet væk – det kræver kun ét klik.  
-    type: future_image_right
+    type: future_image_right_new
   - heading: Billetter til ethvert behov
     image: /img/billetsystem-med-billettyper.png
     text: >-
