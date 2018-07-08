@@ -49,6 +49,6 @@ sections:
     text: >-
       Ticketbutler taler både dansk og engelsk. Sproget justeres automatisk alt
       efter sproget på den enhed dine gæster benytter. 
-    type: future_image_left
+    type: future_image_right_second
 ---
 
