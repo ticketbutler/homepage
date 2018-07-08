@@ -16,6 +16,7 @@ sections:
       billetsalget og check dine gæster ind med Ticketbutler app'en
     type: header
   - heading: 'Bevar overblikket '
+    image: /img/online-billetsalg-overblik.png
     text: >-
       Dit Ticketbutler dashboard hjælper dig med at bevare overblikket over hvor
       mange billetter du har solgt over tid, hvem der har købt billetter og den
