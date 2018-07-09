@@ -25,7 +25,7 @@ sections:
     heading: Sælg billetter direkte fra din hjemmeside
     image: /img/billetsystem-integration.png
     image_alt: Saelg-billetter-online
-    logo_section: []
+    
     text: >-
       Alle besøgende på din hjemmeside er din mulighed for at sælge billetter
       eller hvad du ellers tilbyder. Gå ikke glip af besøgende ved at integrere
