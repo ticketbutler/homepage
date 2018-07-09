@@ -7,7 +7,6 @@ import { SectionText, RightImage } from "./elements/elements";
 
 import { CircleShape, SquareShape } from "./elements/shapes";
 
-
 const FutureImageRightSecond = ({ heading, text, image, image_alt }) => (
   <section className="Future_image_right_second">
     <div className="section_image_right_second">
@@ -42,29 +41,29 @@ const FutureImageRightSecond = ({ heading, text, image, image_alt }) => (
       </SectionText>
     </div>
 
-  <div className="shape_pos_square_1 Future_image_right_second_section">
-    <SquareShape>
-      <div className="shape">
-        <span id="first" />
-        <span id="second" />
-      </div>
-    </SquareShape>
+    <div className="shape_pos_square_1 Future_image_right_second_section">
+      <SquareShape>
+        <div className="shape">
+          <span id="first" />
+          <span id="second" />
+        </div>
+      </SquareShape>
     </div>
     <div className="shape_pos_square_2 Future_image_right_second_section">
-    <SquareShape>
-      <div className="shape">
-        <span id="first" />
-        <span id="second" />
-      </div>
-    </SquareShape>
+      <SquareShape>
+        <div className="shape">
+          <span id="first" />
+          <span id="second" />
+        </div>
+      </SquareShape>
     </div>
     <div className="shape_pos_circle Future_image_right_second_section">
-    <CircleShape>
-      <div className="shape">
-        <span id="first" />
-        <span id="second" />
-      </div>
-    </CircleShape>
+      <CircleShape>
+        <div className="shape">
+          <span id="first" />
+          <span id="second" />
+        </div>
+      </CircleShape>
     </div>
 
     <div className="clear-fix" />
@@ -149,104 +148,104 @@ const FutureImageRightSecond = ({ heading, text, image, image_alt }) => (
         }
       }
 
-
-      
-       /** ******************************************************
+      /** ******************************************************
       Shape Position
       **********************************************************/
-     /**sqare */
-     div.shape_pos_square_1.Future_image_right_second_section {
-      position: absolute;
-      top: 10%;
-      left: 10%;
-    }
-
-    div.shape_pos_square_2.Future_image_right_second_section {
-      position: absolute;
-      top: 30%;
-      left: 55%;
-    }
-    div.shape_pos_square_2.Future_image_right_second_section div.shape span#second {
-      border: 4px solid #dd52e8;
-    
-    } {
-      position: absolute;
-      top: 30%;
-      left: 50%;
-    }
-
-    div.shape_pos_circle.Future_image_right_second_section {
-      position: absolute;
-      top: 80%;
-      left: 20%;
-      z-index: 100;
-    }
-
-    @media (max-width: 1080px) {
       /**sqare */
-     div.shape_pos_square_1.Future_image_right_second_section {
-      position: absolute;
-      top: 5%;
-      left: 10%;
-    }
+      div.shape_pos_square_1.Future_image_right_second_section {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+      }
 
-    div.shape_pos_square_2.Future_image_right_second_section {
-      position: absolute;
-      top: 60%;
-      left: 90%;
-    }
+      div.shape_pos_square_2.Future_image_right_second_section {
+        position: absolute;
+        top: 30%;
+        left: 55%;
+      }
+      div.shape_pos_square_2.Future_image_right_second_section
+        div.shape
+        span#second {
+        border: 4px solid #dd52e8;
+      }
+       {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+      }
 
-    div.shape_pos_circle.Future_image_right_second_section {
-      position: absolute;
-      top: 90%;
-      left: 50%;
-      z-index: 100;
-    }
-    }
+      div.shape_pos_circle.Future_image_right_second_section {
+        position: absolute;
+        top: 80%;
+        left: 20%;
+        z-index: 100;
+      }
 
-    @media (max-width: 600px) {
-     /**sqare */
-     div.shape_pos_square_1.Future_image_right_second_section {
-      position: absolute;
-      top: 0%;
-      left: 10%;
-    }
+      @media (max-width: 1080px) {
+        /**sqare */
+        div.shape_pos_square_1.Future_image_right_second_section {
+          position: absolute;
+          top: 5%;
+          left: 10%;
+        }
 
-    div.shape_pos_square_2.Future_image_right_second_section {
-      position: absolute;
-      top: 65%;
-      left: 90%;
-    }
+        div.shape_pos_square_2.Future_image_right_second_section {
+          position: absolute;
+          top: 60%;
+          left: 90%;
+        }
 
-    div.shape_pos_circle.Future_image_right_second_section {
-      position: absolute;
-      top: 95%;
-      left: 40%;
-      z-index: 100;
-    }
-    }
+        div.shape_pos_circle.Future_image_right_second_section {
+          position: absolute;
+          top: 90%;
+          left: 50%;
+          z-index: 100;
+        }
+      }
 
-    @media (max-width: 370px) {
-     /**sqare */
-     div.shape_pos_square_1.Future_image_right_second_section {
-      position: absolute;
-      top: 5%;
-      left: 10%;
-    }
+      @media (max-width: 600px) {
+        /**sqare */
+        div.shape_pos_square_1.Future_image_right_second_section {
+          position: absolute;
+          top: 0%;
+          left: 10%;
+        }
 
-    div.shape_pos_square_2.Future_image_right_second_section {
-      position: absolute;
-      top: 65%;
-      left: 90%;
-    }
+        div.shape_pos_square_2.Future_image_right_second_section {
+          position: absolute;
+          top: 65%;
+          left: 90%;
+        }
 
-    div.shape_pos_circle.Future_image_right_second_section {
-      position: absolute;
-      top: 95%;
-      left: 40%;
-      z-index: 100;
-    }
-    }
+        div.shape_pos_circle.Future_image_right_second_section {
+          position: absolute;
+          top: 95%;
+          left: 40%;
+          z-index: 100;
+        }
+      }
+
+      @media (max-width: 370px) {
+        /**sqare */
+        div.shape_pos_square_1.Future_image_right_second_section {
+          position: absolute;
+          top: 5%;
+          left: 10%;
+        }
+
+        div.shape_pos_square_2.Future_image_right_second_section {
+          position: absolute;
+          top: 65%;
+          left: 90%;
+        }
+
+        div.shape_pos_circle.Future_image_right_second_section {
+          position: absolute;
+          top: 95%;
+          left: 40%;
+          z-index: 100;
+        }
+      }
     `}</style>
   </section>
 );

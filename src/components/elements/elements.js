@@ -11,13 +11,13 @@ export const Button = ({ children }) => {
 
       <style jsx>{`
 
-      div.section_btn{
+      .section_btn{
         display: block;
         position:relative;
         width: 100%;
       }
 
-      div.section_btn a{
+      .section_btn a{
         position: absolute;
         right: 50%;
         transform: translateX(50%);
@@ -42,19 +42,19 @@ export const Button = ({ children }) => {
             linear-Gradient(to right, rgba(40, 216, 167, 1),rgba(29, 201, 202, 1));
       }
 
-      div.section_btn a span{
+      .section_btn a span{
         margin-left: -5px;
         opacity: 0;
       }
 
 
-      div.section_btn a:hover span {
+      .section_btn a:hover span {
           margin-left: 12px ;
           opacity: 1 !important;
         }
 
         @media (max-width: 1080px) {
-          div.section_btn a {
+          .section_btn a {
             font-size: 16px ;
             right: 50% !important;
             transform: translateX(50%) !important;
@@ -64,13 +64,13 @@ export const Button = ({ children }) => {
         }
 
         @media (max-width: 768px) {
-          div.section_btn a {
+          .section_btn a {
             font-size: 15px ;
           }
         }
 
         @media (max-width: 600px) {
-          div.section_btn a {
+          .section_btn a {
             width: 250px ;
             height: 50px ;
             line-height: 50px ;
@@ -79,7 +79,7 @@ export const Button = ({ children }) => {
         }
 
         @media (max-width: 376px) {
-          div.section_btn a {
+          .section_btn a {
             width: 190px ;
             line-height: 45px ;
             height: 45px ;

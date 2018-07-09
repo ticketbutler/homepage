@@ -15,14 +15,14 @@ const FutureImageIeft = ({
   button_link
 }) => (
   <section className="container future_image_left">
-  <div className="section_image_left">
-  <leftImage id="left-box">
-      <figure>
-        <img className="device" alt={image_alt} src={image} />
-      </figure>
-    </leftImage>
-  </div>
-    
+    <div className="section_image_left">
+      <leftImage id="left-box">
+        <figure>
+          <img className="device" alt={image_alt} src={image} />
+        </figure>
+      </leftImage>
+    </div>
+
     <div className="FIL_section">
       <SectionText>
         <h2
@@ -65,28 +65,28 @@ const FutureImageIeft = ({
       </SectionText>
     </div>
     <div className="shape_pos_square_1 Future_image_left_section">
-    <SquareShape>
-      <div className="shape">
-        <span id="first" />
-        <span id="second" />
-      </div>
-    </SquareShape>
+      <SquareShape>
+        <div className="shape">
+          <span id="first" />
+          <span id="second" />
+        </div>
+      </SquareShape>
     </div>
     <div className="shape_pos_square_2 Future_image_left_section">
-    <SquareShape>
-      <div className="shape">
-        <span id="first" />
-        <span id="second" />
-      </div>
-    </SquareShape>
+      <SquareShape>
+        <div className="shape">
+          <span id="first" />
+          <span id="second" />
+        </div>
+      </SquareShape>
     </div>
     <div className="shape_pos_circle Future_image_left_section">
-    <CircleShape>
-      <div className="shape">
-        <span id="first" />
-        <span id="second" />
-      </div>
-    </CircleShape>
+      <CircleShape>
+        <div className="shape">
+          <span id="first" />
+          <span id="second" />
+        </div>
+      </CircleShape>
     </div>
     <div className="clear-fix" />
     <style jsx>{`
@@ -106,155 +106,153 @@ const FutureImageIeft = ({
         width: 100%;
         position: relative;
       }
-     
-    
+
       @media (max-width: 1080px) {
         section.future_image_left {
-        padding: 110px 0;
+          padding: 110px 0;
         }
       }
       @media (max-width: 768px) {
         section.future_image_left {
-        padding: 80px 0;
+          padding: 80px 0;
         }
       }
-    
+
       @media (max-width: 600px) {
         section.future_image_left {
-        padding: 40px 0;
+          padding: 40px 0;
         }
       }
-    
+
       @media (max-width: 376px) {
         section.future_image_left {
-        padding: 50px 0px;
+          padding: 50px 0px;
+        }
       }
-    }
 
-
-       /** ******************************************************
+      /** ******************************************************
       Shape Position
       **********************************************************/
-     /**sqare */
-     div.shape_pos_square_1.Future_image_left_section {
-      position: absolute;
-      top: 10%;
-      left: 80%;
-    }
-
-    div.shape_pos_square_2.Future_image_left_section {
-      position: absolute;
-      top: 30%;
-      left: 50%;
-    }
-    div.shape_pos_square_2.Future_image_left_section div.shape span#second {
-      border: 4px solid #dd52e8;
-    
-    } {
-      position: absolute;
-      top: 30%;
-      left: 50%;
-    }
-
-    div.shape_pos_circle.Future_image_left_section {
-      position: absolute;
-      top: 80%;
-      left: 20%;
-      z-index: 100;
-    }
-
-  //   @media (max-width: 1200px) {
-  //     div.shape_pos_circle.Future_image_left_section{
-  //     bottom: 20%;
-  //     left: 35%;
-  //     }
-  // }
-    
-    @media (max-width: 1080px) {
       /**sqare */
-     div.shape_pos_square_1.Future_image_left_section {
-      position: absolute;
-      top: 10%;
-      left: 85%;
-    }
+      div.shape_pos_square_1.Future_image_left_section {
+        position: absolute;
+        top: 10%;
+        left: 80%;
+      }
 
-    div.shape_pos_square_2.Future_image_left_section {
-      position: absolute;
-      top: 40%;
-      left: 30%;
-    }
+      div.shape_pos_square_2.Future_image_left_section {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+      }
+      div.shape_pos_square_2.Future_image_left_section div.shape span#second {
+        border: 4px solid #dd52e8;
+      }
+       {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+      }
 
-    div.shape_pos_circle.Future_image_left_section {
-      position: absolute;
-      top: 90%;
-      left: 80%;
-      z-index: 100;
-    }
-    }
+      div.shape_pos_circle.Future_image_left_section {
+        position: absolute;
+        top: 80%;
+        left: 20%;
+        z-index: 100;
+      }
 
-    @media (max-width: 600px) {
-           /**sqare */
-     div.shape_pos_square_1.Future_image_left_section {
-      position: absolute;
-      top: 7%;
-      left: 90%;
-    }
+      //   @media (max-width: 1200px) {
+      //     div.shape_pos_circle.Future_image_left_section{
+      //     bottom: 20%;
+      //     left: 35%;
+      //     }
+      // }
 
-    div.shape_pos_square_2.Future_image_left_section {
-      position: absolute;
-      top: 38%;
-      left: 10%;
-    }
+      @media (max-width: 1080px) {
+        /**sqare */
+        div.shape_pos_square_1.Future_image_left_section {
+          position: absolute;
+          top: 10%;
+          left: 85%;
+        }
 
-    div.shape_pos_circle.Future_image_left_section {
-      position: absolute;
-      top: 90%;
-      left: 80%;
-      z-index: 100;
-    }
-    }
+        div.shape_pos_square_2.Future_image_left_section {
+          position: absolute;
+          top: 40%;
+          left: 30%;
+        }
 
-    @media (max-width: 370px) {
-     /**sqare */
-     div.shape_pos_square_1.Future_image_left_section {
-      position: absolute;
-      top: 7%;
-      left: 90%;
-    }
+        div.shape_pos_circle.Future_image_left_section {
+          position: absolute;
+          top: 90%;
+          left: 80%;
+          z-index: 100;
+        }
+      }
 
-    div.shape_pos_square_2.Future_image_left_section {
-      position: absolute;
-      top: 33%;
-      left: 10%;
-    }
+      @media (max-width: 600px) {
+        /**sqare */
+        div.shape_pos_square_1.Future_image_left_section {
+          position: absolute;
+          top: 7%;
+          left: 90%;
+        }
 
-    div.shape_pos_circle.Future_image_left_section {
-      position: absolute;
-      top: 95%;
-      left: 85%;
-      z-index: 100;
-    }
-    }
+        div.shape_pos_square_2.Future_image_left_section {
+          position: absolute;
+          top: 38%;
+          left: 10%;
+        }
 
-    /** ******************************************************
+        div.shape_pos_circle.Future_image_left_section {
+          position: absolute;
+          top: 90%;
+          left: 80%;
+          z-index: 100;
+        }
+      }
+
+      @media (max-width: 370px) {
+        /**sqare */
+        div.shape_pos_square_1.Future_image_left_section {
+          position: absolute;
+          top: 7%;
+          left: 90%;
+        }
+
+        div.shape_pos_square_2.Future_image_left_section {
+          position: absolute;
+          top: 33%;
+          left: 10%;
+        }
+
+        div.shape_pos_circle.Future_image_left_section {
+          position: absolute;
+          top: 95%;
+          left: 85%;
+          z-index: 100;
+        }
+      }
+
+      /** ******************************************************
       Image Box Styling
       **********************************************************/
-    .section_image_left {
-      display: inline-block;
-      float:left;
-      width:50%;
-      position:relative;
-      transition: all .3s ease-out;
-    }
-
-    @media (max-width: 1080px) {
       .section_image_left {
-      display: block;
-      width:100%;
-      }}
+        display: inline-block;
+        float: left;
+        width: 50%;
+        position: relative;
+        transition: all 0.3s ease-out;
+      }
 
+      @media (max-width: 1080px) {
+        .section_image_left {
+          display: block;
+          width: 100%;
+        }
+      }
 
-    /** ******************************************************
+      /** ******************************************************
       Content
       **********************************************************/
       div.FIL_section {

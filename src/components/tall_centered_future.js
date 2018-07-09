@@ -6,9 +6,6 @@ import styled from "styled-components";
 import { Button, SectionText } from "./elements/elements";
 import { SmallTriangle, SquareShape } from "./elements/shapes";
 
-
-
-
 const TallCenteredFuture = ({
   heading,
   text,
@@ -18,7 +15,8 @@ const TallCenteredFuture = ({
   button_link
 }) => (
   <section>
-    <div style={{
+    <div
+      style={{
         width: "100%",
         height: "70%",
         top: "0",
@@ -30,8 +28,9 @@ const TallCenteredFuture = ({
         background: "linear-gradient(295.21deg, #326de9 0%, #7e52e8 100%)",
         backgroundSize: "cover",
         textalign: "center",
-        marginTop: "50px",
-    }} />
+        marginTop: "50px"
+      }}
+    />
     <div className="TCF_section">
       <SectionText>
         <h2>{heading}</h2>
@@ -53,15 +52,14 @@ const TallCenteredFuture = ({
       </SectionText>
     </div>
 
-<div className="shape_pos_small_square tall_image_section">
-    <SquareShape>
-      <div className="shape">
-        <span id="first" />
-        <span id="second" />
-      </div>
-    </SquareShape>
-
-</div>
+    <div className="shape_pos_small_square tall_image_section">
+      <SquareShape>
+        <div className="shape">
+          <span id="first" />
+          <span id="second" />
+        </div>
+      </SquareShape>
+    </div>
 
     <div className="shape_pos_small_triangle tall_image_section">
       <SmallTriangle>
@@ -92,24 +90,23 @@ const TallCenteredFuture = ({
         padding: 110px;
       }
 
-        @media (max-width: 768px) {
-          section {
+      @media (max-width: 768px) {
+        section {
           padding: 80px;
-          }
         }
-      
-        @media (max-width: 600px) {
-          section {
-          padding: 40px;
-          }
-        }
-      
-        @media (max-width: 376px) {
-          section {
-          padding: 50px 20px;
-          }
-        }
+      }
 
+      @media (max-width: 600px) {
+        section {
+          padding: 40px;
+        }
+      }
+
+      @media (max-width: 376px) {
+        section {
+          padding: 50px 20px;
+        }
+      }
 
       /** Shape*/
       div.shape_pos_small_triangle.tall_image_section {
@@ -126,10 +123,9 @@ const TallCenteredFuture = ({
         z-index: 100;
       }
 
-      div.shape_pos_small_square.tall_image_section div.shape span#first{
-      
+      div.shape_pos_small_square.tall_image_section div.shape span#first {
         border: 4px solid #fff;
-    }
+      }
 
       @media (max-width: 1080px) {
         div.shape_pos_small_triangle.tall_image_section {

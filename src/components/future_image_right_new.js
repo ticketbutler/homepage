@@ -28,21 +28,21 @@ const FutureImageRightNew = ({ heading, text, image, image_alt }) => (
       </SquareShape>
     </div>
 
-      <div className="shape_pos_circle Future_image_right_new_section">
-    <CircleShape>
+    <div className="shape_pos_circle Future_image_right_new_section">
+      <CircleShape>
         <div className="shape">
           <span id="first" />
           <span id="second" />
         </div>
-    </CircleShape>
+      </CircleShape>
     </div>
     <div className="shape_pos_triangle Future_image_right_new_section">
-    <BigTriangle>
+      <BigTriangle>
         <div className="shape">
           <span id="first">&#x25BC;</span>
           <span id="second">&#x25BC;</span>
         </div>
-    </BigTriangle>
+      </BigTriangle>
     </div>
 
     <div className="clear-fix" />
@@ -90,7 +90,7 @@ const FutureImageRightNew = ({ heading, text, image, image_alt }) => (
       /** ******************************************************
       Shape Position
       **********************************************************/
-     /**sqare */
+      /**sqare */
       div.shape_pos_square.Future_image_right_new_section {
         position: absolute;
         top: 10%;
@@ -111,12 +111,12 @@ const FutureImageRightNew = ({ heading, text, image, image_alt }) => (
       }
 
       @media (max-width: 1200px) {
-        div.shape_pos_circle.Future_image_right_new_section{
-        bottom: 20%;
-        left: 35%;
+        div.shape_pos_circle.Future_image_right_new_section {
+          bottom: 20%;
+          left: 35%;
         }
-    }
-      
+      }
+
       @media (max-width: 1080px) {
         div.shape_pos_square.Future_image_right_new_section {
           top: 55%;
@@ -126,7 +126,7 @@ const FutureImageRightNew = ({ heading, text, image, image_alt }) => (
           top: 90%;
           left: 70%;
         }
-  
+
         div.shape_pos_triangle.Future_image_right_new_section {
           position: absolute;
           top: 20%;
@@ -143,7 +143,7 @@ const FutureImageRightNew = ({ heading, text, image, image_alt }) => (
           top: 95%;
           left: 75%;
         }
-  
+
         div.shape_pos_triangle.Future_image_right_new_section {
           top: 10%;
           left: 70%;
@@ -159,7 +159,7 @@ const FutureImageRightNew = ({ heading, text, image, image_alt }) => (
           top: 93%;
           left: 65%;
         }
-  
+
         div.shape_pos_triangle.Future_image_right_new_section {
           top: 15%;
           left: 55%;

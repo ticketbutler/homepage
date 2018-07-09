@@ -5,8 +5,6 @@ import styled from "styled-components";
 import { Button, SectionText } from "./elements/elements";
 import { SmallTriangle, SquareShape } from "./elements/shapes";
 
-
-
 const TallCenteredFutureButtonTop = ({
   heading,
   text,
@@ -16,7 +14,8 @@ const TallCenteredFutureButtonTop = ({
   button_link
 }) => (
   <section>
-       <div style={{
+    <div
+      style={{
         width: "100%",
         height: "70%",
         top: "0",
@@ -28,8 +27,9 @@ const TallCenteredFutureButtonTop = ({
         background: "linear-gradient(295.21deg, #326de9 0%, #7e52e8 100%)",
         backgroundSize: "cover",
         textalign: "center",
-        marginTop: "50px",
-    }} />
+        marginTop: "50px"
+      }}
+    />
     <div className="TCF_second_section">
       <SectionText>
         <h2>{heading}</h2>
@@ -57,15 +57,14 @@ const TallCenteredFutureButtonTop = ({
       <img alt={image_alt} src={image} />
     </div>
 
-   <div className="shape_pos_small_square tall_image_section">
-    <SquareShape>
-      <div className="shape">
-        <span id="first" />
-        <span id="second" />
-      </div>
-    </SquareShape>
-
-</div>
+    <div className="shape_pos_small_square tall_image_section">
+      <SquareShape>
+        <div className="shape">
+          <span id="first" />
+          <span id="second" />
+        </div>
+      </SquareShape>
+    </div>
 
     <div className="shape_pos_small_triangle tall_image_section">
       <SmallTriangle>
@@ -89,49 +88,47 @@ const TallCenteredFutureButtonTop = ({
         clear: both;
       }
 
-      section{
-      width: 100%;
-      position: relative;
-      bacground: #ccc;
-      padding: 110px;
-      margin-top: 140px;
+      section {
+        width: 100%;
+        position: relative;
+        bacground: #ccc;
+        padding: 110px;
+        margin-top: 140px;
       }
       @media (max-width: 1500px) {
-        section{
-        margin-top: 140px;
+        section {
+          margin-top: 140px;
         }
       }
       @media (max-width: 1250px) {
-        section{
-        margin-top: 100px;
+        section {
+          margin-top: 100px;
         }
       }
       @media (max-width: 1080px) {
-        section{
-        margin-top: 70px;
-    
-        padding: 80px;
+        section {
+          margin-top: 70px;
+          padding: 80px;
         }
       }
       @media (max-width: 768px) {
-        section{
-        padding: 80px;
-        }
-      }
-    
-      @media (max-width: 600px) {
-        section{
-        padding: 40px;
-        }
-      }
-    
-      @media (max-width: 376px) {
-        section{
-        padding: 50px 20px;
+        section {
+          padding: 80px;
         }
       }
 
-      
+      @media (max-width: 600px) {
+        section {
+          padding: 40px;
+        }
+      }
+
+      @media (max-width: 376px) {
+        section {
+          padding: 50px 20px;
+        }
+      }
+
       /** Shape*/
       div.shape_pos_small_triangle.tall_image_section {
         position: absolute;
@@ -147,10 +144,9 @@ const TallCenteredFutureButtonTop = ({
         z-index: 100;
       }
 
-      div.shape_pos_small_square.tall_image_section div.shape span#first{
-      
+      div.shape_pos_small_square.tall_image_section div.shape span#first {
         border: 4px solid #fff;
-    }
+      }
 
       @media (max-width: 1080px) {
         div.shape_pos_small_triangle.tall_image_section {
@@ -176,7 +172,6 @@ const TallCenteredFutureButtonTop = ({
           z-index: 100;
         }
       }
-
 
       div.TCF_second_section {
         text-align: center;

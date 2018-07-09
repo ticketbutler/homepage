@@ -2,387 +2,26 @@ import React from "react";
 import styled from "styled-components";
 import "font-awesome/css/font-awesome.min.css";
 
-const Section = styled.section`
-  padding: 0;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 0px;
-`;
-
-const LeftBox = styled.div`
-    width: 50%;
-    height: 100%;
-    display:inline;
-    float: left;
-    padding: 110px;
-
-    h1 {
-        float: left;
-        margin-left: 0px;
-        margin-bottom: 50px;
-        font-size: 50px;
-
-    }
-    > form {
-        max-width: 100%;
-        padding: 30px;
-        margin: 50px auto;
-        font-family: Montserrat;
-        margin-bottom: 0;
-        padding: 0;
-
-        >ul {
-            padding:0;
-            margin:0;
-            list-style:none;
-
-            > li {
-                min-height: 35px;
-                display: block;
-                width: 100%;
-                float:left;
-                margin-left: 50%;
-                transform: translateX(-50%);
-                position: relative;
-
-                >label{
-                    padding-top: 15px;
-                    > input {
-                        width: 400px;
-                        display: block;
-                        padding: 0 15px;
-                        height: 40px;
-                        border: 1px solid #CCC;
-                        border-radius: 4px;
-                        position: relative;
-                        &::placeholder{
-                            font-size: 15px;
-                        }
-                        
-                    }
-                    input:focus ~ span.floating-label{
-                        font-size: 10px;
-                      
-                    }
-
-                }
-                
-                &#message-field {
-                    display: block;
-                    float: left;
-                    width: 100%;
-                    margin-left: 50%;
-                    transform: translateX(-50%);
-                    >label{
-                        > textarea{
-                            width: 400px;
-                            display:inline;
-                            float: left;
-                            height: 120px;
-                            padding: 4px 15px;
-                            border: 1px solid #CCC;
-                            border-radius: 4px;
-                            &::placeholder{
-                                font-size: 15px;
-                            }
-                        }
-                    }
-                   
-                }
-              
-            }
-        }
-    }
-    @media (max-width: 1200px) {
-        > form {
-            >ul {
-                > li {
-                    >label{
-                    > input {
-                        width: 100%;
-                    }
-                }
-                    &#message-field {
-                >label{
-
-                        > textarea{
-                            width: 100%;
-                        }
-                    }
-                }
-                }
-            }
-        }
-    }
-    @media (max-width: 1080px) {
-        
-        padding: 110px 40px;
-        h1 {
-           
-            font-size: 40px;
-        }
-    }
-    @media (max-width: 768px) { 
-        display: block;
-        width: 100%;
-        h1 {
-            float: none;
-            font-size: 40px;
-        }
-        > form {
-            >ul {
-                > li {
-                    width: 400px;
-                    >label{
-                    > input {
-                        width: 400px;
-                    }
-                }
-                    &#message-field {
-                        width: 400px;   
-                        >label{                     
-                        > textarea{
-                            width: 400px;
-                        }
-                    }
-                    }
-
-            }
-        }
-        
-    }
-
-     @media (max-width: 500px) { 
-        padding: 110px 30px;
-        h1 {
-            float: none;
-            font-size: 30px;
-        }
-        > form {
-            >ul {
-                > li {
-                    width: 100%;
-                >label{
-                    
-                    > input {
-                        width: 100%;
-                    }}
-                    
-                    &#message-field {
-                        width: 100%;
-                >label{
-                        
-                        > textarea{
-                            width: 100%;
-                        }}
-                    }
-                }
-            }
-        }  
- }
- @media (max-width: 500px) { 
-    padding: 70px 20px;
- 
-}
-`;
-
-const Button = styled.button`
-margin-top: 40px;
-float: left;
-height: 55px;
-width: 200px;
-display: block;
-float:left;
-border-radius: 29px;
-
-border: 0;
-background: linear-gradient(90deg, #326DE9 0%, #7E52E8 100%);
-text-decoration:none;
-text-align: center;
-position: relative;
-transition: all .3s;
-    &:hover {
-        box-shadow: 0px 3px 20px -6px rgba(0,0,0,0.30);
-    > span {
-            &::after {
-                opacity: 1;
-                margin-left: 10px;
-            }
-        }
-    }
-    
-        
-    > span {
-    color: #FFFFFF;	
-    font-family: Montserrat;	
-    font-size: 16px;
-    font-weight: bold;	
-    text-align: center;
-    transition: all .3s;
-
-        &::after {
-        content: '\00BB';
-        opacity: 1;
-        font-size: 20px;
-        opacity: 0;
-        margin-left: -8px;
-        z-index: 10;
-        color: #FFF;
-        transition: 0.3s;
-        }
-    }
-
-    @media (max-width: 920px) { 
-        margin-left: 50%;
-        transform:translateX(-50%);
-        
-    }
-    @media (max-width: 768px) { 
-        width: 190px;
-        >span {
-            font-size: 15px;
-            line-height: 40px;
-            &::after {
-                font-size: 18px;
-                line-height: 39px;
-        }
-        }
-    }
-    @media (max-width: 600px) { 
-        >span {
-            font-size: 14px;
-            line-height: 40px;
-            &::after {
-                font-size: 18px;
-                line-height: 39px;
-        }
-        
-    }
-    @media (max-width: 376px) { 
-        width: 180px;
-
-       height: 45px;
-       >span {
-        font-size: 12px;
-        line-height: 40px;
-        &::after {
-            font-size: 16px;
-            line-height: 39px;
-    }
-        
-    }
-`;
-
-const RightBox = styled.div`
-    width: 50%;
-    height: 660px;
-    padding: 110px;
-    float:right;
-    display:inline-block;
-    background: linear-gradient(to right, rgba(50, 109, 233, .85) , rgba(126, 82, 232, .85)), url("../img/kontaktmin.png") no-repeat center center;
-    color: #FFF;
-    background-size: cover;
-    
-    > div.content {
-        ul{
-            li{
-                display: block;
-                list-style: none;
-                margin: 50px auto;
-                width: 340px;
-                &:first-child{
-                    margin-top: 0;
-                }
-                &:last-child{
-                    margin-bottom: 0;
-                }
-            }
-        }
-        i {
-           display: inline;
-           float:left;
-           font-size: 20px;
-        }
-        span {
-            display:block;
-            text-align: center;
-            width: 250px;
-            text-align:left;
-            margin-left: 50%;
-            transform: translateX(-50%);
-            color: #fff;
-            font-family: Montserrat;
-            font-size: 20px;
-            font-weight: 500;
-            text-decoration: none;
-            &:nth-child(2){
-                margin-bottom: 10px;
-            }
-            &#address,&#phone, &#support{
-                opacity: .5;
-                font-size: 16px;
-            }
-        }	
-        }
-    }
-
-    @media (max-width: 1080px) {
-        padding: 110px 40px;
-    }
-    @media (max-width: 768px) { 
-        height: auto;
-        display: block;
-        width: 100%;   
-        height: 550px;
-    }
-
-    @media (max-width: 350px) { 
-        padding: 110px 30px;
-        height: 500px;
-        
-        > div.content {
-            ul{
-                li{
-                    display: block;
-                    list-style: none;
-                    margin: 50px auto;
-                    width: 100%;
-                }
-            }
-            i {
-               float:left;
-               font-size: 15px;
-               width: 40px;
-               height: 30px;
-               width: 20%;
-               text-align: left;
-               margin-left: -10px;
-            }
-            span {
-                width: 80%
-                font-size: 14px;
-                
-                &#address,&#phone, &#support{
-                    font-size: 12px;
-                }
-                }	
-            }
-        }
-       
-        
-    }
-`;
-
 const Contact_page = ({ items }) => (
-  <Section id="contact">
+  <section id="contact">
     <div className="container">
-      <LeftBox className="left-box contact">
+      <div
+        className="contact_left_box "
+        style={{
+          width: "50%",
+          height: "100%",
+          display: "inline",
+          float: "left",
+          padding: "110px"
+        }}
+      >
         <h1>Kontakt</h1>
         <form
           className="contact-form"
           name="contact-form"
           method="post"
           data-netlify="true"
+          netlify
           data-netlify-honeypot="bot-field"
         >
           <ul>
@@ -412,13 +51,24 @@ const Contact_page = ({ items }) => (
               </label>
             </li>
           </ul>
-          <Button>
-            <span>Send besked</span>
-          </Button>
+          <button id="contact_btn">
+            <span>
+              Send besked <em>&#187;</em>
+            </span>
+          </button>
           <div className="clear-fix" />
         </form>
-      </LeftBox>
-      <RightBox>
+      </div>
+      <div className="contact_right_box" style={{
+         width: "50%",
+         height: "660px",
+         padding: "110px",
+         float:"right",
+         display:"inline-block",
+         background: "linear-gradient(to right, rgba(50, 109, 233, .85) , rgba(126, 82, 232, .85)), url(../img/kontaktmin.png) no-repeat center center",
+         color: "#FFF",
+         backgroundSize: "cover", 
+      }}>
         <div className="content">
           <ul>
             <li>
@@ -438,7 +88,7 @@ const Contact_page = ({ items }) => (
             </li>
           </ul>
         </div>
-      </RightBox>
+      </div>
     </div>
     <div className="clear-fix" />
 
@@ -452,8 +102,343 @@ const Contact_page = ({ items }) => (
       .clear-fix {
         clear: both;
       }
+
+      section#contact{
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0px;
+      }
+
+      /* Button */
+        button#contact_btn{
+            margin-top: 25px;
+            float: left;
+            height: 55px;
+            width: 200px;
+            display: block;
+            float:left;
+            border-radius: 29px;
+    
+            border: 0;
+            background: linear-gradient(90deg, #326DE9 0%, #7E52E8 100%);
+            text-decoration:none;
+            text-align: center;
+            position: relative;
+            transition: all .3s;
+        }
+        button#contact_btn:hover {
+            box-shadow: 0px 3px 20px -6px rgba(0,0,0,0.30);
+            
+        }
+        button#contact_btn span em{
+            font-size: 18px;
+            margin-left: -10px;
+            opacity: 0;
+            transition: all .3s;
+          }
+    
+        button#contact_btn:hover span em {
+            margin-left: 10px;
+            opacity: 1;
+        }
+        
+        button#contact_btn span {
+        color: #FFFFFF;	
+        font-family: Montserrat;	
+        font-size: 16px;
+        font-weight: bold;	
+        text-align: center;
+        transition: all .3s;
+        }
+
+
+
+        /* From styling */
+        .contact_left_box h1 {
+            float: left;
+            margin-left: 0px;
+            margin-bottom: 50px;
+            font-size: 50px;
+        }
+        .contact_left_box form {
+            max-width: 100%;
+            padding: 30px;
+            margin: 50px auto;
+            font-family: Montserrat;
+            margin-bottom: 0;
+            padding: 0;
+        }
+        .contact_left_box form  {
+            padding:0;
+            margin:0;
+            list-style:none;
+        
+        }
+        .contact_left_box form ul li {
+            min-height: 35px;
+            display: block;
+            width: 100%;
+            float:left;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            position: relative;
+        }
+            
+        .contact_left_box form ul li label{
+            padding-top: 15px;
+                
+        }
+        .contact_left_box form ul li label input {
+            width: 400px;
+            display: block;
+            padding: 0 15px;
+            height: 40px;
+            border: 1px solid #CCC;
+            border-radius: 4px;
+            position: relative;
+                
+        }
+        .contact_left_box form ul li label input::placeholder{
+            font-size: 15px;
+        }
+
+        .contact_left_box form ul li label input:focus ~ span.floating-label{
+            font-size: 10px;
+            
+        }
+           
+        .contact_left_box form ul li#message-field {
+            display: block;
+            float: left;
+            width: 100%;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+        .contact_left_box form ul li#message-field label textarea{
+            width: 400px;
+            display:inline;
+            float: left;
+            height: 120px;
+            padding: 4px 15px;
+            border: 1px solid #CCC;
+            border-radius: 4px;
+                    
+        }
+        .contact_left_box form ul li#message-field label textarea &::placeholder{
+            font-size: 15px;
+        }
+                            
+               
+        
+        .contact_right_box div.content ul li {
+                    display: block;
+                    list-style: none;
+                    margin: 50px auto;
+                    width: 340px;
+        }
+        .contact_right_box div.content ul li:first-child{
+            margin-top: 0;
+        }
+        .contact_right_box div.content ul li:last-child{
+            margin-bottom: 0;
+        }
+    
+            
+        .contact_right_box div.content ul li i {
+            display: inline;
+            float:left;
+            font-size: 20px;
+        }
+        .contact_right_box div.content ul li span {
+            display:block;
+            text-align: center;
+            width: 250px;
+            text-align:left;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-family: Montserrat;
+            font-size: 20px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .contact_right_box div.content ul li span :nth-child(2){
+            margin-bottom: 10px;
+        }
+        .contact_right_box div.content ul li span#address , .contact_right_box div.content ul li span#phone , .contact_right_box div.content ul li span#support{
+            opacity: .5;
+            font-size: 16px;
+        }
+       
+    
+
+        @media (max-width: 1200px) {
+    
+            .contact_left_box form ul li label input {
+                width: 100%;
+            }
+            .contact_left_box form ul li&#message-field label textarea {
+                width: 100%;
+            }
+        }
+
+
+        @media (max-width: 1080px) {
+            .contact_left_box{
+            padding: 110px 40px;
+            }
+            .contact_left_box h1 {
+                font-size: 40px;
+            }
+
+            .contact_right_box{
+                padding: 110px 40px;
+
+            }
+        }
+
+
+
+        @media (max-width: 920px) { 
+            button#contact_btn{
+            margin-left: 50%;
+            transform:translateX(-50%);
+            }
+            
+        }
+        '
+        @media (max-width: 768px) { 
+            button#contact_btn{
+            width: 190px;
+            }
+            button#contact_btn span {
+                font-size: 15px;
+                line-height: 40px;
+            }
+            button#contact_btn span ::after {
+                    font-size: 18px;
+                    line-height: 39px;
+            }
+
+            .contact_left_box{
+            display: block;
+            width: 100%;
+            }
+            .contact_left_box h1 {
+                float: none;
+                font-size: 40px;
+            }
+            .contact_left_box form ul li{ 
+                        width: 400px;
+            }
+            .contact_left_box form ul li label input {
+                width: 400px;
+            }
+                    
+            .contact_left_box form ul li#message-field {
+                width: 400px;
+            }
+            .contact_left_box form ul li#message-field label textarea{
+                width: 400px;
+            }
+
+            .contact_right_box{
+                height: auto;
+                display: block;
+                width: 100%;   
+                height: 550px;
+
+            }
+             
+        }
+        @media (max-width: 600px) { 
+            button#contact_btn span {
+                font-size: 14px;
+                line-height: 40px;
+            }
+                button#contact_btn span ::after {
+                    font-size: 18px;
+                    line-height: 39px;
+            }
+            
+        }
+        
+        @media (max-width: 500px) { 
+            .contact_left_box{
+            padding: 70px 20px;
+            }
+            .contact_left_box h1 {
+                float: none;
+                font-size: 30px;
+            }
+            .contact_left_box form ul li  {
+                width: 100%;
+
+            }
+            .contact_left_box form ul li label input {
+                width: 100%;
+
+            }
+            .contact_left_box form ul li&#message-field {
+                width: 100%;                
+            }
+            .contact_left_box form ul li&#message-field label textarea {
+                width: 100%;
+
+            }
+     }
+        @media (max-width: 376px) { 
+            button#contact_btn {
+            width: 180px;
+            height: 50px;
+            }
+            button#contact_btn span {
+            font-size: 13px;
+            line-height: 40px;
+            }
+            button#contact_btn span ::after {
+                font-size: 16px;
+                line-height: 39px;
+            }
+            
+        }
+
+    
+        @media (max-width: 350px) { 
+            .contact_right_box{
+            padding: 110px 30px;
+            height: 500px;
+            
+            }
+            .contact_right_box div.content ul li{
+                display: block;
+                list-style: none;
+                margin: 50px auto;
+                width: 100%;
+            }
+            .contact_right_box div.content ul li i {
+                float:left;
+                font-size: 15px;
+                width: 40px;
+                height: 30px;
+                width: 20%;
+                text-align: left;
+                margin-left: -10px;
+            }
+            .contact_right_box div.content ul li span {
+                width: 80%
+                font-size: 14px;
+            }
+            .contact_right_box div.content ul li span#address , .contact_right_box div.content ul li span#phone , .contact_right_box div.content ul li span#support{
+                font-size: 12px;
+            }
+            
+        }
     `}</style>
-  </Section>
+  </section>
 );
 
 export default Contact_page;
+
+      
