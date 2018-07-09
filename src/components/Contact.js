@@ -7,13 +7,6 @@ const Contact_page = ({ items }) => (
     <div className="container">
       <div
         className="contact_left_box "
-        style={{
-          width: "50%",
-          height: "100%",
-          display: "inline",
-          float: "left",
-          padding: "110px"
-        }}
       >
         <h1>Kontakt</h1>
         <form
@@ -59,16 +52,7 @@ const Contact_page = ({ items }) => (
           <div className="clear-fix" />
         </form>
       </div>
-      <div className="contact_right_box" style={{
-         width: "50%",
-         height: "660px",
-         padding: "110px",
-         float:"right",
-         display:"inline-block",
-         background: "linear-gradient(to right, rgba(50, 109, 233, .85) , rgba(126, 82, 232, .85)), url(../img/kontaktmin.png) no-repeat center center",
-         color: "#FFF",
-         backgroundSize: "cover", 
-      }}>
+      <div className="contact_right_box">
         <div className="content">
           <ul>
             <li>
@@ -114,6 +98,8 @@ const Contact_page = ({ items }) => (
         button#contact_btn{
             margin-top: 25px;
             float: left;
+            margin-left: 25px;
+
             height: 55px;
             width: 200px;
             display: block;
@@ -155,9 +141,18 @@ const Contact_page = ({ items }) => (
 
 
         /* From styling */
+        .contact_left_box {
+            width: 50%;
+          height: 100%;
+          display: inline;
+          float: left;
+          padding: 110px; 
+          padding-left: 90px;
+        }
+
         .contact_left_box h1 {
             float: left;
-            margin-left: 0px;
+            margin-left: 25px;
             margin-bottom: 50px;
             font-size: 50px;
         }
@@ -229,7 +224,18 @@ const Contact_page = ({ items }) => (
             font-size: 15px;
         }
                             
-               
+        
+
+        .contact_right_box {
+            width: 50%;
+            height: 660px;
+            padding: 110px;
+            float:right;
+            display:inline-block;
+            background: linear-gradient(to right, rgba(50, 109, 233, .85) , rgba(126, 82, 232, .85)), url(../img/kontaktmin.png) no-repeat center center;
+            color: #FFF;
+            background-size: cover;
+        }
         
         .contact_right_box div.content ul li {
                     display: block;
@@ -278,7 +284,7 @@ const Contact_page = ({ items }) => (
             .contact_left_box form ul li label input {
                 width: 100%;
             }
-            .contact_left_box form ul li&#message-field label textarea {
+            .contact_left_box form ul li#message-field label textarea {
                 width: 100%;
             }
         }
@@ -287,6 +293,8 @@ const Contact_page = ({ items }) => (
         @media (max-width: 1080px) {
             .contact_left_box{
             padding: 110px 40px;
+            padding-left: 20px;
+
             }
             .contact_left_box h1 {
                 font-size: 40px;
@@ -307,10 +315,15 @@ const Contact_page = ({ items }) => (
             }
             
         }
-        '
+        
         @media (max-width: 768px) { 
             button#contact_btn{
             width: 190px;
+            display:block; 
+            float: right;
+            transform: translateX(50%);
+            margin-right: 50%;
+            margin-left: 0;
             }
             button#contact_btn span {
                 font-size: 15px;
@@ -321,35 +334,36 @@ const Contact_page = ({ items }) => (
                     line-height: 39px;
             }
 
-            .contact_left_box{
+        .contact_left_box{
             display: block;
             width: 100%;
-            }
-            .contact_left_box h1 {
-                float: none;
-                font-size: 40px;
-            }
-            .contact_left_box form ul li{ 
-                        width: 400px;
-            }
-            .contact_left_box form ul li label input {
-                width: 400px;
-            }
-                    
-            .contact_left_box form ul li#message-field {
-                width: 400px;
-            }
-            .contact_left_box form ul li#message-field label textarea{
-                width: 400px;
-            }
 
-            .contact_right_box{
-                height: auto;
-                display: block;
-                width: 100%;   
-                height: 550px;
+        }
+        .contact_left_box h1 {
+            float: none;
+            font-size: 40px;
+        }
+        .contact_left_box form ul li{ 
+                    width: 400px;
+        }
+        .contact_left_box form ul li label input {
+            width: 400px;
+        }
+                
+        .contact_left_box form ul li#message-field {
+            width: 400px;
+        }
+        .contact_left_box form ul li#message-field label textarea{
+            width: 400px;
+        }
 
-            }
+        .contact_right_box{
+            height: auto;
+            display: block;
+            width: 100%;   
+            height: 550px;
+
+        }
              
         }
         @media (max-width: 600px) { 
@@ -357,7 +371,7 @@ const Contact_page = ({ items }) => (
                 font-size: 14px;
                 line-height: 40px;
             }
-                button#contact_btn span ::after {
+                button#contact_btn span::after {
                     font-size: 18px;
                     line-height: 39px;
             }
@@ -367,6 +381,8 @@ const Contact_page = ({ items }) => (
         @media (max-width: 500px) { 
             .contact_left_box{
             padding: 70px 20px;
+            padding-left: 0px;
+
             }
             .contact_left_box h1 {
                 float: none;
@@ -380,10 +396,10 @@ const Contact_page = ({ items }) => (
                 width: 100%;
 
             }
-            .contact_left_box form ul li&#message-field {
+            .contact_left_box form ul li#message-field {
                 width: 100%;                
             }
-            .contact_left_box form ul li&#message-field label textarea {
+            .contact_left_box form ul li#message-field label textarea {
                 width: 100%;
 
             }
