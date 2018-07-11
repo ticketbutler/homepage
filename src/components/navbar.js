@@ -54,11 +54,13 @@ render() {
 
         </div>
         <ul id="ulNav">
+        {/* {console.log(this.props.items)} */}
           {this.props.items.map(item => (
+            
             <li
             >
               <a
-              href={item.href}
+              href={item.path}
               >
                 {item.label}
               </a>

@@ -38,13 +38,13 @@ const CmsPage = ({ pathContext }) => (
         return <Component key={i} {...section} />;
       })}
 
-    {/* <LogoSection
+    <LogoSection
       items={pathContext.logo_section ? pathContext.logo_section.items : []}
       heading={pathContext.logo_section ? pathContext.logo_section.heading : []}
     />
     <SliderSection
       items={pathContext.testimonials ? pathContext.testimonials.items : []}
-    /> */}
+    />
   </Layout>
 );
 
