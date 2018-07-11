@@ -383,7 +383,6 @@ const Contact_page = ({ items }) => (
           name="contact-form"
           method="post"
           data-netlify="true"
-          data-netlify-honeypot="bot-field"
         >
           <ul>
             <li>
