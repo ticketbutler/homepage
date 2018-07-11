@@ -71,7 +71,7 @@ sections:
       optimér Facebook annoncer med Facebook Pixel, analysér dine kunder gennem
       Google Analytics og se sammenhængen mellem antallet af billetter solgt og
       din marketingstrategi. 
-    type: future_image_left
+    type: future_image_right_second
   - button_link: /da/billigt-billetsystem
     button_text: Se priser
     heading: Priser for alle
@@ -81,7 +81,7 @@ sections:
       Om du repræsenterer et stort firma, et startup eller en énmandshær, står
       vi klar til at imødekomme dine behov, uanset om du bruger vores gratis
       løsning eller en skræddersyet løsning.
-    type: future_image_right
+    type: future_image_left
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: Kom nemt i gang
