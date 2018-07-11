@@ -1,10 +1,18 @@
 import React from "react";
-import navbarEffect from "../js/navbarEffect";
 
 
 
 
-const NavbarSection = ({ items }) => {
+
+class NavbarSection extends React.Component {
+  constructor(props) {
+    super(props); 
+    this.state = { 
+      href: "",
+      active: "!active" ,
+    };
+  }
+render() {
   return (
     <div className="navbar">
       <div className="navbar_logo">
@@ -13,29 +21,44 @@ const NavbarSection = ({ items }) => {
         </a>
       </div>
 
-      <div className="nav" >
-        <div onClick={navbarEffect} id="bars" style={{
+     
+ <div className="nav" >
+        <div id="bars" style={{
           display: "none",
-        }}>
+        }}
+        onClick={() => {
+
+            if(this.state.active != "active") {
+
+              this.setState({active: "active"});
+
+              document.getElementById("ulNav").classList.add("active");
+  
+
+            }else if(this.state.active != "!active"){
+
+              this.setState({active: "!active"});
+
+              document.getElementById("ulNav").classList.remove("active");
+              document.getElementById("ulNav").classList.add("!active");
+
+
+            }
+          // document.getElementById("navActive_back").classList.remove("NavbarClicked-background");
+          document.getElementById("bars").classList.toggle("clicked");
+        }}        
+        >
           <div className="bar1" />
           <div className="bar2" />
-          <div className="bar3" />
+          <div className="bar3" />    
+
         </div>
         <ul id="ulNav">
-          {items.map(item => (
+          {this.props.items.map(item => (
             <li
-              onClick={() => {
-                document.getElementById("ulNav").classList.remove("active");
-                document
-                  .getElementById("navActive_back")
-                  .classList.remove("NavbarClicked-background");
-                document.getElementById("bars").classList.toggle("clicked");
-              }}
             >
               <a
-                href={item.path}
-                className="nav-link"
-                // animate={{ offset: 20, duration: 600 }}
+              href={item.href}
               >
                 {item.label}
               </a>
@@ -463,6 +486,7 @@ const NavbarSection = ({ items }) => {
       `}</style>
     </div>
   );
+}
 };
 
 export default NavbarSection;

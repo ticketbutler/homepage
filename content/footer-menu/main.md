@@ -13,14 +13,22 @@ items:
 features:
   - label: Sælg flere billetter
     path: /da/saelg-flere-billetter-online
+  - label: Kend dine gæster
+    path: /da/kend-dine-gæster
+  - label: En bedre oplevelse
+    path: /da/dit-billetsystem
+  - label: Vær i kontrol
+    path: /da/billetter-billettyper
 integration:
-  - label: Hvorfor vælge Ticketbutler? (på vej!)
-    path: /
-  - label: FAQ (på vej!)
-    path: /
+  - label: Priser
+    path: /da/billigt-billetsystem
 company:
   - label: Om Ticketbutler
     path: /da/om-os
+  - label: Find os på Facebook
+    path: 'https://www.facebook.com/ticketbutler/'
+  - label: Find os på LinkedIn
+    path: 'https://www.linkedin.com/company/ticketbutler/'
   - label: Kontakt
     path: '#contact'
 ---

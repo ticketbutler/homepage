@@ -22,10 +22,9 @@ sections:
     type: future_image_right_new
   - button_link: '#contact'
     button_text: Kontakt os!
-    heading: Sælg billetter direkte fra din hjemmeside
-    image: /img/billetsystem-integration.png
+    heading: 'Sælg billetter direkte fra din hjemmeside '
+    image: /img/iframe-screens-new.png
     image_alt: Saelg-billetter-online
-    
     text: >-
       Alle besøgende på din hjemmeside er din mulighed for at sælge billetter
       eller hvad du ellers tilbyder. Gå ikke glip af besøgende ved at integrere
@@ -61,10 +60,10 @@ sections:
       billetkøb fra smartphone, ingen brugeroprettelse og betaling med
       betalingskort eller MobilePay giver friktionsfri købsoplevelse.
     type: future_layers
-  - button_link: ''
-    button_text: ''
+  - button_link: '#contact'
+    button_text: Kontakt os!
     heading: Lær din gæster at kende
-    image: /img/data-analytics2.png
+    image: /img/online-billetsystem2.png
     image_alt: billetservice+online-data
     text: >-
       Jo bedre du kender dine kunder, desto bedre en oplevelse kan du give dem,
@@ -72,7 +71,7 @@ sections:
       optimér Facebook annoncer med Facebook Pixel, analysér dine kunder gennem
       Google Analytics og se sammenhængen mellem antallet af billetter solgt og
       din marketingstrategi. 
-    type: future_image_right_second
+    type: future_image_left
   - button_link: /da/billigt-billetsystem
     button_text: Se priser
     heading: Priser for alle
@@ -82,7 +81,7 @@ sections:
       Om du repræsenterer et stort firma, et startup eller en énmandshær, står
       vi klar til at imødekomme dine behov, uanset om du bruger vores gratis
       løsning eller en skræddersyet løsning.
-    type: future_image_left
+    type: future_image_right
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: Kom nemt i gang
@@ -93,4 +92,28 @@ sections:
       et par dage. Vi designer systemet, så det ser lækkert ud til dit brand.
     type: tall_centered_future_button_top
 
+logo_section:
+  heading: Ticketbutler integrates with you favorits CMS
+  items:
+    - image: /img/WP.png
+      alt: image1
+    - image: /img/wix.png
+      alt: image2
+    - image: /img/SQ.png
+      alt: image3
+
+
+testimonials:
+  items:
+    - text: Vi benyttede Ticketbutler til vores nye innovationsevent. De var utroligt venlige og responderede hurtigt                    fleksibeltpå vores henvendelsr
+      image: /img/face.jpg
+      logo: /img/text_logo.png
+      about: Marius Cortsen, TexhSprint organizer
+
+    - text: Vi benyttede Ticketbutler til vores nye innovationsevent. De var utroligt venlige og responderede hurtigt                    fleksibeltpå vores henvendelsr
+      image: /img/face.jpg
+      logo:  /img/text_logo.png
+      about: Marius Cortsen, TexhSprint organizer
+    
 ---
+

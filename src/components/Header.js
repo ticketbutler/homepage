@@ -109,6 +109,7 @@ const Header = ({ heading, text, button_text, button_link }) => {
         }
         header div.header_content p {
           width: 604px;
+          line-height: 35px;
           font-size: 25px;
         }
 
