@@ -38,7 +38,7 @@ sections:
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: 'Øg dit online billetsalg og andre services '
-    image: /img/promote-event-simple.png
+    image: /img/simpel-integration-billetsystem.png
     image_alt: Sælg-billetter
     text: >-
       Du kender din målgruppe bedst og er den bedste til at sælge dit produkt og
