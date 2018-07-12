@@ -40,7 +40,7 @@ sections:
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: 'En naturlig udvidelse af dit brand '
-    image: /img/brugerrejse-i-et-online-billetsystem.png
+    image: /img/brugerrejse-i-et-online-billetsystem2.png
     text: >-
       Hele billetoplevelsen designes i dit brand så dine gæster forbliver i dit
       univers – intet mix med Ticketbutler branding, ingen eksterne
