@@ -31,7 +31,9 @@ sections:
       kan du lære dine gæster bedre at kende, så du kan give dem en bedre
       oplevelse til eventet.
     type: future_image_right_new
-  - heading: Lær fra din salgshistorik
+  - button_link: '#contact'
+    button_text: Kontakt os!
+    heading: Lær fra din salgshistorik
     image: /img/online-billetsalg-overblik.png
     text: >-
       Ved at sammenligne din salgshistorik med dine kampagner kan du se, hvilke
