@@ -18,6 +18,7 @@ sections:
     button_text: Kontakt os!
     heading: Hjælp dine kunder
     image: /img/refunder-billetter-i-online-billetsystem.png
+    image_alt: Refunder-billetter-i-online-billetsystem
     text: >-
       Gør dine kunder glade og støt dem når de har brug for hjælp. Refundér
       deres billetter eller gensend deres billet (kommer snart!), hvis den er
@@ -25,6 +26,7 @@ sections:
     type: future_image_left
   - heading: Medlemsbilletter
     image: /img/billetsystem-med-medlemsskab-til-medlemmer.jpg
+    image_alt: Billetsystem-medlemskab
     text: >-
       Har du medlemmer, som får gratis eller billigere billetter? Opret
       medlemsbilletter så medlemmet skal skrive sin medlemskode ind for at få
@@ -34,6 +36,7 @@ sections:
     button_text: Kontakt os!
     heading: Billetter til ethvert behov
     image: /img/billetsystem-med-billettyper.png
+    image_alt: Billetsystem-mede-flere-billettyper
     text: >-
       Med Ticketbutler kan du definere og oprette flere typer billetter til
       samme event efter behov – giv dem forskellige navne, priser,
@@ -45,6 +48,7 @@ sections:
     button_text: Kontakt os!
     heading: Check dine gæster ind til eventet
     image: /img/ticketbutler-app-med-qr-kode.png
+    image_alt: Billetscanner-app-QR-kode
     text: >-
       Når du har downloadet Ticketbutlers app til din smartphone kan du følge
       dit online billetsalg, checke gæster ind med et enkelt swipe eller scanne
@@ -54,6 +58,7 @@ sections:
     button_text: Kontakt os!
     heading: 'Bevar overblikket '
     image: /img/online-billetsalg-overblik.png
+    image_alt: Online-billetsalg-overblik
     text: >-
       Dit Ticketbutler dashboard hjælper dig med at bevare overblikket over hvor
       mange billetter du har solgt over tid, hvem der har købt billetter og den
