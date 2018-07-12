@@ -14,7 +14,7 @@ sections:
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: Øg din brand awareness
-    image: /img/brugerrejse-i-et-online-billetsystem.png
+    image: /img/brugerrejse-i-et-online-billetsystem2.png
     image_alt: brand-awareness
     text: >-
       Hele billet-oplevelsen er designet til at matche dit univers, så du øger
