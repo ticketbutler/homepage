@@ -8,11 +8,12 @@ sections:
   - button_link: '#tall_centered_future_button_top'
     button_text: Læs om vores mission
     heading: Om Ticketbutler
-    text: Hvorfor har arrangører brug for Ticketbutler?
+    image: /img/couponticketbutler.png
+    text: Hvorfor har verden brug for endnu et billetsystem?
     type: header
   - button_text: Kontakt os
     heading: Hvem er Ticketbutler?
-    image: /img/ticketbutler_logo.png
+    image: /img/ticketbutler_logo-with-padding.png
     text: >-
       Du kender sikkert Eventbrite, Billetto, Ticketmaster eller et af de andre
       store billetsystemer. Og ved du hvorfor? Fordi deres brand bliver smasket
