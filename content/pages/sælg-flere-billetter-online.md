@@ -48,8 +48,8 @@ sections:
       copy/paste. Vil du hellere have siderne adskilt tilbyder vi også separate
       eventsider. Integration med billet API? Kontakt os!
     type: tall_centered_future
-  - button_link: '#contact'
-    button_text: Kontakt os!
+  - button_link: 'https://www.facebook.com/business/learn/facebook-ads-pixel'
+    button_text: Om Facebook Pixel
     heading: Optimér dit salg på Facebook
     image: /img/facebook-pixel-billetsystem.png
     text: >-
