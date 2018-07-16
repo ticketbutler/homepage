@@ -210,7 +210,6 @@ const Newsletter_Page = () => {
           name="newsletter"
           method="post"
           data-netlify="true"
-          data-netlify-honeypot="bot-field"
         >
           <label>
             <input name="email" type="email" placeholder="Din email her" />
