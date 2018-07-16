@@ -14,8 +14,6 @@ const Contact_page = ({ items }) => (
           name="contact-form"
           method="post"
           data-netlify="true"
-          netlify
-          data-netlify-honeypot="bot-field"
         >
           <ul>
             <li>
@@ -100,7 +98,7 @@ const Contact_page = ({ items }) => (
             float: left;
             margin-left: 25px;
 
-            height: 55px;
+            height: 55px ;
             width: 200px;
             display: block;
             float:left;

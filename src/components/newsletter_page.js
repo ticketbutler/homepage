@@ -27,7 +27,9 @@ const Newsletter_Page = () => {
       </div>
 
       <style jsx>{`
-
+      section {
+        margin-top: 0;
+      }
 
       section.container.newsletter_page{
         padding: 110px 0;

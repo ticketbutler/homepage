@@ -12,6 +12,8 @@ import FutureLayers from "../components/future_layers";
 import LogoSection from "../components/logo-section";
 import SliderSection from "../components/slider_section";
 
+import FeaturePage from "../components/feature_page";
+
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const components = [
@@ -37,6 +39,8 @@ const CmsPage = ({ pathContext }) => (
           .Component;
         return <Component key={i} {...section} />;
       })}
+
+      {/* <FeaturePage></FeaturePage> */}
 
     {/* <LogoSection
       items={pathContext.logo_section ? pathContext.logo_section.items : []}

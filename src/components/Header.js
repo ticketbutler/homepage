@@ -101,17 +101,6 @@ const Header = ({ heading, text, button_text, button_link }) => {
           margin-top: 100px; 
         }
 
-        header div.header_content h1 {
-          width: 1025px;
-          font-size: 75px;
-          line-hight: 70px;
-          margin-bottom: 37px ;
-        }
-        header div.header_content p {
-          width: 604px;
-          line-height: 35px;
-          font-size: 25px;
-        }
 
         
     @media (max-width: 1300px) {
@@ -204,7 +193,7 @@ const Header = ({ heading, text, button_text, button_link }) => {
       }
     
       
-    }
+    
       `}</style>
     </header>
   );
