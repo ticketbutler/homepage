@@ -30,7 +30,15 @@ const query = `query IndexQuery {
               logo
               about
             }
-          } 
+          }
+        feature_page {
+          heading
+          paragraph
+          items{
+            image
+            text
+          }
+        } 
         }
       }
     }
@@ -115,6 +123,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               sections: node.frontmatter.sections,
               logo_section: node.frontmatter.logo_section,
               testimonials: node.frontmatter.testimonials,
+              feature_page: node.frontmatter.feature_page,
               layout: {
                 TopMenu: TopMenu.edges[0].node.frontmatter.items,
                 FooterMenu: FooterMenu.edges[0].node.frontmatter.items,

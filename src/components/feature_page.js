@@ -47,7 +47,7 @@ const settings  = {
     }
   ]
 };
-const FutureImageIeft = () => (
+const FutureImageIeft = ({heading, items, paragraph}) => (
  
   
   <section className="container Feature_page" id="feature_section" style={{
@@ -80,7 +80,7 @@ const FutureImageIeft = () => (
             transition: "all 0.3s", 
             marginBottom: "0",
 
-          }}>Some Nice words about Features </h1>
+          }}>{heading}</h1>
         <p style={{
             margin: "auto",
             marginBottom: "37px",
@@ -90,12 +90,20 @@ const FutureImageIeft = () => (
             fontFamily: "Montserrat",
             textAlign: "center",
             transition: "all 0.3s"
-          }}>Get the most out of you event with new ways of ticketing</p>
+          }}>{paragraph}</p>
     </div>
 
   </div>
 
 <Slider {...settings}>
+{items.map(item => (
+  <div key={item} className="slider_item">
+      <a href="#feature_section" className="feature_item">
+            <img src={item.image}/> 
+            <span>{item.text}</span>
+        </a>
+  </div>
+))}
       <div className="slider_item">
               <a href="#feature_section" className="feature_item">
                     <img src="../img/feature_sub_logo.png"/> 
@@ -202,7 +210,7 @@ const FutureImageIeft = () => (
   .slick-slide{
     width: 250px;
     float: left;
-    padding: 10px;
+    padding: 0 25px;
     
   }
   .feature_slider  {
@@ -219,6 +227,7 @@ const FutureImageIeft = () => (
     bottom: 0;
     right: 50%;
     display: block;
+    margin-bottom: 0;
     transform: translateX(50%) !important;
   }
   ul.slick-dots li{
@@ -227,7 +236,7 @@ const FutureImageIeft = () => (
       float:left ;
       height: 20px;
       width: 20px;
-      margin: 0 5px;
+      margin:5px;
     }
     ul.slick-dots li.slick-active button{
       background: rgba(50, 109, 233, .9);

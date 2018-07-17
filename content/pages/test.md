@@ -114,6 +114,12 @@ testimonials:
       image: /img/face.jpg
       logo:  /img/text_logo.png
       about: Marius Cortsen, TexhSprint organizer
-    
+
+feature_page:
+  heading: Some Nice words about Features 
+  paragraph: Get the most out of you event with new ways of ticketing
+  items:
+    - image: /img/feature_sub_logo.png
+      text: hey feature page
 ---
 

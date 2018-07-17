@@ -100,6 +100,16 @@ const Header = ({ heading, text, button_text, button_link }) => {
           padding: 100px 110px;
           margin-top: 100px; 
         }
+        header div.header_content h1 {
+          font-size: 75px;
+          line-height: 75px;
+        }
+        header div.header_content p {
+          font-size: 25px;
+          line-height: 35px;
+          width: 772px;
+          
+        }
 
 
         
@@ -110,6 +120,7 @@ const Header = ({ heading, text, button_text, button_link }) => {
         }
         header div.header_content p {
           width: 100%;
+
         }
       }
   
@@ -167,7 +178,8 @@ const Header = ({ heading, text, button_text, button_link }) => {
       }
       header div.header_content p{
         font-size: 16px !important;
-        margin-bottom: 20px ;
+          line-height: 28px;
+          margin-bottom: 20px ;
       }
    
   
