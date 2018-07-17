@@ -18,7 +18,10 @@ const FutureImageIeft = ({
     <div className="section_image_left">
       <leftImage id="left-box">
         <figure>
-          <img className="device" alt={image_alt} src={image} />
+          <img className="device" 
+          // alt={image_alt} src={image} 
+          src=""
+          />
         </figure>
       </leftImage>
     </div>
