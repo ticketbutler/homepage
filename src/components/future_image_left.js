@@ -35,15 +35,19 @@ const LeftBox = styled.div`
     > figure {
         width: 100%;
         z-index: -4;
-        > img.device {	
+        img.device {	
             width: 773px;
-            // transform: translateX(-4%);
+            height: 100%;
+            transform: translateX(-4%);
             margin:0;
             z-index: -4;
             position: relative;
+            display: block ;
+            
+
         }
 
-        > img.content {
+        img.device {
             position: absolute;
             left: .5%;
             right: .5%;
@@ -571,13 +575,6 @@ const CircleShape = styled.div`
   }
 `;
 
-// $(document).ready(()=> {
-//     $("img").css({
-//       "transform": "scale(1)",
-//       "opacity": "1",
-//     })
-//   })
-
 const FutureImageIeft = ({
   heading,
   text,
@@ -587,10 +584,9 @@ const FutureImageIeft = ({
   button_link
 }) => (
   <Section className="container">
-    <LeftBox id="left-box">
+    <LeftBox id="left-box" >
       <figure>
-        <img className="device" alt={image_alt} src={image} />
-        {/* <img className="content" src={require('../img/img-7.jpg')}/>   */}
+        <img className="device" alt={image_alt} src={image}/>
       </figure>
     </LeftBox>
     <RightBox>
