@@ -101,6 +101,8 @@ const Header = ({ heading, text, button_text, button_link }) => {
           margin-top: 100px; 
         }
         header div.header_content h1 {
+          width: 900px;
+
           font-size: 75px;
           line-height: 75px;
         }
