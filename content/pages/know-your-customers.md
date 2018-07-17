@@ -16,6 +16,7 @@ sections:
     button_text: 'Om Google Analytics '
     heading: Forstå dine gæster med Google Analytics
     image: /img/google-analytics-i-billetsystem.png
+    image_alt: Online-billetsalg-google-analytics
     text: >-
       Google Analytics er integreret i Ticketbutler og giver dig adgang til
       værdifuld information om dine gæster: Hvilken side kom gæsterne fra før de
@@ -25,14 +26,18 @@ sections:
     type: future_image_left
   - heading: Lær dine gæster at kende
     image: /img/fbpixelticketbutler.png
+    image_alt: 'track-billetsalg-google-analytics '
     text: >-
       Vil du stille dine gæster spørgsmål inden dit event? Definer specifikke
       spørgsmål i købsprocessen, som dine gæster skal svare på. Ud fra svarene
       kan du lære dine gæster bedre at kende, så du kan give dem en bedre
       oplevelse til eventet.
     type: future_image_right_new
-  - heading: Lær fra din salgshistorik
+  - button_link: '#contact'
+    button_text: Kontakt os!
+    heading: Lær fra din salgshistorik
     image: /img/online-billetsalg-overblik.png
+    image_alt: Online-billetsalg-overblik
     text: >-
       Ved at sammenligne din salgshistorik med dine kampagner kan du se, hvilke
       tiltag der har virket og hvilke der ikke har. Samtidig vil du kunne spore

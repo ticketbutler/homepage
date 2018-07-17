@@ -14,7 +14,7 @@ sections:
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: Øg din brand awareness
-    image: /img/brugerrejse-i-et-online-billetsystem.png
+    image: /img/brugerrejse-i-et-online-billetsystem2.png
     image_alt: brand-awareness
     text: >-
       Hele billet-oplevelsen er designet til at matche dit univers, så du øger
@@ -38,7 +38,7 @@ sections:
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: 'Øg dit online billetsalg og andre services '
-    image: /img/promote-event-simple.png
+    image: /img/simpel-integration-billetsystem.png
     image_alt: Sælg-billetter
     text: >-
       Du kender din målgruppe bedst og er den bedste til at sælge dit produkt og
@@ -48,8 +48,8 @@ sections:
       copy/paste. Vil du hellere have siderne adskilt tilbyder vi også separate
       eventsider. Integration med billet API? Kontakt os!
     type: tall_centered_future
-  - button_link: '#contact'
-    button_text: Kontakt os!
+  - button_link: 'https://www.facebook.com/business/learn/facebook-ads-pixel'
+    button_text: Om Facebook Pixel
     heading: Optimér dit salg på Facebook
     image: /img/facebook-pixel-billetsystem.png
     text: >-

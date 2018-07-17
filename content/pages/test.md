@@ -20,8 +20,8 @@ sections:
       får gratis adgang til værdifuld data og dine gæster får en let og hurtig
       købsoplevelse.
     type: future_image_right_new
-  - button_link: '#contact'
-    button_text: Kontakt os!
+  - button_link: /da/saelg-flere-billetter-online
+    button_text: Om øget salg
     heading: 'Sælg billetter direkte fra din hjemmeside '
     image: /img/iframe-screens-new.png
     image_alt: Saelg-billetter-online
@@ -50,8 +50,8 @@ sections:
       Vi spørger altid dine gæster om de vil skrive sig op til dit nyhedsbrev,
       så du hurtigt kan bygge en fanbase op. Du fortjener det!
     type: future_image_right_second
-  - button_link: '#contact'
-    button_text: Kontakt os!
+  - button_link: /da/dit-billetsystem
+    button_text: Om oplevelsen
     heading: Nemt for dine gæster
     image: /img/simpel-billetservice.png
     image_alt: simpel-billetservice
@@ -60,8 +60,8 @@ sections:
       billetkøb fra smartphone, ingen brugeroprettelse og betaling med
       betalingskort eller MobilePay giver friktionsfri købsoplevelse.
     type: future_layers
-  - button_link: '#contact'
-    button_text: Kontakt os!
+  - button_link: /da/kend-dine-gæster
+    button_text: Om data
     heading: Lær din gæster at kende
     image: /img/online-billetsystem2.png
     image_alt: billetservice+online-data
