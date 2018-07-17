@@ -97,6 +97,15 @@ collections:
       - { name: path, label: Path }
       - { name: title, label: Title }
       - { name: meta_description, label: Meta Description, required: false }
+
+      # - label: "all_section"
+      #   name : "all_section"
+      #   widget: "relation"
+      #   collection: "every_section"
+      #   searchFields: ["sections", "logo_section"]
+      #   valueField: "name"
+      #   displayFields: ["twitterHandle", "followerCount"]
+        
       - name: sections
         label: Sections
         widget: list

@@ -22,9 +22,18 @@ sections:
     type: future_image_right_new
   - button_link: '#contact'
     button_text: Kontakt os!
-    heading: 'Sælg billetter direkte fra din hjemmeside '
-    image: /img/iframe-screens-new.png
+    heading: Sælg billetter direkte fra din hjemmeside
+    image: /img/billetsystem-integration.png
     image_alt: Saelg-billetter-online
+    logo_section:
+      - heading: 'Vi kan blandt andre integrere med:'
+        items:
+          - alt: online billetsystem integration med squarespace
+            image: /img/squarespace-logo.png
+          - alt: online billetsystem integration med wix
+            image: /img/wix.com_logo.png
+          - alt: online billetsystem integration med wordpress plugin
+            image: /img/wordpress-logotype-standard.png
     text: >-
       Alle besøgende på din hjemmeside er din mulighed for at sælge billetter
       eller hvad du ellers tilbyder. Gå ikke glip af besøgende ved at integrere
@@ -60,10 +69,10 @@ sections:
       billetkøb fra smartphone, ingen brugeroprettelse og betaling med
       betalingskort eller MobilePay giver friktionsfri købsoplevelse.
     type: future_layers
-  - button_link: '#contact'
-    button_text: Kontakt os!
+  - button_link: ''
+    button_text: ''
     heading: Lær din gæster at kende
-    image: /img/online-billetsystem2.png
+    image: /img/data-analytics2.png
     image_alt: billetservice+online-data
     text: >-
       Jo bedre du kender dine kunder, desto bedre en oplevelse kan du give dem,
@@ -71,8 +80,8 @@ sections:
       optimér Facebook annoncer med Facebook Pixel, analysér dine kunder gennem
       Google Analytics og se sammenhængen mellem antallet af billetter solgt og
       din marketingstrategi. 
-    type: future_image_left
-  - button_link: /da/billigt-billetsystem
+    type: future_image_right_second
+  - button_link: /pris
     button_text: Se priser
     heading: Priser for alle
     image: /img/gratis-billetservice.png
@@ -81,7 +90,7 @@ sections:
       Om du repræsenterer et stort firma, et startup eller en énmandshær, står
       vi klar til at imødekomme dine behov, uanset om du bruger vores gratis
       løsning eller en skræddersyet løsning.
-    type: future_image_right
+    type: future_image_left
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: Kom nemt i gang
@@ -105,12 +114,14 @@ logo_section:
 
 testimonials:
   items:
-    - text: Vi benyttede Ticketbutler til vores nye innovationsevent. De var utroligt venlige og responderede hurtigt                    fleksibeltpå vores henvendelsr
+    - text: >-
+        Vi benyttede Ticketbutler til vores nye innovationsevent. De var utroligt venlige og responderede hurtigt            fleksibeltpå vores henvendelsr
       image: /img/face.jpg
       logo: /img/text_logo.png
       about: Marius Cortsen, TexhSprint organizer
 
-    - text: Vi benyttede Ticketbutler til vores nye innovationsevent. De var utroligt venlige og responderede hurtigt                    fleksibeltpå vores henvendelsr
+    - text: >-
+        Vi benyttede Ticketbutler til vores nye innovationsevent. De var utroligt venlige og responderede hurtigt            fleksibeltpå vores henvendelsr
       image: /img/face.jpg
       logo:  /img/text_logo.png
       about: Marius Cortsen, TexhSprint organizer
@@ -121,5 +132,5 @@ feature_page:
   items:
     - image: /img/feature_sub_logo.png
       text: hey feature page
----
 
+---

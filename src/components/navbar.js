@@ -489,7 +489,7 @@ render() {
     </div>
   );
 }
-};
+}
 
 export default NavbarSection;
 
