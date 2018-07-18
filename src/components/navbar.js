@@ -8,7 +8,7 @@ class NavbarSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {isToggleOn: true};
-    this.handleClick = this.handleClick.bind(this);
+    this.NavbarhandleClick = this.NavbarhandleClick.bind(this);
   }
 
   NavbarhandleClick() {
