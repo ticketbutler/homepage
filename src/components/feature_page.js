@@ -128,7 +128,7 @@ const FutureImageIeft = ({heading, items, paragraph}) => (
                     <span>3</span>
                 </a>
           </div>
-          <div className="slider_item">
+          {/* <div className="slider_item">
               <a href="#feature_section" className="feature_item">
                     <img src="../img/feature_sub_logo.png"/> 
                     <span>4</span>
@@ -150,7 +150,7 @@ const FutureImageIeft = ({heading, items, paragraph}) => (
                     <img src="../img/feature_sub_logo.png"/> 
                     <span>7</span>
                 </a>
-          </div>
+          </div> */}
 
           <div className="clear_fix"></div>
      
