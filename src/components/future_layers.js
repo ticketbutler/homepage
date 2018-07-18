@@ -1,449 +1,8 @@
 import React from "react";
-// import Link from "gatsby-link";
-import styled from "styled-components";
-// import $ from "jquery";
 
-const Section = styled.section`
-  width: 100%;
-  // height: 970px;
-  position: relative;
-  padding: 110px 0;
-  padding-left: 0;
-  z-index: 1;
-  margin-top: 330px;
+import { Button, SectionText } from "./elements/elements";
 
-  background: linear-gradient(311.59deg, #28d8a7 0%, #1dc9ca 100%);
-
-  // margin-top: 200px;
-  @media (max-width: 1080px) {
-    padding: 110px 0;
-    margin-top: 250px;
-  }
-  @media (max-width: 768px) {
-    padding: 80px 0;
-  }
-
-  @media (max-width: 600px) {
-    margin-top: 200px;
-
-    padding: 60px 0;
-  }
-
-  @media (max-width: 376px) {
-    margin-top: 150px;
-
-    padding: 30px 0;
-  }
-`;
-
-const SectionImage = styled.div`
-  width: 100%;
-  > img {
-    width: 60%;
-    left: 0%;
-    position: absolute;
-    z-index: 2;
-    top: -200px;
-    transition: 0.3s;
-    box-shadow: 5px 5px 10px -4px rgba(0, 0, 0, 0.15);
-  }
-  @media (max-width: 1440px) {
-    > img {
-      left: 0;
-    }
-  }
-
-  @media (max-width: 1080px) {
-    width: 100%;
-
-    > img {
-      position: absolute;
-      top: -220px;
-      margin: 0;
-      float: left;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 70%;
-    }
-  }
-
-  @media (max-width: 750px) {
-    > img {
-      top: -180px;
-    }
-  }
-
-  @media (max-width: 600px) {
-    > img {
-      position: absolute;
-      top: -140px;
-    }
-  }
-  @media (max-width: 500px) {
-    > img {
-      position: absolute;
-      top: -100px;
-    }
-  }
-
-  @media (max-width: 470px) {
-    > img {
-      position: absolute;
-      top: -110px;
-    }
-  }
-
-  @media (max-width: 320px) {
-    > img {
-      position: absolute;
-      top: -70px;
-    }
-  }
-`;
-
-const SectionContent = styled.div`
-    height: auto;	
-    width: 55%;	
-    background-color: #FFFFFF;
-    box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.35);
-    margin-right: 8%
-    position: relative;
-    z-index: 3;
-    float: right;
-    padding: 95px 86px;
-    // transform: translateX(900px);
-    // opacity: 0;
-    transition: all .3s ease-out;
-    > h1 {
-        
-        width: 100%;	
-        color: #333F52;	
-        font-family: Hind;	
-        font-size: 60px;	
-        font-weight: bold;	
-        line-height: 70px;
-    }
-
-    > h3 {
-    
-        width: 100%;	
-        color: #6C7582;	
-        font-family: Montserrat;	
-        font-size: 27px;	
-        letter-spacing: -0.22px;	
-        line-height: 38px;
-        font-weight: 500;
-        margin-bottom: 50px;
-    }
-
-    > a{
-        height: 60px;
-        width: 230px;
-        display: block;
-        float:left;
-        border-radius: 29px;
-        // margin-right: 50%;
-        // transform: translateX(50%);	
-
-        margin: 0 auto;
-        background: linear-gradient(90deg, #28D8A7 0%, #1DC9CA 100%);
-        text-decoration:none;
-        text-align: center;
-        line-height: 55px;
-        position: relative;
-        transition: all .3s;
-        &:hover {
-            // transform: scale(1.05);
-            box-shadow: 0px 3px 20px -6px rgba(0,0,0,0.30);
-           > span {
-            &::after {
-              opacity: 1;
-              margin-left: 10px;
-            }
-            }
-          }
-    
-          
-          > span {
-            color: #FFFFFF;	
-            font-family: Montserrat;	
-            font-size: 18px;
-            font-weight: bold;	
-            text-align: center;
-          transition: all .3s;
-            
-            &::after {
-              content: '\00BB';
-              opacity: 1;
-              font-size: 24px;
-              opacity: 0;
-              margin-left: -8px;
-              z-index: 10;
-              color: #FFF;
-              transition: 0.3s;
-            }
-          }
-    }
-   
-    // @media (min-width: 1440px) {
-    //     padding: 80px;
-    //     margin-right: 10%
-    //     width: 40%;	
-    //     height: auto;
-        
-    //     > h1 {
-            
-    //         font-size: 55px;
-    //         line-height: 60px;
-      
-    //     }
-
-    //     > h3 {
-    //         font-size: 25px;	
-    //         line-height: 33px;
-    //     }
-    // }
-
-    @media (max-width: 1120px) {
-            height: auto;
-        
-        > h1 {
-            font-size: 50px;
-            line-height: 50px;
-            
-        }
-
-        > h3 {
-            font-size: 22px;	
-            line-height: 30px;
-        }
-    }
-
-    @media (max-width: 1080px) {
-        padding: 90px;
-        height: auto;
-        width: 80%;
-        margin: 0;        
-        float: left;        
-        margin-left: 50%;
-        transform: translateX(-50%);
-       
-        > h1 {
-            width: 100%;
-            font-size: 55px;
-            line-height: 50px;
-            text-align: center;
-            margin-top: 0px;
-
-            
-        }
-
-        > h3 {
-            width: 100%;
-            font-size: 22px;	
-            line-height: 34px;
-            text-align: center;
-            
-        }
-
-        > a {
-            margin-left: 50%;
-            transform: translateX(-50%) !important;
-            display: block;
-           
-            > span {
-            font-size: 16px;
-            }
-                
-        }
-
-    }
-
-    @media (max-width: 768px) { 
-        padding: 80px;
-
-        > h1 {
-            font-size: 45px;  
-        }
-
-        > h3 {
-            font-size: 20px;
-            line-height: 32px;	 
-        }
-        > a{
-
-            > span {
-              font-size: 15px;
-            }
-          }
-    }
-
-    @media (max-width: 690px) { 
-
-        padding: 70px;
-    }
-
-    @media (max-width: 600px) { 
-
-        padding:60px 50px;
-
-        > h1 {
-            font-size: 34px;
-            line-height: 38px;	 
-              
-        }
-
-        > h3 {
-            font-size: 17px;
-            line-height: 33px;	 
-            	 
-        }
-
-        > a{
-            width: 180px;
-            height: 50px;
-            line-height: 47px;
-              
-              > span {
-                font-size: 14px;
-                &::after{
-                  font-size: 20px;
-                  line-height: 48px;
-                }
-              }
-            }
-    }
-
-    @media (max-width: 460px) { 
-
-        padding:50px 40px;
-        
-    }
-
-    @media (max-width: 376px) { 
-
-        padding:50px 20px;
-        margin-top: 0px;
-        
-
-
-        > h1 {
-            font-size: 25px; 
-            line-height: 32px;	 
-             
-        }
-
-        > h3 {
-            font-size: 14px;
-            line-height: 20px;	 
-        }  
-        
-        > a{
-          width: 170px;
-          height: 45px;
-          line-height: 42px;
-            > span {
-              font-size: 12px;
-              &::after{
-                font-size: 16px;
-                line-height: 42px;
-              }
-            }
-          } 
-
-    }   
-`;
-
-const DivShape = styled.div`
-  position: absolute;
-
-  top: 30px;
-  right: 60px;
-  z-index: 10;
-
-  > div.shape {
-    width: 50px;
-    height: 50px;
-    margin: 1px;
-    position: relative;
-    z-index: 10;
-
-    > span {
-      color: transparent;
-      font-size: 55px;
-    }
-
-    > span#first {
-      -webkit-text-stroke: 5px #7e52e8;
-      position: absolute;
-      z-index: 10;
-      left: 0;
-      top: 0;
-    }
-    > span#second {
-      -webkit-text-stroke: 5px #dd52e8;
-      position: absolute;
-      left: 0;
-      top: 35%;
-    }
-  }
-  @media (max-width: 1080px) {
-    top: 2%;
-    right: 1%;
-    > span {
-      opacity: 0.9;
-    }
-  }
-
-  @media (max-width: 768px) {
-    top: 5%;
-    right: 5%;
-    > div.shape {
-      width: 50px;
-      height: 50px;
-      > span {
-        opacity: 0.7;
-
-        font-size: 60px;
-      }
-    }
-  }
-
-  @media (max-width: 600px) {
-    top: 2%;
-    right: 1%;
-    > div.shape {
-      width: 63px;
-      height: 63px;
-      > span {
-        opacity: 0.5;
-
-        font-size: 50px;
-      }
-    }
-  }
-
-  @media (max-width: 370px) {
-    top: 2%;
-    right: 1%;
-    > div.shape {
-      width: 50px;
-      height: 50px;
-      > span {
-        opacity: 0.4;
-
-        font-size: 40px;
-      }
-    }
-  }
-`;
-
-// $(document).ready(()=> {
-//     $("#section-content").css({
-//       "transform": "translateX(0)",
-//       "opacity": "1",
-//     })
-//   })
+import { SmallTriangle } from "./elements/shapes";
 
 const FutureLayers = ({
   heading,
@@ -453,25 +12,61 @@ const FutureLayers = ({
   image_alt,
   button_link
 }) => (
-  <Section>
-    <SectionImage className="image">
-      <img alt={image_alt} className="content_image" src={image} />
-    </SectionImage>
+  <section className="future_layer">
+    <img alt={image_alt} className="content_image" src={image} />
 
-    <SectionContent id="section-content">
-      <h1>{heading}</h1>
-      <h3>{text}</h3>
-      <a href={button_link}>
-        <span>{button_text}</span>
-      </a>
+    <div className="section_content">
+      <SectionText>
+        <h2
+          style={{
+            textAlign: "left",
+            float: "left",
+            display: "block"
+          }}
+        >
+          {heading}
+        </h2>
+        <p
+          style={{
+            textAlign: "left",
+            float: "left",
+            display: "block"
+          }}
+        >
+          {text}
+        </p>
 
-      <DivShape>
+        <Button className="right">
+          <a
+            href={button_link}
+            style={{
+              right: "100%",
+              transform: "translateX(100%)"
+            }}
+          >
+            {button_text}
+
+            <span
+              style={{
+                width: "100%",
+                transition: "all 0.3s"
+              }}
+            >
+              &#187;
+            </span>
+          </a>
+        </Button>
+      </SectionText>
+    </div>
+
+    <div className="shape_pos_small_triangle">
+      <SmallTriangle>
         <div className="shape">
           <span id="first">&#x25BC;</span>
           <span id="second">&#x25BC;</span>
         </div>
-      </DivShape>
-    </SectionContent>
+      </SmallTriangle>
+    </div>
 
     <div className="clear-fix" />
 
@@ -489,8 +84,186 @@ const FutureLayers = ({
       div.clear-fix {
         clear: both;
       }
+    
+      /** Shape*/
+      div.shape_pos_small_triangle{
+        position: absolute;
+        top: 19%;
+        left: 90%;
+        z-index: 100;
+
+    }
+
+    @media (max-width: 1080px) {
+      div.shape_pos_small_triangle{
+        top: 19%;
+        left: 80%;
+
+    }
+  }
+    @media (max-width: 600px) {
+      div.shape_pos_small_triangle{
+        top: 10%;
+        left: 70%;
+
+    }
+  }
+    @media (max-width: 600px) {
+      div.shape_pos_small_triangle{
+        top: 6%;
+        left: 70%;
+
+    }
+    }
+
+
+
+    /**  Section Contetn */
+
+      section.future_layer {
+        width: 100%;
+        // height: 970px;
+        position: relative;
+        padding: 110px 0;
+        padding-left: 0;
+        z-index: 1;
+        margin-top: 330px;
+      
+        background: linear-gradient(311.59deg, #28d8a7 0%, #1dc9ca 100%);
+      }
+      
+        // margin-top: 200px;
+        @media (max-width: 1080px) {
+          section.future_layer {
+          padding: 110px 0;
+          margin-top: 250px;
+        }
+      }
+        @media (max-width: 768px) {
+          section.future_layer {
+          padding: 80px 0;
+        }
+      }
+      
+        @media (max-width: 600px) {
+          section.future_layer {
+          margin-top: 200px;
+      
+          padding: 60px 0;
+        }
+      }
+        @media (max-width: 376px) {
+          section.future_layer {   margin-top: 150px;
+      
+          padding: 30px 0;
+        }}
+
+
+
+      div.section_content{
+        height: auto;	
+        width: 55%;	
+        background-color: #FFFFFF;
+        box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.35);
+        margin-right: 8%
+        position: relative;
+        z-index: 1001;
+        float: right;
+        padding: 95px 86px;
+        // transform: translateX(900px);
+        // opacity: 0;
+        transition: all .3s ease-out;
+      }
+
+      @media (max-width: 1080px) {
+        
+      div.section_content{
+        
+        width: 80%;	
+        margin-right: 10%;
+        padding: 80px 0;
+      }
+      div.section_content h2 {
+        margin-top: 0;
+      }
+      
+      }
+
+/************** Sections Image**********************' */
+      
+div.image div.clear_fix{
+  clear: both;
+}
+
+img.content_image {
+  width: 60%;
+  position: absolute;
+  left: 0%;
+  z-index: -1;
+  margin-top: -300px;
+  transition: 0.3s;
+  box-shadow: 5px 5px 10px -4px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 1440px) {
+ img.content_image {
+  width: 70%;
+    
+  }
+}
+
+@media (max-width: 1250px) {
+  img.content_image {
+    width: 70%;
+      
+    }
+ }
+
+@media (max-width: 1080px) {
+ img.content_image {
+    position: absolute;
+    top: -220px;
+    margin: 0;
+    float: left;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+  }
+}
+
+@media (max-width: 750px) {
+   img.content_image {
+    top: -180px;
+  }
+}
+
+@media (max-width: 600px) {
+   img.content_image {
+    position: absolute;
+    top: -140px;
+  }
+}
+@media (max-width: 500px) {
+   img.content_image {
+    position: absolute;
+    top: -100px;
+  }
+}
+
+@media (max-width: 470px) {
+   img.content_image {
+    position: absolute;
+    top: -110px;
+  }
+}
+
+@media (max-width: 320px) {
+ img.content_image {
+    position: absolute;
+    top: -70px;
+  }
+}
     `}</style>
-  </Section>
+  </section>
 );
 
 export default FutureLayers;
