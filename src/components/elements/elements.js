@@ -528,6 +528,11 @@ export const leftImage = ({ children }) => {
     <div className="section_left_image">
       {children}
       <style jsx>{`
+
+.section_left_image{
+  width: 50%;
+  height: 400px;
+}
     
     .section_left_image figure {
       width: 100%;
