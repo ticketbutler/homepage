@@ -1,5 +1,24 @@
 import React from "react";
+import $ from "jquery";
+    
 
+
+{
+  $(document).ready(()=> {
+    $("a[href^='#contact']").on("click", function(event) {
+      var target = $(this.getAttribute("href"));
+      console.log(target);
+      console.log(target.length);
+    
+      if( target.length ) {
+          event.preventDefault();
+          $("html, body").stop().animate({
+              scrollTop: target.offset().top
+          }, 1000);
+      }
+    })
+  })
+  }
 
 class NavbarSection extends React.Component {
   constructor(props) {
@@ -16,13 +35,13 @@ class NavbarSection extends React.Component {
     document.getElementById("ulNav").classList.toggle("active");
   }
 
-  componentDidMount() {
-    window.addEventListener('scroll', console.log(window.location));
-  }
+  // componentDidMount() {
+  //   window.addEventListener('scroll', console.log(window.location));
+  // }
 
 
   
-    
+
 
   
 render() {

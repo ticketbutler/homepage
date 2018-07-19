@@ -2,7 +2,7 @@ import React from "react";
 
 import { Button } from "./elements/elements";
 
-const Header = ({ heading, text, button_text, button_link }) => {
+const Header = ({ heading, text, button_text, button_link, image }) => {
   return (
     <header
       style={{
@@ -11,8 +11,7 @@ const Header = ({ heading, text, button_text, button_link }) => {
         width: "100%",
         color: "#fff",
         position: "relative",
-        background:
-          "linear-gradient( to right, rgba(50, 109, 233, .9),rgba(126, 82, 232, .9)),url('../img/splash-new.png'),no-repeat center center",
+        background:`linear-gradient( to right, rgba(50, 109, 233, .9),rgba(126, 82, 232, .9)),url('${image}'),no-repeat center center`,
         clipPath: "polygon(0 0, 100% 0, 100% 95%, 0% 100%)",
         backgroundSize: "cover"
       }}

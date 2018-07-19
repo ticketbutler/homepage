@@ -140,6 +140,7 @@ const Newsletter_Page = () => {
             height: 100%;
             border: 1px solid #979797;
             border-radius: 49px;
+            font-family: Montserrat;
             display: inline;
             padding-left: 20px;
       }
