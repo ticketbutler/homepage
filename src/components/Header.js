@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Button, SectionText } from "./elements/elements";
+import { Button } from "./elements/elements";
 
 const Header = ({ heading, text, button_text, button_link }) => {
   return (

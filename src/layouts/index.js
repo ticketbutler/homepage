@@ -29,6 +29,7 @@ export const Layout = ({
     />
 
     <Helmet>
+    <link rel="shortcut icon" type="image/png" href="../img/Favicon-tbsmall.png"/>
       <title>Ticketbutler</title>
       <script src="https://www.googletagmanager.com/gtag/js?id=UA-70000511-3" />
       <script src="https://wchat.freshchat.com/js/widget.js" />

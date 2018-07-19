@@ -1,32 +1,41 @@
 import React from "react";
 
 
-
-
-
 class NavbarSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {isToggleOn: true};
     this.NavbarhandleClick = this.NavbarhandleClick.bind(this);
+
+    let win = window.scrollY;
+    console.log(win)
   }
 
   NavbarhandleClick() {
     this.refs.bars.classList.toggle("clicked");
     document.getElementById("ulNav").classList.toggle("active");
   }
+
+  componentDidMount() {
+    window.addEventListener('scroll', console.log(window.location));
+  }
+
+
+  
+    
+
   
 render() {
   return (
-    <div className="navbar">
+    <div className="navbar" id="navbar">
       <div className="navbar_logo">
         <a href="/">
           <img src={"../img/logo_white.png"}/>
         </a>
       </div>
-
+      
      
- <div className="nav" >
+      <div className="nav" >
         <a ref="bars" className="!clicked" id="bars" 
           onClick={this.NavbarhandleClick}
         >
@@ -35,10 +44,10 @@ render() {
           <span className="bar3" />    
         </a>
         <ul id="ulNav">
-        {/* {console.log(this.props.items)} */}
-          {this.props.items.map(item => (
+          {this.props.items.map((item, i) => (
             
-            <li>
+              
+              <li key={i}>
               <a
               href={item.path}
               >
