@@ -7,8 +7,8 @@ class NavbarSection extends React.Component {
     this.state = {isToggleOn: true};
     this.NavbarhandleClick = this.NavbarhandleClick.bind(this);
 
-    let win = window.scrollY;
-    console.log(win)
+    // let win = window.scrollY;
+    // console.log(win)
   }
 
   NavbarhandleClick() {
