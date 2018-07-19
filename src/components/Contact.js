@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import "font-awesome/css/font-awesome.min.css";
 
 const Contact_page = ({ items }) => (
@@ -13,7 +12,7 @@ const Contact_page = ({ items }) => (
           className="contact-form"
           name="contact-form"
           method="post"
-          data-netlify="true"
+          data-netlify="true" 
         >
           <ul>
             <li>
@@ -65,7 +64,7 @@ const Contact_page = ({ items }) => (
             </li>
             <li>
               <i className="fa fa-envelope" />
-              <span>Generel support</span>
+              <span>Generelle henvendelser</span>
               <span id="support">{items.support}</span>
             </li>
           </ul>

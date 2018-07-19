@@ -1,7 +1,63 @@
 import React from "react";
+import $ from "jquery";
+
+
+// {
+//   $("body").ready(()=> {
+//     $("a[href^='#navbar']").on("click", function(event) {
+//       var target = $(this.getAttribute("href"));
+//       console.log(target);
+//       console.log(target.length);
+    
+//       if( target.length ) {
+//           event.preventDefault();
+//           $("html, body").stop().animate({
+//               scrollTop: target.offset().top
+//           }, 1000);
+//       }
+//     })
+//   })
+//   }
 
 const FooterSection = ({ features, integration, company, items }) => (
   <footer>
+    <a href="#navbar" id="to_top" style={{
+          position: "absolute",
+          display: "block",
+          left: "50%",
+          transform: "translateX(-50%)",
+          top: "-30px",
+          width: "60px",
+          height: "60px",
+          background: "#f9fafc",
+          borderRadius: "50%",
+          border: "1.5px solid #356be9",
+          textDecoration: "none",
+          textAlign: "center",
+          fontSize: "25px",
+          transition: "all .2s ease"
+          
+      }}>
+      <span style={{
+        marginLeft: "4px",
+       marginTop: "10px",
+        color: "#868e99",
+        display: "inline-block",
+        fontFamily: "sans-serif",
+        transform: "rotate(90deg)",
+      }}>&#171;</span> 
+      <span style={{
+        position: "absolute",
+        top: "25px",
+        right: "-3px",
+        width: "60px",
+        height: "15px",
+        color: "#868e99",
+        fontSize: "10px",
+        display: "inline-block",
+        fontFamily: "sans-serif",
+        
+      }}>top</span></a>
     <div className="top_footer">
       <div id="footer_logo">
         <a href="/">
@@ -58,6 +114,13 @@ const FooterSection = ({ features, integration, company, items }) => (
       width: 100%;
       background-color: #f9fafc;
       padding: 0px 110px;
+      position:relative;
+      }
+
+      a#to_top:hover{
+        top: -40px !important;
+        border: "1.5px solid #356be9",
+
       }
 
       .top_footer{

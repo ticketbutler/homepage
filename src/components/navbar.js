@@ -1,64 +1,72 @@
 import React from "react";
+import $ from "jquery";
+    
 
 
-
-
+// {
+//   $("body").ready(()=> {
+//     $("a[href^='#contact']").on("click", function(event) {
+//       var target = $(this.getAttribute("href"));
+//       console.log(target);
+//       console.log(target.length);
+    
+//       if( target.length ) {
+//           event.preventDefault();
+//           $("html, body").stop().animate({
+//               scrollTop: target.offset().top
+//           }, 1000);
+//       }
+//     })
+//   })
+//   }
 
 class NavbarSection extends React.Component {
   constructor(props) {
-    super(props); 
-    this.state = { 
-      href: "",
-      active: "!active" ,
-    };
+    super(props);
+    this.state = {isToggleOn: true};
+    this.NavbarhandleClick = this.NavbarhandleClick.bind(this);
+
+    // let win = window.scrollY;
+    // console.log(win)
   }
+
+  NavbarhandleClick() {
+    this.refs.bars.classList.toggle("clicked");
+    document.getElementById("ulNav").classList.toggle("active");
+  }
+
+  // componentDidMount() {
+  //   window.addEventListener('scroll', console.log(window.location));
+  // }
+
+
+  
+
+
+  
 render() {
   return (
-    <div className="navbar">
+    <div className="navbar" id="navbar">
       <div className="navbar_logo">
         <a href="/">
           <img src={"../img/logo_white.png"}/>
         </a>
       </div>
-
+      
      
- <div className="nav" >
-        <div id="bars" style={{
-          display: "none",
-        }}
-        onClick={() => {
-
-            if(this.state.active != "active") {
-
-              this.setState({active: "active"});
-
-              document.getElementById("ulNav").classList.add("active");
-  
-
-            }else if(this.state.active != "!active"){
-
-              this.setState({active: "!active"});
-
-              document.getElementById("ulNav").classList.remove("active");
-              document.getElementById("ulNav").classList.add("!active");
-
-
-            }
-          // document.getElementById("navActive_back").classList.remove("NavbarClicked-background");
-          document.getElementById("bars").classList.toggle("clicked");
-        }}        
+      <div className="nav" >
+        <a ref="bars" className="!clicked" id="bars" 
+          onClick={this.NavbarhandleClick}
         >
-          <div className="bar1" />
-          <div className="bar2" />
-          <div className="bar3" />    
-
-        </div>
+          <span className="bar1" />
+          <span className="bar2" />
+          <span className="bar3" />    
+        </a>
         <ul id="ulNav">
-        {/* {console.log(this.props.items)} */}
-          {this.props.items.map(item => (
+          {this.props.items.map((item, i) => (
             
-            <li
-            >
+              
+              <li key={i}>
               <a
               href={item.path}
               >
@@ -68,7 +76,9 @@ render() {
           ))}
         </ul>
       </div>
-      <div id="navbar_login_btn">
+      <div id="navbar_login_btn" style={{
+        // display: "none"
+      }}>
         <a href="#contact">
           <span>Kontakt</span>
         </a>
@@ -344,31 +354,45 @@ render() {
           opacity: 0.85;
         }
 
-        #bars div {
+        #bars span {
+          position: absolute;
+          right: 10px;
           width: 22px;
           height: 2.1px;
           background: #fff;
           margin: 5px 0;
           border-radius: 2px;
           // transition: background .3s;
-
+          display: inline-block;
           transition: all 0.1s;
+          line-height: 0 !important;
+        }
+        #bars span.bar2 {
+          top: 12px;
+        }
+        #bars span.bar1 {
+          top: 5px;
+        }
+
+        #bars span.bar3 {
+          top: 20px;
         }
         
-        #bars.clicked div.bar2 {
+        
+        #bars.clicked span.bar2 {
           display: none;
         }
 
-        #bars.clicked div.bar1 {
+        #bars.clicked span.bar1 {
           transform: rotate(45deg);
           position: absolute;
-          top: 12.5px;
+          top: 12px;
         }
 
-        #bars.clicked div.bar3 {
+        #bars.clicked span.bar3 {
           transform: rotate(-45deg);
           position: absolute;
-          bottom: 15px;
+          top: 13px;
         }
 
         /**
@@ -489,6 +513,7 @@ render() {
     </div>
   );
 }
+
 }
 
 export default NavbarSection;
