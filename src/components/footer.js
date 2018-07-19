@@ -2,22 +2,22 @@ import React from "react";
 import $ from "jquery";
 
 
-{
-  $(document).ready(()=> {
-    $("a[href^='#navbar']").on("click", function(event) {
-      var target = $(this.getAttribute("href"));
-      console.log(target);
-      console.log(target.length);
+// {
+//   $("body").ready(()=> {
+//     $("a[href^='#navbar']").on("click", function(event) {
+//       var target = $(this.getAttribute("href"));
+//       console.log(target);
+//       console.log(target.length);
     
-      if( target.length ) {
-          event.preventDefault();
-          $("html, body").stop().animate({
-              scrollTop: target.offset().top
-          }, 1000);
-      }
-    })
-  })
-  }
+//       if( target.length ) {
+//           event.preventDefault();
+//           $("html, body").stop().animate({
+//               scrollTop: target.offset().top
+//           }, 1000);
+//       }
+//     })
+//   })
+//   }
 
 const FooterSection = ({ features, integration, company, items }) => (
   <footer>
