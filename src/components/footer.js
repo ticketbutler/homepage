@@ -1,23 +1,4 @@
 import React from "react";
-import $ from "jquery";
-
-
-// {
-//   $("body").ready(()=> {
-//     $("a[href^='#navbar']").on("click", function(event) {
-//       var target = $(this.getAttribute("href"));
-//       console.log(target);
-//       console.log(target.length);
-    
-//       if( target.length ) {
-//           event.preventDefault();
-//           $("html, body").stop().animate({
-//               scrollTop: target.offset().top
-//           }, 1000);
-//       }
-//     })
-//   })
-//   }
 
 const FooterSection = ({ features, integration, company, items }) => (
   <footer>
@@ -61,7 +42,7 @@ const FooterSection = ({ features, integration, company, items }) => (
     <div className="top_footer">
       <div id="footer_logo">
         <a href="/">
-          <img src={"../img/logo_blue.png"} />
+          <img src="../img/logo_blue.png"/>
         </a>
 
         <span>
@@ -71,8 +52,8 @@ const FooterSection = ({ features, integration, company, items }) => (
 
       <ul className="Future footer_ul">
         <h3>Features</h3>
-        {features.map(item => (
-          <li>
+        {features.map((item, i) => (
+          <li key={i}>
             <a href={item.path}>{item.label}</a>
           </li>
         ))}
@@ -80,24 +61,24 @@ const FooterSection = ({ features, integration, company, items }) => (
       <ul className="Integration footer_ul">
         <h3>Hjælpecenter</h3>
 
-        {integration.map(item => (
-          <li>
+        {integration.map((item, i) => (
+          <li key={i}>
             <a href={item.path}>{item.label}</a>
           </li>
         ))}
       </ul>
       <ul className="Company footer_ul">
         <h3>Om os</h3>
-        {company.map(item => (
-          <li>
+        {company.map((item, i) => (
+          <li key={i}>
             <a href={item.path}>{item.label}</a>
           </li>
         ))}
       </ul>
       </div>
     <div className="footer_bottom">
-      {items.map(item => (
-        <a href={item.path}>
+      {items.map((item, i) => (
+        <a key={i} href={item.path}>
           <span>{item.label}</span>
         </a>
       ))}

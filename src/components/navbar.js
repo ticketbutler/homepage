@@ -1,61 +1,31 @@
 import React from "react";
-import $ from "jquery";
-    
 
-
-// {
-//   $("body").ready(()=> {
-//     $("a[href^='#contact']").on("click", function(event) {
-//       var target = $(this.getAttribute("href"));
-//       console.log(target);
-//       console.log(target.length);
-    
-//       if( target.length ) {
-//           event.preventDefault();
-//           $("html, body").stop().animate({
-//               scrollTop: target.offset().top
-//           }, 1000);
-//       }
-//     })
-//   })
-//   }
 
 class NavbarSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {isToggleOn: true};
     this.NavbarhandleClick = this.NavbarhandleClick.bind(this);
-
-    // let win = window.scrollY;
-    // console.log(win)
   }
 
   NavbarhandleClick() {
     this.refs.bars.classList.toggle("clicked");
     document.getElementById("ulNav").classList.toggle("active");
+    console.log(this.refs);
   }
-
-  // componentDidMount() {
-  //   window.addEventListener('scroll', console.log(window.location));
-  // }
-
-
-  
-
-
-  
+ 
 render() {
   return (
     <div className="navbar" id="navbar">
       <div className="navbar_logo">
         <a href="/">
-          <img src={"../img/logo_white.png"}/>
+          <img src="../img/logo_white.png"/>
         </a>
       </div>
       
      
       <div className="nav" >
-        <a ref="bars" className="!clicked" id="bars" 
+        <a ref="bars" id="bars" 
           onClick={this.NavbarhandleClick}
         >
           <span className="bar1" />
