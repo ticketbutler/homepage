@@ -8,6 +8,7 @@ sections:
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: Priser for alle
+    image: /img/gratis-billetservice.png
     text: >-
       Om du benytter vores gratis løsning eller ønsker skræddersyning, kan vi
       hjælpe dig.
