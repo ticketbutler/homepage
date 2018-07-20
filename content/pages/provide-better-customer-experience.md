@@ -8,7 +8,7 @@ sections:
   - button_link: '#contact'
     button_text: Kontakt os!
     heading: 'En bedre oplevelse for dig og dine kunder '
-    image: /img/billetsystem-til-koncerter.png
+    image: /img/tilmeldingssystem-til-networking-events.jpg
     text: Gør alle glade ved at gøre det nemt for både dig selv og dine gæster
     type: header
   - button_link: '#contact'
