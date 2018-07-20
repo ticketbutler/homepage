@@ -1,8 +1,6 @@
 import React from "react";
-import styled from "styled-components";
-// import $ from "jquery";
 
-import { Button, SectionText, leftImage } from "./elements/elements";
+import { Button, SectionText, LeftImage } from "./elements/elements";
 
 import { CircleShape, SquareShape } from "./elements/shapes";
 
@@ -16,13 +14,11 @@ const FutureImageIeft = ({
 }) => (
   <section className="container future_image_left">
     <div className="section_image_left">
-      <leftImage id="left-box">
+      <LeftImage id="left-box">
         <figure>
-          <img className="device" 
-            alt={image_alt} src={image} 
-          />
+          <img className="device" alt={image_alt} src={image} />
         </figure>
-      </leftImage>
+      </LeftImage>
     </div>
 
     <div className="FIL_section">
