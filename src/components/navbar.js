@@ -11,6 +11,7 @@ class NavbarSection extends React.Component {
   NavbarhandleClick() {
     this.refs.bars.classList.toggle("clicked");
     document.getElementById("ulNav").classList.toggle("active");
+    console.log(this.refs);
   }
  
 render() {
@@ -24,7 +25,7 @@ render() {
       
      
       <div className="nav" >
-        <a ref="bars" className="!clicked" id="bars" 
+        <a ref="bars" id="bars" 
           onClick={this.NavbarhandleClick}
         >
           <span className="bar1" />
