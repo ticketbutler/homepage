@@ -8,6 +8,7 @@ sections:
   - button_link: '#contact'
     button_text: Læs mere
     heading: Kend dine gæster
+    image: /img/billetsystem-til-koncerter.png
     text: >-
       Ticketbutler hjælper dig med at indsamle data på dine gæster, så du lærer
       din målgruppe bedre at kende.
