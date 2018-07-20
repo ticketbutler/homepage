@@ -29,12 +29,20 @@ export const Layout = ({
     />
 
     <Helmet>
-      <link rel="shortcut icon" type="image/png" href="../img/Favicon.png" sizes="16x16"/>
+      <link
+        rel="shortcut icon"
+        type="image/png"
+        href="../img/Favicon-tbsmall.png"
+        sizes="16x16"
+      />
       <title>Ticketbutler</title>
-      <meta name="description" content="Tiltræk flere kunder og sælg billetter med et full scale online billetsystem, som matcher dit brand. "/>
+      <meta
+        name="description"
+        content="Tiltræk flere kunder og sælg billetter med et full scale online billetsystem, som matcher dit brand. "
+      />
       <script src="https://www.googletagmanager.com/gtag/js?id=UA-70000511-3" />
       <script src="https://wchat.freshchat.com/js/widget.js" />
-      
+
       <script
         dangerouslySetInnerHTML={{
           __html: `
