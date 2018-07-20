@@ -498,18 +498,21 @@ export const LeftImage = ({ children }) => {
       {children}
       <style jsx>{`
 
-.section_left_image{
-  width: 50%;
-  height: 400px;
-}
+    .section_left_image{
+      width: 100%;
+      height: 400px;
+      padding: 0;
+      margin: 0;
+    }
     
     .section_left_image figure {
-      width: 100%;
+      width: 100% !important;
       z-index: -4;
+      padding: 0; 
+      margin: 0;
     }
       .section_left_image figure img.device {	
           width: 773px !important;
-          // transform: translateX(-4%);
           margin:0;
           z-index: -4;
           position: relative;
