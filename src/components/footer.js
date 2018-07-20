@@ -61,7 +61,7 @@ const FooterSection = ({ features, integration, company, items }) => (
     <div className="top_footer">
       <div id="footer_logo">
         <a href="/">
-          <img src={"../img/logo_blue.png"} />
+          <img src="../img/logo_blue.png"/>
         </a>
 
         <span>
