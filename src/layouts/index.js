@@ -32,7 +32,7 @@ export const Layout = ({
       <link
         rel="shortcut icon"
         type="image/png"
-        href="../img/Favicon-tbsmall.png"
+        href="/img/Favicon-tbsmall.png"
         sizes="16x16"
       />
       <title>Ticketbutler</title>

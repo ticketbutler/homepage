@@ -4,15 +4,13 @@ import "font-awesome/css/font-awesome.min.css";
 const Contact_page = ({ items }) => (
   <section id="contact">
     <div className="container">
-      <div
-        className="contact_left_box "
-      >
+      <div className="contact_left_box ">
         <h1>Kontakt</h1>
         <form
           className="contact-form"
           name="contact-form"
           method="post"
-          data-netlify="true" 
+          data-netlify="true"
         >
           <ul>
             <li>
@@ -229,7 +227,7 @@ const Contact_page = ({ items }) => (
             padding: 110px;
             float:right;
             display:inline-block;
-            background: linear-gradient(to right, rgba(50, 109, 233, .85) , rgba(126, 82, 232, .85)), url(../img/kontaktmin.png) no-repeat center center;
+            background: linear-gradient(to right, rgba(50, 109, 233, .85) , rgba(126, 82, 232, .85)), url(/img/kontaktmin.png) no-repeat center center;
             color: #FFF;
             background-size: cover;
         }
@@ -453,5 +451,3 @@ const Contact_page = ({ items }) => (
 );
 
 export default Contact_page;
-
-      

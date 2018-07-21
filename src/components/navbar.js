@@ -17,7 +17,7 @@ class NavbarSection extends React.Component {
       <div className="navbar" id="navbar">
         <div className="navbar_logo">
           <a href="/">
-            <img src="../img/logo_white.png" />
+            <img src="/img/logo_white.png" />
           </a>
         </div>
 
