@@ -5,11 +5,16 @@ class NavbarSection extends React.Component {
     super(props);
     this.state = { isToggleOn: true };
     this.NavbarhandleClick = this.NavbarhandleClick.bind(this);
+    // this.handleLoad = this.handleLoad.bind(this);
   }
 
   NavbarhandleClick() {
     document.getElementById("bars").classList.toggle("clicked");
     document.getElementById("ulNav").classList.toggle("active");
+  }
+
+  componentDidMount() {
+    window.addEventListener("load", this.NavbarhandleClick);
   }
 
   render() {
