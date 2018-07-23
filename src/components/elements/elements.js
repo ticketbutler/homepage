@@ -500,16 +500,20 @@ export const LeftImage = ({ children }) => {
 
     .section_left_image{
       width: 100%;
-      height: 400px;
+      height: 450px;
       padding: 0;
       margin: 0;
+      position:relative;
     }
     
     .section_left_image figure {
-      width: 100% !important;
+      width: 100%;
+      height: 450px;
       z-index: -4;
       padding: 0; 
       margin: 0;
+      position: relative;
+
     }
       .section_left_image figure img.device {	
           width: 773px !important;
@@ -536,26 +540,34 @@ export const LeftImage = ({ children }) => {
         width:100%;
     
         .section_left_image figure  {
-        width: 600px;
+        width: auto;
+        height: 450px !important;
         margin-left: 50%;
         transform: translateX(-50%);
-        margin-right: -10px;
+    }
         
 
         .section_left_image figure img.device {	
-            width: 100%;
-            transform: translateX(0%);
-            margin:0;
+          width: auto !important;
+          height: 100% !important ;
+          margin:0;
+          margin-left: 50%;
+          transform: translateX(-50%);
         }
     }
-    }
 
 
-    @media (max-width: 600px) { 
+    @media (max-width: 430px) { 
       .section_left_image figure {
             width: 100%;
             padding: 20px;
     
+        }
+        .section_left_image figure img.device {	
+          width: 100% !important;
+          height: auto !important ;
+          position: absolute;
+          bottom: 20px;
         }
     }
       `}</style>
