@@ -5,7 +5,6 @@ class NavbarSection extends React.Component {
     super(props);
     this.state = { isToggleOn: true };
     this.NavbarhandleClick = this.NavbarhandleClick.bind(this);
-    // this.handleLoad = this.handleLoad.bind(this);
   }
 
   NavbarhandleClick() {
@@ -13,9 +12,9 @@ class NavbarSection extends React.Component {
     document.getElementById("ulNav").classList.toggle("active");
   }
 
-  componentDidMount() {
-    window.addEventListener("load", this.NavbarhandleClick);
-  }
+  // componentDidMount() {
+  //   window.addEventListener("load", this.NavbarhandleClick);
+  // }
 
   render() {
     return (
@@ -59,6 +58,7 @@ class NavbarSection extends React.Component {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            // overflow: hidden;
           }
 
           div.NavbarClicked-background {
