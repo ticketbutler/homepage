@@ -4,12 +4,18 @@ class NavbarSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isToggleOn: true };
-    this.NavbarhandleClick = this.NavbarhandleClick.bind(this);
+    // this.NavbarhandleClick = this.NavbarhandleClick.bind(this);
+    // this.NavbarhandleClick = this.NavbarhandleClick.bind(this);
   }
 
   NavbarhandleClick() {
     document.getElementById("bars").classList.toggle("clicked");
     document.getElementById("ulNav").classList.toggle("active");
+  }
+
+  langHandleClick() {
+    document.getElementById("lang_hidden").classList.toggle("show");
+    document.getElementById("lang_hidden").classList.toggle("hidden");
   }
 
   render() {
@@ -35,15 +41,20 @@ class NavbarSection extends React.Component {
             ))}
           </ul>
         </div>
-        <div
-          id="navbar_login_btn"
-          style={
-            {
-              // display: "none"
-            }
-          }
-        >
-          <a href="#contact">
+        <div id="navbar_login_btn">
+          <div id="lang">
+            <a onClick={this.langHandleClick} className="selected">
+              <span>Danish &nbsp;</span>
+            </a>
+            <a
+              onClick={this.langHandleClick}
+              id="lang_hidden"
+              className="hidden"
+            >
+              <span>English</span>
+            </a>
+          </div>
+          <a id="login" href="#contact">
             <span>Kontakt</span>
           </a>
         </div>
@@ -91,6 +102,7 @@ class NavbarSection extends React.Component {
             font-weight: 600;
             letter-spacing: 1.15px;
             text-align: center;
+            position: relative;
           }
 
           .nav ul li {
@@ -148,7 +160,7 @@ class NavbarSection extends React.Component {
             position: relative;
             margin-right: 0px;
           }
-          #navbar_login_btn a {
+          #navbar_login_btn a#login {
             text-decoration: none;
             color: #ffffff;
             font-size: 15px;
@@ -167,7 +179,7 @@ class NavbarSection extends React.Component {
             font-family: Montserrat;
             transition: all 0.3s;
           }
-          #navbar_login_btn a:hover {
+          #navbar_login_btn a#login:hover {
             background: linear-gradient(
               to right,
               rgba(40, 216, 167, 1),
@@ -177,12 +189,40 @@ class NavbarSection extends React.Component {
             color: #fff;
           }
 
-          #navbar_login_btn a span {
+          #navbar_login_btn a#login span {
             font-family: Montserrat;
             text-decoration: none;
             line-height: 3px !important;
             display: block;
             margin-top: 0;
+          }
+
+          #navbar_login_btn div#lang {
+            position: absolute;
+            right: 150px;
+            top: 4px;
+            z-index: 10000;
+          }
+          #navbar_login_btn div#lang a span {
+            display: block;
+            width: 100%;
+            text-align: center;
+            line-height: 35px;
+            font-family: Montserrat;
+            color: #fff;
+          }
+          #navbar_login_btn div#lang a span:hover {
+            cursor: pointer;
+          }
+          #navbar_login_btn div#lang a.hidden {
+            line-heigh: 0;
+          }
+
+          #navbar_login_btn div#lang a.hidden {
+            display: none;
+          }
+          #navbar_login_btn div#lang a.show {
+            display: inline-block;
           }
 
           @media (max-width: 1200px) {
