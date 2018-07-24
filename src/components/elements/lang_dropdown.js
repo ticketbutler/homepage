@@ -1,64 +1,122 @@
-import React from "react";
+import React, { Component } from "react";
 import Downshift from "downshift";
 
-const books = [
-  { name: "Harry Potter" },
-  { name: "Net Moves" },
-  { name: "Half of a yellow sun" },
-  { name: "The Da Vinci Code" },
-  { name: "Born a crime" }
-];
+export default class DownshiftThree extends Component {
+  constructor(props) {
+    super(props);
+    this.books = [
+      { name: "EN", image: "/img/en.png" },
+      { name: "DK", image: "/img/dk.jpg" }
+    ];
 
-const onChange = selectedBook => {
-  alert(`your favourite book is ${selectedBook.name}`);
-};
+    this.state = {
+      // currently selected dropdown item
+      selectedBookName: "",
+      selectedBookImage: ""
+    };
 
-export default class NavbarSection extends React.Component {
+    this.onChange = this.onChange.bind(this);
+  }
+
+  onChange(selectedBook) {
+    this.setState({
+      selectedBookName: selectedBook.name,
+      selectedBookImage: selectedBook.image
+    });
+  }
+
   render() {
     return (
       <Downshift
-        onChange={onChange}
+        onChange={this.onChange}
+        selectedItem={this.state.selectedBook}
         itemToString={books => (books ? books.name : "")}
       >
         {({
-          getInputProps,
-          getItemProps,
           isOpen,
-          inputValue,
+          getToggleButtonProps,
+          getItemProps,
           highlightedIndex,
-          selectedItem,
+          selectedItem: dsSelectedItem,
           getLabelProps
         }) => (
           <div>
-            {/* <label style={{ marginTop: '1rem', display: 'block' }} {...getLabelProps()}>Choose your favourite book</label> <br />
-            <input {...getInputProps({ placeholder: "Search books" })} /> */}
-
-            {isOpen ? (
-              <div className="downshift-dropdown">
-                {// filter the books and return items that match the inputValue
-                books
-                  .filter(
-                    item =>
-                      !inputValue ||
-                      item.name.toLowerCase().includes(inputValue.toLowerCase())
-                  )
-                  // map the return value and return a div
-                  .map((item, index, i) => (
+            <button className="dropdown-button" {...getToggleButtonProps()}>
+              {this.state.selectedBookName !== "" ? (
+                <div className="selected_items">
+                  {" "}
+                  <img src={this.state.selectedBookImage} />
+                  <span>{this.state.selectedBookName}</span>
+                </div>
+              ) : (
+                "DK"
+              )}
+            </button>
+            <div style={{ position: "relative" }}>
+              {isOpen ? (
+                <div className="downshift-dropdown">
+                  {// map through all the books and render them
+                  this.books.map((item, index, i) => (
                     <div
                       key={i}
                       className="dropdown-item"
-                      {...getItemProps({ key: item.name, index, item })}
+                      {...getItemProps({ key: index, index, item })}
                       style={{
                         backgroundColor:
                           highlightedIndex === index ? "lightgray" : "white",
-                        fontWeight: selectedItem === item ? "bold" : "normal"
+                        fontWeight: dsSelectedItem === item ? "bold" : "normal"
                       }}
                     >
-                      {item.name}
+                      <img src={item.image} />
+                      <span>{item.name}</span>
                     </div>
                   ))}
-              </div>
-            ) : null}
+                </div>
+              ) : null}
+            </div>
+            <style jsx>{`
+              .dropdown-button {
+                background: transparent;
+                border: none;
+                width: 80px;
+                line-height: 0;
+                margin-bottom: 15px;
+                outline: none;
+                transition: all 0.3s ease;
+              }
+              .selected_items span {
+                color: #fff;
+                font-family: Montserrat;
+                float: left;
+                margin-top: 6px;
+              }
+              .selected_items img {
+                margin-bottom: 0;
+                margin-right: 5px;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                float: left;
+              }
+
+              .dropdown-item {
+                background-color: transparent !important;
+                width: 60px !important;
+                margin-bottom: 10px;
+              }
+
+              .dropdown-item span {
+                color: #fff;
+                font-family: Montserrat;
+              }
+              .dropdown-item img {
+                margin-bottom: 0;
+                margin-right: 5px;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+              }
+            `}</style>
           </div>
         )}
       </Downshift>
