@@ -406,18 +406,17 @@ class NavbarSection extends React.Component {
 
             /* language */
             div#lang {
-              right: 200px;
+              right: -20px;
               top: 400px;
+              opacity: 0;
+              transition: all 0s;
+              transition-delay: 0s;
+            }
+            div#lang.display {
               opacity: 1;
               transition-delay: 0.3s;
               transition: all 0.4s;
-            }
-            div#lang.display {
-              opacity: 0;
-              transition: all 0s;
-
-              transition-delay: 0s;
-              right: -20px;
+              right: 200px;
             }
           }
 
