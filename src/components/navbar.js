@@ -13,6 +13,7 @@ class NavbarSection extends React.Component {
   NavbarhandleClick() {
     document.getElementById("bars").classList.toggle("clicked");
     document.getElementById("ulNav").classList.toggle("active");
+    document.getElementById("lang").classList.toggle("display");
   }
 
   render() {
@@ -36,6 +37,10 @@ class NavbarSection extends React.Component {
                 <a href={item.path}>{item.label}</a>
               </li>
             ))}
+
+            {/* <div id="lang_small_screen" className="outside">
+          <DownshiftOne />
+        </div> */}
           </ul>
         </div>
         <div id="navbar_login_btn">
@@ -191,30 +196,6 @@ class NavbarSection extends React.Component {
             right: 270px;
             top: 45px;
             z-index: 10000;
-          }
-          div#lang select {
-            display: block;
-            width: 100%;
-            text-align: center;
-            line-height: 35px;
-            font-family: Montserrat;
-            color: #fff;
-            background: transparent;
-            border: none;
-            // outline:none;
-            font-size: 18px;
-            padding: 7px;
-          }
-
-          div#lang select option.allOptions {
-            background-color: none;
-            border: 0;
-            font-size: 18px;
-            color: #fff;
-            background: rgba(0, 0, 0, 0.5);
-          }
-          div#lang.inside_ulElemetn {
-            display: none;
           }
 
           @media (max-width: 1200px) {
@@ -424,24 +405,19 @@ class NavbarSection extends React.Component {
             }
 
             /* language */
+            div#lang {
+              right: 200px;
+              top: 400px;
+              opacity: 1;
+              transition-delay: 0.3s;
+              transition: all 0.4s;
+            }
+            div#lang.display {
+              opacity: 0;
+              transition: all 0s;
 
-            div#lang.outside {
-              display: none;
-            }
-            .nav ul.active div#lang.inside_ulElemetn {
-              display: inline-block;
-              width: 110px;
-              color: #000;
-              right: 15px;
-              bottom: 0px !important;
-              z-index: 10;
-            }
-            .nav ul.active div#lang.inside_ulElemetn select {
-              z-index: 100;
-              position: absolute;
-              bottom: 15px;
-              color: #000;
-              font-size: 15px;
+              transition-delay: 0s;
+              right: -20px;
             }
           }
 
