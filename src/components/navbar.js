@@ -12,6 +12,10 @@ class NavbarSection extends React.Component {
     document.getElementById("ulNav").classList.toggle("active");
   }
 
+  // componentDidMount() {
+  //   window.addEventListener("load", this.NavbarhandleClick);
+  // }
+
   render() {
     return (
       <div className="navbar" id="navbar">
@@ -54,6 +58,7 @@ class NavbarSection extends React.Component {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            // overflow: hidden;
           }
 
           div.NavbarClicked-background {

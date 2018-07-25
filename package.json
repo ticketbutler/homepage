@@ -50,7 +50,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "y build",
+    "build": "gatsby build",
     "develop": "gatsby develop",
     "heroku-postbuild": "gatsby build",
     "start": "serve public/",
