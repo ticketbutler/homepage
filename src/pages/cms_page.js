@@ -40,19 +40,19 @@ const CmsPage = ({ pathContext }) => (
         return <Component key={i} {...section} />;
       })}
 
-      {/* <FeaturePage 
-        heading={pathContext.feature_page ? pathContext.feature_page.heading : []}
-        paragraph={pathContext.feature_page ? pathContext.feature_page.heading : []}
-        items={pathContext.feature_page ? pathContext.feature_page.items : []}
-      ></FeaturePage> */}
+    <FeaturePage
+      heading={pathContext.feature_page ? pathContext.feature_page.heading : []}
+      paragraph={pathContext.feature_page ? pathContext.feature_page.text : []}
+      items={pathContext.feature_page ? pathContext.feature_page.items : []}
+    />
 
-    {/* <LogoSection
+    <LogoSection
       items={pathContext.logo_section ? pathContext.logo_section.items : []}
       heading={pathContext.logo_section ? pathContext.logo_section.heading : []}
     />
     <SliderSection
-      items={pathContext.testimonials ? pathContext.testimonials.items : []}
-    /> */}
+      items={pathContext.testimonials ? pathContext.testimonials : []}
+    />
   </Layout>
 );
 

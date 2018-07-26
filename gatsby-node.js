@@ -15,11 +15,33 @@ const query = `query IndexQuery {
             image_alt
             button_text
             button_link
-          } 
+          }
+          feature_page {
+            heading
+            text
+            items {
+              image
+              alt
+              name
+            }
+          }
+          logo_section{
+            heading
+            items{
+              image
+              alt
+            }
+          }  
+          testimonials{
+            text
+            image
+            logo
+            about
+          }
+        }
         }
       }
     }
-  }
 
   TopMenu: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/top-menu/"}}) {
     edges {
@@ -98,6 +120,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             layout: null,
             context: {
               sections: node.frontmatter.sections,
+              logo_section: node.frontmatter.logo_section,
+              testimonials: node.frontmatter.testimonials,
+              feature_page: node.frontmatter.feature_page,
               layout: {
                 TopMenu: TopMenu.edges[0].node.frontmatter.items,
                 FooterMenu: FooterMenu.edges[0].node.frontmatter.items,

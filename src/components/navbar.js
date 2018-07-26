@@ -1,15 +1,19 @@
 import React from "react";
-
+import DownshiftOne from "./elements/lang_dropdown";
 class NavbarSection extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isToggleOn: true };
+    this.state = {
+      isToggleOn: true,
+      value: "en"
+    };
     this.NavbarhandleClick = this.NavbarhandleClick.bind(this);
   }
 
   NavbarhandleClick() {
     document.getElementById("bars").classList.toggle("clicked");
     document.getElementById("ulNav").classList.toggle("active");
+    document.getElementById("lang").classList.toggle("display");
   }
 
   render() {
@@ -33,19 +37,20 @@ class NavbarSection extends React.Component {
                 <a href={item.path}>{item.label}</a>
               </li>
             ))}
+
+            {/* <div id="lang_small_screen" className="outside">
+          <DownshiftOne />
+        </div> */}
           </ul>
         </div>
-        <div
-          id="navbar_login_btn"
-          style={
-            {
-              // display: "none"
-            }
-          }
-        >
-          <a href="#contact">
+        <div id="navbar_login_btn">
+          <a id="login" href="#contact">
             <span>Kontakt</span>
           </a>
+        </div>
+
+        <div id="lang" className="outside">
+          <DownshiftOne />
         </div>
         <div className="clear-fix" />
 
@@ -91,13 +96,14 @@ class NavbarSection extends React.Component {
             font-weight: 600;
             letter-spacing: 1.15px;
             text-align: center;
+            position: relative;
           }
 
           .nav ul li {
             list-style: none;
             display: inline-block;
             margin: 0 20px;
-            line-height: 130px;
+            line-height: 135px;
             font-family: Montserrat;
           }
 
@@ -148,7 +154,7 @@ class NavbarSection extends React.Component {
             position: relative;
             margin-right: 0px;
           }
-          #navbar_login_btn a {
+          #navbar_login_btn a#login {
             text-decoration: none;
             color: #ffffff;
             font-size: 15px;
@@ -167,7 +173,7 @@ class NavbarSection extends React.Component {
             font-family: Montserrat;
             transition: all 0.3s;
           }
-          #navbar_login_btn a:hover {
+          #navbar_login_btn a#login:hover {
             background: linear-gradient(
               to right,
               rgba(40, 216, 167, 1),
@@ -177,12 +183,19 @@ class NavbarSection extends React.Component {
             color: #fff;
           }
 
-          #navbar_login_btn a span {
+          #navbar_login_btn a#login span {
             font-family: Montserrat;
             text-decoration: none;
             line-height: 3px !important;
             display: block;
             margin-top: 0;
+          }
+
+          div#lang {
+            position: absolute;
+            right: 270px;
+            top: 45px;
+            z-index: 10000;
           }
 
           @media (max-width: 1200px) {
@@ -360,10 +373,11 @@ class NavbarSection extends React.Component {
               right: 110px;
               float: right;
               position: relative;
-              top: 30px;
+              top: 39px;
+              border: none;
             }
             #navbar_login_btn a {
-              border: none;
+              border: none !important;
               color: #fff;
               margin-top: 0px;
               height: 30px;
@@ -376,8 +390,9 @@ class NavbarSection extends React.Component {
               left: 0;
             }
 
-            #navbar_login_btn a:hover {
-              background: none;
+            #navbar_login_btn a:hover,
+            #navbar_login_btn a:active {
+              background: none !important;
             }
             #navbar_login_btn a span {
               position: absolute;
@@ -387,6 +402,21 @@ class NavbarSection extends React.Component {
               text-align: right;
               margin-top: 9px;
               text-align: right;
+            }
+
+            /* language */
+            div#lang {
+              right: -20px;
+              top: 400px;
+              opacity: 0;
+              transition: all 0s;
+              transition-delay: 0s;
+            }
+            div#lang.display {
+              opacity: 1;
+              transition-delay: 0.3s;
+              transition: all 0.4s;
+              right: 200px;
             }
           }
 

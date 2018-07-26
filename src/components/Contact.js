@@ -44,8 +44,8 @@ const Contact_page = ({ items }) => (
               Send besked <em>&#187;</em>
             </span>
           </button>
-          <div className="clear-fix" />
         </form>
+        <div className="clear-fix" />
       </div>
       <div className="contact_right_box">
         <div className="content">
