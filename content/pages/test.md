@@ -91,5 +91,46 @@ sections:
       Giv os dit logo og brandfarver og du har dit eget billetsystem inden for
       et par dage. Vi designer systemet, så det ser lækkert ud til dit brand.
     type: tall_centered_future_button_top
----
 
+feature_page:
+  heading: Features Page
+  text: Hello
+  items:
+    - image: /img/shape_feature
+      alt: image1
+      name: first
+    - image: /img/threeCircles
+      alt: image2
+      name: second
+    - image: /img/twoCircles
+      alt: image1
+      name: first
+    - image: /img/threeCircles
+      alt: image2
+      name: second
+ 
+
+
+
+logo_section:
+  heading: Ticketbutler integrates with you favorits CMS
+  items:
+    - image: /img/WP.png
+      alt: image1
+    - image: /img/wix.png
+      alt: image2
+    - image: /img/SQ.png
+      alt: image3
+
+testimonials:
+  - text: Vi benyttede Ticketbutler til vores nye innovationsevent. De var utroligt venlige og responderede hurtigt                    fleksibeltpå vores henvendelsr
+    image: /img/face.jpg
+    logo: /img/text_logo.png
+    about: Marius Cortsen, TexhSprint organizer
+  
+  - text: Vi benyttede Ticketbutler til vores nye innovationsevent. De var utroligt venlige og responderede hurtigt                    fleksibeltpå vores henvendelsr
+    image: /img/face.jpg
+    logo:  /img/text_logo.png
+    about: Marius Cortsen, TexhSprint organizer
+
+---
