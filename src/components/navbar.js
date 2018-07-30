@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "gatsby-link";
 class NavbarSection extends React.Component {
   constructor(props) {
     super(props);
@@ -22,11 +21,11 @@ class NavbarSection extends React.Component {
         </div>
 
         <div className="nav">
-          <Link id="bars" onClick={this.NavbarhandleClick}>
+          <div id="bars" onClick={this.NavbarhandleClick}>
             <span className="bar1" />
             <span className="bar2" />
             <span className="bar3" />
-          </Link>
+          </div>
           <ul id="ulNav">
             {this.props.items.map((item, i) => (
               <li key={i}>
@@ -106,7 +105,6 @@ class NavbarSection extends React.Component {
             border-top: 2px solid rgba(255, 255, 255, 0.9);
             border-bottom: 2px solid rgba(255, 255, 255, 0.9);
             padding: 8px 0;
-            // border-radius: 20px;
           }
 
           .navbar .navbar_logo {
