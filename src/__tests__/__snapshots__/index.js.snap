@@ -3,61 +3,44 @@
 exports[`the Layout component renders 1`] = `
 <div>
   <div
-    className="navbar sc-bwzfXH fjLUux"
+    className="navbar"
+    id="navbar"
   >
     <div
-      className="sc-bdVaJa fAbyfU"
+      className="navbar_logo"
     >
       <a
         href="/"
       >
         <img
-          src="../img/logo_white.png"
+          src="/img/logo_white.png"
         />
       </a>
     </div>
-    <nav
-      className="sc-htpNat jRffzg"
+    <div
+      className="nav"
     >
       <div
-        className="sc-bxivhb djlsVW"
         id="bars"
         onClick={[Function]}
       >
-        <div
+        <span
           className="bar1"
         />
-        <div
+        <span
           className="bar2"
         />
-        <div
+        <span
           className="bar3"
         />
       </div>
       <ul
         id="ulNav"
       />
-    </nav>
+    </div>
     <div
-      className="sc-ifAKCX ivLGOd"
       id="navbar_login_btn"
     >
-      <div
-        className="language"
-      >
-        <span
-          id="Lang"
-        >
-          Danish
-        </span>
-        <ul>
-          <li>
-            <span>
-              English
-            </span>
-          </li>
-        </ul>
-      </div>
       <a
         href="#contact"
       >
@@ -73,38 +56,414 @@ exports[`the Layout component renders 1`] = `
       jsx={true}
     >
       
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-
-        div.NavbarClicked-background {
-          display: none;
-
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%;
-          position: fixed;
-          background-color: rgba(0, 0, 0, 0.75);
-          z-index: 10;
-        }
-        @media (max-width: 1100px) {
-          div.NavbarClicked-background {
-            display: block;
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
           }
-        }
-      
+
+          div.NavbarClicked-background {
+            display: none;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.75);
+            z-index: 10;
+          }
+          .navbar {
+            width: 100%;
+            height: 130px;
+            padding: 0px 110px;
+            position: absolute;
+            z-index: 1000;
+          }
+
+          .nav {
+            width: 60%;
+            text-align: center;
+            display: inline;
+            float: left;
+            line-height: 100px;
+            position: relative;
+          }
+          .nav ul {
+            margin: 0;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1.15px;
+            text-align: center;
+          }
+
+          .nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            line-height: 130px;
+            font-family: Montserrat;
+          }
+
+          .nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 20px 0;
+            border-top: 2px solid rgba(255, 255, 255, 0);
+            border-bottom: 2px solid rgba(255, 255, 255, 0);
+            transition: all 0.3s ease-out;
+          }
+          .nav ul li a:hover {
+            border-top: 2px solid rgba(255, 255, 255, 0.9);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+            padding: 8px 0;
+          }
+
+          .navbar .navbar_logo {
+            display: inline;
+            width: 20%;
+            color: #ffffff;
+            font-size: 25px;
+            font-weight: 600;
+            letter-spacing: -0.62px;
+            float: left;
+            line-height: 130px;
+          }
+          .navbar .navbar_logo a img {
+            width: 170px;
+            margin-bottom: 0;
+            line-height: 75px;
+          }
+
+          /**
+           * 
+           * Button Style
+           */
+          #navbar_login_btn {
+            width: 20%;
+            display: block;
+            float: left;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 1.15px;
+            text-align: center;
+            margin-top: 43px;
+            position: relative;
+            margin-right: 0px;
+          }
+          #navbar_login_btn a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 1.15px;
+            display: inline-block;
+            text-align: center;
+            float: right;
+
+            padding: 18px;
+            height: 44px;
+            width: 130px;
+            border: 2px solid #1dc9ca;
+            border-radius: 26px;
+            // background: linear-gradient(to right,rgba(40, 216, 167, 0),rgba(29, 201, 202, 0));
+            font-family: Montserrat;
+            transition: all 0.3s;
+          }
+          #navbar_login_btn a:hover {
+            background: linear-gradient(
+              to right,
+              rgba(40, 216, 167, 1),
+              rgba(29, 201, 202, 1)
+            );
+            border-color: transparent;
+            color: #fff;
+          }
+
+          #navbar_login_btn a span {
+            font-family: Montserrat;
+            text-decoration: none;
+            line-height: 3px !important;
+            display: block;
+            margin-top: 0;
+          }
+
+          @media (max-width: 1200px) {
+            .nav ul {
+              font-size: 12px;
+            }
+          }
+
+          @media (max-width: 1080px) {
+            div.navbar {
+              background-color: #326de9;
+              position: absolute;
+              top: 0;
+              z-index: 100;
+              height: 80px !important;
+              padding: 0px;
+            }
+
+            .navbar .navbar_logo {
+              float: left;
+              width: 130px;
+              margin-left: 40px;
+              line-height: 80px;
+            }
+
+            .nav {
+              float: right;
+              width: 114px;
+              position: absolute;
+              right: 30px;
+            }
+
+            .nav ul {
+              height: 60px;
+              text-align: left;
+              margin-top: 80px;
+              display: block;
+              transform: translateX(0px);
+              transition: transform 0.3s;
+            }
+            .nav ul.active {
+              width: 280px;
+              height: 500px;
+
+              background: #fff;
+              transform: translateX(-135px);
+              height: 450px;
+              border-radius: 0 0 0 4px;
+            }
+            .nav ul.active li {
+              visibility: visible;
+            }
+
+            .nav ul li {
+              margin: 0px 0px !important;
+              display: block;
+              line-height: 60px;
+              transform: rotate(10deg);
+              transform-origin: 0% 0%;
+              padding: 0;
+              opacity: 0;
+              visibility: hidden;
+              line-heigh: 80px;
+            }
+            .nav ul li:nth-child(1) {
+              margin-top: 30px;
+            }
+
+            .nav ul li a {
+              color: #333f52;
+              border: none;
+              padding: 0 20px;
+              display: block;
+              width: 100%;
+              height: 100%;
+            }
+            .nav ul li a:hover {
+              border: none;
+              padding: 0;
+            }
+            .nav ul.active li {
+              transition: all 0.3s;
+              padding: 0 0px;
+              border-bottom: 1px solid rgba(238, 238, 238, 0.5);
+              transform: rotate(0deg);
+              margin: 0 30px;
+              opacity: 1;
+            }
+            .nav ul.active li:hover {
+              background-color: rgba(238, 238, 238, 0.5);
+              transition-delay: 0s;
+            }
+            .nav ul.active li:hover a {
+              padding-left: 28px;
+              padding-right: 12px;
+            }
+
+            .nav ul.active li.active {
+              transition: all 0s;
+              transform: rotate(0deg);
+              background: #efefef;
+            }
+            .nav ul.active li::after a {
+              margin-left: 8px;
+            }
+
+            /* Bars */
+
+            #bars {
+              display: block !important;
+              width: 40px;
+              float: right;
+              margin-right: 35px;
+              height: 40px;
+              padding: 5px 7px;
+              border-radius: 25px;
+              position: relative;
+              margin-top: 21px;
+              z-index: 1000;
+            }
+
+            #bars:hover {
+              cursor: pointer;
+              opacity: 0.85;
+            }
+
+            #bars span {
+              position: absolute;
+              right: 10px;
+              width: 22px;
+              height: 2.1px;
+              background: #fff;
+              margin: 5px 0;
+              border-radius: 2px;
+              // transition: background .3s;
+              display: inline-block;
+              transition: all 0.1s;
+              line-height: 0 !important;
+            }
+            #bars span.bar2 {
+              top: 12px;
+            }
+            #bars span.bar1 {
+              top: 5px;
+            }
+
+            #bars span.bar3 {
+              top: 20px;
+            }
+
+            #bars.clicked span.bar2 {
+              display: none;
+            }
+
+            #bars.clicked span.bar1 {
+              transform: rotate(45deg);
+              position: absolute;
+              top: 12px;
+            }
+
+            #bars.clicked span.bar3 {
+              transform: rotate(-45deg);
+              position: absolute;
+              top: 13px;
+            }
+
+            /**
+         * Button
+         */
+
+            #navbar_login_btn {
+              margin-top: 0px;
+              width: 100px;
+
+              right: 110px;
+              float: right;
+              position: relative;
+              top: 30px;
+            }
+            #navbar_login_btn a {
+              border: none;
+              color: #fff;
+              margin-top: 0px;
+              height: 30px;
+              width: auto;
+              margin-right: 0px;
+              border-radius: 0;
+              display: inline;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+
+            #navbar_login_btn a:hover {
+              background: none;
+            }
+            #navbar_login_btn a span {
+              position: absolute;
+              top: 0px;
+              display: block;
+              float: right;
+              text-align: right;
+              margin-top: 9px;
+              text-align: right;
+            }
+          }
+
+          @media (max-width: 1100px) {
+            div.NavbarClicked-background {
+              display: block;
+            }
+
+            .navbar div.clear-fix {
+              clear: both !important;
+            }
+          }
+
+          @media (max-width: 600px) {
+            #bars {
+              margin-right: 10px !important;
+            }
+            #navbar_login_btn {
+              width: 50px;
+              right: 120px;
+            }
+            #navbar_login_btn a span {
+              line-height: 30px;
+              padding-right: 18px;
+              font-size: 13px;
+              margin-top: 7px;
+            }
+
+            // .navbar .navbar_logo{
+            //   width: 90px;
+            //   margin-left: 0px ;
+            // }
+          }
+
+          @media (max-width: 350px) {
+            .nabar {
+              padding: 0 25px;
+            }
+            .navbar_logo {
+              width: 90px !important;
+              // margin-left: 0px !important;
+            }
+            .navbar .navbar_logo {
+              line-height: 70px !important;
+              margin-left: 30px;
+            }
+            .navbar .navbar_logo a img {
+              width: 90px;
+              margin-top: 10px;
+            }
+
+            #bars {
+              margin-right: -10px !important;
+            }
+
+            #navbar_login_btn {
+              right: 95px !important;
+            }
+
+            #navbar_login_btn a span {
+              font-size: 12px !important;
+            }
+          }
+        
     </style>
   </div>
   <div />
   <section
-    className="section-3 container sc-dnqmqq kFdrSy"
+    className="container newsletter_page"
   >
     <div
-      className="sc-iwsKbI gJoEqD"
+      className="content"
     >
       <h1>
         Tilmeld Ticketbutler Nyhedsbrev
@@ -112,7 +471,6 @@ exports[`the Layout component renders 1`] = `
       <form
         className="newsletter"
         data-netlify="true"
-        data-netlify-honeypot="bot-field"
         method="post"
         name="newsletter"
       >
@@ -124,24 +482,244 @@ exports[`the Layout component renders 1`] = `
           />
         </label>
         <button
-          className="sc-gZMcBi koKiOp"
+          id="newsletter_btn"
         >
           <span>
-            Tilmeld
+            Tilmeld 
+            <em>
+              »
+            </em>
           </span>
         </button>
       </form>
     </div>
+    <style
+      jsx={true}
+    >
+      
+      section {
+        margin-top: 0;
+      }
+
+      section.container.newsletter_page{
+        padding: 110px 0;
+        width: 100%;
+        position: relative;
+      }
+
+      button#newsletter_btn{
+      height: 60px;
+      width: 200px;
+      display: inline;
+      float: right;
+      border-radius: 29px;
+
+      border: 0;
+      background: linear-gradient(90deg, #326de9 0%, #7e52e8 100%);
+      text-decoration: none;
+      text-align: center;
+      position: relative;
+      transition: all 0.3s;
+          }
+      button#newsletter_btn:hover {
+        box-shadow: 0px 3px 20px -6px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+
+      }
+        button#newsletter_btn:hover span em {
+          margin-left: 10px;
+          opacity: 1;
+      }
+
+      button#newsletter_btn span {
+        color: #ffffff;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        transition: all 0.3s;
+
+      }
+      button#newsletter_btn span em{
+        font-size: 20px;
+        margin-left: -10px;
+        opacity: 0;
+        transition: all .3s;
+      }
+
+      @media (max-width: 768px) {
+        button#newsletter_btn{
+        width: 190px;
+        height: 55px;
+      }
+      }
+      @media (max-width: 600px) {
+        button#newsletter_btn{
+        width: 180px;
+        height: 50px;
+        }
+      }
+      @media (max-width: 530px) {
+        button#newsletter_btn{
+        display: block;
+        float: none;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        }
+      }
+      @media (max-width: 376px) {
+        button#newsletter_btn span {
+          font-size: 13px;
+        }
+      }
+
+      .content{
+            width: 100%;
+      }
+      .content h1 {
+        display: block;
+        height: 140px;
+        width: 570px;
+        color: #333f52;
+        font-family: Hind;
+        font-size: 55px;
+        font-weight: bold;
+        line-height: 70px;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 50px;
+      }
+    
+      .content form {
+        width: 570px;
+        height: auto;
+        display: inline-block;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        margin-bottom: 0;
+      }
+      .content form label {
+          height: 60px;
+          width: 350px;
+          display: inline;
+          float: left;
+          position: relative;
+      }
+      .content form label input {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #979797;
+            border-radius: 49px;
+            font-family: Montserrat;
+            display: inline;
+            padding-left: 20px;
+      }
+      .content form label input &::placeholder {
+              font-size: 15px;
+              font-family: Montserrat;
+            }
+
+      @media (max-width: 1080px) {
+        section.container.newsletter_page{
+          padding: 150px 0;}
+        }
+
+      }
+      @media (max-width: 768px) {
+        section.container.newsletter_page{
+         padding: 110px 0;
+        }
+
+        .content h1 {
+          padding: 0 30px;
+          height: auto;
+          font-size: 50px;
+          line-height: 55px;
+        }
+        .content form {
+          width: 520px;
+         
+        }
+        .content form label {
+          height: 55px;
+          width: 300px;
+        }
+      }
+    
+      @media (max-width: 600px) {
+       section.container.newsletter_page{
+          padding: 70px 0;
+       }
+
+       .content h1 {
+        width: 100%;
+        padding: 0 30px;
+        height: auto;
+        font-size: 38px;
+        line-height: 40px;
+      }
+      .content form {
+        width: 100%;
+        margin-left: 0%;
+        transform: translateX(0%); 
+        padding: 0 30px;
+      }
+        .content form  label {
+          height: 50px;
+          width: 270px;
+        }
+      
+      }
+
+      @media (max-width: 530px) {
+
+        .content form {
+          width: 100%;
+          margin-left: 0%;
+          transform: translateX(0%);
+          padding: 0 20px;
+        }
+          .content form  label {
+            width: 340px;
+            display: block;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 25px;
+          }
+      }
+
+      @media (max-width: 376px) {
+        section.container.newsletter_page{
+         padding: 40px 0px;
+        }
+        .content h1 {
+          width: 100%;
+          font-size: 28px;
+          line-height: 35px;
+        }
+        .content form {
+          width: 100%;
+          margin-left: 0%;
+          transform: translateX(0%);
+          padding: 0 20px;
+        }
+          .content form  label  {
+            height: 50px;
+            width: 100%;
+          }
+      }
+      
+    </style>
   </section>
   <section
-    className="sc-EHOje cpGZhq"
     id="contact"
   >
     <div
       className="container"
     >
       <div
-        className="left-box contact sc-bZQynM kJZFQC"
+        className="contact_left_box "
       >
         <h1>
           Kontakt
@@ -149,7 +727,6 @@ exports[`the Layout component renders 1`] = `
         <form
           className="contact-form"
           data-netlify="true"
-          data-netlify-honeypot="bot-field"
           method="post"
           name="contact-form"
         >
@@ -186,10 +763,13 @@ exports[`the Layout component renders 1`] = `
             </li>
           </ul>
           <button
-            className="sc-gzVnrw ccFcpY"
+            id="contact_btn"
           >
             <span>
-              Send besked
+              Send besked 
+              <em>
+                »
+              </em>
             </span>
           </button>
           <div
@@ -198,7 +778,7 @@ exports[`the Layout component renders 1`] = `
         </form>
       </div>
       <div
-        className="sc-htoDjs cclWUx"
+        className="contact_right_box"
       >
         <div
           className="content"
@@ -233,7 +813,7 @@ exports[`the Layout component renders 1`] = `
                 className="fa fa-envelope"
               />
               <span>
-                Generel support
+                Generelle henvendelser
               </span>
               <span
                 id="support"
@@ -259,14 +839,431 @@ exports[`the Layout component renders 1`] = `
       .clear-fix {
         clear: both;
       }
+
+      section#contact{
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0px;
+      }
+
+      /* Button */
+        button#contact_btn{
+            margin-top: 25px;
+            float: left;
+            margin-left: 25px;
+
+            height: 55px ;
+            width: 200px;
+            display: block;
+            float:left;
+            border-radius: 29px;
+    
+            border: 0;
+            background: linear-gradient(90deg, #326DE9 0%, #7E52E8 100%);
+            text-decoration:none;
+            text-align: center;
+            position: relative;
+            transition: all .3s;
+        }
+        button#contact_btn:hover {
+            box-shadow: 0px 3px 20px -6px rgba(0,0,0,0.30);
+            
+        }
+        button#contact_btn span em{
+            font-size: 18px;
+            margin-left: -10px;
+            opacity: 0;
+            transition: all .3s;
+          }
+    
+        button#contact_btn:hover span em {
+            margin-left: 10px;
+            opacity: 1;
+        }
+        
+        button#contact_btn span {
+        color: #FFFFFF;	
+        font-family: Montserrat;	
+        font-size: 16px;
+        font-weight: bold;	
+        text-align: center;
+        transition: all .3s;
+        }
+
+
+
+        /* From styling */
+        .contact_left_box {
+            width: 50%;
+          height: 100%;
+          display: inline;
+          float: left;
+          padding: 110px; 
+          padding-left: 90px;
+        }
+
+        .contact_left_box h1 {
+            float: left;
+            margin-left: 25px;
+            margin-bottom: 50px;
+            font-size: 50px;
+        }
+        .contact_left_box form {
+            max-width: 100%;
+            padding: 30px;
+            margin: 50px auto;
+            font-family: Montserrat;
+            margin-bottom: 0;
+            padding: 0;
+        }
+        .contact_left_box form  {
+            padding:0;
+            margin:0;
+            list-style:none;
+        
+        }
+        .contact_left_box form ul li {
+            min-height: 35px;
+            display: block;
+            width: 100%;
+            float:left;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            position: relative;
+        }
+            
+        .contact_left_box form ul li label{
+            padding-top: 15px;
+                
+        }
+        .contact_left_box form ul li label input {
+            width: 400px;
+            display: block;
+            padding: 0 15px;
+            height: 40px;
+            border: 1px solid #CCC;
+            border-radius: 4px;
+            position: relative;
+                
+        }
+        .contact_left_box form ul li label input::placeholder{
+            font-size: 15px;
+        }
+
+        .contact_left_box form ul li label input:focus ~ span.floating-label{
+            font-size: 10px;
+            
+        }
+           
+        .contact_left_box form ul li#message-field {
+            display: block;
+            float: left;
+            width: 100%;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+        .contact_left_box form ul li#message-field label textarea{
+            width: 400px;
+            display:inline;
+            float: left;
+            height: 120px;
+            padding: 4px 15px;
+            border: 1px solid #CCC;
+            border-radius: 4px;
+                    
+        }
+        .contact_left_box form ul li#message-field label textarea &::placeholder{
+            font-size: 15px;
+        }
+                            
+        
+
+        .contact_right_box {
+            width: 50%;
+            height: 660px;
+            padding: 110px;
+            float:right;
+            display:inline-block;
+            background: linear-gradient(to right, rgba(50, 109, 233, .85) , rgba(126, 82, 232, .85)), url(/img/kontaktmin.png) no-repeat center center;
+            color: #FFF;
+            background-size: cover;
+        }
+        
+        .contact_right_box div.content ul li {
+                    display: block;
+                    list-style: none;
+                    margin: 50px auto;
+                    width: 340px;
+        }
+        .contact_right_box div.content ul li:first-child{
+            margin-top: 0;
+        }
+        .contact_right_box div.content ul li:last-child{
+            margin-bottom: 0;
+        }
+    
+            
+        .contact_right_box div.content ul li i {
+            display: inline;
+            float:left;
+            font-size: 20px;
+        }
+        .contact_right_box div.content ul li span {
+            display:block;
+            text-align: center;
+            width: 250px;
+            text-align:left;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-family: Montserrat;
+            font-size: 20px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .contact_right_box div.content ul li span :nth-child(2){
+            margin-bottom: 10px;
+        }
+        .contact_right_box div.content ul li span#address , .contact_right_box div.content ul li span#phone , .contact_right_box div.content ul li span#support{
+            opacity: .5;
+            font-size: 16px;
+        }
+       
+    
+
+        @media (max-width: 1200px) {
+    
+            .contact_left_box form ul li label input {
+                width: 100%;
+            }
+            .contact_left_box form ul li#message-field label textarea {
+                width: 100%;
+            }
+        }
+
+
+        @media (max-width: 1080px) {
+            .contact_left_box{
+            padding: 110px 40px;
+            padding-left: 20px;
+
+            }
+            .contact_left_box h1 {
+                font-size: 40px;
+            }
+
+            .contact_right_box{
+                padding: 110px 40px;
+
+            }
+        }
+
+
+
+        @media (max-width: 920px) { 
+            button#contact_btn{
+            margin-left: 50%;
+            transform:translateX(-50%);
+            }
+            
+        }
+        
+        @media (max-width: 768px) { 
+            button#contact_btn{
+            width: 190px;
+            display:block; 
+            float: right;
+            transform: translateX(50%);
+            margin-right: 50%;
+            margin-left: 0;
+            }
+            button#contact_btn span {
+                font-size: 15px;
+                line-height: 40px;
+            }
+            button#contact_btn span ::after {
+                    font-size: 18px;
+                    line-height: 39px;
+            }
+
+        .contact_left_box{
+            display: block;
+            width: 100%;
+
+        }
+        .contact_left_box h1 {
+            float: none;
+            font-size: 40px;
+        }
+        .contact_left_box form ul li{ 
+                    width: 400px;
+        }
+        .contact_left_box form ul li label input {
+            width: 400px;
+        }
+                
+        .contact_left_box form ul li#message-field {
+            width: 400px;
+        }
+        .contact_left_box form ul li#message-field label textarea{
+            width: 400px;
+        }
+
+        .contact_right_box{
+            height: auto;
+            display: block;
+            width: 100%;   
+            height: 550px;
+
+        }
+             
+        }
+        @media (max-width: 600px) { 
+            button#contact_btn span {
+                font-size: 14px;
+                line-height: 40px;
+            }
+                button#contact_btn span::after {
+                    font-size: 18px;
+                    line-height: 39px;
+            }
+            
+        }
+        
+        @media (max-width: 500px) { 
+            .contact_left_box{
+            padding: 70px 20px;
+            padding-left: 0px;
+
+            }
+            .contact_left_box h1 {
+                float: none;
+                font-size: 30px;
+            }
+            .contact_left_box form ul li  {
+                width: 100%;
+
+            }
+            .contact_left_box form ul li label input {
+                width: 100%;
+
+            }
+            .contact_left_box form ul li#message-field {
+                width: 100%;                
+            }
+            .contact_left_box form ul li#message-field label textarea {
+                width: 100%;
+
+            }
+     }
+        @media (max-width: 376px) { 
+            button#contact_btn {
+            width: 180px;
+            height: 50px;
+            }
+            button#contact_btn span {
+            font-size: 13px;
+            line-height: 40px;
+            }
+            button#contact_btn span ::after {
+                font-size: 16px;
+                line-height: 39px;
+            }
+            
+        }
+
+    
+        @media (max-width: 350px) { 
+            .contact_right_box{
+            padding: 110px 30px;
+            height: 500px;
+            
+            }
+            .contact_right_box div.content ul li{
+                display: block;
+                list-style: none;
+                margin: 50px auto;
+                width: 100%;
+            }
+            .contact_right_box div.content ul li i {
+                float:left;
+                font-size: 15px;
+                width: 40px;
+                height: 30px;
+                width: 20%;
+                text-align: left;
+                margin-left: -10px;
+            }
+            .contact_right_box div.content ul li span {
+                width: 80%
+                font-size: 14px;
+            }
+            .contact_right_box div.content ul li span#address , .contact_right_box div.content ul li span#phone , .contact_right_box div.content ul li span#support{
+                font-size: 12px;
+            }
+            
+        }
     
     </style>
   </section>
-  <footer
-    className="sc-gqjmRU cFMjrA"
-  >
+  <footer>
+    <a
+      href="#navbar"
+      id="to_top"
+      style={
+        Object {
+          "background": "#f9fafc",
+          "border": "1.5px solid #356be9",
+          "borderRadius": "50%",
+          "display": "block",
+          "fontSize": "25px",
+          "height": "60px",
+          "left": "50%",
+          "position": "absolute",
+          "textAlign": "center",
+          "textDecoration": "none",
+          "top": "-30px",
+          "transform": "translateX(-50%)",
+          "transition": "all .2s ease",
+          "width": "60px",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "color": "#868e99",
+            "display": "inline-block",
+            "fontFamily": "sans-serif",
+            "marginLeft": "4px",
+            "marginTop": "10px",
+            "transform": "rotate(90deg)",
+          }
+        }
+      >
+        «
+      </span>
+      <span
+        style={
+          Object {
+            "color": "#868e99",
+            "display": "inline-block",
+            "fontFamily": "sans-serif",
+            "fontSize": "10px",
+            "height": "15px",
+            "position": "absolute",
+            "right": "-3px",
+            "top": "25px",
+            "width": "60px",
+          }
+        }
+      >
+        top
+      </span>
+    </a>
     <div
-      className="sc-jTzLTM klFWpO"
+      className="top_footer"
     >
       <div
         id="footer_logo"
@@ -275,7 +1272,7 @@ exports[`the Layout component renders 1`] = `
           href="/"
         >
           <img
-            src="../img/logo_blue.png"
+            src="/img/logo_blue.png"
           />
         </a>
         <span>
@@ -307,7 +1304,7 @@ exports[`the Layout component renders 1`] = `
       </ul>
     </div>
     <div
-      className="sc-VigVT byYTMr"
+      className="footer_bottom"
     />
     <div
       className="clear-fix"
@@ -318,6 +1315,229 @@ exports[`the Layout component renders 1`] = `
       
       .clear-fix {
         clear: both;
+      }
+
+      footer {
+        height: auto;
+        width: 100%;
+        background-color: #f9fafc;
+        padding: 0px 110px;
+        position: relative;
+      }
+
+      a#to_top:hover {
+        top: -40px !important;
+        border: "1.5px solid #356be9";
+      }
+
+      .top_footer {
+        width: 100%;
+        height: 500px;
+        dislpay: block;
+        padding: 100px 0px;
+        padding-bottom: 20px;
+      }
+
+      .top_footer div#footer_logo {
+        width: 25%;
+        display: inline;
+        float: left;
+      }
+      .top_footer div#footer_logo a {
+        width: 100%;
+        display: block;
+      }
+      .top_footer div#footer_logo a img {
+        width: 170px;
+        margin-bottom: 0;
+        line-height: 100px;
+      }
+
+      .top_footer div#footer_logo span {
+        height: 38px;
+        color: #868e99;
+        font-family: Montserrat;
+        font-size: 15px;
+        letter-spacing: 1.15px;
+        line-height: 19px;
+      }
+
+      .top_footer ul {
+        width: 25%;
+        margin: auto;
+        height: 100%;
+        display: inlnie;
+        float: left;
+      }
+      .top_footer ul h3 {
+        height: 19px;
+
+        color: #356be9;
+        font-family: Montserrat;
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: 1.15px;
+        line-height: 19px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 12em;
+      }
+      .top_footer ul li {
+        list-style: none;
+        font-family: Montserrat;
+        font-size: 15px;
+        font-weight: 300;
+        letter-spacing: 1.15px;
+        line-height: 19px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 12em;
+        transition: all 0.3s ease;
+      }
+      .top_footer ul li a {
+        text-decoration: none;
+        color: #868e99;
+      }
+      .top_footer ul li a:hover {
+        text-decoration: none;
+        color: #333f52;
+        cursor: pointer;
+      }
+
+      .footer_bottom {
+        width: 100%;
+        height: 140px;
+        display: block;
+      }
+      .footer_bottom a {
+        width: 25%;
+        height: auto;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+      }
+      .footer_bottom a span {
+        color: #333f52;
+        font-family: Hind;
+        letter-spacing: 0.5px;
+        font-size: 18px;
+        line-height: 140px;
+      }
+      .footer_bottom a:hover {
+        opacity: 0.85;
+      }
+
+      @media (max-width: 1200px) {
+        .footer_bottom a span {
+          font-size: 15px;
+        }
+      }
+
+      @media (max-width: 1080px) {
+        footer {
+          padding: 0 45px;
+        }
+      }
+
+      @media (max-width: 970px) {
+        .footer_bottom a span {
+          font-size: 10px;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .top_footer {
+          height: 650px;
+        }
+        .top_footer div#footer_logo {
+          width: 50%;
+
+          padding-left: 5%;
+        }
+        .top_footer ul {
+          width: 50%;
+          height: auto;
+
+          margin-bottom: 40px;
+        }
+      }
+
+      @media (max-width: 874px) {
+        .footer_bottom a span {
+          font-size: 10px;
+        }
+      }
+      @media (max-width: 768px) {
+        footer {
+          padding: 0 42px;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .footer_bottom {
+          padding: 25px 0;
+          height: auto;
+        }
+        .footer_bottom a {
+          width: 50%;
+        }
+        .footer_bottom a span {
+          line-height: 40px;
+          justify-content: center;
+          font-size: 13px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        footer {
+          padding: 0 40px;
+        }
+      }
+
+      @media (max-width: 540px) {
+        footer {
+          padding: 0 30px;
+          height: auto;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .top_footer div#footer_logo {
+          width: 100%;
+          padding-left: 0%;
+        }
+        .top_footer div#footer_logo a img {
+          display: block;
+          margin: 10px auto;
+        }
+
+        .top_footer div#footer_logo span {
+          text-align: center;
+          display: block;
+          margin-bottom: 50px;
+        }
+
+        .top_footer ul {
+          width: 100%;
+          text-align: center;
+
+          margin-bottom: 40px;
+        }
+      }
+
+      @media (max-width: 455px) {
+        .footer_bottom {
+          padding: 25px 0;
+        }
+        .footer_bottom a {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 376px) {
+        footer {
+          padding: 0 30px 20px;
+        }
       }
     
     </style>

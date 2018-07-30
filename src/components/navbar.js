@@ -2,13 +2,12 @@ import React from "react";
 class NavbarSection extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isToggleOn: true };
+    this.state = { isToggleOn: false };
     this.NavbarhandleClick = this.NavbarhandleClick.bind(this);
   }
 
   NavbarhandleClick() {
-    document.getElementById("bars").classList.toggle("clicked");
-    document.getElementById("ulNav").classList.toggle("active");
+    this.setState({ isToggleOn: !this.state.isToggleOn });
   }
 
   render() {
@@ -21,12 +20,19 @@ class NavbarSection extends React.Component {
         </div>
 
         <div className="nav">
-          <div id="bars" onClick={this.NavbarhandleClick}>
+          <div
+            id="bars"
+            className={this.state.isToggleOn ? "clicked" : "!clicked"}
+            onClick={this.NavbarhandleClick}
+          >
             <span className="bar1" />
             <span className="bar2" />
             <span className="bar3" />
           </div>
-          <ul id="ulNav">
+          <ul
+            id="ulNav"
+            className={this.state.isToggleOn ? "active" : "!active"}
+          >
             {this.props.items.map((item, i) => (
               <li key={i}>
                 <a href={item.path}>{item.label}</a>
