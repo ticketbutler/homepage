@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "gatsby-link";
+
 class NavbarSection extends React.Component {
   constructor(props) {
     super(props);
@@ -14,9 +16,9 @@ class NavbarSection extends React.Component {
     return (
       <div className="navbar" id="navbar">
         <div className="navbar_logo">
-          <a href="/">
+          <Link to="/da">
             <img src="/img/logo_white.png" />
-          </a>
+          </Link>
         </div>
 
         <div className="nav">
@@ -35,7 +37,7 @@ class NavbarSection extends React.Component {
           >
             {this.props.items.map((item, i) => (
               <li key={i}>
-                <a href={item.path}>{item.label}</a>
+                <Link to={item.path}>{item.label}</Link>
               </li>
             ))}
           </ul>

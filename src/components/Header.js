@@ -11,33 +11,18 @@ const Header = ({ heading, text, button_text, button_link, image }) => {
         width: "100%",
         color: "#fff",
         position: "relative",
-        background:`linear-gradient( to right, rgba(50, 109, 233, .9),rgba(126, 82, 232, .9)),url('${image}'),no-repeat center center`,
+        background: `linear-gradient( to right, rgba(50, 109, 233, .9),rgba(126, 82, 232, .9)),url('${image}'),no-repeat center center`,
         clipPath: "polygon(0 0, 100% 0, 100% 95%, 0% 100%)",
         backgroundSize: "cover"
       }}
     >
-      <div
-        id="navActive_back"
-        style={{
-          position: "absolute",
-          backgroundColor: "#000",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100vh",
-          zIndex: 10,
-          opacity: 0,
-          visibility: "hidden"
-        }}
-      />
       <div
         className="header_content"
         style={{
           display: "inline-block",
           width: "100%",
           textAlign: "center",
-          position: "relative",
-          zIndex: "-1"
+          position: "relative"
         }}
       >
         <h1
@@ -48,7 +33,6 @@ const Header = ({ heading, text, button_text, button_link, image }) => {
             fontFamily: "Hind",
             fontWeight: "bold",
             textAlign: "center",
-            zIndex: "-1",
             transition: "all 0.3s"
           }}
         >
@@ -94,6 +78,9 @@ const Header = ({ heading, text, button_text, button_link, image }) => {
           visibility: visible;
           opacity: 0.6;
         }
+
+      
+        
 
         header div.header_content {
           padding: 100px 110px;
