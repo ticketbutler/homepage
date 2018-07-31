@@ -12,6 +12,7 @@ const Contact_page = ({ items }) => (
           method="post"
           data-netlify="true"
         >
+          <input type="hidden" name="form-name" value="contact" />
           <ul>
             <li>
               <label>
