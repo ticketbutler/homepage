@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-
+import Link from "gatsby-link";
 import Navbar from "../components/navbar";
 import Contact_page from "../components/Contact";
 import NewsLetter_Page from "../components/newsletter_page";
@@ -29,7 +29,7 @@ export const Layout = ({
     />
 
     <Helmet>
-      <link
+      <Link
         rel="shortcut icon"
         type="image/png"
         href="/img/Favicon-tbsmall.png"
