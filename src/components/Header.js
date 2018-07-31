@@ -2,38 +2,72 @@ import React from "react";
 
 import { Button } from "./elements/elements";
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <header
+const Header = ({ heading, text, button_text, button_link, image }) => {
+  return (
+    <header
+      style={{
+        padding: "48px 0",
+        minHeight: "100vh",
+        width: "100%",
+        color: "#fff",
+        position: "relative",
+        background: `linear-gradient( to right, rgba(50, 109, 233, .9),rgba(126, 82, 232, .9)),url('${image}'),no-repeat center center`,
+        clipPath: "polygon(0 0, 100% 0, 100% 95%, 0% 100%)",
+        backgroundSize: "cover"
+      }}
+    >
+      <div
+        className="header_content"
         style={{
-          background: `linear-gradient( to right, rgba(50, 109, 233, .9),rgba(126, 82, 232, .9)),url('${
-            this.props.image
-          }'),no-repeat center center`
+          display: "inline-block",
+          width: "100%",
+          textAlign: "center",
+          position: "relative"
         }}
       >
-        <div className="header_content">
-          <h1>{this.props.heading}</h1>
-          <p>{this.props.text}</p>
-          <Button>
-            <a href={this.props.button_link}>
-              {this.props.button_text}
+        <h1
+          style={{
+            margin: "auto",
+            display: "block",
+            color: "#ffffff",
+            fontFamily: "Hind",
+            fontWeight: "bold",
+            textAlign: "center",
+            transition: "all 0.3s"
+          }}
+        >
+          {heading}
+        </h1>
+        <p
+          style={{
+            margin: "auto",
+            marginBottom: "37px",
+            marginTop: "30px",
+            display: "block",
+            color: "#ffffff",
+            fontFamily: "Montserrat",
+            textAlign: "center",
+            transition: "all 0.3s"
+          }}
+        >
+          {text}
+        </p>
+        <Button>
+          <a href={button_link}>
+            {button_text}
 
-              <span
-                style={{
-                  transition: "all 0.3s"
-                }}
-              >
-                &#187;
-              </span>
-            </a>
-          </Button>
-        </div>
+            <span
+              style={{
+                transition: "all 0.3s"
+              }}
+            >
+              &#187;
+            </span>
+          </a>
+        </Button>
+      </div>
 
-        <style jsx>{`
+      <style jsx>{`
         * {
           margin: 0;
           padding: 0;
@@ -45,43 +79,8 @@ class Header extends React.Component {
           opacity: 0.6;
         }
 
-        header{
-          padding: 48px 0;
-          min-height: 100vh;
-          width: 100%;
-          color: #fff;
-          position: relative;
-          clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
-          backgroundSize: cover;
-        }
-
-        header div.header_content {
-          display: inline-block;
-          width: 100%;
-          textAlign: center;
-          position: relative;
-          zIndex: -1;
-        }
-        header div.header_content h1 {
-          margin: auto;
-          display: block;
-          color: #ffffff;
-          font-family: Hind;
-          font-weight: bold;
-          text-align: center;
-          z-index: -1;
-          transition: all 0.3s;
-        }
-        header div.header_content p {
-          margin: auto;
-          marginBottom: 37px;
-          marginTop: 30px;
-          display: block;
-          color: #ffffff;
-          font-family: Montserrat;
-          text-align: center;
-          transition: all 0.3s;
-        }
+      
+        
 
         header div.header_content {
           padding: 100px 110px;
@@ -196,8 +195,7 @@ class Header extends React.Component {
       
     
       `}</style>
-      </header>
-    );
-  }
-}
+    </header>
+  );
+};
 export default Header;
