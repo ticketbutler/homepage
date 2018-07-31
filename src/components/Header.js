@@ -10,56 +10,14 @@ class Header extends React.Component {
     return (
       <header
         style={{
-          //   padding: "48px 0",
-          //   minHeight: "100vh",
-          //   width: "100%",
-          //   color: "#fff",
-          //   position: "relative",
           background: `linear-gradient( to right, rgba(50, 109, 233, .9),rgba(126, 82, 232, .9)),url('${
             this.props.image
           }'),no-repeat center center`
-          //   clipPath: "polygon(0 0, 100% 0, 100% 95%, 0% 100%)",
-          //   backgroundSize: "cover"
         }}
       >
-        <div
-          className="header_content"
-          // style={{
-          //   display: "inline-block",
-          //   width: "100%",
-          //   textAlign: "center",
-          //   position: "relative",
-          //   zIndex: "-1"
-          // }}
-        >
-          <h1
-          // style={{
-          //   margin: "auto",
-          //   display: "block",
-          //   color: "#ffffff",
-          //   fontFamily: "Hind",
-          //   fontWeight: "bold",
-          //   textAlign: "center",
-          //   zIndex: "-1",
-          //   transition: "all 0.3s"
-          // }}
-          >
-            {this.props.heading}
-          </h1>
-          <p
-          // style={{
-          //   margin: "auto",
-          //   marginBottom: "37px",
-          //   marginTop: "30px",
-          //   display: "block",
-          //   color: "#ffffff",
-          //   fontFamily: "Montserrat",
-          //   textAlign: "center",
-          //   transition: "all 0.3s"
-          // }}
-          >
-            {this.props.text}
-          </p>
+        <div className="header_content">
+          <h1>{this.props.heading}</h1>
+          <p>{this.props.text}</p>
           <Button>
             <a href={this.props.button_link}>
               {this.props.button_text}
