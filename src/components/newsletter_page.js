@@ -10,7 +10,7 @@ const Newsletter_Page = () => {
         <form
           className="newsletter"
           name="newsletter"
-          method="post"
+          method="POST"
           data-netlify="true"
         >
           <label>
