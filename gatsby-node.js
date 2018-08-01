@@ -98,13 +98,14 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             layout: null,
             context: {
               sections: node.frontmatter.sections,
+              Contact: Contact.edges[0].node.frontmatter,
+
               layout: {
                 TopMenu: TopMenu.edges[0].node.frontmatter.items,
                 FooterMenu: FooterMenu.edges[0].node.frontmatter.items,
                 Features: FooterMenu.edges[0].node.frontmatter.features,
                 Integration: FooterMenu.edges[0].node.frontmatter.integration,
-                Company: FooterMenu.edges[0].node.frontmatter.company,
-                Contact: Contact.edges[0].node.frontmatter
+                Company: FooterMenu.edges[0].node.frontmatter.company
               }
             }
           });

@@ -9,8 +9,9 @@ const Contact_page = ({ items }) => (
         <form
           className="contact-form"
           name="contact-form"
-          method="post"
+          method="POST"
           data-netlify="true"
+          action="/thanks/"
         >
           <input type="hidden" name="form-name" value="contact-form" />
           <ul>
@@ -54,17 +55,17 @@ const Contact_page = ({ items }) => (
             <li>
               <i className="fa fa-map-marker" />
               <span>Adresse </span>
-              <span id="address"> {items.address}</span>
+              <span id="address">Porcelænshaven 26, 2000 Frederiksberg</span>
             </li>
             <li>
               <i className="fa fa-phone" />
               <span>Telefon</span>
-              <span id="phone">{items.phone}</span>
+              <span id="phone">+45 89 80 12 80</span>
             </li>
             <li>
               <i className="fa fa-envelope" />
               <span>Generelle henvendelser</span>
-              <span id="support">{items.support}</span>
+              <span id="support">hello@ticketbutler.io</span>
             </li>
           </ul>
         </div>
