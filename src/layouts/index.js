@@ -2,8 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Link from "gatsby-link";
 import Navbar from "../components/navbar";
-import Contact_page from "../components/Contact";
-import NewsLetter_Page from "../components/newsletter_page";
+
 import Footer from "../components/footer";
 import "./index.css";
 
@@ -13,14 +12,12 @@ export const Layout = ({
   FooterMenu = [],
   Features = [],
   Integration = [],
-  Company = [],
-  Contact = []
+  Company = []
 }) => (
   <div>
     <Navbar items={TopMenu} />
     {typeof children === "function" ? children() : children}
-    <NewsLetter_Page />
-    <Contact_page items={Contact} />
+
     <Footer
       items={FooterMenu}
       features={Features}
