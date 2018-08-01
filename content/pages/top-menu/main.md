@@ -9,4 +9,3 @@ items:
   - label: Kontakt
     path: '#contact'
 ---
-

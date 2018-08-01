@@ -1,6 +1,11 @@
 import React from "react";
 import "font-awesome/css/font-awesome.min.css";
 
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 const Contact_page = ({ items }) => (
   <section id="contact">
     <div className="container">
@@ -9,8 +14,9 @@ const Contact_page = ({ items }) => (
         <form
           className="contact-form"
           name="contact-form"
-          method="post"
+          method="POST"
           data-netlify="true"
+          action="/thanks/"
         >
           <input type="hidden" name="form-name" value="contact-form" />
           <ul>
