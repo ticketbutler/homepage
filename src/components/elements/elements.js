@@ -538,7 +538,11 @@ export const LeftImage = ({ children }) => {
       @media (max-width: 1080px) {
         display: block;
         width:100%;
-        height: 400px;
+        position: relative;
+        .section_left_image   {
+          height: 400px;
+       
+      }
     
         .section_left_image figure  {
         width: 60%;
@@ -588,7 +592,7 @@ export const LeftImage = ({ children }) => {
 
 
 
-    @media (max-width: 430px) { 
+    @media (max-width: 430px) {
       .section_left_image {
         margin: 0;
         padding: 0;
@@ -598,7 +602,7 @@ export const LeftImage = ({ children }) => {
        }
       .section_left_image figure {
             width: 100%;
-            padding: 20px;
+            padding: 0px;
             height: 370px !important;
             position: absolute;
             bottom: 0;
@@ -631,6 +635,7 @@ export const LeftImage = ({ children }) => {
         position: absolute;
         bottom: 0;
      }
+    }
       `}</style>
     </div>
   );
