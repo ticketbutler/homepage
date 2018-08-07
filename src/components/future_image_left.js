@@ -107,24 +107,24 @@ const FutureImageIeft = ({
 
       @media (max-width: 1080px) {
         section.future_image_left {
-          padding: 110px 0;
+          padding: 70px 0;
         }
       }
       @media (max-width: 768px) {
         section.future_image_left {
-          padding: 80px 0;
+          padding: 50px 0;
         }
       }
 
       @media (max-width: 600px) {
         section.future_image_left {
-          padding: 40px 0;
+          padding: 0px;
         }
       }
 
       @media (max-width: 376px) {
         section.future_image_left {
-          padding: 50px 0px;
+          padding: 0px;
         }
       }
 
