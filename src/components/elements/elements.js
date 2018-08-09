@@ -538,29 +538,74 @@ export const LeftImage = ({ children }) => {
       @media (max-width: 1080px) {
         display: block;
         width:100%;
+        position: relative;
+        .section_left_image   {
+          height: 400px;
+       
+      }
     
         .section_left_image figure  {
-        width: auto;
-        height: 450px !important;
+        width: 60%;
+        height: 400px !important;
         margin-left: 50%;
         transform: translateX(-50%);
     }
         
 
         .section_left_image figure img.device {	
-          width: auto !important;
-          height: 100% !important ;
+          width: 100% !important;
+          height: auto !important ;
           margin:0;
-          margin-left: 50%;
-          transform: translateX(-50%);
+          position: absolute;
+          bottom: 0;
+        }
+    }
+    @media (max-width: 800px) {
+    
+      .section_left_image  {
+      height: 300px !important;
+   }
+  .section_left_image figure  {
+    height: 300px !important;
+ }
+}
+    @media (max-width: 600px) { 
+      .section_left_image {
+         height: 400px;
+        position: relative;
+        margin-bottom: 30px;
+       }
+      .section_left_image figure {
+            width: 80%;
+            height: 370px !important;
+            position: absolute;
+            bottom: 0;
+    
+        }
+        .section_left_image figure img.device {	
+          width: 100% !important;
+          height: auto !important ;
+          position: absolute;
+          bottom: 0;
         }
     }
 
 
-    @media (max-width: 430px) { 
+
+    @media (max-width: 430px) {
+      .section_left_image {
+        margin: 0;
+        padding: 0;
+        height: 370px;
+        position: relative;
+        margin-bottom: 30px;
+       }
       .section_left_image figure {
             width: 100%;
-            padding: 20px;
+            padding: 0px;
+            height: 370px !important;
+            position: absolute;
+            bottom: 0;
     
         }
         .section_left_image figure img.device {	
@@ -568,7 +613,28 @@ export const LeftImage = ({ children }) => {
           height: auto !important ;
           position: absolute;
           bottom: 20px;
+          bottom: 0;
         }
+    }
+    @media (max-width: 370px) { 
+      .section_left_image {
+        height: 300px;
+       }}
+     @media (max-width: 300px) { 
+       
+      .section_left_image {
+        margin: 0;
+        padding: 0;
+        max-height: 280px;
+        position: relative;
+        margin-bottom: 40px;
+       }
+      .section_left_image figure {
+        width: 100%;
+        height: 300px !important;
+        position: absolute;
+        bottom: 0;
+     }
     }
       `}</style>
     </div>
