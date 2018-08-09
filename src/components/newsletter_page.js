@@ -12,7 +12,7 @@ const Newsletter_Page = () => {
           name="newsletter"
           method="post"
           data-netlify="true"
-          action="/thanks/"
+          action="/thanks_page/"
         >
           <label>
             <input name="email" type="email" placeholder="Din email her" />

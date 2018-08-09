@@ -5,19 +5,18 @@ const Thanks = () => (
     <div className="content">
       <h1
         style={{
-          color: "#414546"
+          color: "#414546",
+          fontFamily: "Montserrat"
         }}
       >
-        Thanks
+        Tak
       </h1>
-      <p
-        style={{
-          color: "#414546"
-        }}
-      >
-        we have recived your email, Have a good day
-      </p>
-
+      <span className="tak_message">
+        Tak, vi vender tilbage inden 2 arbejds dage!
+      </span>
+      <span className="akutte">
+        For akutte tilfælde, kontakt telefon: 89 80 12 80
+      </span>
       <div id="thanks">
         <a
           href="/da/"
@@ -27,7 +26,8 @@ const Thanks = () => (
             transform: "translateX(0)"
           }}
         >
-          Back to website
+          <span />
+          tilbage til hjemmesiden
           <span
             style={{
               transition: "all 0.3s"
@@ -56,6 +56,19 @@ const Thanks = () => (
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 25px 80px;
+      }
+
+      .tak_message {
+        color: #414546;
+        font-size: 22px;
+        display: block;
+        margin-bottom: 10px;
+        font-family: Montserrat;
+      }
+      .akutte {
+        font-size: 16px;
+        color: #8c8c8c;
+        font-family: Montserrat;
       }
 
       div#thanks {
@@ -93,7 +106,7 @@ const Thanks = () => (
         position: absolute;
         left: 0;
         opacity: 0;
-        color: #7e52e8;
+        color: #326de9;
         transition: all 0.3s ease;
         transform: rotate(180deg);
       }
@@ -120,6 +133,12 @@ const Thanks = () => (
           width: 550px;
           height: auto;
         }
+        .tak_message {
+          font-size: 18px;
+        }
+        .akutte {
+          color: #8c8c8c;
+        }
       }
 
       @media (max-width: 600px) {
@@ -133,12 +152,22 @@ const Thanks = () => (
         .thanks_page .content {
           width: 90%;
           height: auto;
+          padding: 20px 40px;
         }
       }
 
       @media (max-width: 376px) {
         div#thanks a {
           font-size: 11px;
+        }
+        .thanks_page .content {
+          padding: 20px;
+        }
+        .tak_message {
+          margin-bottom: 10px;
+        }
+        .akutte {
+          font-size: 14px;
         }
       }
     `}</style>

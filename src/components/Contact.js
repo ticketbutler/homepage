@@ -11,7 +11,7 @@ const Contact_page = ({ items }) => (
           name="contact-form"
           method="post"
           data-netlify="true"
-          action="/thanks/"
+          action="/thanks_page/"
         >
           <input type="hidden" name="form-name" value="contact-form" />
           <ul>
