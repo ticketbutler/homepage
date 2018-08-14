@@ -35,27 +35,29 @@ const FutureLayers = ({
         >
           {text}
         </p>
+        {button_text &&
+          button_text.length > 0 && (
+            <Button className="right">
+              <a
+                href={button_link}
+                style={{
+                  right: "100%",
+                  transform: "translateX(100%)"
+                }}
+              >
+                {button_text}
 
-        <Button className="right">
-          <a
-            href={button_link}
-            style={{
-              right: "100%",
-              transform: "translateX(100%)"
-            }}
-          >
-            {button_text}
-
-            <span
-              style={{
-                width: "100%",
-                transition: "all 0.3s"
-              }}
-            >
-              &#187;
-            </span>
-          </a>
-        </Button>
+                <span
+                  style={{
+                    width: "100%",
+                    transition: "all 0.3s"
+                  }}
+                >
+                  &#187;
+                </span>
+              </a>
+            </Button>
+          )}
       </SectionText>
     </div>
 
