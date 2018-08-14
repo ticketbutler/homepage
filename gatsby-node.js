@@ -14,8 +14,30 @@ const query = `query IndexQuery {
             image
             image_alt
             button_text
-            button_link
+            button_link 
           } 
+          feature_page {
+            heading
+            text
+            items {
+              image
+              alt
+              name
+            }
+          }
+          logo_section{
+            heading
+            items{
+              image
+              alt
+            }
+          }  
+          testimonials{
+            text
+            image
+            logo
+            about
+          }
         }
       }
     }
@@ -97,7 +119,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             component: Component,
             layout: null,
             context: {
+              pages_path: node.frontmatter.path,
               sections: node.frontmatter.sections,
+              logo_section: node.frontmatter.logo_section,
+              testimonials: node.frontmatter.testimonials,
+              feature_page: node.frontmatter.feature_page,
               layout: {
                 TopMenu: TopMenu.edges[0].node.frontmatter.items,
                 FooterMenu: FooterMenu.edges[0].node.frontmatter.items,

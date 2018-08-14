@@ -37,22 +37,89 @@ const CmsPage = ({ pathContext }) => (
       pathContext.sections.map((section, i) => {
         const Component = components.find(({ id }) => id === section.type)
           .Component;
+
+        if (pathContext.testimonials) {
+          if (i === 4)
+            return (
+              <React.Fragment>
+                <Component key={i} {...section} />
+                <SliderSection
+                  items={
+                    pathContext.testimonials ? pathContext.testimonials : []
+                  }
+                />
+              </React.Fragment>
+            );
+        }
+
+        if (pathContext.logo_section) {
+          if (i === 6)
+            return (
+              <React.Fragment>
+                <Component key={i} {...section} />
+                <LogoSection
+                  items={
+                    pathContext.logo_section
+                      ? pathContext.logo_section.items
+                      : []
+                  }
+                  heading={
+                    pathContext.logo_section
+                      ? pathContext.logo_section.heading
+                      : []
+                  }
+                />
+              </React.Fragment>
+            );
+
+          if (i === 8)
+            return (
+              <React.Fragment>
+                <Component key={i} {...section} />
+                <LogoSection
+                  items={
+                    pathContext.logo_section
+                      ? pathContext.logo_section.items
+                      : []
+                  }
+                  heading={
+                    pathContext.logo_section
+                      ? pathContext.logo_section.heading
+                      : []
+                  }
+                />
+              </React.Fragment>
+            );
+        }
+
+        if (pathContext.pages_path == "/da/features") {
+          if (i === 0)
+            return (
+              <React.Fragment>
+                <FeaturePage
+                  heading={
+                    pathContext.feature_page
+                      ? pathContext.feature_page.heading
+                      : []
+                  }
+                  paragraph={
+                    pathContext.feature_page
+                      ? pathContext.feature_page.heading
+                      : []
+                  }
+                  items={
+                    pathContext.feature_page
+                      ? pathContext.feature_page.items
+                      : []
+                  }
+                />
+                <Component key={i} {...section} />
+              </React.Fragment>
+            );
+        }
+
         return <Component key={i} {...section} />;
       })}
-
-      {/* <FeaturePage 
-        heading={pathContext.feature_page ? pathContext.feature_page.heading : []}
-        paragraph={pathContext.feature_page ? pathContext.feature_page.heading : []}
-        items={pathContext.feature_page ? pathContext.feature_page.items : []}
-      ></FeaturePage> */}
-
-    {/* <LogoSection
-      items={pathContext.logo_section ? pathContext.logo_section.items : []}
-      heading={pathContext.logo_section ? pathContext.logo_section.heading : []}
-    />
-    <SliderSection
-      items={pathContext.testimonials ? pathContext.testimonials.items : []}
-    /> */}
   </Layout>
 );
 
