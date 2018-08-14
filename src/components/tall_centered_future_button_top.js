@@ -1,6 +1,4 @@
 import React from "react";
-// import Link from "gatsby-link";
-import styled from "styled-components";
 
 import { Button, SectionText } from "./elements/elements";
 import { SmallTriangle, SquareShape } from "./elements/shapes";
@@ -34,25 +32,28 @@ const TallCenteredFutureButtonTop = ({
       <SectionText>
         <h2>{heading}</h2>
         <p>{text}</p>
-        <Button className="right">
-          <a
-            href={button_link}
-            style={{
-              marginBottom: "50px",
-              marginTop: "30px"
-            }}
-          >
-            {button_text}
+        {button_text &&
+          button_text.length > 0 && (
+            <Button className="right">
+              <a
+                href={button_link}
+                style={{
+                  marginBottom: "50px",
+                  marginTop: "30px"
+                }}
+              >
+                {button_text}
 
-            <span
-              style={{
-                transition: "all 0.3s"
-              }}
-            >
-              &#187;
-            </span>
-          </a>
-        </Button>
+                <span
+                  style={{
+                    transition: "all 0.3s"
+                  }}
+                >
+                  &#187;
+                </span>
+              </a>
+            </Button>
+          )}
       </SectionText>
       <img alt={image_alt} src={image} />
     </div>
