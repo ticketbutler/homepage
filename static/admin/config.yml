@@ -124,3 +124,38 @@ collections:
           - { name: button_text, label: Button Text, required: false }
           - { name: button_link, label: Button Link, required: false }
           
+      - name: feature_page
+        label: Feature Page
+        widget: list
+        fields: 
+          - { name: heading, label: Heading }
+          - { name: text, label: Text }
+          - name: items
+            label: Items
+            widget: list
+            fields:
+              - { name: image, label: Image, widget: image, required: false }               
+              - { name: alt, label: Alt, required: false } 
+              - { name: name, label: Name, required: false } 
+
+
+      - name: logo_section
+        label: LogoSection
+        widget: list
+        fields:
+          - { name: heading, label: Heading } 
+          - name: items
+            label: Items
+            widget: list
+            fields:
+              - { name: image, label: Image, widget: image, required: false } 
+              - { name: alt, label: Alt, required: false } 
+
+      - name: testimonials
+        label: Testimonials
+        widget: list
+        fields:
+          - { name: image, label: Image, widget: image, required: false } 
+          - { name: text, label: Text, required: false } 
+          - { name: about, label: About, required: false } 
+          - { name: logo, label: Logo, widget: image, required: false } 
