@@ -8,11 +8,10 @@ import TallCenteredFutureButtonTop from "../components/tall_centered_future_butt
 import FutureImageRightSecond from "../components/future_image_right_second";
 import FutureImageRightNew from "../components/future_image_right_new";
 import FutureLayers from "../components/future_layers";
+// import LogoSection from "../components/logo-section";
+import Testimonials from "../components/testimonials";
 
-import LogoSection from "../components/logo-section";
-import SliderSection from "../components/slider_section";
-
-import FeaturePage from "../components/feature_page";
+// import FeaturePage from "../components/feature_page";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -28,7 +27,8 @@ const components = [
   },
   { Component: FutureImageRightSecond, id: "future_image_right_second" },
   { Component: FutureImageRightNew, id: "future_image_right_new" },
-  { Component: FutureLayers, id: "future_layers" }
+  { Component: FutureLayers, id: "future_layers" },
+  { Component: Testimonials, id: "testimonial" }
 ];
 
 const CmsPage = ({ pathContext }) => (
@@ -37,23 +37,144 @@ const CmsPage = ({ pathContext }) => (
       pathContext.sections.map((section, i) => {
         const Component = components.find(({ id }) => id === section.type)
           .Component;
+
         return <Component key={i} {...section} />;
       })}
-
-      {/* <FeaturePage 
-        heading={pathContext.feature_page ? pathContext.feature_page.heading : []}
-        paragraph={pathContext.feature_page ? pathContext.feature_page.heading : []}
-        items={pathContext.feature_page ? pathContext.feature_page.items : []}
-      ></FeaturePage> */}
-
-    {/* <LogoSection
-      items={pathContext.logo_section ? pathContext.logo_section.items : []}
-      heading={pathContext.logo_section ? pathContext.logo_section.heading : []}
-    />
-    <SliderSection
-      items={pathContext.testimonials ? pathContext.testimonials.items : []}
-    /> */}
   </Layout>
 );
 
 export default CmsPage;
+
+// if (pathContext.testimonials) {
+//   if (i === 4)
+//     return (
+//       <React.Fragment>
+//         {/* <Component key={i} {...section} /> */}
+//         <SliderSection
+//           items={
+//             pathContext.testimonials ? pathContext.testimonials : []
+//           }
+//         />
+//       </React.Fragment>
+//     );
+// }
+
+// if (pathContext.pages_path == "/da/billigt-billetsystem") {
+//   if (i === 2)
+//     return (
+//       <React.Fragment>
+//         {/* <Component key={i} {...section} /> */}
+//         <SliderSection
+//           items={
+//             pathContext.testimonials ? pathContext.testimonials : []
+//           }
+//         />
+//       </React.Fragment>
+//     );
+// }
+
+// if (pathContext.pages_path == "/da/billigt-billetsystem") {
+//   if (i === 2)
+//     return (
+//       <React.Fragment>
+//         <Component key={i} {...section} />
+//         <LogoSection
+//           items={
+//             pathContext.logo_section
+//               ? pathContext.logo_section.items
+//               : []
+//           }
+//           heading={
+//             pathContext.logo_section
+//               ? pathContext.logo_section.heading
+//               : []
+//           }
+//         />
+//       </React.Fragment>
+//     );
+// }
+// if (pathContext.pages_path == "/da/dit-billetsystem") {
+//   if (i === 2)
+//     return (
+//       <React.Fragment>
+//         <Component key={i} {...section} />
+//         <LogoSection
+//           items={
+//             pathContext.logo_section
+//               ? pathContext.logo_section.items
+//               : []
+//           }
+//           heading={
+//             pathContext.logo_section
+//               ? pathContext.logo_section.heading
+//               : []
+//           }
+//         />
+//       </React.Fragment>
+//     );
+// }
+// if (pathContext.logo_section) {
+//   if (i === 2)
+//     return (
+//       <React.Fragment>
+//         <Component key={i} {...section} />
+//         <LogoSection
+//           items={
+//             pathContext.logo_section
+//               ? pathContext.logo_section.items
+//               : []
+//           }
+//           heading={
+//             pathContext.logo_section
+//               ? pathContext.logo_section.heading
+//               : []
+//           }
+//         />
+//       </React.Fragment>
+//     );
+
+//   if (i === 7)
+//     return (
+//       <React.Fragment>
+//         <Component key={i} {...section} />
+//         <LogoSection
+//           items={
+//             pathContext.logo_section
+//               ? pathContext.logo_section.items
+//               : []
+//           }
+//           heading={
+//             pathContext.logo_section
+//               ? pathContext.logo_section.heading
+//               : []
+//           }
+//         />
+//       </React.Fragment>
+//     );
+// }
+
+// if (pathContext.pages_path == "/da/features") {
+//   if (i === 0)
+//     return (
+//       <React.Fragment>
+//         <FeaturePage
+//           heading={
+//             pathContext.feature_page
+//               ? pathContext.feature_page.heading
+//               : []
+//           }
+//           paragraph={
+//             pathContext.feature_page
+//               ? pathContext.feature_page.heading
+//               : []
+//           }
+//           items={
+//             pathContext.feature_page
+//               ? pathContext.feature_page.items
+//               : []
+//           }
+//         />
+//         <Component key={i} {...section} />
+//       </React.Fragment>
+//     );
+// }

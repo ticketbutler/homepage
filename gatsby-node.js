@@ -14,7 +14,16 @@ const query = `query IndexQuery {
             image
             image_alt
             button_text
-            button_link
+            button_link 
+          } 
+          feature_page {
+            heading
+            text
+            items {
+              image
+              alt
+              name
+            }
           } 
         }
       }
@@ -78,6 +87,22 @@ const query = `query IndexQuery {
     }
   }
 
+  Testimonials: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/testimonials/"}}) {
+    edges {
+      node {
+        frontmatter {
+          placeit
+          path
+          items {
+            image
+            text
+            about
+            logo
+          }
+        }
+      }
+    }
+  }
 }`;
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
@@ -90,14 +115,44 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         if (res.errors || res.messages) {
           reject(res.errors + " " + res.messages);
         }
-        let { Pages, TopMenu, FooterMenu, Contact } = res.data;
+
+        let { Pages, TopMenu, FooterMenu, Contact, Testimonials } = res.data;
+
+        let testimonials = Testimonials.edges.map(t => {
+          // console.log(t.node.frontmatter.items);
+          return {
+            ...t.node.frontmatter,
+            type: "testimonial"
+          };
+        });
+
+        // console.log(testimonials[1].node.frontmatter.items);
+
         Pages.edges.forEach(({ node }) => {
+          let sections = [];
+          if (node.frontmatter.path === testimonials[0].path) {
+            node.frontmatter.sections.forEach((s, i) => {
+              if (i === testimonials[0].placeit) {
+                testimonials[0] && sections.push(testimonials[0]);
+              }
+              // if (i === 5) {
+              //   testimonials[1] && sections.push(testimonials[1]);
+              // }
+              sections.push(s);
+            });
+          } else {
+            sections = node.frontmatter.sections;
+          }
           createPage({
             path: node.frontmatter.path,
             component: Component,
             layout: null,
             context: {
-              sections: node.frontmatter.sections,
+              pages_path: node.frontmatter.path,
+              sections,
+              // logo_section: node.frontmatter.logo_section,
+              // testimonials: node.frontmatter.testimonials,
+              // feature_page: node.frontmatter.feature_page,
               layout: {
                 TopMenu: TopMenu.edges[0].node.frontmatter.items,
                 FooterMenu: FooterMenu.edges[0].node.frontmatter.items,

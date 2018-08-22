@@ -6,14 +6,14 @@ meta_description: >-
   matcher dit brand. 
 sections:
   - button_link: '#contact'
-    button_text: Kontakt os!
+    button_text: kontakt 
     heading: Dit skræddersyede billetsystem
     image: /img/splash-new.png
     text: Din data. Dit brand. Din succes
     type: header
   - heading: Din succes er vores succes
     image: /img/robust-billetsystem.png
-    image_alt: 'Robust-billetsystem-knuckles '
+    image_alt: 'Robust-billetsystem-knuckles'
     text: >-
       Ticketbutler er et online billetsystem pakket med features, som er
       udviklet til at gøre livet som arrangør nemmere. Dit brand er i fokus, du
@@ -91,5 +91,6 @@ sections:
       Giv os dit logo og brandfarver og du har dit eget billetsystem inden for
       et par dage. Vi designer systemet, så det ser lækkert ud til dit brand.
     type: tall_centered_future_button_top
----
+ 
 
+---

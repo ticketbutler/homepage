@@ -2,50 +2,51 @@ import React from "react";
 
 const Company_logos = ({ items, heading }) => {
   return (
-    <section className="container logo_section">
-      <div>
+    <section className="logo_section">
+      <div className="content">
         <h2>{heading}</h2>
 
-        <div>
+        <div className="logoes">
           {items.map((item, i) => (
-            <img key={i + "v"} src={item.image} alt={item.alt} />
+            <img key={i} src={item.image} alt={item.alt} />
           ))}
         </div>
       </div>
 
       <style jsx>{`
         section.logo_section {
-          padding: 100px 0;
+          padding: 60px 0;
+          padding-top: 0px;
           width: 100%;
           position: relative;
         }
 
-        .logo_section div {
+        section.logo_section div.content {
           width: 100%;
         }
 
-        .logo_section div h2 {
+        section.logo_section div.content h2 {
           display: block;
           text-align: center;
           color: #333f52;
           font-family: Hind;
-          font-size: 20px;
+          font-size: 30px;
           font-weight: bold;
           line-height: 35px;
         }
 
-        .logo_section div div {
+        div.logoes {
           display: flex;
           justify-content: center;
           -webkit-flex-wrap: wrap;
           flex-wrap: wrap;
           width: 100%;
           height: auto;
-          .logo_section div div img {
-            height: 40px;
-            margin: 10px 20px;
-            opacity: 0.6;
-          }
+        }
+        div.logoes img {
+          height: 40px;
+          margin: 10px 20px;
+          opacity: 0.6;
         }
 
         @media (max-width: 1080px) {

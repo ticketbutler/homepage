@@ -5,7 +5,9 @@ import { Carousel } from "react-responsive-carousel";
 const Section = styled.section`
   padding: 100px 0;
   width: 100%;
+  height: 850px;
   position: relative;
+  margin-bottom: 50px;
   margin-top: 150px;
 
   @media (max-width: 1080px) {
@@ -128,13 +130,13 @@ const Content = styled.div`
    }
   div{
       div.slider{
-        // width: 100%;
-        // height: 100%;
+        width: 100%;
+        height: 100%;
         img.quote{
           position: absolute;
-          width: 500px;
+          width: 400px;
           left: 10%;
-          top: -50px;
+          top: -20px;
           font-size: 1000px;
           z-index: 100;
           opacity: 1;  
@@ -142,7 +144,7 @@ const Content = styled.div`
         } 
         div.item{
             width: 100%;
-            height: 700px;
+            height: 100%;
             padding: 80px 0;
             
             background-color:rgb(246, 251, 255);
@@ -152,13 +154,13 @@ const Content = styled.div`
                 display:block;
                 margin-left: 50%;
               transform: translateX(-50%);
-              height: 114px;	width: 769px;	color: #868E99;	font-family: Montserrat;	font-size: 24px;	line-height: 38px;	text-align: center;
+              width: 769px;	color: #868E99;	font-family: Montserrat;	font-size: 24px;	line-height: 38px;	text-align: center;
             }
   
           img.pic {
               displa: block;
-              width: 250px;
-              height: 250px;
+              width: 200px;
+              height:200px;
               border-radius:50%;
               object-fit: cover
               // margin-left: 50%;
@@ -385,7 +387,18 @@ const Slider_section = ({ items }) => {
           <div className="slider">
             <img className="quote" src="../img/quote.png" />
 
-            <Carousel showArrows="true" useKeyboardArrows="true" Responsive>
+            <Carousel
+              showArrows="true"
+              useKeyboardArrows="true"
+              Responsive
+              autoPlay
+              swipeable
+              emulateTouch
+              interval="7000"
+              // stopOnHover
+              infiniteLoop
+              transitionTime="500"
+            >
               {items.map(item => (
                 <div key={item} className="item">
                   <img className="pic" src={item.image} />
