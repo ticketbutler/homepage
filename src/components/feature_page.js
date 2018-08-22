@@ -117,25 +117,25 @@ const FutureImageIeft = ({ heading, items, paragraph }) => (
 */}
       <div className="slider_item">
         <a href="#feature_section" className="feature_item">
-          <img src="../img/feature_sub_logo.png" />
+          <img src="../img/shape_feature.png" />
           <span>0</span>
         </a>
       </div>
       <div className="slider_item">
         <a href="#feature_section" className="feature_item">
-          <img src="../img/feature_sub_logo.png" />
+          <img src="../img/shape_feature.png" />
           <span>1</span>
         </a>
       </div>
       <div className="slider_item">
         <a href="#feature_section" className="feature_item">
-          <img src="../img/feature_sub_logo.png" />
+          <img src="../img/shape_feature.png" />
           <span>2</span>
         </a>
       </div>
       <div className="slider_item">
         <a href="#feature_section" className="feature_item">
-          <img src="../img/feature_sub_logo.png" />
+          <img src="../img/shape_feature.png" />
           <span>3</span>
         </a>
       </div>
@@ -252,9 +252,9 @@ const FutureImageIeft = ({ heading, items, paragraph }) => (
 
       div.slider_item:hover {
         transform: scale(1.05);
-        -webkit-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.35);
-        -moz-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.35);
-        box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.35);
+        -webkit-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.3);
         position: relative;
         z-index: 100;
       }
