@@ -387,7 +387,18 @@ const Slider_section = ({ items }) => {
           <div className="slider">
             <img className="quote" src="../img/quote.png" />
 
-            <Carousel showArrows="true" useKeyboardArrows="true" Responsive>
+            <Carousel
+              showArrows="true"
+              useKeyboardArrows="true"
+              Responsive
+              autoPlay
+              swipeable
+              emulateTouch
+              interval="7000"
+              // stopOnHover
+              infiniteLoop
+              transitionTime="500"
+            >
               {items.map(item => (
                 <div key={item} className="item">
                   <img className="pic" src={item.image} />

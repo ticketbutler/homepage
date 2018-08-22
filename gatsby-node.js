@@ -24,14 +24,7 @@ const query = `query IndexQuery {
               alt
               name
             }
-          }
-          logo_section{
-            heading
-            items{
-              image
-              alt
-            }
-          }  
+          } 
         }
       }
     }

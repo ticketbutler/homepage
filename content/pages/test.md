@@ -92,14 +92,5 @@ sections:
       et par dage. Vi designer systemet, så det ser lækkert ud til dit brand.
     type: tall_centered_future_button_top
  
-logo_section:
-  heading: Ticketbutler integrates with you favorits CMS
-  items:
-    - image: /img/WP.png
-      alt: image1
-    - image: /img/wix.png
-      alt: image2
-    - image: /img/SQ.png
-      alt: image3
 
 ---
