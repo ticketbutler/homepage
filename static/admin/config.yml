@@ -1,7 +1,6 @@
 backend:
   name: github
   repo: ticketbutler/homepage
-  branch: "feature/new_sections"
     
 media_folder: static/img
 public_folder: img
