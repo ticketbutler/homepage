@@ -1,7 +1,4 @@
 import React from "react";
-// import Link from "gatsby-link";
-import styled from "styled-components";
-// import $ from "jquery";
 
 import { Button, SectionText } from "./elements/elements";
 import { SmallTriangle, SquareShape } from "./elements/shapes";
@@ -36,19 +33,22 @@ const TallCenteredFuture = ({
         <h2>{heading}</h2>
         <p>{text}</p>
         <img alt={image_alt} src={image} />
-        <Button>
-          <a href={button_link}>
-            {button_text}
+        {button_text &&
+          button_text.length > 0 && (
+            <Button>
+              <a href={button_link}>
+                {button_text}
 
-            <span
-              style={{
-                transition: "all 0.3s"
-              }}
-            >
-              &#187;
-            </span>
-          </a>
-        </Button>
+                <span
+                  style={{
+                    transition: "all 0.3s"
+                  }}
+                >
+                  &#187;
+                </span>
+              </a>
+            </Button>
+          )}
       </SectionText>
     </div>
 

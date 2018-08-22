@@ -41,25 +41,28 @@ const FutureImageIeft = ({
         >
           {text}
         </p>
-        <Button className="right">
-          <a
-            href={button_link}
-            style={{
-              right: "0",
-              transform: "translateX(0)"
-            }}
-          >
-            {button_text}
+        {button_text &&
+          button_text.length > 0 && (
+            <Button className="right">
+              <a
+                href={button_link}
+                style={{
+                  right: "0",
+                  transform: "translateX(0)"
+                }}
+              >
+                {button_text}
 
-            <span
-              style={{
-                transition: "all 0.3s"
-              }}
-            >
-              &#187;
-            </span>
-          </a>
-        </Button>
+                <span
+                  style={{
+                    transition: "all 0.3s"
+                  }}
+                >
+                  &#187;
+                </span>
+              </a>
+            </Button>
+          )}
       </SectionText>
     </div>
     <div className="shape_pos_square_1 Future_image_left_section">
