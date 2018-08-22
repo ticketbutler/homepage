@@ -52,19 +52,22 @@ const Header = ({ heading, text, button_text, button_link, image }) => {
         >
           {text}
         </p>
-        <Button>
-          <a href={button_link}>
-            {button_text}
+        {button_text &&
+          button_text.length > 0 && (
+            <Button>
+              <a href={button_link}>
+                {button_text}
 
-            <span
-              style={{
-                transition: "all 0.3s"
-              }}
-            >
-              &#187;
-            </span>
-          </a>
-        </Button>
+                <span
+                  style={{
+                    transition: "all 0.3s"
+                  }}
+                >
+                  &#187;
+                </span>
+              </a>
+            </Button>
+          )}
       </div>
 
       <style jsx>{`

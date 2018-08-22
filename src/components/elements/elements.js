@@ -5,11 +5,17 @@ export const Button = ({ children }) => {
     <div className="section_btn">
       {children}
 
+      <div className="clear-fix" />
       <style jsx>{`
         .section_btn {
           display: block;
           position: relative;
           width: 100%;
+          height: auto;
+        }
+
+        .clear-fix {
+          clear: both;
         }
 
         .section_btn a {

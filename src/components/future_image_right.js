@@ -1,7 +1,14 @@
 import React from "react";
-import { SectionText, RightImage } from "./elements/elements";
+import { Button, SectionText, RightImage } from "./elements/elements";
 
-const FutureImageRight = ({ heading, text, image, image_alt }) => {
+const FutureImageRight = ({
+  heading,
+  text,
+  image,
+  image_alt,
+  button_text,
+  button_link
+}) => {
   return (
     <section className="Future_image_right">
       <div className="right_image_section">
@@ -33,6 +40,28 @@ const FutureImageRight = ({ heading, text, image, image_alt }) => {
           >
             {text}
           </p>
+          {button_text &&
+            button_text.length > 0 && (
+              <Button className="right">
+                <a
+                  href={button_link}
+                  style={{
+                    right: "100%",
+                    transform: "translateX(100%)"
+                  }}
+                >
+                  {button_text}
+
+                  <span
+                    style={{
+                      transition: "all 0.3s"
+                    }}
+                  >
+                    &#187;
+                  </span>
+                </a>
+              </Button>
+            )}
         </SectionText>
       </div>
 

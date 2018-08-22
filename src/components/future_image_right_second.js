@@ -1,7 +1,4 @@
 import React from "react";
-// import Link from "gatsby-link";
-import styled from "styled-components";
-// import $ from "jquery";
 
 import { SectionText, RightImage } from "./elements/elements";
 
