@@ -15,7 +15,8 @@ const Company_logos = ({ items, heading }) => {
 
       <style jsx>{`
         section.logo_section {
-          padding: 100px 0;
+          padding: 60px 0;
+          padding-top: 0px;
           width: 100%;
           position: relative;
         }
@@ -29,7 +30,7 @@ const Company_logos = ({ items, heading }) => {
           text-align: center;
           color: #333f52;
           font-family: Hind;
-          font-size: 20px;
+          font-size: 30px;
           font-weight: bold;
           line-height: 35px;
         }

@@ -6,14 +6,14 @@ meta_description: >-
   matcher dit brand. 
 sections:
   - button_link: '#contact'
-    button_text: 
+    button_text: kontakt 
     heading: Dit skræddersyede billetsystem
     image: /img/splash-new.png
     text: Din data. Dit brand. Din succes
     type: header
   - heading: Din succes er vores succes
     image: /img/robust-billetsystem.png
-    image_alt: 'Robust-billetsystem-knuckles '
+    image_alt: 'Robust-billetsystem-knuckles'
     text: >-
       Ticketbutler er et online billetsystem pakket med features, som er
       udviklet til at gøre livet som arrangør nemmere. Dit brand er i fokus, du
@@ -101,18 +101,5 @@ logo_section:
       alt: image2
     - image: /img/SQ.png
       alt: image3
-
-testimonials:
-  - text: >- 
-      Vi benyttede Ticketbutler til vores nye innovationsevent. De var utroligt venlige og responderede hurtigt fleksibeltpå vores henvendelsr
-    image: /img/face.jpg
-    logo: /img/text_logo.png
-    about: Marius Cortsen, TexhSprint organizer
-  
-  - text: >- 
-      Vi benyttede Ticketbutler til vores nye innovationsevent. De var utroligt venlige og responderede hurtigt fleksibeltpå vores henvendelsr
-    image: /img/face.jpg
-    logo:  /img/text_logo.png
-    about: Marius Cortsen, TexhSprint organizer
 
 ---
