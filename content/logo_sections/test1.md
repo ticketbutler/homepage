@@ -1,5 +1,5 @@
 ---
-path: da/
+path: /da/
 placeit: 3
 heading: "Dine gæster kan blandt andet betale med:"
 items:

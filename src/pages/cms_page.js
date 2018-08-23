@@ -10,8 +10,7 @@ import FutureImageRightNew from "../components/future_image_right_new";
 import FutureLayers from "../components/future_layers";
 import LogoSection from "../components/logo-section";
 import Testimonials from "../components/testimonials";
-
-// import FeaturePage from "../components/feature_page";
+import FeaturePage from "../components/feature_page";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -29,7 +28,8 @@ const components = [
   { Component: FutureImageRightNew, id: "future_image_right_new" },
   { Component: FutureLayers, id: "future_layers" },
   { Component: Testimonials, id: "testimonial" },
-  { Component: LogoSection, id: "logo_section" }
+  { Component: LogoSection, id: "logo_section" },
+  { Component: FeaturePage, id: "feature_section" }
 ];
 
 const CmsPage = ({ pathContext }) => (
