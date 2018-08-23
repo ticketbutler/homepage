@@ -11,8 +11,8 @@ sections:
     image: /img/tilmeldingssystem-til-networking-events.jpg
     text: Gør alle glade ved at gøre det nemt for både dig selv og dine gæster
     type: header
-  - button_link: '#contact'
-    button_text: Kontakt os!
+  - button_link: ''
+    button_text: ''
     heading: 'Gør det nemt for dine gæster '
     image: /img/user-journey-with-mobilepay.png
     image_alt: sælg-billetter-online
@@ -31,8 +31,8 @@ sections:
       informerede om praktiske forhold og om, hvor meget de har at glæde sig til
       – måske de lokker sine venner med?
     type: future_image_right
-  - button_link: '#contact'
-    button_text: Kontakt os!
+  - button_link: ''
+    button_text: ''
     heading: Brug for en eventside?
     image: /img/event-page-tb.png
     image_alt: 'sælg-billetter-fra-din-hjemmeside '
@@ -40,8 +40,8 @@ sections:
       Ønsker du ikke at integrere Ticketbutler direkte på din hjemmeside,
       opretter vi automatisk en separat eventside i dit design.
     type: tall_centered_future
-  - button_link: '#contact'
-    button_text: Kontakt os!
+  - button_link: ''
+    button_text: ''
     heading: 'En naturlig udvidelse af dit brand '
     image: /img/brugerrejse-i-et-online-billetsystem2.png
     image_alt: match-dit-brand
