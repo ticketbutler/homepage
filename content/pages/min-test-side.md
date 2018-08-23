@@ -21,7 +21,7 @@ sections:
       billetgebyr lægges ovenpå billetprisen. Ingen kortgebyr. Ingen MobilePay
       gebyr. Ingen overraskelser. 
     type: future_image_right_second
-  - button_text: Kontakt os!
+  - button_text: ''
     heading: Gratis events
     image: /img/business-happy.png
     image_alt: billigt-billetsystem
