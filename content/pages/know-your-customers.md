@@ -6,7 +6,7 @@ meta_description: >-
   spørgsmål når du sælger billetter online. Skyd dit event i gang i dag. 
 sections:
   - button_link: '#contact'
-    button_text: Læs mere
+    button_text: Kontakt os!
     heading: Kend dine gæster
     image: /img/billetsystem-til-koncerter.png
     text: >-
@@ -34,8 +34,8 @@ sections:
       kan du lære dine gæster bedre at kende, så du kan give dem en bedre
       oplevelse til eventet.
     type: future_image_right_new
-  - button_link: '#contact'
-    button_text: Kontakt os!
+  - button_link: ''
+    button_text: ''
     heading: Lær fra din salgshistorik
     image: /img/online-billetsalg-overblik.png
     image_alt: Online-billetsalg-overblik
