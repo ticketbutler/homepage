@@ -6,7 +6,7 @@ meta_description: >-
   matcher dit brand. 
 sections:
   - button_link: '#contact'
-    button_text: kontakt
+    button_text: Kontakt os!
     heading: Dit skræddersyede billetsystem
     image: /img/splash-new.png
     text: Din data. Dit brand. Din succes
