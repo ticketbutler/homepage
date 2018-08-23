@@ -12,7 +12,8 @@ sections:
     image_alt: ''
     text: Hvorfor har verden brug for endnu et billetsystem?
     type: header
-  - button_text: ''
+  - button_link: '#contact'
+    button_text: Kontakt os!
     heading: Hvem er Ticketbutler?
     image: /img/ticketbutler_logo-with-padding2.png
     image_alt: Ticketbutler-billetsystem-logo
