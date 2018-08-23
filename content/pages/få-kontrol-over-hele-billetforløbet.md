@@ -14,8 +14,8 @@ sections:
       gæster, hold styr på billetsalget og check dine gæster ind med
       Ticketbutler app'en
     type: header
-  - button_link: '#contact'
-    button_text: Kontakt os!
+  - button_link: ''
+    button_text: ''
     heading: Hjælp dine kunder
     image: /img/refunder-billetter-i-online-billetsystem.png
     image_alt: Refunder-billetter-i-online-billetsystem
@@ -32,8 +32,8 @@ sections:
       medlemsbilletter så medlemmet skal skrive sin medlemskode ind for at få
       adgang til at købe billetten.
     type: future_image_right_new
-  - button_link: '#contact'
-    button_text: Kontakt os!
+  - button_link: ''
+    button_text: ''
     heading: Billetter til ethvert behov
     image: /img/billetsystem-med-billettyper.png
     image_alt: Billetsystem-mede-flere-billettyper
@@ -44,8 +44,8 @@ sections:
       billettyperne aktivt i din markedsføring f.eks. ved at sælge ‘Early bird’-
       eller VIP-billetter.
     type: future_image_left
-  - button_link: '#contact'
-    button_text: Kontakt os!
+  - button_link: ''
+    button_text: ''
     heading: Check dine gæster ind til eventet
     image: /img/ticketbutler-app-med-qr-kode.png
     image_alt: Billetscanner-app-QR-kode
@@ -54,8 +54,8 @@ sections:
       dit online billetsalg, checke gæster ind med et enkelt swipe eller scanne
       QR-koden på dine gæsters billetter til eventet.
     type: tall_centered_future
-  - button_link: '#contact'
-    button_text: Kontakt os!
+  - button_link: ''
+    button_text: ''
     heading: 'Bevar overblikket '
     image: /img/online-billetsalg-overblik.png
     image_alt: Online-billetsalg-overblik
