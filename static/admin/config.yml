@@ -6,7 +6,7 @@ media_folder: static/img
 public_folder: img
 
 collections:
-    # *************************
+  # *************************
   #  TesteMonials 
   # ************************
   - name: testemonials
@@ -25,6 +25,26 @@ collections:
           - { name: about, label: About, required: false } 
           - { name: logo, label: Logo, widget: image, required: false } 
    
+   
+
+  # *************************
+  #  Logo Sections 
+  # ************************
+  - name: logos
+    label: Logo Sections
+    folder: content/logo_sections
+    create: true
+    fields:
+      - { name: placeit, label: Place the testimonals, required: false } 
+      - { name: path, label: Path }
+      - { name: heading, label: Heading }
+      - name: items
+        label: Items
+        widget: list
+        fields:
+          - { name: image, label: Image, widget: image, required: false } 
+
+
 
 
   # *************************
