@@ -11,8 +11,8 @@ sections:
     image: /img/konfetti-bred.png
     text: "Ticketbutler hjælper dig ikke kun med at sælge billetter –\_systemet understøtter også din forretning og forståelse af din målgruppe, så du øger din omsætning på tværs af virksomheden. Læs mere på siden her om hvordan."
     type: header
-  - button_link: '#contact'
-    button_text: Kontakt os!
+  - button_link: ''
+    button_text: ''
     heading: Øg din brand awareness
     image: /img/brugerrejse-i-et-online-billetsystem2.png
     image_alt: brand-awareness
@@ -35,8 +35,8 @@ sections:
       og fremtidige events. Tiltræk nye kunder og hold fast i de gamle. Dataen
       er din! 
     type: future_image_right_second
-  - button_link: '#contact'
-    button_text: Kontakt os!
+  - button_link: ''
+    button_text: ''
     heading: 'Øg dit online billetsalg og andre services '
     image: /img/simpel-integration-billetsystem.png
     image_alt: Sælg-billetter
