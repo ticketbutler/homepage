@@ -23,7 +23,7 @@ const settings = {
       }
     },
     {
-      breakpoint: 1024,
+      breakpoint: 1195,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 3,
@@ -31,7 +31,7 @@ const settings = {
       }
     },
     {
-      breakpoint: 700,
+      breakpoint: 895,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
@@ -171,7 +171,7 @@ const FutureImageIeft = ({ heading, items, text }) => (
         float: left;
         padding: 0 25px;
         min-width: 300px !important;
-        max-width: 350px !important;
+        max-width: 100% !important;
         position: relative;
       }
 
