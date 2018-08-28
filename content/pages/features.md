@@ -14,22 +14,5 @@ sections:
       købsoplevelse.
     type: future_image_right_new
 
-feature_page:
-  heading: Features Page
-  text: Hello
-  items:
-    - image: /img/shape_feature
-      alt: image1
-      name: first
-    - image: /img/threeCircles
-      alt: image2
-      name: second
-    - image: /img/twoCircles
-      alt: image1
-      name: first
-    - image: /img/threeCircles
-      alt: image2
-      name: second
-
 
 ---

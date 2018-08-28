@@ -1,57 +1,61 @@
 import React from "react";
 import Slider from "react-slick";
+import Link from "gatsby-link";
 
 const settings = {
-  dots: true,
+  dots: false,
   className: "feature_slider",
   infinite: true,
   centerPadding: "100px",
   speed: 500,
-  slidesToShow: 5,
-  slidesToScroll: 5,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  swipeToSlide: true,
+  swipe: true,
+  touchMove: true,
   responsive: [
     {
       breakpoint: 1300,
       settings: {
         slidesToShow: 4,
         slidesToScroll: 4,
-        infinite: true,
-        dots: true
+        infinite: true
       }
     },
     {
-      breakpoint: 1024,
+      breakpoint: 1195,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 3,
-        infinite: true,
-        dots: true
+        infinite: true
       }
     },
     {
-      breakpoint: 600,
+      breakpoint: 895,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
         initialSlide: 2
       }
     },
+
     {
-      breakpoint: 480,
+      breakpoint: 600,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        initialSlide: 1
       }
     }
   ]
 };
-const FutureImageIeft = ({ heading, items, paragraph }) => (
+const FutureImageIeft = ({ heading, items, text }) => (
   <section
     className="container Feature_page"
     id="feature_section"
     style={{
       padding: "0",
-      minHeight: "100vh",
+      minHeight: "90vh",
       width: "100%",
       overflow: "hidden",
       position: "relative"
@@ -60,11 +64,12 @@ const FutureImageIeft = ({ heading, items, paragraph }) => (
     <div
       id="cliped_box"
       style={{
-        minHeight: "100vh",
+        minHeight: "90vh",
         width: "100%",
         clipPath: "polygon(0 0, 100% 0, 100% 95%, 0% 100%)",
         color: "#fff",
         position: "relative",
+        overflow: "hidden",
         background:
           "linear-gradient( to right, rgba(50, 109, 233, .9),rgba(126, 82, 232, .9)),url('../img/splash-new.png'),no-repeat center center",
         backgroundSize: "cover"
@@ -85,7 +90,7 @@ const FutureImageIeft = ({ heading, items, paragraph }) => (
             marginBottom: "0"
           }}
         >
-          heading
+          {heading}
         </h1>
         <p
           style={{
@@ -99,46 +104,20 @@ const FutureImageIeft = ({ heading, items, paragraph }) => (
             transition: "all 0.3s"
           }}
         >
-          paragraph
+          {text}
         </p>
       </div>
     </div>
 
     <Slider {...settings}>
-      {/*
-{items.map(item => (
-  <div key={item} className="slider_item">
-      <a href="#feature_section" className="feature_item">
-            <img src={item.image}/> 
-            <span>{item.text}</span>
-        </a>
-  </div>
-))}
-*/}
-      <div className="slider_item">
-        <a href="#feature_section" className="feature_item">
-          <img src="../img/shape_feature.png" />
-          <span>0</span>
-        </a>
-      </div>
-      <div className="slider_item">
-        <a href="#feature_section" className="feature_item">
-          <img src="../img/shape_feature.png" />
-          <span>1</span>
-        </a>
-      </div>
-      <div className="slider_item">
-        <a href="#feature_section" className="feature_item">
-          <img src="../img/shape_feature.png" />
-          <span>2</span>
-        </a>
-      </div>
-      <div className="slider_item">
-        <a href="#feature_section" className="feature_item">
-          <img src="../img/shape_feature.png" />
-          <span>3</span>
-        </a>
-      </div>
+      {items.map(item => (
+        <div key={item} className="slider_item">
+          <Link to={item.link} className="feature_item">
+            <img src={item.image} />
+            <span>{item.name}</span>
+          </Link>
+        </div>
+      ))}
 
       <div className="clear_fix" />
     </Slider>
@@ -180,7 +159,7 @@ const FutureImageIeft = ({ heading, items, paragraph }) => (
       }
       .slick-list {
         transform: translate3d(0px, 0px, 0px) !important;
-        // display: inline !important;
+        height: 100%;
         justify-content: center !important;
       }
       .slick-initialized {
@@ -189,12 +168,27 @@ const FutureImageIeft = ({ heading, items, paragraph }) => (
       }
 
       .slick-slide {
-        width: 250px;
         float: left;
         padding: 0 25px;
+        min-width: 300px !important;
+        max-width: 100% !important;
+        position: relative;
       }
+
       .feature_slider {
-        height: 180px;
+        height: 140px;
+        width: auto !important;
+      }
+
+      .slick-track {
+        height: 100%;
+        // width: 2000px !important;
+        // padding: 0 225px;
+        transform: translate3d(0px, 0px, 0px) !important;
+        margin: 0 auto;
+      }
+      .slick-cloned {
+        display: none;
       }
 
       .slick-arrow.slick-next,
@@ -246,7 +240,7 @@ const FutureImageIeft = ({ heading, items, paragraph }) => (
         transition: all 0.3s;
       }
 
-      div.slider_item a.feature_item {
+      div.slider_item .feature_item {
         text-decoration: none;
       }
 
@@ -259,7 +253,7 @@ const FutureImageIeft = ({ heading, items, paragraph }) => (
         z-index: 100;
       }
 
-      a.feature_item img {
+      .feature_item img {
         height: 40px;
         width: 40px !important;
         display: block;

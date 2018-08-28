@@ -16,15 +16,6 @@ const query = `query IndexQuery {
             button_text
             button_link 
           } 
-          feature_page {
-            heading
-            text
-            items {
-              image
-              alt
-              name
-            }
-          } 
         }
       }
     }
@@ -103,6 +94,40 @@ const query = `query IndexQuery {
       }
     }
   }
+
+  LogoSection: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/logo_sections/"}}) {
+    edges {
+      node {
+        frontmatter {
+          placeit
+          path
+          heading
+          items {
+            image
+          }
+        }
+      }
+    }
+  }
+  
+  FeatureSection: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/features_sections/"}}) {
+    edges {
+      node {
+        frontmatter {
+          placeit
+          path
+          heading
+          text
+          items {
+            link
+            image
+            alt
+            name
+          }
+        }
+      }
+    }
+  }
 }`;
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
@@ -116,33 +141,115 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           reject(res.errors + " " + res.messages);
         }
 
-        let { Pages, TopMenu, FooterMenu, Contact, Testimonials } = res.data;
+        let {
+          Pages,
+          TopMenu,
+          FooterMenu,
+          Contact,
+          Testimonials,
+          LogoSection,
+          FeatureSection
+        } = res.data;
 
         let testimonials = Testimonials.edges.map(t => {
-          // console.log(t.node.frontmatter.items);
           return {
             ...t.node.frontmatter,
             type: "testimonial"
           };
         });
-
-        // console.log(testimonials[1].node.frontmatter.items);
+        let logos = LogoSection.edges.map(t => {
+          return {
+            ...t.node.frontmatter,
+            type: "logo_section"
+          };
+        });
+        let feature = FeatureSection.edges.map(t => {
+          return {
+            ...t.node.frontmatter,
+            type: "feature_section"
+          };
+        });
 
         Pages.edges.forEach(({ node }) => {
           let sections = [];
+          ////////////////////////////
+          // Testimonals Sectioins
+          ////////////////////////////
           if (node.frontmatter.path === testimonials[0].path) {
             node.frontmatter.sections.forEach((s, i) => {
               if (i === testimonials[0].placeit) {
                 testimonials[0] && sections.push(testimonials[0]);
               }
-              // if (i === 5) {
-              //   testimonials[1] && sections.push(testimonials[1]);
-              // }
+              sections.push(s);
+            });
+          }
+          ////////////////////////////
+          // Logo  Sectioins
+          ////////////////////////////
+          else if (node.frontmatter.path === logos[0].path) {
+            node.frontmatter.sections.forEach((s, i) => {
+              if (i === logos[0].placeit) {
+                logos[0] && sections.push(logos[0]);
+              }
+              sections.push(s);
+            });
+          } else if (node.frontmatter.path === logos[1].path) {
+            node.frontmatter.sections.forEach((s, i) => {
+              if (i === logos[1].placeit) {
+                logos[1] && sections.push(logos[1]);
+              }
+              sections.push(s);
+            });
+          } else if (node.frontmatter.path === logos[2].path) {
+            node.frontmatter.sections.forEach((s, i) => {
+              if (i === logos[2].placeit) {
+                logos[2] && sections.push(logos[2]);
+              }
+              sections.push(s);
+            });
+          }
+          ////////////////////////////
+          // Feature Sectioins
+          ////////////////////////////
+          else if (node.frontmatter.path === feature[0].path) {
+            node.frontmatter.sections.forEach((s, i) => {
+              if (i === feature[0].placeit) {
+                feature[0] && sections.push(feature[0]);
+              }
+              sections.push(s);
+            });
+          } else if (node.frontmatter.path === feature[1].path) {
+            node.frontmatter.sections.forEach((s, i) => {
+              if (i === feature[1].placeit) {
+                feature[1] && sections.push(feature[1]);
+              }
+              sections.push(s);
+            });
+          } else if (node.frontmatter.path === feature[2].path) {
+            node.frontmatter.sections.forEach((s, i) => {
+              if (i === feature[2].placeit) {
+                feature[2] && sections.push(feature[2]);
+              }
+              sections.push(s);
+            });
+          } else if (node.frontmatter.path === feature[3].path) {
+            node.frontmatter.sections.forEach((s, i) => {
+              if (i === feature[3].placeit) {
+                feature[3] && sections.push(feature[3]);
+              }
+              sections.push(s);
+            });
+          } else if (node.frontmatter.path === feature[4].path) {
+            node.frontmatter.sections.forEach((s, i) => {
+              if (i === feature[4].placeit) {
+                feature[4] && sections.push(feature[4]);
+              }
               sections.push(s);
             });
           } else {
             sections = node.frontmatter.sections;
           }
+
           createPage({
             path: node.frontmatter.path,
             component: Component,
@@ -150,9 +257,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             context: {
               pages_path: node.frontmatter.path,
               sections,
-              // logo_section: node.frontmatter.logo_section,
-              // testimonials: node.frontmatter.testimonials,
-              // feature_page: node.frontmatter.feature_page,
               layout: {
                 TopMenu: TopMenu.edges[0].node.frontmatter.items,
                 FooterMenu: FooterMenu.edges[0].node.frontmatter.items,
