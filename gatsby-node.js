@@ -143,6 +143,12 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           } else {
             sections = node.frontmatter.sections;
           }
+          if (node.frontmatter.path.includes("billigt-billetsystem")) {
+            sections.splice(4, 0, {
+              type: "price-calculator"
+            });
+          }
+
           createPage({
             path: node.frontmatter.path,
             component: Component,
