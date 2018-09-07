@@ -42,7 +42,7 @@ const styles = {
   line: {
     boxSizing: "border-box",
     height: "2px",
-    width: window.width > 420 ? "250px" : "150px",
+    width: "150px",
     border: "2px solid #1ac5c5",
     margin: "0 auto"
   }
