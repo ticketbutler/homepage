@@ -87,7 +87,8 @@ const TallCenteredFuture = ({
         width: 100%;
         position: relative;
         bacground: #ccc;
-        padding: 110px;
+        padding-top: 110px;
+        padding-bottom: 110px;
       }
 
       @media (max-width: 768px) {

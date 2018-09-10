@@ -136,14 +136,24 @@ class PriceCalculator extends React.Component {
           <div
             className="rectangle"
             style={{
-              height: window.width > 800 ? 995 : 1500,
               width: "100%",
               background:
                 "linear-gradient(-125.21deg, #326de9  0%, #7e52e8 100%)",
               transform: "skew(0deg,-2deg)",
               margin: 0,
               padding: 0,
-              marginBottom: window.width > 800 ? 400 : 100
+              marginBottom: window.width > 800 ? 400 : 100,
+              ...(window.width > 800
+                ? {
+                    height: 1000
+                  }
+                : window.width > 600
+                  ? {
+                      height: 1200
+                    }
+                  : {
+                      height: 1500
+                    })
             }}
           >
             <div
@@ -156,7 +166,7 @@ class PriceCalculator extends React.Component {
               <h1
                 style={{
                   color: "#fff",
-                  fontSize: window.width > 420 ? 55 : 35,
+                  fontSize: window.width > 420 ? 55 : 27,
                   fontWeight: "bold",
                   textAlign: "center",
 
@@ -169,7 +179,7 @@ class PriceCalculator extends React.Component {
                 style={{
                   color: "#fff",
                   fontWeight: 500,
-                  fontSize: 27,
+                  fontSize: window.width > 420 ? 27 : 20,
                   letterSpacing: "-0.19px",
                   textAlign: "center",
                   margin: "0 auto",
@@ -193,7 +203,6 @@ class PriceCalculator extends React.Component {
               <div
                 className="form"
                 style={{
-                  height: "810px",
                   width: "100%",
                   maxWidth: "815px",
                   borderRadius: 5,
@@ -202,12 +211,19 @@ class PriceCalculator extends React.Component {
                   margin: "0 auto",
                   textAlign: "center",
                   padding: "4em",
-                  ...(window.width < 650
+                  ...(window.width > 800
                     ? {
-                        padding: "1em",
-                        height: "1000px"
+                        height: 800
                       }
-                    : {})
+                    : window.width > 500
+                      ? {
+                          padding: "1em",
+                          height: 830
+                        }
+                      : {
+                          padding: "1em",
+                          height: 900
+                        })
                 }}
               >
                 <label
