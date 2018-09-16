@@ -10,6 +10,7 @@ import FutureImageRightNew from "../components/future_image_right_new";
 import FutureLayers from "../components/future_layers";
 // import LogoSection from "../components/logo-section";
 import Testimonials from "../components/testimonials";
+import PriceCalculator from "../components/price_calculator";
 
 // import FeaturePage from "../components/feature_page";
 
@@ -28,7 +29,8 @@ const components = [
   { Component: FutureImageRightSecond, id: "future_image_right_second" },
   { Component: FutureImageRightNew, id: "future_image_right_new" },
   { Component: FutureLayers, id: "future_layers" },
-  { Component: Testimonials, id: "testimonial" }
+  { Component: Testimonials, id: "testimonial" },
+  { Component: PriceCalculator, id: "price-calculator" }
 ];
 
 const CmsPage = ({ pathContext }) => (

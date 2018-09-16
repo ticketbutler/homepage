@@ -2,6 +2,7 @@ import React from "react";
 
 import { Button, SectionText } from "./elements/elements";
 import { SmallTriangle, SquareShape } from "./elements/shapes";
+import SubscriptionPrices from "./subscription_prices";
 
 const TallCenteredFuture = ({
   heading,
@@ -15,13 +16,12 @@ const TallCenteredFuture = ({
     <div
       style={{
         width: "100%",
-        height: "70%",
+        height: "100%",
         top: "0",
         left: "0",
         zIndex: "-3",
         position: "absolute",
-        WebkitTransform: "skewY(-3deg)",
-        transform: "skewY(-3deg)",
+
         background: "linear-gradient(295.21deg, #326de9 0%, #7e52e8 100%)",
         backgroundSize: "cover",
         textalign: "center",
@@ -29,10 +29,10 @@ const TallCenteredFuture = ({
       }}
     />
     <div className="TCF_section">
-      <SectionText>
+      <SectionText style={{ padding: 0 }}>
         <h2>{heading}</h2>
         <p>{text}</p>
-        <img alt={image_alt} src={image} />
+        <SubscriptionPrices />
         {button_text &&
           button_text.length > 0 && (
             <Button>
@@ -87,7 +87,8 @@ const TallCenteredFuture = ({
         width: 100%;
         position: relative;
         bacground: #ccc;
-        padding: 110px;
+        padding-top: 110px;
+        padding-bottom: 110px;
       }
 
       @media (max-width: 768px) {
