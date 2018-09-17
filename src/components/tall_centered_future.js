@@ -183,7 +183,7 @@ const TallCenteredFuture = ({
 
       @media (max-width: 600px) {
         div.TCF_section h2 {
-          margin-top: 65px !important;
+          margin-top: 5px !important;
         }
       }
     `}</style>
