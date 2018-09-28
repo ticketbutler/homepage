@@ -29,7 +29,7 @@ export const Layout = ({
     />
 
     <Helmet>
-      <Link
+      <link
         rel="shortcut icon"
         type="image/png"
         href="/img/Favicon-tbsmall.png"
