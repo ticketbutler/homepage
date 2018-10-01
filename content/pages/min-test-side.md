@@ -31,14 +31,5 @@ sections:
       kundetrafik til billetudbyderen. For et lavt månedligt beløb, giver vi dig
       alle disse værdier, så din virksomhed kan vokse.
     type: future_image_left
-  - button_link: '#contact'
-    button_text: Kontakt os!
-    heading: 'Hvilken pakke passer dig? '
-    image: /img/pricing-table2.png
-    image_alt: gratis-online-billetsystem
-    text: >-
-      Er du en énmandshær, fra et startup eller stor virksomhed, kan vi hjælpe
-      dig.
-    type: tall_centered_future
 ---
 
