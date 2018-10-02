@@ -68,7 +68,7 @@ const SubscriptionPrices = () => (
             }}
           >
             <div style={styles.priceCard}>
-              <h1 style={styles.h1}>EVENTS UDEN BETALING</h1>
+              <h1 style={styles.h1}>{priceCard1Heading}</h1>
               <div style={styles.line} />
               <p style={styles.p}>
                 For dig som løbende har events uden betalende gæster

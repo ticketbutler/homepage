@@ -34,9 +34,6 @@ const styles = {
 
 const translations = {
   da: {
-    "Know the value of": "Kend værdien af",
-    "Know how much you can earn with us lorem ipsums some more text because we are awesome something about the calculator":
-      "Ticketbutler tilbyder et billetsystem til de mest konkurrencedygtige priser. Udregn her din omsætning og omkostninger samt forventede antal nye tilmeldte til dit nyhedsbrev og ekstra visninger af din identitet.",
     "I'd sell": "Jeg sælger",
     " tickets sold": " billetter solgt",
     tickets: "billetter",
@@ -172,7 +169,7 @@ class PriceCalculator extends React.Component {
                   lineHeight: "70px"
                 }}
               >
-                {this.t("Know the value of")} <br />Ticketbutler
+                {heading}
               </h1>
               <h2
                 style={{
@@ -195,9 +192,7 @@ class PriceCalculator extends React.Component {
                     : {})
                 }}
               >
-                {this.t(
-                  "Know how much you can earn with us lorem ipsums some more text because we are awesome something about the calculator"
-                )}
+                {text}
               </h2>
               <div
                 className="form"
