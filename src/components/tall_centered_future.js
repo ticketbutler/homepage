@@ -2,7 +2,6 @@ import React from "react";
 
 import { Button, SectionText } from "./elements/elements";
 import { SmallTriangle, SquareShape } from "./elements/shapes";
-import SubscriptionPrices from "./subscription_prices";
 
 const TallCenteredFuture = ({
   heading,
@@ -32,7 +31,7 @@ const TallCenteredFuture = ({
       <SectionText style={{ padding: 0 }}>
         <h2>{heading}</h2>
         <p>{text}</p>
-        <SubscriptionPrices />
+        <img alt={image_alt} src={image} />
         {button_text &&
           button_text.length > 0 && (
             <Button>
