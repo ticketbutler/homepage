@@ -6,7 +6,8 @@ import { Button } from "./elements/elements";
 type Locale = {
   id: string,
   label: string,
-  link: string
+  link: string,
+  currentPageUrl: string
 };
 
 class Navbar extends React.Component<
@@ -64,7 +65,7 @@ class Navbar extends React.Component<
           }}
         >
           <a
-            href={this.props.otherLocale.link}
+            href={this.props.otherLocale.currentPageUrl}
             style={{
               textDecoration: "none",
               color: "white",

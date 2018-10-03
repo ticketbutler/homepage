@@ -63,7 +63,11 @@ exports.createPages = ({ actions }) => {
           nav,
           sections: localPage.sections,
           currentLocale: local,
-          locales
+          locales: locales.map(locale => ({
+            ...locale,
+            currentPageUrl: page["path_" + locale.id]
+          })),
+          pages
         }
       });
     });
