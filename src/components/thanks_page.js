@@ -1,6 +1,6 @@
 import React from "react";
 
-const Thanks = (thanks, thanks_message, call_us, back_to_side_button) => (
+const Thanks = ({ thanks, thanks_message, call_us, back_to_side_button }) => (
   <div className="thanks_page">
     <div className="content">
       <h1
