@@ -1,6 +1,6 @@
 import React from "react";
 
-const Thanks = () => (
+const Thanks = (thanks, thanks_message, call_us, back_to_side_button) => (
   <div className="thanks_page">
     <div className="content">
       <h1
@@ -9,14 +9,10 @@ const Thanks = () => (
           fontFamily: "Montserrat"
         }}
       >
-        Tak
+        {thanks}
       </h1>
-      <span className="tak_message">
-        Tak, vi vender tilbage inden 2 arbejds dage!
-      </span>
-      <span className="akutte">
-        For akutte tilfælde, kontakt telefon: 89 80 12 80
-      </span>
+      <span className="tak_message">{thanks_message}</span>
+      <span className="akutte">{call_us}</span>
       <div id="thanks">
         <a
           href="/da/"
@@ -27,7 +23,7 @@ const Thanks = () => (
           }}
         >
           <span />
-          tilbage til hjemmesiden
+          {back_to_side_button}
           <span
             style={{
               transition: "all 0.3s"

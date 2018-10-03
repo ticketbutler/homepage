@@ -1,176 +1,71 @@
 const path = require("path");
+const locales = require("./data/locales");
+const topMenu = require("./data/top-menu");
+const footerMenu = require("./data/footer_menu");
+const pages = require("./data/pages");
 
-const query = `query IndexQuery {
-  Pages: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/pages/"}}) {
-    edges {
-      node {
-        frontmatter {
-          title
-          path
-          sections {
-            type
-            heading
-            text
-            image
-            image_alt
-            button_text
-            button_link 
-          } 
-          feature_page {
-            heading
-            text
-            items {
-              image
-              alt
-              name
-            }
-          } 
-        }
-      }
+function normalizeTranslatedKeys(obj, local) {
+  let normalizedObj = obj;
+  Object.keys(obj).forEach(key => {
+    let identifier = "_" + local;
+    if (key.includes(identifier)) {
+      let normalizedKey = key.replace(identifier, "");
+      normalizedObj = {
+        ...normalizedObj,
+        [normalizedKey]: obj[key]
+      };
     }
-  }
+  });
 
-  TopMenu: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/top-menu/"}}) {
-    edges {
-      node {
-        frontmatter {
-          title
-          path
-          items {
-            path
-            label
-          }
-        }
-      }
-    }
-  }
-  FooterMenu: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/footer-menu/"}}) {
-    edges {
-      node {
-        frontmatter {
-          title
-          path
-          items {
-            path
-            label
-          }
+  return normalizedObj;
+}
 
-          features {
-            path
-            label
-          }
+exports.createPages = ({ actions }) => {
+  const { createPage } = actions;
+  locales.forEach(local => {
+    let component = path.resolve("src/layouts/cms_page.js");
 
-          integration {
-            path
-            label
-          }
-
-          company {
-            path
-            label
-          }
-        }
-      }
-    }
-  }
-  Contact: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/contact/"}}) {
-    edges {
-      node {
-        frontmatter {
-          title
-          path
-          address
-          phone
-          support
-        }
-      }
-    }
-  }
-
-  Testimonials: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/testimonials/"}}) {
-    edges {
-      node {
-        frontmatter {
-          placeit
-          path
-          items {
-            image
-            text
-            about
-            logo
-          }
-        }
-      }
-    }
-  }
-}`;
-
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
-  return new Promise((resolve, reject) => {
-    let Component = path.resolve("./src/pages/cms_page.js");
-
-    resolve(
-      graphql(query).then(res => {
-        if (res.errors || res.messages) {
-          reject(res.errors + " " + res.messages);
-        }
-
-        let { Pages, TopMenu, FooterMenu, Contact, Testimonials } = res.data;
-
-        let testimonials = Testimonials.edges.map(t => {
-          // console.log(t.node.frontmatter.items);
-          return {
-            ...t.node.frontmatter,
-            type: "testimonial"
+    let nav = {
+      topMenu: topMenu.map(item => normalizeTranslatedKeys(item, local.id)),
+      footerMenu: footerMenu.map(footerItem => ({
+        ...normalizeTranslatedKeys(footerItem, local.id),
+        items: footerItem.items.map(it => normalizeTranslatedKeys(it, local.id))
+      }))
+    };
+    pages.forEach(page => {
+      localPage = {
+        ...normalizeTranslatedKeys(page, local.id),
+        sections: page.sections.map(section => {
+          section = {
+            ...section,
+            ...normalizeTranslatedKeys(section, local.id)
           };
-        });
-
-        // console.log(testimonials[1].node.frontmatter.items);
-
-        Pages.edges.forEach(({ node }) => {
-          let sections = [];
-          if (node.frontmatter.path === testimonials[0].path) {
-            node.frontmatter.sections.forEach((s, i) => {
-              if (i === testimonials[0].placeit) {
-                testimonials[0] && sections.push(testimonials[0]);
-              }
-              // if (i === 5) {
-              //   testimonials[1] && sections.push(testimonials[1]);
-              // }
-              sections.push(s);
-            });
-          } else {
-            sections = node.frontmatter.sections;
-          }
-          if (node.frontmatter.path.includes("billigt-billetsystem")) {
-            sections.splice(4, 0, {
-              type: "price-calculator"
-            });
-          }
-
-          createPage({
-            path: node.frontmatter.path,
-            component: Component,
-            layout: null,
-            context: {
-              pages_path: node.frontmatter.path,
-              sections,
-              // logo_section: node.frontmatter.logo_section,
-              // testimonials: node.frontmatter.testimonials,
-              // feature_page: node.frontmatter.feature_page,
-              layout: {
-                TopMenu: TopMenu.edges[0].node.frontmatter.items,
-                FooterMenu: FooterMenu.edges[0].node.frontmatter.items,
-                Features: FooterMenu.edges[0].node.frontmatter.features,
-                Integration: FooterMenu.edges[0].node.frontmatter.integration,
-                Company: FooterMenu.edges[0].node.frontmatter.company,
-                Contact: Contact.edges[0].node.frontmatter
-              }
+          Object.keys(section).forEach(key => {
+            if (Array.isArray(section[key])) {
+              section = {
+                ...section,
+                [key]: section[key].map(item =>
+                  normalizeTranslatedKeys(item, local.id)
+                )
+              };
             }
           });
-        });
-      })
-    );
+          return section;
+        })
+      };
+
+      createPage({
+        path: localPage.path,
+        title: localPage.title,
+        component: component,
+        // layout: null,
+        context: {
+          nav,
+          sections: localPage.sections,
+          currentLocale: local,
+          locales
+        }
+      });
+    });
   });
 };

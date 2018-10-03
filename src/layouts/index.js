@@ -1,33 +1,13 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import Link from "gatsby-link";
+import { Link } from "gatsby";
 import Navbar from "../components/navbar";
-import Contact_page from "../components/Contact";
-import NewsLetter_Page from "../components/newsletter_page";
+import Contact from "../components/Contact";
 import Footer from "../components/footer";
 import "./index.css";
 
-export const Layout = ({
-  children,
-  TopMenu = [],
-  FooterMenu = [],
-  Features = [],
-  Integration = [],
-  Company = [],
-  Contact = []
-}) => (
+export const Layout = ({ children, nav, currentLocale, locales }) => (
   <div>
-    <Navbar items={TopMenu} />
-    {typeof children === "function" ? children() : children}
-    <NewsLetter_Page />
-    <Contact_page items={Contact} />
-    <Footer
-      items={FooterMenu}
-      features={Features}
-      integration={Integration}
-      company={Company}
-    />
-
     <Helmet>
       <link
         rel="shortcut icon"
@@ -55,6 +35,13 @@ export const Layout = ({
         }}
       />
     </Helmet>
+    <Navbar
+      items={nav.topMenu}
+      currentLocale={currentLocale}
+      otherLocale={locales.filter(locale => locale.id !== currentLocale.id)[0]}
+    />
+    {typeof children === "function" ? children() : children}
+    <Footer linkLists={nav.footerMenu} />
     <script
       async
       dangerouslySetInnerHTML={{
@@ -77,6 +64,3 @@ export const Layout = ({
     />
   </div>
 );
-
-// Dummy layout
-export default ({ children }) => children();

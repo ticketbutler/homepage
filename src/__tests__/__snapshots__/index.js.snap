@@ -460,7 +460,7 @@ exports[`the Layout component renders 1`] = `
   </div>
   <div />
   <section
-    className="container newsletter_page"
+    className="container NewsletterSubscribe"
   >
     <div
       className="content"
@@ -501,7 +501,7 @@ exports[`the Layout component renders 1`] = `
         margin-top: 0;
       }
 
-      section.container.newsletter_page{
+      section.container.NewsletterSubscribe{
         padding: 110px 0;
         width: 100%;
         position: relative;
@@ -621,13 +621,13 @@ exports[`the Layout component renders 1`] = `
             }
 
       @media (max-width: 1080px) {
-        section.container.newsletter_page{
+        section.container.NewsletterSubscribe{
           padding: 150px 0;}
         }
 
       }
       @media (max-width: 768px) {
-        section.container.newsletter_page{
+        section.container.NewsletterSubscribe{
          padding: 110px 0;
         }
 
@@ -648,7 +648,7 @@ exports[`the Layout component renders 1`] = `
       }
     
       @media (max-width: 600px) {
-       section.container.newsletter_page{
+       section.container.NewsletterSubscribe{
           padding: 70px 0;
        }
 
@@ -690,7 +690,7 @@ exports[`the Layout component renders 1`] = `
       }
 
       @media (max-width: 376px) {
-        section.container.newsletter_page{
+        section.container.NewsletterSubscribe{
          padding: 40px 0px;
         }
         .content h1 {

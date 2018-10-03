@@ -1,11 +1,23 @@
 import React from "react";
 import "font-awesome/css/font-awesome.min.css";
 
-const Contact_page = ({ items }) => (
+const Contact = ({
+  address,
+  phone,
+  support,
+  heading,
+  placeholder_name,
+  placeholder_email,
+  placeholder_text,
+  button_text,
+  address_text,
+  phone_text,
+  support_text
+}) => (
   <section id="contact">
     <div className="container">
       <div className="contact_left_box ">
-        <h1>Kontakt</h1>
+        <h1>{heading}</h1>
         <form
           className="contact-form"
           name="contact-form"
@@ -21,7 +33,7 @@ const Contact_page = ({ items }) => (
                   type="text"
                   name="name"
                   id="align-left"
-                  placeholder="Dit navn"
+                  placeholder={placeholder_name}
                 />
               </label>
             </li>
@@ -31,19 +43,19 @@ const Contact_page = ({ items }) => (
                   type="email"
                   name="email"
                   id="align-right"
-                  placeholder="Din email"
+                  placeholder={placeholder_email}
                 />
               </label>
             </li>
             <li id="message-field">
               <label>
-                <textarea name="message" placeholder="Besked" />
+                <textarea name="message" placeholder={placeholder_text} />
               </label>
             </li>
           </ul>
           <button id="contact_btn">
             <span>
-              Send besked <em>&#187;</em>
+              {button_text} <em>&#187;</em>
             </span>
           </button>
           <div className="clear-fix" />
@@ -54,18 +66,18 @@ const Contact_page = ({ items }) => (
           <ul>
             <li>
               <i className="fa fa-map-marker" />
-              <span>Adresse </span>
-              <span id="address"> {items.address}</span>
+              <span>{address_text}</span>
+              <span id="address"> {address}</span>
             </li>
             <li>
               <i className="fa fa-phone" />
-              <span>Telefon</span>
-              <span id="phone">{items.phone}</span>
+              <span>{phone_text}</span>
+              <span id="phone">{phone}</span>
             </li>
             <li>
               <i className="fa fa-envelope" />
-              <span>Generelle henvendelser</span>
-              <span id="support">{items.support}</span>
+              <span>{support_text}</span>
+              <span id="support">{support}</span>
             </li>
           </ul>
         </div>
@@ -452,4 +464,4 @@ const Contact_page = ({ items }) => (
   </section>
 );
 
-export default Contact_page;
+export default Contact;

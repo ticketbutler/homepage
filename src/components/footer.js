@@ -1,9 +1,16 @@
 import React from "react";
 
-const FooterSection = ({ features, integration, company, items }) => (
+const Footer = ({ linkLists }) => (
   <footer>
-    <a
-      href="#navbar"
+    <div
+      // href="#navbar"
+      onClick={() => {
+        window.scroll({
+          top: 0,
+          left: 0,
+          behavior: "smooth"
+        });
+      }}
       id="to_top"
       style={{
         position: "absolute",
@@ -25,7 +32,7 @@ const FooterSection = ({ features, integration, company, items }) => (
       <span
         style={{
           marginLeft: "4px",
-          marginTop: "10px",
+          marginTop: "5px",
           color: "#868e99",
           display: "inline-block",
           fontFamily: "sans-serif",
@@ -49,53 +56,45 @@ const FooterSection = ({ features, integration, company, items }) => (
       >
         top
       </span>
-    </a>
+    </div>
     <div className="top_footer">
-      <div id="footer_logo">
+      <ul>
         <a href="/">
           <img src="/img/logo_blue.png" />
         </a>
 
-        <span>
+        <span style={{ float: "left" }}>
           2018 Ticketbutler IVS <br /> CVR: 38404687
         </span>
-      </div>
+      </ul>
 
-      <ul className="Future footer_ul">
-        <h3>Features</h3>
-        {features.map((item, i) => (
-          <li key={i}>
-            <a href={item.path}>{item.label}</a>
-          </li>
-        ))}
-      </ul>
-      <ul className="Integration footer_ul">
-        <h3>Hjælpecenter</h3>
-
-        {integration.map((item, i) => (
-          <li key={i}>
-            <a href={item.path}>{item.label}</a>
-          </li>
-        ))}
-      </ul>
-      <ul className="Company footer_ul">
-        <h3>Om os</h3>
-        {company.map((item, i) => (
-          <li key={i}>
-            <a href={item.path}>{item.label}</a>
-          </li>
-        ))}
-      </ul>
+      {linkLists.map(({ heading, items }) => (
+        <ul>
+          <h3>{heading}</h3>
+          {items.map((item, i) => (
+            <li key={i}>
+              <a href={item.path}>{item.label}</a>
+            </li>
+          ))}
+        </ul>
+      ))}
     </div>
     <div className="footer_bottom">
-      {items.map((item, i) => (
+      {[
+        {
+          label: "hello@ticketbutler.io",
+          path: "mailto:hello@ticketbutler.io"
+        },
+        {
+          label: "Made with ❤️ in Copenhagen"
+        }
+      ].map((item, i) => (
         <a key={i} href={item.path}>
           <span>{item.label}</span>
         </a>
       ))}
     </div>
 
-    <div className="clear-fix" />
     <style jsx>{`
       .clear-fix {
         clear: both;
@@ -116,6 +115,7 @@ const FooterSection = ({ features, integration, company, items }) => (
 
       .top_footer {
         width: 100%;
+
         height: 500px;
         dislpay: block;
         padding: 100px 0px;
@@ -192,9 +192,11 @@ const FooterSection = ({ features, integration, company, items }) => (
         width: 100%;
         height: 140px;
         display: block;
+        text-align: right;
       }
       .footer_bottom a {
         width: 25%;
+
         height: auto;
         display: inline-block;
         text-align: center;
@@ -327,4 +329,4 @@ const FooterSection = ({ features, integration, company, items }) => (
   </footer>
 );
 
-export default FooterSection;
+export default Footer;

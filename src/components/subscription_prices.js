@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
+import { Link } from "gatsby";
 import { SmallTriangle, SquareShape } from "./elements/shapes";
 import { WindowHelper } from "../components/helpers";
 
@@ -70,24 +70,21 @@ const SubscriptionPrices = () => (
             <div style={styles.priceCard}>
               <h1 style={styles.h1}>{priceCard1Heading}</h1>
               <div style={styles.line} />
-              <p style={styles.p}>
-                For dig som løbende har events uden betalende gæster
-              </p>
+              <p style={styles.p}>{priceCard1Subtitle}</p>
               <h3 style={styles.numbers}>
-                <span style={styles.span}>799</span> kr <br />per måned{" "}
+                <span style={styles.span}>799</span> kr <br />
+                {priceCardtext}{" "}
               </h3>
               <ul style={styles.ul}>
-                <li>Ubegrænset antal betalende gæster </li>
-                <li>Ubegrænset antal ikke-betalende gæster </li>
-                <li>3 kr + 3% per betalt billet </li>
+                <li>{priceCardFirstListText}</li>
+                <li>{priceCardSecondListText} </li>
+                <li>{priceCardThirdListText} </li>
               </ul>
             </div>
             <div style={styles.priceCard}>
-              <h1 style={styles.h1}>EVENTS MED BETALING</h1>
+              <h1 style={styles.h1}>{priceCard2Heading}</h1>
               <div style={styles.line} />
-              <p style={styles.p}>
-                For dig som primært sælger billetter med betaling
-              </p>
+              <p style={styles.p}>{priceCard2Subtitle}</p>
               <div
                 style={{
                   height: 160,
@@ -95,29 +92,28 @@ const SubscriptionPrices = () => (
                 }}
               >
                 <h3 style={{ color: "white", fontSize: 60, padding: 50 }}>
-                  Gratis{" "}
+                  {priceCard2text}{" "}
                 </h3>
               </div>
               <ul style={styles.ul}>
-                <li>Ubegrænset antal betalende gæster </li>
-                <li>100 ikke-betalende gæster per måned</li>
-                <li>3 kr + 3% per betalt billet </li>
+                <li>{priceCardFirstListText} </li>
+                <li>{priceCard2SecondListText}</li>
+                <li>{priceCardThirdListText} </li>
               </ul>
             </div>
             <div style={styles.priceCard}>
-              <h1 style={styles.h1}>PREMIUM</h1>
+              <h1 style={styles.h1}>{priceCard3Heading}</h1>
               <div style={styles.line} />
-              <p style={styles.p}>
-                For dig som ønsker at skræddersy de små detaljer
-              </p>
+              <p style={styles.p}>{priceCard3Subtitle}</p>
               <h3 style={styles.numbers}>
-                <span style={styles.span}>2.499 </span> kr <br />per måned{" "}
+                <span style={styles.span}>2.499 </span> kr <br />
+                {priceCardtext}{" "}
               </h3>
               <ul style={styles.ul}>
-                <li>Ubegrænset antal betalende gæster </li>
-                <li>Ubegrænset antal ikke-betalende gæster </li>
-                <li>3 kr + 3% per betalt billet </li>
-                <li>Ekstra skræddersyning </li>
+                <li>{priceCardFirstListText} </li>
+                <li>{priceCardSecondListText} </li>
+                <li>{priceCardThirdListText} </li>
+                <li>{priceCard3ListText} </li>
               </ul>
             </div>
           </div>
@@ -127,8 +123,7 @@ const SubscriptionPrices = () => (
               fontSize: 20
             }}
           >
-            {" "}
-            Alle priser vises uden moms{" "}
+            {momsText}
           </p>
         </section>
       );

@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
+import { Link } from "gatsby";
 import { WindowHelper } from "../components/helpers";
 import { makeTranslations } from "mini-trans";
 import { BigTriangle } from "./elements/shapes";
@@ -165,11 +165,11 @@ class PriceCalculator extends React.Component {
                   fontSize: window.width > 420 ? 55 : 27,
                   fontWeight: "bold",
                   textAlign: "center",
-
+                  paddingTop: 20,
                   lineHeight: "70px"
                 }}
               >
-                {heading}
+                {this.props.heading}
               </h1>
               <h2
                 style={{
@@ -192,7 +192,7 @@ class PriceCalculator extends React.Component {
                     : {})
                 }}
               >
-                {text}
+                {this.props.text}
               </h2>
               <div
                 className="form"

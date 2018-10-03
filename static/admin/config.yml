@@ -50,9 +50,9 @@ collections:
   # *************************
   #  Footer
   # ************************
-  - name: footer-menu
+  - name: footer_menu
     label: Footer Menu
-    folder: content/footer-menu
+    folder: content/footer_menu
     create: true
     fields:
       - { name: title, label: Title }

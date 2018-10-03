@@ -54,18 +54,13 @@ const Header = ({ heading, text, button_text, button_link, image }) => {
         </p>
         {button_text &&
           button_text.length > 0 && (
-            <Button>
-              <a href={button_link}>
-                {button_text}
-
-                <span
-                  style={{
-                    transition: "all 0.3s"
-                  }}
-                >
-                  &#187;
-                </span>
-              </a>
+            <Button
+              to={button_link}
+              style={{
+                margin: "0 auto"
+              }}
+            >
+              {button_text}
             </Button>
           )}
       </div>

@@ -20,7 +20,7 @@ const TallCenteredFuture = ({
         left: "0",
         zIndex: "-3",
         position: "absolute",
-
+        transform: "skewY(-3deg)",
         background: "linear-gradient(295.21deg, #326de9 0%, #7e52e8 100%)",
         backgroundSize: "cover",
         textalign: "center",
@@ -34,18 +34,13 @@ const TallCenteredFuture = ({
         <img alt={image_alt} src={image} />
         {button_text &&
           button_text.length > 0 && (
-            <Button>
-              <a href={button_link}>
-                {button_text}
-
-                <span
-                  style={{
-                    transition: "all 0.3s"
-                  }}
-                >
-                  &#187;
-                </span>
-              </a>
+            <Button
+              to={button_link}
+              style={{
+                margin: "0 auto"
+              }}
+            >
+              {button_text}
             </Button>
           )}
       </SectionText>

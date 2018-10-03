@@ -4,30 +4,7 @@ module.exports = {
     "gatsby-plugin-catch-links",
     "styled-jsx/babel",
     "gatsby-plugin-styled-components",
-    "gatsby-plugin-netlify-cms",
     "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: __dirname + "/content",
-        name: "content"
-      }
-    },
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [
-          "gatsby-remark-copy-linked-files",
-          {
-            resolve: "gatsby-remark-images",
-            options: {
-              maxWidth: 800,
-              linkImagesToOriginal: false
-            }
-          }
-        ]
-      }
-    }
+    "gatsby-transformer-sharp"
   ]
 };

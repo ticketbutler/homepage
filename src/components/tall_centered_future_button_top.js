@@ -34,24 +34,16 @@ const TallCenteredFutureButtonTop = ({
         <p>{text}</p>
         {button_text &&
           button_text.length > 0 && (
-            <Button className="right">
-              <a
-                href={button_link}
-                style={{
-                  marginBottom: "50px",
-                  marginTop: "30px"
-                }}
-              >
-                {button_text}
-
-                <span
-                  style={{
-                    transition: "all 0.3s"
-                  }}
-                >
-                  &#187;
-                </span>
-              </a>
+            <Button
+              to={button_link}
+              className="right"
+              style={{
+                margin: "0 auto",
+                marginBottom: "50px",
+                marginTop: "30px"
+              }}
+            >
+              {button_text}
             </Button>
           )}
       </SectionText>

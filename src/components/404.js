@@ -1,6 +1,6 @@
 import React from "react";
 
-const NotFoundPage = () => (
+const NotFoundPage = ({ locale }) => (
   <div
     style={{
       minHeight: "85vh",

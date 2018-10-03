@@ -1,14 +1,29 @@
+// @flow
 import React from "react";
-import Link from "gatsby-link";
+import { Link } from "gatsby";
+import { Button } from "./elements/elements";
 
-class NavbarSection extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { isToggleOn: false };
-    this.NavbarhandleClick = this.NavbarhandleClick.bind(this);
-  }
+type Locale = {
+  id: string,
+  label: string,
+  link: string
+};
 
-  NavbarhandleClick() {
+class Navbar extends React.Component<
+  {
+    items: Array<{
+      path: string,
+      label: string
+    }>,
+    currentLocale: Locale,
+    otherLocale: Locale
+  },
+  { isToggleOn: boolean }
+> {
+  state = { isToggleOn: false };
+  navbarhandleClick = this.navbarhandleClick.bind(this);
+
+  navbarhandleClick() {
     this.setState({ isToggleOn: !this.state.isToggleOn });
   }
 
@@ -25,11 +40,10 @@ class NavbarSection extends React.Component {
           <div
             id="bars"
             className={this.state.isToggleOn ? "clicked" : "!clicked"}
-            onClick={this.NavbarhandleClick}
+            onClick={this.navbarhandleClick}
           >
             <span className="bar1" />
             <span className="bar2" />
-            <span className="bar3" />
           </div>
           <ul
             id="ulNav"
@@ -42,12 +56,45 @@ class NavbarSection extends React.Component {
             ))}
           </ul>
         </div>
-        <div id="navbar_login_btn">
-          <a href="#contact">
-            <span>Kontakt</span>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-end"
+          }}
+        >
+          <a
+            href={this.props.otherLocale.link}
+            style={{
+              textDecoration: "none",
+              color: "white",
+              fontSize: 20,
+              lineHeight: 3,
+              fontWeight: 600,
+              margin: 30
+            }}
+          >
+            {this.props.otherLocale.label}
           </a>
+
+          <Button
+            small
+            outline
+            arrow={false}
+            buttonProps={{
+              onClick: () => {
+                var contactEl = document.querySelector("#contact");
+                if (contactEl) {
+                  contactEl.scrollIntoView({
+                    behavior: "smooth"
+                  });
+                }
+              }
+            }}
+          >
+            Contact
+          </Button>
         </div>
-        <div className="clear-fix" />
 
         <style jsx>{`
           * {
@@ -74,6 +121,7 @@ class NavbarSection extends React.Component {
             padding: 0px 110px;
             position: absolute;
             z-index: 1000;
+            display: flex;
           }
 
           .nav {
@@ -192,7 +240,6 @@ class NavbarSection extends React.Component {
 
           @media (max-width: 1080px) {
             div.navbar {
-              background-color: #326de9;
               position: absolute;
               top: 0;
               z-index: 100;
@@ -455,13 +502,4 @@ class NavbarSection extends React.Component {
   }
 }
 
-export default NavbarSection;
-
-/*
-
-
-    @media (max-width: 1080px) {
-      
-
-     
-*/
+export default Navbar;

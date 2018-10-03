@@ -1,12 +1,10 @@
 import React from "react";
 
-// import { Button } from "./elements/elements";
-
-const Newsletter_Page = () => {
+const NewsletterSubscribe = ({ heading, button_text, placeholder }) => {
   return (
-    <section className="container newsletter_page">
+    <section className="container NewsletterSubscribe">
       <div className="content">
-        <h1>Tilmeld Ticketbutler Nyhedsbrev</h1>
+        <h1>{heading}</h1>
         <form
           className="newsletter"
           name="newsletter"
@@ -15,12 +13,12 @@ const Newsletter_Page = () => {
           action="/thanks_page/"
         >
           <label>
-            <input name="email" type="email" placeholder="Din email her" />
+            <input name="email" type="email" placeholder={placeholder} />
           </label>
 
           <button id="newsletter_btn">
             <span>
-              Tilmeld <em>&#187;</em>
+              {button_text} <em>&#187;</em>
             </span>
           </button>
         </form>
@@ -31,7 +29,7 @@ const Newsletter_Page = () => {
         margin-top: 0;
       }
 
-      section.container.newsletter_page{
+      section.container.NewsletterSubscribe{
         padding: 110px 0;
         width: 100%;
         position: relative;
@@ -151,13 +149,13 @@ const Newsletter_Page = () => {
             }
 
       @media (max-width: 1080px) {
-        section.container.newsletter_page{
+        section.container.NewsletterSubscribe{
           padding: 150px 0;}
         }
 
       }
       @media (max-width: 768px) {
-        section.container.newsletter_page{
+        section.container.NewsletterSubscribe{
          padding: 110px 0;
         }
 
@@ -178,7 +176,7 @@ const Newsletter_Page = () => {
       }
     
       @media (max-width: 600px) {
-       section.container.newsletter_page{
+       section.container.NewsletterSubscribe{
           padding: 70px 0;
        }
 
@@ -220,7 +218,7 @@ const Newsletter_Page = () => {
       }
 
       @media (max-width: 376px) {
-        section.container.newsletter_page{
+        section.container.NewsletterSubscribe{
          padding: 40px 0px;
         }
         .content h1 {
@@ -244,4 +242,4 @@ const Newsletter_Page = () => {
   );
 };
 
-export default Newsletter_Page;
+export default NewsletterSubscribe;

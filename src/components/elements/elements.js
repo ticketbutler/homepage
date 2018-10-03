@@ -1,96 +1,93 @@
 import React from "react";
 
-export const Button = ({ children }) => {
-  return (
-    <div className="section_btn">
-      {children}
-
-      <div className="clear-fix" />
-      <style jsx>{`
-        .section_btn {
-          display: block;
-          position: relative;
-          width: 100%;
-          height: auto;
-        }
-
-        .clear-fix {
-          clear: both;
-        }
-
-        .section_btn a {
-          position: absolute;
-          right: 50%;
-          transform: translateX(50%);
-          width: 300px;
-          line-height: 60px;
-          height: 60px;
-          font-size: 18px;
-          z-index: 0;
-          margin-top: 20px;
-
-          text-decoration: none;
-          color: #ffffff;
-          font-family: Montserrat;
-          font-weight: bold;
-          letter-spacing: 1.15px;
-          text-align: center;
-          border-radius: 50px;
-          display: block;
-          float: right;
-          position: relative;
-          background: linear-Gradient(
-            to right,
-            rgba(40, 216, 167, 1),
-            rgba(29, 201, 202, 1)
-          );
-        }
-
-        .section_btn a span {
-          margin-left: -5px;
-          opacity: 0;
-        }
-
-        .section_btn a:hover span {
-          margin-left: 12px;
-          opacity: 1 !important;
-        }
-
-        @media (max-width: 1080px) {
-          .section_btn a {
-            font-size: 16px;
-            right: 50% !important;
-            transform: translateX(50%) !important;
-          }
-        }
-
-        @media (max-width: 768px) {
-          .section_btn a {
-            font-size: 15px;
-          }
-        }
-
-        @media (max-width: 600px) {
-          .section_btn a {
-            width: 250px;
-            height: 50px;
-            line-height: 50px;
-            font-size: 14px;
-          }
-        }
-
-        @media (max-width: 376px) {
-          .section_btn a {
-            width: 190px;
-            line-height: 45px;
-            height: 45px;
-            font-size: 11px;
-          }
-        }
-      `}</style>
-    </div>
-  );
-};
+export class Button extends React.Component {
+  static defaultProps = {
+    arrow: true,
+    outline: false,
+    buttonProps: {},
+    style: {}
+  };
+  state = {
+    hovered: false
+  };
+  renderButton() {
+    return (
+      <button
+        onMouseOver={() => {
+          this.setState({ hovered: true });
+        }}
+        onMouseLeave={() => {
+          this.setState({ hovered: false });
+        }}
+        style={{
+          color: "white",
+          fontWeight: "bold",
+          borderRadius: 50,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          cursor: "pointer",
+          border: "2px solid transparent",
+          transition: "2s all",
+          ...(this.props.small
+            ? {
+                maxWidth: 150,
+                padding: "10px 15px",
+                fontSize: 14
+              }
+            : {
+                maxWidth: 300,
+                padding: "20px 30px",
+                fontSize: 18
+              }),
+          ...(this.props.outline && !this.state.hovered
+            ? {
+                background:
+                  "linear-gradient( to right, rgba(40, 216, 167, 0), rgba(29, 201, 202, 0) )",
+                color: "white",
+                border: "2px solid #1dc9ca"
+              }
+            : {
+                background:
+                  "linear-gradient( to right, rgba(40, 216, 167, 1), rgba(29, 201, 202, 1) )"
+              }),
+          ...this.props.style
+        }}
+        {...this.props.buttonProps}
+      >
+        {this.props.children}
+        {this.props.arrow && (
+          <span
+            style={{
+              transition: "300ms all",
+              ...(this.state.hovered
+                ? {
+                    opacity: 1,
+                    marginLeft: 10
+                  }
+                : {
+                    opacity: 0,
+                    marginLeft: 0
+                  })
+            }}
+          >
+            »
+          </span>
+        )}
+      </button>
+    );
+  }
+  render() {
+    return this.props.to ? (
+      <a href={this.props.to} style={{ textDecoration: "none" }}>
+        {this.renderButton()}
+      </a>
+    ) : (
+      this.renderButton()
+    );
+  }
+}
 
 export const SectionText = ({ children }) => {
   return (

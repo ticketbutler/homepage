@@ -7,6 +7,7 @@ const Section = styled.section`
   width: 100%;
   height: 850px;
   position: relative;
+
   margin-bottom: 50px;
   margin-top: 150px;
 
@@ -401,7 +402,11 @@ const Slider_section = ({ items }) => {
             >
               {items.map(item => (
                 <div key={item} className="item">
-                  <img className="pic" src={item.image} />
+                  <img
+                    className="pic"
+                    src={item.image}
+                    style={{ objectFit: "cover" }}
+                  />
                   <p>{item.text}</p>
                   <span className="about">{item.about}</span>
                   <img className="logo" src={item.logo} />
