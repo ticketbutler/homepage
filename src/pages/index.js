@@ -1,21 +1,21 @@
 import React from "react";
 
-class changeDir extends React.Component {
-  render() {
-    function changeDir() {
-      let userLang = navigator.language || navigator.userLanguage;
+class Index extends React.Component {
+  componentDidMount() {
+    this.changeDir();
+  }
+  changeDir() {
+    if (typeof window !== "undefined") {
+      let userLang = window.navigator.language || window.navigator.userLanguage;
       if (userLang === "da-DA") {
         window.location.href = "/da/";
       } else {
         window.location.href = "/en/";
       }
     }
-    return (
-      <div>
-        {changeDir()}
-        <h1 style={{ fontSize: "30px", margin: "25% 45%" }}>oi mate</h1>
-      </div>
-    );
+  }
+  render() {
+    return <div />;
   }
 }
-export default changeDir;
+export default Index;
