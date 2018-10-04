@@ -283,7 +283,7 @@ module.exports = [
         text_da:
           "Ticketbutler tilbyder et billetsystem til de mest konkurrencedygtige priser. Udregn her din omsætning og omkostninger samt forventede antal nye tilmeldte til dit nyhedsbrev og ekstra visninger af din identitet.",
         text_en:
-          "Know how much you can earn with us lorem ipsums some more text because we are awesome something about the calculator",
+          "Ticketbutler offers a ticketing system at the most competitive price. Below you can calculate your revenue and costs together with the expected amount of new newsletter subscribers and extra impressions of your identity.",
         locale_en: "en",
         locale_da: "da"
       },
@@ -390,7 +390,7 @@ module.exports = [
   /*//////////////////////////KNOW YOUR CUSTOMERS PAGE/////////////////*/
   {
     path_da: "/da/kend-dine-gæster",
-    path_en: "/en/know-your-customers",
+    path_en: "/en/know-you-customers",
     title_da:
       "Kend dine gæster – og sælg flere billetter online med Ticketbutler",
     title_en: "Know your guests and sell more tickets online with Ticketbutler",
