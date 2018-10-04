@@ -60,17 +60,7 @@ const Footer = ({ linkLists }) => (
     <div className="top_footer">
       <ul>
         <a href="/">
-          <img
-            src="/img/logo_blue.png"
-            style={{
-              maxWidth: 170,
-              ...(window.width < 455
-                ? {
-                    maxWidth: 300
-                  }
-                : {})
-            }}
-          />
+          <img src="/img/logo_blue.png" />
         </a>
 
         <span
