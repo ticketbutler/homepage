@@ -13,7 +13,7 @@ module.exports = [
         label_da: "Kend dine gæster",
         label_en: "Know your customers",
         path_da: "/da/kend-dine-gæster",
-        path_en: "/en/know-your-customers"
+        path_en: "/en/know-you-customers"
       },
       {
         label_da: "En bedre oplevelse",
