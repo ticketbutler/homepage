@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "gatsby";
 import { Button } from "./elements/elements";
 import { makeTranslations } from "mini-trans";
+import { withWindow } from "../components/helpers";
 
 type Locale = {
   id: string,
@@ -21,9 +22,11 @@ class Navbar extends React.Component<
       path: string,
       label: string
     }>,
-
     currentLocale: Locale,
-    otherLocale: Locale
+    otherLocale: Locale,
+    window: {
+      width: number
+    }
   },
   { isToggleOn: boolean }
 > {
@@ -38,7 +41,17 @@ class Navbar extends React.Component<
 
   render() {
     return (
-      <div className="navbar" id="navbar">
+      <div
+        className="navbar"
+        id="navbar"
+        style={{
+          ...(this.props.window.width < 600
+            ? {
+                background: "#326de9"
+              }
+            : { background: "transperent" })
+        }}
+      >
         <div className="navbar_logo">
           <Link to="/da">
             <img src="/img/logo_white.png" />
@@ -53,6 +66,7 @@ class Navbar extends React.Component<
           >
             <span className="bar1" />
             <span className="bar2" />
+            <span className="bar3" />
           </div>
           <ul
             id="ulNav"
@@ -66,6 +80,7 @@ class Navbar extends React.Component<
           </ul>
         </div>
         <div
+          className="languageContact"
           style={{
             display: "flex",
             alignItems: "center",
@@ -73,6 +88,7 @@ class Navbar extends React.Component<
           }}
         >
           <a
+            className="language"
             href={this.props.otherLocale.currentPageUrl}
             style={{
               textDecoration: "none",
@@ -80,7 +96,12 @@ class Navbar extends React.Component<
               fontSize: 20,
               lineHeight: 2,
               fontWeight: 500,
-              margin: 30
+              margin: 30,
+              ...(this.props.window.width < 600
+                ? {
+                    fontSize: 15
+                  }
+                : {})
             }}
           >
             {this.props.otherLocale.label}
@@ -126,7 +147,7 @@ class Navbar extends React.Component<
           }
           .navbar {
             width: 100%;
-            height: 130px;
+            height: 80px;
             padding: 0px 110px;
             position: absolute;
             z-index: 1000;
@@ -188,65 +209,6 @@ class Navbar extends React.Component<
             line-height: 75px;
           }
 
-          /**
-           * 
-           * Button Style
-           */
-          #navbar_login_btn {
-            width: 20%;
-            display: block;
-            float: left;
-            font-size: 15px;
-            font-weight: 600;
-            letter-spacing: 1.15px;
-            text-align: center;
-            margin-top: 43px;
-            position: relative;
-            margin-right: 0px;
-          }
-          #navbar_login_btn a {
-            text-decoration: none;
-            color: #ffffff;
-            font-size: 15px;
-            font-weight: 600;
-            letter-spacing: 1.15px;
-            display: inline-block;
-            text-align: center;
-            float: right;
-
-            padding: 18px;
-            height: 44px;
-            width: 130px;
-            border: 2px solid #1dc9ca;
-            border-radius: 26px;
-            // background: linear-gradient(to right,rgba(40, 216, 167, 0),rgba(29, 201, 202, 0));
-            font-family: Montserrat;
-            transition: all 0.3s;
-          }
-          #navbar_login_btn a:hover {
-            background: linear-gradient(
-              to right,
-              rgba(40, 216, 167, 1),
-              rgba(29, 201, 202, 1)
-            );
-            border-color: transparent;
-            color: #fff;
-          }
-
-          #navbar_login_btn a span {
-            font-family: Montserrat;
-            text-decoration: none;
-            line-height: 3px !important;
-            display: block;
-            margin-top: 0;
-          }
-
-          @media (max-width: 1200px) {
-            .nav ul {
-              font-size: 12px;
-            }
-          }
-
           @media (max-width: 1080px) {
             div.navbar {
               position: absolute;
@@ -254,7 +216,9 @@ class Navbar extends React.Component<
               z-index: 100;
               padding: 0px;
             }
-
+            .languageContact {
+              margin: 0 auto;
+            }
             .navbar .navbar_logo {
               float: left;
               width: 130px;
@@ -343,6 +307,9 @@ class Navbar extends React.Component<
             .nav ul.active li::after a {
               margin-left: 8px;
             }
+            a.language {
+              font-size: 10px;
+            }
 
             /* Bars */
 
@@ -350,12 +317,11 @@ class Navbar extends React.Component<
               display: block !important;
               width: 40px;
               float: right;
-              margin-right: 35px;
               height: 40px;
               padding: 5px 7px;
               border-radius: 25px;
               position: relative;
-              margin-top: 21px;
+              margin-top: 20px;
               z-index: 1000;
             }
 
@@ -403,107 +369,6 @@ class Navbar extends React.Component<
               position: absolute;
               top: 13px;
             }
-
-            /**
-         * Button
-         */
-
-            #navbar_login_btn {
-              margin-top: 0px;
-              width: 100px;
-
-              right: 110px;
-              float: right;
-              position: relative;
-              top: 30px;
-            }
-            #navbar_login_btn a {
-              border: none;
-              color: #fff;
-              margin-top: 0px;
-              height: 30px;
-              width: auto;
-              margin-right: 0px;
-              border-radius: 0;
-              display: inline;
-              position: absolute;
-              top: 0;
-              left: 0;
-            }
-
-            #navbar_login_btn a:hover {
-              background: none;
-            }
-            #navbar_login_btn a span {
-              position: absolute;
-              top: 0px;
-              display: block;
-              float: right;
-              text-align: right;
-              margin-top: 9px;
-              text-align: right;
-            }
-          }
-
-          @media (max-width: 1100px) {
-            div.NavbarClicked-background {
-              display: block;
-            }
-
-            .navbar div.clear-fix {
-              clear: both !important;
-            }
-          }
-
-          @media (max-width: 600px) {
-            #bars {
-              margin-right: 10px !important;
-            }
-            #navbar_login_btn {
-              width: 50px;
-              right: 120px;
-            }
-            #navbar_login_btn a span {
-              line-height: 30px;
-              padding-right: 18px;
-              font-size: 13px;
-              margin-top: 7px;
-            }
-
-            // .navbar .navbar_logo{
-            //   width: 90px;
-            //   margin-left: 0px ;
-            // }
-          }
-
-          @media (max-width: 350px) {
-            .nabar {
-              padding: 0 25px;
-            }
-            .navbar_logo {
-              width: 90px !important;
-              // margin-left: 0px !important;
-            }
-            .navbar .navbar_logo {
-              line-height: 70px !important;
-              margin-left: 30px;
-            }
-            .navbar .navbar_logo a img {
-              width: 90px;
-              margin-top: 10px;
-            }
-
-            #bars {
-              margin-right: -10px !important;
-            }
-
-            #navbar_login_btn {
-              right: 95px !important;
-            }
-
-            #navbar_login_btn a span {
-              font-size: 12px !important;
-            }
           }
         `}</style>
       </div>
@@ -511,4 +376,4 @@ class Navbar extends React.Component<
   }
 }
 
-export default Navbar;
+export default withWindow(Navbar);

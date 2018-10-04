@@ -59,21 +59,23 @@ const Footer = ({ linkLists }) => (
     </div>
     <div className="top_footer">
       <ul>
-        <a href="/">
-          <img src="/img/logo_blue.png" />
-        </a>
+        <div style={{ display: "grid" }}>
+          <a href="/">
+            <img src="/img/logo_blue.png" style={{ maxWidth: 200 }} />
+          </a>
 
-        <span
-          id="contactId"
-          style={{
-            float: "left",
-            color: "#868e99",
-            fontSize: 15,
-            letterSpacing: 1.15
-          }}
-        >
-          Ticketbutler IVS <br /> CVR: 38404687
-        </span>
+          <span
+            id="contactId"
+            style={{
+              float: "left",
+              color: "#868e99",
+              fontSize: 15,
+              letterSpacing: 1.15
+            }}
+          >
+            Ticketbutler IVS <br /> CVR: 38404687
+          </span>
+        </div>
       </ul>
 
       {linkLists.map(({ heading, items }) => (
