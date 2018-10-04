@@ -21,7 +21,12 @@ const FutureImageRightNew = ({ heading, text, image, image_alt }) => (
 
     <div className="shape_pos_square Future_image_right_new_section">
       <SquareShape>
-        <div className="shape">
+        <div
+          style={{
+            right: 20
+          }}
+          className="shape"
+        >
           <span id="first" />
           <span id="second" />
         </div>

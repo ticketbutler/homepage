@@ -563,7 +563,7 @@ module.exports = [
         button_text_da: "Kontakt os!",
         button_text_en: "Contact us!",
         heading_da: "Vær i kontrol over dit event",
-        heading_da: "Be in control of your event",
+        heading_en: "Be in control of your event",
         image: "/img/simpelt-billetsystem.png",
         text_da:
           "Få kontrol over eventet ved at opsætte dine billetter så de matcher dine gæster, hold styr på billetsalget og check dine gæster ind med Ticketbutler app'en",
