@@ -34,7 +34,7 @@ export class Button extends React.Component {
             ? {
                 maxWidth: 150,
                 padding: "10px 15px",
-                fontSize: 10
+                fontSize: 15
               }
             : {
                 maxWidth: 300,

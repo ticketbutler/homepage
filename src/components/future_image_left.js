@@ -67,7 +67,12 @@ const FutureImageIeft = ({
     </div>
     <div className="shape_pos_square_2 Future_image_left_section">
       <SquareShape>
-        <div className="shape">
+        <div
+          className="shape"
+          style={{
+            right: 200
+          }}
+        >
           <span id="first" />
           <span id="second" />
         </div>
@@ -75,7 +80,12 @@ const FutureImageIeft = ({
     </div>
     <div className="shape_pos_circle Future_image_left_section">
       <CircleShape>
-        <div className="shape">
+        <div
+          style={{
+            top: 70
+          }}
+          className="shape"
+        >
           <span id="first" />
           <span id="second" />
         </div>

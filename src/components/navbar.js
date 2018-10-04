@@ -52,7 +52,19 @@ class Navbar extends React.Component<
             : { background: "transperent" })
         }}
       >
-        <div className="navbar_logo">
+        <div
+          className="navbar_logo"
+          style={{
+            ...(this.props.window.width < 600
+              ? {
+                  marginLeft: 10,
+                  marginTop: 30,
+
+                  width: 100
+                }
+              : {})
+          }}
+        >
           <Link to="/da">
             <img src="/img/logo_white.png" />
           </Link>
@@ -84,7 +96,12 @@ class Navbar extends React.Component<
           style={{
             display: "flex",
             alignItems: "center",
-            justifyContent: "flex-end"
+            justifyContent: "flex-end",
+            ...(this.props.window.width < 600
+              ? {
+                  margin: 0
+                }
+              : {})
           }}
         >
           <a
@@ -110,6 +127,18 @@ class Navbar extends React.Component<
           <Button
             small
             outline
+            style={{
+              ...(this.props.window.width < 600
+                ? {
+                    fontSize: 10
+                  }
+                : {}),
+              ...(this.props.window.width < 360
+                ? {
+                    display: "none"
+                  }
+                : {})
+            }}
             arrow={false}
             buttonProps={{
               onClick: () => {

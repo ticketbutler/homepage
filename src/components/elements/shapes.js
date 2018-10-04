@@ -80,6 +80,7 @@ export const CircleShape = ({ children }) => {
           height: 42px;
           margin: 1px;
           position: relative;
+          z-index: -100;
         }
 
         .circle_shape div.shape span {
