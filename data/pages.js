@@ -3,7 +3,7 @@ const contact = {
   type: "contact",
   title: "contact",
   path: "contact",
-  address: "Esplanaden 7, 2. th, 1263 København K",
+  address: "Esplanaden 7, 1263 København K",
   phone: "+45 89 80 12 80",
   support: "hello@ticketbutler.io",
 
@@ -133,7 +133,7 @@ module.exports = [
       {
         type: "future_image_left",
         button_link_da: "/da/kend-dine-gæster",
-        button_link_en: "/en/know-your-customers",
+        button_link_en: "/en/know-you-customers",
         button_text_da: "Om data",
         button_text_en: "About data",
         heading_da: "Lær din gæster at kende",
@@ -281,7 +281,7 @@ module.exports = [
         heading_en: "Know the value of Ticketbutler",
         heading_da: "Kend værdien af Ticketbutler",
         text_da:
-          "Find ud af, hvor meget du kan tjene hos os lorem ispums lidt mere tekst, fordi vi er vidunderlige om kalkulator.",
+          "Ticketbutler tilbyder et billetsystem til de mest konkurrencedygtige priser. Udregn her din omsætning og omkostninger samt forventede antal nye tilmeldte til dit nyhedsbrev og ekstra visninger af din identitet.",
         text_en:
           "Know how much you can earn with us lorem ipsums some more text because we are awesome something about the calculator",
         locale_en: "en",

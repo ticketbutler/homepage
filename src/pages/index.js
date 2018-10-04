@@ -7,7 +7,7 @@ class Index extends React.Component {
   changeDir() {
     if (typeof window !== "undefined") {
       let userLang = window.navigator.language || window.navigator.userLanguage;
-      if (userLang === "da-DA") {
+      if (userLang === "da-DK") {
         window.location.href = "/da/";
       } else {
         window.location.href = "/en/";
