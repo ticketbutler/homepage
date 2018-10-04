@@ -2,6 +2,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { Button } from "./elements/elements";
+import { makeTranslations } from "mini-trans";
 
 type Locale = {
   id: string,
@@ -9,13 +10,18 @@ type Locale = {
   link: string,
   currentPageUrl: string
 };
-
+const translations = {
+  da: {
+    Contact: "Kontakt"
+  }
+};
 class Navbar extends React.Component<
   {
     items: Array<{
       path: string,
       label: string
     }>,
+
     currentLocale: Locale,
     otherLocale: Locale
   },
@@ -23,6 +29,8 @@ class Navbar extends React.Component<
 > {
   state = { isToggleOn: false };
   navbarhandleClick = this.navbarhandleClick.bind(this);
+
+  t = makeTranslations(translations, this.props.currentLocale.id);
 
   navbarhandleClick() {
     this.setState({ isToggleOn: !this.state.isToggleOn });
@@ -70,8 +78,8 @@ class Navbar extends React.Component<
               textDecoration: "none",
               color: "white",
               fontSize: 20,
-              lineHeight: 3,
-              fontWeight: 600,
+              lineHeight: 2,
+              fontWeight: 500,
               margin: 30
             }}
           >
@@ -93,7 +101,7 @@ class Navbar extends React.Component<
               }
             }}
           >
-            Contact
+            {this.t("Contact")}
           </Button>
         </div>
 
@@ -244,7 +252,6 @@ class Navbar extends React.Component<
               position: absolute;
               top: 0;
               z-index: 100;
-              height: 80px !important;
               padding: 0px;
             }
 
@@ -252,6 +259,7 @@ class Navbar extends React.Component<
               float: left;
               width: 130px;
               margin-left: 40px;
+              margin-top: 40px;
               line-height: 80px;
             }
 

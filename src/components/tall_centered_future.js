@@ -125,7 +125,7 @@ const TallCenteredFuture = ({
       @media (max-width: 1080px) {
         div.shape_pos_small_triangle.tall_image_section {
           top: 10%;
-          left: 10%;
+          left: 5%;
         }
         div.shape_pos_small_square.tall_image_section {
           position: absolute;
@@ -137,7 +137,7 @@ const TallCenteredFuture = ({
       @media (max-width: 600px) {
         div.shape_pos_small_triangle.tall_image_section {
           top: 10%;
-          left: 10%;
+          left: 3%;
         }
         div.shape_pos_small_square.tall_image_section {
           position: absolute;

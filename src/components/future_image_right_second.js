@@ -173,7 +173,7 @@ const FutureImageRightSecond = ({ heading, text, image, image_alt }) => (
 
       div.shape_pos_circle.Future_image_right_second_section {
         position: absolute;
-        top: 80%;
+        top: 90%;
         left: 20%;
         z-index: 100;
       }

@@ -60,11 +60,29 @@ const Footer = ({ linkLists }) => (
     <div className="top_footer">
       <ul>
         <a href="/">
-          <img src="/img/logo_blue.png" />
+          <img
+            src="/img/logo_blue.png"
+            style={{
+              maxWidth: 170,
+              ...(window.width < 455
+                ? {
+                    maxWidth: 300
+                  }
+                : {})
+            }}
+          />
         </a>
 
-        <span style={{ float: "left" }}>
-          2018 Ticketbutler IVS <br /> CVR: 38404687
+        <span
+          id="contactId"
+          style={{
+            float: "left",
+            color: "#868e99",
+            fontSize: 15,
+            letterSpacing: 1.15
+          }}
+        >
+          Ticketbutler IVS <br /> CVR: 38404687
         </span>
       </ul>
 
@@ -228,6 +246,16 @@ const Footer = ({ linkLists }) => (
       @media (max-width: 970px) {
         .footer_bottom a span {
           font-size: 10px;
+        }
+        img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+        }
+        #contactId {
+          width: 100%;
+          text-align: center;
         }
       }
 

@@ -12,7 +12,8 @@ const Contact = ({
   button_text,
   address_text,
   phone_text,
-  support_text
+  support_text,
+  link
 }) => (
   <section id="contact">
     <div className="container">
@@ -23,7 +24,7 @@ const Contact = ({
           name="contact-form"
           method="post"
           data-netlify="true"
-          action="/thanks_page/"
+          action={link}
         >
           <input type="hidden" name="form-name" value="contact-form" />
           <ul>

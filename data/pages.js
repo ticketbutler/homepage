@@ -131,7 +131,7 @@ module.exports = [
       {
         type: "future_image_left",
         button_link_da: "/da/kend-dine-gæster",
-        button_link_da: "/en/know-your-customers",
+        button_link_en: "/en/know-your-customers",
         button_text_da: "Om data",
         button_text_en: "About data",
         heading_da: "Lær din gæster at kende",
@@ -279,9 +279,11 @@ module.exports = [
         heading_en: "Know the value of Ticketbutler",
         heading_da: "Kend værdien af Ticketbutler",
         text_da:
-          "Ticketbutler tilbyder et billetsystem til de mest konkurrencedygtige priser. Udregn her din omsætning og omkostninger samt forventede antal nye tilmeldte til dit nyhedsbrev og ekstra visninger af din identitet.",
+          "Find ud af, hvor meget du kan tjene hos os lorem ispums lidt mere tekst, fordi vi er vidunderlige om kalkulator.",
         text_en:
-          "Know how much you can earn with us lorem ipsums some more text because we are awesome something about the calculator"
+          "Know how much you can earn with us lorem ipsums some more text because we are awesome something about the calculator",
+        locale_en: "en",
+        locale_da: "da"
       },
       newsletterSubscription,
 
@@ -348,7 +350,7 @@ module.exports = [
         image_alt_en: "Sell-tickets",
         text_da:
           "Du kender din målgruppe bedst og er den bedste til at sælge dit produkt og dine services. Ved at integrere billetsalg på din hjemmeside sikrer du dig besøgende, som ikke kun er interesserede i et enkelt event, men alt du tilbyder. Det kræver ingen nørder at integrere – det er blot en copy/paste. Vil du hellere have siderne adskilt tilbyder vi også separate eventsider. Integration med billet API? Kontakt os!",
-        text_da:
+        text_en:
           "By integrating the ticketing on your platform you get visitors who are not only interested in your single event but everything you have on offer. You will be in charge of what to show to your peers, because who is best at selling your event and services? You. Nerds not required to integrate – it’s literally a copy/paste. Don’t fancy integration? No worries, you’ll always get a beautiful event page. Want an API integration? Contact us!"
       },
       {
@@ -356,13 +358,13 @@ module.exports = [
         button_link:
           "https://www.facebook.com/business/learn/facebook-ads-pixel",
         button_text_da: "Om Facebook Pixel",
-        button_text_da: "More about Facebook Pixel",
+        button_text_en: "More about Facebook Pixel",
         heading_da: "Optimér dit salg på Facebook",
         heading_en: "Optimize your Facebook marketing",
         image: "/img/facebook-pixel-billetsystem.png",
         text_da:
           "Hvorfor ikke nøjes med at investere i Facebook-annoncer som virker? Facebook Pixel fortæller dig om dine Facebook-annoncer virker, og automatisk optimerer dine annoncer så du sælger flere billetter. Altså får du mere for pengene i dine Facebook-kampagner.",
-        text_da:
+        text_en:
           "With the Facebook pixel integration  you know if your Facebook ad worked or not. Hereby you can optimize your ad spendings. Besides Facebook get to know your customers better to show the right ads to the right audience to sell more tickets and you can also choose to show ads to people who have bought tickets from you before. Meaning: more value for your ad money and more sales."
       },
       {
@@ -386,7 +388,7 @@ module.exports = [
   /*//////////////////////////KNOW YOUR CUSTOMERS PAGE/////////////////*/
   {
     path_da: "/da/kend-dine-gæster",
-    path_en: "/da/know-your-customers",
+    path_en: "/en/know-your-customers",
     title_da:
       "Kend dine gæster – og sælg flere billetter online med Ticketbutler",
     title_en: "Know your guests and sell more tickets online with Ticketbutler",
@@ -455,7 +457,7 @@ module.exports = [
   /*/////////////////////////////////// PROVIDE BETTER CUSTOMER EXPERIENCE PAGE//////////////////////*/
   {
     path_da: "/da/dit-billetsystem",
-    path_en: "/da/your-ticket-system",
+    path_en: "/en/your-ticket-system",
     title_da:
       "Dit billetsystem, din data, din succes – start dit event hos Ticketbutler",
     title_en:
@@ -680,10 +682,12 @@ module.exports = [
   /*//////////////////////////THANKS PAGE/////////////////////*/
   {
     path_da: "/da/tak-side",
-    path_en: "/en/thank-you",
+    path_en: "/en/thank-you-page",
     sections: [
       {
         type: "form_confirmation",
+        link_da: "/da/tak-side",
+        link_en: "/en/thank-you-page",
         thanks_da: "Tak",
         thanks_en: "Thank You!",
         thanks_message_da: "Tak, vi vender tilbage inden 2 arbejds dage!",

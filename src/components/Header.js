@@ -57,7 +57,8 @@ const Header = ({ heading, text, button_text, button_link, image }) => {
             <Button
               to={button_link}
               style={{
-                margin: "0 auto"
+                margin: "0 auto",
+                maxWidth: 300
               }}
             >
               {button_text}

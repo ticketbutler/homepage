@@ -1,12 +1,12 @@
 module.exports = [
   {
     id: "en",
-    label: "EN",
+    label: "English",
     link: "/en"
   },
   {
     id: "da",
-    label: "DA",
+    label: "Danish",
     link: "/da"
   }
 ];
