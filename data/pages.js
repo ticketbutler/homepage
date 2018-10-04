@@ -22,7 +22,9 @@ const contact = {
   placeholder_text_da: "Besked",
   placeholder_text_en: "Message",
   button_text_da: "Send besked",
-  button_text_en: "Send message"
+  button_text_en: "Send message",
+  action_da: "/da/tak-side",
+  action_en: "/en/thank-you-page"
 };
 
 const newsletterSubscription = {
