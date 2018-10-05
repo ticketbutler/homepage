@@ -61,7 +61,7 @@ export const Layout = ({
             "@type": "LocalBusiness",
             "name": "Ticketbutler",
            
-            "image": "https://test-ticketbutler.netlify.com//img/ticketbutler_logo-with-padding2.png",
+            "image": "https://test-ticketbutler.netlify.com/img/ticketbutler_logo-with-padding2.png",
             "@id": "",
             "url": "ticketbutler.io",
             "telephone": "89 80 12 80",
