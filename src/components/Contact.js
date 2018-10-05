@@ -19,7 +19,7 @@ class Contact extends React.Component {
       <section id="contact">
         <div className="container">
           <div className="contact_left_box ">
-            <h1>{this.props.heading}</h1>
+            <h1 style={{}}>{this.props.heading}</h1>
             {this.state.sent ? (
               <div
                 style={{

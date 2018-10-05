@@ -11,7 +11,7 @@ module.exports = [
       },
       {
         label_da: "Kend dine gæster",
-        label_en: "Know your customers",
+        label_en: "Know you customers",
         path_da: "/da/kend-dine-gæster",
         path_en: "/en/know-you-customers"
       },
