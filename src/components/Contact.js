@@ -38,7 +38,7 @@ class Contact extends React.Component {
               <form
                 onSubmit={async e => {
                   e.preventDefault();
-                  await fetch("/thank-you", {
+                  await fetch("/", {
                     method: "post",
                     headers: {
                       "Content-Type": "application/x-www-form-urlencoded"
