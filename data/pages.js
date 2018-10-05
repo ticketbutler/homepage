@@ -25,7 +25,13 @@ const contact = {
   button_text_da: "Send besked",
   button_text_en: "Send message",
   action_da: "/da/tak-side",
-  action_en: "/en/thank-you-page"
+  action_en: "/en/thank-you-page",
+  thanks_da: "Tak!",
+  thanks_en: "Thank You!",
+  thanks_message_da: "Tak, vi vender tilbage inden 2 arbejds dage!",
+  thanks_message_en: "Thanks, you'll hear from us within 2 working days!",
+  call_us_da: "For akutte tilfælde, kontakt telefon: 89 80 12 80",
+  call_us_en: "If you'd prefer to talk to us, call us on: 89 80 12 80"
 };
 
 const newsletterSubscription = {

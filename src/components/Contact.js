@@ -1,93 +1,144 @@
 import React from "react";
 import "font-awesome/css/font-awesome.min.css";
 
-const Contact = ({
-  address,
-  city,
-  phone,
-  support,
-  heading,
-  placeholder_name,
-  placeholder_email,
-  placeholder_text,
-  button_text,
-  address_text,
-  phone_text,
-  support_text
-}) => (
-  <section id="contact">
-    <div className="container">
-      <div className="contact_left_box ">
-        <h1>{heading}</h1>
-        <form
-          className="contact-form"
-          name="contact-form"
-          method="post"
-          data-netlify="true"
-          action="/thank-you"
-        >
-          <input type="hidden" name="form-name" value="contact-form" />
-          <ul>
-            <li>
-              <label>
-                <input
-                  type="text"
-                  name="name"
-                  id="align-left"
-                  placeholder={placeholder_name}
-                />
-              </label>
-            </li>
-            <li>
-              <label>
-                <input
-                  type="email"
-                  name="email"
-                  id="align-right"
-                  placeholder={placeholder_email}
-                />
-              </label>
-            </li>
-            <li id="message-field">
-              <label>
-                <textarea name="message" placeholder={placeholder_text} />
-              </label>
-            </li>
-          </ul>
-          <button id="contact_btn">
-            <span>
-              {button_text} <em>&#187;</em>
-            </span>
-          </button>
-          <div className="clear-fix" />
-        </form>
-      </div>
-      <div className="contact_right_box">
-        <div className="content">
-          <ul>
-            <li>
-              <i className="fa fa-map-marker" />
-              <span>{address_text}</span>
-              <span className="address">{address}</span>
-              <span className="address">{city}</span>
-            </li>
-            <li>
-              <i className="fa fa-phone" />
-              <span>{phone_text}</span>
-              <span id="phone">{phone}</span>
-            </li>
-            <li>
-              <i className="fa fa-envelope" />
-              <span>{support_text}</span>
-              <span id="support">{support}</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div className="clear-fix" />
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 
-    <style jsx>{`
+class Contact extends React.Component {
+  state = {
+    name: "",
+    email: "",
+    message: "",
+    sent: false
+  };
+  render() {
+    return (
+      <section id="contact">
+        <div className="container">
+          <div className="contact_left_box ">
+            <h1>{this.props.heading}</h1>
+            {this.state.sent ? (
+              <div
+                style={{
+                  textAlign: "center",
+                  display: "inline-table",
+                  color: "#6c7582"
+                }}
+              >
+                <h2 style={{ color: "#356be9", fontSize: "2em" }}>
+                  {this.props.thanks}
+                </h2>
+                <h3>{this.props.thanks_message}</h3>
+                <h3 style={{ fontSize: "1em" }}>{this.props.call_us} </h3>
+              </div>
+            ) : (
+              <form
+                onSubmit={async e => {
+                  e.preventDefault();
+                  await fetch("/thank-you", {
+                    method: "post",
+                    headers: {
+                      "Content-Type": "application/x-www-form-urlencoded"
+                    },
+                    body: encode({
+                      "form-name": "contact-form",
+                      name: this.state.name,
+                      email: this.state.email,
+                      message: this.state.message
+                    })
+                  });
+
+                  this.setState({
+                    sent: true
+                  });
+                }}
+                className="contact-form"
+              >
+                <input
+                  type="hidden"
+                  name="form-name"
+                  value="contact-form"
+                  required
+                />
+                <ul>
+                  <li>
+                    <label>
+                      <input
+                        type="text"
+                        name="name"
+                        id="align-left"
+                        placeholder={this.props.placeholder_name}
+                        onChange={e => {
+                          this.setState({ name: e.target.value });
+                        }}
+                      />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="align-right"
+                        placeholder={this.props.placeholder_email}
+                        required
+                        onChange={e => {
+                          this.setState({ email: e.target.value });
+                        }}
+                      />
+                    </label>
+                  </li>
+                  <li id="message-field">
+                    <label>
+                      <textarea
+                        name="message"
+                        placeholder={this.props.placeholder_text}
+                        required
+                        onChange={e => {
+                          this.setState({ message: e.target.value });
+                        }}
+                      />
+                    </label>
+                  </li>
+                </ul>
+                <button id="contact_btn">
+                  <span>
+                    {this.props.button_text} <em>&#187;</em>
+                  </span>
+                </button>
+                <div className="clear-fix" />
+              </form>
+            )}
+          </div>
+          <div className="contact_right_box">
+            <div className="content">
+              <ul>
+                <li>
+                  <i className="fa fa-map-marker" />
+                  <span>{this.props.address_text}</span>
+                  <span className="address">{this.props.address}</span>
+                  <span className="address">{this.props.city}</span>
+                </li>
+                <li>
+                  <i className="fa fa-phone" />
+                  <span>{this.props.phone_text}</span>
+                  <span id="phone">{this.props.phone}</span>
+                </li>
+                <li>
+                  <i className="fa fa-envelope" />
+                  <span>{this.props.support_text}</span>
+                  <span id="support">{this.props.support}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="clear-fix" />
+
+        <style jsx>{`
       * {
         margin: 0;
         padding: 0;
@@ -463,7 +514,8 @@ const Contact = ({
             
         }
     `}</style>
-  </section>
-);
-
+      </section>
+    );
+  }
+}
 export default Contact;
