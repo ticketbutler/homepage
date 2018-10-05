@@ -9,7 +9,7 @@ const encode = data => {
 class NewsletterSubscribe extends React.Component {
   state = {
     email: "",
-    sent: true
+    sent: false
   };
   render() {
     return (

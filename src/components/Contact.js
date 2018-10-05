@@ -13,7 +13,7 @@ class Contact extends React.Component {
     name: "",
     email: "",
     message: "",
-    sent: true
+    sent: false
   };
   render() {
     return (
