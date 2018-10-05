@@ -3,7 +3,8 @@ const contact = {
   type: "contact",
   title: "contact",
   path: "contact",
-  address: "Esplanaden 7, 1263 København K",
+  address: "Esplanaden 7,",
+  city: "1263 København K",
   phone: "+45 89 80 12 80",
   support: "hello@ticketbutler.io",
 
@@ -42,8 +43,8 @@ module.exports = [
     path_en: "/en",
     path_da: "/da",
 
-    title_da: "Ticketbutler – Dit skræddersyede billetsystem",
-    title_en: "Ticketbutler – Your ticketing platform",
+    title_da: "Ticketbutler ",
+    title_en: "Ticketbutler",
     meta_description_da:
       " Tiltræk flere kunder og sælg billetter med et full scale billetsystem, som matcher dit brand.",
     meta_description_en:
@@ -187,11 +188,11 @@ module.exports = [
   {
     path_da: "/da/billigt-billetsystem",
     path_en: "/en/best-value-ticket-system",
-    title_da: "Et enkelt og billigt billetsystem",
+    title_da: "Priser | Ticketbutler",
     title_en: "A simple and cheap ticket system",
     meta_description_da:
       "Ticketbutler leverer et enkelt og billigt billetsystem med dit brand i fokus. Start dit event og sælg flere billetter.",
-    meta_description_da:
+    meta_description_en:
       "Ticketbutler provides a simple and inexpensive ticketing system in your brand. Create your event today to begin selling tickets",
     sections: [
       {

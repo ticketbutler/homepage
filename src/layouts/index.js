@@ -6,7 +6,15 @@ import Contact from "../components/Contact";
 import Footer from "../components/footer";
 import "./index.css";
 
-export const Layout = ({ children, nav, currentLocale, locales }) => (
+export const Layout = ({
+  children,
+  nav,
+  currentLocale,
+  locales,
+  metaData,
+  meta_description,
+  title
+}) => (
   <div>
     <Helmet>
       <link
@@ -15,11 +23,38 @@ export const Layout = ({ children, nav, currentLocale, locales }) => (
         href="/img/Favicon-tbsmall.png"
         sizes="16x16"
       />
-      <title>Ticketbutler</title>
+      <link rel="icon" href="/img/Favicon-tbsmall.png" type="image/png" />
+      <meta property="og:image" content="../img/logox400.png" />
+      <meta property="og:site_name" content={`${metaData.companyName}`} />
+
+      <meta name="theme-color" content="#1DC9CC" />
+      <meta name="msapplication-navbutton-color" content="#326DE9" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="#1DC9CC" />
+      <title>{`${title}`}</title>
+      <meta name="description" content={`${meta_description}`} />
+      <meta property="og:type" content="business.business" />
+      <meta property="og:url" content={`${metaData.url}`} />
       <meta
-        name="description"
-        content="Tiltræk flere kunder og sælg billetter med et full scale online billetsystem, som matcher dit brand. "
+        property="business:contact_data:street_address"
+        content={`${metaData.address}`}
       />
+      <meta
+        property="business:contact_data:locality"
+        content={`${metaData.locality}`}
+      />
+      <meta
+        property="business:contact_data:region"
+        content={`${metaData.region}`}
+      />
+      <meta
+        property="business:contact_data:postal_code"
+        content={`${metaData.postalCode}`}
+      />
+      <meta
+        property="business:contact_data:country_name"
+        content={`${metaData.country}`}
+      />
+
       <script src="https://www.googletagmanager.com/gtag/js?id=UA-70000511-3" />
       <script src="https://wchat.freshchat.com/js/widget.js" />
 

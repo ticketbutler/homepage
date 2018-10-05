@@ -3,6 +3,7 @@ import "font-awesome/css/font-awesome.min.css";
 
 const Contact = ({
   address,
+  city,
   phone,
   support,
   heading,
@@ -67,7 +68,8 @@ const Contact = ({
             <li>
               <i className="fa fa-map-marker" />
               <span>{address_text}</span>
-              <span id="address"> {address}</span>
+              <span className="address">{address}</span>
+              <span className="address">{city}</span>
             </li>
             <li>
               <i className="fa fa-phone" />
@@ -281,7 +283,7 @@ const Contact = ({
         .contact_right_box div.content ul li span :nth-child(2){
             margin-bottom: 10px;
         }
-        .contact_right_box div.content ul li span#address , .contact_right_box div.content ul li span#phone , .contact_right_box div.content ul li span#support{
+        .contact_right_box div.content ul li span.address , .contact_right_box div.content ul li span#phone , .contact_right_box div.content ul li span#support{
             opacity: .5;
             font-size: 16px;
         }
@@ -455,7 +457,7 @@ const Contact = ({
                 width: 80%
                 font-size: 14px;
             }
-            .contact_right_box div.content ul li span#address , .contact_right_box div.content ul li span#phone , .contact_right_box div.content ul li span#support{
+            .contact_right_box div.content ul li span.address , .contact_right_box div.content ul li span#phone , .contact_right_box div.content ul li span#support{
                 font-size: 12px;
             }
             

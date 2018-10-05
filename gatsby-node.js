@@ -3,6 +3,7 @@ const locales = require("./data/locales");
 const topMenu = require("./data/top-menu");
 const footerMenu = require("./data/footer_menu");
 const pages = require("./data/pages");
+const metaData = require("./data/metaData");
 
 function normalizeTranslatedKeys(obj, local) {
   let normalizedObj = obj;
@@ -32,6 +33,7 @@ exports.createPages = ({ actions }) => {
         items: footerItem.items.map(it => normalizeTranslatedKeys(it, local.id))
       }))
     };
+    let localMetaData = normalizeTranslatedKeys(metaData, local.id);
     pages.forEach(page => {
       localPage = {
         ...normalizeTranslatedKeys(page, local.id),
@@ -61,6 +63,9 @@ exports.createPages = ({ actions }) => {
         // layout: null,
         context: {
           nav,
+          meta_description: localPage.meta_description,
+          title: localPage.title,
+          metaData: localMetaData,
           sections: localPage.sections,
           currentLocale: local,
           locales: locales.map(locale => ({

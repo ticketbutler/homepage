@@ -3,6 +3,7 @@ import React from "react";
 import { Button, SectionText, LeftImage } from "./elements/elements";
 
 import { CircleShape, SquareShape } from "./elements/shapes";
+import { withWindow } from "../components/helpers";
 
 const FutureImageIeft = ({
   heading,
@@ -10,9 +11,19 @@ const FutureImageIeft = ({
   button_text,
   image,
   image_alt,
-  button_link
+  button_link,
+  window
 }) => (
-  <section className="container future_image_left">
+  <section
+    className="container future_image_left"
+    style={{
+      ...(window.width < 600
+        ? {
+            marginTop: 100
+          }
+        : {})
+    }}
+  >
     <div className="section_image_left">
       <LeftImage id="left-box">
         <figure>
@@ -273,4 +284,4 @@ const FutureImageIeft = ({
   </section>
 );
 
-export default FutureImageIeft;
+export default withWindow(FutureImageIeft);
