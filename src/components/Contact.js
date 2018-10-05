@@ -1,5 +1,6 @@
 import React from "react";
 import "font-awesome/css/font-awesome.min.css";
+import { withWindow } from "../components/helpers";
 
 const encode = data => {
   return Object.keys(data)
@@ -12,7 +13,7 @@ class Contact extends React.Component {
     name: "",
     email: "",
     message: "",
-    sent: false
+    sent: true
   };
   render() {
     return (
@@ -23,16 +24,21 @@ class Contact extends React.Component {
             {this.state.sent ? (
               <div
                 style={{
-                  textAlign: "center",
                   display: "inline-table",
-                  color: "#6c7582"
+                  color: "#6c7582",
+                  ...(this.props.window.width > 768
+                    ? {
+                        textAlign: "left"
+                      }
+                    : {
+                        textAlign: "center"
+                      })
                 }}
               >
-                <h2 style={{ color: "#356be9", fontSize: "2em" }}>
-                  {this.props.thanks}
-                </h2>
+                <h2 style={{ color: "#356be9" }}>{this.props.thanks}</h2>
                 <h3>{this.props.thanks_message}</h3>
-                <h3 style={{ fontSize: "1em" }}>{this.props.call_us} </h3>
+                <h3>{this.props.call_us} </h3>
+                <h3>{this.props.number} </h3>
               </div>
             ) : (
               <form
@@ -216,7 +222,6 @@ class Contact extends React.Component {
 
         .contact_left_box h1 {
             float: left;
-            margin-left: 25px;
             margin-bottom: 50px;
             font-size: 50px;
         }
@@ -520,4 +525,4 @@ class Contact extends React.Component {
     );
   }
 }
-export default Contact;
+export default withWindow(Contact);

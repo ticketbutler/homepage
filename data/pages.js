@@ -31,17 +31,20 @@ const contact = {
   thanks_message_da: "Tak, vi vender tilbage inden 2 arbejds dage!",
   thanks_message_en: "Thanks, you'll hear from us within 2 working days!",
   call_us_da: "For akutte tilfælde, kontakt telefon: 89 80 12 80",
-  call_us_en: "If you'd prefer to talk to us, call us on: 89 80 12 80"
+  call_us_en: "If you'd prefer to talk to us, call us on:",
+  number: "89 80 12 80"
 };
 
 const newsletterSubscription = {
   type: "newsletter-subscription",
   heading_da: "Tilmeld Ticketbutler Nyhedsbrev",
-  heading_en: "Subscribe Ticketbutler Newsletter",
+  heading_en: "Subscribe to the Ticketbutler's Newsletter",
   button_text_da: "Tilmeld",
   button_text_en: "Subscribe",
   placeholder_da: "Din email her",
-  placeholder_en: "Your email here"
+  placeholder_en: "Your email here",
+  newsletter_text_en: "Thank you for suscribing!",
+  newsletter_text_da: "Tak for din abonnement!"
 };
 
 module.exports = [

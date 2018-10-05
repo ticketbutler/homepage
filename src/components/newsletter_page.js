@@ -1,30 +1,74 @@
 import React from "react";
+import { withWindow } from "../components/helpers";
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 
-const NewsletterSubscribe = ({ heading, button_text, placeholder }) => {
-  return (
-    <section className="container NewsletterSubscribe">
-      <div className="content">
-        <h1>{heading}</h1>
-        <form
-          className="newsletter"
-          name="newsletter"
-          method="post"
-          data-netlify="true"
-          action="/thanks_page/"
-        >
-          <label>
-            <input name="email" type="email" placeholder={placeholder} />
-          </label>
+class NewsletterSubscribe extends React.Component {
+  state = {
+    email: "",
+    sent: true
+  };
+  render() {
+    return (
+      <section className="container NewsletterSubscribe">
+        <div className="content">
+          <h1>{this.props.heading}</h1>
+          {this.state.sent ? (
+            <div
+              style={{
+                color: "#6c7582",
+                textAlign: "center"
+              }}
+            >
+              <h2>{this.props.newsletter_text}</h2>
+            </div>
+          ) : (
+            <form
+              className="newsletter"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              onSubmit={async e => {
+                e.preventDefault();
+                await fetch("/", {
+                  method: "post",
+                  headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                  },
+                  body: encode({
+                    "form-name": "newsletter",
+                    email: this.state.email
+                  })
+                });
 
-          <button id="newsletter_btn">
-            <span>
-              {button_text} <em>&#187;</em>
-            </span>
-          </button>
-        </form>
-      </div>
+                this.setState({
+                  sent: true
+                });
+              }}
+            >
+              <label>
+                <input
+                  name="email"
+                  type="email"
+                  placeholder={this.props.placeholder}
+                  onChange={e => {
+                    this.setState({ email: e.target.value });
+                  }}
+                />
+              </label>
 
-      <style jsx>{`
+              <button id="newsletter_btn">
+                <span>
+                  {this.props.button_text} <em>&#187;</em>
+                </span>
+              </button>
+            </form>
+          )}
+        </div>
+
+        <style jsx>{`
       section {
         margin-top: 0;
       }
@@ -107,7 +151,7 @@ const NewsletterSubscribe = ({ heading, button_text, placeholder }) => {
       .content h1 {
         display: block;
         height: 140px;
-        width: 570px;
+        width: 100%;
         color: #333f52;
         font-family: Hind;
         font-size: 55px;
@@ -238,8 +282,9 @@ const NewsletterSubscribe = ({ heading, button_text, placeholder }) => {
           }
       }
       `}</style>
-    </section>
-  );
-};
+      </section>
+    );
+  }
+}
 
-export default NewsletterSubscribe;
+export default withWindow(NewsletterSubscribe);
