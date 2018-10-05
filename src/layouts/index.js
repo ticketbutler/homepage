@@ -54,6 +54,55 @@ export const Layout = ({
         property="business:contact_data:country_name"
         content={`${metaData.country}`}
       />
+      <script type="application/ld+json">
+        {`
+        {
+            "@context": "http://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Ticketbutler",
+           
+            "image": "https://test-ticketbutler.netlify.com//img/ticketbutler_logo-with-padding2.png",
+            "@id": "",
+            "url": "ticketbutler.io",
+            "telephone": "89 80 12 80",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Esplanaden 7, København K",
+                "addressLocality": "København",
+                "postalCode": "1263",
+                "addressCountry": "DA"
+            },
+            "sameAs": [
+                "https://www.facebook.com/BilletFix/",
+                "https://www.linkedin.com/company/billetfix/"
+            ], 
+            
+            "founders": [
+            {
+              "@type": "Person",
+              "name": "Mads Kjer",
+              "sameAs": 
+              "https://www.linkedin.com/in/madskjer/"
+          
+          },
+          {
+              "@type": "Person",
+              "name": "Emil Brøgger Kjer",
+              "sameAs": 
+              "https://www.linkedin.com/in/emilkjer/"
+              
+          },
+          {
+              "@type": "Person",
+              "name": "Kyle Thomson",
+              "sameAs":
+              "https://www.linkedin.com/in/kyle-thomson/"
+              
+          }
+          ]
+        }
+        `}
+      </script>
 
       <script src="https://www.googletagmanager.com/gtag/js?id=UA-70000511-3" />
       <script src="https://wchat.freshchat.com/js/widget.js" />
