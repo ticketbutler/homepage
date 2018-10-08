@@ -660,9 +660,7 @@ module.exports = [
     sections: [
       {
         type: "header",
-        button_link: "#tall_centered_future_button_top",
-        button_text_da: "Læs om vores mission",
-        button_text_en: "More about our mission",
+
         heading_da: "Om Ticketbutler",
         heading_en: "About Ticketbutler",
         image: "/img/couponticketbutler.png",

@@ -8,6 +8,7 @@ const styles = {
   input: {
     height: "2em",
     width: "8.5em",
+    marginTop: "0.5em",
     border: "1px solid #C0C5CF",
     borderRadius: 2,
     backgroundColor: "#FFFFFF",
@@ -222,8 +223,9 @@ class PriceCalculator extends React.Component {
               >
                 <div
                   style={{
-                    display: window.width > 600 ? "inline-flex" : "block",
-                    marginBottom: "1em"
+                    display: window.width > 600 ? "flex" : "block",
+                    marginBottom: "1em",
+                    justifyContent: "center"
                   }}
                 >
                   <h3 style={styles.h3}> {this.t("I'd sell")} </h3>

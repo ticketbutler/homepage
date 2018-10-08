@@ -45,6 +45,7 @@ class Navbar extends React.Component<
         className="navbar"
         id="navbar"
         style={{
+          alignItems: "center",
           ...(this.props.window.width < 600
             ? {
                 background: "#326de9"
@@ -52,19 +53,7 @@ class Navbar extends React.Component<
             : { background: "transperent" })
         }}
       >
-        <div
-          className="navbar_logo"
-          style={{
-            ...(this.props.window.width < 600
-              ? {
-                  marginLeft: 10,
-                  marginTop: 30,
-
-                  width: 100
-                }
-              : {})
-          }}
-        >
+        <div className="navbar_logo" style={{}}>
           <Link to="/da">
             <img src="/img/logo_white.png" />
           </Link>
@@ -110,15 +99,11 @@ class Navbar extends React.Component<
             style={{
               textDecoration: "none",
               color: "white",
-              fontSize: 20,
-              lineHeight: 2,
-              fontWeight: 500,
-              margin: 30,
-              ...(this.props.window.width < 600
-                ? {
-                    fontSize: 15
-                  }
-                : {})
+              fontSize: 14,
+              lineHeight: "130px",
+              fontWeight: 600,
+              letterSpacing: 1.15,
+              margin: 30
             }}
           >
             {this.props.otherLocale.label}
@@ -128,6 +113,10 @@ class Navbar extends React.Component<
             small
             outline
             style={{
+              fontSize: 14,
+              fontWeight: 600,
+              letterSpacing: 1.15,
+
               ...(this.props.window.width < 600
                 ? {
                     fontSize: 10
@@ -252,8 +241,6 @@ class Navbar extends React.Component<
               float: left;
               width: 130px;
               margin-left: 40px;
-              margin-top: 40px;
-              line-height: 80px;
             }
 
             .nav {
@@ -279,6 +266,7 @@ class Navbar extends React.Component<
               transform: translateX(-135px);
               height: 450px;
               border-radius: 0 0 0 4px;
+              position: absolute;
             }
             .nav ul.active li {
               visibility: visible;
@@ -350,7 +338,7 @@ class Navbar extends React.Component<
               padding: 5px 7px;
               border-radius: 25px;
               position: relative;
-              margin-top: 20px;
+              margin-top: 50px;
               z-index: 1000;
             }
 
@@ -390,13 +378,12 @@ class Navbar extends React.Component<
             #bars.clicked span.bar1 {
               transform: rotate(45deg);
               position: absolute;
-              top: 12px;
             }
 
             #bars.clicked span.bar3 {
               transform: rotate(-45deg);
               position: absolute;
-              top: 13px;
+              top: 6px;
             }
           }
         `}</style>
