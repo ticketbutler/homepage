@@ -27,7 +27,7 @@ const contact = {
   action_da: "/da/tak-side",
   action_en: "/en/thank-you-page",
   thanks_message_da:
-    "Tak for din henvendelse! Vi vender tilbage inden for 2 arbejdsdage. ",
+    "Tak for din henvendelse! Vi vender tilbage inden for 2 arbejdsdage.",
   thanks_message_en:
     "Thanks for your inquiry! We will get back to you within 2 working days.",
   call_us_da: "For akutte tilfælde, ring venligst til:",
