@@ -160,7 +160,7 @@ class PriceCalculator extends React.Component {
           <h1
             style={{
               color: "#fff",
-              fontSize: this.props.window.width > 420 ? 55 : 27,
+              fontSize: this.props.window.width > 420 ? 45 : 27,
               fontWeight: "bold",
               textAlign: "center",
               paddingTop: 20,
@@ -354,8 +354,7 @@ class PriceCalculator extends React.Component {
                 flexWrap: "wrap",
                 ...(this.props.window.width < 700
                   ? {
-                      justifyContent: "center",
-                      fontSize: "0.7em"
+                      justifyContent: "center"
                     }
                   : {
                       justifyContent: "space-between"
