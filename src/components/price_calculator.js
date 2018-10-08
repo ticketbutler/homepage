@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import { WindowHelper } from "../components/helpers";
+import { withWindow } from "../components/helpers";
 import { makeTranslations } from "mini-trans";
 import { BigTriangle } from "./elements/shapes";
 
@@ -128,338 +128,328 @@ class PriceCalculator extends React.Component {
     console.log(fee);
     let localTotal = this.state.price == 0 ? 0 : localTotal;
     return (
-      <WindowHelper>
-        {window => (
+      <div
+        className="rectangle"
+        style={{
+          width: "100%",
+          background: "linear-gradient(-125.21deg, #326de9  0%, #7e52e8 100%)",
+          transform: "skew(0deg,-2deg)",
+          margin: 0,
+          padding: 0,
+          marginBottom: this.props.window.width > 800 ? 400 : 100,
+          ...(this.props.window.width > 800
+            ? {
+                height: 1000
+              }
+            : this.props.window.width > 600
+              ? {
+                  height: 1200
+                }
+              : {
+                  height: 1500
+                })
+        }}
+      >
+        <div
+          style={{
+            transform: "skew(0deg,2deg)",
+            padding: this.props.window.width > 800 ? 0 : "1em"
+          }}
+        >
+          <BigTriangle style={{ display: "block", position: "absolute" }} />
+          <h1
+            style={{
+              color: "#fff",
+              fontSize: this.props.window.width > 420 ? 55 : 27,
+              fontWeight: "bold",
+              textAlign: "center",
+              paddingTop: 20,
+              lineHeight: "70px"
+            }}
+          >
+            {this.props.heading}
+          </h1>
+          <h2
+            style={{
+              color: "#fff",
+              fontWeight: 500,
+              fontSize: this.props.window.width > 420 ? 27 : 20,
+              letterSpacing: "-0.19px",
+              textAlign: "center",
+              margin: "0 auto",
+              lineHeight: "38px",
+              letterSpacing: "-0.19px",
+              width: "60%",
+              paddingBottom: "4em",
+              paddingTop: "2em",
+              ...(this.props.window.width < 800
+                ? {
+                    paddingBottom: "1em",
+                    width: "90%"
+                  }
+                : {})
+            }}
+          >
+            {this.props.text}
+          </h2>
           <div
-            className="rectangle"
+            className="form"
             style={{
               width: "100%",
-              background:
-                "linear-gradient(-125.21deg, #326de9  0%, #7e52e8 100%)",
-              transform: "skew(0deg,-2deg)",
-              margin: 0,
-              padding: 0,
-              marginBottom: window.width > 800 ? 400 : 100,
-              ...(window.width > 800
+              maxWidth: "815px",
+              borderRadius: 5,
+              backgroundColor: "#F5F8FB",
+              boxShadow: "2px 2px 30px 0 #848EA2",
+              margin: "0 auto",
+              textAlign: "center",
+              padding: "4em",
+              ...(this.props.window.width > 800
                 ? {
-                    height: 1000
+                    height: 800
                   }
-                : window.width > 600
+                : this.props.window.width > 500
                   ? {
-                      height: 1200
+                      padding: "1em",
+                      height: 830
                     }
                   : {
-                      height: 1500
+                      padding: "1em",
+                      height: 900
                     })
             }}
           >
             <div
               style={{
-                transform: "skew(0deg,2deg)",
-                padding: window.width > 800 ? 0 : "1em"
+                display: this.props.window.width > 600 ? "flex" : "block",
+                marginBottom: "1em",
+                justifyContent: "center"
               }}
             >
-              <BigTriangle style={{ display: "block", position: "absolute" }} />
-              <h1
-                style={{
-                  color: "#fff",
-                  fontSize: window.width > 420 ? 55 : 27,
-                  fontWeight: "bold",
-                  textAlign: "center",
-                  paddingTop: 20,
-                  lineHeight: "70px"
-                }}
-              >
-                {this.props.heading}
-              </h1>
-              <h2
-                style={{
-                  color: "#fff",
-                  fontWeight: 500,
-                  fontSize: window.width > 420 ? 27 : 20,
-                  letterSpacing: "-0.19px",
-                  textAlign: "center",
-                  margin: "0 auto",
-                  lineHeight: "38px",
-                  letterSpacing: "-0.19px",
-                  width: "60%",
-                  paddingBottom: "4em",
-                  paddingTop: "2em",
-                  ...(window.width < 800
-                    ? {
-                        paddingBottom: "1em",
-                        width: "90%"
-                      }
-                    : {})
-                }}
-              >
-                {this.props.text}
-              </h2>
-              <div
-                className="form"
-                style={{
-                  width: "100%",
-                  maxWidth: "815px",
-                  borderRadius: 5,
-                  backgroundColor: "#F5F8FB",
-                  boxShadow: "2px 2px 30px 0 #848EA2",
-                  margin: "0 auto",
-                  textAlign: "center",
-                  padding: "4em",
-                  ...(window.width > 800
-                    ? {
-                        height: 800
-                      }
-                    : window.width > 500
-                      ? {
-                          padding: "1em",
-                          height: 830
-                        }
-                      : {
-                          padding: "1em",
-                          height: 900
-                        })
-                }}
-              >
-                <div
-                  style={{
-                    display: window.width > 600 ? "flex" : "block",
-                    marginBottom: "1em",
-                    justifyContent: "center"
-                  }}
-                >
-                  <h3 style={styles.h3}> {this.t("I'd sell")} </h3>
-                  <input
-                    style={styles.input}
-                    type="number"
-                    placeholder={this.t(" tickets sold")}
-                    required
-                    value={this.state.numberOfTickets}
-                    onChange={this.handleNumberOfTicketsInput}
-                  />
-                  <h3 style={styles.h3}>
-                    <span style={{ color: "black" }}>{this.t("tickets")}</span>{" "}
-                    {this.t("at")}
-                  </h3>
-                  <input
-                    style={styles.input}
-                    type="number"
-                    placeholder={this.t(" tickets price")}
-                    required
-                    value={this.state.price}
-                    onChange={this.handlePriceInput}
-                  />
-                  <h3 style={styles.h3}>
-                    <span style={{ color: "black" }}> kr</span> {this.t("each")}
-                  </h3>
-                </div>
+              <h3 style={styles.h3}> {this.t("I'd sell")} </h3>
+              <input
+                style={styles.input}
+                type="number"
+                placeholder={this.t(" tickets sold")}
+                required
+                value={this.state.numberOfTickets}
+                onChange={this.handleNumberOfTicketsInput}
+              />
+              <h3 style={styles.h3}>
+                <span style={{ color: "black" }}>{this.t("tickets")}</span>{" "}
+                {this.t("at")}
+              </h3>
+              <input
+                style={styles.input}
+                type="number"
+                placeholder={this.t(" tickets price")}
+                required
+                value={this.state.price}
+                onChange={this.handlePriceInput}
+              />
+              <h3 style={styles.h3}>
+                <span style={{ color: "black" }}> kr</span> {this.t("each")}
+              </h3>
+            </div>
 
+            <div
+              className="toggle"
+              style={{
+                margin: "0 auto",
+                display: "inline-flex"
+              }}
+            >
+              <span
+                style={this.state.includeTicketFee ? {} : { color: "#326DE9" }}
+              >
+                {this.t("Ticket purchaser pays ticket fee")}
+              </span>
+              <label
+                className="switch"
+                onClick={this.switchFunction}
+                style={{
+                  position: "relative",
+                  display: "inline-block",
+                  width: 60,
+                  height: 24,
+                  outline: "none",
+                  marginLeft: "1em",
+                  marginRight: "1em"
+                }}
+              >
                 <div
-                  className="toggle"
+                  className="slider"
                   style={{
-                    margin: "0 auto",
-                    display: "inline-flex"
+                    position: "absolute",
+                    cursor: "pointer",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    backgroundColor: "#326DE9",
+                    transition: "0.4s",
+                    borderRadius: 24,
+                    ...(this.state.includeTicketFee
+                      ? {
+                          backgroundColor: "#326DE9"
+                        }
+                      : {})
                   }}
                 >
-                  <span
-                    style={
-                      this.state.includeTicketFee ? {} : { color: "#326DE9" }
-                    }
-                  >
-                    {this.t("Ticket purchaser pays ticket fee")}
-                  </span>
-                  <label
-                    className="switch"
-                    onClick={this.switchFunction}
+                  <div
                     style={{
-                      position: "relative",
-                      display: "inline-block",
-                      width: 60,
-                      height: 24,
-                      outline: "none",
-                      marginLeft: "1em",
-                      marginRight: "1em"
+                      position: "absolute",
+                      height: "20px",
+                      width: "20px",
+                      top: "2px",
+                      backgroundColor: "white",
+                      transition: "0.4s",
+                      borderRadius: "50%",
+                      ...(this.state.includeTicketFee
+                        ? { left: "calc(98% - 20px)" }
+                        : { left: "2%" })
+                    }}
+                  />
+                </div>
+              </label>
+              <span
+                style={this.state.includeTicketFee ? { color: "#326DE9" } : {}}
+              >
+                {this.t("Event organizer pays ticket fee")}
+              </span>
+            </div>
+            <p style={styles.small}>{this.t("Your estimated revenue")} </p>
+            <p
+              style={{
+                color: "#326DE9",
+                fontSize: this.props.window.width > 420 ? "2.5em" : "1.5em",
+                fontWeight: "500",
+                lineHeight: "61px",
+                letterSpacing: "normal",
+                marginBottom: "0.5rem"
+              }}
+            >
+              {localTotal} kr
+            </p>
+            <div
+              className="line"
+              style={{
+                boxSizing: "border-box",
+                height: "2px",
+                width: this.props.window.width > 420 ? "350px" : "250px",
+                border: "1px solid #C0C5CF",
+                margin: "0 auto"
+              }}
+            />
+
+            <p style={styles.small}>{this.t("Summary")}</p>
+            <div
+              style={{
+                height: "250px",
+                width: "100%",
+                maxWidth: "650px",
+                borderRadius: "5px",
+                backgroundColor: "#FFFFFF",
+                padding: "2em",
+                display: "flex",
+                flexWrap: "wrap",
+                ...(this.props.window.width < 700
+                  ? {
+                      justifyContent: "center",
+                      fontSize: "0.7em"
+                    }
+                  : {
+                      justifyContent: "space-between"
+                    })
+              }}
+            >
+              {[
+                {
+                  label: this.t("Ticket fee per ticket"),
+                  value:
+                    isZeroOrNull(this.state.price) ||
+                    isZeroOrNull(this.state.numberOfTickets)
+                      ? "0 kr"
+                      : localFee + " kr"
+                },
+                {
+                  label: this.t("Subscription fee per month"),
+                  value:
+                    this.state.numberOfTickets > 100 && this.state.price == 0
+                      ? "800 kr"
+                      : "0 kr"
+                },
+
+                {
+                  label: this.t("Expected newsletter signups"),
+                  value: subscriptions
+                },
+                {
+                  label: this.t("Expected extra brand impressions"),
+                  value: impressions
+                }
+              ].map(({ label, value }, i) => (
+                <div
+                  key={i}
+                  style={{
+                    display: "contents"
+                  }}
+                >
+                  <div
+                    style={{
+                      ...(this.props.window.width < 700
+                        ? {
+                            minWidth: "500px",
+                            textAlign: "center"
+                          }
+                        : {
+                            textAlign: "left",
+                            minWidth: "290px"
+                          })
                     }}
                   >
-                    <div
-                      className="slider"
-                      style={{
-                        position: "absolute",
-                        cursor: "pointer",
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        bottom: 0,
-                        backgroundColor: "#326DE9",
-                        transition: "0.4s",
-                        borderRadius: 24,
-                        ...(this.state.includeTicketFee
-                          ? {
-                              backgroundColor: "#326DE9"
-                            }
-                          : {})
-                      }}
-                    >
-                      <div
-                        style={{
-                          position: "absolute",
-                          height: "20px",
-                          width: "20px",
-                          top: "2px",
-                          backgroundColor: "white",
-                          transition: "0.4s",
-                          borderRadius: "50%",
-                          ...(this.state.includeTicketFee
-                            ? { left: "calc(98% - 20px)" }
-                            : { left: "2%" })
-                        }}
-                      />
-                    </div>
-                  </label>
-                  <span
-                    style={
-                      this.state.includeTicketFee ? { color: "#326DE9" } : {}
-                    }
+                    {label}
+                  </div>
+                  <div
+                    style={{
+                      color: "#374355",
+                      fontSize: "21px",
+                      fontWeight: 600,
+                      ...(this.props.window.width < 600
+                        ? {
+                            textAlign: "center"
+                          }
+                        : {})
+                    }}
                   >
-                    {this.t("Event organizer pays ticket fee")}
-                  </span>
+                    {value}
+                  </div>
                 </div>
-                <p style={styles.small}>{this.t("Your estimated revenue")} </p>
-                <p
-                  style={{
-                    color: "#326DE9",
-                    fontSize: window.width > 420 ? "2.5em" : "1.5em",
-                    fontWeight: "500",
-                    lineHeight: "61px",
-                    letterSpacing: "normal",
-                    marginBottom: "0.5rem"
-                  }}
-                >
-                  {localTotal} kr
-                </p>
-                <div
-                  className="line"
-                  style={{
-                    boxSizing: "border-box",
-                    height: "2px",
-                    width: window.width > 420 ? "350px" : "250px",
-                    border: "1px solid #C0C5CF",
-                    margin: "0 auto"
-                  }}
-                />
-
-                <p style={styles.small}>{this.t("Summary")}</p>
-                <div
-                  style={{
-                    height: "250px",
-                    width: "100%",
-                    maxWidth: "650px",
-                    borderRadius: "5px",
-                    backgroundColor: "#FFFFFF",
-                    padding: "2em",
-                    display: "flex",
-                    flexWrap: "wrap",
-                    ...(window.width < 700
-                      ? {
-                          justifyContent: "center",
-                          fontSize: "0.7em"
-                        }
-                      : {
-                          justifyContent: "space-between"
-                        })
-                  }}
-                >
-                  {[
-                    {
-                      label: this.t("Ticket fee per ticket"),
-                      value:
-                        isZeroOrNull(this.state.price) ||
-                        isZeroOrNull(this.state.numberOfTickets)
-                          ? "0 kr"
-                          : localFee + " kr"
-                    },
-                    {
-                      label: this.t("Subscription fee per month"),
-                      value:
-                        this.state.numberOfTickets > 100 &&
-                        this.state.price == 0
-                          ? "800 kr"
-                          : "0 kr"
-                    },
-
-                    {
-                      label: this.t("Expected newsletter signups"),
-                      value: subscriptions
-                    },
-                    {
-                      label: this.t("Expected extra brand impressions"),
-                      value: impressions
-                    }
-                  ].map(({ label, value }, i) => (
-                    <div
-                      key={i}
-                      style={{
-                        display: "contents"
-                      }}
-                    >
-                      <div
-                        style={{
-                          ...(window.width < 700
-                            ? {
-                                minWidth: "500px",
-                                textAlign: "center"
-                              }
-                            : {
-                                textAlign: "left",
-                                minWidth: "290px"
-                              })
-                        }}
-                      >
-                        {label}
-                      </div>
-                      <div
-                        style={{
-                          color: "#374355",
-                          fontSize: "21px",
-                          fontWeight: 600,
-                          ...(window.width < 600
-                            ? {
-                                textAlign: "center"
-                              }
-                            : {})
-                        }}
-                      >
-                        {value}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <p
-                  style={{
-                    color: "grey",
-                    fontSize: "1em",
-                    margin: "1em"
-                  }}
-                >
-                  {this.t("Prices above include VAT")}
-                </p>
-                <style jsx>{`
+              ))}
+            </div>
+            <p
+              style={{
+                color: "grey",
+                fontSize: "1em",
+                margin: "1em"
+              }}
+            >
+              {this.t("Prices above include VAT")}
+            </p>
+            <style jsx>{`
                   input:focus + .slider {
                     box-shadow: 0 0 1px blue;
                   }
                  
                   }
                 `}</style>
-              </div>
-            </div>
           </div>
-        )}
-      </WindowHelper>
+        </div>
+      </div>
     );
   }
 }
 
-export default PriceCalculator;
+export default withWindow(PriceCalculator);
 
 function isZeroOrNull(number) {
   return number == 0 || number == null;
