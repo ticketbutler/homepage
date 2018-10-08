@@ -122,7 +122,7 @@ class Navbar extends React.Component<
                     fontSize: 10
                   }
                 : {}),
-              ...(this.props.window.width < 360
+              ...(this.props.window.width < 450
                 ? {
                     display: "none"
                   }
