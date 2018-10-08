@@ -7,7 +7,7 @@ import { BigTriangle } from "./elements/shapes";
 const styles = {
   input: {
     height: "2em",
-    width: "7.7em",
+    width: "8.5em",
     border: "1px solid #C0C5CF",
     borderRadius: 2,
     backgroundColor: "#FFFFFF",
@@ -18,8 +18,8 @@ const styles = {
     color: "#6C7582",
     fontSize: "21px",
     lineHeight: "25px",
-    marginLeft: "0.5em",
-    marginRight: "0.5em",
+    margin: "0.5em",
+
     fontWeight: 600
   },
   small: {

@@ -6,7 +6,7 @@ module.exports = [
   },
   {
     id: "da",
-    label: "Danish",
+    label: "Dansk",
     link: "/da"
   }
 ];

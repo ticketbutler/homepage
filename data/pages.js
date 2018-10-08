@@ -26,12 +26,12 @@ const contact = {
   button_text_en: "Send message",
   action_da: "/da/tak-side",
   action_en: "/en/thank-you-page",
-  thanks_da: "Tak!",
-  thanks_en: "Thank You!",
-  thanks_message_da: "Tak, vi vender tilbage inden 2 arbejds dage!",
-  thanks_message_en: "Thanks, you'll hear from us within 2 working days!",
-  call_us_da: "For akutte tilfælde, kontakt telefon: 89 80 12 80",
-  call_us_en: "If you'd prefer to talk to us, call us on:",
+  thanks_message_da:
+    "Tak for din henvendelse! Vi vender tilbage inden for 2 arbejdsdage. ",
+  thanks_message_en:
+    "Thanks for your inquiry! We will get back to you within 2 working days.",
+  call_us_da: "For akutte tilfælde, ring venligst til:",
+  call_us_en: "For urgent matters please call:",
   number: "89 80 12 80"
 };
 
@@ -322,7 +322,7 @@ module.exports = [
         heading_en: "Sell more online",
         image: "/img/konfetti-bred.png",
         text_da:
-          "Ticketbutler hjælper dig ikke kun med at sælge billetter –_systemet understøtter også din forretning og forståelse af din målgruppe, så du øger din omsætning på tværs af virksomheden. Læs mere på siden her om hvordan.",
+          "Ticketbutler hjælper dig ikke kun med at sælge billetter – systemet understøtter også din forretning og forståelse af din målgruppe, så du øger din omsætning på tværs af virksomheden. Læs mere på siden her om hvordan.",
         text_en:
           "Ticketbutler is not only helping you to sell more tickets - the platform also supports your business and understanding of your target audience, such you will see an increased bottom line for your company as a whole. Read more on this page on how."
       },
@@ -415,7 +415,7 @@ module.exports = [
         button_text_da: "Kontakt os!",
         button_text_en: "Contact us!",
         heading_da: "Kend dine gæster",
-        heading_en: "Make it easy for your customers",
+        heading_en: "Know your customers",
         image: "/img/billetsystem-til-koncerter.png",
         text_da:
           "Ticketbutler hjælper dig med at indsamle data på dine gæster, så du lærer din målgruppe bedre at kende.",
@@ -532,7 +532,7 @@ module.exports = [
       {
         type: "future_image_left",
         heading_da: "En naturlig udvidelse af dit brand",
-        heading_da: "A natural extension of your brand",
+        heading_en: "A natural extension of your brand",
         image: "/img/brugerrejse-i-et-online-billetsystem2.png",
         image_alt: "match-dit-brand",
         image_alt: "match-your-brand",

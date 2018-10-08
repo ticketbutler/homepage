@@ -35,7 +35,6 @@ class Contact extends React.Component {
                       })
                 }}
               >
-                <h2 style={{ color: "#356be9" }}>{this.props.thanks}</h2>
                 <h3>{this.props.thanks_message}</h3>
                 <h3>{this.props.call_us} </h3>
                 <h3>{this.props.number} </h3>
