@@ -48,7 +48,8 @@ class Navbar extends React.Component<
           alignItems: "center",
           ...(this.props.window.width < 600
             ? {
-                background: "#326de9"
+                background: "#326de9",
+                position: "fixed"
               }
             : { background: "transperent" })
         }}

@@ -41,12 +41,16 @@ const Company_logos = ({ items, heading }) => {
           -webkit-flex-wrap: wrap;
           flex-wrap: wrap;
           width: 100%;
+          // max-width: 1200px;
+          // margin: 0 auto;
           height: auto;
         }
         div.logoes img {
-          height: 40px;
-          margin: 10px 20px;
-          opacity: 0.6;
+          max-height: 2.9em;
+          max-width: 14em;
+          object-fit: contain;
+          margin: 10px 35px;
+          opacity: 0.7;
         }
 
         @media (max-width: 1080px) {
