@@ -137,14 +137,7 @@ export const Layout = ({
       }}
     />
 
-    <script
-      async
-      dangerouslySetInnerHTML={{
-        __html: `window.fcWidget.init({
-              token: "caada681-1687-44bf-b803-7e061a49883e",
-              host: "https://wchat.freshchat.com",
-            });`
-      }}
-    />
-  </div>
+<!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/3835323.js"></script>
+<!-- End of HubSpot Embed Code -->
 );
