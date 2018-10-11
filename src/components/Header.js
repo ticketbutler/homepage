@@ -27,10 +27,12 @@ const Header = ({
         ...(featureHeader
           ? window.width < 500
             ? {
-                maxHeight: "100vh",
-                padding: "200px 0"
+                height: "80vh",
+                padding: "60px 0"
               }
-            : {}
+            : {
+                height: "80vh"
+              }
           : {})
       }}
     >
@@ -169,7 +171,7 @@ const Header = ({
   
     @media (max-width: 600px) {
       header{
-        padding: 0px !important;
+        padding: 0px ;
         margin-top: 50px !important; 
       }
   
@@ -192,12 +194,12 @@ const Header = ({
   
     @media (max-width: 376px) {
       header{
-        padding: 30px 20px !important;
+        padding: 30px 20px 
         margin-top: 50px !important; 
       }
 
       header div.header_content{
-        padding: 60px 00px !important;
+        padding: 60px 00px   
         margin-top: 00px !important;
       }
   
@@ -206,7 +208,7 @@ const Header = ({
         line-height: 28px ;
       }
       header div.header_content p{
-        font-size: 14px !important;
+        font-size: 14px ;
         line-height: 20px ;
 
       }

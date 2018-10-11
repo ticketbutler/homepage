@@ -465,7 +465,7 @@ module.exports = [
         type: "future_image_left",
         button_link: "https://www.google.com/analytics/",
         button_text_da: "Om Google Analytics ",
-        button_text_en: "More about Google Analytics ",
+        button_text_en: "More about Google Analytics",
         heading_da: "Forstå dine gæster med Google Analytics",
         heading_en: "Understand your customers with Google Analytics",
         image: "/img/google-analytics-i-billetsystem.png",

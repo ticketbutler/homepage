@@ -14,7 +14,7 @@ module.exports = [
   {
     label_da: "Funktioner",
     label_en: "Features",
-    path_da: "/da/funktioner",
-    path_en: "/en/features"
+    path_da: "/da/saelg-flere-billetter-online",
+    path_en: "/en/sell-more-tickets-online"
   }
 ];

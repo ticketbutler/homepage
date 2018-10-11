@@ -23,6 +23,7 @@ class Navbar extends React.Component<
       label: string
     }>,
     currentLocale: Locale,
+
     otherLocale: Locale,
     window: {
       width: number
@@ -49,7 +50,8 @@ class Navbar extends React.Component<
           ...(this.props.window.width < 600
             ? {
                 background: "#326de9",
-                position: "fixed"
+                position: "fixed",
+                zIndex: 1000
               }
             : { background: "transperent" })
         }}

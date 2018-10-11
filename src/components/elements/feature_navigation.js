@@ -1,6 +1,6 @@
 //@flow
 
-import React from "react";
+import * as React from "react";
 import { Link, navigate } from "gatsby";
 import { withWindow } from "../helpers";
 
@@ -16,70 +16,113 @@ class FeaturesNavigation extends React.Component<
   { sticky: boolean }
 > {
   state = { sticky: false };
-  menuOffsetBuffer = 0;
-  myRef = React.createRef();
+  menuOffsetBuffer = 15;
+  marginofItem = 10;
+  containerRef = React.createRef();
+  tileRefs = this.props.items.map(() => React.createRef());
+  activeTileIndex = null;
+
   componentDidMount() {
-    if (this.myRef.current) {
-      let menuOffset = this.myRef.current.offsetTop - this.menuOffsetBuffer;
+    this.activeTileIndex = this.props.items.findIndex(t =>
+      window.location.href.includes(encodeURI(t.link))
+    );
+    let currentTileRef = this.tileRefs[this.activeTileIndex].current;
+    if (this.containerRef.current) {
+      let menuOffset =
+        this.containerRef.current.offsetTop - this.menuOffsetBuffer;
       window.addEventListener("scroll", () => {
         this.setState({ sticky: window.scrollY >= menuOffset });
       });
+      if (currentTileRef && this.activeTileIndex) {
+        this.containerRef.current.scrollTo({
+          left:
+            currentTileRef.offsetLeft -
+            this.menuOffsetBuffer -
+            this.activeTileIndex * this.marginofItem -
+            currentTileRef.offsetWidth * 0.5,
+          behavior: "smooth"
+        });
+      }
     }
   }
   render() {
     return (
       <div
         style={{
-          zIndex: 99,
-          position: "absolute",
+          zIndex: 999,
           width: "100%",
-          ...(this.props.window.width < 500
+          display: "flex",
+          justifyContent: "center",
+          ...(this.props.window.width < 800
             ? {
-                paddingTop: 60
+                paddingTop: 80
               }
             : { paddingTop: 120 }),
           ...(this.state.sticky
             ? {
-                position: "static"
+                position: "relative"
               }
-            : {})
+            : { position: "absolute" })
         }}
       >
         <div
-          ref={this.myRef}
+          ref={this.containerRef}
           style={{
             display: "flex",
-            justifyContent: "center",
-            width: "100%",
+            margin: "0 auto",
             overflowX: "auto",
-            zIndex: "999",
+            padding: this.menuOffsetBuffer,
+            transition: "0.5s background",
+            borderBottomLeftRadius: 3,
+            borderBottomRightRadius: 3,
             ...(this.state.sticky
-              ? this.props.window.width < 600
-                ? {}
+              ? {
+                  position: "fixed",
+                  background: "white",
+                  boxShadow: "0px 12px 73px -8px rgba(0,0,0,0.75)"
+                }
+              : {
+                  // position: "relative"
+                }),
+            ...(this.state.sticky
+              ? this.props.window.width < 800
+                ? { zIndex: 1000 }
                 : {
-                    position: "fixed",
-                    top: this.menuOffsetBuffer,
-                    background: "white",
-                    transition: "0.5s all",
-                    boxShadow: "0px 12px 73px -8px rgba(0,0,0,0.75)"
+                    top: 0
                   }
               : {})
           }}
         >
-          {this.props.items.map((item, i) => (
-            <FeatureTile
-              style={{}}
-              /* styleimg={{
-                ...(this.state.sticky
-                  ? {
-                      display: "none"
-                    }
-                  : {})
-              }} */
-              {...item}
-              active={window.location.href.includes(item.link)}
-            />
-          ))}
+          <div
+            style={{
+              display: "flex",
+              margin: "0 auto",
+              zIndex: "99"
+            }}
+          >
+            {this.props.items.map((item, i) => (
+              <FeatureTile
+                marginOfItems={this.marginofItem}
+                containerRef={this.tileRefs[i]}
+                style={{
+                  ...(this.props.window.width < 1050
+                    ? {
+                        width: 200
+                      }
+                    : {})
+                }}
+                styleimg={{
+                  ...(this.props.window.width < 800
+                    ? {
+                        display: "none"
+                      }
+                    : {})
+                }}
+                {...item}
+                active={this.activeTileIndex === i}
+              />
+            ))}
+          </div>
         </div>
       </div>
     );
@@ -92,6 +135,8 @@ class FeatureTile extends React.Component<
     name: string,
     image: string,
     link: string,
+    marginOfItems: number,
+    containerRef: React.Ref<*>,
     style?: { [string]: any },
     styleimg?: { [string]: any }
   },
@@ -102,10 +147,11 @@ class FeatureTile extends React.Component<
     styleimg: {}
   };
   state = { hovered: false };
+  marginOfItems = "0.5em";
   render() {
     return (
       <div
-        // key={this.propsitem}
+        ref={this.props.containerRef}
         onClick={() => {
           if (window.scrollY === 0) {
             navigate(this.props.link);
@@ -120,60 +166,58 @@ class FeatureTile extends React.Component<
             });
           }
         }}
-        style={{ textDecoration: "none" }}
         onMouseOver={() => {
           this.setState({ hovered: true });
         }}
+        style={{
+          background: "#fff",
+          width: 250,
+          maxWidth: 500,
+          borderRadius: 4,
+          boxShadow: "1px 1px 10px 1px rgba(0, 0, 0, 0.2)",
+          transition: "all 0.3s",
+          textAlign: "center",
+          cursor: "pointer",
+          marginLeft: this.props.marginOfItems,
+          marginRight: this.props.marginOfItems,
+          paddingLeft: 5,
+          paddingRight: 5,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          ...(this.props.active
+            ? {
+                background: "#1dc9cb"
+              }
+            : {}),
+          ...this.props.style
+        }}
       >
-        <div
+        <img
+          src={this.props.image}
           style={{
-            background: "#fff",
-            height: 100,
-            minWidth: 200,
-            padding: 20,
-
-            borderRadius: 4,
-            boxShadow: "1px 1px 10px 1px rgba(0, 0, 0, 0.2)",
-            transition: "all 0.3s",
-            textAlign: "center",
-            cursor: "pointer",
-            marginLeft: "1em",
-            marginRight: "1em",
+            height: "auto",
+            width: 40,
+            margin: 5,
+            ...this.props.styleimg
+          }}
+        />
+        <span
+          style={{
+            color: "rgba(50, 109, 233, 1)",
+            fontFamily: "Montserrat",
+            fontWeight: 600,
+            fontSize: 16,
+            padding: 10,
             ...(this.props.active
               ? {
-                  background: "#1dc9cb"
+                  color: "white"
                 }
-              : {}),
-            ...this.props.style
+              : {})
           }}
         >
-          <img
-            src={this.props.image}
-            style={{
-              height: 40,
-              width: 40,
-              display: "block",
-              margin: "0 auto",
-              ...this.props.styleimg
-            }}
-          />
-          <span
-            style={{
-              color: "rgba(50, 109, 233, 1)",
-              fontFamily: "Montserrat",
-              fontWeight: 600,
-              fontSize: 16,
-              marginTop: 15,
-              ...(this.props.active
-                ? {
-                    color: "white"
-                  }
-                : {})
-            }}
-          >
-            {this.props.name}
-          </span>
-        </div>
+          {this.props.name}
+        </span>
       </div>
     );
   }
