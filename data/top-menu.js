@@ -10,5 +10,11 @@ module.exports = [
     label_en: "Price",
     path_da: "/da/billigt-billetsystem",
     path_en: "/en/best-value-ticket-system"
+  },
+  {
+    label_da: "Funktioner",
+    label_en: "Features",
+    path_da: "/da/saelg-flere-billetter-online",
+    path_en: "/en/sell-more-tickets-online"
   }
 ];
