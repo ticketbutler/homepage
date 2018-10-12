@@ -9,7 +9,7 @@ const Header = ({
   button_link,
   image,
   style = {},
-  textColor = {},
+
   featureHeader,
   window
 }) => {
@@ -53,8 +53,7 @@ const Header = ({
             fontFamily: "Hind",
             fontWeight: "bold",
             textAlign: "center",
-            transition: "all 0.3s",
-            ...textColor
+            transition: "all 0.3s"
           }}
         >
           {heading}
@@ -68,8 +67,7 @@ const Header = ({
             color: "#ffffff",
             fontFamily: "Montserrat",
             textAlign: "center",
-            transition: "all 0.3s",
-            ...textColor
+            transition: "all 0.3s"
           }}
         >
           {text}

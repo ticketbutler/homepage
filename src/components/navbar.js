@@ -23,7 +23,6 @@ class Navbar extends React.Component<
       label: string
     }>,
     currentLocale: Locale,
-
     otherLocale: Locale,
     window: {
       width: number

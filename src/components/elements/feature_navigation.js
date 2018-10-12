@@ -17,7 +17,7 @@ class FeaturesNavigation extends React.Component<
 > {
   state = { sticky: false };
   menuOffsetBuffer = 15;
-  marginofItem = 10;
+  itemMargin = 10;
   containerRef = React.createRef();
   tileRefs = this.props.items.map(() => React.createRef());
   activeTileIndex = null;
@@ -38,7 +38,7 @@ class FeaturesNavigation extends React.Component<
           left:
             currentTileRef.offsetLeft -
             this.menuOffsetBuffer -
-            this.activeTileIndex * this.marginofItem -
+            this.activeTileIndex * this.itemMargin -
             currentTileRef.offsetWidth * 0.5,
           behavior: "smooth"
         });
@@ -81,9 +81,7 @@ class FeaturesNavigation extends React.Component<
                   background: "white",
                   boxShadow: "0px 12px 73px -8px rgba(0,0,0,0.75)"
                 }
-              : {
-                  // position: "relative"
-                }),
+              : {}),
             ...(this.state.sticky
               ? this.props.window.width < 800
                 ? { zIndex: 1000 }
@@ -102,7 +100,7 @@ class FeaturesNavigation extends React.Component<
           >
             {this.props.items.map((item, i) => (
               <FeatureTile
-                marginOfItems={this.marginofItem}
+                marginOfItems={this.itemMargin}
                 containerRef={this.tileRefs[i]}
                 style={{
                   ...(this.props.window.width < 1050
@@ -118,8 +116,8 @@ class FeaturesNavigation extends React.Component<
                       }
                     : {})
                 }}
-                {...item}
                 active={this.activeTileIndex === i}
+                {...item}
               />
             ))}
           </div>
