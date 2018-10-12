@@ -31,7 +31,7 @@ const TallCenteredFuture = ({
       <SectionText style={{ padding: 0 }}>
         <h2>{heading}</h2>
         <p>{text}</p>
-        <img alt={image_alt} src={image} />
+        <img style={{ maxWidth: 900 }} alt={image_alt} src={image} />
         {button_text &&
           button_text.length > 0 && (
             <Button
