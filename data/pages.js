@@ -75,29 +75,30 @@ module.exports = [
         type: "listOfImages",
         images: [
           {
-            src: "../img/Comwell.png",
+            src: "/img/Comwell.png",
             href: "http://comwell.dk"
           },
           {
-            src: "../img/logox400.png",
+            src: "/img/zentropa_logo.png",
+            href: "http://http://zentropa.dk/"
+          },
+          {
+            src: "/img/logox400.png",
             href: "http://nordicblockchain.com"
           },
 
           {
-            src: "../img/SPISlogo.png",
+            src: "/img/SPISlogo.png",
             href: "http://spies.dk"
           },
 
           {
-            src: "../img/IDA_logo_grey_RGB.png",
+            src: "/img/IDA_logo_grey_RGB.png",
             href: "http://ida.dk"
           },
+
           {
-            src: "../img/zentropa_logo.png",
-            href: "http://http://zentropa.dk/"
-          },
-          {
-            src: "../img/Rainmaking-logo.png",
+            src: "/img/Rainmaking-logo.png",
             href: "http://rainmaking.io"
           }
         ]
@@ -137,14 +138,14 @@ module.exports = [
         heading_en: "Ticketbutler integrates among others with",
         images: [
           {
-            src: "../img/squarespace-logo.png"
+            src: "/img/squarespace-logo.png"
           },
 
           {
-            src: "../img/Wix.com_Logo.png"
+            src: "/img/Wix.com_Logo.png"
           },
           {
-            src: "../img/WordPress-logotype-standard.png"
+            src: "/img/WordPress-logotype-standard.png"
           }
         ]
       },
@@ -347,6 +348,7 @@ module.exports = [
         locale_en: "en",
         locale_da: "da"
       },
+      testimonials,
       newsletterSubscription,
 
       contact
@@ -565,6 +567,28 @@ module.exports = [
           "Hold dine gæster opdaterede gennem din foretrukne kanal. Send en besked på SMS, e-mail eller gennem vores automatiske påmindelser, så dine gæster er informerede om praktiske forhold og om, hvor meget de har at glæde sig til – måske de lokker sine venner med?",
         text_en:
           "Keep your guests updated through your preferred channel either by SMS, e-emails, or a message in the automated reminder emails. Inform them about practical things, but mostly about how much they should look forward to your event, so they will bring their friends."
+      },
+      {
+        type: "listOfImages",
+        heading_da: "Dine gæster kan blandt andet betale med:",
+        heading_en: "Your guests can pay amogns others pay with:",
+        images: [
+          {
+            src: "/img/visa_pos_fc.png"
+          },
+          {
+            src: "/img/mc_vrt_opt_pos_73_3x.png"
+          },
+          {
+            src: "/img/DK_Logo_CMYK.png"
+          },
+          {
+            src: "/img/ApplePayPaymentMark.png"
+          },
+          {
+            src: "/img/MP_RGB_NoTM_Logo+Type Horisontal Blue SMALL.png"
+          }
+        ]
       },
       {
         type: "tall_centered_future",

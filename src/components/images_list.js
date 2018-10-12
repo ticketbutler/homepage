@@ -1,7 +1,7 @@
 import React from "react";
 import { withWindow } from "../components/helpers";
 const ImagesList = ({ images, heading }) => (
-  <section>
+  <section style={{ paddingLeft: 50, paddingRight: 50 }}>
     {heading && (
       <div
         style={{
