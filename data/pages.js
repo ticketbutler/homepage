@@ -47,6 +47,39 @@ const newsletterSubscription = {
   newsletter_text_da: "Tak for din abonnement!"
 };
 
+const partnersSection = {
+  type: "listOfImages",
+  images: [
+    {
+      src: "/img/Comwell.png",
+      href: "http://comwell.dk"
+    },
+    {
+      src: "/img/zentropa_logo.png",
+      href: "http://http://zentropa.dk/"
+    },
+    {
+      src: "/img/logox400.png",
+      href: "http://nordicblockchain.com"
+    },
+
+    {
+      src: "/img/SPISlogo.png",
+      href: "http://spies.dk"
+    },
+
+    {
+      src: "/img/IDA_logo_grey_RGB.png",
+      href: "http://ida.dk"
+    },
+
+    {
+      src: "/img/Rainmaking-logo.png",
+      href: "http://rainmaking.io"
+    }
+  ]
+};
+
 module.exports = [
   {
     path_en: "/en",
@@ -71,38 +104,7 @@ module.exports = [
         text_da: "Din data. Dit brand. Din succes",
         text_en: "Your data. Your brand. Your success"
       },
-      {
-        type: "listOfImages",
-        images: [
-          {
-            src: "/img/Comwell.png",
-            href: "http://comwell.dk"
-          },
-          {
-            src: "/img/zentropa_logo.png",
-            href: "http://http://zentropa.dk/"
-          },
-          {
-            src: "/img/logox400.png",
-            href: "http://nordicblockchain.com"
-          },
-
-          {
-            src: "/img/SPISlogo.png",
-            href: "http://spies.dk"
-          },
-
-          {
-            src: "/img/IDA_logo_grey_RGB.png",
-            href: "http://ida.dk"
-          },
-
-          {
-            src: "/img/Rainmaking-logo.png",
-            href: "http://rainmaking.io"
-          }
-        ]
-      },
+      partnersSection,
 
       {
         type: "future_image_right_new",
@@ -147,7 +149,11 @@ module.exports = [
           {
             src: "/img/WordPress-logotype-standard.png"
           }
-        ]
+        ],
+        sectionStyle: {
+          maxWidth: 500,
+          margin: "0 auto"
+        }
       },
 
       {
@@ -349,6 +355,7 @@ module.exports = [
         locale_da: "da"
       },
       testimonials,
+      partnersSection,
       newsletterSubscription,
 
       contact
@@ -557,6 +564,36 @@ module.exports = [
           "By the ticketing integration you don’t make your ticket buyer leave your homepage and cut down a step in the purchase flow. And from your homepage your ticket buyers are only seconds away to secure their ticket through our simple buying process. We never ask your customers to create a user, they can pay with MobilePay and we’re only asking for the minimum amount of information to buy the ticket."
       },
       {
+        type: "listOfImages",
+        heading_da: "Dine gæster kan blandt andet betale med:",
+        heading_en: "Your guests can pay amongs others pay with:",
+        images: [
+          {
+            src: "/img/visa_pos_fc.png"
+          },
+          {
+            src: "/img/mc_vrt_opt_pos_73_3x.png"
+          },
+          {
+            src: "/img/MP_RGB_NoTM_Logo+Type Horisontal Blue SMALL.png"
+          },
+          {
+            src: "/img/DK_Logo_CMYK.png"
+          },
+          {
+            src: "/img/ApplePayPaymentMark.png"
+          }
+        ],
+        sectionStyle: {
+          maxWidth: 900,
+          margin: "0 auto"
+        },
+        imageStyle: {
+          maxHeight: 60,
+          maxWidth: 100
+        }
+      },
+      {
         type: "future_image_right",
         heading_da: "SMS, e-mails og påmindelser",
         heading_en: "SMS, emails, and reminders",
@@ -568,28 +605,7 @@ module.exports = [
         text_en:
           "Keep your guests updated through your preferred channel either by SMS, e-emails, or a message in the automated reminder emails. Inform them about practical things, but mostly about how much they should look forward to your event, so they will bring their friends."
       },
-      {
-        type: "listOfImages",
-        heading_da: "Dine gæster kan blandt andet betale med:",
-        heading_en: "Your guests can pay amogns others pay with:",
-        images: [
-          {
-            src: "/img/visa_pos_fc.png"
-          },
-          {
-            src: "/img/mc_vrt_opt_pos_73_3x.png"
-          },
-          {
-            src: "/img/DK_Logo_CMYK.png"
-          },
-          {
-            src: "/img/ApplePayPaymentMark.png"
-          },
-          {
-            src: "/img/MP_RGB_NoTM_Logo+Type Horisontal Blue SMALL.png"
-          }
-        ]
-      },
+
       {
         type: "tall_centered_future",
         heading_da: "Brug for en eventside?",
