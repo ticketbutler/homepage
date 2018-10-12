@@ -127,6 +127,7 @@ collections:
             widget: select
             options:        
               - { label: Header, value: header }
+             -  { label: Partners, value: partners }
               - { label: Image right, value: future_image_right }
               - { label: Image left, value: future_image_left }
               - { label: Centerd Image Tall, value: tall_centered_future }

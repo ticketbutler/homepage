@@ -1,3 +1,4 @@
+// @flow
 import * as React from "react";
 import { Layout } from "../layouts/";
 import Header from "../components/Header";
@@ -12,10 +13,10 @@ import Contact from "../components/Contact";
 import Testimonials from "../components/testimonials";
 import PriceCalculator from "../components/price_calculator";
 import NewsletterSubscription from "../components/newsletter_page";
-import CompanyLogos from "../components/logo-section";
+import ImagesList from "../components/images_list";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-const components = [
+const components: Array<{ Component: React.Component<*>, id: string }> = [
   { Component: Header, id: "header" },
   { Component: FutureImageRight, id: "future_image_right" },
   { Component: FutureImageIeft, id: "future_image_left" },
@@ -31,7 +32,7 @@ const components = [
   { Component: PriceCalculator, id: "price-calculator" },
   { Component: Contact, id: "contact" },
   { Component: NewsletterSubscription, id: "newsletter-subscription" },
-  { Componenet: CompanyLogos, id: "Company_logos" }
+  { Component: ImagesList, id: "partners" }
 ];
 
 const CmsPage = ({ pageContext }) => (

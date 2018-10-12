@@ -72,6 +72,36 @@ module.exports = [
         text_en: "Your data. Your brand. Your success"
       },
       {
+        type: "partners",
+        images: [
+          {
+            src: "../img/Comwell.png",
+            href: "http://comwell.dk"
+          },
+          {
+            src: "../img/Rainmaking-logo.png",
+            href: "http://rainmaking.io"
+          },
+          {
+            src: "../img/SPISlogo.png",
+            href: "http://spies.dk"
+          },
+          {
+            src: "../img/logox400.png",
+            href: "http://nordicblockchain.com"
+          },
+          {
+            src: "../img/IDA_logo_grey_RGB.png",
+            href: "http://ida.dk"
+          },
+          {
+            src: "../img/zentropa_logo.png",
+            href: "http://http://zentropa.dk/"
+          }
+        ]
+      },
+
+      {
         type: "future_image_right_new",
         heading_da: "Din succes er vores succes",
         heading_en: "We want you to have success",

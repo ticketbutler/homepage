@@ -1,6 +1,6 @@
 import React from "react";
 import { withWindow } from "../components/helpers";
-const Partners = ({ images }) => (
+const ImagesList = ({ images }) => (
   <section>
     <div
       style={{
@@ -9,9 +9,7 @@ const Partners = ({ images }) => (
         zIndex: "1",
         flexFlow: "row wrap",
         width: "100%",
-        justifyContent: "space-around",
-
-        ...(window.width > 980 ? { padding: "32px" } : { padding: "35px" })
+        justifyContent: "space-around"
       }}
     >
       {images.map(img => (
@@ -33,4 +31,4 @@ const Partners = ({ images }) => (
   </section>
 );
 
-export default withWindow(Partners);
+export default withWindow(ImagesList);
