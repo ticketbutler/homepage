@@ -137,6 +137,11 @@ export const Layout = ({
       }}
     />
 
-  <script id="hs-script-loader" async defer src="//js.hs-scripts.com/3835323.js"/>
-</div>
+    <script
+      id="hs-script-loader"
+      async
+      defer
+      src="//js.hs-scripts.com/3835323.js"
+    />
+  </div>
 );

@@ -5,6 +5,16 @@ module.exports = {
   items: [
     {
       text_da:
+        "Vi valgte at skifte til Ticketbutler da vi ønskede en moderne, fleksibel og prisstærk løsning på vores billethåndtering. Ticketbutler levede 100% op til de krav og var endda hurtige til at lave småtilpasninger undervejs. Derudover var der altid hurtig respons på alle vores mange spørgsmål.",
+      text_en:
+        "We chose to change to Ticketbutler because we wanted a modern, flexible, and affordable solution for our ticketing. Ticketbutler lived up to the requirements and was even quick to make small adjustments on the go. Besides they were always swift to reply to all our many questions.",
+      image: "/img/SørenNielsenNordicAI.jpeg",
+      logo: "/img/Nordic.png",
+      about_da: "Søren Jessen Nielsen, medstifter af Nordic.ai",
+      about_en: "Søren Jessen Nielsen, founder of Nordic.ai"
+    },
+    {
+      text_da:
         "Ticketbutler er meget engagerede, professionelle og løsningsorienterede i forhold til de udfordringer som dukkede i løbet af processen. Det frigiver tid til os, så vi kan koncentrere os om at planlægge en god fest, samtidig med, at vi sikrer en god brugeroplevelse for vores gæster.",
       text_en:
         "The Ticketbutler team is very committed, professional, and solution-oriented with the challenges we experiences we faced in our event process. This gives us time to concentrate on organizing a better event together with providing a good ticketing experience for our guests.",

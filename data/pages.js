@@ -47,6 +47,38 @@ const newsletterSubscription = {
   newsletter_text_da: "Tak for din abonnement!"
 };
 
+const partnersSection = {
+  type: "listOfImages",
+  images: [
+    {
+      src: "/img/Comwell.png",
+      href: "http://comwell.dk"
+    },
+    {
+      src: "/img/zentropa_logo.png",
+      href: "http://http://zentropa.dk/"
+    },
+    {
+      src: "/img/logox400.png",
+      href: "http://nordicblockchain.com"
+    },
+
+    {
+      src: "/img/SPISlogo.png",
+      href: "http://spies.dk"
+    },
+
+    {
+      src: "/img/IDA_logo_grey_RGB.png",
+      href: "http://ida.dk"
+    },
+
+    {
+      src: "/img/Rainmaking-logo.png",
+      href: "http://rainmaking.io"
+    }
+  ]
+};
 const featuresNavigation = {
   type: "feature-navigation",
   items: [
@@ -109,6 +141,8 @@ module.exports = [
         text_da: "Din data. Dit brand. Din succes",
         text_en: "Your data. Your brand. Your success"
       },
+      partnersSection,
+
       {
         type: "future_image_right_new",
         heading_da: "Din succes er vores succes",
@@ -137,6 +171,28 @@ module.exports = [
         text_en:
           "Every homepage visitor is an opportunity to not only sell tickets but also whatever you offer from your homepage. Never miss the opportunity to show off by integrating the ticketing on your homepage. You don’t have to be a nerd to integrate – it is as easy as copy/paste and the integration is designed to suit your brand. If you don’t want to integrate we also have beautiful event pages."
       },
+      {
+        type: "listOfImages",
+        heading_da: "Ticketbutler kan blandt andet integreres med",
+        heading_en: "Ticketbutler integrates among others with",
+        images: [
+          {
+            src: "/img/squarespace-logo.png"
+          },
+
+          {
+            src: "/img/Wix.com_Logo.png"
+          },
+          {
+            src: "/img/WordPress-logotype-standard.png"
+          }
+        ],
+        sectionStyle: {
+          maxWidth: 500,
+          margin: "0 auto"
+        }
+      },
+
       {
         type: "tall_centered_future",
         heading_da: "Dit billetsystem. Din identitet",
@@ -335,6 +391,8 @@ module.exports = [
         locale_en: "en",
         locale_da: "da"
       },
+      testimonials,
+      partnersSection,
       newsletterSubscription,
 
       contact
@@ -543,6 +601,36 @@ module.exports = [
           "By the ticketing integration you don’t make your ticket buyer leave your homepage and cut down a step in the purchase flow. And from your homepage your ticket buyers are only seconds away to secure their ticket through our simple buying process. We never ask your customers to create a user, they can pay with MobilePay and we’re only asking for the minimum amount of information to buy the ticket."
       },
       {
+        type: "listOfImages",
+        heading_da: "Dine gæster kan blandt andet betale med:",
+        heading_en: "Your guests can pay amongs others pay with:",
+        images: [
+          {
+            src: "/img/visa_pos_fc.png"
+          },
+          {
+            src: "/img/mc_vrt_opt_pos_73_3x.png"
+          },
+          {
+            src: "/img/MP_RGB_NoTM_Logo+Type Horisontal Blue SMALL.png"
+          },
+          {
+            src: "/img/DK_Logo_CMYK.png"
+          },
+          {
+            src: "/img/ApplePayPaymentMark.png"
+          }
+        ],
+        sectionStyle: {
+          maxWidth: 900,
+          margin: "0 auto"
+        },
+        imageStyle: {
+          maxHeight: 60,
+          maxWidth: 100
+        }
+      },
+      {
         type: "future_image_right",
         heading_da: "SMS, e-mails og påmindelser",
         heading_en: "SMS, emails, and reminders",
@@ -554,6 +642,7 @@ module.exports = [
         text_en:
           "Keep your guests updated through your preferred channel either by SMS, e-emails, or a message in the automated reminder emails. Inform them about practical things, but mostly about how much they should look forward to your event, so they will bring their friends."
       },
+
       {
         type: "tall_centered_future",
         heading_da: "Brug for en eventside?",
@@ -724,26 +813,6 @@ module.exports = [
       newsletterSubscription,
 
       contact
-    ]
-  },
-  /*//////////////////////////THANKS PAGE/////////////////////*/
-  {
-    path_da: "/da/tak-side",
-    path_en: "/en/thank-you-page",
-    sections: [
-      {
-        type: "form_confirmation",
-        link_da: "/da/tak-side",
-        link_en: "/en/thank-you-page",
-        thanks_da: "Tak",
-        thanks_en: "Thank You!",
-        thanks_message_da: "Tak, vi vender tilbage inden 2 arbejds dage!",
-        thanks_message_en: "Thanks, you'll hear from us within 2 working days!",
-        call_us_da: "For akutte tilfælde, kontakt telefon: 89 80 12 80",
-        call_us_en: "If you'd prefer to talk to us, call us on: 89 80 12 80",
-        back_to_side_button_da: "tilbage til hjemmesiden",
-        back_to_side_button_en: "back to Homepage"
-      }
     ]
   }
 ];
