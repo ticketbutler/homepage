@@ -79,6 +79,43 @@ const partnersSection = {
     }
   ]
 };
+const featuresNavigation = {
+  type: "feature-navigation",
+  items: [
+    {
+      image: "/img/sell-more.png",
+      link_en: "/en/sell-more-tickets-online",
+      link_da: "/da/saelg-flere-billetter-online",
+      alt: "image1",
+      name_en: "Sell More",
+      name_da: "Sælg flere"
+    },
+    {
+      image: "/img/better-experience.png",
+      link_da: "/da/dit-billetsystem",
+      link_en: "/en/your-ticket-system",
+      alt: "image2",
+      name_en: "Better experience",
+      name_da: "Bedre oplevelse"
+    },
+    {
+      image: "/img/know-your-guests.png",
+      link_en: "/en/know-you-customers",
+      link_da: "/da/kend-dine-gæster",
+      alt: "image1",
+      name_en: "Know your guests",
+      name_da: "Kend dine gæster"
+    },
+    {
+      image: "/img/be-in-control.png",
+      link_da: "/da/billetter-billettyper",
+      link_en: "/en/ticket-types",
+      alt: "image2",
+      name_en: "Be in control",
+      name_da: "Vær i kontrol"
+    }
+  ]
+};
 
 module.exports = [
   {
@@ -361,7 +398,9 @@ module.exports = [
       contact
     ]
   },
-  /*///////////////////FEATURES ///////////////*/
+
+  /*//////////////////////SELL MORE ONLINE///////////////////*/
+
   {
     path_da: "/da/saelg-flere-billetter-online",
     path_en: "/en/sell-more-tickets-online",
@@ -372,18 +411,18 @@ module.exports = [
     meta_description_en:
       "Are you organising events and need tips and tricks to increase your ticket sales? Ticketbutler is an online ticketing system that helps you reach success”",
     sections: [
+      featuresNavigation,
       {
         type: "header",
-        button_link: "#contact",
-        button_text_da: "Kontakt os!",
-        button_text_en: "Contact us!",
+
         heading_da: "Sælg mere online",
         heading_en: "Sell more online",
         image: "/img/konfetti-bred.png",
         text_da:
           "Ticketbutler hjælper dig ikke kun med at sælge billetter – systemet understøtter også din forretning og forståelse af din målgruppe, så du øger din omsætning på tværs af virksomheden. Læs mere på siden her om hvordan.",
         text_en:
-          "Ticketbutler is not only helping you to sell more tickets - the platform also supports your business and understanding of your target audience, such you will see an increased bottom line for your company as a whole. Read more on this page on how."
+          "Ticketbutler is not only helping you to sell more tickets - the platform also supports your business and understanding of your target audience, such you will see an increased bottom line for your company as a whole. Read more on this page on how.",
+        featureHeader: true
       },
       {
         type: "future_image_left",
@@ -468,24 +507,23 @@ module.exports = [
     meta_description_en:
       "“Ticketbutler gives you a way to ask your guests specific questions when you sell tickets online. Start your ticket sales today”",
     sections: [
+      featuresNavigation,
       {
         type: "header",
-        button_link: "#contact",
-        button_text_da: "Kontakt os!",
-        button_text_en: "Contact us!",
         heading_da: "Kend dine gæster",
         heading_en: "Know your customers",
         image: "/img/billetsystem-til-koncerter.png",
         text_da:
           "Ticketbutler hjælper dig med at indsamle data på dine gæster, så du lærer din målgruppe bedre at kende.",
         text_en:
-          "Ticketbutler helps you gather data from your guests, so you get to know your target audience better."
+          "Ticketbutler helps you gather data from your guests, so you get to know your target audience better.",
+        featureHeader: true
       },
       {
         type: "future_image_left",
         button_link: "https://www.google.com/analytics/",
         button_text_da: "Om Google Analytics ",
-        button_text_en: "More about Google Analytics ",
+        button_text_en: "More about Google Analytics",
         heading_da: "Forstå dine gæster med Google Analytics",
         heading_en: "Understand your customers with Google Analytics",
         image: "/img/google-analytics-i-billetsystem.png",
@@ -538,18 +576,17 @@ module.exports = [
     meta_description_en:
       "Start event with Ticketbutler: An online ticketing system packed with features that benefits both you and your guests”",
     sections: [
+      featuresNavigation,
       {
         type: "header",
-        button_link: "#contact",
-        button_text_da: "Kontakt os!",
-        button_text_en: "Contact us!",
         heading_da: "En bedre oplevelse for dig og dine kunder",
         heading_en: "A better experience for you and your customers",
         image: "/img/tilmeldingssystem-til-networking-events.jpg",
         text_da:
           "Gør alle glade ved at gøre det nemt for både dig selv og dine gæster",
         text_en:
-          "Make everyone happy by making it easy for both yourself and your guests."
+          "Make everyone happy by making it easy for both yourself and your guests.",
+        featureHeader: true
       },
       {
         type: "future_image_left",
@@ -659,18 +696,17 @@ module.exports = [
     meta_description_en:
       "With Ticketbutler you can aks your guests specific questions when you sell tickets online and create several ticket types for same event.",
     sections: [
+      featuresNavigation,
       {
         type: "header",
-        button_link: "#contact",
-        button_text_da: "Kontakt os!",
-        button_text_en: "Contact us!",
         heading_da: "Vær i kontrol over dit event",
         heading_en: "Be in control of your event",
         image: "/img/simpelt-billetsystem.png",
         text_da:
           "Få kontrol over eventet ved at opsætte dine billetter så de matcher dine gæster, hold styr på billetsalget og check dine gæster ind med Ticketbutler app'en",
         text_en:
-          "Get control of your event by setting up tickets that match your guests, keep track of ticket sales, and check guests in at the door with the Ticketbutler app."
+          "Get control of your event by setting up tickets that match your guests, keep track of ticket sales, and check guests in at the door with the Ticketbutler app.",
+        featureHeader: true
       },
       {
         type: "future_image_left",

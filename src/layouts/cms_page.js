@@ -14,6 +14,7 @@ import Testimonials from "../components/testimonials";
 import PriceCalculator from "../components/price_calculator";
 import NewsletterSubscription from "../components/newsletter_page";
 import ImagesList from "../components/images_list";
+import FeaturesNavigation from "../components/elements/feature_navigation";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const components: Array<{ Component: React.Component<*>, id: string }> = [
@@ -32,7 +33,8 @@ const components: Array<{ Component: React.Component<*>, id: string }> = [
   { Component: PriceCalculator, id: "price-calculator" },
   { Component: Contact, id: "contact" },
   { Component: NewsletterSubscription, id: "newsletter-subscription" },
-  { Component: ImagesList, id: "listOfImages" }
+  { Component: ImagesList, id: "listOfImages" },
+  { Component: FeaturesNavigation, id: "feature-navigation" }
 ];
 
 const CmsPage = ({ pageContext }) => (

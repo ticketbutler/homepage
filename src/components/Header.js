@@ -1,19 +1,39 @@
 import React from "react";
-
+import { withWindow } from "../components/helpers";
 import { Button } from "./elements/elements";
 
-const Header = ({ heading, text, button_text, button_link, image }) => {
+const Header = ({
+  heading,
+  text,
+  button_text,
+  button_link,
+  image,
+  style = {},
+
+  featureHeader,
+  window
+}) => {
   return (
     <header
       style={{
-        padding: "48px 0",
-        minHeight: "100vh",
+        padding: "100px 0",
+        maxHeight: "100vh",
         width: "100%",
         color: "#fff",
         position: "relative",
         background: `linear-gradient( to right, rgba(50, 109, 233, .9),rgba(126, 82, 232, .9)),url('${image}'),no-repeat center center`,
         clipPath: "polygon(0 0, 100% 0, 100% 95%, 0% 100%)",
-        backgroundSize: "cover"
+        backgroundSize: "cover",
+        ...(featureHeader
+          ? window.width < 500
+            ? {
+                height: "80vh",
+                padding: "60px 0"
+              }
+            : {
+                height: "80vh"
+              }
+          : {})
       }}
     >
       <div
@@ -128,7 +148,7 @@ const Header = ({ heading, text, button_text, button_link, image }) => {
   
     @media (max-width: 768px) {
       header{
-        padding: 00px !important;
+        padding: 00px 
       }
 
       header div.header_content{
@@ -149,7 +169,7 @@ const Header = ({ heading, text, button_text, button_link, image }) => {
   
     @media (max-width: 600px) {
       header{
-        padding: 0px !important;
+        padding: 0px ;
         margin-top: 50px !important; 
       }
   
@@ -172,12 +192,12 @@ const Header = ({ heading, text, button_text, button_link, image }) => {
   
     @media (max-width: 376px) {
       header{
-        padding: 30px 20px !important;
+        padding: 30px 20px 
         margin-top: 50px !important; 
       }
 
       header div.header_content{
-        padding: 60px 00px !important;
+        padding: 60px 00px   
         margin-top: 00px !important;
       }
   
@@ -186,7 +206,7 @@ const Header = ({ heading, text, button_text, button_link, image }) => {
         line-height: 28px ;
       }
       header div.header_content p{
-        font-size: 14px !important;
+        font-size: 14px ;
         line-height: 20px ;
 
       }
@@ -197,4 +217,4 @@ const Header = ({ heading, text, button_text, button_link, image }) => {
     </header>
   );
 };
-export default Header;
+export default withWindow(Header);

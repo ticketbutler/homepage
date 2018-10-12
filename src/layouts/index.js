@@ -138,13 +138,10 @@ export const Layout = ({
     />
 
     <script
+      id="hs-script-loader"
       async
-      dangerouslySetInnerHTML={{
-        __html: `window.fcWidget.init({
-              token: "caada681-1687-44bf-b803-7e061a49883e",
-              host: "https://wchat.freshchat.com",
-            });`
-      }}
+      defer
+      src="//js.hs-scripts.com/3835323.js"
     />
   </div>
 );
