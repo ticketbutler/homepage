@@ -688,25 +688,5 @@ module.exports = [
 
       contact
     ]
-  },
-  /*//////////////////////////THANKS PAGE/////////////////////*/
-  {
-    path_da: "/da/tak-side",
-    path_en: "/en/thank-you-page",
-    sections: [
-      {
-        type: "form_confirmation",
-        link_da: "/da/tak-side",
-        link_en: "/en/thank-you-page",
-        thanks_da: "Tak",
-        thanks_en: "Thank You!",
-        thanks_message_da: "Tak, vi vender tilbage inden 2 arbejds dage!",
-        thanks_message_en: "Thanks, you'll hear from us within 2 working days!",
-        call_us_da: "For akutte tilfælde, kontakt telefon: 89 80 12 80",
-        call_us_en: "If you'd prefer to talk to us, call us on: 89 80 12 80",
-        back_to_side_button_da: "tilbage til hjemmesiden",
-        back_to_side_button_en: "back to Homepage"
-      }
-    ]
   }
 ];

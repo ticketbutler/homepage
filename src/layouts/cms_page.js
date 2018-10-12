@@ -12,7 +12,7 @@ import Contact from "../components/Contact";
 import Testimonials from "../components/testimonials";
 import PriceCalculator from "../components/price_calculator";
 import NewsletterSubscription from "../components/newsletter_page";
-
+import CompanyLogos from "../components/logo-section";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const components = [
@@ -30,7 +30,8 @@ const components = [
   { Component: Testimonials, id: "testimonials" },
   { Component: PriceCalculator, id: "price-calculator" },
   { Component: Contact, id: "contact" },
-  { Component: NewsletterSubscription, id: "newsletter-subscription" }
+  { Component: NewsletterSubscription, id: "newsletter-subscription" },
+  { Componenet: CompanyLogos, id: "Company_logos" }
 ];
 
 const CmsPage = ({ pageContext }) => (
