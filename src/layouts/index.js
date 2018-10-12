@@ -118,6 +118,13 @@ export const Layout = ({
       (document,"script","serve.albacross.com/track.js","89331168");`
         }}
       />
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `#hubspot-messages-iframe-container {
+            max-height: 90%
+        }`
+        }}
+      />
     </Helmet>
     <Navbar
       items={nav.topMenu}
