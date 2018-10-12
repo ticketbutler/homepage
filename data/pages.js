@@ -56,7 +56,7 @@ const partnersSection = {
     },
     {
       src: "/img/zentropa_logo.png",
-      href: "http://http://zentropa.dk/"
+      href: "http://zentropa.dk/"
     },
     {
       src: "/img/logox400.png",
@@ -65,7 +65,7 @@ const partnersSection = {
 
     {
       src: "/img/SPISlogo.png",
-      href: "http://spies.dk"
+      href: "https://spisodense.dk/"
     },
 
     {
