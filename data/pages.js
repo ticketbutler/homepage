@@ -72,24 +72,22 @@ module.exports = [
         text_en: "Your data. Your brand. Your success"
       },
       {
-        type: "partners",
+        type: "listOfImages",
         images: [
           {
             src: "../img/Comwell.png",
             href: "http://comwell.dk"
           },
           {
-            src: "../img/Rainmaking-logo.png",
-            href: "http://rainmaking.io"
+            src: "../img/logox400.png",
+            href: "http://nordicblockchain.com"
           },
+
           {
             src: "../img/SPISlogo.png",
             href: "http://spies.dk"
           },
-          {
-            src: "../img/logox400.png",
-            href: "http://nordicblockchain.com"
-          },
+
           {
             src: "../img/IDA_logo_grey_RGB.png",
             href: "http://ida.dk"
@@ -97,6 +95,10 @@ module.exports = [
           {
             src: "../img/zentropa_logo.png",
             href: "http://http://zentropa.dk/"
+          },
+          {
+            src: "../img/Rainmaking-logo.png",
+            href: "http://rainmaking.io"
           }
         ]
       },
@@ -129,6 +131,24 @@ module.exports = [
         text_en:
           "Every homepage visitor is an opportunity to not only sell tickets but also whatever you offer from your homepage. Never miss the opportunity to show off by integrating the ticketing on your homepage. You don’t have to be a nerd to integrate – it is as easy as copy/paste and the integration is designed to suit your brand. If you don’t want to integrate we also have beautiful event pages."
       },
+      {
+        type: "listOfImages",
+        heading_da: "Ticketbutler kan blandt andet integreres med",
+        heading_en: "Ticketbutler integrates among others with",
+        images: [
+          {
+            src: "../img/squarespace-logo.png"
+          },
+
+          {
+            src: "../img/Wix.com_Logo.png"
+          },
+          {
+            src: "../img/WordPress-logotype-standard.png"
+          }
+        ]
+      },
+
       {
         type: "tall_centered_future",
         heading_da: "Dit billetsystem. Din identitet",

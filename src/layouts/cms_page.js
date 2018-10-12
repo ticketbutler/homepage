@@ -32,7 +32,7 @@ const components: Array<{ Component: React.Component<*>, id: string }> = [
   { Component: PriceCalculator, id: "price-calculator" },
   { Component: Contact, id: "contact" },
   { Component: NewsletterSubscription, id: "newsletter-subscription" },
-  { Component: ImagesList, id: "partners" }
+  { Component: ImagesList, id: "listOfImages" }
 ];
 
 const CmsPage = ({ pageContext }) => (
