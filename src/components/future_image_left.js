@@ -54,17 +54,18 @@ const FutureImageIeft = ({
         </p>
         {button_text &&
           button_text.length > 0 && (
-            <Button
-              to={button_link}
-              className="right"
-              style={{
-                right: "0",
-                float: "right",
-                transform: "translateX(0)"
-              }}
-            >
-              {button_text}
-            </Button>
+            <a href={button_link} target="_blank" rel="noopener noreferrer">
+              <Button
+                className="right"
+                style={{
+                  right: "0",
+                  float: "right",
+                  transform: "translateX(0)"
+                }}
+              >
+                {button_text}
+              </Button>
+            </a>
           )}
       </SectionText>
     </div>

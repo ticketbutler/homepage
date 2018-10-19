@@ -87,8 +87,8 @@ const featuresNavigation = {
       link_en: "/en/sell-more-tickets-online",
       link_da: "/da/saelg-flere-billetter-online",
       alt: "image1",
-      name_en: "Sell More",
-      name_da: "Sælg flere"
+      name_en: "Sell more",
+      name_da: "Sælg mere"
     },
     {
       image: "/img/better-experience.png",
@@ -468,7 +468,7 @@ module.exports = [
         button_link:
           "https://www.facebook.com/business/learn/facebook-ads-pixel",
         button_text_da: "Om Facebook Pixel",
-        button_text_en: "More about Facebook Pixel",
+        button_text_en: "About Facebook Pixel",
         heading_da: "Optimér dit salg på Facebook",
         heading_en: "Optimize your Facebook marketing",
         image: "/img/facebook-pixel-billetsystem.png",
@@ -523,7 +523,7 @@ module.exports = [
         type: "future_image_left",
         button_link: "https://www.google.com/analytics/",
         button_text_da: "Om Google Analytics ",
-        button_text_en: "More about Google Analytics",
+        button_text_en: "About Google Analytics",
         heading_da: "Forstå dine gæster med Google Analytics",
         heading_en: "Understand your customers with Google Analytics",
         image: "/img/google-analytics-i-billetsystem.png",
@@ -661,8 +661,8 @@ module.exports = [
         heading_da: "En naturlig udvidelse af dit brand",
         heading_en: "A natural extension of your brand",
         image: "/img/brugerrejse-i-et-online-billetsystem2.png",
-        image_alt: "match-dit-brand",
-        image_alt: "match-your-brand",
+        image_alt_da: "match-dit-brand",
+        image_alt_en: "match-your-brand",
         text_da:
           "Hele billetoplevelsen designes i dit brand så dine gæster forbliver i dit univers – intet mix med Ticketbutler branding, ingen eksterne event-tilbud, ingen forstyrrelser – kun dig og dit brand.",
         text_en:
