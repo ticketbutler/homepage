@@ -268,6 +268,18 @@ module.exports = [
           " It doesn’t matter if you’re a big company, a startup or a one man army. We accommodate your needs either if you use our free plan or an advanced tailored solution."
       },
       {
+        type: "future_image_right_new",
+        heading_da: "Dine penge, dit cashflow",
+        heading_en: "Your money, your cashflow",
+        image: "/img/fbpixelticketbutler.png",
+        image_alt_da: "faa-udbetaling-inden-event",
+        image_alt_en: "receive-money-before-event",
+        text_da:
+          "Du er måske vant til at få din omsætning udbetalt efter dit events afslutning. Med Ticketbutler kan du selv vælge om du ønsker din omsætning udbetalt løbende inden eventet eller samlet efter.",
+        text_en:
+          "You might be used to receive your event revenue after the event has ended. But with Ticketbutler you can choose to receive your revenue ongoing before the event or the total revenue after the event."
+      },
+      {
         type: "tall_centered_future_button_top",
         button_link: "#contact",
         button_text_da: "Kontakt os!",
