@@ -45,12 +45,15 @@ const translations = {
     "Event organizer pays ticket fee": "Arrangør betaler billetgebyr",
     "Your estimated revenue": "Din forventede udbetaling",
     Summary: "Oversigt",
-    "Ticket fee per ticket": "Billetgebyr per billet",
+    "Ticket fee per ticket*": "Billetgebyr per billet*",
     "Subscription fee per month": "Abbonementsgebyr per måned",
     "Expected newsletter signups": "Forventet antal nye nyhedsbrevsmodtagere",
     "Expected extra brand impressions":
       "Forventet antal ekstra brand-visninger",
-    "Prices above include VAT": "Ovenstående priser vises inklusiv moms"
+    "Prices above include VAT": "Ovenstående priser vises inklusiv moms",
+    "*If you receive ongoing payments ": "*Får du løbende udbetaling trækkes "
+    "fees ": "gebyr "
+    "will be deducted from your revenue": "fra din omsætning"
   }
 };
 
@@ -363,7 +366,7 @@ class PriceCalculator extends React.Component {
             >
               {[
                 {
-                  label: this.t("Ticket fee per ticket"),
+                  label: this.t("Ticket fee per ticket*"),
                   value:
                     isZeroOrNull(this.state.price) ||
                     isZeroOrNull(this.state.numberOfTickets)
@@ -433,6 +436,15 @@ class PriceCalculator extends React.Component {
               }}
             >
               {this.t("Prices above include VAT")}
+            </p>
+            <p
+              style={{
+                color: "grey",
+                fontSize: "1em",
+                margin: "1em"
+              }}
+            >
+              {this.t("*If you receive ongoing payments ")} <a href="https://stripe.com/dk/pricing"> Stripe {this.t("fees ")} </a> {this.t("will be deducted from your revenue")}
             </p>
             <style jsx>{`
                   input:focus + .slider {
