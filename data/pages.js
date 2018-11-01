@@ -268,10 +268,14 @@ module.exports = [
           " It doesn’t matter if you’re a big company, a startup or a one man army. We accommodate your needs either if you use our free plan or an advanced tailored solution."
       },
       {
-        type: "future_image_right_new",
+        type: "future_image_left",
+        button_link_da: "/da/billigt-billetsystem",
+        button_link_en: "/en/best-value-ticket-system",
+        button_text_da: "Se mere",
+        button_text_en: "See more",
         heading_da: "Dine penge, dit cashflow",
         heading_en: "Your money, your cashflow",
-        image: "/img/fbpixelticketbutler.png",
+        image: "/img/cute-money-piggie.jpg",
         image_alt_da: "faa-udbetaling-inden-event",
         image_alt_en: "receive-money-before-event",
         text_da:
