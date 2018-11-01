@@ -51,8 +51,8 @@ const translations = {
     "Expected extra brand impressions":
       "Forventet antal ekstra brand-visninger",
     "Prices above include VAT": "Ovenstående priser vises inklusiv moms",
-    "*If you receive ongoing payments ": "*Får du løbende udbetaling trækkes "
-    "fees ": "gebyr "
+    "*If you receive ongoing payments ": "*Får du løbende udbetaling trækkes ",
+    "fees ": "gebyr ",
     "will be deducted from your revenue": "fra din omsætning"
   }
 };
@@ -444,7 +444,16 @@ class PriceCalculator extends React.Component {
                 margin: "1em"
               }}
             >
-              {this.t("*If you receive ongoing payments ")} <a href="https://stripe.com/dk/pricing"> Stripe {this.t("fees ")} </a> {this.t("will be deducted from your revenue")}
+              {this.t("*If you receive ongoing payments ")}{" "}
+              <a
+                href="https://stripe.com/dk/pricing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+                Stripe {this.t("fees ")}{" "}
+              </a>{" "}
+              {this.t("will be deducted from your revenue")}
             </p>
             <style jsx>{`
                   input:focus + .slider {

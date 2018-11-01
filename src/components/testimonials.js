@@ -386,7 +386,7 @@ const Slider_section = ({ items }) => {
       <Content>
         <div className="slider_wrap">
           <div className="slider">
-            <img className="quote" src="../img/quote.png" />
+            <img className="quote" src={require("../img/quote.png")} />
 
             <Carousel
               showArrows="true"
