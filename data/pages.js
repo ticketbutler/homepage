@@ -59,8 +59,8 @@ const partnersSection = {
       href: "http://zentropa.dk/"
     },
     {
-      src: "/img/logox400.png",
-      href: "http://nordicblockchain.com"
+      src: "/img/mikkeller.png",
+      href: "http://mikkeller.dk/"
     },
 
     {
