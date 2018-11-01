@@ -351,6 +351,18 @@ module.exports = [
         text_en:
           "Have you ever wondered why other ticketing platforms offer their service for free for free events? Because you pay with the value of data, branding, and customer traffic to the ticketing platform. We give all this value to you to make your business grow for a small subscription fee per month."
       },
+      {
+        type: "future_image_right_new",
+        heading_da: "Få løbende udbetaling",
+        heading_en: "Ongoing payments",
+        image: "/img/cute-money-piggie.jpg",
+        image_alt_da: "loebende-udbetaling-inden-arrangement",
+        image_alt_en: "ongoing-payments-before-event",
+        text_da:
+          "Hvis du ønsker løbende udbetaling inden dit event, skal du blot udfylde en formular online, hvor du herefter modtager billetindtægterne løbende med en uges forsinkelse. Du kan også vælge at få en samlet udbetaling efter eventet, så du slipper for unødvendigt bogføringsarbejde.",
+        text_en:
+          "If you wish your revenue paid out ongoing before the event, you only need to fill a form online, and hereafter you receive your money ongoing with seven days delay. You can also choose to receive the total revenue after the event so you avoid unnecessary accounting work."
+      },
       /* {
         type: "tall_centered_future",
         button_link: "#contact",
