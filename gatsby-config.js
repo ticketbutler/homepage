@@ -5,6 +5,12 @@ module.exports = {
     "styled-jsx/babel",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp"
+    "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-plugin-facebook-pixel",
+      options: {
+        pixelId: "204211136934215"
+      }
+    }
   ]
 };
