@@ -70,10 +70,10 @@ export const Layout = ({
         {`
         {
             "@context": "http://schema.org",
-            "@type": "LocalBusiness",
+            "@type": "Local Business",
             "name": "Ticketbutler",
            
-            "image": "https://test-ticketbutler.netlify.com/img/logo_blue.png",
+            "image": "/img/logometadata.png",
             "@id": "",
             "url": "ticketbutler.io",
             "telephone": "89 80 12 80",
