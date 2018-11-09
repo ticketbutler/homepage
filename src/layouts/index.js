@@ -70,7 +70,7 @@ export const Layout = ({
             "@type": "LocalBusiness",
             "name": "Ticketbutler",
            
-            "image": "https://ticketbutler.io/img/logometa.jpg",
+            "image": "https://ticketbutler.io/img/logometadata.png",
             "@id": "",
             "url": "ticketbutler.io",
             "telephone": "89 80 12 80",
