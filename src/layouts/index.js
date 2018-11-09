@@ -26,7 +26,7 @@ export const Layout = ({
       <link rel="icon" href="/img/Favicon-tbsmall.png" type="image/png" />
       <meta
         property="og:image"
-        content="/static/img/ticketbutler_logo-with-padding2.png"
+        content="/../static/img/ticketbutler_logo-with-padding2.png"
       />
       <meta property="og:site_name" content={`${metaData.companyName}`} />
 
