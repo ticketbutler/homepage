@@ -20,7 +20,7 @@ export const Layout = ({
       <link
         rel="shortcut icon"
         type="image/png"
-        href="/img/Favicon-tbsmall.png"
+        href="/../img/Favicon-tbsmall.png"
         sizes="16x16"
       />
       <link rel="icon" href="/img/Favicon-tbsmall.png" type="image/png" />
@@ -30,8 +30,11 @@ export const Layout = ({
       <meta name="theme-color" content="#1DC9CC" />
       <meta name="msapplication-navbutton-color" content="#326DE9" />
       <meta name="apple-mobile-web-app-status-bar-style" content="#1DC9CC" />
-      <title>{`${title}`}</title>
-      <meta name="description" content={`${meta_description}`} />
+      <title>Ticketbutler</title>
+      <meta
+        name="description"
+        content="Gør dit event professionelt med et skræddersyet billetsystem"
+      />
       <meta property="og:type" content="business.business" />
       <meta property="og:url" content={`${metaData.url}`} />
       <meta
