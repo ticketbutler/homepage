@@ -24,7 +24,15 @@ export const Layout = ({
         sizes="16x16"
       />
       <link rel="icon" href="/img/Favicon-tbsmall.png" type="image/png" />
-      <meta property="og:image" content="/img/logoticketbutler.jpg" />
+      <meta
+        property="og:image"
+        content="https://ticketbutler.io/img/logoticketbutler.jpg"
+      />
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta
+        property="twitter:description"
+        content="Gør dit event professionelt med et skræddersyet billetsystem"
+      />
       <meta property="og:site_name" content={`${metaData.companyName}`} />
 
       <meta name="theme-color" content="#1DC9CC" />
