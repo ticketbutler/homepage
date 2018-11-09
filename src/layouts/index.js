@@ -37,6 +37,7 @@ export const Layout = ({
       />
       <meta property="og:type" content="business.business" />
       <meta property="og:url" content={`${metaData.url}`} />
+      <meta property="og:image" content="../img/logo_blue.png" />
       <meta
         property="business:contact_data:street_address"
         content={`${metaData.address}`}
