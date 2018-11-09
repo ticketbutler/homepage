@@ -24,7 +24,7 @@ export const Layout = ({
         sizes="16x16"
       />
       <link rel="icon" href="/img/Favicon-tbsmall.png" type="image/png" />
-      <meta property="og:image" content="/img/Favicon-tbsmall.png" />
+      <meta property="og:image" content="/img/logometadata.png" />
       <meta property="og:site_name" content={`${metaData.companyName}`} />
 
       <meta name="theme-color" content="#1DC9CC" />
@@ -37,6 +37,10 @@ export const Layout = ({
       />
       <meta property="og:type" content="business.business" />
       <meta property="og:url" content={`${metaData.url}`} />
+      <meta
+        property="og:description"
+        content="Gør dit event professionelt med et skræddersyet billetsystem"
+      />
 
       <meta
         property="business:contact_data:street_address"
