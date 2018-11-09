@@ -24,10 +24,7 @@ export const Layout = ({
         sizes="16x16"
       />
       <link rel="icon" href="/img/Favicon-tbsmall.png" type="image/png" />
-      <meta
-        property="og:image"
-        content="/static/img/ticketbutler_logo-with-padding2.png"
-      />
+      <meta property="og:image" content="/img/Favicon-tbsmall.png" />
       <meta property="og:site_name" content={`${metaData.companyName}`} />
 
       <meta name="theme-color" content="#1DC9CC" />
