@@ -24,7 +24,7 @@ export const Layout = ({
         sizes="16x16"
       />
       <link rel="icon" href="/img/Favicon-tbsmall.png" type="image/png" />
-      <meta property="og:image" content="/img/logometa.jpg" />
+      <meta property="og:image" content="/img/ticketbutlerlogo.jpg" />
       <meta property="og:site_name" content={`${metaData.companyName}`} />
 
       <meta name="theme-color" content="#1DC9CC" />
@@ -41,6 +41,7 @@ export const Layout = ({
         property="og:description"
         content="Gør dit event professionelt med et skræddersyet billetsystem"
       />
+      <met property="og:title" content="Ticketbutler" />
 
       <meta
         property="business:contact_data:street_address"
@@ -69,7 +70,7 @@ export const Layout = ({
             "@type": "LocalBusiness",
             "name": "Ticketbutler",
            
-            "image": "https://ticketbutler.io/img/logo_blue.png",
+            "image": "https://ticketbutler.io/img/logometa.jpg",
             "@id": "",
             "url": "ticketbutler.io",
             "telephone": "89 80 12 80",
