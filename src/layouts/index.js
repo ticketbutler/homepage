@@ -41,7 +41,7 @@ export const Layout = ({
         property="og:description"
         content="Gør dit event professionelt med et skræddersyet billetsystem"
       />
-      <met property="og:title" content="Ticketbutler" />
+      <meta property="og:title" content="Ticketbutler" />
 
       <meta
         property="business:contact_data:street_address"
