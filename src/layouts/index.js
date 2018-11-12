@@ -25,6 +25,7 @@ export const Layout = ({
       />
       <link rel="icon" href="/img/Favicon-tbsmall.png" type="image/png" />
       <meta
+        prefix="og: http://ogp.me/ns#"
         property="og:image"
         content="https://ticketbutler.io/img/logoticketbutler.jpg"
       />
