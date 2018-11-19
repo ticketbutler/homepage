@@ -29,8 +29,8 @@ class NewsletterSubscribe extends React.Component {
             <form
               className="newsletter"
               data-netlify="true"
+              netlify-recaptcha
               data-netlify-honeypot="bot-field"
-              netlify
               name="newsletter"
               onSubmit={async e => {
                 e.preventDefault();
@@ -50,6 +50,7 @@ class NewsletterSubscribe extends React.Component {
                 });
               }}
             >
+              <input type="hidden" name="form-name" value="newsletter" />
               <label>
                 <input
                   name="email"
@@ -60,7 +61,6 @@ class NewsletterSubscribe extends React.Component {
                   }}
                 />
               </label>
-              <div data-netlify-recaptcha />
               <button id="newsletter_btn" type="submit">
                 <span>
                   {this.props.button_text} <em>&#187;</em>

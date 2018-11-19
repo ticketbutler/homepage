@@ -66,12 +66,7 @@ class Contact extends React.Component {
                 }}
                 className="contact-form"
               >
-                <input
-                  type="hidden"
-                  name="form-name"
-                  value="contact-form"
-                  required
-                />
+                <input type="hidden" name="form-name" value="contact-form" />
                 <ul>
                   <li>
                     <label>
@@ -114,7 +109,7 @@ class Contact extends React.Component {
                   </li>
                 </ul>
                 <div data-netlify-recaptcha />
-                <button id="contact_btn">
+                <button type="submit" id="contact_btn">
                   <span>
                     {this.props.button_text} <em>&#187;</em>
                   </span>
