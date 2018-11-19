@@ -44,8 +44,8 @@ class Contact extends React.Component {
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 netlify
-                name="contact-form"
                 action="/success"
+                name="contact-form"
                 onSubmit={async e => {
                   e.preventDefault();
                   await fetch("/", {
@@ -67,7 +67,7 @@ class Contact extends React.Component {
                 }}
                 className="contact-form"
               >
-                <input type="hidden" name="bot-field" />
+                <input type="hidden" name="form-name" value="contact-form" />
                 <ul>
                   <li>
                     <label>
