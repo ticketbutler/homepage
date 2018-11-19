@@ -41,7 +41,7 @@ class Contact extends React.Component {
               </div>
             ) : (
               <form
-                data-netlify="true"
+                netlify
                 data-netlify-honeypot="bot-field"
                 name="contact-form"
                 onSubmit={async e => {
