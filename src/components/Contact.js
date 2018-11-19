@@ -43,26 +43,25 @@ class Contact extends React.Component {
               <form
                 name="contact-form"
                 data-netlify="true"
-                // data-netlify-honeypot="bot-field"
-                onSubmit={async e => {
-                  e.preventDefault();
-                  await fetch("/", {
-                    method: "post",
-                    headers: {
-                      "Content-Type": "application/x-www-form-urlencoded"
-                    },
-                    body: encode({
-                      "form-name": "contact-form",
-                      name: this.state.name,
-                      email: this.state.email,
-                      message: this.state.message
-                    })
-                  });
+                // onSubmit={async e => {
+                //   e.preventDefault();
+                //   await fetch("/", {
+                //     method: "post",
+                //     headers: {
+                //       "Content-Type": "application/x-www-form-urlencoded"
+                //     },
+                //     body: encode({
+                //       "form-name": "contact-form",
+                //       name: this.state.name,
+                //       email: this.state.email,
+                //       message: this.state.message
+                //     })
+                //   });
 
-                  this.setState({
-                    sent: true
-                  });
-                }}
+                //   this.setState({
+                //     sent: true
+                //   });
+                // }}
               >
                 <input type="hidden" name="form-name" value="contact-form" />
                 <ul>
