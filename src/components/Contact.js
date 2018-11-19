@@ -65,7 +65,8 @@ class Contact extends React.Component {
                 }}
                 className="contact-form"
               >
-                <input type="hidden" name="form-name" value="contact-form" />
+                <input type="hidden" name="bot-field" />
+
                 <ul>
                   <li>
                     <label>
