@@ -43,6 +43,9 @@ class Contact extends React.Component {
               <form
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
+                method="POST"
+                netlify
+                name="contact-form"
                 onSubmit={async e => {
                   e.preventDefault();
                   await fetch("/", {

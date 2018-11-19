@@ -30,6 +30,9 @@ class NewsletterSubscribe extends React.Component {
               className="newsletter"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
+              netlify
+              method="POST"
+              name="newsletter"
               onSubmit={async e => {
                 e.preventDefault();
                 await fetch("/", {
