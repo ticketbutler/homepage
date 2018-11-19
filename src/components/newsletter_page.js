@@ -31,7 +31,6 @@ class NewsletterSubscribe extends React.Component {
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               netlify
-              method="POST"
               name="newsletter"
               onSubmit={async e => {
                 e.preventDefault();
@@ -62,7 +61,7 @@ class NewsletterSubscribe extends React.Component {
                 />
               </label>
               <div data-netlify-recaptcha />
-              <button id="newsletter_btn">
+              <button id="newsletter_btn" type="submit">
                 <span>
                   {this.props.button_text} <em>&#187;</em>
                 </span>
