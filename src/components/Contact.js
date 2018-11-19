@@ -43,6 +43,7 @@ class Contact extends React.Component {
               <form
                 name="contact-form"
                 data-netlify="true"
+                action="/"
                 // onSubmit={async e => {
                 //   e.preventDefault();
                 //   await fetch("/", {
