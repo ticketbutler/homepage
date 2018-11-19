@@ -61,7 +61,7 @@ class NewsletterSubscribe extends React.Component {
                   }}
                 />
               </label>
-
+              <div data-netlify-recaptcha />
               <button id="newsletter_btn">
                 <span>
                   {this.props.button_text} <em>&#187;</em>
