@@ -29,7 +29,6 @@ class NewsletterSubscribe extends React.Component {
             <form
               className="newsletter"
               data-netlify="true"
-              netlify-recaptcha
               data-netlify-honeypot="bot-field"
               name="newsletter"
               onSubmit={async e => {

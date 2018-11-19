@@ -108,7 +108,7 @@ class Contact extends React.Component {
                     </label>
                   </li>
                 </ul>
-                <div data-netlify-recaptcha />
+
                 <button type="submit" id="contact_btn">
                   <span>
                     {this.props.button_text} <em>&#187;</em>
