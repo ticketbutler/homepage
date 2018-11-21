@@ -64,6 +64,7 @@ class Contact extends React.Component {
                 //   });
                 // }}
               >
+                <input type="hidden" name="form-name" value="contact-form" />
                 <ul>
                   <li>
                     <label>
