@@ -1,6 +1,7 @@
 import React from "react";
 import "font-awesome/css/font-awesome.min.css";
 import { withWindow } from "../components/helpers";
+import * as emailjs from "emailjs-com";
 
 const encode = data => {
   return Object.keys(data)
@@ -15,6 +16,9 @@ class Contact extends React.Component {
     message: "",
     sent: false
   };
+  componentDidMount() {
+    emailjs.init("user_2wPNd3ilAJ3t4kODqM4wK");
+  }
   render() {
     return (
       <section id="contact">
@@ -41,29 +45,15 @@ class Contact extends React.Component {
               </div>
             ) : (
               <form
-                name="contact-form"
-                data-netlify="true"
-                action="/thanks/"
-                className="contact-form"
-                // onSubmit={async e => {
-                //   e.preventDefault();
-                //   await fetch("/", {
-                //     method: "post",
-                //     headers: {
-                //       "Content-Type": "application/x-www-form-urlencoded"
-                //     },
-                //     body: encode({
-                //       "form-name": "contact-form",
-                //       name: this.state.name,
-                //       email: this.state.email,
-                //       message: this.state.message
-                //     })
-                //   });
-
-                //   this.setState({
-                //     sent: true
-                //   });
-                // }}
+                onSubmit={e => {
+                  e.preventDefault();
+                  emailjs.send("default_service", "template_ykOd5LLE", {
+                    name: this.state.name,
+                    email: this.state.email,
+                    message: this.state.message
+                  });
+                  this.setState({ sent: true });
+                }}
               >
                 <input type="hidden" name="form-name" value="contact-form" />
                 <ul>
@@ -72,6 +62,7 @@ class Contact extends React.Component {
                       <input
                         name="name"
                         id="align-left"
+                        value={this.state.name}
                         placeholder={this.props.placeholder_name}
                         onChange={e => {
                           this.setState({ name: e.target.value });
@@ -84,6 +75,7 @@ class Contact extends React.Component {
                       <input
                         type="email"
                         name="email"
+                        value={this.state.email}
                         id="align-right"
                         placeholder={this.props.placeholder_email}
                         required
@@ -97,6 +89,7 @@ class Contact extends React.Component {
                     <label>
                       <textarea
                         name="message"
+                        value={this.state.message}
                         placeholder={this.props.placeholder_text}
                         required
                         onChange={e => {
