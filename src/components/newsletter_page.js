@@ -29,7 +29,7 @@ class NewsletterSubscribe extends React.Component {
             <form
               className="newsletter"
               data-netlify="true"
-              action="/thanks"
+              action="/thanks/"
               name="newsletter"
               /*  onSubmit={async e => {
                 e.preventDefault();
@@ -49,6 +49,7 @@ class NewsletterSubscribe extends React.Component {
                 });
               }} */
             >
+              <input type="hidden" name="form-name" value="newsletter" />
               <label>
                 <input
                   name="email"
