@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
-import { SmallTriangle, SquareShape } from "./elements/shapes";
 import { WindowHelper } from "../components/helpers";
 
 const SubscriptionPrices = () => (

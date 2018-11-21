@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import { withWindow } from "../components/helpers";
 import { makeTranslations } from "mini-trans";
 import { BigTriangle } from "./elements/shapes";
