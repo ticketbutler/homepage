@@ -29,9 +29,9 @@ class NewsletterSubscribe extends React.Component {
             <form
               className="newsletter"
               data-netlify="true"
-              data-netlify-honeypot="bot-field"
+              action="/thanks"
               name="newsletter"
-              onSubmit={async e => {
+              /*  onSubmit={async e => {
                 e.preventDefault();
                 await fetch("/", {
                   method: "post",
@@ -47,9 +47,8 @@ class NewsletterSubscribe extends React.Component {
                 this.setState({
                   sent: true
                 });
-              }}
+              }} */
             >
-              <input type="hidden" name="form-name" value="newsletter" />
               <label>
                 <input
                   name="email"
