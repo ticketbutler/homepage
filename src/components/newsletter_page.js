@@ -1,5 +1,6 @@
 import React from "react";
-import base64 from "base-64";
+import dateFns from "date-fns";
+import qs from "query-string";
 import { withWindow } from "../components/helpers";
 
 class NewsletterSubscribe extends React.Component {
@@ -26,38 +27,14 @@ class NewsletterSubscribe extends React.Component {
               className="newsletter"
               onSubmit={async e => {
                 e.preventDefault();
-                await fetch("https://api.mailjet.com/v3/REST/contact", {
-                  method: "POST",
-                  headers: {
-                    "Content-Type": "application/json",
-                    Authorization:
-                      "Basic " +
-                      base64.encode(
-                        "376e0ad8bed5dc3ecd411243a817b0e1" +
-                          ":" +
-                          "67ee2fe2e85083abf14aeb32fcb1401a"
-                      )
-                  },
-                  body: JSON.stringify({ Email: this.state.email })
+                let data = qs.stringify({
+                  email: this.state.email,
+                  date_added: dateFns.format(new Date(), "DD/MM/YYYY H:mm")
                 });
-
-                // let req = new XMLHttpRequest();
-                // req.addEventListener("load", () => {
-                //   console.log(this.responseText);
-                // });
-                // req.open("POST", "//api.mailjet.com/v3/REST/contact");
-                // req.setRequestHeader("Content-Type", "application/json");
-                // req.setRequestHeader(
-                //   "Authorization",
-                //   "Basic " +
-                //     base64.encode(
-                //       "376e0ad8bed5dc3ecd411243a817b0e1" +
-                //         ":" +
-                //         "67ee2fe2e85083abf14aeb32fcb1401a"
-                //     )
-                // );
-                // req.send({ Email: this.state.email });
-
+                fetch(
+                  "//script.google.com/macros/s/AKfycbySdHBTZ0jjTMOqrDWqnimXNFEeqxwV9udZHcU83-boqrpw__w/exec?" +
+                    data
+                );
                 this.setState({
                   sent: true
                 });
