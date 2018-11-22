@@ -63,6 +63,7 @@ class NewsletterSubscribe extends React.Component {
                 });
               }}
             >
+              <input type="hidden" name="form-name" value="newsletter" />
               <label>
                 <input
                   name="email"
@@ -73,8 +74,7 @@ class NewsletterSubscribe extends React.Component {
                   }}
                 />
               </label>
-
-              <button id="newsletter_btn">
+              <button id="newsletter_btn" type="submit">
                 <span>
                   {this.props.button_text} <em>&#187;</em>
                 </span>

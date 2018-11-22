@@ -20,20 +20,38 @@ export const Layout = ({
       <link
         rel="shortcut icon"
         type="image/png"
-        href="/img/Favicon-tbsmall.png"
+        href="/../img/Favicon-tbsmall.png"
         sizes="16x16"
       />
       <link rel="icon" href="/img/Favicon-tbsmall.png" type="image/png" />
-      <meta property="og:image" content="../img/logox400.png" />
+      <meta
+        prefix="og: http://ogp.me/ns#"
+        property="og:image"
+        content="https://ticketbutler.io/img/logoticketbutler.jpg"
+      />
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta
+        property="twitter:description"
+        content="Gør dit event professionelt med et skræddersyet billetsystem"
+      />
       <meta property="og:site_name" content={`${metaData.companyName}`} />
 
       <meta name="theme-color" content="#1DC9CC" />
       <meta name="msapplication-navbutton-color" content="#326DE9" />
       <meta name="apple-mobile-web-app-status-bar-style" content="#1DC9CC" />
-      <title>{`${title}`}</title>
-      <meta name="description" content={`${meta_description}`} />
+      <title>Ticketbutler</title>
+      <meta
+        name="description"
+        content="Gør dit event professionelt med et skræddersyet billetsystem"
+      />
       <meta property="og:type" content="business.business" />
       <meta property="og:url" content={`${metaData.url}`} />
+      <meta
+        property="og:description"
+        content="Gør dit event professionelt med et skræddersyet billetsystem"
+      />
+      <meta property="og:title" content="Ticketbutler" />
+
       <meta
         property="business:contact_data:street_address"
         content={`${metaData.address}`}
@@ -61,7 +79,7 @@ export const Layout = ({
             "@type": "LocalBusiness",
             "name": "Ticketbutler",
            
-            "image": "https://test-ticketbutler.netlify.com/img/logo_blue.png",
+            "image": "https://ticketbutler.io/img/logoticketbutler.jpg",
             "@id": "",
             "url": "ticketbutler.io",
             "telephone": "89 80 12 80",
@@ -73,8 +91,8 @@ export const Layout = ({
                 "addressCountry": "DA"
             },
             "sameAs": [
-                "https://www.facebook.com/BilletFix/",
-                "https://www.linkedin.com/company/billetfix/"
+                "https://www.facebook.com/ticketbutler/",
+                "https://www.linkedin.com/company/ticketbutler/"
             ], 
             
             "founders": [

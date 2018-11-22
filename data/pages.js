@@ -842,5 +842,30 @@ module.exports = [
 
       contact
     ]
+  },
+  {
+    path_da: "/da/tak",
+    path_en: "/en/thanks",
+    title_da: "Tak",
+    title_en: "Thank you",
+    sections: [
+      {
+        type: "header",
+
+        heading_da: "Om Ticketbutler",
+        heading_en: "About Ticketbutler",
+        image: "/img/couponticketbutler.png",
+        image_alt_da: "Om Ticketbutler",
+        image_alt_en: "About Ticketbutler",
+        text_da: "Hvorfor har verden brug for endnu et billetsystem?",
+        text_en: "Why do the world need another ticketing system?"
+      },
+      {
+        type: "tall_centered_future_button_top",
+
+        thank_you_text_da: "Hvorfor har verden brug for endnu et billetsystem?",
+        thank_you_text_en: "Why do the world need another ticketing system?"
+      }
+    ]
   }
 ];
