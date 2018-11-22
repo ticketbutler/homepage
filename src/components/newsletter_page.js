@@ -1,10 +1,6 @@
 import React from "react";
+import base64 from "base-64";
 import { withWindow } from "../components/helpers";
-const encode = data => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-};
 
 class NewsletterSubscribe extends React.Component {
   state = {
@@ -28,20 +24,39 @@ class NewsletterSubscribe extends React.Component {
           ) : (
             <form
               className="newsletter"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
               onSubmit={async e => {
                 e.preventDefault();
-                await fetch("/", {
-                  method: "post",
+                await fetch("https://api.mailjet.com/v3/REST/contact", {
+                  method: "POST",
                   headers: {
-                    "Content-Type": "application/x-www-form-urlencoded"
+                    "Content-Type": "application/json",
+                    Authorization:
+                      "Basic " +
+                      base64.encode(
+                        "376e0ad8bed5dc3ecd411243a817b0e1" +
+                          ":" +
+                          "67ee2fe2e85083abf14aeb32fcb1401a"
+                      )
                   },
-                  body: encode({
-                    "form-name": "newsletter",
-                    email: this.state.email
-                  })
+                  body: JSON.stringify({ Email: this.state.email })
                 });
+
+                // let req = new XMLHttpRequest();
+                // req.addEventListener("load", () => {
+                //   console.log(this.responseText);
+                // });
+                // req.open("POST", "//api.mailjet.com/v3/REST/contact");
+                // req.setRequestHeader("Content-Type", "application/json");
+                // req.setRequestHeader(
+                //   "Authorization",
+                //   "Basic " +
+                //     base64.encode(
+                //       "376e0ad8bed5dc3ecd411243a817b0e1" +
+                //         ":" +
+                //         "67ee2fe2e85083abf14aeb32fcb1401a"
+                //     )
+                // );
+                // req.send({ Email: this.state.email });
 
                 this.setState({
                   sent: true
