@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://ticketbutler.io'
-  }
+  },
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-catch-links",
