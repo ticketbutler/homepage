@@ -1,7 +1,5 @@
 module.exports = {
-  siteMetadata: {
-    siteUrl: 'https://ticketbutler.io'
-  }
+
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-catch-links",
@@ -30,6 +28,9 @@ module.exports = {
         //gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_PREVIEW_NAME",
       }
     }
-  ]
+  ],
+  siteMetadata: {
+    siteUrl: 'https://ticketbutler.io'
+  }
 
 };
