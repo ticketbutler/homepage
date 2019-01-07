@@ -1,4 +1,7 @@
 module.exports = {
+  siteMetadata: {
+    siteUrl: 'https://ticketbutler.io'
+  }
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-catch-links",
@@ -6,6 +9,7 @@ module.exports = {
     "gatsby-plugin-styled-components",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-sitemap"
     {
       resolve: "gatsby-plugin-facebook-pixel",
       options: {
@@ -27,4 +31,5 @@ module.exports = {
       }
     }
   ]
+
 };
