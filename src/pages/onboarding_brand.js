@@ -1,14 +1,36 @@
 import React from "react";
-
+import { SketchPicker } from "react-color";
+import { ClickedOutside } from "../components/elements/helpers";
 const styles = {
   h2: {
     fontSize: "18px",
     color: "#89909B",
     fontWeight: "500"
+  },
+  label: {
+    textTransform: "uppercase",
+    fontSize: "12px",
+    fontWeight: 500,
+    color: "#89909B"
+  },
+  input: {
+    display: "block",
+    background: "none",
+    borderRadius: "4px",
+    border: "1px solid #C5D0DE",
+    marginTop: "8px",
+    height: "46px"
   }
 };
 
 class Form extends React.Component {
+  state = {
+    colorPickerOpen: false,
+    background: "#000"
+  };
+  handleChangeComplete = color => {
+    this.setState({ background: color.hex });
+  };
   render() {
     return (
       <div>
@@ -37,18 +59,19 @@ class Form extends React.Component {
             </span>
           </h2>
 
-          <div>
-            <label
-              css={{
-                textTransform: "uppercase",
-                fontSize: "12px",
-                fontWeight: 500,
-                color: "#89909B"
-              }}
-            >
+          <div css={{ marginTop: "40px" }}>
+            <label css={styles.label}>
               select a font that goes with your brand
             </label>
-            <select value={this.state.value}>
+            <select
+              css={{
+                ...styles.input,
+                width: "348px",
+
+                color: "#C5D0DE",
+                fontSize: "14px"
+              }}
+            >
               <option value="courierNew">Courier New</option>
               <option value="georgia">Georgia</option>
               <option value="lucidaConsole">Lucida Console</option>
@@ -57,6 +80,44 @@ class Form extends React.Component {
               <option value="timesNewRoman">Times New Roman</option>
               <option value="verdana">Verdana</option>
             </select>
+            <div css={{ marginTop: "30px" }}>
+              <label css={styles.label}>select a color</label>
+              <div
+                css={{
+                  ...styles.input,
+                  display: "block",
+                  width: "148px",
+                  marginBottom: "10px"
+                }}
+                onClick={() => {
+                  this.setState({ colorPickerOpen: true });
+                }}
+              >
+                <div
+                  css={{
+                    ...styles.input,
+                    height: "26px",
+                    width: "60px",
+                    marginLeft: "20px",
+                    marginTop: "9px",
+                    background: this.state.background
+                  }}
+                />
+              </div>
+              {this.state.colorPickerOpen && (
+                <ClickedOutside
+                  css={{ display: "inline-block" }}
+                  onOutsideClick={() => {
+                    this.setState({ colorPickerOpen: false });
+                  }}
+                >
+                  <SketchPicker
+                    color={this.state.background}
+                    onChangeComplete={this.handleChangeComplete}
+                  />
+                </ClickedOutside>
+              )}
+            </div>
           </div>
         </div>
       </div>
