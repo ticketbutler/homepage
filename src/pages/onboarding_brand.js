@@ -2,7 +2,7 @@ import React from "react";
 
 const styles = {
   h2: {
-    fontSize: 18,
+    fontSize: "18px",
     color: "#89909B",
     fontWeight: "500"
   }
@@ -13,27 +13,51 @@ class Form extends React.Component {
     return (
       <div>
         <header
-          style={{
-            height: 80,
-            width: 1440,
+          css={{
+            height: " 80px",
+            width: "px",
             backgroundColor: "#FFFFFF",
             boxShadow: "3px 3px 4px 0 #F0F2F5"
           }}
         >
           <img
             src={"../img/ticketbutler_logo_small.png"}
-            style={{ maxWidth: 142, marginLeft: 38, marginTop: 30 }}
+            css={{ maxWidth: "142px", marginLeft: "38px", marginTop: "30px" }}
           />
         </header>
-        <div style={{ marginLeft: 166, marginTop: 80 }}>
-          <h3 style={{ fontWeight: 600, fontSize: 18 }}> STEP 1 OF 2</h3>
-          <h1 style={{ fontWeight: 600, fontSize: 36 }}>Use your brand</h1>
-          <h2 style={styles.h2}>
+        <div css={{ marginLeft: "166px", marginTop: "80px" }}>
+          <h3 css={{ fontWeight: "600px", fontSize: "18px" }}> STEP 1 OF 2</h3>
+          <h1 css={{ fontWeight: "600px", fontSize: "36px" }}>
+            Use your brand
+          </h1>
+          <h2 css={styles.h2}>
             It's all about your business!
-            <span style={{ display: "block", paddingTop: 8 }}>
+            <span css={{ display: "block", paddingTop: "8px" }}>
               Your brand is displayed across the ticketing experience
             </span>
           </h2>
+
+          <div>
+            <label
+              css={{
+                textTransform: "uppercase",
+                fontSize: "12px",
+                fontWeight: 500,
+                color: "#89909B"
+              }}
+            >
+              select a font that goes with your brand
+            </label>
+            <select value={this.state.value}>
+              <option value="courierNew">Courier New</option>
+              <option value="georgia">Georgia</option>
+              <option value="lucidaConsole">Lucida Console</option>
+              <option value="lucidaSansUnicode">Lucida Sans Unicode</option>
+              <option value="tahoma">Tahoma</option>
+              <option value="timesNewRoman">Times New Roman</option>
+              <option value="verdana">Verdana</option>
+            </select>
+          </div>
         </div>
       </div>
     );

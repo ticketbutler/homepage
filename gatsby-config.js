@@ -1,6 +1,6 @@
 module.exports = {
-
   plugins: [
+    // "gatsby-plugin-emotion",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-catch-links",
     "styled-jsx/babel",
@@ -30,7 +30,6 @@ module.exports = {
     }
   ],
   siteMetadata: {
-    siteUrl: 'https://ticketbutler.io'
+    siteUrl: "https://ticketbutler.io"
   }
-
 };
