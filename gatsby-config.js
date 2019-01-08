@@ -1,11 +1,13 @@
 module.exports = {
   plugins: [
+    // "gatsby-plugin-emotion",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-catch-links",
     "styled-jsx/babel",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-facebook-pixel",
       options: {
@@ -26,5 +28,8 @@ module.exports = {
         //gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_PREVIEW_NAME",
       }
     }
-  ]
+  ],
+  siteMetadata: {
+    siteUrl: "https://ticketbutler.io"
+  }
 };

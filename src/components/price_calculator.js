@@ -375,8 +375,8 @@ class PriceCalculator extends React.Component {
                 {
                   label: this.t("Subscription fee per month"),
                   value:
-                    this.state.numberOfTickets > 100 && this.state.price == 0
-                      ? "800 kr"
+                    this.state.numberOfTickets > 50 && this.state.price == 0
+                      ? "800-2.500 kr"
                       : "0 kr"
                 },
 
