@@ -114,9 +114,13 @@ class Form extends React.Component {
                   <SketchPicker
                     color={this.state.background}
                     onChangeComplete={this.handleChangeComplete}
+                    disableAlpha={true}
                   />
                 </ClickedOutside>
               )}
+            </div>
+            <div css={{ marginTop: "30px" }}>
+              <label css={styles.label}>upload your logo</label>
             </div>
           </div>
         </div>
