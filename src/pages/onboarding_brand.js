@@ -1,6 +1,8 @@
 import React from "react";
 import { SketchPicker } from "react-color";
 import { ClickedOutside } from "../components/elements/helpers";
+import Dropzone from "react-dropzone";
+
 const styles = {
   h2: {
     fontSize: "18px",
@@ -26,10 +28,32 @@ const styles = {
 class Form extends React.Component {
   state = {
     colorPickerOpen: false,
-    background: "#000"
+    brand_colour: "blue",
+    logo: "",
+    font: "",
+    bank_details: {
+      registration_number: "",
+      account_number: ""
+    },
+    address: {
+      business_name: "",
+      cvr: "",
+      street: "",
+      postcode: "",
+      city: ""
+    }
   };
+
   handleChangeComplete = color => {
-    this.setState({ background: color.hex });
+    this.setState({ brand_colour: color.hex });
+  };
+  renderLogo = () => {
+    return (
+      <img
+        src={this.state.logo ? this.state.logo.preview : this.props.logo[0]}
+        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+      />
+    );
   };
   render() {
     return (
@@ -72,7 +96,9 @@ class Form extends React.Component {
                 fontSize: "14px"
               }}
             >
-              <option value="courierNew">Courier New</option>
+              <option value="courierNew" style={{ color: "pink" }}>
+                Courier New
+              </option>
               <option value="georgia">Georgia</option>
               <option value="lucidaConsole">Lucida Console</option>
               <option value="lucidaSansUnicode">Lucida Sans Unicode</option>
@@ -100,7 +126,7 @@ class Form extends React.Component {
                     width: "60px",
                     marginLeft: "20px",
                     marginTop: "9px",
-                    background: this.state.background
+                    background: this.state.brand_colour
                   }}
                 />
               </div>
@@ -112,7 +138,7 @@ class Form extends React.Component {
                   }}
                 >
                   <SketchPicker
-                    color={this.state.background}
+                    color={this.state.brand_colour}
                     onChangeComplete={this.handleChangeComplete}
                     disableAlpha={true}
                   />
@@ -121,6 +147,46 @@ class Form extends React.Component {
             </div>
             <div css={{ marginTop: "30px" }}>
               <label css={styles.label}>upload your logo</label>
+              <Dropzone
+                multiple={false}
+                onDrop={files => {
+                  this.setState({ logo: files[0] });
+                }}
+              >
+                {({ getRootProps, getInputProps }) => {
+                  return (
+                    <div
+                      style={{
+                        height: 64,
+                        width: 346,
+                        border: "2px dashed #C5D0DE",
+                        borderRadius: 6,
+                        backgroundColor: "#FFFFFF",
+                        boxShadow: "0 2px 9px 0 rgba(0,0,0,0.03)",
+                        marginTop: 7
+                      }}
+                      {...getRootProps()}
+                    >
+                      <p
+                        style={{
+                          padding: 0,
+                          textAlign: "center",
+                          marginBottom: 0,
+                          marginTop: 21,
+                          color: "#C5D0DE",
+                          textTransform: "uppercase",
+                          fontSize: 11,
+                          letterSpacing: 1
+                        }}
+                      >
+                        upload your logo here
+                      </p>
+                      <input {...getInputProps()} />
+                    </div>
+                  );
+                }}
+              </Dropzone>
+              <div />
             </div>
           </div>
         </div>
