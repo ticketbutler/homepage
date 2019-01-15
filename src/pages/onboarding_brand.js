@@ -5,38 +5,7 @@ import Dropzone from "react-dropzone";
 import UploadLogoIcon from "../img/upload-logo.png";
 import { OnboardingHeader } from "../components/elements/onboarding_header";
 import { OnboardingFooter } from "../components/elements/onboarding_footer";
-
-const styles = {
-  h2: {
-    fontSize: "18px",
-    color: "#89909B",
-    fontWeight: "500"
-  },
-  label: {
-    textTransform: "uppercase",
-    fontSize: "12px",
-    fontWeight: 500,
-    color: "#89909B"
-  },
-  input: {
-    display: "block",
-    background: "none",
-    borderRadius: "4px",
-    border: "1px solid #C5D0DE",
-    marginTop: "8px",
-    height: "46px"
-  },
-  div: {
-    marginTop: "20px"
-  },
-  h4: {
-    fontWeight: "bold",
-    textTransform: "uppercase",
-    marginBottom: "10px",
-    color: "rgb(51, 51, 51)",
-    fontSize: "14px"
-  }
-};
+import { styles } from "../layouts/style";
 
 export class Branding extends React.Component {
   state = {
@@ -94,11 +63,11 @@ export class Branding extends React.Component {
             Desing your brand
           </h1>
 
-          <h2 css={{ ...styles.h2, maxWidth: "560px" }}>
+          <h3 css={{ ...styles.h3, maxWidth: "560px" }}>
             It’s all about your business! Your brand is displayed across the
             whole ticketing experience on the event page, in emails and on the
             tickets.
-          </h2>
+          </h3>
 
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <div>
