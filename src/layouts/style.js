@@ -1,4 +1,19 @@
 export const styles = {
+  sectionDiv: {
+    marginLeft: "12%",
+    marginRight: "12%",
+    marginTop: "80px",
+    marginBottom: "80px"
+  },
+  h1: {
+    fontWeight: 600,
+    fontSize: "36px"
+  },
+  h2: {
+    fontWeight: 600,
+    fontSize: "18px",
+    textTransform: "uppercase"
+  },
   h3: {
     fontSize: "18px",
     color: "#89909B",
