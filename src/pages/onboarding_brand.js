@@ -50,18 +50,9 @@ export class Branding extends React.Component {
     return (
       <div>
         <OnboardingHeader />
-        <div
-          css={{
-            marginLeft: "12%",
-            marginRight: "12%",
-            marginTop: "80px",
-            marginBottom: "80px"
-          }}
-        >
-          <h3 css={{ fontWeight: "600px", fontSize: "18px" }}> STEP 1 OF 3</h3>
-          <h1 css={{ fontWeight: "600px", fontSize: "36px" }}>
-            Desing your brand
-          </h1>
+        <div css={styles.sectionDiv}>
+          <h2 css={styles.h2}> STEP 1 OF 3</h2>
+          <h1 css={styles.h1}>Desing your brand</h1>
 
           <h3 css={{ ...styles.h3, maxWidth: "560px" }}>
             It’s all about your business! Your brand is displayed across the
@@ -69,7 +60,13 @@ export class Branding extends React.Component {
             tickets.
           </h3>
 
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginBottom: "100px"
+            }}
+          >
             <div>
               <div css={styles.div}>
                 <label css={styles.label}>
@@ -296,7 +293,7 @@ export class Branding extends React.Component {
               </div>
             </div>
           </div>
-          <OnboardingFooter />
+          <OnboardingFooter divStyle={{ marginTop: "60px" }} />
         </div>
       </div>
     );

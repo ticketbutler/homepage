@@ -1,4 +1,19 @@
 export const styles = {
+  sectionDiv: {
+    marginLeft: "12%",
+    marginRight: "12%",
+    marginTop: "80px",
+    marginBottom: "80px"
+  },
+  h1: {
+    fontWeight: 600,
+    fontSize: "36px"
+  },
+  h2: {
+    fontWeight: 600,
+    fontSize: "18px",
+    textTransform: "uppercase"
+  },
   h3: {
     fontSize: "18px",
     color: "#89909B",
@@ -8,7 +23,10 @@ export const styles = {
     textTransform: "uppercase",
     fontSize: "12px",
     fontWeight: 500,
-    color: "#89909B"
+    color: "#89909B",
+    "@media(max-width:350px)": {
+      fontSize: "10px"
+    }
   },
   input: {
     display: "block",
