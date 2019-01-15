@@ -3,42 +3,11 @@ import { SketchPicker } from "react-color";
 import { ClickedOutside } from "../components/elements/helpers";
 import Dropzone from "react-dropzone";
 import UploadLogoIcon from "../img/upload-logo.png";
-import { Button } from "../components/elements/elements";
 import { OnboardingHeader } from "../components/elements/onboarding_header";
+import { OnboardingFooter } from "../components/elements/onboarding_footer";
+import { styles } from "../layouts/style";
 
-const styles = {
-  h2: {
-    fontSize: "18px",
-    color: "#89909B",
-    fontWeight: "500"
-  },
-  label: {
-    textTransform: "uppercase",
-    fontSize: "12px",
-    fontWeight: 500,
-    color: "#89909B"
-  },
-  input: {
-    display: "block",
-    background: "none",
-    borderRadius: "4px",
-    border: "1px solid #C5D0DE",
-    marginTop: "8px",
-    height: "46px"
-  },
-  div: {
-    marginTop: "20px"
-  },
-  h4: {
-    fontWeight: "bold",
-    textTransform: "uppercase",
-    marginBottom: "10px",
-    color: "rgb(51, 51, 51)",
-    fontSize: "14px"
-  }
-};
-
-class Branding extends React.Component {
+export class Branding extends React.Component {
   state = {
     colorPickerOpen: false,
     brand_colour: "#333",
@@ -94,11 +63,11 @@ class Branding extends React.Component {
             Desing your brand
           </h1>
 
-          <h2 css={{ ...styles.h2, maxWidth: "560px" }}>
+          <h3 css={{ ...styles.h3, maxWidth: "560px" }}>
             It’s all about your business! Your brand is displayed across the
             whole ticketing experience on the event page, in emails and on the
             tickets.
-          </h2>
+          </h3>
 
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <div>
@@ -186,8 +155,8 @@ class Branding extends React.Component {
                       return (
                         <div
                           css={{
-                            height: "64px",
-                            maxWidth: "348px",
+                            height: "75px",
+                            maxWidth: "150px",
                             border: "2px dashed #C5D0DE",
                             borderRadius: "6px",
                             backgroundColor: "#FFFFFF",
@@ -284,7 +253,12 @@ class Branding extends React.Component {
                       </span>
                     </div>
                     <div css={{ marginTop: "8px" }}>
-                      <select css={{ background: "white" }}>
+                      <select
+                        css={{
+                          background: "white",
+                          fontFamily: this.state.font
+                        }}
+                      >
                         <option> 3</option>{" "}
                       </select>
                     </div>
@@ -322,27 +296,7 @@ class Branding extends React.Component {
               </div>
             </div>
           </div>
-          <div
-            css={{
-              marginTop: "150px",
-              display: "flex",
-              justifyContent: "space-between"
-            }}
-          >
-            <h2 css={{ ...styles.h2, paddingTop: "20px" }}>
-              {" "}
-              Need help? Call us at 89 80 12 80.{" "}
-            </h2>
-            <Button
-              style={{
-                background:
-                  "linear-gradient(112.11deg, #326DE9 0%, #7E52E8 100%)",
-                width: "25%"
-              }}
-            >
-              Next step{" "}
-            </Button>
-          </div>
+          <OnboardingFooter />
         </div>
       </div>
     );
