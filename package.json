@@ -37,6 +37,7 @@
     "react": "^16.5.2",
     "react-color": "^2.17.0",
     "react-dom": "^16.5.2",
+    "react-dropzone": "^8.0.3",
     "react-helmet": "^5.2.0",
     "react-responsive-carousel": "^3.1.40",
     "react-scrollchor": "^5.0.2",
