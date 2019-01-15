@@ -23,7 +23,10 @@ export const styles = {
     textTransform: "uppercase",
     fontSize: "12px",
     fontWeight: 500,
-    color: "#89909B"
+    color: "#89909B",
+    "@media(max-width:350px)": {
+      fontSize: "10px"
+    }
   },
   input: {
     display: "block",

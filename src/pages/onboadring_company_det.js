@@ -8,7 +8,14 @@ class CompanyDetails extends React.Component {
     return (
       <div>
         <OnboardingHeader />
-        <div css={styles.sectionDiv}>
+        <div
+          css={{
+            ...styles.sectionDiv,
+            "@media(max-width:800px)": {
+              marginTop: "30px"
+            }
+          }}
+        >
           <h2 css={styles.h2}> STEP 2 OF 3</h2>
           <h1 css={styles.h1}>About your company</h1>
 
@@ -16,7 +23,7 @@ class CompanyDetails extends React.Component {
             Nitty gritty details about your organization
           </h3>
 
-          <div>
+          <div css={{ maxWidth: "444px" }}>
             <label css={styles.label}>Company / organization name*</label>
             <input css={styles.input} type="text" />
 
@@ -42,8 +49,8 @@ class CompanyDetails extends React.Component {
             />
             <label css={styles.label}>official organization street </label>
             <input type="text" css={styles.input} />
-            <div css={{ display: "grid" }}>
-              <div css={{ display: "inline-flex" }}>
+            <div css={{ marginTop: "5px" }}>
+              <div css={{ display: "inline-flex", width: "100%" }}>
                 <div>
                   <label css={styles.label}>zip code</label>
                   <input
@@ -51,16 +58,22 @@ class CompanyDetails extends React.Component {
                     css={{ ...styles.input, width: "112px" }}
                   />
                 </div>
-                <div css={{ marginLeft: "20px" }}>
+                <div css={{ marginLeft: "20px", width: "100%" }}>
                   <label css={styles.label}>city</label>
                   <input
                     type="number"
-                    css={{ ...styles.input, width: "312px" }}
+                    css={{ ...styles.input, maxWidth: "312px", width: "100%" }}
                   />
                 </div>
               </div>
 
-              <div css={{ display: "inline-flex", marginTop: "20px" }}>
+              <div
+                css={{
+                  display: "inline-flex",
+                  marginTop: "20px",
+                  width: "100%"
+                }}
+              >
                 <div>
                   <label css={styles.label}>bank reg. nr.</label>
                   <input
@@ -68,17 +81,32 @@ class CompanyDetails extends React.Component {
                     css={{ ...styles.input, width: "112px" }}
                   />
                 </div>
-                <div css={{ marginLeft: "20px" }}>
-                  <label css={styles.label}>bank account number</label>
+                <div css={{ marginLeft: "20px", width: "100%" }}>
+                  <label css={styles.label}>bank account nr.</label>
                   <input
                     type="number"
-                    css={{ ...styles.input, width: "312px" }}
+                    css={{ ...styles.input, width: "100%", maxWidth: "312px" }}
                   />
                 </div>
               </div>
             </div>
           </div>
-          <OnboardingFooter divStyle={{ marginTop: "30px" }} />
+          <OnboardingFooter
+            divStyle={{
+              marginTop: "30px",
+              "@media(max-width:800px)": {
+                display: "block"
+              }
+            }}
+            buttonStyle={{
+              "@media(max-width: 800px)": {
+                width: "50%"
+              },
+              "@media(max-width: 400px)": {
+                width: "70%"
+              }
+            }}
+          />
         </div>
       </div>
     );

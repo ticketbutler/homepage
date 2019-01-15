@@ -1,12 +1,13 @@
 import React from "react";
 import { Button } from "./elements";
 
-export const OnboardingFooter = () => {
+export const OnboardingFooter = ({ divStyle, buttonStyle }) => {
   return (
     <div
       css={{
         display: "flex",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        ...divStyle
       }}
     >
       <h2
@@ -23,7 +24,8 @@ export const OnboardingFooter = () => {
       <Button
         style={{
           background: "linear-gradient(112.11deg, #326DE9 0%, #7E52E8 100%)",
-          width: "25%"
+          width: "25%",
+          ...buttonStyle
         }}
       >
         Next step{" "}

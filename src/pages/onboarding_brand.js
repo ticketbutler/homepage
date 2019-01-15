@@ -293,7 +293,7 @@ export class Branding extends React.Component {
               </div>
             </div>
           </div>
-          <OnboardingFooter />
+          <OnboardingFooter divStyle={{ marginTop: "60px" }} />
         </div>
       </div>
     );
