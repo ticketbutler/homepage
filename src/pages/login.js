@@ -6,6 +6,7 @@ class LogIn extends React.Component {
     return (
       <div>
         <OnboardingHeader />
+        <h1>Log in</h1>
       </div>
     );
   }
