@@ -4,6 +4,19 @@ import { OnboardingFooter } from "../components/elements/onboarding_footer";
 import { styles } from "../layouts/style";
 
 class CompanyDetails extends React.Component {
+  state = {
+    bank_details: {
+      registration_number: "",
+      account_number: ""
+    },
+    address: {
+      business_name: "",
+      cvr: "",
+      street: "",
+      postcode: "",
+      city: ""
+    }
+  };
   render() {
     return (
       <div>
@@ -25,7 +38,11 @@ class CompanyDetails extends React.Component {
 
           <div css={{ maxWidth: "444px" }}>
             <label css={styles.label}>Company / organization name*</label>
-            <input css={styles.input} type="text" />
+            <input
+              css={styles.input}
+              value={this.state.business_name}
+              type="text"
+            />
 
             <h2
               css={{
@@ -101,14 +118,7 @@ class CompanyDetails extends React.Component {
                 marginTop: "15px"
               }
             }}
-            buttonStyle={{
-              "@media(max-width: 800px)": {
-                width: "50%"
-              },
-              "@media(max-width: 400px)": {
-                width: "70%"
-              }
-            }}
+            buttonText="Continue to last step"
           />
         </div>
       </div>

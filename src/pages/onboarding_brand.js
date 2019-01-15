@@ -12,18 +12,7 @@ export class Branding extends React.Component {
     colorPickerOpen: false,
     brand_colour: "#333",
     logo: "",
-    font: "",
-    bank_details: {
-      registration_number: "",
-      account_number: ""
-    },
-    address: {
-      business_name: "",
-      cvr: "",
-      street: "",
-      postcode: "",
-      city: ""
-    }
+    font: ""
   };
 
   handleChangeComplete = color => {
@@ -293,7 +282,10 @@ export class Branding extends React.Component {
               </div>
             </div>
           </div>
-          <OnboardingFooter divStyle={{ marginTop: "60px" }} />
+          <OnboardingFooter
+            divStyle={{ marginTop: "60px" }}
+            buttonText="Next step"
+          />
         </div>
       </div>
     );

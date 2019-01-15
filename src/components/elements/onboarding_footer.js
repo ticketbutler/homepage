@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "./elements";
 
-export const OnboardingFooter = ({ divStyle, buttonStyle }) => {
+export const OnboardingFooter = ({ divStyle, buttonStyle, buttonText }) => {
   return (
     <div
       css={{
@@ -27,11 +27,11 @@ export const OnboardingFooter = ({ divStyle, buttonStyle }) => {
       <Button
         style={{
           background: "linear-gradient(112.11deg, #326DE9 0%, #7E52E8 100%)",
-          width: "25%",
+          width: "263px",
           ...buttonStyle
         }}
       >
-        Next step{" "}
+        {buttonText}
       </Button>
     </div>
   );
