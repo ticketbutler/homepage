@@ -2,8 +2,10 @@ import React from "react";
 import { SketchPicker } from "react-color";
 import { ClickedOutside } from "../components/elements/helpers";
 import Dropzone from "react-dropzone";
-import UploadLogo from "../img/upload-logo.png";
+import UploadLogoIcon from "../img/upload-logo.png";
 import { Button } from "../components/elements/elements";
+import { OnboardingHeader } from "../components/elements/onboarding_header";
+
 const styles = {
   h2: {
     fontSize: "18px",
@@ -36,10 +38,10 @@ const styles = {
   }
 };
 
-class Form extends React.Component {
+class Branding extends React.Component {
   state = {
     colorPickerOpen: false,
-    brand_colour: "#FDF4A4",
+    brand_colour: "#333",
     logo: "",
     font: "",
     bank_details: {
@@ -61,8 +63,13 @@ class Form extends React.Component {
   renderLogo = () => {
     return (
       <img
-        src={this.state.logo ? this.state.logo.preview : this.props.logo[0]}
-        css={{ width: "100%", height: "100%", objectFit: "cover" }}
+        src={this.state.logo}
+        css={{
+          width: "100%",
+          height: "100%",
+          objectFit: "contain",
+          marginBottom: 0
+        }}
       />
     );
   };
@@ -73,19 +80,7 @@ class Form extends React.Component {
   render() {
     return (
       <div>
-        <header
-          css={{
-            height: " 80px",
-
-            backgroundColor: "#FFFFFF",
-            boxShadow: "3px 3px 4px 0 #F0F2F5"
-          }}
-        >
-          <img
-            src={"../img/ticketbutler_logo_small.png"}
-            css={{ maxWidth: "142px", marginLeft: "38px", marginTop: "30px" }}
-          />
-        </header>
+        <OnboardingHeader />
         <div
           css={{
             marginLeft: "12%",
@@ -121,14 +116,13 @@ class Form extends React.Component {
                   }}
                   onChange={this.changeFont}
                 >
+                  <option value="Arial">Arial</option>
                   <option value="Courier New">Courier New</option>
                   <option value="Georgia">Georgia</option>
-                  <option value="Lucida Console">Lucida Console</option>
-                  <option value="Lucida Sans Unicode">
-                    Lucida Sans Unicode
-                  </option>
+                  <option value="Palatino">Palatino</option>
                   <option value="Tahoma">Tahoma</option>
                   <option value="Times New Roman">Times New Roman</option>
+                  <option value="Trebuchet MS">Trebuchet MS</option>
                   <option value="Verdana">Verdana</option>
                 </select>
                 <div css={{ marginTop: "30px" }}>
@@ -174,8 +168,18 @@ class Form extends React.Component {
                   <label css={styles.label}>upload your logo</label>
                   <Dropzone
                     multiple={false}
-                    onDrop={files => {
-                      this.setState({ logo: files[0] });
+                    onDrop={acceptedFiles => {
+                      acceptedFiles.forEach(file => {
+                        const reader = new FileReader();
+                        reader.readAsDataURL(file);
+                        reader.onload = () => {
+                          this.setState({ logo: reader.result });
+                        };
+                        reader.onabort = () =>
+                          console.log("file reading was aborted");
+                        reader.onerror = () =>
+                          console.log("file reading has failed");
+                      });
                     }}
                   >
                     {({ getRootProps, getInputProps }) => {
@@ -192,26 +196,31 @@ class Form extends React.Component {
                           }}
                           {...getRootProps()}
                         >
-                          <div css={{ textAlign: "center", marginTop: "20px" }}>
-                            <img
-                              css={{ width: "20px", marginBottom: "-5px" }}
-                              src={UploadLogo}
-                            />
-                            <p
-                              css={{
-                                padding: 0,
-                                marginLeft: "13px",
-                                marginBottom: 0,
-                                color: "#C5D0DE",
-                                textTransform: "uppercase",
-                                fontSize: "11px",
-                                letterSpacing: "1px",
-                                display: "inline"
-                              }}
+                          {this.renderLogo() || (
+                            <div
+                              css={{ textAlign: "center", marginTop: "20px" }}
                             >
-                              upload your logo here
-                            </p>
-                          </div>
+                              <img
+                                css={{ width: "20px", marginBottom: "-5px" }}
+                                src={UploadLogoIcon}
+                              />
+                              <p
+                                css={{
+                                  padding: 0,
+                                  marginLeft: "13px",
+                                  marginBottom: 0,
+                                  color: "#C5D0DE",
+                                  textTransform: "uppercase",
+                                  fontSize: "11px",
+                                  letterSpacing: "1px",
+                                  display: "inline"
+                                }}
+                              >
+                                upload your logo here
+                              </p>
+                            </div>
+                          )}
+
                           <input {...getInputProps()} />
                         </div>
                       );
@@ -264,7 +273,7 @@ class Form extends React.Component {
                         Demo text to show how your font looks
                       </p>
                     </div>
-                    <div css={{ marginRight: "-43px", marginTop: "8px" }}>
+                    <div css={{ marginRight: "-45px", marginTop: "8px" }}>
                       <span css={{ ...styles.h4, fontFamily: this.state.font }}>
                         99.00 kr{" "}
                       </span>{" "}
@@ -300,7 +309,7 @@ class Form extends React.Component {
                       fontWeight: "bold",
                       display: "flex",
                       placeContent: "center",
-                      color: "black",
+                      color: "white",
                       padding: " 20px 10px",
                       marginTop: "35px",
                       float: "right",
@@ -340,4 +349,4 @@ class Form extends React.Component {
   }
 }
 
-export default Form;
+export default Branding;
