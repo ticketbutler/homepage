@@ -12,6 +12,9 @@ export const OnboardingFooter = ({ divStyle, buttonStyle }) => {
     >
       <h2
         css={{
+          "@media(max-width:400px)": {
+            fontSize: "14px"
+          },
           fontSize: "18px",
           color: "#89909B",
           fontWeight: "500",

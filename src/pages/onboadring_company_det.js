@@ -96,6 +96,9 @@ class CompanyDetails extends React.Component {
               marginTop: "30px",
               "@media(max-width:800px)": {
                 display: "block"
+              },
+              "@media(max-width:400px)": {
+                marginTop: "15px"
               }
             }}
             buttonStyle={{
