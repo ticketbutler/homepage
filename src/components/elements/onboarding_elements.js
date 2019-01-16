@@ -1,4 +1,9 @@
 import React from "react";
+import { styles } from "../../layouts/style";
+import { makeTranslations } from "mini-trans";
+import ButlerLogo from "../../../static/img/Butler.png";
+
+import { CancelIcon } from "../elements/icons";
 
 export class Button extends React.Component {
   static defaultProps = {
@@ -175,20 +180,20 @@ export class Form extends React.Component<
         let req = await fetch(this.props.url, {
           headers: {
             Accept: "application/json",
-            "Content-Type": "application/json",
-            Cache: "no-cache",
-            "X-CSRFToken": Cookie.get("csrftoken")
+            "Content-Type": "application/json"
           },
-          credentials: "include",
+          //credentials: "include",
           method: "POST",
+          // mode: "no-cors",
           body: JSON.stringify(values)
         });
         let res = await req.json();
+        console.log(res);
         if (this.props.onResponse) this.props.onResponse(res);
         if (this.props.valuesReducer) {
           this.props.valuesReducer(res, this.updateForm);
         }
-        await this.setState({ formState: "SUBMITTED" });
+        this.setState({ formState: "SUBMITTED" });
       } catch (e) {
         console.error(e);
         this.setState({
@@ -243,3 +248,83 @@ export class Form extends React.Component<
     });
   }
 }
+export const LogInContainer = ({
+  langCode,
+
+  children
+}: {
+  langCode: string,
+  showBack: boolean
+}) => {
+  let t = makeTranslations(
+    {
+      da: {
+        "I don't have an account": "Jeg har ikke en konto"
+      }
+    },
+    langCode
+  );
+  return (
+    <div>
+      <div
+        css={{
+          width: "100%",
+          maxWidth: "600px",
+          margin: "10em auto",
+          "@media(max-width: 420px)": {
+            margin: "0 auto",
+            padding: "10px"
+          }
+        }}
+      >
+        <div
+          css={{
+            width: "40px",
+            float: "right"
+          }}
+        >
+          <a href="https://ticketbutler.io/">
+            <CancelIcon />
+          </a>
+        </div>
+        <div
+          css={{
+            paddingTop: "40px",
+            "@media(max-width: 420px)": {
+              paddingTop: "60px"
+            }
+          }}
+        >
+          <img
+            src={ButlerLogo}
+            css={{
+              width: "50px",
+              marginLeft: "auto",
+              marginRight: "auto",
+              display: "block"
+            }}
+          />
+        </div>
+
+        {children}
+
+        <a css={{ textDecoration: "none" }} href="/onboarding_brand">
+          <p
+            css={{
+              ...styles.label,
+              color: "#333F53",
+              fontWeight: "500",
+              letterSpacing: "1.2px",
+              lineHeight: "21px",
+              textAlign: "center",
+              margin: "1em",
+              fontSize: "14px"
+            }}
+          >
+            {t("I don't have an account")}
+          </p>
+        </a>
+      </div>
+    </div>
+  );
+};
