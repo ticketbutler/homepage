@@ -32,7 +32,11 @@ class LogIn extends React.Component {
               url="http://localhost:8000/api/user/whitelabels/?email=edita.gudan@gmail.com"
               onResponse={result => {
                 if (result.length > 1) {
-                  navigate("/login_whitelabels/", { state: result });
+                  navigate("/login_whitelabels/", {
+                    state: {
+                      whitelabelList: result
+                    }
+                  });
                 } else {
                   window.open = result.login_url;
                 }

@@ -270,7 +270,7 @@ export const LogInContainer = ({
         css={{
           width: "100%",
           maxWidth: "600px",
-          margin: "10em auto",
+          margin: "80px auto",
           "@media(max-width: 420px)": {
             margin: "0 auto",
             padding: "10px"
