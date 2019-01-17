@@ -114,6 +114,7 @@ class Navbar extends React.Component<
           <Button
             small
             outline
+            to="/login/"
             style={{
               fontSize: 14,
               fontWeight: 600,
@@ -131,18 +132,8 @@ class Navbar extends React.Component<
                 : {})
             }}
             arrow={false}
-            buttonProps={{
-              onClick: () => {
-                var contactEl = document.querySelector("#contact");
-                if (contactEl) {
-                  contactEl.scrollIntoView({
-                    behavior: "smooth"
-                  });
-                }
-              }
-            }}
           >
-            {this.t("Contact")}
+            {this.t("Log in")}
           </Button>
         </div>
 

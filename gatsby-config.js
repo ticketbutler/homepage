@@ -1,6 +1,12 @@
 module.exports = {
   plugins: [
-    // "gatsby-plugin-emotion",
+    //"gatsby-plugin-emotion",
+    {
+      resolve: "gatsby-plugin-emotion",
+      options: {
+        // Accepts all options defined by `babel-plugin-emotion` plugin.
+      }
+    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-catch-links",
     "styled-jsx/babel",
@@ -8,6 +14,7 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sitemap",
+
     {
       resolve: "gatsby-plugin-facebook-pixel",
       options: {
