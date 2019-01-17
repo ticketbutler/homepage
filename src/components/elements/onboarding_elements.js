@@ -9,14 +9,13 @@ export class Button extends React.Component {
   static defaultProps = {
     arrow: true,
     outline: false,
-    buttonProps: {},
-    style: {},
-    buttonStyle: {}
+    style: {}
   };
   state = {
     hovered: false
   };
   renderButton() {
+    let { small, outline, style, arrow, children, to, ...rest } = this.props;
     return (
       <button
         onMouseOver={() => {
@@ -36,7 +35,7 @@ export class Button extends React.Component {
           cursor: "pointer",
           border: "2px solid transparent",
           transition: "2s all",
-          ...(this.props.small
+          ...(small
             ? {
                 maxWidth: 150,
                 padding: "10px 15px",
@@ -47,7 +46,7 @@ export class Button extends React.Component {
                 padding: "20px 30px",
                 fontSize: 18
               }),
-          ...(this.props.outline && !this.state.hovered
+          ...(outline && !this.state.hovered
             ? {
                 background:
                   "linear-gradient( to right, rgba(40, 216, 167, 0), rgba(29, 201, 202, 0) )",
@@ -58,13 +57,12 @@ export class Button extends React.Component {
                 background:
                   "linear-gradient( to right, rgba(40, 216, 167, 1), rgba(29, 201, 202, 1) )"
               }),
-          ...this.props.style,
-          ...this.props.buttonStyle
+          ...style
         }}
-        {...this.props.buttonProps}
+        {...rest}
       >
-        {this.props.children}
-        {this.props.arrow && (
+        {children}
+        {arrow && (
           <span
             style={{
               transition: "300ms all",
@@ -182,9 +180,7 @@ export class Form extends React.Component<
             Accept: "application/json",
             "Content-Type": "application/json"
           },
-          //credentials: "include",
           method: "POST",
-          // mode: "no-cors",
           body: JSON.stringify(values)
         });
         let res = await req.json();

@@ -1,7 +1,13 @@
 import React from "react";
-import { Button } from "./elements";
+import { Button } from "./onboarding_elements";
 
-export const OnboardingFooter = ({ divStyle, buttonStyle, buttonText }) => {
+export const OnboardingFooter = ({
+  divStyle,
+  buttonStyle,
+  buttonText,
+  backProps,
+  changeComponent
+}) => {
   return (
     <div
       css={{
@@ -24,15 +30,29 @@ export const OnboardingFooter = ({ divStyle, buttonStyle, buttonText }) => {
         {" "}
         Need help? Call us at 89 80 12 80.{" "}
       </h2>
-      <Button
-        style={{
-          background: "linear-gradient(112.11deg, #326DE9 0%, #7E52E8 100%)",
-          width: "263px",
-          ...buttonStyle
-        }}
-      >
-        {buttonText}
-      </Button>
+      <div css={{ display: "flex" }}>
+        <a
+          style={{
+            fontSize: 16,
+            color: "#89909B",
+            fontWeight: "300",
+            cursor: "pointer",
+            textDecoration: "underline",
+            paddingTop: "22px"
+          }}
+          {...backProps}
+        />
+        <Button
+          style={{
+            background: "linear-gradient(112.11deg, #326DE9 0%, #7E52E8 100%)",
+            width: "263px",
+            ...buttonStyle
+          }}
+          onClick={changeComponent}
+        >
+          {buttonText}
+        </Button>
+      </div>
     </div>
   );
 };

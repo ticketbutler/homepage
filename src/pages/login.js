@@ -29,7 +29,7 @@ class LogIn extends React.Component {
             </h1>
             <Form
               validateFields={{ email: "exists" }}
-              url="http://localhost:8000/api/user/whitelabels/?email=edita.gudan@gmail.com"
+              url="http://localhost:8080/api/whitelabel/"
               onResponse={result => {
                 if (result.length > 1) {
                   navigate("/login_whitelabels/", {
