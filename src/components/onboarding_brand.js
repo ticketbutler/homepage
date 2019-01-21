@@ -4,6 +4,23 @@ import { ClickedOutside } from "../components/elements/helpers";
 import Dropzone from "react-dropzone";
 import UploadLogoIcon from "../img/upload-logo.png";
 import { styles } from "../layouts/style";
+import { makeTranslations } from "mini-trans";
+
+const translations = {
+  da: {
+    "select a font that goes with your brand": "Vælg en skrifttype",
+    "select a color": "Vælg en farve",
+    "upload your logo": "Upload dit logo",
+    "upload your logo here": "Upload dit logo her",
+    "Preview of a simple homepage integration":
+      "Forhåndsvisning af en simpel hjemmeside-integration",
+    "Demo ticket name": "Demo billet navn",
+    "Demo text to show how your font looks": "",
+    "+ 7.61kr fee": "+ 7.61kr gebyr",
+    "Price include 25% VAT": "Pris inkluderer 25% moms",
+    "Buy tickets": "Køb billetter"
+  }
+};
 
 export class Branding extends React.Component {
   state = {
@@ -12,6 +29,8 @@ export class Branding extends React.Component {
     logo: "",
     font: ""
   };
+
+  t = makeTranslations(translations, this.props.locale);
 
   handleChangeComplete = color => {
     this.setState({ brand_colour: color.hex });
@@ -47,7 +66,7 @@ export class Branding extends React.Component {
           <div>
             <div css={styles.div}>
               <label css={styles.label}>
-                select a font that goes with your brand
+                {this.t("select a font that goes with your brand")}
               </label>
               <select
                 css={{
@@ -69,7 +88,7 @@ export class Branding extends React.Component {
                 <option value="Verdana">Verdana</option>
               </select>
               <div css={{ marginTop: "30px" }}>
-                <label css={styles.label}>select a color</label>
+                <label css={styles.label}>{this.t("select a color")}</label>
                 <div
                   css={{
                     ...styles.input,
@@ -108,7 +127,7 @@ export class Branding extends React.Component {
                 )}
               </div>
               <div css={{ marginTop: "30px" }}>
-                <label css={styles.label}>upload your logo</label>
+                <label css={styles.label}>{this.t("upload your logo")}</label>
                 <Dropzone
                   multiple={false}
                   onDrop={acceptedFiles => {
@@ -157,7 +176,7 @@ export class Branding extends React.Component {
                                 display: "inline"
                               }}
                             >
-                              upload your logo here
+                              {this.t("upload your logo here")}
                             </p>
                           </div>
                         )}
@@ -174,7 +193,7 @@ export class Branding extends React.Component {
           <div>
             <div css={styles.div}>
               <h2 css={{ ...styles.label, marginBottom: "12px" }}>
-                Preview of a simple homepage integration
+                {this.t("Preview of a simple homepage integration")}
               </h2>
             </div>
             <div>
@@ -183,8 +202,7 @@ export class Branding extends React.Component {
                   height: "286px",
                   "@media(max-width:1000px)": { maxWidth: "548px" },
                   width: "100%",
-                  boxShadow: "rgb(212, 217, 223) 2px 2px 8px 0px",
-                  fontFamily: "Times New Roman"
+                  boxShadow: "rgb(212, 217, 223) 2px 2px 8px 0px"
                 }}
               >
                 <div
@@ -204,8 +222,14 @@ export class Branding extends React.Component {
                     }}
                   >
                     <div>
-                      <h4 css={{ ...styles.h4, fontFamily: this.state.font }}>
-                        DEMO TICKET NAME
+                      <h4
+                        css={{
+                          ...styles.h4,
+                          fontFamily: this.state.font,
+                          textTransform: "uppercase"
+                        }}
+                      >
+                        {this.t("Demo ticket name")}
                       </h4>
                       <p
                         style={{
@@ -215,7 +239,7 @@ export class Branding extends React.Component {
                           fontFamily: this.state.font
                         }}
                       >
-                        Demo text to show how your font looks
+                        {this.t("Demo text to show how your font looks")}
                       </p>
                     </div>
                     <div
@@ -241,7 +265,7 @@ export class Branding extends React.Component {
                             fontFamily: this.state.font
                           }}
                         >
-                          + 7.61kr fee
+                          {this.t("+ 7.61kr fee")}
                         </span>
                       </div>
                       <div
@@ -268,7 +292,7 @@ export class Branding extends React.Component {
                       fontFamily: this.state.font
                     }}
                   >
-                    Price include 25% VAT
+                    {this.t("Price include 25% VAT")}
                   </p>
 
                   <div
@@ -288,7 +312,7 @@ export class Branding extends React.Component {
                       fontFamily: this.state.font
                     }}
                   >
-                    Buy tickets
+                    {this.t("Buy tickets")}
                   </div>
                 </div>
               </div>

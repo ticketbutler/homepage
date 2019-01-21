@@ -1,13 +1,31 @@
 import React from "react";
 import { styles } from "../layouts/style";
+import { makeTranslations } from "mini-trans";
+
+const translations = {
+  da: {
+    "Company / organization name*": "Navn på virksomhed / organisation*",
+    "optional fields": "Valgfri felter",
+    "CVR-number and address are needed for your customers to reimburse the ticket costs.":
+      "CVR-nummer og adresse er nødvendigt for at virksomhedsgæster har nødvendig information til sit bogholderi.",
+    "official organization street": "Officiel adresse på organisation",
+    "zip code": "Postnummer",
+    city: "by",
+    "bank account nr.": "Bank kontonummer"
+  }
+};
 
 export class CompanyDetails extends React.Component {
+  t = makeTranslations(translations, this.props.locale);
+
   render() {
     return (
       <div>
         <form onSubmit={this.props.submitForm}>
           <div css={{ maxWidth: "444px" }}>
-            <label css={styles.label}>Company / organization name*</label>
+            <label css={styles.label}>
+              {this.t("Company / organization name*")}
+            </label>
             <input
               required
               css={styles.input}
@@ -28,7 +46,7 @@ export class CompanyDetails extends React.Component {
                 marginBottom: "5px"
               }}
             >
-              optional fields
+              {this.t("optional fields")}
             </h2>
             <h3
               css={{
@@ -37,9 +55,9 @@ export class CompanyDetails extends React.Component {
                 color: "#89909B"
               }}
             >
-              {" "}
-              CVR-number and address are needed for your customers to reimburse
-              the ticket costs.{" "}
+              {this.t(
+                "CVR-number and address are needed for your customers to reimburse the ticket costs."
+              )}
             </h3>
             <label css={styles.label}>CVR</label>
             <input
@@ -50,7 +68,9 @@ export class CompanyDetails extends React.Component {
                 this.props.updateForm({ cvr: e.target.value });
               }}
             />
-            <label css={styles.label}>official organization street </label>
+            <label css={styles.label}>
+              {this.t("official organization street")}{" "}
+            </label>
             <input
               type="text"
               css={styles.input}
@@ -62,7 +82,7 @@ export class CompanyDetails extends React.Component {
             <div css={{ marginTop: "5px" }}>
               <div css={{ display: "inline-flex", width: "100%" }}>
                 <div>
-                  <label css={styles.label}>zip code</label>
+                  <label css={styles.label}>{this.t("zip code")}</label>
                   <input
                     type="number"
                     css={{ ...styles.input, width: "112px" }}
@@ -73,7 +93,7 @@ export class CompanyDetails extends React.Component {
                   />
                 </div>
                 <div css={{ marginLeft: "20px", width: "100%" }}>
-                  <label css={styles.label}>city</label>
+                  <label css={styles.label}>{this.t("city")}</label>
                   <input
                     type=""
                     css={{
@@ -110,7 +130,7 @@ export class CompanyDetails extends React.Component {
                   />
                 </div>
                 <div css={{ marginLeft: "20px", width: "100%" }}>
-                  <label css={styles.label}>bank account nr.</label>
+                  <label css={styles.label}>{this.t("bank account nr.")}</label>
                   <input
                     type="number"
                     css={{

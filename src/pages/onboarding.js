@@ -5,41 +5,63 @@ import { Form } from "../components/elements/onboarding_elements";
 import { Branding } from "../components/onboarding_brand";
 import { CompanyDetails } from "../components/onboadring_company_det";
 import { OnboardingHeader } from "../components/elements/onboarding_header";
+import { makeTranslations } from "mini-trans";
+
+const translations = {
+  da: {
+    "step 1 of 3": "Step 1 ud af 3",
+    "step 2 of 3": "Step 2 ud af 3",
+    "Design tour brand": "Design dit brand",
+    "About your company": "Om din organisation",
+    "It’s all about your business! Your brand is displayed across the whole ticketing experience on the event page, in emails and on the tickets.":
+      "Din organisation sættes i centrum! Dit brand vises på gennem hele billetoplevelsen: på event-siden, i emails og på billetterne",
+    "Nitty gritty details about your organization":
+      "Detaljer om din organisation som billetsystemet baseres på.",
+    "Next step": "Næste step",
+    "Need help? Call us at 89 80 12 80":
+      "Brug for hjælp? Ring til os på 89 80 12 80"
+  }
+};
 
 class OnboardingLayout extends React.Component {
   state = {
     activePage: "branding"
   };
+
+  t = makeTranslations(translations, this.props.locale);
+
   getNextButtonText() {
     switch (this.state.activePage) {
       case "branding":
-        return "Next step";
+        return this.t("Next step");
       case "business":
-        return "Continue to last step";
+        return this.t("Continue to last step");
     }
   }
   getStepText() {
     switch (this.state.activePage) {
       case "branding":
-        return "step 1 of 3";
+        return this.t("step 1 of 3");
       case "business":
-        return "step 2 of 3";
+        return this.t("step 2 of 3");
     }
   }
   getTitleText() {
     switch (this.state.activePage) {
       case "branding":
-        return "Design your brand";
+        return this.t("Design your brand");
       case "business":
-        return "About your company";
+        return this.t("About your company");
     }
   }
   getDescrText() {
     switch (this.state.activePage) {
       case "branding":
-        return "It’s all about your business! Your brand is displayed across the whole ticketing experience on the event page, in emails and on the tickets.";
+        return this.t(
+          "It’s all about your business! Your brand is displayed across the whole ticketing experience on the event page, in emails and on the tickets."
+        );
       case "business":
-        return "Nitty gritty details about your organization";
+        return this.t("Nitty gritty details about your organization");
     }
   }
 
@@ -104,8 +126,7 @@ class OnboardingLayout extends React.Component {
                 paddingTop: "20px"
               }}
             >
-              {" "}
-              Need help? Call us at 89 80 12 80.{" "}
+              {this.t("Need help? Call us at 89 80 12 80")}.
             </h2>
             <div css={{ display: "flex" }}>
               {this.state.activePage === "business" && (
