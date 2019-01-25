@@ -13,7 +13,7 @@ type Locale = {
 };
 const translations = {
   da: {
-    Contact: "Kontakt"
+    "Log in": "Log Ind"
   }
 };
 class Navbar extends React.Component<
@@ -110,28 +110,28 @@ class Navbar extends React.Component<
           >
             {this.props.otherLocale.label}
           </a>
+          <a href="/login/" style={{ textDecoration: "none" }}>
+            <Button
+              small
+              outline
+              style={{
+                fontSize: 14,
+                fontWeight: 600,
+                letterSpacing: 1.15,
 
-          <Button
-            small
-            outline
-            style={{
-              fontSize: 14,
-              fontWeight: 600,
-              letterSpacing: 1.15,
-
-              ...(this.props.window.width < 600
-                ? {
-                    fontSize: 10
-                  }
-                : {}),
-              ...(this.props.window.width < 450
-                ? {
-                    display: "none"
-                  }
-                : {})
-            }}
-            arrow={false}
-            buttonProps={{
+                ...(this.props.window.width < 600
+                  ? {
+                      fontSize: 10
+                    }
+                  : {}),
+                ...(this.props.window.width < 450
+                  ? {
+                      display: "none"
+                    }
+                  : {})
+              }}
+              arrow={false}
+              /* buttonProps={{
               onClick: () => {
                 var contactEl = document.querySelector("#contact");
                 if (contactEl) {
@@ -140,10 +140,11 @@ class Navbar extends React.Component<
                   });
                 }
               }
-            }}
-          >
-            {this.t("Contact")}
-          </Button>
+            }} */
+            >
+              {this.t("Log in")}
+            </Button>
+          </a>
         </div>
 
         <style jsx>{`
