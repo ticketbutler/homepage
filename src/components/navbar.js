@@ -110,7 +110,10 @@ class Navbar extends React.Component<
           >
             {this.props.otherLocale.label}
           </a>
-          <a href="/login/" style={{ textDecoration: "none" }}>
+          <a
+            href={"/" + this.props.currentLocale.id + "/login/"}
+            style={{ textDecoration: "none" }}
+          >
             <Button
               small
               outline
