@@ -132,8 +132,8 @@ module.exports = [
     sections: [
       {
         type: "header",
-        button_link_da: "/da/login/",
-        button_link_en: "/en/login/",
+        button_link_da: "/da/onboarding/",
+        button_link_en: "/en/onboarding/",
         button_text_da: "Opret sit første event",
         button_text_en: "Create your first event",
         heading_da: "Dit skræddersyede billetsystem",
