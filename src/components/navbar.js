@@ -20,7 +20,8 @@ class Navbar extends React.Component<
   {
     items: Array<{
       path: string,
-      label: string
+      label: string,
+      external?: boolean
     }>,
     currentLocale: Locale,
     otherLocale: Locale,
@@ -75,11 +76,24 @@ class Navbar extends React.Component<
             id="ulNav"
             className={this.state.isToggleOn ? "active" : "!active"}
           >
-            {this.props.items.map((item, i) => (
-              <li key={i}>
-                <Link to={item.path}>{item.label}</Link>
-              </li>
-            ))}
+            {this.props.items.map(
+              ({ path, label, external = false, ...props }, i) => (
+                <li key={i}>
+                  {external ? (
+                    <a
+                      href={path}
+                      {...props}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {label}
+                    </a>
+                  ) : (
+                    <Link to={path}>{label}</Link>
+                  )}
+                </li>
+              )
+            )}
           </ul>
         </div>
         <div
