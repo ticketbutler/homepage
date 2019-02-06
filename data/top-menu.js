@@ -21,7 +21,6 @@ module.exports = [
     external: true,
     label_da: "Hjælpecenter",
     label_en: "Help Center",
-    path_da: "https://ticketbutler.freshdesk.com",
-    path_en: "https://ticketbutler.freshdesk.com"
+    path: "https://ticketbutler.freshdesk.com"
   }
 ];
