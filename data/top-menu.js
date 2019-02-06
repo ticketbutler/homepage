@@ -12,8 +12,8 @@ module.exports = [
     path_en: "/en/best-value-ticket-system"
   },
   {
-    label_da: "Funktioner",
-    label_en: "Features",
+    label_da: "Hvorfor bruge Ticketbutler?",
+    label_en: "Why Ticketbutler?",
     path_da: "/da/saelg-flere-billetter-online",
     path_en: "/en/sell-more-tickets-online"
   },
