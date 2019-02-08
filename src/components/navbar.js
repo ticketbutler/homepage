@@ -159,7 +159,6 @@ class Navbar extends React.Component<
             {this.t("Contact")}
           </Button>
         </div>
-
         <style jsx>{`
           * {
             margin: 0;
