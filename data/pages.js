@@ -24,8 +24,8 @@ const contact = {
   placeholder_text_en: "Message",
   button_text_da: "Send besked",
   button_text_en: "Send message",
-  action_da: "/da/tak-side",
-  action_en: "/en/thank-you-page",
+  action_da: "/da/tak-side/",
+  action_en: "/en/thank-you-page/",
   thanks_message_da:
     "Tak for din henvendelse! Vi vender tilbage inden for 2 arbejdsdage.",
   thanks_message_en:
@@ -52,7 +52,7 @@ const partnersSection = {
   images: [
     {
       src: "/img/Comwell.png",
-      href: "http://comwell.dk"
+      href: "http://comwell.dk/"
     },
     {
       src: "/img/zentropa_logo.png",
@@ -70,12 +70,12 @@ const partnersSection = {
 
     {
       src: "/img/IDA_logo_grey_RGB.png",
-      href: "http://ida.dk"
+      href: "http://ida.dk/"
     },
 
     {
       src: "/img/Rainmaking-logo.png",
-      href: "http://rainmaking.io"
+      href: "http://rainmaking.io/"
     }
   ]
 };
@@ -84,32 +84,32 @@ const featuresNavigation = {
   items: [
     {
       image: "/img/sell-more.png",
-      link_en: "/en/sell-more-tickets-online",
-      link_da: "/da/saelg-flere-billetter-online",
+      link_en: "/en/sell-more-tickets-online/",
+      link_da: "/da/saelg-flere-billetter-online/",
       alt: "image1",
       name_en: "Sell more",
       name_da: "Sælg mere"
     },
     {
       image: "/img/better-experience.png",
-      link_da: "/da/dit-billetsystem",
-      link_en: "/en/your-ticket-system",
+      link_da: "/da/dit-billetsystem/",
+      link_en: "/en/your-ticket-system/",
       alt: "image2",
       name_en: "Better experience",
       name_da: "Bedre oplevelse"
     },
     {
       image: "/img/know-your-guests.png",
-      link_en: "/en/know-you-customers",
-      link_da: "/da/kend-dine-gæster",
+      link_en: "/en/know-you-customers/",
+      link_da: "/da/kend-dine-gæster/",
       alt: "image1",
       name_en: "Know your guests",
       name_da: "Kend dine gæster"
     },
     {
       image: "/img/be-in-control.png",
-      link_da: "/da/billetter-billettyper",
-      link_en: "/en/ticket-types",
+      link_da: "/da/billetter-billettyper/",
+      link_en: "/en/ticket-types/",
       alt: "image2",
       name_en: "Be in control",
       name_da: "Vær i kontrol"
@@ -119,10 +119,10 @@ const featuresNavigation = {
 
 module.exports = [
   {
-    path_en: "/en",
-    path_da: "/da",
+    path_en: "/en/",
+    path_da: "/da/",
 
-    title_da: "Ticketbutler ",
+    title_da: "Ticketbutler",
     title_en: "Ticketbutler",
     meta_description_da:
       " Tiltræk flere kunder og sælg billetter med et full scale billetsystem, som matcher dit brand.",
@@ -157,8 +157,8 @@ module.exports = [
       },
       {
         type: "future_image_left",
-        button_link_da: "/da/saelg-flere-billetter-online",
-        button_link_en: "/en/sell-more-tickets-online",
+        button_link_da: "/da/saelg-flere-billetter-online/",
+        button_link_en: "/en/sell-more-tickets-online/",
         button_text_da: "Om øget salg",
         button_text_en: "About increased sales",
         heading_da: "Sælg billetter direkte fra din hjemmeside",
@@ -220,8 +220,8 @@ module.exports = [
       testimonials,
       {
         type: "future_layers",
-        button_link_da: "/da/dit-billetsystem",
-        button_link_en: "/en/your-ticket-system",
+        button_link_da: "/da/dit-billetsystem/",
+        button_link_en: "/en/your-ticket-system/",
         button_text_da: "Om oplevelsen",
         button_text_en: "About the experience",
         heading_da: "Nemt for dine gæster",
@@ -236,8 +236,8 @@ module.exports = [
       },
       {
         type: "future_image_left",
-        button_link_da: "/da/kend-dine-gæster",
-        button_link_en: "/en/know-you-customers",
+        button_link_da: "/da/kend-dine-gæster/",
+        button_link_en: "/en/know-you-customers/",
         button_text_da: "Om data",
         button_text_en: "About data",
         heading_da: "Lær din gæster at kende",
@@ -253,8 +253,8 @@ module.exports = [
 
       {
         type: "future_image_right",
-        button_link_da: "/da/billigt-billetsystem",
-        button_link_en: "/en/best-value-ticket-system",
+        button_link_da: "/da/billigt-billetsystem/",
+        button_link_en: "/en/best-value-ticket-system/",
         button_text_da: "Se priser",
         button_text_en: "See prices",
         heading_da: "Priser for alle",
@@ -269,8 +269,8 @@ module.exports = [
       },
       {
         type: "future_image_left",
-        button_link_da: "/da/billigt-billetsystem",
-        button_link_en: "/en/best-value-ticket-system",
+        button_link_da: "/da/billigt-billetsystem/",
+        button_link_en: "/en/best-value-ticket-system/",
         button_text_da: "Se mere",
         button_text_en: "See more",
         heading_da: "Dine penge, dit cashflow",
@@ -305,8 +305,8 @@ module.exports = [
   },
   /*////////////////////////////PRICE PAGE///////////////////////////////////*/
   {
-    path_da: "/da/billigt-billetsystem",
-    path_en: "/en/best-value-ticket-system",
+    path_da: "/da/billigt-billetsystem/",
+    path_en: "/en/best-value-ticket-system/",
     title_da: "Priser | Ticketbutler",
     title_en: "A simple and cheap ticket system",
     meta_description_da:
@@ -430,8 +430,8 @@ module.exports = [
   /*//////////////////////SELL MORE ONLINE///////////////////*/
 
   {
-    path_da: "/da/saelg-flere-billetter-online",
-    path_en: "/en/sell-more-tickets-online",
+    path_da: "/da/saelg-flere-billetter-online/",
+    path_en: "/en/sell-more-tickets-online/",
     title_da: "Sælg flere billetter online",
     title_en: "Sell more online",
     meta_description_da:
@@ -494,7 +494,7 @@ module.exports = [
       {
         type: "future_image_left",
         button_link:
-          "https://www.facebook.com/business/learn/facebook-ads-pixel",
+          "https://www.facebook.com/business/learn/facebook-ads-pixel/",
         button_text_da: "Om Facebook Pixel",
         button_text_en: "About Facebook Pixel",
         heading_da: "Optimér dit salg på Facebook",
@@ -525,8 +525,8 @@ module.exports = [
   },
   /*//////////////////////////KNOW YOUR CUSTOMERS PAGE/////////////////*/
   {
-    path_da: "/da/kend-dine-gæster",
-    path_en: "/en/know-you-customers",
+    path_da: "/da/kend-dine-gæster/",
+    path_en: "/en/know-you-customers/",
     title_da:
       "Kend dine gæster – og sælg flere billetter online med Ticketbutler",
     title_en: "Know your guests and sell more tickets online with Ticketbutler",
@@ -593,8 +593,8 @@ module.exports = [
   },
   /*/////////////////////////////////// PROVIDE BETTER CUSTOMER EXPERIENCE PAGE//////////////////////*/
   {
-    path_da: "/da/dit-billetsystem",
-    path_en: "/en/your-ticket-system",
+    path_da: "/da/dit-billetsystem/",
+    path_en: "/en/your-ticket-system/",
     title_da:
       "Dit billetsystem, din data, din succes – start dit event hos Ticketbutler",
     title_en:
@@ -715,8 +715,8 @@ module.exports = [
   },
   /*///////////////////////////BE IN CONTROL PAGE////////////////////*/
   {
-    path_da: "/da/billetter-billettyper",
-    path_en: "/en/ticket-types",
+    path_da: "/da/billetter-billettyper/",
+    path_en: "/en/ticket-types/",
     title_da: "Har du brug for flere billettyper til samme event?",
     title_en: "Do you need several ticket types for the same event?",
     meta_description_da:
@@ -803,8 +803,8 @@ module.exports = [
   },
   /*//////////////////////////ABOUT US PAGE/////////////////////*/
   {
-    path_da: "/da/om-os",
-    path_en: "/en/about-us",
+    path_da: "/da/om-os/",
+    path_en: "/en/about-us/",
     title_da: "Om Ticketbutler – Dit skræddersyede billetsystem",
     title_en: "About Ticketbutler - Your tailored ticketing system",
     meta_description_da:
@@ -844,8 +844,8 @@ module.exports = [
     ]
   },
   {
-    path_da: "/da/tak",
-    path_en: "/en/thanks",
+    path_da: "/da/tak/",
+    path_en: "/en/thanks/",
     title_da: "Tak",
     title_en: "Thank you",
     sections: [

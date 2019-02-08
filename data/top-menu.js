@@ -16,5 +16,11 @@ module.exports = [
     label_en: "Why Ticketbutler?",
     path_da: "/da/saelg-flere-billetter-online",
     path_en: "/en/sell-more-tickets-online"
+  },
+  {
+    external: true,
+    label_da: "Hjælpecenter",
+    label_en: "Help Center",
+    path: "https://ticketbutler.freshdesk.com"
   }
 ];

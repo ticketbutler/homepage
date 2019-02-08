@@ -38,6 +38,16 @@ module.exports = [
         label_en: "Price",
         path_da: "/da/billigt-billetsystem",
         path_en: "/en/best-value-ticket-system"
+      },
+      {
+        label_da: "Hjælpecenter for arrangører",
+        label_en: "Help Center for organisers",
+        path: "https://ticketbutler.freshdesk.com"
+      },
+      {
+        label_da: "Hjælpecenter for billetkøbere",
+        label_en: "Help Center for ticket buyers",
+        path: "https://ticketbutler.freshdesk.com"
       }
     ]
   },
