@@ -132,10 +132,9 @@ module.exports = [
     sections: [
       {
         type: "header",
-        button_link_da: "/da/create/",
-        button_link_en: "/en/create/",
-        button_text_da: "Opret sit første event",
-        button_text_en: "Create your first event",
+        button_link: "#contact",
+        button_text_da: "Kontakt os!",
+        button_text_en: "Contact us!",
         heading_da: "Dit skræddersyede billetsystem",
         heading_en: "Your ticketing platform",
         image: "/img/splash-new.png",
