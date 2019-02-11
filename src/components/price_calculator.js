@@ -162,7 +162,7 @@ class PriceCalculator extends React.Component {
           <h1
             style={{
               color: "#fff",
-              fontSize: this.props.window.width > 420 ? 45 : 27,
+              fontSize: this.props.window.width > 420 ? "45px" : "27px",
               fontWeight: "bold",
               textAlign: "center",
               paddingTop: 20,
@@ -180,7 +180,6 @@ class PriceCalculator extends React.Component {
               textAlign: "center",
               margin: "0 auto",
               lineHeight: "38px",
-              letterSpacing: "-0.19px",
               width: "60%",
               paddingBottom: "4em",
               paddingTop: "2em",
@@ -209,14 +208,14 @@ class PriceCalculator extends React.Component {
                 ? {
                     height: 800
                   }
-                : this.props.window.width > 500
+                : this.props.window.width > 600
                   ? {
                       padding: "1em",
                       height: 830
                     }
                   : {
                       padding: "1em",
-                      height: 900
+                      height: 1000
                     })
             }}
           >
@@ -337,7 +336,7 @@ class PriceCalculator extends React.Component {
               style={{
                 boxSizing: "border-box",
                 height: "2px",
-                width: this.props.window.width > 420 ? "350px" : "250px",
+                width: "250px",
                 border: "1px solid #C0C5CF",
                 margin: "0 auto"
               }}
@@ -356,7 +355,8 @@ class PriceCalculator extends React.Component {
                 flexWrap: "wrap",
                 ...(this.props.window.width < 700
                   ? {
-                      justifyContent: "center"
+                      justifyContent: "center",
+                      fontSize: 12
                     }
                   : {
                       justifyContent: "space-between"
@@ -431,7 +431,7 @@ class PriceCalculator extends React.Component {
               style={{
                 color: "grey",
                 fontSize: "1em",
-                margin: "1em"
+                marginTop: "2em"
               }}
             >
               {this.t("Prices above include VAT")}
