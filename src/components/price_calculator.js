@@ -2,6 +2,7 @@ import React from "react";
 import { withWindow } from "../components/helpers";
 import { makeTranslations } from "mini-trans";
 import { BigTriangle } from "./elements/shapes";
+import styled from "@emotion/styled";
 
 const styles = {
   input: {
@@ -127,7 +128,7 @@ class PriceCalculator extends React.Component {
       impressions = Number(this.state.numberOfTickets) * 5;
     }
     // let localFee = new Number(fee).toLocaleString('da-DK')
-    console.log(fee);
+
     let localTotal = this.state.price == 0 ? 0 : localTotal;
     return (
       <div
@@ -160,19 +161,22 @@ class PriceCalculator extends React.Component {
         >
           <BigTriangle style={{ display: "block", position: "absolute" }} />
           <h1
-            style={{
-              color: "#fff",
-              fontSize: this.props.window.width > 420 ? "45px" : "27px",
+            css={{
               fontWeight: "bold",
               textAlign: "center",
               paddingTop: 20,
-              lineHeight: "70px"
+              lineHeight: "70px",
+              color: "#fff",
+              fontSize: "45px",
+              "@media(max-width: 420px)": {
+                fontSize: "27px"
+              }
             }}
           >
             {this.props.heading}
           </h1>
           <h2
-            style={{
+            css={{
               color: "#fff",
               fontWeight: 500,
               fontSize: this.props.window.width > 420 ? 27 : 20,
@@ -183,19 +187,17 @@ class PriceCalculator extends React.Component {
               width: "60%",
               paddingBottom: "4em",
               paddingTop: "2em",
-              ...(this.props.window.width < 800
-                ? {
-                    paddingBottom: "1em",
-                    width: "90%"
-                  }
-                : {})
+              "@media(max-width: 800px)": {
+                paddingBottom: "1em",
+                width: "90%"
+              }
             }}
           >
             {this.props.text}
           </h2>
           <div
             className="form"
-            style={{
+            css={{
               width: "100%",
               maxWidth: "815px",
               borderRadius: 5,
@@ -204,26 +206,21 @@ class PriceCalculator extends React.Component {
               margin: "0 auto",
               textAlign: "center",
               padding: "4em",
-              ...(this.props.window.width > 800
-                ? {
-                    height: 800
-                  }
-                : this.props.window.width > 600
-                  ? {
-                      padding: "1em",
-                      height: 830
-                    }
-                  : {
-                      padding: "1em",
-                      height: 1000
-                    })
+              height: 800,
+              "@media(max-width: 600px)": {
+                padding: "1em",
+                height: 830
+              }
             }}
           >
             <div
-              style={{
-                display: this.props.window.width > 600 ? "flex" : "block",
+              css={{
                 marginBottom: "1em",
-                justifyContent: "center"
+                justifyContent: "center",
+                display: "flex",
+                "@media(max-width: 600px)": {
+                  display: "block"
+                }
               }}
             >
               <h3 style={styles.h3}> {this.t("I'd sell")} </h3>
@@ -396,16 +393,13 @@ class PriceCalculator extends React.Component {
                   }}
                 >
                   <div
-                    style={{
-                      ...(this.props.window.width < 700
-                        ? {
-                            minWidth: "500px",
-                            textAlign: "center"
-                          }
-                        : {
-                            textAlign: "left",
-                            minWidth: "290px"
-                          })
+                    css={{
+                      textAlign: "left",
+                      minWidth: "290px",
+                      "@media(max-width: 700px)": {
+                        minWidth: "100%",
+                        textAlign: "center"
+                      }
                     }}
                   >
                     {label}
