@@ -1,5 +1,4 @@
 module.exports = {
-
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-catch-links",
@@ -12,6 +11,12 @@ module.exports = {
       resolve: "gatsby-plugin-facebook-pixel",
       options: {
         pixelId: "280686579243661"
+      }
+    },
+    {
+      resolve: "gatsby-plugin-emotion",
+      options: {
+        // Accepts all options defined by `babel-plugin-emotion` plugin.
       }
     },
     {
@@ -30,7 +35,6 @@ module.exports = {
     }
   ],
   siteMetadata: {
-    siteUrl: 'https://ticketbutler.io'
+    siteUrl: "https://ticketbutler.io"
   }
-
 };
