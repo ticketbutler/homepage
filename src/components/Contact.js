@@ -438,7 +438,7 @@ class Contact extends React.Component {
         @media (max-width: 500px) { 
             .contact_left_box{
             padding: 70px 20px;
-            padding-left: 0px;
+           
 
             }
             .contact_left_box h1 {
