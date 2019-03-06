@@ -168,7 +168,7 @@ class PriceCalculator extends React.Component {
               lineHeight: "70px",
               color: "#fff",
               fontSize: "45px",
-              "@media(max-width: 420px)": {
+              "@media(max-width: 600px)": {
                 fontSize: "27px"
               }
             }}
@@ -179,7 +179,7 @@ class PriceCalculator extends React.Component {
             css={{
               color: "#fff",
               fontWeight: 500,
-              fontSize: this.props.window.width > 420 ? 27 : 20,
+              fontSize: 27,
               letterSpacing: "-0.19px",
               textAlign: "center",
               margin: "0 auto",
@@ -187,9 +187,11 @@ class PriceCalculator extends React.Component {
               width: "60%",
               paddingBottom: "4em",
               paddingTop: "2em",
-              "@media(max-width: 800px)": {
+              "@media(max-width: 600px)": {
                 paddingBottom: "1em",
-                width: "90%"
+                width: "90%",
+                fontSize: 16,
+                lineWeight: 45
               }
             }}
           >
@@ -223,16 +225,33 @@ class PriceCalculator extends React.Component {
                 }
               }}
             >
-              <h3 style={styles.h3}> {this.t("I'd sell")} </h3>
+              <h3
+                css={{
+                  "@media(max-width: 600px)": {
+                    fontSize: 16
+                  },
+                  ...styles.h3
+                }}
+              >
+                {" "}
+                {this.t("I'd sell")}{" "}
+              </h3>
               <input
-                style={styles.input}
+                css={styles.input}
                 type="number"
                 placeholder={this.t(" tickets sold")}
                 required
                 value={this.state.numberOfTickets}
                 onChange={this.handleNumberOfTicketsInput}
               />
-              <h3 style={styles.h3}>
+              <h3
+                css={{
+                  "@media(max-width: 600px)": {
+                    fontSize: 16
+                  },
+                  ...styles.h3
+                }}
+              >
                 <span style={{ color: "black" }}>{this.t("tickets")}</span>{" "}
                 {this.t("at")}
               </h3>
@@ -244,16 +263,26 @@ class PriceCalculator extends React.Component {
                 value={this.state.price}
                 onChange={this.handlePriceInput}
               />
-              <h3 style={styles.h3}>
+              <h3
+                css={{
+                  "@media(max-width: 600px)": {
+                    fontSize: 16
+                  },
+                  ...styles.h3
+                }}
+              >
                 <span style={{ color: "black" }}> kr</span> {this.t("each")}
               </h3>
             </div>
 
             <div
               className="toggle"
-              style={{
+              css={{
                 margin: "0 auto",
-                display: "inline-flex"
+                display: "inline-flex",
+                "@media(max-width: 600px)": {
+                  fontSize: 11
+                }
               }}
             >
               <span
@@ -264,14 +293,17 @@ class PriceCalculator extends React.Component {
               <label
                 className="switch"
                 onClick={this.switchFunction}
-                style={{
+                css={{
                   position: "relative",
                   display: "inline-block",
-                  width: 60,
                   height: 24,
+                  width: 60,
                   outline: "none",
                   marginLeft: "1em",
-                  marginRight: "1em"
+                  marginRight: "1em",
+                  "@media(max-width: 600px)": {
+                    width: "100px"
+                  }
                 }}
               >
                 <div
@@ -315,15 +347,27 @@ class PriceCalculator extends React.Component {
                 {this.t("Event organizer pays ticket fee")}
               </span>
             </div>
-            <p style={styles.small}>{this.t("Your estimated revenue")} </p>
             <p
-              style={{
+              css={{
+                "@media(max-width: 600px)": {
+                  fontSize: 16
+                },
+                ...styles.small
+              }}
+            >
+              {this.t("Your estimated revenue")}{" "}
+            </p>
+            <p
+              css={{
                 color: "#326DE9",
                 fontSize: this.props.window.width > 420 ? "2.5em" : "1.5em",
                 fontWeight: "500",
                 lineHeight: "61px",
                 letterSpacing: "normal",
-                marginBottom: "0.5rem"
+                marginBottom: "0.5rem",
+                "@media(max-width: 600px)": {
+                  lineHeight: "45px"
+                }
               }}
             >
               {localTotal} kr
@@ -339,7 +383,16 @@ class PriceCalculator extends React.Component {
               }}
             />
 
-            <p style={styles.small}>{this.t("Summary")}</p>
+            <p
+              css={{
+                "@media(max-width: 600px)": {
+                  fontSize: 16
+                },
+                ...styles.small
+              }}
+            >
+              {this.t("Summary")}
+            </p>
             <div
               style={{
                 height: "250px",
@@ -422,19 +475,27 @@ class PriceCalculator extends React.Component {
               ))}
             </div>
             <p
-              style={{
+              css={{
                 color: "grey",
                 fontSize: "1em",
-                marginTop: "2em"
+                marginTop: "2em",
+                "@media(max-width: 600px)": {
+                  fontSize: 11,
+                  margin: 10
+                }
               }}
             >
               {this.t("Prices above include VAT")}
             </p>
             <p
-              style={{
+              css={{
                 color: "grey",
                 fontSize: "1em",
-                margin: "1em"
+                margin: "1em",
+                "@media(max-width: 600px)": {
+                  fontSize: 11,
+                  margin: 0
+                }
               }}
             >
               {this.t("*If you receive ongoing payments ")}{" "}

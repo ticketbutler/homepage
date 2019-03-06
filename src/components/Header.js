@@ -15,7 +15,7 @@ const Header = ({
 }) => {
   return (
     <header
-      style={{
+      css={{
         padding: "100px 0",
         maxHeight: "100vh",
         width: "100%",
@@ -24,16 +24,9 @@ const Header = ({
         background: `linear-gradient( to right, rgba(50, 109, 233, .9),rgba(126, 82, 232, .9)),url('${image}'),no-repeat center center`,
         clipPath: "polygon(0 0, 100% 0, 100% 95%, 0% 100%)",
         backgroundSize: "cover",
-        ...(featureHeader
-          ? window.width < 500
-            ? {
-                height: "80vh",
-                padding: "60px 0"
-              }
-            : {
-                height: "80vh"
-              }
-          : {})
+        "@media(max-width: 600px)": {
+          padding: 0
+        }
       }}
     >
       <div
