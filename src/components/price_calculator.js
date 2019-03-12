@@ -177,7 +177,7 @@ class PriceCalculator extends React.Component {
           </h1>
           <h2
             css={{
-              color: "pink",
+              color: "#fff",
               fontWeight: 500,
               fontSize: 27,
               letterSpacing: "-0.19px",

@@ -20,7 +20,7 @@ export class Button extends React.Component {
         onMouseLeave={() => {
           this.setState({ hovered: false });
         }}
-        css={{
+        style={{
           color: "white",
           fontWeight: "bold",
           borderRadius: 50,
@@ -31,9 +31,6 @@ export class Button extends React.Component {
           cursor: "pointer",
           border: "2px solid transparent",
           transition: "2s all",
-          "@media(max-width: 600px)": {
-            fontSize: 16
-          },
           ...(this.props.small
             ? {
                 maxWidth: 150,
@@ -92,7 +89,6 @@ export class Button extends React.Component {
     );
   }
 }
-
 export const SectionText = ({ children }) => {
   return (
     <div className="section_text">
