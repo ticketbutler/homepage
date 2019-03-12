@@ -10,7 +10,7 @@ const styles = {
     width: "8.5em",
     marginTop: "0.5em",
     border: "1px solid #C0C5CF",
-    borderRadius: 2,
+    borderRadius: "2px",
     backgroundColor: "#FFFFFF",
     boxShadow: "6px 6px 20px 0 #ECECEC",
     padding: "0.2em"
@@ -139,17 +139,17 @@ class PriceCalculator extends React.Component {
           transform: "skew(0deg,-2deg)",
           margin: 0,
           padding: 0,
-          marginBottom: this.props.window.width > 800 ? 400 : 100,
+          marginBottom: this.props.window.width > 800 ? "400px" : "100px",
           ...(this.props.window.width > 800
             ? {
-                height: 1000
+                height: "1000px"
               }
             : this.props.window.width > 600
               ? {
-                  height: 1200
+                  height: "1200px"
                 }
               : {
-                  height: 1500
+                  height: "1500px"
                 })
         }}
       >
@@ -164,7 +164,7 @@ class PriceCalculator extends React.Component {
             css={{
               fontWeight: "bold",
               textAlign: "center",
-              paddingTop: 20,
+              paddingTop: "20px",
               lineHeight: "70px",
               color: "#fff",
               fontSize: "45px",
@@ -179,7 +179,7 @@ class PriceCalculator extends React.Component {
             css={{
               color: "#fff",
               fontWeight: 500,
-              fontSize: 27,
+              fontSize: "27px",
               letterSpacing: "-0.19px",
               textAlign: "center",
               margin: "0 auto",
@@ -188,9 +188,10 @@ class PriceCalculator extends React.Component {
               paddingBottom: "4em",
               paddingTop: "2em",
               "@media(max-width: 600px)": {
+                paddingTop: "0px",
                 paddingBottom: "1em",
                 width: "90%",
-                fontSize: 16,
+                fontSize: "16px",
                 lineWeight: 45
               }
             }}
@@ -202,16 +203,16 @@ class PriceCalculator extends React.Component {
             css={{
               width: "100%",
               maxWidth: "815px",
-              borderRadius: 5,
+              borderRadius: "5px",
               backgroundColor: "#F5F8FB",
               boxShadow: "2px 2px 30px 0 #848EA2",
               margin: "0 auto",
               textAlign: "center",
               padding: "4em",
-              height: 800,
+              height: "800px",
               "@media(max-width: 600px)": {
                 padding: "1em",
-                height: 830
+                height: "830px"
               }
             }}
           >
@@ -228,7 +229,7 @@ class PriceCalculator extends React.Component {
               <h3
                 css={{
                   "@media(max-width: 600px)": {
-                    fontSize: 16
+                    fontSize: "16px"
                   },
                   ...styles.h3
                 }}
@@ -247,7 +248,7 @@ class PriceCalculator extends React.Component {
               <h3
                 css={{
                   "@media(max-width: 600px)": {
-                    fontSize: 16
+                    fontSize: "16px"
                   },
                   ...styles.h3
                 }}
@@ -266,7 +267,7 @@ class PriceCalculator extends React.Component {
               <h3
                 css={{
                   "@media(max-width: 600px)": {
-                    fontSize: 16
+                    fontSize: "16px"
                   },
                   ...styles.h3
                 }}
@@ -281,7 +282,7 @@ class PriceCalculator extends React.Component {
                 margin: "0 auto",
                 display: "inline-flex",
                 "@media(max-width: 600px)": {
-                  fontSize: 11
+                  fontSize: "11px"
                 }
               }}
             >
@@ -317,7 +318,7 @@ class PriceCalculator extends React.Component {
                     bottom: 0,
                     backgroundColor: "#326DE9",
                     transition: "0.4s",
-                    borderRadius: 24,
+                    borderRadius: "24px",
                     ...(this.state.includeTicketFee
                       ? {
                           backgroundColor: "#326DE9"
@@ -350,7 +351,7 @@ class PriceCalculator extends React.Component {
             <p
               css={{
                 "@media(max-width: 600px)": {
-                  fontSize: 16
+                  fontSize: "16px"
                 },
                 ...styles.small
               }}
@@ -386,7 +387,7 @@ class PriceCalculator extends React.Component {
             <p
               css={{
                 "@media(max-width: 600px)": {
-                  fontSize: 16
+                  fontSize: "16px"
                 },
                 ...styles.small
               }}
@@ -406,7 +407,7 @@ class PriceCalculator extends React.Component {
                 ...(this.props.window.width < 700
                   ? {
                       justifyContent: "center",
-                      fontSize: 12
+                      fontSize: "12px"
                     }
                   : {
                       justifyContent: "space-between"
@@ -480,8 +481,8 @@ class PriceCalculator extends React.Component {
                 fontSize: "1em",
                 marginTop: "2em",
                 "@media(max-width: 600px)": {
-                  fontSize: 11,
-                  margin: 10
+                  fontSize: "11px",
+                  margin: "10px"
                 }
               }}
             >
@@ -493,7 +494,7 @@ class PriceCalculator extends React.Component {
                 fontSize: "1em",
                 margin: "1em",
                 "@media(max-width: 600px)": {
-                  fontSize: 11,
+                  fontSize: "11px",
                   margin: 0
                 }
               }}
