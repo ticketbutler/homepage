@@ -2,7 +2,7 @@ import React from "react";
 import { withWindow } from "../components/helpers";
 import { makeTranslations } from "mini-trans";
 import { BigTriangle } from "./elements/shapes";
-import styled from "@emotion/styled";
+import { jsx } from "@emotion/core";
 
 const styles = {
   input: {
