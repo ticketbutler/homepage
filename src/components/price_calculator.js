@@ -296,8 +296,8 @@ class PriceCalculator extends React.Component {
                 css={{
                   position: "relative",
                   display: "inline-block",
-                  height: 24,
-                  width: 60,
+                  height: "24px",
+                  width: "60px",
                   outline: "none",
                   marginLeft: "1em",
                   marginRight: "1em",
