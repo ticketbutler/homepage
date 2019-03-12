@@ -20,7 +20,7 @@ export class Button extends React.Component {
         onMouseLeave={() => {
           this.setState({ hovered: false });
         }}
-        css={css`
+        css={{
           color: "white",
           fontWeight: "bold",
           borderRadius: 50,
@@ -57,7 +57,7 @@ export class Button extends React.Component {
                   "linear-gradient( to right, rgba(40, 216, 167, 1), rgba(29, 201, 202, 1) )"
               }),
           ...this.props.style
-        `}
+        }}
         {...this.props.buttonProps}
       >
         {this.props.children}
