@@ -8,19 +8,19 @@ module.exports = [
   {
     label_da: "Pris",
     label_en: "Price",
-    path_da: "/da/billigt-billetsystem",
-    path_en: "/en/best-value-ticket-system"
+    path_da: "/da/billigt-billetsystem/",
+    path_en: "/en/best-value-ticket-system/"
   },
   {
     label_da: "Hvorfor bruge Ticketbutler?",
     label_en: "Why Ticketbutler?",
-    path_da: "/da/saelg-flere-billetter-online",
-    path_en: "/en/sell-more-tickets-online"
+    path_da: "/da/saelg-flere-billetter-online/",
+    path_en: "/en/sell-more-tickets-online/"
   },
   {
     external: true,
     label_da: "Hjælpecenter",
     label_en: "Help Center",
-    path: "https://ticketbutler.freshdesk.com"
+    path: "https://ticketbutler.freshdesk.com/"
   }
 ];
