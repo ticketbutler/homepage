@@ -808,9 +808,9 @@ module.exports = [
     title_da: "Om Ticketbutler – Dit skræddersyede billetsystem",
     title_en: "About Ticketbutler - Your tailored ticketing system",
     meta_description_da:
-      "Ticketbutler er et online billetsystem, som let kan integreres på din egen hjemmeside.",
+      "Sælg flere billetter med Ticketbutlers digitale marketing service. Vi hjælper dig med opsætning af online ads – så du kan koncentrere dig om dit event.",
     meta_description_en:
-      "Ticketbutler is an online ticket system that can be easily integrated into your own website.",
+      "Sell more tickets with Ticketbutler's digital marketing service. We help you setting up online ads - so you can concentrate on your event.",
     sections: [
       {
         type: "header",
@@ -866,6 +866,87 @@ module.exports = [
         thank_you_text_da: "Hvorfor har verden brug for endnu et billetsystem?",
         thank_you_text_en: "Why do the world need another ticketing system?"
       }
+    ]
+  },
+  ////////////////////////////////////////DIGITAL MARKETING SERVICE//////////////////////////
+  {
+    path_en: "/en/marketing_service",
+    path_da: "/da/marketing_service",
+
+    title_da: "Digital marketing service",
+    title_en: "Digital marketing service",
+    meta_description_da:
+      " Tiltræk flere kunder og sælg billetter med et full scale billetsystem, som matcher dit brand.",
+    meta_description_en:
+      "Attract more customers and sell tickets with a full-scale ticketing system that matches your brand.",
+
+    sections: [
+      {
+        type: "header",
+        heading_da: "Digital marketing service",
+        heading_en: "Digital marketing service",
+        image: "/img/head1.jpg",
+        text_da:
+          "Vi lever for og af dit billetsalg. Derfor tilbyder vi Ticketbutlers digitale marketing service, som på nuværende tidspunkt er den eneste marketing service specialiseret i at øge dit salg af billetter.",
+        text_en:
+          "Ticketbuler lives for and of your ticket sale which is why we offer a digital marketing service. This is currently the only marketing service specialized in increasing the sale of your tickets."
+      },
+      {
+        type: "future_image_left",
+        heading_da: "Vi hjælper dig med online annoncering",
+        heading_en: "We help you with online advertising ",
+        button_link: "#contact",
+        button_text_da: "Kontakt og hør mere",
+        button_text_en: "Contact us",
+        image: "/img/vihjælperdigmed.jpg",
+        image_alt_da: "Vi hjælper dig med online annoncerin",
+        image_alt_en: "We help you with online advertising ",
+        text_da:
+          "Hos Ticketbutler er vi nørder og specialister i billetsystemer og billetsalg. Dette afspejler vores digitale marketing service, som hjælper dig på vej til succes med at sælge endnu flere billetter.",
+        text_en:
+          "At Ticketbutler we are nerds and specialists in ticketing systems and ticket sales. This reflects our digital marketing service, which helps you on the road to success by selling even more tickets."
+      },
+      {
+        type: "future_image_right",
+        heading_da: "Sælg billetter med Facebook og Instagram",
+        heading_en: "Sell tickets with Facebook and Instagram",
+        image: "/img/sælgbillettermedfacebookoginstagram.jpg",
+        image_alt_da: "Sælg billetter med Facebook og Instagram",
+        image_alt_en: "Sell tickets with Facebook and Instagram",
+        text_da:
+          "Har du jævnligt brugt Facebooks Boost-knap uden at kunne tracke effekten? Lad os spare dig frustrationerne ved at sætte Facebook og Instagram-kampagner op som virker. Med en remarketing-strategi laver vi annoncer henvendt til personer, som kender dit brand og derfor med større sandsynlighed vil købe dine produkter.",
+        text_en:
+          "Have you ever used the Facebook Boost button without a trackable effect? Let us save you the frustration by setting up Facebook and Instagram ads that actually works. Our remarketing strategies aims for reaching people who already knows your brand and therefore are more likely to buy your products."
+      },
+      {
+        type: "future_image_left",
+        heading_da: "Nå dit mål med Google-annoncer",
+        heading_en: "Reach your goal with Google ads",
+        image: "/img/nåditmålmedgoogle.jpg",
+        image_alt_da: "Nå dit mål med Google-annoncer",
+        image_alt_en: "Reach your goal with Google ads",
+        text_da:
+          "En billig og effektiv måde at udbrede dit event på er gennem Google. Med Ticketbutlers digitale marketing service kan vi hjælpe dig med grafisk udformning og opsætning af tekst- og bannerannoncer. Annoncerne vises, hvor de er relevante, og du betaler kun pr. ‘klik’.",
+        text_en:
+          "A cheap and effective way to draw attention to your event is through Google. Ticketbutler's digital marketing service will help you with graphic designs and the setup of Google display- and text ads."
+      },
+
+      {
+        type: "tall_centered_future",
+        heading_da: "Pris",
+        heading_en: "Price",
+        image: "/img/prisII.png",
+        image_alt_da: "Pris",
+        image_alt_en: "Price",
+        text_da:
+          "Selvom der ikke findes andre marketing services med speciale i billetsalg, skal vores service være til at betale. Du betaler derfor kun 2.000 kr. + et opstartsgebyr + 5% pr. ekstra solgte billet. De ekstra 5% er vores garanti for, at der bliver lagt tid og kræfter i at booste jeres billetsalg.",
+        text_en:
+          "Although there are no other marketing services specializing in ticket sales, our service must be payable. You only pay DKK 2,000 + a start-up fee + 5% per extra sold ticket. The extra 5% is our guarantee that we will put an effort into boosting your ticket sale."
+      },
+
+      newsletterSubscription,
+
+      contact
     ]
   }
 ];

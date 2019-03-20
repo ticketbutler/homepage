@@ -53,7 +53,19 @@ const FutureImageIeft = ({
           {text}
         </p>
         {button_text &&
-          button_text.length > 0 && (
+          button_text.length > 0 &&
+          ((button_link: "#contact") ? (
+            <Button
+              to={button_link}
+              style={{
+                right: "0",
+                float: "right",
+                transform: "translateX(0)"
+              }}
+            >
+              {button_text}
+            </Button>
+          ) : (
             <a href={button_link} target="_blank" rel="noopener noreferrer">
               <Button
                 className="right"
@@ -66,7 +78,7 @@ const FutureImageIeft = ({
                 {button_text}
               </Button>
             </a>
-          )}
+          ))}
       </SectionText>
     </div>
     <div className="shape_pos_square_1 Future_image_left_section">
