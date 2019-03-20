@@ -62,7 +62,7 @@ const Footer = ({ linkLists }) => (
       <ul>
         <div style={{ display: "grid" }}>
           <a href="/">
-            <img src="/img/logo_blue.png" style={{ maxWidth: 200 }} />
+            <img src="/img/logo_purple.png" style={{ maxWidth: 200 }} />
           </a>
 
           <span
