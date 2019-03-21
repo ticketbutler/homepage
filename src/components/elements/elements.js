@@ -88,7 +88,6 @@ export class Button extends React.Component {
     );
   }
 }
-
 export const SectionText = ({ children }) => {
   return (
     <div className="section_text">

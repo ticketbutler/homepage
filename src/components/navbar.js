@@ -13,7 +13,7 @@ type Locale = {
 };
 const translations = {
   da: {
-    Contact: "Kontakt"
+    "Log in": "Log Ind"
   }
 };
 class Navbar extends React.Component<
@@ -57,8 +57,8 @@ class Navbar extends React.Component<
         }}
       >
         <div className="navbar_logo" style={{}}>
-          <Link to="/da">
-            <img src="/img/logo_white.png" />
+          <Link to="//">
+            <img src="/img/tb_wink_white.gif" />
           </Link>
         </div>
 
@@ -125,39 +125,36 @@ class Navbar extends React.Component<
             {this.props.otherLocale.label}
           </a>
 
-          <Button
-            small
-            outline
-            style={{
-              fontSize: 14,
-              fontWeight: 600,
-              letterSpacing: 1.15,
-
-              ...(this.props.window.width < 600
-                ? {
-                    fontSize: 10
-                  }
-                : {}),
-              ...(this.props.window.width < 450
-                ? {
-                    display: "none"
-                  }
-                : {})
-            }}
-            arrow={false}
-            buttonProps={{
-              onClick: () => {
-                var contactEl = document.querySelector("#contact");
-                if (contactEl) {
-                  contactEl.scrollIntoView({
-                    behavior: "smooth"
-                  });
-                }
-              }
-            }}
+          <a
+            href={
+              "//you.ticketbutler.io/" + this.props.currentLocale.id + "/login/"
+            }
+            style={{ textDecoration: "none" }}
           >
-            {this.t("Contact")}
-          </Button>
+            <Button
+              small
+              outline
+              style={{
+                fontSize: 14,
+                fontWeight: 600,
+                letterSpacing: 1.15,
+
+                ...(this.props.window.width < 600
+                  ? {
+                      fontSize: 10
+                    }
+                  : {}),
+                ...(this.props.window.width < 450
+                  ? {
+                      display: "none"
+                    }
+                  : {})
+              }}
+              arrow={false}
+            >
+              {this.t("Log in")}
+            </Button>
+          </a>
         </div>
         <style jsx>{`
           * {
@@ -237,7 +234,7 @@ class Navbar extends React.Component<
             line-height: 130px;
           }
           .navbar .navbar_logo a img {
-            width: 170px;
+            width: 200px;
             margin-bottom: 0;
             line-height: 75px;
           }

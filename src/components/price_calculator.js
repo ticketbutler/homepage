@@ -2,7 +2,7 @@ import React from "react";
 import { withWindow } from "../components/helpers";
 import { makeTranslations } from "mini-trans";
 import { BigTriangle } from "./elements/shapes";
-import styled from "@emotion/styled";
+import { jsx } from "@emotion/core";
 
 const styles = {
   input: {
@@ -10,7 +10,7 @@ const styles = {
     width: "8.5em",
     marginTop: "0.5em",
     border: "1px solid #C0C5CF",
-    borderRadius: 2,
+    borderRadius: "2px",
     backgroundColor: "#FFFFFF",
     boxShadow: "6px 6px 20px 0 #ECECEC",
     padding: "0.2em"
@@ -139,17 +139,17 @@ class PriceCalculator extends React.Component {
           transform: "skew(0deg,-2deg)",
           margin: 0,
           padding: 0,
-          marginBottom: this.props.window.width > 800 ? 400 : 100,
+          marginBottom: this.props.window.width > 800 ? "400px" : "100px",
           ...(this.props.window.width > 800
             ? {
-                height: 1000
+                height: "1000px"
               }
             : this.props.window.width > 600
               ? {
-                  height: 1200
+                  height: "1200px"
                 }
               : {
-                  height: 1500
+                  height: "1500px"
                 })
         }}
       >
@@ -164,11 +164,11 @@ class PriceCalculator extends React.Component {
             css={{
               fontWeight: "bold",
               textAlign: "center",
-              paddingTop: 20,
+              paddingTop: "20px",
               lineHeight: "70px",
               color: "#fff",
               fontSize: "45px",
-              "@media(max-width: 420px)": {
+              "@media(max-width: 600px)": {
                 fontSize: "27px"
               }
             }}
@@ -179,7 +179,7 @@ class PriceCalculator extends React.Component {
             css={{
               color: "#fff",
               fontWeight: 500,
-              fontSize: this.props.window.width > 420 ? 27 : 20,
+              fontSize: "27px",
               letterSpacing: "-0.19px",
               textAlign: "center",
               margin: "0 auto",
@@ -187,9 +187,12 @@ class PriceCalculator extends React.Component {
               width: "60%",
               paddingBottom: "4em",
               paddingTop: "2em",
-              "@media(max-width: 800px)": {
+              "@media(max-width: 600px)": {
+                paddingTop: "0px",
                 paddingBottom: "1em",
-                width: "90%"
+                width: "90%",
+                fontSize: "16px",
+                lineWeight: 45
               }
             }}
           >
@@ -200,16 +203,16 @@ class PriceCalculator extends React.Component {
             css={{
               width: "100%",
               maxWidth: "815px",
-              borderRadius: 5,
+              borderRadius: "5px",
               backgroundColor: "#F5F8FB",
               boxShadow: "2px 2px 30px 0 #848EA2",
               margin: "0 auto",
               textAlign: "center",
               padding: "4em",
-              height: 800,
+              height: "800px",
               "@media(max-width: 600px)": {
                 padding: "1em",
-                height: 830
+                height: "830px"
               }
             }}
           >
@@ -223,16 +226,33 @@ class PriceCalculator extends React.Component {
                 }
               }}
             >
-              <h3 style={styles.h3}> {this.t("I'd sell")} </h3>
+              <h3
+                css={{
+                  "@media(max-width: 600px)": {
+                    fontSize: "16px"
+                  },
+                  ...styles.h3
+                }}
+              >
+                {" "}
+                {this.t("I'd sell")}{" "}
+              </h3>
               <input
-                style={styles.input}
+                css={styles.input}
                 type="number"
                 placeholder={this.t(" tickets sold")}
                 required
                 value={this.state.numberOfTickets}
                 onChange={this.handleNumberOfTicketsInput}
               />
-              <h3 style={styles.h3}>
+              <h3
+                css={{
+                  "@media(max-width: 600px)": {
+                    fontSize: "16px"
+                  },
+                  ...styles.h3
+                }}
+              >
                 <span style={{ color: "black" }}>{this.t("tickets")}</span>{" "}
                 {this.t("at")}
               </h3>
@@ -244,16 +264,26 @@ class PriceCalculator extends React.Component {
                 value={this.state.price}
                 onChange={this.handlePriceInput}
               />
-              <h3 style={styles.h3}>
+              <h3
+                css={{
+                  "@media(max-width: 600px)": {
+                    fontSize: "16px"
+                  },
+                  ...styles.h3
+                }}
+              >
                 <span style={{ color: "black" }}> kr</span> {this.t("each")}
               </h3>
             </div>
 
             <div
               className="toggle"
-              style={{
+              css={{
                 margin: "0 auto",
-                display: "inline-flex"
+                display: "inline-flex",
+                "@media(max-width: 600px)": {
+                  fontSize: "11px"
+                }
               }}
             >
               <span
@@ -264,14 +294,17 @@ class PriceCalculator extends React.Component {
               <label
                 className="switch"
                 onClick={this.switchFunction}
-                style={{
+                css={{
                   position: "relative",
                   display: "inline-block",
-                  width: 60,
-                  height: 24,
+                  height: "24px",
+                  width: "60px",
                   outline: "none",
                   marginLeft: "1em",
-                  marginRight: "1em"
+                  marginRight: "1em",
+                  "@media(max-width: 600px)": {
+                    width: "100px"
+                  }
                 }}
               >
                 <div
@@ -285,7 +318,7 @@ class PriceCalculator extends React.Component {
                     bottom: 0,
                     backgroundColor: "#326DE9",
                     transition: "0.4s",
-                    borderRadius: 24,
+                    borderRadius: "24px",
                     ...(this.state.includeTicketFee
                       ? {
                           backgroundColor: "#326DE9"
@@ -315,15 +348,27 @@ class PriceCalculator extends React.Component {
                 {this.t("Event organizer pays ticket fee")}
               </span>
             </div>
-            <p style={styles.small}>{this.t("Your estimated revenue")} </p>
             <p
-              style={{
+              css={{
+                "@media(max-width: 600px)": {
+                  fontSize: "16px"
+                },
+                ...styles.small
+              }}
+            >
+              {this.t("Your estimated revenue")}{" "}
+            </p>
+            <p
+              css={{
                 color: "#326DE9",
                 fontSize: this.props.window.width > 420 ? "2.5em" : "1.5em",
                 fontWeight: "500",
                 lineHeight: "61px",
                 letterSpacing: "normal",
-                marginBottom: "0.5rem"
+                marginBottom: "0.5rem",
+                "@media(max-width: 600px)": {
+                  lineHeight: "45px"
+                }
               }}
             >
               {localTotal} kr
@@ -339,7 +384,16 @@ class PriceCalculator extends React.Component {
               }}
             />
 
-            <p style={styles.small}>{this.t("Summary")}</p>
+            <p
+              css={{
+                "@media(max-width: 600px)": {
+                  fontSize: "16px"
+                },
+                ...styles.small
+              }}
+            >
+              {this.t("Summary")}
+            </p>
             <div
               style={{
                 height: "250px",
@@ -353,7 +407,7 @@ class PriceCalculator extends React.Component {
                 ...(this.props.window.width < 700
                   ? {
                       justifyContent: "center",
-                      fontSize: 12
+                      fontSize: "12px"
                     }
                   : {
                       justifyContent: "space-between"
@@ -422,19 +476,27 @@ class PriceCalculator extends React.Component {
               ))}
             </div>
             <p
-              style={{
+              css={{
                 color: "grey",
                 fontSize: "1em",
-                marginTop: "2em"
+                marginTop: "2em",
+                "@media(max-width: 600px)": {
+                  fontSize: "11px",
+                  margin: "10px"
+                }
               }}
             >
               {this.t("Prices above include VAT")}
             </p>
             <p
-              style={{
+              css={{
                 color: "grey",
                 fontSize: "1em",
-                margin: "1em"
+                margin: "1em",
+                "@media(max-width: 600px)": {
+                  fontSize: "11px",
+                  margin: 0
+                }
               }}
             >
               {this.t("*If you receive ongoing payments ")}{" "}
