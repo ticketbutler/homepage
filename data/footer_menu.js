@@ -7,7 +7,7 @@ module.exports = [
         label_da: "Sælg flere billetter",
         label_en: "Sell more tickets",
         path_da: "/da/saelg-flere-billetter-online/",
-        path_en: "/en//sell-more-tickets-online/"
+        path_en: "/en/sell-more-tickets-online/"
       },
       {
         label_da: "Kend dine gæster",
