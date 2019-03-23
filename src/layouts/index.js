@@ -1,8 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Link } from "gatsby";
+import { Global } from "@emotion/core";
 import Navbar from "../components/navbar";
-import Contact from "../components/Contact";
 import Footer from "../components/footer";
 import "./index.css";
 
@@ -16,6 +15,13 @@ export const Layout = ({
   title
 }) => (
   <div>
+    <Global
+      styles={{
+        "html, body": {
+          fontFamily: "Montserrat"
+        }
+      }}
+    />
     <Helmet>
       <link
         rel="shortcut icon"

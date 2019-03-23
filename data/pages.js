@@ -874,16 +874,14 @@ module.exports = [
   },
   ////////////////////////////////////////DIGITAL MARKETING SERVICE//////////////////////////
   {
-    path_en: "/en/marketing_service",
-    path_da: "/da/marketing_service",
-
+    path_en: "/en/marketing-service",
+    path_da: "/da/marketing-service",
     title_da: "Digital marketing service",
     title_en: "Digital marketing service",
     meta_description_da:
-      " Tiltræk flere kunder og sælg billetter med et full scale billetsystem, som matcher dit brand.",
+      "Tiltræk flere kunder og sælg billetter med et full scale billetsystem, som matcher dit brand.",
     meta_description_en:
       "Attract more customers and sell tickets with a full-scale ticketing system that matches your brand.",
-
     sections: [
       {
         type: "header",

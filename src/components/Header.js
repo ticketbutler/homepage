@@ -80,11 +80,6 @@ const Header = ({
       </div>
 
       <style jsx>{`
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
 
         div#navActive_back.NavbarClicked-background {
           visibility: visible;
@@ -96,7 +91,6 @@ const Header = ({
 
         header div.header_content {
           padding: 100px 110px;
-          margin-top: 100px; 
         }
         header div.header_content h1 {
           width: 900px;
@@ -115,9 +109,6 @@ const Header = ({
         
     @media (max-width: 1300px) {
       
-      header div.header_content h1 {
-          display: inlin-block !important;
-        }
         header div.header_content p {
           width: 100%;
 
@@ -127,7 +118,6 @@ const Header = ({
     @media (max-width: 1080px) {
       header div.header_content{
         padding: 60px 110px !important;
-        margin-top: 60px !important;
       }
       header div.header_content h1 {
         width: 100% ;
@@ -163,12 +153,10 @@ const Header = ({
     @media (max-width: 600px) {
       header{
         padding: 0px ;
-        margin-top: 50px !important; 
       }
   
       header div.header_content{
         padding: 60px 40px !important;
-        margin-top: 60px !important;
       }
 
       header div.header_content h1{
@@ -186,12 +174,10 @@ const Header = ({
     @media (max-width: 376px) {
       header{
         padding: 30px 20px 
-        margin-top: 50px !important; 
       }
 
       header div.header_content{
         padding: 60px 00px   
-        margin-top: 00px !important;
       }
   
       header div.header_content h1{

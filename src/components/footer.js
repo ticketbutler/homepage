@@ -240,12 +240,6 @@ const Footer = ({ linkLists }) => (
         .footer_bottom a span {
           font-size: 10px;
         }
-        img {
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-          width: 50%;
-        }
         #contactId {
           width: 100%;
           text-align: center;
