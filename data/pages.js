@@ -158,7 +158,7 @@ module.exports = [
           "Ticketbutler is dedicated to help you get the most out of your event as possible. We do this by giving you the power of data, putting your brand in front, and giving your guests the best ticketing experience."
       },
       {
-        type: "future_image_left",
+        type: "content_image_left",
         button_link_da: "/da/saelg-flere-billetter-online/",
         button_link_en: "/en/sell-more-tickets-online/",
         button_text_da: "Om øget salg",
@@ -237,7 +237,7 @@ module.exports = [
           "It takes seconds for your customers to buy your tickets. Designed to be easy buying tickets from a phone, no asking for creating a user, and various payment methods including MobilePay payments."
       },
       {
-        type: "future_image_left",
+        type: "content_image_left",
         button_link_da: "/da/kend-dine-gæster/",
         button_link_en: "/en/know-you-customers/",
         button_text_da: "Om data",
@@ -270,7 +270,7 @@ module.exports = [
           " It doesn’t matter if you’re a big company, a startup or a one man army. We accommodate your needs either if you use our free plan or an advanced tailored solution."
       },
       {
-        type: "future_image_left",
+        type: "content_image_left",
         button_link_da: "/da/billigt-billetsystem/",
         button_link_en: "/en/best-value-ticket-system/",
         button_text_da: "Se mere",
@@ -344,7 +344,7 @@ module.exports = [
           "If you have tickets with a price Ticketbutler is absolutely free for you – only a small ticket fee is added on top of the ticket price. No extra processing fees, fees using MobilePay, or other surprises."
       },
       {
-        type: "future_image_left",
+        type: "content_image_left",
         heading_da: "Gratis events",
         heading_en: "Organizing events with free tickets",
         image: "/img/business-happy.png",
@@ -457,7 +457,7 @@ module.exports = [
         featureHeader: true
       },
       {
-        type: "future_image_left",
+        type: "content_image_left",
         heading_da: "Øg din brand awareness",
         heading_en: "Start looking professional",
         image: "/img/brugerrejse-i-et-online-billetsystem2.png",
@@ -496,7 +496,7 @@ module.exports = [
           "By integrating the ticketing on your platform you get visitors who are not only interested in your single event but everything you have on offer. You will be in charge of what to show to your peers, because who is best at selling your event and services? You. Nerds not required to integrate – it’s literally a copy/paste. Don’t fancy integration? No worries, you’ll always get a beautiful event page. Want an API integration? Contact us!"
       },
       {
-        type: "future_image_left",
+        type: "content_image_left",
         button_link:
           "https://www.facebook.com/business/learn/facebook-ads-pixel/",
         button_text_da: "Om Facebook Pixel",
@@ -552,7 +552,7 @@ module.exports = [
         featureHeader: true
       },
       {
-        type: "future_image_left",
+        type: "content_image_left",
         button_link: "https://www.google.com/analytics/",
         button_text_da: "Om Google Analytics ",
         button_text_en: "About Google Analytics",
@@ -579,7 +579,7 @@ module.exports = [
           "Do you have specific questions you would like your customers to reply in the purchase flow? Either if it’s questions to the purchaser, to each ticket buyer, to ticket buyers buying specific ticket types, if it’s required to reply or not, we got you covered. Define the questions and easily fetch the data."
       },
       {
-        type: "future_image_left",
+        type: "content_image_left",
         heading_da: "Lær fra din salgshistorik",
         heading_en: "We keep track on your sales history",
         image: "/img/online-billetsalg-overblik.png",
@@ -621,7 +621,7 @@ module.exports = [
         featureHeader: true
       },
       {
-        type: "future_image_left",
+        type: "content_image_left",
         heading_da: "Gør det nemt for dine gæster",
         heading_en: "Make it easy for your customers",
         image: "/img/user-journey-with-mobilepay.png",
@@ -689,7 +689,7 @@ module.exports = [
       },
 
       {
-        type: "future_image_left",
+        type: "content_image_left",
         heading_da: "En naturlig udvidelse af dit brand",
         heading_en: "A natural extension of your brand",
         image: "/img/brugerrejse-i-et-online-billetsystem2.png",
@@ -741,7 +741,7 @@ module.exports = [
         featureHeader: true
       },
       {
-        type: "future_image_left",
+        type: "content_image_left",
         heading_da: "Hjælp dine kunder",
         heading_en: "Support your customers",
         image: "/img/refunder-billetter-i-online-billetsystem.png",
@@ -765,7 +765,7 @@ module.exports = [
           "Do you have members who get free or discounted tickets? Create member tickets such the member write in their membership to get access to buy the member ticket."
       },
       {
-        type: "future_image_left",
+        type: "content_image_left",
         heading_da: "Billetter til ethvert behov",
         heading_en: "Specify your tickets",
         image: "/img/billetsystem-med-billettyper.png",
@@ -789,7 +789,7 @@ module.exports = [
           " By downloading your new best friend you have the most important tools in your pocket. In the app you can follow your ticket sales, checking your guests in by swiping over their name, or scan the QR tickets through the smartphone camera."
       },
       {
-        type: "future_image_left",
+        type: "content_image_left",
         heading_da: "Bevar overblikket",
         heading_en: "Always have an overview",
         image: " /img/online-billetsalg-overblik.png",
@@ -894,7 +894,7 @@ module.exports = [
           "Ticketbuler lives for and of your ticket sale which is why we offer a digital marketing service. This is currently the only marketing service specialized in increasing the sale of your tickets."
       },
       {
-        type: "future_image_left",
+        type: "content_image_left",
         heading_da: "Vi hjælper dig med online annoncering",
         heading_en: "We help you with online advertising ",
         button_link: "#contact",
@@ -921,7 +921,7 @@ module.exports = [
           "Have you ever used the Facebook Boost button without a trackable effect? Let us save you the frustration by setting up Facebook and Instagram ads that actually works. Our remarketing strategies aims for reaching people who already knows your brand and therefore are more likely to buy your products."
       },
       {
-        type: "future_image_left",
+        type: "content_image_left",
         heading_da: "Nå dit mål med Google-annoncer",
         heading_en: "Reach your goal with Google ads",
         image: "/img/nåditmålmedgoogle.jpg",

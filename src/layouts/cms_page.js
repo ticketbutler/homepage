@@ -3,7 +3,7 @@ import * as React from "react";
 import { Layout } from "../layouts/";
 import Header from "../components/Header";
 import FutureImageRight from "../components/future_image_right";
-import FutureImageIeft from "../components/future_image_left";
+import FutureImageIeft from "../components/content_image_left";
 import TallCenteredFuture from "../components/tall_centered_future";
 import TallCenteredFutureButtonTop from "../components/tall_centered_future_button_top";
 import FutureImageRightSecond from "../components/future_image_right_second";
@@ -21,7 +21,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 const components: Array<{ Component: React.Component<*>, id: string }> = [
   { Component: Header, id: "header" },
   { Component: FutureImageRight, id: "future_image_right" },
-  { Component: FutureImageIeft, id: "future_image_left" },
+  { Component: FutureImageIeft, id: "content_image_left" },
   { Component: TallCenteredFuture, id: "tall_centered_future" },
   {
     Component: TallCenteredFutureButtonTop,
