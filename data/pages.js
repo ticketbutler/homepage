@@ -122,10 +122,11 @@ module.exports = [
     path_en: "/en/",
     path_da: "/da/",
 
-    title_da: "Ticketbutler",
+    title_da:
+      "Ticketbutler | Start dit billetsalg på 2 minutter | Gratis Billetsystem",
     title_en: "Ticketbutler",
     meta_description_da:
-      " Tiltræk flere kunder og sælg billetter med et full scale billetsystem, som matcher dit brand.",
+      "Sælg billetter med Ticketbutler. Et gratis online billetsystem designet så du let bevarer overblikket over dit billetsalg og event. Sælg billetter i løbet af få minutter.",
     meta_description_en:
       "Attract more customers and sell tickets with a full-scale ticketing system that matches your brand.",
 
@@ -311,10 +312,11 @@ module.exports = [
   {
     path_da: "/da/billigt-billetsystem/",
     path_en: "/en/best-value-ticket-system/",
-    title_da: "Priser | Ticketbutler",
+    title_da:
+      "Gratis Online Billetsystem | Udbetaling Hver Uge | Ticketbutler.io",
     title_en: "A simple and cheap ticket system",
     meta_description_da:
-      "Ticketbutler leverer et enkelt og billigt billetsystem med dit brand i fokus. Start dit event og sælg flere billetter.",
+      "Når du arrangerer events er Ticketbutler ganske gratis. Du bestemmer selv om pengene fra dit billetsalg skal udbetales løbende eller samlet.",
     meta_description_en:
       "Ticketbutler provides a simple and inexpensive ticketing system in your brand. Create your event today to begin selling tickets",
     sections: [
@@ -336,7 +338,7 @@ module.exports = [
         heading_da: "Gratis for betalte arrangementer",
         heading_en: "Free to use for paid events",
         image: "/img/konfetti-bred.png",
-        image_alt_da: "enkelt-billigt-billetsystem",
+        image_alt_da: "Spar penge sælg billetter med et gratis billetsystem",
         image_alt_en: "single-best-value-ticket-system",
         text_da:
           "Det er helt gratis at sælge billetter på Ticketbutler – kun et lavt billetgebyr lægges ovenpå billetprisen. Ingen kortgebyr. Ingen MobilePay gebyr. Ingen overraskelser.",
@@ -360,7 +362,7 @@ module.exports = [
         heading_da: "Få løbende udbetaling",
         heading_en: "Ongoing payments",
         image: "/img/cute-money-piggie.jpg",
-        image_alt_da: "loebende-udbetaling-inden-arrangement",
+        image_alt_da: "Gratis billetsystem priser og udbetaling",
         image_alt_en: "ongoing-payments-before-event",
         text_da:
           "Hvis du ønsker løbende udbetaling inden dit event, skal du blot udfylde en formular online, hvor du herefter modtager billetindtægterne løbende med en uges forsinkelse. Du kan også vælge at få en samlet udbetaling efter eventet, så du slipper for unødvendigt bogføringsarbejde.",
@@ -436,10 +438,11 @@ module.exports = [
   {
     path_da: "/da/saelg-flere-billetter-online/",
     path_en: "/en/sell-more-tickets-online/",
-    title_da: "Sælg flere billetter online",
+    title_da:
+      "Sælg flere billetter med Ticketbutler.io | Tag kontrol over dit billetsalg",
     title_en: "Sell more online",
     meta_description_da:
-      "Arrangerer du events, og mangler du tips og tricks til at øge dit billetsalg? Ticketbutler er et online billetsystem, som hjælper dig på vejen mod succes",
+      "Ticketbutler er udviklet med flere features, som hjælper dig med at være i kontrol over dit billetsalg. Øg dit billetsalg. Øg din brand awareness vær i kontrol.",
     meta_description_en:
       "Are you organising events and need tips and tricks to increase your ticket sales? Ticketbutler is an online ticketing system that helps you reach success”",
     sections: [
@@ -475,7 +478,7 @@ module.exports = [
         heading_da: "Sælg mere med e-mail marketing",
         heading_en: "Sell more through newsletters",
         image: "/img/john-schnobrich-520023-unsplash.png",
-        image_alt_da: "email-marketing-billetsystem",
+        image_alt_da: "Sælg mere med e-mail marketing",
         image_alt_en: "email-marketing-ticketing-platform",
         text_da:
           "Skal du arrangere flere events? Sælger din virksomhed andet end billetter? Dine gæster er interesseret i det du gør, og vi giver dem mulighed for at tilmelde sig dit nyhedsbrev, så din database vokser. E-mail marketing er et et værdifuldt værktøj, som du kan bruge til at promovere din virksomhed og fremtidige events. Tiltræk nye kunder og hold fast i de gamle. Dataen er din!",
@@ -504,6 +507,7 @@ module.exports = [
         heading_da: "Optimér dit salg på Facebook",
         heading_en: "Optimize your Facebook marketing",
         image: "/img/facebook-pixel-billetsystem.png",
+        image_alt_da: "Sælg billetter med Facebook og Facebook Pixel",
         text_da:
           "Hvorfor ikke nøjes med at investere i Facebook-annoncer som virker? Facebook Pixel fortæller dig om dine Facebook-annoncer virker, og automatisk optimerer dine annoncer så du sælger flere billetter. Altså får du mere for pengene i dine Facebook-kampagner.",
         text_en:
@@ -517,6 +521,7 @@ module.exports = [
         heading_da: "Brug rabatkoder i din markedsføring",
         heading_en: "Track your marketing with discount codes",
         image: "/img/couponticketbutler.png",
+        image_alt_da: "Billetter rabatkoder og markedsføring",
         text_da:
           "Med Ticketbutler kan du oprette rabatkoder, hvilket er et stærkt marketing-værktøj: Opret en rabatkode til et af dine events og track gennem Ticketbutler, hvor mange gange koden er blevet brugt i dit online billetsalg. På den måde kan du måle hvor effektiv din kampagne har været.",
         text_en:
@@ -532,10 +537,10 @@ module.exports = [
     path_da: "/da/kend-dine-gæster/",
     path_en: "/en/know-you-customers/",
     title_da:
-      "Kend dine gæster – og sælg flere billetter online med Ticketbutler",
+      "Ticketbutler.io | Få adgang til værdifuld data | Kend dine gæster",
     title_en: "Know your guests and sell more tickets online with Ticketbutler",
     meta_description_da:
-      "Ticketbutler giver dig mulighed for, at stille dine gæster specifikke spørgsmål når du sælger billetter online. Skyd dit event i gang i dag.",
+      "I modsætning til vores konkurrenter mener vi, at dataen dit billetsalg genererer tilhører dig. Hold overblikket og lær af din salgshistorik med Google Analytics.",
     meta_description_en:
       "“Ticketbutler gives you a way to ask your guests specific questions when you sell tickets online. Start your ticket sales today”",
     sections: [
@@ -599,12 +604,11 @@ module.exports = [
   {
     path_da: "/da/dit-billetsystem/",
     path_en: "/en/your-ticket-system/",
-    title_da:
-      "Dit billetsystem, din data, din succes – start dit event hos Ticketbutler",
+    title_da: "Dit Billetsalg | Dit Billetsystem | Ticketbutler.io",
     title_en:
       "Your ticketing platform, your data, your succes – start your event at Ticketbutler",
     meta_description_da:
-      "Start dit event hos Ticketbutler: Et online billetsystem pakket med features og fordele, som kommer dig og dine gæster til gode.",
+      "Ticketbutler er sat i verden for at tjene dig, dit billetsalg og dit event. Hold overblikket over dit event og billetsalg i Ticketbutlers overskuelige dashboard.",
     meta_description_en:
       "Start event with Ticketbutler: An online ticketing system packed with features that benefits both you and your guests”",
     sections: [
@@ -721,10 +725,11 @@ module.exports = [
   {
     path_da: "/da/billetter-billettyper/",
     path_en: "/en/ticket-types/",
-    title_da: "Har du brug for flere billettyper til samme event?",
+    title_da:
+      "Opret flere billettyper | Start dit billetsalg her | Ticketbutler.io",
     title_en: "Do you need several ticket types for the same event?",
     meta_description_da:
-      " Med Ticketbutler kan du stille dine gæster specifikke spørgsmål, når du sælger billetter online, og oprette flere billettyper til samme event.",
+      "Billethåndtering har aldrig været lettere. Check dine gæster ind med et 'swipe' eller refunder deres billet med et enkelt 'klik'. Opret og sælg billetter til ethvert behov.",
     meta_description_en:
       "With Ticketbutler you can aks your guests specific questions when you sell tickets online and create several ticket types for same event.",
     sections: [
