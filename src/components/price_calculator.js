@@ -2,7 +2,6 @@ import React from "react";
 import { withWindow } from "../components/helpers";
 import { makeTranslations } from "mini-trans";
 import { BigTriangle } from "./elements/shapes";
-import { jsx } from "@emotion/core";
 
 const styles = {
   input: {
@@ -192,7 +191,7 @@ class PriceCalculator extends React.Component {
                 paddingBottom: "1em",
                 width: "90%",
                 fontSize: "16px",
-                lineWeight: 45
+                lineHeight: "24px"
               }
             }}
           >
