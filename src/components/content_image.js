@@ -62,15 +62,19 @@ const ContentImage = ({
         background = null;
     }
     return (
-      <div css={sectionStyles.item}>
+      <div
+        css={[
+          sectionStyles.item,
+          imagePosition === "BOTTOM" && { maxWidth: "1400px" }
+        ]}
+      >
         <img
           alt={image_alt}
           src={image}
           css={{
             objectFit: "contain",
             width: "100%",
-            height: "100%",
-            maxHeight: "35vh"
+            height: "100%"
           }}
         />
         {background}
