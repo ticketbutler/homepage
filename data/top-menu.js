@@ -1,11 +1,5 @@
 module.exports = [
   {
-    label_da: "Hjem",
-    label_en: "Home",
-    path_da: "/da/",
-    path_en: "/en/"
-  },
-  {
     label_da: "Pris",
     label_en: "Price",
     path_da: "/da/billigt-billetsystem/",
@@ -22,5 +16,11 @@ module.exports = [
     label_da: "Hjælpecenter",
     label_en: "Help Center",
     path: "https://ticketbutler.freshdesk.com/"
+  },
+  {
+    path_da: "/da/marketing-service/",
+    path_en: "/en/marketing-service/",
+    label_da: "Marketing service",
+    label_en: "Marketing service"
   }
 ];

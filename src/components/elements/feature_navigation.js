@@ -28,10 +28,8 @@ class FeaturesNavigation extends React.Component<
     );
     let currentTileRef = this.tileRefs[this.activeTileIndex].current;
     if (this.containerRef.current) {
-      let menuOffset =
-        this.containerRef.current.offsetTop - this.menuOffsetBuffer;
       window.addEventListener("scroll", () => {
-        this.setState({ sticky: window.scrollY >= menuOffset });
+        this.setState({ sticky: window.scrollY >= 5 });
       });
       if (currentTileRef && this.activeTileIndex) {
         this.containerRef.current.scrollTo({
@@ -49,15 +47,15 @@ class FeaturesNavigation extends React.Component<
     return (
       <div
         style={{
-          zIndex: 999,
+          zIndex: 80,
           width: "100%",
           display: "flex",
           justifyContent: "center",
           ...(this.props.window.width < 800
             ? {
-                paddingTop: 80
+                paddingTop: 60
               }
-            : { paddingTop: 120 }),
+            : { paddingTop: 70 }),
           ...(this.state.sticky
             ? {
                 position: "relative"
@@ -69,6 +67,7 @@ class FeaturesNavigation extends React.Component<
           ref={this.containerRef}
           style={{
             display: "flex",
+            width: "100%",
             margin: "0 auto",
             overflowX: "auto",
             padding: this.menuOffsetBuffer,
@@ -77,15 +76,15 @@ class FeaturesNavigation extends React.Component<
             borderBottomRightRadius: 3,
             ...(this.state.sticky
               ? {
-                  position: "fixed",
-                  background: "white",
-                  boxShadow: "0px 12px 73px -8px rgba(0,0,0,0.75)"
+                  position: "fixed"
                 }
               : {}),
             ...(this.state.sticky
-              ? this.props.window.width < 800
+              ? this.props.window.width < 910
                 ? { zIndex: 1000 }
                 : {
+                    background: "white",
+                    boxShadow: "0px 12px 73px -8px rgba(0,0,0,0.75)",
                     top: 0
                   }
               : {})
@@ -100,6 +99,7 @@ class FeaturesNavigation extends React.Component<
           >
             {this.props.items.map((item, i) => (
               <FeatureTile
+                key={i}
                 marginOfItems={this.itemMargin}
                 containerRef={this.tileRefs[i]}
                 style={{
