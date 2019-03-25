@@ -68,9 +68,6 @@ const FutureLayers = ({
         box-sizing: border-box;
       }
 
-      body {
-        overflow: hidden;
-      }
 
       div.clear-fix {
         clear: both;

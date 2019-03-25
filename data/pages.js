@@ -133,8 +133,10 @@ module.exports = [
       {
         type: "header",
         button_link: "#contact",
-        button_text_da: "Kontakt os!",
-        button_text_en: "Contact us!",
+        button_link_da: "//you.ticketbutler.io/da/create/",
+        button_link_en: "//you.ticketbutler.io/en/create/",
+        button_text_da: "Opret dit første event",
+        button_text_en: "Create your first event",
         heading_da: "Dit skræddersyede billetsystem",
         heading_en: "Your ticketing platform",
         image: "/img/splash-new.png",
@@ -286,8 +288,10 @@ module.exports = [
       {
         type: "tall_centered_future_button_top",
         button_link: "#contact",
-        button_text_da: "Kontakt os!",
-        button_text_en: "Contact us!",
+        button_link_da: "//you.ticketbutler.io/da/create/",
+        button_link_en: "//you.ticketbutler.io/en/create/",
+        button_text_da: "Opret dit første event",
+        button_text_en: "Create your first event",
         heading_da: "Kom nemt i gang",
         heading_en: "Getting started is a breeze",
         image: "/img/simpelt-billetsystem.png",
@@ -870,13 +874,12 @@ module.exports = [
   },
   ////////////////////////////////////////DIGITAL MARKETING SERVICE//////////////////////////
   {
-    path_en: "/en/marketing_service",
-    path_da: "/da/marketing_service",
-
+    path_en: "/en/marketing-service",
+    path_da: "/da/marketing-service",
     title_da: "Digital marketing service",
     title_en: "Digital marketing service",
     meta_description_da:
-      " Tiltræk flere kunder og sælg billetter med et full scale billetsystem, som matcher dit brand.",
+      "Tiltræk flere kunder og sælg billetter med et full scale billetsystem, som matcher dit brand.",
     meta_description_en:
       "Sell more tickets with Ticketbutler's digital marketing service. We help you setting up online ads - so you can concentrate on your event.",
 
