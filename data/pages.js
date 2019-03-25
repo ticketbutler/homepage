@@ -874,8 +874,8 @@ module.exports = [
   },
   ////////////////////////////////////////DIGITAL MARKETING SERVICE//////////////////////////
   {
-    path_en: "/en/marketing-service",
-    path_da: "/da/marketing-service",
+    path_en: "/en/marketing-service/",
+    path_da: "/da/marketing-service/",
     title_da: "Digital marketing service",
     title_en: "Digital marketing service",
     meta_description_da:
