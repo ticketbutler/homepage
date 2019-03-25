@@ -289,7 +289,8 @@ module.exports = [
           "You might be used to receive your event revenue after the event has ended. But with Ticketbutler you can choose to receive your revenue ongoing before the event or the total revenue after the event."
       },
       {
-        type: "tall_centered_future_button_top",
+        type: "content_image",
+        imagePosition: "BOTTOM",
         button_link: "#contact",
         button_link_da: "//you.ticketbutler.io/da/create/",
         button_link_en: "//you.ticketbutler.io/en/create/",

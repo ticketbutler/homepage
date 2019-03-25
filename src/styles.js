@@ -28,7 +28,7 @@ export function makeSectionStyles(itemWidth, imagePosition) {
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-    padding: "5vw 0",
+    padding: "10vh 0",
     maxWidth: "1800px",
     margin: "0 auto",
     [mediaQuery]: {
@@ -36,13 +36,28 @@ export function makeSectionStyles(itemWidth, imagePosition) {
       alignItems: "center"
     }
   };
+  let item = {
+    position: "relative",
+    width: "100%",
+    maxWidth: itemWidth + "px",
+    padding: "20px",
+    display: "flex",
+    flexDirection: "column",
+    [mq(itemWidth * 2)]: {
+      alignItems: "center"
+    }
+  };
   switch (imagePosition) {
     case "RIGHT":
       container.flexDirection = "row-reverse";
       break;
+    case "LEFT":
+      item.alignItems = "flex-end";
+      break;
     case "BOTTOM":
     case "TOP":
       container.flexDirection = "column";
+      item.alignItems = "center";
       break;
     default:
       break;
@@ -78,21 +93,6 @@ export function makeSectionStyles(itemWidth, imagePosition) {
       },
       textStyles
     ],
-    item: [
-      {
-        position: "relative",
-        width: "100%",
-        maxWidth: itemWidth + "px",
-        padding: "20px",
-        display: "flex",
-        flexDirection: "column",
-        [mq(itemWidth * 2)]: {
-          alignItems: "center"
-        }
-      },
-      imagePosition === "LEFT" && {
-        alignItems: "flex-end"
-      }
-    ]
+    item
   };
 }

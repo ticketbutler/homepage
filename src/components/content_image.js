@@ -21,7 +21,7 @@ const ContentImage = ({
       break;
     case "LEFT":
     case "RIGHT":
-      itemWidth = 590;
+      itemWidth = 680;
       break;
   }
   const sectionStyles = makeSectionStyles(itemWidth, imagePosition);
