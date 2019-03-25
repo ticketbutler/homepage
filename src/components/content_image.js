@@ -73,7 +73,7 @@ const ContentImage = ({
           src={image}
           css={{
             objectFit: "contain",
-            width: "100%",
+            maxWidth: "100%",
             height: "100%"
           }}
         />

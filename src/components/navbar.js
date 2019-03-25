@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "gatsby";
 import { Button } from "./elements/elements";
 import { makeTranslations } from "mini-trans";
 import { navigate } from "@reach/router";
+import { mq } from "../styles";
 
 function Burger({ active, ...htmlProps }) {
   return (
@@ -138,7 +138,10 @@ class Navbar extends React.Component {
             src="/img/tb_wink_white.gif"
             css={{
               display: "block",
-              maxWidth: "200px"
+              maxWidth: "200px",
+              [mq(440)]: {
+                maxWidth: "100px"
+              }
             }}
             onClick={() => {
               navigate("/");
