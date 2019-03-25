@@ -144,7 +144,7 @@ class Navbar extends React.Component {
               }
             }}
             onClick={() => {
-              navigate("/");
+              navigate("/" + this.props.currentLocale.id + "/");
             }}
           />
           <div
