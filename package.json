@@ -62,9 +62,7 @@
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.8.2",
-    "husky": "^0.14.3",
     "jest": "^23.4.2",
-    "lint-staged": "^7.2.0",
     "prettier": "1.13.5",
     "react-test-renderer": "^16.4.1"
   },
@@ -75,11 +73,5 @@
       "\\.(css|less|sass|scss)$": "<rootDir>/src/__mocks__/style_mock.js",
       "\\.(gif|ttf|eot|svg)$": "<rootDir>/src/__mocks__/file_mock.js"
     }
-  },
-  "lint-staged": {
-    "*.{js,json,css,md}": [
-      "prettier --write",
-      "git add"
-    ]
   }
 }
