@@ -74,7 +74,7 @@ const ContentImage = ({
           css={{
             objectFit: "contain",
             maxWidth: "100%",
-            height: "100%"
+            height: "auto"
           }}
         />
         {background}
