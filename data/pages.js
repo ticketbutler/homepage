@@ -878,7 +878,7 @@ module.exports = [
     meta_description_da:
       " Tiltræk flere kunder og sælg billetter med et full scale billetsystem, som matcher dit brand.",
     meta_description_en:
-      "Attract more customers and sell tickets with a full-scale ticketing system that matches your brand.",
+      "Sell more tickets with Ticketbutler's digital marketing service. We help you setting up online ads - so you can concentrate on your event.",
 
     sections: [
       {
@@ -889,12 +889,12 @@ module.exports = [
         text_da:
           "Vi lever for og af dit billetsalg. Derfor tilbyder vi Ticketbutlers digitale marketing service, som på nuværende tidspunkt er den eneste marketing service specialiseret i at øge dit salg af billetter.",
         text_en:
-          "Ticketbuler lives for and of your ticket sale which is why we offer a digital marketing service. This is currently the only marketing service specialized in increasing the sale of your tickets."
+          "We do everything we can to boost your ticket sales which is why we offer a digital marketing service. It is is the only marketing service specialising in increasing the sale of your tickets."
       },
       {
         type: "future_image_left",
         heading_da: "Vi hjælper dig med online annoncering",
-        heading_en: "We help you with online advertising ",
+        heading_en: "Let us take care of your marketing",
         button_link: "#contact",
         button_text_da: "Kontakt og hør mere",
         button_text_en: "Contact us",
@@ -904,7 +904,7 @@ module.exports = [
         text_da:
           "Hos Ticketbutler er vi nørder og specialister i billetsystemer og billetsalg. Dette afspejler vores digitale marketing service, som hjælper dig på vej til succes med at sælge endnu flere billetter.",
         text_en:
-          "At Ticketbutler we are nerds and specialists in ticketing systems and ticket sales. This reflects our digital marketing service, which helps you on the road to success by selling even more tickets."
+          "At Ticketbutler we are nerds and specialists in ticketing systems and ticket sales. This reflects our digital marketing service, so you can focus on preparing your event while we get you on the road to success by selling even more tickets."
       },
       {
         type: "future_image_right",
@@ -916,7 +916,7 @@ module.exports = [
         text_da:
           "Har du jævnligt brugt Facebooks Boost-knap uden at kunne tracke effekten? Lad os spare dig frustrationerne ved at sætte Facebook og Instagram-kampagner op som virker. Med en remarketing-strategi laver vi annoncer henvendt til personer, som kender dit brand og derfor med større sandsynlighed vil købe dine produkter.",
         text_en:
-          "Have you ever used the Facebook Boost button without a trackable effect? Let us save you the frustration by setting up Facebook and Instagram ads that actually works. Our remarketing strategies aims for reaching people who already knows your brand and therefore are more likely to buy your products."
+          "Have you ever used the Facebook Boost button without a trackable effect? Let us save you the frustration by setting up Facebook and Instagram ads that actually work. Our remarketing strategies aim to reach people who already know your brand and are more likely to buy your products."
       },
       {
         type: "future_image_left",
@@ -928,7 +928,7 @@ module.exports = [
         text_da:
           "En billig og effektiv måde at udbrede dit event på er gennem Google. Med Ticketbutlers digitale marketing service kan vi hjælpe dig med grafisk udformning og opsætning af tekst- og bannerannoncer. Annoncerne vises, hvor de er relevante, og du betaler kun pr. ‘klik’.",
         text_en:
-          "A cheap and effective way to draw attention to your event is through Google. Ticketbutler's digital marketing service will help you with graphic designs and the setup of Google display- and text ads."
+          "A cheap and effective way to draw attention to your event is through Google ads. Ticketbutlers’ digital marketing service will bring your brand to life with effective marketing banners and setup Google display- and text ads for you! "
       },
 
       {
@@ -941,7 +941,7 @@ module.exports = [
         text_da:
           "Selvom der ikke findes andre marketing services med speciale i billetsalg, skal vores service være til at betale. Du betaler derfor kun 2.000 kr. + et opstartsgebyr + 5% pr. ekstra solgte billet. De ekstra 5% er vores garanti for, at der bliver lagt tid og kræfter i at booste jeres billetsalg.",
         text_en:
-          "Although there are no other marketing services specializing in ticket sales, our service must be payable. You only pay DKK 2,000 + a start-up fee + 5% per extra sold ticket. The extra 5% is our guarantee that we will put an effort into boosting your ticket sale."
+          "Making this service cost-effective for you is in our best interest. Therefore, you only pay a DKK 2,000 start-up fee + 5% per sale via advertisements. The 5% is our guarantee that we will put an effort into boosting your ticket sale."
       },
 
       newsletterSubscription,
