@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "./elements/elements";
 // import { withShapes } from "./with_shapes";
 import { makeSectionStyles } from "../styles";
-import { CancelIcon } from "./elements/icons";
+import { CancelIcon, PlayIcon } from "./elements/icons";
 
 // TODO: Add shapes
 const ContentImage = ({
@@ -130,7 +130,7 @@ const ContentImage = ({
               zIndex: 100,
               width: "80%",
               margin: "o auto",
-              height: "80%"
+              height: "auto"
             }}
           >
             <span
@@ -151,24 +151,29 @@ const ContentImage = ({
               style={{
                 position: "relative",
                 paddingBottom: "56.25%" /* 16:9 */,
-                paddingTop: 25,
+
                 height: 0
               }}
             >
-              <iframe
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%"
-                }}
-                id="ytplayer"
-                type="text/html"
-                src={video}
-                frameBorder="0"
-                allowFullScreen
-              />
+              {isModalOpen && (
+                <iframe
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%"
+                  }}
+                  id="ytplayer"
+                  type="text/html"
+                  src={video + "?autoplay=1"}
+                  frameBorder="0"
+                  webkitAllowFullScreen
+                  mozallowfullscreen
+                  allowFullScreen
+                  allow="autoplay; encrypted-media"
+                />
+              )}
             </div>
           </div>
         </div>
@@ -179,44 +184,88 @@ const ContentImage = ({
         css={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center"
+          justifyContent: "center",
+          ":hover img": {
+            transform: "scale(1.05)",
+            transitionTimingFunction: "ease-in",
+            transitionDuration: ".5s"
+          },
+          ":hover button": {
+            background:
+              " linear-gradient(to right, rgb(40, 216, 167), rgb(29, 201, 202))",
+            transition: "color .15s,background .25s",
+            transitionTimingFunction: "ease-in",
+            borderRadius: "50px",
+            color: "white"
+          },
+          ":hover .overlay": {
+            opacity: 1,
+            transition: "opacity 1.5s"
+          }
         }}
       >
-        <img
-          alt={image_alt}
-          src={image}
+        <div
           css={{
-            objectFit: "contain",
-            maxWidth: "100%",
-            height: "auto",
-            ":hover": {
-              transform: "scale(1.05)"
-            }
+            position: "relative"
           }}
-        />
+        >
+          <img
+            alt={image_alt}
+            src={image}
+            css={{
+              cursor: "pointer",
+              display: "block",
+              objectFit: "contain",
+              maxWidth: "100%",
+              height: "auto"
+            }}
+          />
+          <div
+            className="overlay"
+            onClick={() => toogleModal(true)}
+            css={{
+              position: "absolute",
+              top: "0px",
+              bottom: "0px",
+              left: "0px",
+              right: "0px",
+              height: "100%",
+              width: "100%",
+              opacity: 0,
+              transition: ".3s ease"
+            }}
+          >
+            <div
+              css={{
+                position: "absolute",
+                width: "30%",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+
+                textAlign: "center"
+              }}
+            >
+              {" "}
+              <PlayIcon />{" "}
+            </div>
+          </div>
+        </div>
         <button
           className="video-poster"
           onClick={() => toogleModal(!isModalOpen)}
           css={{
             color: "#002b64",
-
+            borderRadius: "50px",
             marginTop: "12px",
-            fontSize: "14px",
+            fontSize: "18px",
             border: "none",
-            padding: "4px 8px",
-            width: "25%",
-            margin: "10px auto",
-            cursior: "ponter",
+            padding: "10px 20px",
+            width: "30%",
+            margin: "20px auto",
+            cursor: "pointer",
             lineHeight: "24px",
-            ":hover": {
-              backgroundColor: " rgba(29, 201, 202, 0.1 )",
-              transition: "color .15s,background-color .25s",
-              transitionTimingFunction: "ease",
-              borderRadius: "50px",
-              ".video-poster": {
-                transform: "scale(1.2)"
-              }
-            }
+            fontWeight: "bold"
           }}
         >
           {" "}
