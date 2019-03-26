@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "./elements/elements";
 // import { withShapes } from "./with_shapes";
 import { makeSectionStyles } from "../styles";
+import { CancelIcon } from "./elements/icons";
 
 // TODO: Add shapes
 const ContentImage = ({
@@ -11,7 +12,8 @@ const ContentImage = ({
   button_text,
   image,
   image_alt,
-  button_link
+  button_link,
+  video
 }) => {
   let itemWidth;
   switch (imagePosition) {
@@ -81,6 +83,150 @@ const ContentImage = ({
       </div>
     );
   }
+  function Video() {
+    const [isModalOpen, toogleModal] = useState(false);
+    function Modal() {
+      return (
+        <div
+          style={{
+            zIndex: 100,
+            top: 0,
+            display: "flex",
+            flexDirection: "column",
+            transition: "all 200ms",
+            ...(isModalOpen
+              ? {
+                  opacity: 1,
+                  visibility: "visible"
+                }
+              : {
+                  opacity: 0,
+                  visibility: "hidden"
+                })
+          }}
+        >
+          {" "}
+          <div
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              backgroundColor: "#10234D",
+              opacity: 0.3,
+              zIndex: 100
+            }}
+          />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              position: "fixed",
+              top: "53%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              transition: "500ms opacity",
+              zIndex: 100,
+              width: "80%",
+              margin: "o auto",
+              height: "80%"
+            }}
+          >
+            <span
+              style={{
+                possition: "fixed",
+                textAlign: "right",
+                width: "110%",
+                color: "white",
+                fontSize: 25,
+                margin: "10px 10px 0px 0px"
+              }}
+              onClick={() => toogleModal(false)}
+            >
+              {" "}
+              <CancelIcon />
+            </span>
+            <div
+              style={{
+                position: "relative",
+                paddingBottom: "56.25%" /* 16:9 */,
+                paddingTop: 25,
+                height: 0
+              }}
+            >
+              <iframe
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%"
+                }}
+                id="ytplayer"
+                type="text/html"
+                src={video}
+                frameBorder="0"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      );
+    }
+    return (
+      <div
+        css={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center"
+        }}
+      >
+        <img
+          alt={image_alt}
+          src={image}
+          css={{
+            objectFit: "contain",
+            maxWidth: "100%",
+            height: "auto",
+            ":hover": {
+              transform: "scale(1.05)"
+            }
+          }}
+        />
+        <button
+          className="video-poster"
+          onClick={() => toogleModal(!isModalOpen)}
+          css={{
+            color: "#002b64",
+
+            marginTop: "12px",
+            fontSize: "14px",
+            border: "none",
+            padding: "4px 8px",
+            width: "25%",
+            margin: "10px auto",
+            cursior: "ponter",
+            lineHeight: "24px",
+            ":hover": {
+              backgroundColor: " rgba(29, 201, 202, 0.1 )",
+              transition: "color .15s,background-color .25s",
+              transitionTimingFunction: "ease",
+              borderRadius: "50px",
+              ".video-poster": {
+                transform: "scale(1.2)"
+              }
+            }
+          }}
+        >
+          {" "}
+          &#9654; Watch video
+        </button>
+        <Modal isOpen={isModalOpen} toogle={toogleModal} />
+      </div>
+    );
+  }
+
   function Content() {
     return (
       <div css={sectionStyles.item}>
@@ -103,7 +249,18 @@ const ContentImage = ({
       </div>
     );
   }
-  let items = [<Image key="image" />, <Content key="content" />];
+  let Media;
+  switch (true) {
+    case Boolean(video):
+      Media = Video;
+      break;
+    case Boolean(image):
+      Media = Image;
+      break;
+    default:
+      Media = null;
+  }
+  let items = [<Media key="media" />, <Content key="content" />];
   if (imagePosition === "BOTTOM") {
     items.reverse();
   }
