@@ -961,7 +961,7 @@ module.exports = [
         imagePosition: "BOTTOM",
         heading_da: "Pris",
         heading_en: "Price",
-        image: "/img/prisII.png",
+        image: "/img/pricing.png",
         image_alt_da: "Pris",
         image_alt_en: "Price",
         text_da:
