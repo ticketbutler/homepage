@@ -151,9 +151,8 @@ module.exports = [
         imagePosition: "RIGHT",
         heading_da: "Din succes er vores succes",
         heading_en: "We want you to have success",
-        image: "/img/robust-billetsystem.png",
-        image_alt_da: "Robust-billetsystem-knuckles",
-        image_alt_en: "Robust-ticketing-platform-knuckles",
+        video: "//youtube.com/embed/QILiHiTD3uc/",
+        image: "/img/konfetti-bred.png",
         text_da:
           "Ticketbutler er et online billetsystem pakket med features, som er udviklet til at gøre livet som arrangør nemmere. Dit brand er i fokus, du får gratis adgang til værdifuld data og dine gæster får en let og hurtig købsoplevelse.",
         text_en:
