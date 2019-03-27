@@ -137,7 +137,7 @@ const ContentImage = ({
               style={{
                 possition: "fixed",
                 textAlign: "right",
-                width: "110%",
+                width: "105%",
                 color: "white",
                 fontSize: 25,
                 margin: "10px 10px 0px 0px"
