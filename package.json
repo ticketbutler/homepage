@@ -44,6 +44,7 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^3.3.0",
     "styled-jsx": "^2.2.6",
+    "tb-components": "https://gitlab+deploy-token-43187:t1q4pxTPQYeiVzevvV-W@gitlab.com/ticketbutler/components.git#0.2.0",
     "typography": "^0.16.17"
   },
   "keywords": [

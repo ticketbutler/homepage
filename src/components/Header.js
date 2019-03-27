@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { withWindow } from "../components/helpers";
 import { Button } from "./elements/elements";
+import { Modal } from "./elements/modal";
 
 const Header = ({
   heading,
@@ -9,10 +10,12 @@ const Header = ({
   button_link,
   image,
   style = {},
-
+  video,
+  videoButton_text,
   featureHeader,
   window
 }) => {
+  const [isModalOpen, toogleModal] = useState(false);
   return (
     <header
       css={{
@@ -76,6 +79,39 @@ const Header = ({
             >
               {button_text}
             </Button>
+          )}
+        {videoButton_text &&
+          videoButton_text.length > 0 && (
+            <div>
+              <div
+                className="video-poster"
+                onClick={() => toogleModal(!isModalOpen)}
+                css={{
+                  color: "white",
+                  borderRadius: "50px",
+                  fontSize: "18px",
+                  border: "none",
+                  padding: "10px 20px",
+                  margin: "20px auto",
+                  cursor: "pointer",
+                  lineHeight: "24px"
+                }}
+              >
+                {" "}
+                <span
+                  css={{
+                    backgroundColor: "#1dc9cc",
+                    borderRadius: "50px",
+                    paddingLeft: "5px",
+                    paddingRight: "5px"
+                  }}
+                >
+                  &#9654;
+                </span>{" "}
+                {videoButton_text}
+              </div>
+              <Modal isOpen={isModalOpen} toogle={toogleModal} video={video} />
+            </div>
           )}
       </div>
 

@@ -138,6 +138,8 @@ module.exports = [
         button_link_en: "//you.ticketbutler.io/en/create/",
         button_text_da: "Opret dit første event",
         button_text_en: "Create your first event",
+        videoButton_text: "Watch video (90seconds)",
+        video: "//youtube.com/embed/tgbNymZ7vqY",
         heading_da: "Dit skræddersyede billetsystem",
         heading_en: "Your ticketing platform",
         image: "/img/splash-new.png",
