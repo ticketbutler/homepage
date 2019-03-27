@@ -6,6 +6,7 @@
     "@babel/preset-flow": "^7.0.0",
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
+    "@ticketbutler/components": "^0.2.3",
     "babel-eslint": "^10.0.1",
     "babel-plugin-styled-components": "^1.8.0",
     "babel-preset-react": "^6.24.1",
@@ -44,7 +45,6 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^3.3.0",
     "styled-jsx": "^2.2.6",
-    "tb-components": "https://gitlab+deploy-token-43187:t1q4pxTPQYeiVzevvV-W@gitlab.com/ticketbutler/components.git#0.2.0",
     "typography": "^0.16.17"
   },
   "keywords": [
