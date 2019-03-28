@@ -16,7 +16,6 @@ import NewsletterSubscription from "../components/newsletter_page";
 import ImagesList from "../components/images_list";
 import FeaturesNavigation from "../components/elements/feature_navigation";
 // import Success from "../pages/thanks";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const components: Array<{ Component: React.Component<*>, id: string }> = [
   { Component: Header, id: "header" },
