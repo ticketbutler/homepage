@@ -1,5 +1,5 @@
 import React from "react";
-import { Transition } from "react-transition-group";
+
 import { mq } from "../styles";
 
 function Testimonials({ items }) {
@@ -124,8 +124,8 @@ function Slider({
           return {
             ...state,
             // Go to the previous slide if it exists, otherwise go to last slide
-            currentIndex:
-              (state.currentIndex - 1 + items.length) % items.length,
+            currentSlideIndex:
+              (state.currentSlideIndex - 1 + items.length) % items.length,
             isPlaying: false
           };
         default:
@@ -151,189 +151,93 @@ function Slider({
     },
     [currentSlideIndex, isPlaying, playSpeed]
   );
+  let arrowStyles = {
+    color: "rgb(197, 208, 222)",
+    fontSize: "100px",
+    backgroundColor: "transparent",
+    border: "none"
+  };
+
   return (
     <div
       style={{
         height: 700,
-        position: "relative",
+
         width: "100%"
       }}
     >
+      <div
+        css={{
+          position: "absolute",
+          width: "100%",
+          display: "flex",
+          justifyContent: "space-between",
+          zIndex: 10
+        }}
+      >
+        <button
+          css={{
+            ...arrowStyles
+          }}
+          onClick={() => {
+            dispatch({ type: "PREVIOUS" });
+          }}
+        >
+          {" "}
+          &#8249;{" "}
+        </button>
+        <button
+          css={{
+            ...arrowStyles
+          }}
+          onClick={() => {
+            dispatch({ type: "NEXT" });
+          }}
+        >
+          {" "}
+          &#8250;{" "}
+        </button>
+      </div>
       {items.map((item, i) => {
+        const isNextSlide = (currentSlideIndex + 1) % items.length === i;
+        const isPreviousSlide =
+          (currentSlideIndex - 1 + items.length) % items.length;
+        const isCurrentSlide = currentSlideIndex === i;
         return (
-          <Transition
+          <div
             key={i}
-            in={i === currentSlideIndex}
-            timeout={transitionDuration}
+            css={[
+              {
+                minWidth: "100%",
+                height: "100%",
+                display: "flex",
+                justifyContent: "center",
+                position: "absolute",
+                top: 0,
+                left: 0,
+                transform: "translate(-100%)"
+              },
+              isNextSlide && {
+                transform: "translate(100%)"
+              },
+              isCurrentSlide
+                ? {
+                    transform: "translate(0)"
+                  }
+                : {
+                    visibility: "hidden"
+                  },
+              (isPreviousSlide || isNextSlide || isCurrentSlide) && {
+                transition: transitionDuration + "ms all"
+              }
+            ]}
           >
-            {state => {
-              let transitionStyles = {
-                entering: {
-                  transform: "translateX(0%)"
-                },
-                entered: {
-                  transform: "translateX(0)"
-                },
-                exiting: {
-                  transform: "translateX(-100%)",
-                  opacity: 0
-                },
-                exited: {
-                  transform: "translateX(100%)",
-                  opacity: 0
-                }
-              };
-              return (
-                <div
-                  style={{
-                    minWidth: "100%",
-                    height: "100%",
-                    display: "flex",
-                    justifyContent: "center",
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    transition: transitionDuration + "ms all",
-                    ...transitionStyles[state]
-                  }}
-                >
-                  <div>
-                    <button
-                      onClick={() => {
-                        dispatch({ type: "NEXT" });
-                      }}
-                    >
-                      {" "}
-                      next{" "}
-                    </button>
-                    <button
-                      onClick={() => {
-                        dispatch({ type: "PREVIOUS" });
-                      }}
-                    >
-                      {" "}
-                      prev{" "}
-                    </button>
-                  </div>
-                  {item}
-                </div>
-              );
-            }}
-          </Transition>
+            {item}
+          </div>
         );
       })}
     </div>
   );
 }
-
-// const Slider_section = ({ items }) => {
-//   let slides = items.map((item, index) => (
-//     <div
-//       key={index}
-//       css={{
-//         width: "100%",
-//         height: "100%",
-//         padding: "80px 0",
-//         backgroundColor: "rgb(246, 251, 255)"
-//       }}
-//     >
-//       <img
-//         css={{
-//           display: "block",
-//           width: "200px",
-//           height: "200px",
-//           borderRadius: "50%",
-//           objectFit: "cover",
-//           marginBottom: "40px",
-//           margin: "0 auto"
-//         }}
-//         src={item.image}
-//         style={{ objectFit: "cover" }}
-//       />
-//       <p
-//         css={{
-//           display: "block",
-//           marginLeft: "50%",
-//           transform: "translateX(-50%)",
-//           width: "769px;	color: #868E99",
-//           fontFamily: "Montserrat",
-//           fontSize: "24px",
-//           lineHeight: "38px",
-//           textAlign: "justify"
-//         }}
-//       >
-//         {item.text}
-//       </p>
-//       <span
-//         css={{
-//           display: "block",
-//           marginLeft: "50%",
-//           transform: "translateX(-50%)",
-//           height: "29px;	width: 500px",
-//           color: "#333F52",
-//           fontFamily: "Hind",
-//           fontSize: "18px",
-//           fontWeight: "bold",
-//           lineHeight: "29px",
-//           textAlign: "center"
-//         }}
-//       >
-//         {item.about}
-//       </span>
-//       <img
-//         css={{
-//           display: "block",
-//           textAlign: "center",
-//           fontSize: "25px",
-//           opacity: ".7",
-//           margin: " 0 auto",
-//           marginTop: "30px",
-//           marginBottom: "20px",
-//           width: "200px"
-//         }}
-//         src={item.logo}
-//       />
-//     </div>
-//   ));
-//   return (
-//     <section
-//       css={{
-//         padding: "100px 0",
-//         width: "90%",
-//         margin: "0 auto",
-//         height: "850px",
-//         position: "relative",
-//         marginBottom: "50px",
-//         marginTop: "150px"
-//       }}
-//     >
-//       <img
-//         css={{
-//           position: "absolute",
-//           width: "300px",
-//           left: "10%",
-//           top: "-20px",
-//           zIndex: "100",
-//           opacity: 1
-//         }}
-//         src={require("../img/quote.png")}
-//       />
-//       <Slider
-//         infinite="true"
-//         dots="true"
-//         slidesToShow="1"
-//         slidesToScroll=" 1"
-//         nextArrow={<div css={{ backgroundColor: "grey" }}>></div>}
-//         prevArrow={<div>></div>}
-//         speed="500"
-//         swipeToSlide="true"
-//         cssEase="linear"
-//       >
-//         {" "}
-//         {slides}{" "}
-//       </Slider>
-//     </section>
-//   );
-// };
 
 export default Testimonials;
