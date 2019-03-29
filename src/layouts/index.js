@@ -175,7 +175,8 @@ export const Layout = ({
       src="//js.hs-scripts.com/3835323.js"
     />
 
-    <script type="text/javascript">
+    <script
+      type="text/javascript"
       dangerouslySetInnerHTML={{
         __html: `
  _linkedin_partner_id = "975602";
@@ -188,7 +189,7 @@ export const Layout = ({
  b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
  s.parentNode.insertBefore(b, s);})();`
       }}
-    </script>
+    />
     <noscript>
       <img
         height="1"
