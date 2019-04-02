@@ -44,6 +44,9 @@ function Testimonials({ items }) {
           textAlign: "justify",
           [mq(900)]: {
             fontSize: "15px"
+          },
+          [mq(400)]: {
+            lineHeight: "25px"
           }
         }}
       >
@@ -54,7 +57,7 @@ function Testimonials({ items }) {
           display: "block",
           marginLeft: "50%",
           transform: "translateX(-50%)",
-          height: "29px",
+
           width: "100%",
           maxWidth: "500px",
           color: "#333F52",
@@ -179,8 +182,8 @@ function Slider({
         height: "800px",
         width: "100%",
         position: "relative",
-        [mq(400)]: {
-          height: "1000px"
+        [mq(500)]: {
+          height: "900px"
         }
       }}
     >
@@ -231,8 +234,8 @@ function Slider({
           display: "flex",
           justifyContent: "center",
           zIndex: 10,
-          top: "100%",
-          transform: "translateY(-100%)"
+          top: "95%",
+          transform: "translateY(-95%)"
         }}
       >
         {items.map((item, index) => {
