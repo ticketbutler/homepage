@@ -194,7 +194,7 @@ export const Layout = ({
       <img
         height="1"
         width="1"
-        style="display:none;"
+        style={{ display: "none" }}
         alt=""
         src="https://dc.ads.linkedin.com/collect/?pid=975602&fmt=gif"
       />
