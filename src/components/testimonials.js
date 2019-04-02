@@ -9,7 +9,11 @@ function Testimonials({ items }) {
       css={{
         width: "100%",
         height: "100%",
-        padding: "80px 0"
+        padding: "80px 0",
+        [mq(900)]: {
+          marginLeft: "10%",
+          marginRight: "10%"
+        }
       }}
     >
       <img
@@ -37,7 +41,10 @@ function Testimonials({ items }) {
           fontFamily: "Montserrat",
           fontSize: "24px",
           lineHeight: "38px",
-          textAlign: "justify"
+          textAlign: "justify",
+          [mq(900)]: {
+            fontSize: "15px"
+          }
         }}
       >
         {item.text}
@@ -47,7 +54,9 @@ function Testimonials({ items }) {
           display: "block",
           marginLeft: "50%",
           transform: "translateX(-50%)",
-          height: "29px;	width: 500px",
+          height: "29px",
+          width: "100%",
+          maxWidth: "500px",
           color: "#333F52",
           fontFamily: "Hind",
           fontSize: "18px",
@@ -128,6 +137,12 @@ function Slider({
               (state.currentSlideIndex - 1 + items.length) % items.length,
             isPlaying: false
           };
+        case "GOTO":
+          return {
+            ...state,
+            currentSlideIndex: action.index,
+            isPlaying: false
+          };
         default:
           return state;
       }
@@ -160,10 +175,13 @@ function Slider({
 
   return (
     <div
-      style={{
-        height: 700,
-
-        width: "100%"
+      css={{
+        height: "800px",
+        width: "100%",
+        position: "relative",
+        [mq(400)]: {
+          height: "1000px"
+        }
       }}
     >
       <div
@@ -172,7 +190,15 @@ function Slider({
           width: "100%",
           display: "flex",
           justifyContent: "space-between",
-          zIndex: 10
+          zIndex: 10,
+          top: "50%",
+          transform: "translateY(-50%)",
+          paddingRight: "5%",
+          paddingLeft: "5%",
+          [mq(900)]: {
+            paddingRight: "0px",
+            paddingLeft: "0px"
+          }
         }}
       >
         <button
@@ -198,11 +224,45 @@ function Slider({
           &#8250;{" "}
         </button>
       </div>
+      <div
+        css={{
+          position: "absolute",
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          zIndex: 10,
+          top: "100%",
+          transform: "translateY(-100%)"
+        }}
+      >
+        {items.map((item, index) => {
+          return (
+            <div
+              css={{
+                height: "10px",
+                width: "10px",
+                borderRadius: "50%",
+                display: "inline-block",
+                margin: "10px",
+                transition: transitionDuration + "ms all",
+                ...(index === currentSlideIndex
+                  ? { backgroundColor: "#356be9" }
+                  : { backgroundColor: "#bbb" })
+              }}
+              key={index}
+              onClick={() => {
+                dispatch({ type: "GOTO", index });
+              }}
+            />
+          );
+        })}
+      </div>
       {items.map((item, i) => {
         const isNextSlide = (currentSlideIndex + 1) % items.length === i;
         const isPreviousSlide =
-          (currentSlideIndex - 1 + items.length) % items.length;
+          (currentSlideIndex - 1 + items.length) % items.length === i;
         const isCurrentSlide = currentSlideIndex === i;
+
         return (
           <div
             key={i}
