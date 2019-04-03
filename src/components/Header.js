@@ -1,18 +1,9 @@
 import React from "react";
 import { withWindow } from "../components/helpers";
 import { Button } from "./elements/elements";
+import { mq } from "../styles";
 
-const Header = ({
-  heading,
-  text,
-  button_text,
-  button_link,
-  image,
-  style = {},
-
-  featureHeader,
-  window
-}) => {
+const Header = ({ heading, text, button_text, button_link, image }) => {
   return (
     <header
       css={{
@@ -30,29 +21,43 @@ const Header = ({
       }}
     >
       <div
-        className="header_content"
-        style={{
+        css={{
           display: "inline-block",
           width: "100%",
+          padding: "100px 110px",
           textAlign: "center",
-          position: "relative"
+          position: "relative",
+          [mq(600)]: {
+            padding: "150px 10px"
+          }
         }}
       >
         <h1
-          style={{
+          css={{
             margin: "auto",
             display: "block",
             color: "#ffffff",
             fontFamily: "Hind",
             fontWeight: "bold",
             textAlign: "center",
-            transition: "all 0.3s"
+            transition: "all 0.3s",
+            width: "100%",
+            maxWidth: "900px",
+            fontSize: "75px",
+            lineHeight: "75px",
+            [mq(1020)]: {
+              fontSize: "50px"
+            },
+            [mq(600)]: {
+              fontSize: "30px",
+              lineHeight: "40px"
+            }
           }}
         >
           {heading}
         </h1>
         <p
-          style={{
+          css={{
             margin: "auto",
             marginBottom: "37px",
             marginTop: "30px",
@@ -60,139 +65,26 @@ const Header = ({
             color: "#ffffff",
             fontFamily: "Montserrat",
             textAlign: "center",
-            transition: "all 0.3s"
+            transition: "all 0.3s",
+            fontSize: "25px",
+            lineHeight: "35px",
+            width: "100%",
+            maxWidth: "772px",
+            [mq(750)]: {
+              fontSize: "15px",
+              marginTop: "0px"
+            }
           }}
         >
           {text}
         </p>
-        {button_text &&
-          button_text.length > 0 && (
-            <Button
-              to={button_link}
-              style={{
-                margin: "0 auto",
-                maxWidth: 300
-              }}
-            >
-              {button_text}
-            </Button>
-          )}
+        <div css={{ display: "flex", justifyContent: "center" }}>
+          {button_text &&
+            button_text.length > 0 && (
+              <Button to={button_link}>{button_text}</Button>
+            )}
+        </div>
       </div>
-
-      <style jsx>{`
-
-        div#navActive_back.NavbarClicked-background {
-          visibility: visible;
-          opacity: 0.6;
-        }
-
-      
-        
-
-        header div.header_content {
-          padding: 100px 110px;
-        }
-        header div.header_content h1 {
-          width: 900px;
-
-          font-size: 75px;
-          line-height: 75px;
-        }
-        header div.header_content p {
-          font-size: 25px;
-          line-height: 35px;
-          width: 772px;
-          
-        }
-
-
-        
-    @media (max-width: 1300px) {
-      
-        header div.header_content p {
-          width: 100%;
-
-        }
-      }
-  
-    @media (max-width: 1080px) {
-      header div.header_content{
-        padding: 60px 110px !important;
-      }
-      header div.header_content h1 {
-        width: 100% ;
-        font-size: 55px ;
-        line-height: 60px ;
-      }
-      header div.header_content p {
-        font-size: 22px ;
-      }
-    }
-  
-    @media (max-width: 768px) {
-      header{
-        padding: 00px 
-      }
-
-      header div.header_content{
-        padding: 60px 90px !important;
-        margin-top: 80px !important;
-      }
-  
-      header div.header_content h1{
-        font-size: 45px ;
-        line-height: 50px ;
-       
-      }
-      header div.header_content p{
-        font-size: 20px ;
-      }
-  
-    }
-  
-    @media (max-width: 600px) {
-      header{
-        padding: 0px ;
-      }
-  
-      header div.header_content{
-        padding: 60px 40px !important;
-      }
-
-      header div.header_content h1{
-        font-size: 35px ;
-        line-height: 40px ;
-        margin-bottom: 20px ;
-      }
-      header div.header_content p{
-        font-size: 16px !important;
-          line-height: 28px;
-          margin-bottom: 20px ;
-      }
-   
-  
-    @media (max-width: 376px) {
-      header{
-        padding: 30px 20px 
-      }
-
-      header div.header_content{
-        padding: 60px 00px   
-      }
-  
-      header div.header_content h1{
-        font-size: 25px ;
-        line-height: 28px ;
-      }
-      header div.header_content p{
-        font-size: 14px ;
-        line-height: 20px ;
-
-      }
-    
-      
-    
-      `}</style>
     </header>
   );
 };
