@@ -113,13 +113,13 @@ const Footer = ({ linkLists }) => (
           ))}
         </div>
       ))}
-      <div css={{ fontSize: "18px", alignSelf: "flex-end" }}>
-        Made with ❤️ in Copenhagen
-        <br />
-        <a href="mailto:hello@ticketbutler.io" css={{ color: "#333f52" }}>
-          hello@ticketbutler.io
-        </a>
-      </div>
+    </div>
+    <div css={{ fontSize: "18px", textAlign: "center", marginTop: "2%" }}>
+      Made with ❤️ in Copenhagen
+      <br />
+      <a href="mailto:hello@ticketbutler.io" css={{ color: "#333f52" }}>
+        hello@ticketbutler.io
+      </a>
     </div>
   </footer>
 );
