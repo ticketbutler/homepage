@@ -16,7 +16,7 @@ export function makeSectionStyles(itemWidth, imagePosition) {
   let mediaQuery = mq(breakpoint);
   let textStyles = [
     imagePosition === "BOTTOM" && { color: "white", textAlign: "center" },
-    imagePosition === "LEFT" && { textAlign: "right" },
+    imagePosition === "LEFT" && { textAlign: "justify" },
     {
       [mediaQuery]: {
         textAlign: "center"
@@ -82,10 +82,12 @@ export function makeSectionStyles(itemWidth, imagePosition) {
     ],
     text: [
       {
-        margin: "15px 0",
+        margin: "15px 10px",
+        textAlign: "justify",
         fontSize: "24px",
         lineHeight: 1.5,
         color: "#6c7582",
+        marginBottom: "20px",
         [mediaQuery]: {
           fontSize: "18px",
           lineHeight: 1.6
