@@ -53,8 +53,9 @@ class Contact extends React.Component {
         css={{
           padding: "0px",
           width: "100%",
-          textAlign: "center",
-          marginBottom: "0px"
+          height: "auto",
+          marginBottom: "0px",
+          boxSizing: "border-box"
         }}
       >
         <div
@@ -185,6 +186,7 @@ class Contact extends React.Component {
               <Button contactButton="true" type="submit" id="contact_btn">
                 {this.props.button_text}
               </Button>
+
               <div className="clear-fix" />
             </form>
           )}

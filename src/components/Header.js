@@ -24,7 +24,7 @@ const Header = ({ heading, text, button_text, button_link, image }) => {
         css={{
           display: "inline-block",
           width: "100%",
-          padding: "100px 110px",
+          padding: "100px 0px",
           textAlign: "center",
           position: "relative",
           [mq(600)]: {

@@ -95,7 +95,8 @@ class NewsletterSubscribe extends React.Component {
                     border: "1px solid #979797",
                     borderRadius: "49px",
                     display: "inline",
-                    paddingLeft: "20px"
+                    paddingLeft: "20px",
+                    fontSize: "15px"
                   }}
                   name="email"
                   type="email"

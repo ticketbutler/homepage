@@ -1,7 +1,7 @@
 //@flow
 
 import * as React from "react";
-import { Link, navigate } from "gatsby";
+import { navigate } from "gatsby";
 import { withWindow } from "../helpers";
 
 class FeaturesNavigation extends React.Component<
