@@ -132,12 +132,12 @@ class PriceCalculator extends React.Component {
     return (
       <div
         className="rectangle"
-        style={{
+        css={{
           width: "100%",
           background: "linear-gradient(-125.21deg, #326de9  0%, #7e52e8 100%)",
           transform: "skew(0deg,-2deg)",
           margin: 0,
-          padding: 0,
+          padding: "50px",
           marginBottom: this.props.window.width > 800 ? "400px" : "100px",
           ...(this.props.window.width > 800
             ? {

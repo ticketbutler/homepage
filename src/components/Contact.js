@@ -55,20 +55,19 @@ class Contact extends React.Component {
           width: "100%",
           height: "auto",
           marginBottom: "0px",
-          boxSizing: "border-box"
+          display: "flex",
+          flexWrap: "wrap"
         }}
       >
         <div
           css={{
-            width: "50%",
             height: "100%",
-            display: "inline",
-            float: "left",
+
             padding: "80px",
             paddingTop: "100px",
-            [mq(800)]: {
-              width: "100%"
-            },
+            flex: 1,
+            minWidth: "450px",
+            width: "100%",
             [mq(500)]: {
               padding: "20px"
             }
@@ -76,7 +75,6 @@ class Contact extends React.Component {
         >
           <h1
             css={{
-              float: "left",
               marginBottom: "50px",
               fontSize: "50px",
               [mq(500)]: {
@@ -158,7 +156,6 @@ class Contact extends React.Component {
                 <li
                   css={{
                     display: "block",
-                    float: "left",
                     width: "100%",
                     marginLeft: "50%",
                     transform: "translateX(-50%)"
@@ -186,8 +183,6 @@ class Contact extends React.Component {
               <Button contactButton="true" type="submit" id="contact_btn">
                 {this.props.button_text}
               </Button>
-
-              <div className="clear-fix" />
             </form>
           )}
         </div>
@@ -195,19 +190,15 @@ class Contact extends React.Component {
           css={{
             display: "flex",
             justifyContent: "center",
-            width: "50%",
+            flex: 1,
             height: "660px",
-            padding: "110px",
-            float: "right",
+            padding: "80px",
             background:
               "linear-gradient(to right, rgba(50, 109, 233, .85) , rgba(126, 82, 232, .85)), url(/img/kontaktmin.png) no-repeat -150px ",
             color: "#FFF",
             backgroundSize: "cover",
             fontSize: "20px",
-            fontWeight: 500,
-            [mq(800)]: {
-              width: "100%"
-            }
+            fontWeight: 500
           }}
         >
           <ul css={{ listStyleType: "none" }}>
@@ -235,8 +226,6 @@ class Contact extends React.Component {
             </li>
           </ul>
         </div>
-
-        <div className="clear-fix" />
       </section>
     );
   }
