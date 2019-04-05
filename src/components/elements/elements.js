@@ -39,6 +39,7 @@ export class Button extends React.Component {
             padding: "10px 15px",
             fontSize: "14px"
           },
+          ...(this.props.outline && { padding: "10px 20px" }),
 
           ...(this.props.outline && !this.state.hovered
             ? {

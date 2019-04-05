@@ -435,8 +435,7 @@ module.exports = [
       testimonials,
       partnersSection,
       newsletterSubscription,
-
-      contact
+            contact
     ]
   },
 
@@ -969,9 +968,7 @@ module.exports = [
         text_en:
           "Making this service cost-effective for you is in our best interest. Therefore, you only pay a DKK 2,000 start-up fee + 5% per sale via advertisements. The 5% is our guarantee that we will put an effort into boosting your ticket sale."
       },
-
       newsletterSubscription,
-
       contact
     ]
   }
