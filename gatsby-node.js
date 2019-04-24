@@ -35,7 +35,7 @@ exports.createPages = ({ actions }) => {
     };
     let localMetaData = normalizeTranslatedKeys(metaData, local.id);
     pages.forEach(page => {
-      localPage = {
+      let localPage = {
         ...normalizeTranslatedKeys(page, local.id),
         sections: page.sections.map(section => {
           section = {
