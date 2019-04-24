@@ -1,438 +1,306 @@
 import React from "react";
-import styled from "styled-components";
-import { Carousel } from "react-responsive-carousel";
 
-const Section = styled.section`
-  padding: 100px 0;
-  width: 100%;
-  height: 850px;
-  position: relative;
+import { mq } from "../styles";
 
-  margin-bottom: 50px;
-  margin-top: 150px;
-
-  @media (max-width: 1080px) {
-    padding: 100px 0;
-  }
-  @media (max-width: 768px) {
-    padding: 100px 0;
-  }
-
-  @media (max-width: 600px) {
-    padding: 150px 0;
-  }
-
-  @media (max-width: 376px) {
-    padding: 120px 0px;
-  }
-`;
-const Content = styled.div`
-  width: 100%;
-
-  .carousel .thumbs{
-    display:none;
-  }
-  .carousel .carousel-status{
-    display:none;
-  }
-  .carousel .control-arrow, .carousel.carousel-slider .control-arrow{
-  //  background-color: #ccc;
-  }
-
-  .carousel .control-arrow, .carousel.carousel-slider .control-arrow{
-    width: 60px;
-    height: 60px;
-    top: 50%;
-    transform:translateY(-50%);
-
-  }
-
-  .carousel .control-arrow.control-next, .carousel.carousel-slider .control-arrow.control-next{
-    
-    right: 100px;
-    z-index: 1001;
-    &:hover {
-      background-color: transparent;
-    }
-    @media (max-width: 1080px) {
-      right: 50px;
-    }
-    @media (max-width: 768px) {
-      right: 30px;
-    }
-    @media (max-width: 500px) {
-      right: 10px;
-    }
-    @media (max-width: 400px) {
-      right: -5px;
-    }
-
-  }
-
-  .carousel .control-arrow.control-prev, .carousel.carousel-slider .control-arrow.control-prev{
-    left: 100px;
-    z-index: 1001;
-    &:hover {
-      background-color: transparent;
-    }
-    @media (max-width: 1080px) {
-      left: 50px;
-    }
-    @media (max-width: 768px) {
-      left: 30px;
-    }
-    @media (max-width: 500px) {
-      left: 10px;
-    }
-    @media (max-width: 400px) {
-      left: -5px;
-    }
-
-  }
-
-
-.carousel .control-arrow.control-prev::before, .carousel.carousel-slider .control-arrow.control-prev::before{
-  color: #C5D0DE;
-  content: "<";
-  font-size: 60px;
-  z-index: 1001;
-  border:none;
-  @media (max-width: 768px) {
-    font-size: 50px;
- }
- @media (max-width: 500px) {
-     font-size: 30px;
- }
- @media (max-width: 400px) {
-     font-size: 25px;
- }
- }
-
-.carousel .control-arrow::before, .carousel.carousel-slider .control-arrow::before{
-    color: #C5D0DE;
-    content: ">";
-    font-size: 60px;
-    z-index: 1001;
-    border:none;
-    @media (max-width: 768px) {
-      font-size: 50px;
-   }
-   @media (max-width: 500px) {
-       font-size: 30px;
-   }
-   @media (max-width: 400px) {
-       font-size: 25px;
-   }
-   }
-
-   .carousel .control-dots .dot {
-     background: lightblue;
-     box-shadow: 1px 1px 2px rgba(0,0,0,0);
-   }
-  div{
-      div.slider{
-        width: 100%;
-        height: 100%;
-        img.quote{
-          position: absolute;
-          width: 400px;
-          left: 10%;
-          top: -20px;
-          font-size: 1000px;
-          z-index: 100;
-          opacity: 1;  
-          position: none;
-        } 
-        div.item{
-            width: 100%;
-            height: 100%;
-            padding: 80px 0;
-            
-            background-color:rgb(246, 251, 255);
-            
-            
-            p{
-                display:block;
-                margin-left: 50%;
-              transform: translateX(-50%);
-              width: 769px;	color: #868E99;	font-family: Montserrat;	font-size: 24px;	line-height: 38px;	text-align: center;
-            }
-  
-          img.pic {
-              displa: block;
-              width: 200px;
-              height:200px;
-              border-radius:50%;
-              object-fit: cover
-              // margin-left: 50%;
-              // transform: translateX(-50%);
-             
-              margin-bottom: 40px;
+function Testimonials({ items }) {
+  let slides = items.map((item, index) => (
+    <div
+      key={index}
+      css={{
+        width: "100%",
+        height: "100%",
+        padding: "80px 0",
+        [mq(900)]: {
+          marginLeft: "10%",
+          marginRight: "10%"
+        }
+      }}
+    >
+      <img
+        css={{
+          display: "block",
+          width: "200px",
+          height: "200px",
+          borderRadius: "50%",
+          objectFit: "cover",
+          marginBottom: "40px",
+          margin: "0 auto"
+        }}
+        src={item.image}
+        style={{ objectFit: "cover" }}
+      />
+      <p
+        css={{
+          display: "block",
+          marginLeft: "50%",
+          padding: "20px",
+          transform: "translateX(-50%)",
+          maxWidth: "769px",
+          width: "100%",
+          color: "#868E99",
+          fontFamily: "Montserrat",
+          fontSize: "24px",
+          lineHeight: "38px",
+          textAlign: "justify",
+          [mq(900)]: {
+            fontSize: "15px"
+          },
+          [mq(400)]: {
+            lineHeight: "25px"
           }
-  
-          span.about{
-                  display:block;
-                  margin-left: 50%;
-              transform: translateX(-50%);
-                  height: 29px;	width: 500px;	color: #333F52;	font-family: Hind;	font-size: 18px;	font-weight: bold;	line-height: 29px;	text-align: center;
-          }
-        
-          img.logo{
-              display: block;
-              text-align: center;
-              font-size: 25px;
-              opacity: .7;
-              margin: 0 auto;
-              margin-top: 30px;
-              margin-bottom: 20px;
-              width: 200px;
-              
-          }
-        }
-      }
-  }
-      
+        }}
+      >
+        {item.text}
+      </p>
+      <span
+        css={{
+          display: "block",
+          marginLeft: "50%",
+          transform: "translateX(-50%)",
 
-  @media (max-width: 1680px) {
-    div{
-      div.slider{
-        img.quote{
-          width: 400px;
-          left: 8%;
-          top: -20px;
-        } 
-        div.item{
-        }
-    }
-  }
-
-  @media (max-width: 1680px) {
-    div{
-      div.slider{
-        img.quote{
-          width: 300px;
-          left: 8%;
-          top: 20px;
-        } 
-        div.item{
-        }
-    }
-  }
-
-  @media (max-width: 1080px) {
-    div{
-      div.slider{
-        img.quote{
-          width: 200px;
-          left: 8%;
-          top: 50px;
-        } 
-        div.item{
-          padding:76px 150px;
-          p{
-        
-          height: auto;	
-          width: 100%;	
-          
-            font-size: 22px;	
-            
-        }
-
-      img.pic {
-        
-          width: 200px;
-          height: 200px;
-         
-         
-         
-          margin-bottom: 40px;
-      }
-
-      span.about{
-              display:block;
-              margin-left: 50%;
-          transform: translateX(-50%);
-              height: 29px;	width: 500px;	color: #333F52;	font-family: Hind;	font-size: 18px;	font-weight: bold;	line-height: 29px;	text-align: center;
-      }
-    
-      img.logo{
-          display: block;
-          text-align: center;
-          font-size: 25px;
-          opacity: .7;
-          margin: 0 auto;
-          margin-top: 30px;
-          margin-bottom: 20px;
-          width: 200px;
-          
-      }
-        }
-    }
-  }
-
-  @media (max-width: 768px) {
-
-
-    div{
-      div.slider{
-        img.quote{
-          width: 100px;
-         
-          left: 8%;
-          top: 70px;
-        } 
-        div.item{
-          padding:76px 100px;
-
-          p{
-            font-size: 18px;
-            line-height: 25px;	
-          }
-  
-        img.pic {
-          
-          width: 150px;
-          height: 150px;
-           margin-bottom: 40px;
-        }
-  
-        span.about{
-          font-size: 15px;	
-        }
-        }
-    }
-  }
-  @media (max-width: 600px) {
-    div{
-      div.slider{
-        img.quote{
-          width: 100px;
-         
-          left: 8%;
-          top: 120px;
-        } }}
-  }
-  @media (max-width: 500px) {
-
-
-    div{
-      div.slider{
-        img.quote{
-          width: 100px;
-         
-          left: 8%;
-          top: 120px;
-        } 
-        div.item{
-          padding:40px 80px;
-
-          p{
-            font-size: 16px;
-            line-height: 25px;	 
-          }
-  
-        img.pic {
-          
-            width: 130px;
-            height: 130px;
-            margin-bottom: 40px;
-        }
-  
-        span.about{
-          font-size: 15px;	
-        }
-        }
-    }
-  }
-  @media (max-width: 375px) {
-
-
-    div{
-      div.slider{
-        img.quote{
-          width: 100px;
-         
-          left: 8%;
-          top: 90px;
-        } 
-        div.item{
-          padding:40px 50px;
-
-          p{
-            font-size: 16px;
-            line-height: 25px;	 
-          }
-  
-        img.pic {
-          
-            width: 110px;
-            height: 110px;
-            margin-bottom: 40px;
-        }
-  
-        span.about{
-          font-size: 15px;
-          width: 200px;
-          line-height: 20px;	
-        }
-        }
-    }
-  }
-`;
-
-const Slider_section = ({ items }) => {
+          width: "100%",
+          maxWidth: "500px",
+          color: "#333F52",
+          fontFamily: "Hind",
+          fontSize: "18px",
+          fontWeight: "bold",
+          lineHeight: "29px",
+          textAlign: "center"
+        }}
+      >
+        {item.about}
+      </span>
+      <img
+        css={{
+          display: "block",
+          textAlign: "center",
+          fontSize: "25px",
+          opacity: ".7",
+          margin: " 0 auto",
+          marginTop: "30px",
+          marginBottom: "20px",
+          width: "200px"
+        }}
+        src={item.logo}
+      />
+    </div>
+  ));
   return (
-    <Section className="container">
-      <Content>
-        <div className="slider_wrap">
-          <div className="slider">
-            <img className="quote" src={require("../img/quote.png")} />
-
-            <Carousel
-              showArrows="true"
-              useKeyboardArrows="true"
-              Responsive
-              autoPlay
-              swipeable
-              emulateTouch
-              interval="7000"
-              // stopOnHover
-              infiniteLoop
-              transitionTime="500"
-            >
-              {items.map(item => (
-                <div key={item} className="item">
-                  <img
-                    className="pic"
-                    src={item.image}
-                    style={{ objectFit: "cover" }}
-                  />
-                  <p>{item.text}</p>
-                  <span className="about">{item.about}</span>
-                  <img className="logo" src={item.logo} />
-                </div>
-              ))}
-            </Carousel>
-          </div>
-        </div>
-      </Content>
-      <div className="clear-fix" />
-
-      <style jsx>{`
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-
-        .clear-fix {
-          clear: both;
-        }
-        @import "~slick-carousel/slick/slick.css";
-        @import "~slick-carousel/slick/slick-theme.css";
-      `}</style>
-    </Section>
+    <div
+      css={{
+        backgroundColor: "rgb(246, 251, 255)",
+        position: "relative"
+      }}
+    >
+      <img
+        css={{
+          position: "absolute",
+          width: "300px",
+          left: "10%",
+          top: "-100px",
+          zIndex: "100",
+          opacity: 1,
+          [mq(1200)]: {
+            width: "250px"
+          },
+          [mq(900)]: {
+            width: "200px"
+          }
+        }}
+        src={require("../img/quote.png")}
+      />
+      <Slider items={slides} autoPlay={true} playSpeed={6000} />
+    </div>
   );
-};
+}
 
-export default Slider_section;
+// TODO: Move this to a shareable place when it needs to be used again
+function Slider({
+  items,
+  autoPlay = false,
+  playSpeed = 0,
+  transitionDuration = 2000
+}) {
+  const [{ isPlaying, currentSlideIndex }, dispatch] = React.useReducer(
+    (state, action) => {
+      switch (action.type) {
+        case "NEXT":
+        case "PROGRESS":
+          return {
+            ...state,
+            // Go to the next slide if it exists, otherwise go to first slide
+            currentSlideIndex: (state.currentSlideIndex + 1) % items.length,
+            isPlaying: action.type === "PROGRESS"
+          };
+        case "PREVIOUS":
+          return {
+            ...state,
+            // Go to the previous slide if it exists, otherwise go to last slide
+            currentSlideIndex:
+              (state.currentSlideIndex - 1 + items.length) % items.length,
+            isPlaying: false
+          };
+        case "GOTO":
+          return {
+            ...state,
+            currentSlideIndex: action.index,
+            isPlaying: false
+          };
+        default:
+          return state;
+      }
+    },
+    {
+      currentSlideIndex: 0,
+      isPlaying: autoPlay
+    }
+  );
+  React.useEffect(
+    () => {
+      let switchTimeout;
+      if (isPlaying) {
+        switchTimeout = setTimeout(() => {
+          dispatch({ type: "PROGRESS" });
+        }, playSpeed);
+      }
+      return () => {
+        clearInterval(switchTimeout);
+      };
+    },
+    [currentSlideIndex, isPlaying, playSpeed]
+  );
+  let arrowStyles = {
+    color: "rgb(197, 208, 222)",
+    fontSize: "100px",
+    backgroundColor: "transparent",
+    border: "none"
+  };
+
+  return (
+    <div
+      css={{
+        height: "800px",
+        width: "100%",
+        position: "relative",
+        [mq(500)]: {
+          height: "900px"
+        }
+      }}
+    >
+      <div
+        css={{
+          position: "absolute",
+          width: "100%",
+          display: "flex",
+          justifyContent: "space-between",
+          zIndex: 10,
+          top: "50%",
+          transform: "translateY(-50%)",
+          paddingRight: "5%",
+          paddingLeft: "5%",
+          [mq(900)]: {
+            paddingRight: "0px",
+            paddingLeft: "0px"
+          }
+        }}
+      >
+        <button
+          css={{
+            ...arrowStyles
+          }}
+          onClick={() => {
+            dispatch({ type: "PREVIOUS" });
+          }}
+        >
+          {" "}
+          &#8249;{" "}
+        </button>
+        <button
+          css={{
+            ...arrowStyles
+          }}
+          onClick={() => {
+            dispatch({ type: "NEXT" });
+          }}
+        >
+          {" "}
+          &#8250;{" "}
+        </button>
+      </div>
+      <div
+        css={{
+          position: "absolute",
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          zIndex: 10,
+          top: "95%",
+          transform: "translateY(-95%)"
+        }}
+      >
+        {items.map((item, index) => {
+          return (
+            <div
+              css={{
+                height: "10px",
+                width: "10px",
+                borderRadius: "50%",
+                display: "inline-block",
+                margin: "10px",
+                transition: transitionDuration + "ms all",
+                ...(index === currentSlideIndex
+                  ? { backgroundColor: "#356be9" }
+                  : { backgroundColor: "#bbb" })
+              }}
+              key={index}
+              onClick={() => {
+                dispatch({ type: "GOTO", index });
+              }}
+            />
+          );
+        })}
+      </div>
+      {items.map((item, i) => {
+        const isNextSlide = (currentSlideIndex + 1) % items.length === i;
+        const isPreviousSlide =
+          (currentSlideIndex - 1 + items.length) % items.length === i;
+        const isCurrentSlide = currentSlideIndex === i;
+
+        return (
+          <div
+            key={i}
+            css={[
+              {
+                minWidth: "100%",
+                height: "100%",
+                display: "flex",
+                justifyContent: "center",
+                position: "absolute",
+                top: 0,
+                left: 0,
+                transform: "translate(-100%)"
+              },
+              isNextSlide && {
+                transform: "translate(100%)"
+              },
+              isCurrentSlide
+                ? {
+                    transform: "translate(0)"
+                  }
+                : {
+                    visibility: "hidden"
+                  },
+              (isPreviousSlide || isNextSlide || isCurrentSlide) && {
+                transition: transitionDuration + "ms all"
+              }
+            ]}
+          >
+            {item}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+export default Testimonials;

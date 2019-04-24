@@ -2,6 +2,32 @@ export function mq(breakpoint) {
   return "@media (max-width: " + breakpoint + "px)";
 }
 
+export const styles = {
+  heading: {
+    fontSize: "46px",
+    lineHeight: "54px",
+    margin: "15px 0",
+    color: "#333f52",
+    fontFamily: "Hind",
+    fontWeight: "bold",
+    [mq(600)]: {
+      fontSize: "32px",
+      lineHeight: "38px",
+      textAlign: "center"
+    }
+  },
+  text: {
+    margin: "15px 0",
+    fontSize: "24px",
+    lineHeight: 1.5,
+    color: "#6c7582",
+    [mq(600)]: {
+      fontSize: "18px",
+      lineHeight: 1.6
+    }
+  }
+};
+
 export function makeSectionStyles(itemWidth, imagePosition) {
   let breakpoint;
   switch (imagePosition) {
@@ -14,7 +40,7 @@ export function makeSectionStyles(itemWidth, imagePosition) {
       breakpoint = itemWidth;
   }
   let mediaQuery = mq(breakpoint);
-  let textStyles = [
+  let positionalTextStyles = [
     imagePosition === "BOTTOM" && { color: "white", textAlign: "center" },
     imagePosition === "LEFT" && { textAlign: "right" },
     {
@@ -64,35 +90,8 @@ export function makeSectionStyles(itemWidth, imagePosition) {
   }
   return {
     container,
-    heading: [
-      {
-        fontSize: "46px",
-        lineHeight: "54px",
-        margin: "15px 0",
-        color: "#333f52",
-        fontFamily: "Hind",
-        fontWeight: "bold",
-        [mediaQuery]: {
-          fontSize: "32px",
-          lineHeight: "38px",
-          textAlign: "center"
-        }
-      },
-      textStyles
-    ],
-    text: [
-      {
-        margin: "15px 0",
-        fontSize: "24px",
-        lineHeight: 1.5,
-        color: "#6c7582",
-        [mediaQuery]: {
-          fontSize: "18px",
-          lineHeight: 1.6
-        }
-      },
-      textStyles
-    ],
-    item
+    item,
+    heading: [styles.heading, positionalTextStyles],
+    text: [styles.text, positionalTextStyles]
   };
 }

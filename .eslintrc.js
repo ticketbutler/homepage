@@ -10,13 +10,12 @@ module.exports = {
     ecmaFeatures: {
       experimentalObjectRestSpread: true,
       jsx: true
-    },
-    sourceType: "module"
+    }
   },
-  plugins: ["react"],
+  plugins: ["react", "react-hooks"],
   rules: {
-    quotes: ["error", "double"],
-    semi: ["error", "always"],
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 };
