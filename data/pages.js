@@ -951,7 +951,7 @@ module.exports = [
         image_alt_da: "Nå dit mål med Google-annoncer",
         image_alt_en: "Reach your goal with Google ads",
         text_da:
-          "En billig og effektiv måde at udbrede dit event på er gennem Google. Med Ticketbutlers digitale marketing service kan vi hjælpe dig med grafisk udformning og opsætning af tekst- og bannerannoncer. Annoncerne vises, hvor de er relevante, og du betaler kun pr. ‘klik’.",
+          "En billigd og effektiv måde at udbrede dit event på er gennem Google. Med Ticketbutlers digitale marketing service kan vi hjælpe dig med grafisk udformning og opsætning af tekst- og bannerannoncer. Annoncerne vises, hvor de er relevante, og du betaler kun pr. ‘klik’.",
         text_en:
           "A cheap and effective way to draw attention to your event is through Google ads. Ticketbutlers’ digital marketing service will bring your brand to life with effective marketing banners and setup Google display- and text ads for you! "
       },
